@@ -6,6 +6,13 @@
 глиф, что у настоящей буквы».
 
 Сами очертания букв не трогаются: добавляются только записи в таблицу соответствий.
+Борджинийский ассет не трогается вовсе — в этом весь смысл захода: его освобождение
+проверено в игре и отвергнуто (буквы пропадают совсем, а в GK1 ломаются реплики
+на борджинийском). Разбор — docs/font-atlas.md.
+
+Правится **`GK12_Data/data.unity3d`**: копии гарнитур в Addressables-бандлах игра
+не читает, и первый заход этого инструмента провалился именно поэтому. Бандлы
+остаются в покое.
 
     python tools/patch_font_cmap.py --check      # что будет добавлено
     python tools/patch_font_cmap.py --install    # добавить и поставить в игру
@@ -22,23 +29,29 @@ import UnityPy
 from fontTools.ttLib import TTFont
 
 import carriers as C
-from common import BACKUP, BUNDLES, WORK, game_is_running, load_json, save_json, sha256
+from common import BACKUP, GAME, WORK, game_is_running, load_json, save_json, sha256
 
 MANIFEST = BACKUP / "manifest.json"
 STAGE = WORK / "build"
-FONT_BUNDLE_PATTERNS = ("gk_common_ui_trial*", "gk_common_ingameui*", "gk_common_title*")
+MAIN_DATA = GAME / "GK12_Data" / "data.unity3d"
+
+# Гарнитуры, которыми игра рисует наш текст. Первые четыре названы прямым текстом
+# в локализационной таблице FontTable, LiberationSans — штатный фолбэк TMP,
+# Marugo лежит только в data.unity3d и по инструментам Akrasr тоже участвует.
+# Остальные (MSUNG*, FZXBS*, FOTK-YOON*) — китайские и корейские, во французском
+# слоте не нужны, а весят десятки мегабайт: пересобирать их незачем.
+LATIN_FONTS = {
+    "FOT-MODEMINALARGEPRO-M",
+    "FOT-MODEMINALARGEPRO-R",
+    "FOT-MODEMINALARGEPRO-B",
+    "FOT-UDKAKUGO_SMALLPR6-M",
+    "FOT-UDMarugo_LargePro-DB",
+    "LiberationSans",
+}
 
 
 class FontPatchError(RuntimeError):
     """Гарнитуру не удалось пересобрать — пропускаем её, остальные не роняем."""
-
-
-def font_bundles():
-    seen = {}
-    for pat in FONT_BUNDLE_PATTERNS:
-        for path in BUNDLES.glob(pat + ".bundle"):
-            seen[path.name] = path
-    return [seen[k] for k in sorted(seen)]
 
 
 def register_backup(path) -> None:
@@ -104,8 +117,8 @@ def patch_ttf(blob: bytes, letters: str) -> tuple[bytes, int]:
     raise FontPatchError("не удалось собрать шрифт даже без правки формата 4")
 
 
-def patch_bundle(path, letters: str, dry_run: bool):
-    """Вернуть (список пропатченных шрифтов, список сбойных, байты бандла или None)."""
+def patch_bundle(path, letters: str, dry_run: bool, only: set[str] | None):
+    """Вернуть (список пропатченных шрифтов, список сбойных, байты файла или None)."""
     env = UnityPy.load(str(path))
     changed, failed = [], []
     for obj in env.objects:
@@ -116,6 +129,8 @@ def patch_bundle(path, letters: str, dry_run: bool):
         if not blob:
             continue
         name = tree.get("m_Name", "?")
+        if only is not None and name not in only:
+            continue
         if dry_run:
             changed.append((name, len(blob), 0))
             continue
@@ -143,10 +158,14 @@ def main() -> int:
     ap.add_argument("--install", action="store_true", help="установить в игру")
     ap.add_argument("--all-letters", action="store_true",
                     help="раздать носители всей кириллице, а не только сломанным буквам")
+    ap.add_argument("--all-fonts", action="store_true",
+                    help="править все 18 гарнитур, а не только латинско-кириллические")
     args = ap.parse_args()
 
+    only = None if args.all_fonts else LATIN_FONTS
     letters = C.ALPHABET if args.all_letters else C.BROKEN
     print(f"букв под носители: {len(letters)}  ({letters})")
+    print(f"гарнитур в правке: {'все' if only is None else len(only)}")
     print(f"участков-кандидатов: {len(C.CANDIDATES)} — " +
           ", ".join(f"{n} U+{b:04X}" for n, b in C.CANDIDATES.items()))
     print(f"итого новых кодов на шрифт: {len(letters) * len(C.CANDIDATES)}\n")
@@ -158,8 +177,8 @@ def main() -> int:
             print(f"  {name:<10} {sample} ...")
         print()
 
-    for path in font_bundles():
-        changed, failed, blob = patch_bundle(path, letters, dry_run=args.check)
+    for path in [MAIN_DATA]:
+        changed, failed, blob = patch_bundle(path, letters, dry_run=args.check, only=only)
         for name, why in failed:
             print(f"      ! {name}: пропущен ({why})", file=sys.stderr)
         if not changed:

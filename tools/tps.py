@@ -182,3 +182,50 @@ def tokenize(text: str) -> list[str | Op]:
 
 def detokenize(tokens: list[str | Op]) -> str:
     return "".join(t if isinstance(t, str) else chr(t.code) + t.params for t in tokens)
+
+
+# --------------------------------------------------------------------------------------
+# Разметка для перевода: коды показываем метками {E108:0008}, текст оставляем как есть
+# --------------------------------------------------------------------------------------
+
+_MARKUP = __import__("re").compile(r"\{([0-9A-F]{4})(?::((?:[0-9A-F]{4})+))?\}")
+
+
+def to_markup(tokens: list[str | Op]) -> str:
+    """Превратить токены в строку, пригодную для правки человеком."""
+    out: list[str] = []
+    for tok in tokens:
+        if isinstance(tok, str):
+            # экранируем фигурную скобку, чтобы её нельзя было спутать с меткой
+            out.append(tok.replace("{", "{{"))
+        else:
+            params = "".join(f"{ord(c):04X}" for c in tok.params)
+            out.append(f"{{{tok.code:04X}:{params}}}" if params else f"{{{tok.code:04X}}}")
+    return "".join(out)
+
+
+def from_markup(text: str) -> list[str | Op]:
+    """Разобрать размеченную строку обратно в токены."""
+    tokens: list[str | Op] = []
+    buf: list[str] = []
+    i = 0
+    while i < len(text):
+        if text.startswith("{{", i):
+            buf.append("{")
+            i += 2
+            continue
+        match = _MARKUP.match(text, i)
+        if match:
+            if buf:
+                tokens.append("".join(buf))
+                buf = []
+            params = match.group(2) or ""
+            tokens.append(Op(int(match.group(1), 16),
+                             "".join(chr(int(params[k:k + 4], 16)) for k in range(0, len(params), 4))))
+            i = match.end()
+            continue
+        buf.append(text[i])
+        i += 1
+    if buf:
+        tokens.append("".join(buf))
+    return tokens

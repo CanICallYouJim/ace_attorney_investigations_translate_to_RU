@@ -23,6 +23,10 @@ BUNDLE_PREFIXES = {
     **{f"gk1_script_{lang}": f"gk1_scriptmessage_{lang}_assets_all_" for lang in SCRIPT_LANGS},
     "strings_eng": "localization-string-tables-english(en)_assets_all_",
     "strings_fre": "localization-string-tables-french(fr)_assets_all_",
+    # Вопреки названию, в группе "_trial_" лежат основные строковые таблицы игры
+    # (имена говорящих, названия улик, кнопки логики) — она в разы больше обычной.
+    "strings_eng_main": "localization-string-tables-english(en)_trial_assets_all_",
+    "strings_fre_main": "localization-string-tables-french(fr)_trial_assets_all_",
     "locales": "localization-locales_assets_all_",
 }
 

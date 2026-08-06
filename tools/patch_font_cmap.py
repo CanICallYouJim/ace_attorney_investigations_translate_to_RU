@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import shutil
+import struct
 import sys
 from io import BytesIO
 
@@ -26,6 +27,10 @@ from common import BACKUP, BUNDLES, WORK, game_is_running, load_json, save_json,
 MANIFEST = BACKUP / "manifest.json"
 STAGE = WORK / "build"
 FONT_BUNDLE_PATTERNS = ("gk_common_ui_trial*", "gk_common_ingameui*", "gk_common_title*")
+
+
+class FontPatchError(RuntimeError):
+    """Гарнитуру не удалось пересобрать — пропускаем её, остальные не роняем."""
 
 
 def font_bundles():
@@ -45,43 +50,64 @@ def register_backup(path) -> None:
     save_json(MANIFEST, manifest)
 
 
-def patch_ttf(blob: bytes, letters: str) -> tuple[bytes, int]:
-    """Добавить в cmap записи «код-носителя -> глиф буквы». Вернуть (байты, сколько добавлено)."""
-    font = TTFont(BytesIO(blob), fontNumber=0)
-    best = font.getBestCmap()
-
-    additions: dict[int, str] = {}
-    for name, base in C.CANDIDATES.items():
-        for ch, code in C.carrier_map(base, letters).items():
-            glyph = best.get(ord(ch))
-            if glyph is None:
-                continue
-            additions[code] = glyph
-
-    if not additions:
-        return blob, 0
-
+def _apply(font, additions: dict[int, str], include_format4: bool) -> int:
+    """Разложить записи по юникодным подтаблицам. Вернуть, сколько добавлено."""
     added = 0
     for table in font["cmap"].tables:
-        # только юникодные подтаблицы; формат 4 не умеет коды выше 0xFFFF
         if table.platformID not in (0, 3):
             continue
+        if table.format == 4 and not include_format4:
+            continue
         for code, glyph in additions.items():
+            # формат 4 адресует только BMP
             if table.format == 4 and code > 0xFFFF:
                 continue
             if table.cmap.get(code) == glyph:
                 continue
             table.cmap[code] = glyph
             added += 1
+    return added
 
-    buf = BytesIO()
-    font.save(buf)
-    return buf.getvalue(), added
+
+def patch_ttf(blob: bytes, letters: str) -> tuple[bytes, int]:
+    """Добавить в cmap записи «код-носителя -> глиф буквы». Вернуть (байты, сколько добавлено).
+
+    Подтаблица формата 4 хранит свою длину в 16 битах, и у крупных гарнитур
+    разрозненные новые коды её переполняют: каждый такой код заводит отдельный
+    сегмент. Поэтому при переполнении формат 4 оставляем как есть и пишем только
+    в формат 12 — у него длина 32-битная. FreeType всё равно предпочитает
+    подтаблицу (3,10), то есть формат 12.
+    """
+    best = TTFont(BytesIO(blob), fontNumber=0, lazy=True).getBestCmap()
+
+    additions: dict[int, str] = {}
+    for base in C.CANDIDATES.values():
+        for ch, code in C.carrier_map(base, letters).items():
+            glyph = best.get(ord(ch))
+            if glyph is not None:
+                additions[code] = glyph
+    if not additions:
+        return blob, 0
+
+    for include_format4 in (True, False):
+        font = TTFont(BytesIO(blob), fontNumber=0)
+        added = _apply(font, additions, include_format4)
+        if not added:
+            return blob, 0
+        buf = BytesIO()
+        try:
+            font.save(buf)
+        except struct.error:
+            continue  # формат 4 не вместил — пробуем без него
+        return buf.getvalue(), added
+
+    raise FontPatchError("не удалось собрать шрифт даже без правки формата 4")
 
 
 def patch_bundle(path, letters: str, dry_run: bool):
+    """Вернуть (список пропатченных шрифтов, список сбойных, байты бандла или None)."""
     env = UnityPy.load(str(path))
-    changed = []
+    changed, failed = [], []
     for obj in env.objects:
         if obj.type.name != "Font":
             continue
@@ -93,7 +119,12 @@ def patch_bundle(path, letters: str, dry_run: bool):
         if dry_run:
             changed.append((name, len(blob), 0))
             continue
-        new_blob, added = patch_ttf(blob, letters)
+        try:
+            new_blob, added = patch_ttf(blob, letters)
+        except Exception as exc:
+            # одна негодная гарнитура не должна ронять весь прогон
+            failed.append((name, str(exc)[:70]))
+            continue
         if not added:
             continue
         tree["m_FontData"] = list(new_blob)
@@ -101,8 +132,8 @@ def patch_bundle(path, letters: str, dry_run: bool):
         changed.append((name, len(blob), added))
 
     if dry_run or not changed:
-        return changed, None
-    return changed, env.file.save(packer="lz4")
+        return changed, failed, None
+    return changed, failed, env.file.save(packer="lz4")
 
 
 def main() -> int:
@@ -128,9 +159,11 @@ def main() -> int:
         print()
 
     for path in font_bundles():
-        changed, blob = patch_bundle(path, letters, dry_run=args.check)
+        changed, failed, blob = patch_bundle(path, letters, dry_run=args.check)
+        for name, why in failed:
+            print(f"      ! {name}: пропущен ({why})", file=sys.stderr)
         if not changed:
-            print(f"  = {path.name[:56]}: шрифтов нет")
+            print(f"  = {path.name[:56]}: править нечего")
             continue
         print(f"  * {path.name[:56]}")
         for name, size, added in changed:

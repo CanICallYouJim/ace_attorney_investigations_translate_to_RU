@@ -7,6 +7,11 @@
 Непереведённые сегменты остаются английскими, поэтому собирать можно на любой стадии
 перевода и сразу смотреть результат в игре.
 
+При сборке 16 букв переписываются кодами-носителями (tools/carriers.py): на их
+родных кодах сидит письменность вымышленной Борджинии, и отобрать эти коды у неё
+нельзя — проверено, см. docs/font-atlas.md. В work/case2.json текст остаётся
+обычным русским, подмена живёт только внутри собранного бандла.
+
     python tools/build.py            # собрать в work/build/, игру не трогать
     python tools/build.py --install  # собрать и установить в игру (игра должна быть закрыта)
 """
@@ -17,6 +22,7 @@ import shutil
 import sys
 
 from bundle_io import write_text_assets
+import carriers as C
 from common import (WORK, bundle, game_is_running, in_case_scope, load_json,
                     read_scripts, sha256)
 import segments as S
@@ -27,10 +33,14 @@ STAGE = WORK / "build"
 
 def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, list[str]]:
     """Собрать новые .bytes по переводу. Возвращает (ассеты, сколько сегментов заменено, ошибки)."""
+    # Разметка кодов ({E108:0008}) под подмену не попадает: в таблице только кириллица.
+    carriers = C.chosen_map()
+
     by_file: dict[str, dict[tuple[str, int], str]] = {}
     for entry in entries:
         if entry.get("ru"):
-            by_file.setdefault(entry["file"], {})[(entry["block"], entry["index"])] = entry["ru"]
+            by_file.setdefault(entry["file"], {})[(entry["block"], entry["index"])] = \
+                C.encode(entry["ru"], carriers)
 
     eng = read_scripts("script_eng")
     # пути внутри французского бандла отличаются только каталогом локали
@@ -89,6 +99,8 @@ def main() -> int:
     total = len(entries)
     print(f"переведено сегментов: {replaced} из {total} ({100*replaced/total:.1f}%)")
     print(f"затронуто файлов:     {len(assets)}")
+    print(f"коды-носители:        {C.CHOSEN} U+{C.CANDIDATES[C.CHOSEN]:04X}+ "
+          f"для {len(C.BROKEN)} букв ({C.BROKEN})")
     if not assets:
         print("нечего собирать — заполни поля \"ru\" в work/case2.json")
         return 0

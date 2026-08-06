@@ -51,8 +51,16 @@ CANDIDATES: dict[str, int] = {
     "yi": 0xA000,          # ꀀ.. — слоговое письмо и
 }
 
-# Выбранный участок. Заполняется после пробы; None — ещё не выбран.
-CHOSEN: str | None = None
+# Выбранный участок. Проба 7 августа 2026 показала в игре все пять — контрольные
+# строки своими кодами при этом честно сломались. Взята глаголица: участок пустой,
+# письмо слева направо, и он далеко от диапазонов, где TMP разрешает перенос строки
+# после любого знака (0x2E80..0x9FFF, 0xFF00..0xFFEF и прочие CJK).
+CHOSEN: str = "glagolitic"
+
+
+def chosen_map(letters: str = BROKEN) -> dict[str, int]:
+    """Рабочая таблица «буква -> код-носителя». Ею работают build.py и verify_build.py."""
+    return carrier_map(CANDIDATES[CHOSEN], letters)
 
 
 def carrier_map(base: int, letters: str = BROKEN) -> dict[str, int]:

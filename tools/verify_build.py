@@ -6,7 +6,12 @@
   * бандл читается, все .bytes разбираются парсером TPS;
   * файлы, которые мы не трогали, побайтово совпадают с оригиналом французского слота;
   * в изменённых файлах появилась кириллица;
+  * все 16 букв на кодах-носителях, ни одна не уехала в игру своим кодом;
   * управляющие коды в изменённых блоках не потерялись относительно английского.
+
+Про носители — tools/carriers.py: 16 букв в собранном бандле записаны глаголицей,
+потому что на их родных кодах сидит письменность Борджинии. Здесь текст сначала
+раскодируется обратно, чтобы проверки и сообщения читались по-человечески.
 
     python tools/verify_build.py
 """
@@ -16,6 +21,7 @@ import collections
 import sys
 
 from bundle_io import read_text_assets
+import carriers as C
 from common import BACKUP, bundle, in_case_scope, load_json, read_scripts
 import tps as T
 
@@ -24,6 +30,11 @@ STAGE_DIR = "build"
 
 def has_cyrillic(text: str) -> bool:
     return any("Ѐ" <= c <= "ӿ" for c in text)
+
+
+def native_leaks(text: str) -> set[str]:
+    """Буквы, уехавшие в бандл своим кодом вместо носителя, — их игра нарисует значками."""
+    return {c for c in text if c in C.BROKEN}
 
 
 def opcode_bag(text: str) -> collections.Counter:
@@ -70,7 +81,12 @@ def main() -> int:
         if not in_case_scope(name):
             problems.append(f"{name}: изменён файл вне дела 2")
 
-        text = "".join(b.text for b in parsed.blocks)
+        raw_text = "".join(b.text for b in parsed.blocks)
+        leaked = native_leaks(raw_text)
+        if leaked:
+            problems.append(f"{name}: буквы {''.join(sorted(leaked))} ушли своим кодом "
+                            f"мимо носителей — игра нарисует их значками Борджинии")
+        text = C.decode(raw_text, C.chosen_map())
         if has_cyrillic(text):
             cyrillic_files += 1
 

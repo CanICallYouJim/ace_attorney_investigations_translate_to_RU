@@ -116,7 +116,9 @@ cd "C:\Users\Илья\Desktop\Code\Ace Attorney Translating"
 | `derive_opcodes.py` | Пересобрать таблицу параметров управляющих кодов |
 | `find_fonts.py` | Проверка шрифтов на кириллицу |
 | `patch_font_atlas.py` | Размер страницы атласа TMP |
-| `alphabet_probe.py` | Диагностический билд с алфавитом |
+| `carriers.py` | Таблицы «буква → код-носителя» в обход подмены глифов |
+| `patch_font_cmap.py` | Учит шрифты отдавать кириллицу по кодам-носителям |
+| `alphabet_probe.py` | Диагностические билды: `basic`, `split`, `carriers` |
 | `backup.py` | Бэкап оригиналов игры |
 
 **Тесты** — `test_tps.py`, `test_tokens.py`, `test_segments.py`. Гонять после любых

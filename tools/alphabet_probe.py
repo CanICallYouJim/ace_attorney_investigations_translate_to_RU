@@ -15,6 +15,13 @@
          увеличение страницы атласа до 4096 не помогло: набор разделяет причины,
          которые «basic» смешивает в одну картинку. Строки пронумерованы (#1..#12),
          номера латиницей и цифрами — они читаются всегда, даже если кириллица поплыла.
+         Отснят, результат — в docs/font-atlas.md.
+
+  carriers  Проверка обходного пути: сломанные буквы, записанные кодами-носителями
+         из разных участков (см. tools/carriers.py). Годится тот участок, где строка
+         читается обычными русскими буквами. Первая строка каждой половины —
+         контрольная, своими кодами, она обязана сломаться.
+         Требует заранее: python tools/patch_font_cmap.py --install
 
 Что с чем сравнивать в наборе «split»:
 
@@ -43,12 +50,35 @@ import sys
 
 from bundle_io import write_text_assets
 from common import WORK, bundle, game_is_running, read_scripts
+import carriers as C
 import segments as S
 import tps as T
 
 FILE = "sce1_c0_01.bytes"
 BLOCK = 0x01000080
 STAGE = WORK / "build"
+
+
+def carriers_set() -> dict[int, str]:
+    """Набор «carriers»: сломанные буквы через каждый участок-кандидат.
+
+    Первая строка каждой половины — контрольная, буквы своими кодами: она обязана
+    сломаться, иначе проба недействительна. Дальше те же буквы через носители.
+    Годится тот участок, где строка читается как обычные русские буквы.
+
+    Требует, чтобы шрифты были пропатчены: python tools/patch_font_cmap.py --install
+    """
+    probes: dict[int, str] = {}
+    idx = 3
+    n = 1
+    for letters in (C.BROKEN_UPPER, C.BROKEN_LOWER):
+        probes[idx] = f"#{n} native {letters}"
+        idx, n = idx + 1, n + 1
+        for name, base in C.CANDIDATES.items():
+            mapping = C.carrier_map(base, C.BROKEN)
+            probes[idx] = f"#{n} {name} " + C.encode(letters, mapping)
+            idx, n = idx + 1, n + 1
+    return probes
 
 # индекс сегмента в блоке -> что показать вместо реплики
 PROBE_SETS: dict[str, dict[int, str]] = {
@@ -73,6 +103,8 @@ PROBE_SETS: dict[str, dict[int, str]] = {
         14: "#12 ЖЗЙК",
     },
 }
+
+PROBE_SETS["carriers"] = carriers_set()
 
 
 def main() -> int:

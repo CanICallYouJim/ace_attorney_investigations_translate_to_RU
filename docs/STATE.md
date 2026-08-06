@@ -161,12 +161,17 @@ Addressables пересобранные бандлы не отвергает, н
 
 | Файл | Зачем |
 |---|---|
-| `gk2_scriptmessage_fre_assets_all_*` | Собственно перевод (сейчас — диагностический алфавит) |
-| `gk_common_ui_trial_assets_all_*` | Атлас шрифта 1024 → 4096 |
+| `gk2_scriptmessage_fre_assets_all_*` | Собственно перевод (сейчас — проба `carriers`) |
+| `gk_common_ui_trial_assets_all_*` | Атлас шрифта 1024 → 4096; коды-носители в cmap |
 | `gk_common_ingameui_assets_all_*` | То же |
 | `gk_common_ingameui_trial_assets_all_*` | То же |
 | `gk_common_title_assets_all_*` | То же |
 | `gk_common_title_trial_assets_all_*` | То же |
+
+Правка cmap проверена на установленных файлах: 29 экземпляров гарнитур, родная
+кириллица цела вся, все 80 кодов-носителей ведут на те же глифы, что настоящие буквы.
+Увеличение атласа до 4096 оставлено как есть — вреда от него нет, а откатывать
+отдельно смысла нет.
 
 Все оригиналы в `backup/` и зарегистрированы в `backup/manifest.json`.
 Откат: `.venv\Scripts\python.exe tools\restore.py`

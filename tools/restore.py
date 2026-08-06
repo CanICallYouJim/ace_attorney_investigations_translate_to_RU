@@ -1,4 +1,4 @@
-"""Откат игры к оригинальным файлам из backup/.
+﻿"""Откат игры к оригинальным файлам из backup/.
 
 Нужен после апдейта Steam, после «Проверить целостность файлов игры»,
 или просто чтобы вернуть английскую версию.
@@ -18,14 +18,19 @@ from common import BACKUP, CATALOG, MODIFIED, bundle, game_is_running, load_json
 MANIFEST = BACKUP / "manifest.json"
 
 
-def current_path(name: str) -> Path:
-    return CATALOG if name == "catalog" else bundle(name)
+def current_path(name: str, rec: dict) -> Path:
+    if name == "catalog":
+        return CATALOG
+    if name.startswith("font_"):
+        # шрифтовые бандлы регистрирует tools/patch_font_atlas.py, путь лежит в манифесте
+        return Path(rec["source"])
+    return bundle(name)
 
 
 def do_check(manifest: dict) -> int:
     modified = 0
     for name, rec in manifest.items():
-        live = current_path(name)
+        live = current_path(name, rec)
         state = "оригинал" if sha256(live) == rec["sha256"] else "ИЗМЕНЁН"
         if state == "ИЗМЕНЁН":
             modified += 1
@@ -45,7 +50,7 @@ def do_restore(manifest: dict) -> int:
         if sha256(src) != rec["sha256"]:
             print(f"  X {name:12s} бэкап не совпадает с манифестом, пропускаю", file=sys.stderr)
             continue
-        live = current_path(name)
+        live = current_path(name, rec)
         if sha256(live) == rec["sha256"]:
             print(f"  = {name:12s} уже оригинал")
             continue

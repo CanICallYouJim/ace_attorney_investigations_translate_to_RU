@@ -18,5 +18,30 @@
     "file": "catalog.json",
     "source": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Ace Attorney Investigations Collection\\GK12_Data\\StreamingAssets\\aa\\catalog.json",
     "sha256": "a384506b4b11ba4edbad17781daba114a8ca889558bc00a7d1de83671f519c3d"
+  },
+  "font_gk_common_ingameui": {
+    "file": "gk_common_ingameui_assets_all_72c48e087466ca83d258554ed1012734.bundle",
+    "source": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Ace Attorney Investigations Collection\\GK12_Data\\StreamingAssets\\aa\\StandaloneWindows64\\gk_common_ingameui_assets_all_72c48e087466ca83d258554ed1012734.bundle",
+    "sha256": "cba7d38a6ea4f4a5a8c06e7ed1434385e3f105d266ccc1d00fc387c5bca073c9"
+  },
+  "font_gk_common_ingameui_trial": {
+    "file": "gk_common_ingameui_trial_assets_all_2909a51ea4d5a5dd0d5869b17fa2004a.bundle",
+    "source": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Ace Attorney Investigations Collection\\GK12_Data\\StreamingAssets\\aa\\StandaloneWindows64\\gk_common_ingameui_trial_assets_all_2909a51ea4d5a5dd0d5869b17fa2004a.bundle",
+    "sha256": "0d160210a289e859fcf0eaec08de7cae003cac686ac3d8a83306eb3ae4b6f8d5"
+  },
+  "font_gk_common_title": {
+    "file": "gk_common_title_assets_all_1c5b31bf7d6a627c91e54505a793962b.bundle",
+    "source": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Ace Attorney Investigations Collection\\GK12_Data\\StreamingAssets\\aa\\StandaloneWindows64\\gk_common_title_assets_all_1c5b31bf7d6a627c91e54505a793962b.bundle",
+    "sha256": "9268679023b6cba0843e51898bc1d7a7218865e9527ffbb686b482899313264c"
+  },
+  "font_gk_common_title_trial": {
+    "file": "gk_common_title_trial_assets_all_cd3ce73b80e1bf4cf82ab00a085a17c2.bundle",
+    "source": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Ace Attorney Investigations Collection\\GK12_Data\\StreamingAssets\\aa\\StandaloneWindows64\\gk_common_title_trial_assets_all_cd3ce73b80e1bf4cf82ab00a085a17c2.bundle",
+    "sha256": "61694d8a9cfc80cc02e4e8e18cedef52df12de52e8cf93b0aa6d9133f55ba59f"
+  },
+  "font_gk_common_ui_trial": {
+    "file": "gk_common_ui_trial_assets_all_6274aa23b61205a7be316b710a4ee545.bundle",
+    "source": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Ace Attorney Investigations Collection\\GK12_Data\\StreamingAssets\\aa\\StandaloneWindows64\\gk_common_ui_trial_assets_all_6274aa23b61205a7be316b710a4ee545.bundle",
+    "sha256": "91dd2900a8f1fa5c22d943e9b28acba03f10de59393be08fc22085fc4716dd77"
   }
 }

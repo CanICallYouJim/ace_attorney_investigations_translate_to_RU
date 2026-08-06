@@ -106,6 +106,14 @@ PROBE_SETS: dict[str, dict[int, str]] = {
 
 PROBE_SETS["carriers"] = carriers_set()
 
+# Пара к tools/font_ident_probe.py: там А Б В Г Д переклеены на знак-опознаватель,
+# свой у каждой гарнитуры. Здесь эти буквы просто показываются.
+PROBE_SETS["ident"] = {
+    3: "#1 АБВГД",
+    4: "#2 АБВГДЕЁЖЗИЙКЛМНОП",
+    5: "#3 control ABCDE 12345",
+}
+
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,

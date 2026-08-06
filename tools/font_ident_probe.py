@@ -34,12 +34,18 @@ from io import BytesIO
 import UnityPy
 from fontTools.ttLib import TTFont
 
-from common import BACKUP, BUNDLES, WORK, game_is_running, load_json, save_json, sha256
+from common import BACKUP, BUNDLES, GAME, WORK, game_is_running, load_json, save_json, sha256
 
 MANIFEST = BACKUP / "manifest.json"
 STAGE = WORK / "build"
 FONT_BUNDLE_PATTERNS = ("gk_common_ui_trial*", "gk_common_ingameui*", "gk_common_title*",
                         "gk2_message_todo_delete_trial*")
+
+# Настоящий склад гарнитур. Addressables-бандлы несут лишь их дубликаты: правка
+# бандлов до игры не дошла ни разу, а здесь лежат ещё шесть шрифтов, которых
+# в бандлах нет вовсе — в том числе FOT-UDMarugo_LargePro-DB (по инструментам
+# Akrasr именно он рисует окно реплик в портах AA) и штатный фолбэк TMP LiberationSans.
+MAIN_DATA = GAME / "GK12_Data" / "data.unity3d"
 
 # Буквы, которые подменяем, и знак-опознаватель у каждой гарнитуры.
 MARKED = "АБВГД"
@@ -54,15 +60,26 @@ MARKERS = {
     "MSUNGHK-BOLD": "8",
     "MSUNGPRC-MEDIUM": "9",
     "MSUNGPRC-BOLD": "0",
+    # только в data.unity3d
+    "FOT-UDMarugo_LargePro-DB": "A",
+    "FOTK-YOONMINCHO730": "B",
+    "FOTK-YOONGOTHIC730": "C",
+    "LiberationSans": "D",
+    "FZXBS_GB18030": "E",
+    "FZXBSFW": "F",
+    "borujinia": "G",
 }
 
 
-def font_bundles():
+def font_bundles(include_main: bool = True):
     seen = {}
     for pat in FONT_BUNDLE_PATTERNS:
         for path in BUNDLES.glob(pat + ".bundle"):
             seen[path.name] = path
-    return [seen[k] for k in sorted(seen)]
+    out = [seen[k] for k in sorted(seen)]
+    if include_main and MAIN_DATA.exists():
+        out.append(MAIN_DATA)
+    return out
 
 
 def register_backup(path) -> None:
@@ -107,6 +124,8 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--check", action="store_true", help="только показать таблицу знаков")
     ap.add_argument("--install", action="store_true", help="установить в игру")
+    ap.add_argument("--targets", choices=("all", "main", "bundles"), default="all",
+                    help="что править: всё, только data.unity3d или только бандлы")
     args = ap.parse_args()
 
     print("знаки-опознаватели:")
@@ -116,7 +135,14 @@ def main() -> int:
     if args.check:
         return 0
 
-    for path in font_bundles():
+    if args.targets == "main":
+        targets = [MAIN_DATA]
+    elif args.targets == "bundles":
+        targets = font_bundles(include_main=False)
+    else:
+        targets = font_bundles()
+
+    for path in targets:
         env = UnityPy.load(str(path))
         done = []
         for obj in env.objects:

@@ -46,11 +46,13 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, int, list[
     # Разметка кодов ({E108:0008}) под подмену не попадает: в таблице только кириллица.
     carriers = C.chosen_map()
 
-    by_file: dict[str, dict[tuple[str, int], str]] = {}
+    # Английский держим рядом с русским: метка блока не уникальна в файле, и по одному
+    # адресу (метка, номер) отзывается несколько блоков — см. проверку в цикле ниже.
+    by_file: dict[str, dict[tuple[str, int], tuple[str, str]]] = {}
     for entry in entries:
         if entry.get("ru"):
-            by_file.setdefault(entry["file"], {})[(entry["block"], entry["index"])] = \
-                C.encode(entry["ru"], carriers)
+            by_file.setdefault(entry["file"], {})[(entry["block"], entry["index"])] = (
+                entry["en"], C.encode(entry["ru"], carriers))
 
     eng = read_scripts("script_eng")
     # Путь внутри бандла-носителя берём из него самого: регистр в именах не всегда
@@ -71,26 +73,36 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, int, list[
             continue
 
         parsed = T.parse(raw)
-        touched = False
+        touched_file = False
         for block in parsed.blocks:
             segs = S.split(block.text)
+            touched_block = False
             for idx, seg in enumerate(segs):
                 key = (f"{block.label_id:08X}", idx)
                 if key not in wanted:
                     continue
+                english, russian = wanted[key]
                 try:
-                    head, _core, tail = seg.core()
-                    seg.body = head + T.from_markup(wanted[key]) + tail
+                    head, core, tail = seg.core()
+                    # Метка блока в файле не уникальна: у одной и той же метки бывает
+                    # до четырёх блоков, и лишние — это склейка сцены из чистых кодов,
+                    # без единой буквы. Адрес (метка, номер) их не различает, поэтому
+                    # подставляем, только если на месте лежит ровно тот английский,
+                    # который переводили. Иначе перевод уезжал в пустой блок-заглушку
+                    # и в игре всплывала реплика, которой в оригинале нет.
+                    if T.to_markup(core) != english:
+                        continue
+                    seg.body = head + T.from_markup(russian) + tail
                 except Exception as exc:
                     problems.append(f"{name} {key}: разметка не разобралась — {exc}")
                     continue
                 replaced += 1
-                touched = True
-            if touched:
+                touched_block = touched_file = True
+            if touched_block:
                 block.text = S.join(segs)
 
-        assets[host_path[name]] = T.build(parsed) if touched else raw
-        russian_files += 1 if touched else 0
+        assets[host_path[name]] = T.build(parsed) if touched_file else raw
+        russian_files += 1 if touched_file else 0
 
     return assets, replaced, russian_files, problems
 

@@ -20,10 +20,31 @@ MAX_LINES = 2    # в окне реплики ровно две строки, т
 NARROW_MODE = 7  # узкий режим окна
 NARROW_LIMIT = 24
 
+# Один сегмент — не обязательно одно окно: E104 и E106 закрывают окно и открывают
+# следующее, после чего счёт строк начинается заново. Ограничение в две строки
+# действует на окно, а не на сегмент.
+#
+# Пара выведена не из общих соображений, а проверена на всех 7402 английских
+# сегментах дела: с обоими кодами окон длиннее двух строк ноль, с любым одним
+# из них остаются (9 при только E106, 26 при только E104).
+WINDOW_BREAKS = {0xE104, 0xE106}
+
 
 def plain_text(markup: str) -> str:
     """Только видимый текст: коды и их параметры выбрасываются."""
     return "".join(t for t in T.from_markup(markup) if isinstance(t, str))
+
+
+def windows(markup: str) -> list[str]:
+    """Видимый текст, разбитый по окнам реплики."""
+    out = [""]
+    for tok in T.from_markup(markup):
+        if isinstance(tok, T.Op):
+            if tok.code in WINDOW_BREAKS:
+                out.append("")
+        else:
+            out[-1] += tok
+    return out
 
 
 def opcodes_of(markup: str) -> collections.Counter:
@@ -71,16 +92,19 @@ def main() -> int:
         if text.strip() and not any("а" <= c.lower() <= "я" or c == "ё" for c in text):
             problems.append(f"{entry['id']}: в переводе нет кириллицы — {text[:50]!r}")
 
-        # 3. геометрия окна
+        # 3. геометрия окна — посегментно нельзя, считаем по каждому окну отдельно
         limit = NARROW_LIMIT if entry.get("mode") == NARROW_MODE else LINE_HARD
-        lines = text.split("\n")
-        if len(lines) > MAX_LINES:
-            problems.append(f"{entry['id']}: {len(lines)} строк, в окно влезает {MAX_LINES}")
-        for line in lines:
-            lengths.append(len(line))
-            if len(line) > limit:
+        for win_no, window in enumerate(windows(entry["ru"]), 1):
+            lines = window.split("\n")
+            if len(lines) > MAX_LINES:
+                where = f" (окно {win_no})" if win_no > 1 else ""
                 problems.append(
-                    f"{entry['id']}: строка {len(line)} символов (предел {limit}) — {line[:60]!r}")
+                    f"{entry['id']}: {len(lines)} строк{where}, в окно влезает {MAX_LINES}")
+            for line in lines:
+                lengths.append(len(line))
+                if len(line) > limit:
+                    problems.append(
+                        f"{entry['id']}: строка {len(line)} символов (предел {limit}) — {line[:60]!r}")
 
     print(f"переведено сегментов: {len(translated)} из {len(data['entries'])}")
     if args.all and lengths:

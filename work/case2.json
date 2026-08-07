@@ -3019,7 +3019,7 @@
    "index": 29,
    "mode": 7,
    "en": ".........{E107:0003}{E188:00340000}{E1D1}You've GOT to be kidding.",
-   "ru": ".........{E107:0003}{E188:00340000}{E1D1}Вы серьёзно?",
+   "ru": ".........{E107:0003}{E188:00340000}{E1D1}Вы что, издеваетесь.",
    "status": "translated"
   },
   {
@@ -3339,8 +3339,8 @@
    "index": 0,
    "mode": 9,
    "en": "March 27, 11:06 AM\n{E20D}Prison - Corridor",
-   "ru": "",
-   "status": "pending"
+   "ru": "27 марта, 11:06\n{E20D}Тюрьма, коридор",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|1",
@@ -3349,8 +3349,8 @@
    "index": 1,
    "mode": 2,
    "en": "This is no ordinary slammer.{E108:0018}{E104}{E101:FFFF000B}{E107:0002}Here,{E108:0008} the humans share their space with some special\nfriends.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Это тебе не обычная кутузка.{E108:0018}{E104}{E101:FFFF000B}{E107:0002}Тут,{E108:0008} понимаешь, люди живут бок о бок\nс особыми дружками.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|2",
@@ -3359,8 +3359,8 @@
    "index": 2,
    "mode": 3,
    "en": "Animals...!?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Животные...?!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|3",
@@ -3369,8 +3369,8 @@
    "index": 3,
    "mode": 2,
    "en": "Yup.{E108:0010} Furred and feathered fellas of all shapes and\nsizes.{E108:0010} Guard filled me in on how it came about.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Ага.{E108:0010} Пернатые и мохнатые, всех мастей и\nразмеров.{E108:0010} Охранник мне всё и растолковал.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|4",
@@ -3379,8 +3379,8 @@
    "index": 4,
    "mode": 2,
    "en": "Seems they decided to try a little experiment in animal\ntherapy a few years back.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Пару лет назад тут, похоже, затеяли опыт\nс анималотерапией.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|5",
@@ -3389,8 +3389,8 @@
    "index": 5,
    "mode": 2,
    "en": "The cons are assigned a critter each --{E108:0008} a buddy to help\nkeep their spirits up.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Каждому сидельцу выдают зверушку --{E108:0008} дружка,\nчтоб не падал духом.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|6",
@@ -3399,8 +3399,8 @@
    "index": 6,
    "mode": 2,
    "en": "Really!?{E108:0018} Wow...{E108:0010}\n{E107:0001}{E150:00020021}{E188:00340000}{E1D1}That sounds like so much fun!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Правда?!{E108:0018} Ух ты...{E108:0010}\n{E107:0001}{E150:00020021}{E188:00340000}{E1D1}Как же это здорово!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|7",
@@ -3409,8 +3409,8 @@
    "index": 7,
    "mode": 2,
    "en": "Plus,{E108:0008} inmates can even earn pet care qualifications if\nthey go through some job training with the animals.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Мало того,{E108:0008} за работу со зверьём тут дают\nнастоящую корочку по уходу за животными.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|8",
@@ -3419,8 +3419,8 @@
    "index": 8,
    "mode": 2,
    "en": "Oh!{E108:0018} That must be what all the equipment in the\nworkshop is for!",
-   "ru": "",
-   "status": "pending"
+   "ru": "О!{E108:0018} Так вот зачем в мастерской всё это\nоборудование!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|01000280|9",
@@ -3429,8 +3429,8 @@
    "index": 9,
    "mode": 2,
    "en": "You got it!{E108:0010} Room's set up specially for that training\nstuff.",
-   "ru": "",
-   "status": "pending"
+   "ru": "В точку!{E108:0010} Комнату под эти занятия специально\nи оборудовали.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|0",
@@ -3439,8 +3439,8 @@
    "index": 0,
    "mode": 3,
    "en": "So, uh...{E108:0010} {E107:0002}{E12F:00010001}when you said somebody else could've been\nat the scene of the crime...",
-   "ru": "",
-   "status": "pending"
+   "ru": "Это, значит...{E108:0010} {E107:0002}{E12F:00010001}когда ты сказал, что на месте\nмог быть кто-то ещё...",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|1",
@@ -3449,8 +3449,8 @@
    "index": 1,
    "mode": 2,
    "en": "Exactamundo, big guy!{E108:0010} I was talking about these guys.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Точняк, здоровяк!{E108:0010} Вот про них и говорил.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|2",
@@ -3459,8 +3459,8 @@
    "index": 2,
    "mode": 1,
    "en": "That just means you're STILL talking baloney!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Значит, ты ВСЁ ЕЩЁ несёшь трепотню!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|3",
@@ -3469,8 +3469,8 @@
    "index": 3,
    "mode": 2,
    "en": "What would an animal do with a rubber glove!?",
-   "ru": "",
-   "status": "pending"
+   "ru": "И на кой зверю резиновая перчатка?!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|4",
@@ -3479,8 +3479,8 @@
    "index": 4,
    "mode": 3,
    "en": "Good question.{E108:0020} {E12F:000A0000}{E107:0002}All I'm saying is that it WAS possible.{E108:0010}\nThe rest is Mr. Prosecutor's problem.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Хороший вопрос.{E108:0020} {E12F:000A0000}{E107:0002}Я лишь о том, что это БЫЛО\nвозможно.{E108:0010} Остальное — забота господина прокурора.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|5",
@@ -3489,8 +3489,8 @@
    "index": 5,
    "mode": 1,
    "en": "Mr. Edgeworth, sir!{E108:0018} If you want me to arrest this piece\nof baloney,{E108:0018} {E282}just say the word!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Мистер Эджворт!{E108:0018} Скажете — я этого трепача\nмигом повяжу,{E108:0018} {E282}только прикажите!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|6",
@@ -3499,8 +3499,8 @@
    "index": 6,
    "mode": 2,
    "en": "Let me get this straight.{E108:0010} {E188:002F0000}Are you saying these animals\ncan wander freely around the prison?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Давайте уточню.{E108:0010} {E188:002F0000}Вы хотите сказать, что эти звери\nсвободно разгуливают по тюрьме?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|7",
@@ -3509,8 +3509,8 @@
    "index": 7,
    "mode": 2,
    "en": "You know those {E041}sensors{E040} {E1CB:002900000000}on the doors?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Видел {E041}датчики{E040} {E1CB:002900000000}на дверях?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|8",
@@ -3519,8 +3519,8 @@
    "index": 8,
    "mode": 2,
    "en": "They detect the prisoners' {E041}bracelets{E040},{E108:0008} and sound the\nalarm when somebody goes walkabout.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Они ловят {E041}браслеты{E040} заключённых{E108:0008} и поднимают\nтревогу, если кто пошёл гулять.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|9",
@@ -3529,8 +3529,8 @@
    "index": 9,
    "mode": 2,
    "en": "Well,{E108:0008} for our furry friends,{E108:0008} it's the other way around --{E108:0010}\n{E188:00300000}{E1D5}they're fitted with microchips that open doors right up.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Ну,{E108:0008} а у наших мохнатых{E108:0008} всё наоборот --{E108:0010}\n{E188:00300000}{E1D5}им вживили чипы, которые двери сами и открывают.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|10",
@@ -3539,8 +3539,8 @@
    "index": 10,
    "mode": 2,
    "en": "They are?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Правда?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|11",
@@ -3549,8 +3549,8 @@
    "index": 11,
    "mode": 2,
    "en": "Uh-huh.{E108:0010} They're implanted just under the skin around\nthe shoulders.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Угу.{E108:0010} Вживляют под кожу, где-то в районе\nзагривка.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|12",
@@ -3559,8 +3559,8 @@
    "index": 12,
    "mode": 2,
    "en": "Big needle,{E108:0010} {E188:00360000}{E1D1}{E1D5}{E12F:000A0004}quick jab,{E108:0010} and voilà!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Игла побольше,{E108:0010} {E188:00360000}{E1D1}{E1D5}{E12F:000A0004}быстрый укол{E108:0010} — и voilà!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|13",
@@ -3569,8 +3569,8 @@
    "index": 13,
    "mode": 1,
    "en": "Whaaaaaat!?{E108:0018}\n{E107:0002}{E1D1}Doesn't it hurt!?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Что-о-о-о?!{E108:0018}\n{E107:0002}{E1D1}Им же больно!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|14",
@@ -3579,8 +3579,8 @@
    "index": 14,
    "mode": 2,
    "en": "Nope,{E108:0008} they don't feel a thing.{E108:0010} That's what they tell me,\nanyway...{E108:0018} {E107:0003}{E12F:000A0000}Now, where was I...?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Не-а,{E108:0008} ничего не чувствуют.{E108:0010} Так мне сказали,\nпо крайней мере...{E108:0018} {E107:0003}{E12F:000A0000}Так, на чём я там...?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|15",
@@ -3589,8 +3589,8 @@
    "index": 15,
    "mode": 2,
    "en": "Ah,{E108:0008} right.{E108:0018} So the point is,{E108:0008} they're not the baddies here,{E108:0008}\nso there's no reason to punish them.",
-   "ru": "",
-   "status": "pending"
+   "ru": "А,{E108:0008} точно.{E108:0018} Суть в том,{E108:0008} что они тут не злодеи,{E108:0008}\nа значит, и наказывать их не за что.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|16",
@@ -3599,8 +3599,8 @@
    "index": 16,
    "mode": 2,
    "en": "(It's ironic, really...)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Какая ирония, право...)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|17",
@@ -3609,8 +3609,8 @@
    "index": 17,
    "mode": 2,
    "en": "(Here in this institution where the humans are caged,{E108:0008}\nthe animals are free to roam to their hearts' content.)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(В заведении, где люди сидят под замком,{E108:0008}\nзвери разгуливают где вздумается.)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|18",
@@ -3619,8 +3619,8 @@
    "index": 18,
    "mode": 3,
    "en": "Door Sensors data updated\nin my Organizer.{E040}{E106}{E1CF}{E100:0001}{E100:0000}{E12F:000A0008}{E101:000A000B}{E107:0002}They're not...{E108:0008} completely free, though.{E112:000A} {E12F:000A0009}They can't\nleave the prison proper,{E108:0008} for one thing.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Данные „Датчики на дверях“ обновлены\nв органайзере.{E040}{E106}{E1CF}{E100:0001}{E100:0000}{E12F:000A0008}{E101:000A000B}{E107:0002}Правда...{E108:0008} не совсем свободно.{E112:000A} {E12F:000A0009}Из тюремного\nблока им не выйти,{E108:0008} например.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|19",
@@ -3629,8 +3629,8 @@
    "index": 19,
    "mode": 2,
    "en": "No sensor on that big mother of a door out, you see.",
-   "ru": "",
-   "status": "pending"
+   "ru": "На той здоровенной двери наружу датчика нет.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|20",
@@ -3639,8 +3639,8 @@
    "index": 20,
    "mode": 7,
    "en": ".........{E12F:000A0004}{E107:0002}{E285}{E173:0000}Ah.",
-   "ru": "",
-   "status": "pending"
+   "ru": ".........{E12F:000A0004}{E107:0002}{E285}{E173:0000}А-а.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|21",
@@ -3649,8 +3649,8 @@
    "index": 21,
    "mode": 3,
    "en": "Hm?{E108:0018}\n{E107:0002}(What's that tinkling sound?)",
-   "ru": "",
-   "status": "pending"
+   "ru": "Хм?{E108:0018}\n{E107:0002}(Что это звенит?)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|22",
@@ -3659,8 +3659,8 @@
    "index": 22,
    "mode": 2,
    "en": "Sir...?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Сэр...?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|24",
@@ -3669,8 +3669,8 @@
    "index": 24,
    "mode": 2,
    "en": "(J-Just look at that thing...{E108:0010} {E107:0003}And is that...{E108:0010} {E107:0002}a bell around\nits neck?)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Т-Только взгляните на него...{E108:0010} {E107:0003}И что это...{E108:0010} {E107:0002}у него\nна шее — колокольчик?)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|25",
@@ -3679,8 +3679,8 @@
    "index": 25,
    "mode": 2,
    "en": "(That explains the sound, I suppose...)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Вот, полагаю, и источник звона...)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|28",
@@ -3689,8 +3689,8 @@
    "index": 28,
    "mode": 1,
    "en": "WOOF! {E281}{E1D1}{E188:00800001}WOOF! {E108:0008}{E1D1}{E188:00800001}WOOF! {E108:0008}{E1D1}{E188:00800001}WOOF! {E108:0008}{E1D2}{E188:00800001}WOOF! {E108:0008}{E1D2}{E188:00800001}WOOF!{E108:0008}{E104}{E101:FFFF003F}{E107:0001}{E1D1}{E1D5}{E188:00800001}WOOF! {E281}{E1D1}{E188:00800001}WOOF! {E108:0008}{E1D1}{E188:00800001}WOOF! {E108:0008}{E1D1}{E188:00800001}WOOF! {E108:0008}{E1D1}{E188:00800001}WOOF! {E108:0008}{E1D2}{E188:00800001}WOOF!",
-   "ru": "",
-   "status": "pending"
+   "ru": "ГАВ! {E281}{E1D1}{E188:00800001}ГАВ! {E108:0008}{E1D1}{E188:00800001}ГАВ! {E108:0008}{E1D1}{E188:00800001}ГАВ! {E108:0008}{E1D2}{E188:00800001}ГАВ! {E108:0008}{E1D2}{E188:00800001}ГАВ!{E108:0008}{E104}{E101:FFFF003F}{E107:0001}{E1D1}{E1D5}{E188:00800001}ГАВ! {E281}{E1D1}{E188:00800001}ГАВ! {E108:0008}{E1D1}{E188:00800001}ГАВ! {E108:0008}{E1D1}{E188:00800001}ГАВ! {E108:0008}{E1D1}{E188:00800001}ГАВ! {E108:0008}{E1D2}{E188:00800001}ГАВ!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|29",
@@ -3699,8 +3699,8 @@
    "index": 29,
    "mode": 2,
    "en": "Mr. Edgeworth!{E108:0010} Were you seriously trying to stare it\ndown!?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Мистер Эджворт!{E108:0010} Вы что, всерьёз пытались его\nпереглядеть?!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|30",
@@ -3709,8 +3709,8 @@
    "index": 30,
    "mode": 2,
    "en": "(...I refuse to lose to a dog!)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(...Я не намерен уступать собаке!)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|31",
@@ -3719,8 +3719,8 @@
    "index": 31,
    "mode": 2,
    "en": "Not for nothing, sir,{E108:0008} but your dog handling skills could\nuse some work.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Не в обиду, сэр,{E108:0008} но с собаками вам бы\nподучиться.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|32",
@@ -3729,8 +3729,8 @@
    "index": 32,
    "mode": 2,
    "en": "Leave it to a pro.{E108:0010} I know how to treat them right.{E108:0018}\n{E1D1}Come on, now!{E108:0010} Come to Gummy!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Доверьтесь профи.{E108:0010} Я с ними умею по-хорошему.{E108:0018}\n{E1D1}Ну давай!{E108:0010} Иди к Гамми!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|33",
@@ -3739,8 +3739,8 @@
    "index": 33,
    "mode": 3,
    "en": "Man...{E108:0010} Ignored by a dog...",
-   "ru": "",
-   "status": "pending"
+   "ru": "Эх...{E108:0010} Собака и та не смотрит...",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|34",
@@ -3749,8 +3749,8 @@
    "index": 34,
    "mode": 2,
    "en": "(That dog was certainly very different to the other\nanimals...)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Этот пёс явно отличался от остальных\nзверей...)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|35",
@@ -3759,8 +3759,8 @@
    "index": 35,
    "mode": 2,
    "en": "(And it seemed to have a real thing against me,{E108:0010} and\nonly me...)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(И, похоже, имел зуб именно на меня,{E108:0010}\nна меня одного...)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|36",
@@ -3769,8 +3769,8 @@
    "index": 36,
    "mode": 2,
    "en": "Alrighty, then!{E108:0010} You've met the menagerie.{E108:0020}\n{E285}{E173:0000}What's next?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Ну лады!{E108:0010} Со зверинцем познакомились.{E108:0020}\n{E285}{E173:0000}Что дальше?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|37",
@@ -3779,8 +3779,8 @@
    "index": 37,
    "mode": 2,
    "en": "Guess we better interview some witnesses,{E108:0010} right sir?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Надо, наверно, свидетелей опросить,{E108:0010} да, сэр?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|38",
@@ -3789,8 +3789,8 @@
    "index": 38,
    "mode": 2,
    "en": "Indeed.{E108:0010} We need more information regarding what was\nhappening around the time the body was found.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Именно.{E108:0010} Нам нужны сведения о том, что здесь\nпроисходило к моменту обнаружения тела.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|39",
@@ -3799,8 +3799,8 @@
    "index": 39,
    "mode": 2,
    "en": "Then let's start with...{E108:0010} {E1D1}{E188:00340000}that guy!{E108:0020}\n{E107:0001}Hey,{E108:0010} you there in the cell!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Тогда начнём с...{E108:0010} {E1D1}{E188:00340000}вон того!{E108:0020}\n{E107:0001}Эй,{E108:0010} ты, в камере!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|41",
@@ -3809,8 +3809,8 @@
    "index": 41,
    "mode": 3,
    "en": "*sigh*{E108:0010} Ignored again...",
-   "ru": "",
-   "status": "pending"
+   "ru": "*вздох*{E108:0010} Опять не замечают...",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|42",
@@ -3819,8 +3819,8 @@
    "index": 42,
    "mode": 2,
    "en": "H-Hello.{E108:0010} We were wondering if you might be able to\ntell us anything about this morning's incident...",
-   "ru": "",
-   "status": "pending"
+   "ru": "З-Здравствуйте.{E108:0010} Не могли бы вы рассказать нам\nчто-нибудь о сегодняшнем происшествии...",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|44",
@@ -3829,8 +3829,8 @@
    "index": 44,
    "mode": 3,
    "en": "Uhh...{E108:0018} {E107:0002}{E280}Is anyone else a little afraid of this guy?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Эм...{E108:0018} {E107:0002}{E280}Мне одной немножко страшно?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|45",
@@ -3839,8 +3839,8 @@
    "index": 45,
    "mode": 3,
    "en": "Heh.{E108:0010} {E107:0002}Not a big talker, huh?{E108:0018}\nIt's alright, man.{E108:0010} I'm on your side here.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Хе.{E108:0010} {E107:0002}Не из болтливых, да?{E108:0018}\nВсё нормально, друг.{E108:0010} Я на твоей стороне.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|46",
@@ -3849,8 +3849,8 @@
    "index": 46,
    "mode": 2,
    "en": "Let's start with a handshake, huh?{E108:0010}\n{E12F:000A0008}Maybe a hug to break the ice?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Может, для начала руку пожмём?{E108:0010}\n{E12F:000A0008}А то и обнимемся, для разрядки?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|47",
@@ -3859,8 +3859,8 @@
    "index": 47,
    "mode": 7,
    "en": ".........{E107:0003}{E284}{E176:00010000}Seconds...{E108:0010} out...",
-   "ru": "",
-   "status": "pending"
+   "ru": ".........{E107:0003}{E284}{E176:00010000}Секунданты...{E108:0010} за ринг...",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|48",
@@ -3869,8 +3869,8 @@
    "index": 48,
    "mode": 2,
    "en": "!{E108:0018}\n{E107:0003}(What's that supposed to mean...?)",
-   "ru": "",
-   "status": "pending"
+   "ru": "!{E108:0018}\n{E107:0003}(Это ещё что значит...?)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|49",
@@ -3879,8 +3879,8 @@
    "index": 49,
    "mode": 1,
    "en": "H-Hey,{E108:0008} I get it, man!{E108:0018} Not everyone's the hugging type.{E108:0018}\nI,{E108:0010} I'm cool with that!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Э-Эй,{E108:0008} я понял, друг!{E108:0018} Не все любят обниматься.{E108:0018}\nЯ,{E108:0010} я не в обиде!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|51",
@@ -3889,8 +3889,8 @@
    "index": 51,
    "mode": 7,
    "en": ".........{E107:0002}{E284}Round one,{E108:0008} 10 reps each.",
-   "ru": "",
-   "status": "pending"
+   "ru": ".........{E107:0002}{E284}Раунд первый,{E108:0008} по десять повторов.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|52",
@@ -3899,8 +3899,8 @@
    "index": 52,
    "mode": 3,
    "en": "(What...{E108:0010} {E107:0002}{E152:000000050007}{E280}is this man up to!?)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Что...{E108:0010} {E107:0002}{E152:000000050007}{E280}этот человек делает?!)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|53",
@@ -3909,8 +3909,8 @@
    "index": 53,
    "mode": 2,
    "en": "(I'd better see what he has to say for himself.)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Стоит послушать, что он скажет.)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|54",
@@ -3919,8 +3919,8 @@
    "index": 54,
    "mode": 3,
    "en": "...Your name?",
-   "ru": "",
-   "status": "pending"
+   "ru": "...Ваше имя?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|55",
@@ -3929,8 +3929,8 @@
    "index": 55,
    "mode": 3,
    "en": "From the blue corner...{E108:0010} {E107:0002}it's Rocco \"D-259\" Carcerato!",
-   "ru": "",
-   "status": "pending"
+   "ru": "В синем углу...{E108:0010} {E107:0002}Рокко \"D-259\" Карчерато!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|56",
@@ -3939,8 +3939,8 @@
    "index": 56,
    "mode": 2,
    "en": "Don't mind if I keep movin', do ya, boss?{E108:0010}\nFighter can't let his heart rate drop, see?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Я подвигаюсь, ниче, начальник?{E108:0010}\nБойцу пульс ронять нельзя, сечёшь?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|57",
@@ -3949,8 +3949,8 @@
    "index": 57,
    "mode": 2,
    "en": "It doesn't look like there's any danger of that.{E108:0010} Don't\nyou worry you'll lose too much weight doing all that?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Это вам, похоже, не грозит.{E108:0010} Не боитесь так\nсбросить лишнего?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|58",
@@ -3959,8 +3959,8 @@
    "index": 58,
    "mode": 2,
    "en": "Gotta make weight before a fight, boss.{E108:0010}\n{E1D1}Won't even make it into the ring if ya don't.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Перед боем надо в вес уложиться, начальник.{E108:0010}\n{E1D1}А не уложишься — на ринг и не пустят.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|59",
@@ -3969,8 +3969,8 @@
    "index": 59,
    "mode": 3,
    "en": "Uhh...{E108:0010} {E107:0002}{E188:002F0000}{E1D1}so you're...{E108:0018} {E107:0001}{E12F:00010002}Wait, I get it!{E108:0018}\n{E188:00340000}{E1D1}{E107:0002}You gotta be a boxer, right?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Эм...{E108:0010} {E107:0002}{E188:002F0000}{E1D1}так ты...{E108:0018} {E107:0001}{E12F:00010002}Стоп, дошло!{E108:0018}\n{E188:00340000}{E1D1}{E107:0002}Ты боксёр, что ли?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|60",
@@ -3979,8 +3979,8 @@
    "index": 60,
    "mode": 2,
    "en": "Was.{E108:0010} Back in the day.{E108:0010} But it's good to stay fightin' fit.{E108:0018}\n{E188:00300000}{E1D5}{E12F:00140004}Leastways,{E108:0008} that's how I see it.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Был.{E108:0010} Давно.{E108:0010} Но форму терять негоже.{E108:0018}\n{E188:00300000}{E1D5}{E12F:00140004}Я так,{E108:0008} по крайности, думаю.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|61",
@@ -3989,8 +3989,8 @@
    "index": 61,
    "mode": 2,
    "en": "So is the bear part of your training, too?",
-   "ru": "",
-   "status": "pending"
+   "ru": "А медведь тоже часть тренировки?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|62",
@@ -3999,8 +3999,8 @@
    "index": 62,
    "mode": 2,
    "en": "Hee hee...{E108:0008} Looks kinda like an apron!{E108:0018}\n{E280}It's so cute!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Хи-хи...{E108:0008} Прямо как передник!{E108:0018}\n{E280}Такая прелесть!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|63",
@@ -4009,8 +4009,8 @@
    "index": 63,
    "mode": 2,
    "en": "Ain't nothin' cute about Teddy.{E108:0010} Kid's my partner, see?{E108:0010}\nThis here polar bear keeps me on my toes.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Ниче милого в Мишутке нет.{E108:0010} Он мне напарник, ясно?{E108:0010}\nЭтот белый медведь меня в тонусе держит.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|64",
@@ -4019,8 +4019,8 @@
    "index": 64,
    "mode": 2,
    "en": "(He seems to have loosened up a little.{E108:0010}\nNow's my chance...)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Он, кажется, немного оттаял.{E108:0010}\nВот и мой шанс...)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|65",
@@ -4029,8 +4029,8 @@
    "index": 65,
    "mode": 2,
    "en": "Where were you and Teddy at the time of the\nincident?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Где вы с Мишуткой были в момент\nпроисшествия?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|66",
@@ -4039,8 +4039,8 @@
    "index": 66,
    "mode": 7,
    "en": ".........{E108:0010}{E188:002F0000}{E1D1}{E173:0000}{E107:0002}C'mon, boss.{E108:0010} I ain't no stoolie.{E108:0018}\nAnd I don't know nothin' nohow!",
-   "ru": "",
-   "status": "pending"
+   "ru": ".........{E108:0010}{E188:002F0000}{E1D1}{E173:0000}{E107:0002}Да брось, начальник.{E108:0010} Я не стукач.{E108:0018}\nИ ниче я не знаю, ниоткуда!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|67",
@@ -4049,8 +4049,8 @@
    "index": 67,
    "mode": 2,
    "en": "I'll be the judge of that.{E108:0010}\nPlease,{E108:0008} answer the question.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Об этом судить мне.{E108:0010}\nПрошу,{E108:0008} ответьте на вопрос.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|68",
@@ -4059,8 +4059,8 @@
    "index": 68,
    "mode": 2,
    "en": "Y-{E108:0008}Ya punch drunk or somethin', boss?{E108:0010}\nI told ya --{E108:0010} {E282}I don't know zip!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Т-{E108:0008}Ты чё, начальник, головой поехал?{E108:0010}\nГрю ж тебе --{E108:0010} {E282}ни хрена не знаю!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|69",
@@ -4069,8 +4069,8 @@
    "index": 69,
    "mode": 3,
    "en": "(Arngh...{E108:0018}\nSo he won't play ball...)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Кхм...{E108:0018}\nЗначит, по-хорошему не выйдет...)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|70",
@@ -4079,8 +4079,8 @@
    "index": 70,
    "mode": 2,
    "en": "Guess there's only one thing to do,{E108:0008} huh,\nMr. Edgeworth?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Похоже, остаётся только одно,{E108:0008} да,\nмистер Эджворт?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|71",
@@ -4089,8 +4089,8 @@
    "index": 71,
    "mode": 2,
    "en": "Indeed.{E108:0010} The more he protests his ignorance,{E108:0008} the\nmore certain I am that he's hiding something.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Именно.{E108:0010} Чем упорнее он твердит, что не знает,{E108:0008}\nтем яснее мне, что он что-то скрывает.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_05.bytes|0100028B|72",
@@ -4099,8 +4099,8 @@
    "index": 72,
    "mode": 2,
    "en": "Alright,{E108:0008} let's see exactly what you do and don't know,{E108:0010}\n{E1D1}shall we, Mr. Carcerato?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Что ж,{E108:0008} посмотрим, что вы знаете, а чего нет,{E108:0010}\n{E1D1}не так ли, мистер Карчерато?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_06.bytes|01000300|0",

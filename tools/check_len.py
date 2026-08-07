@@ -35,16 +35,36 @@ def plain_text(markup: str) -> str:
     return "".join(t for t in T.from_markup(markup) if isinstance(t, str))
 
 
-def windows(markup: str) -> list[str]:
-    """Видимый текст, разбитый по окнам реплики."""
-    out = [""]
+MODE_OP = 0xE107  # смена режима окна прямо посреди реплики
+
+
+def windows(markup: str, start_mode: int | None) -> list[list[tuple[str, int | None]]]:
+    """Окна реплики; каждое — список строк вместе с режимом, в котором строка рисуется.
+
+    Режим меняется кодом E107 по ходу реплики, и это не мелочь: узкое окно (режим 7)
+    почти всегда переключается на обычное сразу после многоточия, так что узкий лимит
+    действует лишь на само многоточие, а не на всю реплику.
+    """
+    mode = start_mode
+    line = ""
+    wins: list[list[tuple[str, int | None]]] = [[]]
     for tok in T.from_markup(markup):
         if isinstance(tok, T.Op):
-            if tok.code in WINDOW_BREAKS:
-                out.append("")
+            if tok.code == MODE_OP and len(tok.params) == 1:
+                mode = ord(tok.params[0])
+            elif tok.code in WINDOW_BREAKS:
+                wins[-1].append((line, mode))
+                line = ""
+                wins.append([])
         else:
-            out[-1] += tok
-    return out
+            for ch in tok:
+                if ch == "\n":
+                    wins[-1].append((line, mode))
+                    line = ""
+                else:
+                    line += ch
+    wins[-1].append((line, mode))
+    return wins
 
 
 def opcodes_of(markup: str) -> collections.Counter:
@@ -92,19 +112,19 @@ def main() -> int:
         if text.strip() and not any("а" <= c.lower() <= "я" or c == "ё" for c in text):
             problems.append(f"{entry['id']}: в переводе нет кириллицы — {text[:50]!r}")
 
-        # 3. геометрия окна — посегментно нельзя, считаем по каждому окну отдельно
-        limit = NARROW_LIMIT if entry.get("mode") == NARROW_MODE else LINE_HARD
-        for win_no, window in enumerate(windows(entry["ru"]), 1):
-            lines = window.split("\n")
-            if len(lines) > MAX_LINES:
+        # 3. геометрия — считаем по каждому окну и с учётом смены режима по ходу реплики
+        for win_no, window in enumerate(windows(entry["ru"], entry.get("mode")), 1):
+            if len(window) > MAX_LINES:
                 where = f" (окно {win_no})" if win_no > 1 else ""
                 problems.append(
-                    f"{entry['id']}: {len(lines)} строк{where}, в окно влезает {MAX_LINES}")
-            for line in lines:
+                    f"{entry['id']}: {len(window)} строк{where}, в окно влезает {MAX_LINES}")
+            for line, mode in window:
+                limit = NARROW_LIMIT if mode == NARROW_MODE else LINE_HARD
                 lengths.append(len(line))
                 if len(line) > limit:
                     problems.append(
-                        f"{entry['id']}: строка {len(line)} символов (предел {limit}) — {line[:60]!r}")
+                        f"{entry['id']}: строка {len(line)} символов (предел {limit}"
+                        f"{', узкое окно' if mode == NARROW_MODE else ''}) — {line[:60]!r}")
 
     print(f"переведено сегментов: {len(translated)} из {len(data['entries'])}")
     if args.all and lengths:

@@ -32,9 +32,21 @@ def has_cyrillic(text: str) -> bool:
     return any("Ѐ" <= c <= "ӿ" for c in text)
 
 
-def native_leaks(text: str) -> set[str]:
+def visible_text(raw: str) -> str:
+    """Только то, что игра рисует: параметры управляющих кодов выброшены.
+
+    Разделять обязательно. Параметр кода лежит в тех же 16-битных словах, что и текст,
+    и запросто совпадает с кодовой точкой буквы: например `{E23E}` с параметром 0x0424
+    неотличим от буквы «Ф», если смотреть на сырой текст блока. В нетронутом немецком
+    бандле таких совпадений 6 файлов из 399 — то есть проверка по сырому тексту ругалась
+    бы на оригинал игры.
+    """
+    return "".join(t for t in T.tokenize(raw) if isinstance(t, str))
+
+
+def native_leaks(raw: str) -> set[str]:
     """Буквы, уехавшие в бандл своим кодом вместо носителя, — их игра нарисует значками."""
-    return {c for c in text if c in C.BROKEN}
+    return {c for c in visible_text(raw) if c in C.BROKEN}
 
 
 def opcode_bag(text: str) -> collections.Counter:

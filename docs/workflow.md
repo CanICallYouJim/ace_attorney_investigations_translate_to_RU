@@ -105,9 +105,21 @@
 .venv\Scripts\python.exe tools\build.py --install  # установка, ИГРА ДОЛЖНА БЫТЬ ЗАКРЫТА
 ```
 
-В игре: Options → Language → **Français**. Непереведённые реплики останутся французскими.
+В игре: Options → Language → **Deutsch**. Непереведённые реплики останутся немецкими.
 
 Откат в любой момент: `.venv\Scripts\python.exe tools\restore.py`
+
+**Шрифт ставится один раз, не каждую итерацию.** Две правки `data.unity3d` — коды-носители
+и пропорциональные метрики. Они уже стоят; повторять надо только после проверки
+целостности файлов в Steam или апдейта игры:
+
+```bash
+.venv\Scripts\python.exe tools\patch_font_cmap.py --install
+.venv\Scripts\python.exe tools\patch_font_metrics.py --install
+```
+
+Проверить, на месте ли они: `restore.py --check` должен показать `data.unity3d` изменённым.
+Зачем это всё — [`font-atlas.md`](font-atlas.md).
 
 ## Работа несколькими сессиями
 

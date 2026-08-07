@@ -15,7 +15,7 @@
 | Движок | Unity **2022.3.17f1**, IL2CPP, Addressables 1.21.19 |
 | Бандлы | `GK12_Data\StreamingAssets\aa\StandaloneWindows64\*.bundle` |
 | Сейвы | `Documents\GK12_Steam\` + Steam Cloud `userdata\154766264\2401970\remote\` |
-| Языки | eng, fre, ger, jpn, kor, sim, tra. Русского нет — занимаем слот fre |
+| Языки | eng, fre, ger, jpn, kor, sim, tra. Русского нет — занимаем слот **ger** (`common.HOST`) |
 
 ## Окружение
 
@@ -92,6 +92,18 @@ Get-Content читает UTF-8 как ANSI, Set-Content пишет обратн�
 
 **Защита:** перевод хранится в проекте как исходники в git, после любого апдейта
 пересобирается одной командой. Плюс `backup/` с оригиналами и `tools/restore.py`.
+
+**После отката или апдейта восстанавливать три вещи, а не одну** — про шрифт легко
+забыть, и тогда буквы снова поедут:
+
+```bash
+.venv\Scripts\python.exe tools\patch_font_cmap.py --install      # коды-носители
+.venv\Scripts\python.exe tools\patch_font_metrics.py --install   # пропорциональная кириллица
+.venv\Scripts\python.exe tools\build.py --install                # сам перевод
+```
+
+Если имена бандлов изменились после апдейта, бэкапы в `backup/manifest.json` станут
+несопоставимы: снять свежие через `tools/backup.py`, старые записи манифеста удалить.
 
 Сейвы от подмены языка не страдают: язык хранится в настройках, прогресс отдельно.
 

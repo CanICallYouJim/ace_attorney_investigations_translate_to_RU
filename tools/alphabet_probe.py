@@ -49,7 +49,7 @@ import shutil
 import sys
 
 from bundle_io import write_text_assets
-from common import WORK, bundle, game_is_running, read_scripts
+from common import HOST_SCENARIO_DIR, HOST_SCRIPT, WORK, bundle, game_is_running, read_scripts
 import carriers as C
 import segments as S
 import tps as T
@@ -145,9 +145,9 @@ def main() -> int:
         print(f"блок {BLOCK:08X} не найден в {FILE}", file=sys.stderr)
         return 1
 
-    src = bundle("script_fre")
+    src = bundle(HOST_SCRIPT)
     out = STAGE / src.name
-    write_text_assets(src, {f"Assets/GK2/Scenario/_fre/{FILE}": T.build(parsed)}, out)
+    write_text_assets(src, {HOST_SCENARIO_DIR + FILE: T.build(parsed)}, out)
     print(f"набор «{args.probe_set}» собран, реплик подменено: {patched}")
     print(f"-> {out}")
 
@@ -156,7 +156,7 @@ def main() -> int:
             print("\nGK12.exe запущен — закрой игру.", file=sys.stderr)
             return 1
         shutil.copy2(out, src)
-        print("\nустановлено. В игре: Options -> Language -> Français,")
+        print("\nустановлено. В игре: Options -> Language -> Deutsch,")
         print(f"затем дело 2 с начала — {patched} реплик подряд в комнате свиданий.")
     return 0
 

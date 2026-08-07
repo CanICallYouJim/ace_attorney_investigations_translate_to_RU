@@ -1,8 +1,8 @@
-"""Собрать русский слот: подставить перевод из work/case2.json в бандл французского.
+"""Собрать русский слот: подставить перевод из work/case2.json в бандл-носитель.
 
 Английский бандл берётся как источник структуры, переведённые сегменты подменяются,
-результат пишется поверх французского слота — так русский становится обычным пунктом
-в игровом меню языков.
+результат пишется поверх слота-носителя (см. common.HOST — сейчас немецкий) — так
+русский становится обычным пунктом в игровом меню языков.
 
 Непереведённые сегменты остаются английскими, поэтому собирать можно на любой стадии
 перевода и сразу смотреть результат в игре.
@@ -23,8 +23,8 @@ import sys
 
 from bundle_io import write_text_assets
 import carriers as C
-from common import (WORK, bundle, game_is_running, in_case_scope, load_json,
-                    read_scripts, sha256)
+from common import (HOST_SCENARIO_DIR, HOST_SCRIPT, WORK, bundle, game_is_running,
+                    in_case_scope, load_json, read_scripts, sha256)
 import segments as S
 import tps as T
 
@@ -43,7 +43,7 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, list[str]]
                 C.encode(entry["ru"], carriers)
 
     eng = read_scripts("script_eng")
-    # пути внутри французского бандла отличаются только каталогом локали
+    # пути внутри бандла-носителя отличаются от английских только каталогом локали
     assets: dict[str, bytes] = {}
     replaced = 0
     problems: list[str] = []
@@ -73,7 +73,7 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, list[str]]
                 block.text = S.join(segs)
 
         if touched:
-            assets[f"Assets/GK2/Scenario/_fre/{name}"] = T.build(parsed)
+            assets[HOST_SCENARIO_DIR + name] = T.build(parsed)
 
     return assets, replaced, problems
 
@@ -105,7 +105,7 @@ def main() -> int:
         print("нечего собирать — заполни поля \"ru\" в work/case2.json")
         return 0
 
-    src = bundle("script_fre")
+    src = bundle(HOST_SCRIPT)
     out = STAGE / src.name
     done, size = write_text_assets(src, assets, out)
     print(f"бандл собран:         {done} ассетов, {size:,} байт")
@@ -122,7 +122,7 @@ def main() -> int:
     shutil.copy2(out, src)
     print(f"\nустановлено в игру: {src}")
     print(f"SHA-256: {sha256(src)[:16]}...")
-    print("В игре: Options -> Language -> Français")
+    print("В игре: Options -> Language -> Deutsch")
     return 0
 
 

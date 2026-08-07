@@ -18,20 +18,41 @@ CATALOG = GAME / "GK12_Data" / "StreamingAssets" / "aa" / "catalog.json"
 # Имена содержат хеш сборки — если игра обновится, они поменяются, поэтому резолвим по префиксу.
 SCRIPT_LANGS = ("eng", "fre", "ger", "jpn", "kor", "sim", "tra")
 
+# Слот-носитель: русский подменяет собой этот язык и становится обычным пунктом
+# в игровом меню. Взят немецкий, а не французский, потому что немецкая локализация
+# сохраняет привычные имена (Edgeworth, Kay, Gumshoe), а французская переименовывает
+# весь состав (Benjamin Hunter, Cléa, Tektiv). Пока строковые таблицы не переведены,
+# именно эти имена стоят в плашке говорящего и в названиях улик.
+HOST = "ger"
+HOST_SCENARIO_DIR = f"Assets/GK2/Scenario/_{HOST}/"
+
+STRING_TABLE_PREFIXES = {
+    "eng": "localization-string-tables-english(en)",
+    "fre": "localization-string-tables-french(fr)",
+    "ger": "localization-string-tables-german(de)",
+    "jpn": "localization-string-tables-japanese(ja)",
+    "kor": "localization-string-tables-korean(ko)",
+    "sim": "localization-string-tables-chinese(simplified)(zh)",
+    "tra": "localization-string-tables-chinese(traditional)(zh-tw)",
+}
+
 BUNDLE_PREFIXES = {
     **{f"script_{lang}": f"gk2_scriptmessage_{lang}_assets_all_" for lang in SCRIPT_LANGS},
     **{f"gk1_script_{lang}": f"gk1_scriptmessage_{lang}_assets_all_" for lang in SCRIPT_LANGS},
-    "strings_eng": "localization-string-tables-english(en)_assets_all_",
-    "strings_fre": "localization-string-tables-french(fr)_assets_all_",
+    **{f"strings_{lang}": f"{p}_assets_all_" for lang, p in STRING_TABLE_PREFIXES.items()},
     # Вопреки названию, в группе "_trial_" лежат основные строковые таблицы игры
     # (имена говорящих, названия улик, кнопки логики) — она в разы больше обычной.
-    "strings_eng_main": "localization-string-tables-english(en)_trial_assets_all_",
-    "strings_fre_main": "localization-string-tables-french(fr)_trial_assets_all_",
+    **{f"strings_{lang}_main": f"{p}_trial_assets_all_" for lang, p in STRING_TABLE_PREFIXES.items()},
     "locales": "localization-locales_assets_all_",
 }
 
+# Логические имена бандлов слота-носителя — ими пользуются сборка и проверки.
+HOST_SCRIPT = f"script_{HOST}"
+HOST_STRINGS = f"strings_{HOST}"
+HOST_STRINGS_MAIN = f"strings_{HOST}_main"
+
 # Бандлы, которые мы реально пишем -> их бэкапим.
-MODIFIED = ["script_fre", "strings_fre", "locales"]
+MODIFIED = [HOST_SCRIPT, HOST_STRINGS, "locales"]
 
 # Дело N в GK2 — это файлы sce{N-1}_*, а также логика и предметы с тем же индексом.
 # Пользователь проходит дело 2, то есть sce1 / logic01 / itm01.

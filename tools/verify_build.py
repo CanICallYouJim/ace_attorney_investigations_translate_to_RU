@@ -4,7 +4,7 @@
 внутри бандла. Проверяется:
 
   * бандл читается, все .bytes разбираются парсером TPS;
-  * файлы, которые мы не трогали, побайтово совпадают с оригиналом французского слота;
+  * файлы, которые мы не трогали, побайтово совпадают с оригиналом слота-носителя;
   * в изменённых файлах появилась кириллица;
   * все 16 букв на кодах-носителях, ни одна не уехала в игру своим кодом;
   * управляющие коды в изменённых блоках не потерялись относительно английского.
@@ -22,7 +22,7 @@ import sys
 
 from bundle_io import read_text_assets
 import carriers as C
-from common import BACKUP, bundle, in_case_scope, load_json, read_scripts
+from common import BACKUP, HOST_SCRIPT, bundle, in_case_scope, load_json, read_scripts
 import tps as T
 
 STAGE_DIR = "build"
@@ -45,7 +45,7 @@ def opcode_bag(text: str) -> collections.Counter:
 def main() -> int:
     from common import WORK
 
-    src = bundle("script_fre")
+    src = bundle(HOST_SCRIPT)
     built = WORK / STAGE_DIR / src.name
     if not built.exists():
         print(f"нет собранного бандла {built} — сначала tools/build.py", file=sys.stderr)

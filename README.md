@@ -78,6 +78,7 @@ Kaspersky и pip, порча UTF-8 через PowerShell, блокировка �
 | Файл | Читать когда | Писать когда |
 |---|---|---|
 | [`docs/STATE.md`](docs/STATE.md) | В начале сессии | В конце сессии |
+| [`docs/tools.md`](docs/tools.md) | Непонятно, чем сделать задачу | **Появился новый скрипт** |
 | [`docs/workflow.md`](docs/workflow.md) | Перед итерацией перевода | Меняется порядок работы |
 | [`docs/glossary.md`](docs/glossary.md) | Перед итерацией перевода | Новое имя или термин |
 | [`docs/names.md`](docs/names.md) | Имени нет в глоссарии | Разобран новый каламбур |
@@ -99,7 +100,11 @@ cd "C:\Users\Илья\Desktop\Code\Ace Attorney Translating"
 
 ## Инструменты
 
-Все запускаются как `.venv\Scripts\python.exe tools\<имя>.py`.
+**Полный справочник по всем скриптам — [`docs/tools.md`](docs/tools.md)**: что каждый
+делает, когда запускать, что производит. Ниже только самое ходовое.
+
+Все запускаются как `.venv\Scripts\python.exe tools\<имя>.py`. Вывод гнать через
+`PYTHONIOENCODING=utf-8`, иначе кириллица падает на cp1251.
 
 **Основной цикл**
 
@@ -118,6 +123,7 @@ cd "C:\Users\Илья\Desktop\Code\Ace Attorney Translating"
 | Скрипт | Что делает |
 |---|---|
 | `extract_strings.py` | Вытащить таблицы в `work/strings.json` (английский + немецкий для справки) |
+| `check_strings.py` | Проверить: геометрия окна, кириллица, теги `<font>`; `--all` — замеренные лимиты |
 | `build_strings.py` | Собрать бандлы таблиц с проверкой; `--install` — поставить в игру |
 
 **Разбор и диагностика**

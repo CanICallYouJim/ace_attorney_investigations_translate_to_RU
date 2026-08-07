@@ -45,7 +45,9 @@
 
 Судья. Речь высокая, размеренная, с религиозным оттенком: она поклоняется Богине
 правосудия. По-русски — торжественность без канцелярита.
-Смех `Ooh hoo hoo hoo!` — **согласовано: «Ох-хо-хо-хо!»**
+Смех `Hah hah hah.` — сухой, с точкой, не с восклицанием. **Согласовано: «Ха-ха-ха.»**
+(Раньше здесь стоял `Ooh hoo hoo hoo!` — ошибка, он принадлежит Лястраж,
+см. [`decisions.md`](decisions.md).)
 
 > Verity Gavèlle, at your service.
 > She is all-merciful. You have but to confess, and you shall be saved.
@@ -68,7 +70,10 @@
 ### `0018` — Фифи Лястраж (349)
 
 Начальница СИЗО. Приторно-любезная, сюсюкающая: `sweetie`, `darling`, «charming abode».
-За приветливостью — жёсткость.
+За приветливостью — жёсткость. Тюрьму зовёт `home` — «дом», сотрудников и заключённых
+«семьёй»; это её постоянная нота, держать во всех вхождениях.
+Смех `Hee hee!` — **согласовано: «Хи-хи!»**, а единственное `Ooh hoo hoo hoo!`
+в `sce1_c1_03` — **«Ох-хо-хо-хо!»**
 
 > Fifi Laguarde, by the way. Warden of this charming abode.
 > Why yes, sweetie. Everything related to Kanis is with me now.

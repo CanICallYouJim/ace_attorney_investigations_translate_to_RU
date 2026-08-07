@@ -26,7 +26,7 @@ PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe tools/who.py sce1_c0_06 --todo
 | **Где** | Бандл `gk2_scriptmessage_ger`, формат ` TPS` | Бандлы `localization-string-tables-german(de)`, MonoBehaviour с typetree |
 | **Рабочий файл** | `work/case2.json` | `work/strings.json` |
 | **Извлечь** | `extract.py` | `extract_strings.py` |
-| **Влить пачку** | `apply.py` | правка файла |
+| **Влить пачку** | `apply.py` | `apply_strings.py` |
 | **Проверить** | `check_len.py` | `check_strings.py` |
 | **Собрать** | `build.py` | `build_strings.py` |
 | **Проверить сборку** | `verify_build.py` | встроена в `build_strings.py` |
@@ -114,12 +114,31 @@ PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe tools/apply.py work/patch.json
 задачи, и подсмотреть бывает полезно (Knight у них Springer, то есть шахматный конь).
 Таблицы первой игры пропускаются — она вне объёма.
 
+### `apply_strings.py`
+Вливает пачку переводов в `work/strings.json`. Парный к `apply.py`, причина та же:
+2823 записи руками не правятся, а патч лежит отдельным файлом и переживает обрыв сессии.
+
+```bash
+PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe tools/apply_strings.py work/patch_ui.json
+```
+
+Патч — JSON вида `{"gk_common_button|38870646787": "Осмотреть"}` либо вложенный,
+по таблицам: `{"gk_common_button": {"38870646787": "Осмотреть"}}`. Незнакомый ключ —
+ошибка, ничего не пишется. `--force` разрешает перезапись, `--dry-run` — только отчёт.
+
+**Идентификаторы числовые и длинные**, промахнуться легко, поэтому патч удобнее
+не писать руками, а собирать по английскому тексту: в таблицах полно записей-дублей
+(одна строка на PS4, Switch и PC), и перевод им нужен одинаковый.
+
 ### `check_strings.py`
-Проверяет `work/strings.json`: кириллица, сохранность тегов `<font>`, геометрия.
+Проверяет `work/strings.json`: кириллица, сохранность тегов `<font>` и остальной
+разметки TMP, подстановки `{0}`, геометрия.
 
 Лимиты **не зашиты числами, а замеряются по самой игре** — по английским и немецким
 значениям той же таблицы. Иначе никак: у каждой таблицы своё окно, и описание улики
-это не реплика. `--all` показывает замеренное:
+это не реплика. **Длина считается без разметки:** `<font="FOT-MODEMINALARGEPRO-B SDF"
+material="...">Настройки</font>` это девять символов на экране, а не 96.
+`--all` показывает замеренное:
 
 | Таблица | Строк | Символов |
 |---|---|---|
@@ -128,6 +147,12 @@ PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe tools/apply.py work/patch.json
 | `gk2_item_text` | 5 | 50 |
 | `gk2_logic_text` | 4 | 39 |
 | `gk2_select_long` | 1 | 40 |
+| `gk_common_title` | 3 | 65 |
+| `gk_common_option` | 8 | 93 |
+
+Замеренный максимум таблицы — верхняя граница, а не разрешение: в `gk_common_title`
+она берётся из описания стиля графики, тогда как **список глав в английском не
+превышает 53 символов**, и длиннее его лучше не делать.
 
 ### `build_strings.py`
 Собирает бандлы таблиц по тому же принципу, что `build.py`: содержимое английское,

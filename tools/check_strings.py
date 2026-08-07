@@ -14,11 +14,36 @@
 from __future__ import annotations
 
 import argparse
+import collections
+import re
 
 from common import WORK, load_json
 
 # Запас к замеренному максимуму: у кириллицы своя ширина букв, впритык идти незачем.
 SLACK_CHARS = 0
+
+# Подстановки движка: `{0}`, `{1}`. Потеря — дыра в тексте прямо в игре,
+# лишняя — исключение форматирования. Набор обязан совпасть с английским.
+PLACEHOLDER = re.compile(r"\{\d+\}")
+
+# Разметка TMP: <color="orange">, <size=90%>, <align="center">, <font=...>.
+# Проверяем по именам тегов, а не по всей строке: значения атрибутов мы не меняем,
+# но открывающий и закрывающий теги обязаны остаться в том же количестве.
+TAG = re.compile(r"</?([a-zA-Z]+)")
+MARKUP = re.compile(r"<[^<>]+>")
+
+# Записи, где кириллицы быть и не должно. Формат даты в списке сохранений —
+# не проза, а шаблон для движка: американское MM/dd меняем на dd.MM, и всё.
+NO_CYRILLIC_OK = {"gk_common_saveload 13325396588036096"}
+
+
+def visible(text: str) -> str:
+    """Текст без разметки — только то, что реально занимает место в окне.
+
+    Без этого `<font="FOT-MODEMINALARGEPRO-B SDF" material="...">Настройки</font>`
+    числится строкой в 96 символов, хотя на экране их девять.
+    """
+    return MARKUP.sub("", text)
 
 
 def measured_limits(rows: dict) -> tuple[int, int]:
@@ -29,7 +54,7 @@ def measured_limits(rows: dict) -> tuple[int, int]:
             text = entry.get(lang) or ""
             if not text:
                 continue
-            parts = text.split("\n")
+            parts = visible(text).split("\n")
             lines = max(lines, len(parts))
             chars = max(chars, max(len(p) for p in parts))
     return lines, chars
@@ -59,14 +84,30 @@ def main() -> int:
             done += 1
             translated += 1
 
-            if not any("а" <= c.lower() <= "я" or c == "ё" for c in ru):
+            if (not any("а" <= c.lower() <= "я" or c == "ё" for c in ru)
+                    and f"{table} {key}" not in NO_CYRILLIC_OK):
                 problems.append(f"{table} {key}: в переводе нет кириллицы — {ru[:40]!r}")
 
             # Теги шрифта в интерфейсе несут гарнитуру, потерять их нельзя.
             if entry["en"].count("<font") != ru.count("<font"):
                 problems.append(f"{table} {key}: потерян тег <font> — {ru[:40]!r}")
 
-            parts = ru.split("\n")
+            # Подстановки движка и остальная разметка TMP — набор обязан совпасть.
+            want, got = (sorted(PLACEHOLDER.findall(entry["en"])),
+                         sorted(PLACEHOLDER.findall(ru)))
+            if want != got:
+                problems.append(
+                    f"{table} {key}: подстановки {got} вместо {want} — {ru[:40]!r}")
+
+            want_tags = collections.Counter(TAG.findall(entry["en"]))
+            got_tags = collections.Counter(TAG.findall(ru))
+            if want_tags != got_tags:
+                lost = sorted((want_tags - got_tags).elements())
+                extra = sorted((got_tags - want_tags).elements())
+                problems.append(
+                    f"{table} {key}: теги потеряны {lost}, лишние {extra} — {ru[:40]!r}")
+
+            parts = visible(ru).split("\n")
             if len(parts) > max_lines:
                 problems.append(
                     f"{table} {key}: {len(parts)} строк, в игре максимум {max_lines}")

@@ -2149,8 +2149,8 @@
    "index": 16,
    "mode": 2,
    "en": "Come on, Mr. Edgeworth!{E108:0010}\n{E188:00340000}{E1D1}What are you waiting for!?",
-   "ru": "",
-   "status": "pending"
+   "ru": "Ну же, мистер Эджворт!{E108:0010}\n{E188:00340000}{E1D1}Чего вы ждёте?!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_01.bytes|01000080|17",
@@ -2159,8 +2159,8 @@
    "index": 17,
    "mode": 2,
    "en": "Right.{E108:0018}\n{E107:0001}Guard!{E108:0018} Take us to the scene of the crime at once!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Верно.{E108:0018}\n{E107:0001}Охрана!{E108:0018} Немедленно проводите нас к месту убийства!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_01.bytes|01000080|18",
@@ -2169,8 +2169,8 @@
    "index": 18,
    "mode": 1,
    "en": "Yes, sir!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Есть, сэр!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|0",
@@ -2179,8 +2179,8 @@
    "index": 0,
    "mode": 2,
    "en": "(So it didn't happen in the holding cells?{E108:0018}\nBut surely that was where he was being held?)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Значит, это произошло не в следственных камерах?{E108:0018}\nНо ведь именно там его и содержали?)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|1",
@@ -2189,8 +2189,8 @@
    "index": 1,
    "mode": 1,
    "en": "What's the hold-up!?{E108:0010}{E155:000000000002}{E155:000200000002}{E155:000100000002}\nThe crime scene's this way!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Что вы медлите?!{E108:0010}{E155:000000000002}{E155:000200000002}{E155:000100000002}\nМесто преступления — сюда!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|2",
@@ -2199,8 +2199,8 @@
    "index": 2,
    "mode": 2,
    "en": "Wh-{E108:0008}{E1D1}Where are you taking us?{E108:0010}\nDoesn't this door lead to...?",
-   "ru": "",
-   "status": "pending"
+   "ru": "К-{E108:0008}{E1D1}Куда вы нас ведёте?{E108:0010}\nРазве за этой дверью не...?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|3",
@@ -2209,8 +2209,8 @@
    "index": 3,
    "mode": 2,
    "en": "The prison proper{E040},{E108:0010} yes.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Тюремный блок{E040},{E108:0010} именно.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|4",
@@ -2219,8 +2219,8 @@
    "index": 4,
    "mode": 2,
    "en": "You mean those other cells aren't part of the prison?",
-   "ru": "",
-   "status": "pending"
+   "ru": "То есть те камеры — не часть тюрьмы?",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|5",
@@ -2229,8 +2229,8 @@
    "index": 5,
    "mode": 2,
    "en": "Not exactly, no.{E108:0010} Those are the {E041}detention center's{E040}\nholding cells.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Не совсем.{E108:0010} Это следственные камеры\n{E041}изолятора{E040}.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|6",
@@ -2239,8 +2239,8 @@
    "index": 6,
    "mode": 2,
    "en": "That's where defendants are kept while they're\nawaiting trial.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Там содержат обвиняемых, ожидающих\nсудебного разбирательства.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|7",
@@ -2249,8 +2249,8 @@
    "index": 7,
    "mode": 3,
    "en": "The area beyond this door...{E108:0010} {E107:0002}serves a rather different\npurpose.",
-   "ru": "",
-   "status": "pending"
+   "ru": "А то, что за этой дверью...{E108:0010} {E107:0002}служит совсем иной\nцели.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|8",
@@ -2259,8 +2259,8 @@
    "index": 8,
    "mode": 2,
    "en": "Yeah.{E108:0010} {E1D1}It's where the people who ARE convicted serve\nout their time.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Ага.{E108:0010} {E1D1}А там сидят те, кого уже осудили —\nотбывают срок.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|9",
@@ -2269,8 +2269,8 @@
    "index": 9,
    "mode": 2,
    "en": "I supposed you could say,{E108:0008} it's the last place a Great\nThief should ever want to be.",
-   "ru": "",
-   "status": "pending"
+   "ru": "Можно сказать,{E108:0008} что для Великого вора это\nхудшее место на свете.",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|10",
@@ -2279,8 +2279,8 @@
    "index": 10,
    "mode": 1,
    "en": "I've unlocked it, sir!{E108:0018}\n{E188:00340000}{E1D2}{E1D5}Please,{E108:0010} follow me!",
-   "ru": "",
-   "status": "pending"
+   "ru": "Открыто, сэр!{E108:0018}\n{E188:00340000}{E1D2}{E1D5}Прошу,{E108:0010} следуйте за мной!",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|11",
@@ -2289,8 +2289,8 @@
    "index": 11,
    "mode": 3,
    "en": "(Th-{E108:0008}That's Knight, alright...{E108:0020}\n{E107:0002}But he's...{E108:0010} {E281}dead!)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Э-{E108:0008}Это точно Конев...{E108:0020}\n{E107:0002}Но он...{E108:0010} {E281}мёртв!)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_02.bytes|01000100|12",
@@ -2299,8 +2299,8 @@
    "index": 12,
    "mode": 2,
    "en": "(How could this have happened?{E108:0010}\n{E188:002F0000}And how did he wind up inside the prison proper!?)",
-   "ru": "",
-   "status": "pending"
+   "ru": "(Как это могло произойти?{E108:0010}\n{E188:002F0000}И как он оказался в тюремном блоке?!)",
+   "status": "translated"
   },
   {
    "id": "sce1_c0_03.bytes|01000180|0",

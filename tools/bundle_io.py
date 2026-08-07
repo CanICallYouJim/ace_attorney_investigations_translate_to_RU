@@ -26,6 +26,68 @@ def read_text_assets(path: Path | io.BytesIO) -> dict[str, bytes]:
     return {p: _to_bytes(obj.read().m_Script) for p, obj in env.container.items()}
 
 
+def write_string_tables(src: Path, values: dict[str, dict[int, str]], dst: Path) -> tuple[int, int, int]:
+    """Переписать значения строковых таблиц в бандле и сохранить копию в dst.
+
+    Таблицы — это MonoBehaviour с typetree, а не TextAsset, поэтому и путь другой:
+    read_typetree / save_typetree. Ключи values — имя таблицы без языкового суффикса
+    (`gk2_common_nametag`), внутри — {m_Id: новое значение}.
+
+    Имя самой таблицы (`..._de`) не трогаем: игра ищет её по нему. Меняется только
+    содержимое строк. Записи, которых в таблице-приёмнике нет, добавляются.
+
+    Возвращает (таблиц изменено, строк переписано, размер бандла).
+    """
+    env = UnityPy.load(str(src))
+    tables = rows = 0
+    for obj in env.objects:
+        if obj.type.name != "MonoBehaviour":
+            continue
+        tree = obj.read_typetree()
+        name = tree.get("m_Name", "")
+        wanted = values.get(name.rsplit("_", 1)[0])
+        if not wanted:
+            continue
+
+        table = tree["m_TableData"]
+        seen = set()
+        for row in table:
+            if row["m_Id"] in wanted:
+                new = wanted[row["m_Id"]]
+                if row["m_Localized"] != new:
+                    row["m_Localized"] = new
+                    rows += 1
+                seen.add(row["m_Id"])
+        for key, new in wanted.items():
+            if key not in seen:
+                table.append({"m_Id": key, "m_Localized": new, "m_Metadata": {"m_Items": []}})
+                rows += 1
+
+        obj.save_typetree(tree)
+        tables += 1
+
+    missing = set(values) - {
+        obj.read_typetree().get("m_Name", "").rsplit("_", 1)[0]
+        for obj in UnityPy.load(str(src)).objects if obj.type.name == "MonoBehaviour"}
+    if missing:
+        raise KeyError(f"в бандле нет таких таблиц: {sorted(missing)[:5]}")
+
+    blob = env.file.save(packer="lz4")
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_bytes(blob)
+    return tables, rows, len(blob)
+
+
+def asset_paths(path: Path) -> dict[str, str]:
+    """Имя файла в нижнем регистре -> полный путь ассета, как он записан в бандле.
+
+    Нужно потому, что регистр в именах не всегда нижний (`sce1_LateDebug.bytes`),
+    а при записи путь должен совпадать с бандлом в точности.
+    """
+    env = UnityPy.load(str(path))
+    return {p.split("/")[-1].lower(): p for p in env.container}
+
+
 def write_text_assets(src: Path, replacements: dict[str, bytes], dst: Path) -> tuple[int, int]:
     """Переписать указанные ассеты в бандле и сохранить копию в dst.
 

@@ -1,11 +1,17 @@
 """Собрать русский слот: подставить перевод из work/case2.json в бандл-носитель.
 
-Английский бандл берётся как источник структуры, переведённые сегменты подменяются,
+Английский бандл берётся как источник содержимого, переведённые сегменты подменяются,
 результат пишется поверх слота-носителя (см. common.HOST — сейчас немецкий) — так
 русский становится обычным пунктом в игровом меню языков.
 
-Непереведённые сегменты остаются английскими, поэтому собирать можно на любой стадии
-перевода и сразу смотреть результат в игре.
+**Всё непереведённое остаётся английским, а не немецким.** В слот-носитель
+переписываются все 399 ассетов бандла, включая другие дела GK2 и файлы вне объёма
+перевода: игроку-русскому немецкий текст бесполезен, английский хотя бы читается.
+Файлы без единого перевода копируются из английского байт-в-байт, даже не разбираясь
+парсером — так их нельзя случайно испортить (в бандле есть чисто бинарные, см.
+common.BINARY_ONLY_FILES).
+
+Собирать можно на любой стадии перевода и сразу смотреть результат в игре.
 
 При сборке 16 букв переписываются кодами-носителями (tools/carriers.py): на их
 родных кодах сидит письменность вымышленной Борджинии, и отобрать эти коды у неё
@@ -21,9 +27,9 @@ import argparse
 import shutil
 import sys
 
-from bundle_io import write_text_assets
+from bundle_io import asset_paths, write_text_assets
 import carriers as C
-from common import (HOST_SCENARIO_DIR, HOST_SCRIPT, WORK, bundle, game_is_running,
+from common import (HOST_SCRIPT, WORK, bundle, game_is_running,
                     in_case_scope, load_json, read_scripts, sha256)
 import segments as S
 import tps as T
@@ -31,8 +37,12 @@ import tps as T
 STAGE = WORK / "build"
 
 
-def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, list[str]]:
-    """Собрать новые .bytes по переводу. Возвращает (ассеты, сколько сегментов заменено, ошибки)."""
+def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, int, list[str]]:
+    """Собрать содержимое слота-носителя целиком.
+
+    Возвращает (ассеты, сколько сегментов заменено, в скольких файлах есть русский, ошибки).
+    В ассетах — все файлы бандла: с переводом собранные заново, остальные английские как есть.
+    """
     # Разметка кодов ({E108:0008}) под подмену не попадает: в таблице только кириллица.
     carriers = C.chosen_map()
 
@@ -43,18 +53,25 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, list[str]]
                 C.encode(entry["ru"], carriers)
 
     eng = read_scripts("script_eng")
-    # пути внутри бандла-носителя отличаются от английских только каталогом локали
+    # Путь внутри бандла-носителя берём из него самого: регистр в именах не всегда
+    # нижний (sce1_LateDebug.bytes), а при записи он должен совпасть в точности.
+    host_path = asset_paths(bundle(HOST_SCRIPT))
     assets: dict[str, bytes] = {}
     replaced = 0
+    russian_files = 0
     problems: list[str] = []
 
     for name, raw in eng.items():
-        if not in_case_scope(name):
+        wanted = by_file.get(name, {}) if in_case_scope(name) else {}
+        if not wanted:
+            # Ни одного перевода — английский оригинал уезжает в слот нетронутым.
+            # Не разбираем парсером сознательно: портить тут нечего, а в бандле
+            # есть файлы из чистых бинарных данных.
+            assets[host_path[name]] = raw
             continue
-        wanted = by_file.get(name, {})
+
         parsed = T.parse(raw)
         touched = False
-
         for block in parsed.blocks:
             segs = S.split(block.text)
             for idx, seg in enumerate(segs):
@@ -72,10 +89,10 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, list[str]]
             if touched:
                 block.text = S.join(segs)
 
-        if touched:
-            assets[HOST_SCENARIO_DIR + name] = T.build(parsed)
+        assets[host_path[name]] = T.build(parsed) if touched else raw
+        russian_files += 1 if touched else 0
 
-    return assets, replaced, problems
+    return assets, replaced, russian_files, problems
 
 
 def main() -> int:
@@ -89,7 +106,7 @@ def main() -> int:
         return 1
 
     entries = data["entries"]
-    assets, replaced, problems = build_assets(entries)
+    assets, replaced, russian_files, problems = build_assets(entries)
     if problems:
         print(f"ошибки разметки ({len(problems)}):", file=sys.stderr)
         for line in problems[:10]:
@@ -98,7 +115,8 @@ def main() -> int:
 
     total = len(entries)
     print(f"переведено сегментов: {replaced} из {total} ({100*replaced/total:.1f}%)")
-    print(f"затронуто файлов:     {len(assets)}")
+    print(f"файлов с русским:     {russian_files}")
+    print(f"английским в слот:    {len(assets) - russian_files} (всё непереведённое)")
     print(f"коды-носители:        {C.CHOSEN} U+{C.CANDIDATES[C.CHOSEN]:04X}+ "
           f"для {len(C.BROKEN)} букв ({C.BROKEN})")
     if not assets:

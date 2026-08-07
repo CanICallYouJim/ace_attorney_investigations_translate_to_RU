@@ -52,7 +52,9 @@ HOST_STRINGS = f"strings_{HOST}"
 HOST_STRINGS_MAIN = f"strings_{HOST}_main"
 
 # Бандлы, которые мы реально пишем -> их бэкапим.
-MODIFIED = [HOST_SCRIPT, HOST_STRINGS, "locales"]
+# HOST_STRINGS_MAIN — там лежат имена в плашке, названия улик и профили,
+# то есть основная часть строковых таблиц; см. комментарий к BUNDLE_PREFIXES.
+MODIFIED = [HOST_SCRIPT, HOST_STRINGS, HOST_STRINGS_MAIN, "locales"]
 
 # Дело N в GK2 — это файлы sce{N-1}_*, а также логика и предметы с тем же индексом.
 # Пользователь проходит дело 2, то есть sce1 / logic01 / itm01.

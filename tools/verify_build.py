@@ -63,22 +63,31 @@ def main() -> int:
         print(f"нет собранного бандла {built} — сначала tools/build.py", file=sys.stderr)
         return 1
 
-    original = read_text_assets(BACKUP / src.name)
+    german = read_text_assets(BACKUP / src.name)
     new = read_text_assets(built)
     eng = read_scripts("script_eng")
 
-    if set(original) != set(new):
+    if set(german) != set(new):
         print("состав ассетов в бандле изменился — так быть не должно", file=sys.stderr)
         return 1
 
-    changed, unchanged = [], 0
+    changed, untouched_english = [], 0
     problems: list[str] = []
     cyrillic_files = 0
+    still_german = []
 
     for path, blob in new.items():
         name = path.split("/")[-1].lower()
-        if blob == original[path]:
-            unchanged += 1
+        # Эталон теперь английский, а не немецкий: всё непереведённое обязано уехать
+        # в слот английским, иначе игрок увидит немецкий текст.
+        if name not in eng:
+            problems.append(f"{name}: нет такого файла в английском бандле")
+            continue
+        if blob == eng[name]:
+            untouched_english += 1
+            continue
+        if blob == german[path]:
+            still_german.append(name)
             continue
         changed.append(name)
 
@@ -114,10 +123,14 @@ def main() -> int:
     translated = sum(1 for e in data["entries"] if e.get("ru"))
 
     print(f"ассетов в бандле:     {len(new)}")
-    print(f"не изменились:        {unchanged}")
-    print(f"изменены:             {len(changed)}  {', '.join(sorted(changed)[:6])}")
+    print(f"английских как есть:  {untouched_english}")
+    print(f"с русским переводом:  {len(changed)}  {', '.join(sorted(changed)[:6])}")
     print(f"с кириллицей:         {cyrillic_files}")
     print(f"переведено сегментов: {translated}")
+
+    if still_german:
+        problems.append(f"остались немецкими {len(still_german)} файлов "
+                        f"({', '.join(sorted(still_german)[:4])}) — должны быть английскими")
 
     if problems:
         print(f"\nпроблемы ({len(problems)}):")

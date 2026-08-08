@@ -168,6 +168,17 @@
 > Yes, miss? What can I do for you!?
 > I-It's Kn-Kn-Knight! He, he... He's been k-k-killed!
 
+### `0007` — Ши-Лонг Ланг (12 реплик)
+
+Агент Интерпола из GK1. В деле 2 не присутствует: это воспоминания Эджворта
+(`sce1_c1_08`) и встреча в `sce1_c1_0a`. Говорит резко, свысока, к Эджворту
+на «ты» — единственный, кто так себе позволяет, и это его метка.
+Прокуроров и суды презирает открыто.
+
+> Sorry, but the truth doesn't need the likes of you to distort it today!
+> Hah. Our president doesn't have much faith in the efficacy of his own country's police force.
+> It's funny, isn't it? I'm a real "lone wolf", now.
+
 ## Служебные слоты
 
 | id | Что это |

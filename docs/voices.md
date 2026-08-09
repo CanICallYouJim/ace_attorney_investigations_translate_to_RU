@@ -23,6 +23,11 @@
 Полные конструкции, никаких разговорных срезов. В скобках — внутренний монолог,
 там он позволяет себе яд.
 
+**К Гамшу и Кей — на «ты», ко всем прочим — на «вы»** (решено 9 августа 2026).
+Это его характеристика: «ты» достаётся ровно тем, кому он доверяет. В мыслях — та же
+форма, плюс «ты» к Победину и Защитину, хотя вслух с ними он на «вы».
+Полная таблица пар — в [`decisions.md`](decisions.md).
+
 > The only incontrovertible fact here is that you don't know how to give a proper testimony.
 > That's a very touching reason indeed. (And I don't believe a word of it.)
 > Well, Mr. Carcerato is a boxer, so... three minutes would be my assumption.
@@ -182,8 +187,9 @@
 
 Агент Интерпола из GK1. В деле 2 не присутствует: это воспоминания Эджворта
 (`sce1_c1_08`) и встреча в `sce1_c1_0a`. Говорит резко, свысока, к Эджворту
-на «ты» — единственный, кто так себе позволяет, и это его метка.
-Прокуроров и суды презирает открыто.
+на «ты» — не из близости, а от презрения; так же ему тыкают только Защитин
+(панибратство) и Карчерато (блатная фамильярность), см. таблицу пар
+в [`decisions.md`](decisions.md). Прокуроров и суды презирает открыто.
 
 > Sorry, but the truth doesn't need the likes of you to distort it today!
 > Hah. Our president doesn't have much faith in the efficacy of his own country's police force.

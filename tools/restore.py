@@ -21,8 +21,9 @@ MANIFEST = BACKUP / "manifest.json"
 def current_path(name: str, rec: dict) -> Path:
     if name == "catalog":
         return CATALOG
-    if name.startswith("font_"):
-        # шрифтовые бандлы регистрирует tools/patch_font_atlas.py, путь лежит в манифесте
+    if name.startswith(("font_", "asset_")):
+        # шрифтовые бандлы регистрирует tools/patch_font_atlas.py, графику —
+        # tools/swap_localized.py; у обоих логического имени нет, путь лежит в манифесте
         return Path(rec["source"])
     return bundle(name)
 

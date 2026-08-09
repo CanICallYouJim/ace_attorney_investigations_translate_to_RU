@@ -11,6 +11,8 @@ backup/*
 # Извлечённые сырые ассеты — воспроизводятся из игры через tools/extract.py
 work/raw/
 work/build/
+work/build_assets/
+work/localized/
 
 # Экспорт системного хранилища сертификатов, машинно-специфичный
 tools/win-ca-bundle.pem

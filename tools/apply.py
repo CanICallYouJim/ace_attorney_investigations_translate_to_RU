@@ -1,4 +1,4 @@
-"""Влить пачку переводов в work/case2.json из отдельного файла-патча.
+"""Влить пачку переводов в work/case{N}.json из отдельного файла-патча.
 
 Правка семитысячного JSON руками ненадёжна: одна съехавшая запятая — и потерян
 весь файл. Патч кладётся отдельно, применяется одной командой, применение
@@ -23,7 +23,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from common import WORK, load_json, save_json
+from common import CASES, case_json, load_json, save_json
 
 
 def main() -> int:
@@ -41,11 +41,15 @@ def main() -> int:
     if isinstance(patch, list):  # допускаем и список записей — так удобнее выгружать
         patch = {e["id"]: e["ru"] for e in patch}
 
-    data = load_json(WORK / "case2.json")
-    if not data:
-        print("нет work/case2.json — сначала tools/extract.py")
+    # Патч адресуется к делу сам, по идентификаторам сегментов: пачка почти всегда
+    # про один файл сценария, но раскладываем по делам честно, а пишем только те,
+    # которых патч коснулся.
+    loaded = {case: load_json(case_json(case)) for case in CASES}
+    loaded = {case: data for case, data in loaded.items() if data}
+    if not loaded:
+        print("нет work/case*.json — сначала tools/extract.py")
         return 1
-    by_id = {e["id"]: e for e in data["entries"]}
+    by_id = {e["id"]: (case, e) for case, data in loaded.items() for e in data["entries"]}
 
     unknown = [k for k in patch if k not in by_id]
     if unknown:
@@ -56,8 +60,10 @@ def main() -> int:
 
     new = changed = same = 0
     conflicts: list[str] = []
+    touched: set[int] = set()
     for key, ru in patch.items():
-        entry = by_id[key]
+        case, entry = by_id[key]
+        touched.add(case)
         old = entry.get("ru", "")
         if old == ru:
             same += 1
@@ -78,14 +84,16 @@ def main() -> int:
         for k in conflicts[:10]:
             print("  ", k)
 
-    done = sum(1 for e in data["entries"] if e.get("ru"))
     if not args.dry_run:
-        save_json(WORK / "case2.json", data)
-        done = sum(1 for e in data["entries"] if e.get("ru"))
+        for case in sorted(touched):
+            save_json(case_json(case), loaded[case])
 
     verb = "будет применено" if args.dry_run else "применено"
     print(f"{verb}: новых {new}, переписано {changed}, без изменений {same}")
-    print(f"переведено сегментов: {done} из {len(data['entries'])}")
+    for case in sorted(touched):
+        entries = loaded[case]["entries"]
+        done = sum(1 for e in entries if e.get("ru"))
+        print(f"дело {case}: переведено сегментов {done} из {len(entries)}")
     return 1 if conflicts else 0
 
 

@@ -57,17 +57,48 @@ HOST_STRINGS_MAIN = f"strings_{HOST}_main"
 MODIFIED = [HOST_SCRIPT, HOST_STRINGS, HOST_STRINGS_MAIN, "locales"]
 
 # Дело N в GK2 — это файлы sce{N-1}_*, а также логика и предметы с тем же индексом.
-# Пользователь проходит дело 2, то есть sce1 / logic01 / itm01.
-CASE = 2
-CASE_PREFIXES = (f"sce{CASE-1}_", f"logic{CASE-1:02d}", f"itm{CASE-1:02d}")
+# В работе два дела: 2 (sce1 / logic01 / itm01) и 3 (sce2 / logic02 / itm02).
+# Перевод каждого лежит в своём work/case{N}.json, а бандл собирается из всех сразу —
+# он в игре один, и сборка только одного дела стёрла бы перевод другого.
+CASES = (2, 3)
 
 # Файлы, где блоки состоят из чистых бинарных данных без текста: они одинаковы во всех
 # семи локализациях, переводить в них нечего. Токенизатор на них ругается — это ожидаемо.
 BINARY_ONLY_FILES = {"map0a.bytes", "map0c.bytes"}
 
 
+def case_prefixes(case: int) -> tuple[str, ...]:
+    return (f"sce{case-1}_", f"logic{case-1:02d}", f"itm{case-1:02d}")
+
+
+ALL_CASE_PREFIXES = tuple(p for case in CASES for p in case_prefixes(case))
+
+
 def in_case_scope(filename: str) -> bool:
-    return filename.lower().startswith(CASE_PREFIXES)
+    return filename.lower().startswith(ALL_CASE_PREFIXES)
+
+
+def case_of(filename: str) -> int | None:
+    """Какому делу принадлежит файл сценария; None — вне объёма перевода."""
+    low = filename.lower()
+    for case in CASES:
+        if low.startswith(case_prefixes(case)):
+            return case
+    return None
+
+
+def case_json(case: int) -> Path:
+    return WORK / f"case{case}.json"
+
+
+def load_entries(case: int | None = None) -> list[dict]:
+    """Сегменты дела или всех дел сразу — из work/case{N}.json."""
+    entries: list[dict] = []
+    for one in (CASES if case is None else (case,)):
+        data = load_json(case_json(one))
+        if data:
+            entries.extend(data["entries"])
+    return entries
 
 
 def bundle(name: str) -> Path:

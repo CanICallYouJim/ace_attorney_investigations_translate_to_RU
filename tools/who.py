@@ -6,7 +6,7 @@ speakers.py группирует реплики по персонажу и ну�
 по говорящему, а в самом тексте реплики его имени нет.
 
 Говорящий кодируется параметром кода E101 в преамбуле сегмента; нумерация сегментов
-совпадает с extract.py, поэтому идентификаторы те же, что в work/case2.json.
+совпадает с extract.py, поэтому идентификаторы те же, что в work/case{N}.json.
 
     python tools/who.py sce1_c0_02              # один файл
     python tools/who.py sce1_c0_0 --todo        # все совпадающие, только непереведённое
@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import argparse
 
-from common import WORK, in_case_scope, load_json, read_scripts
+from common import case_of, in_case_scope, load_entries, read_scripts
 import segments as S
 import tps as T
 
@@ -59,7 +59,7 @@ def main() -> int:
     ap.add_argument("--todo", action="store_true", help="только непереведённые сегменты")
     args = ap.parse_args()
 
-    done = {e["id"]: e for e in (load_json(WORK / "case2.json", default={}) or {}).get("entries", [])}
+    done = {e["id"]: e for e in load_entries()}
     eng = read_scripts("script_eng")
 
     # Говорящий объявляется не в каждом сегменте: если код E101 не встретился,

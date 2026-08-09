@@ -11,7 +11,7 @@ from __future__ import annotations
 import argparse
 import collections
 
-from common import WORK, load_json
+from common import load_entries
 import tps as T
 
 LINE_SOFT = 50   # рабочий лимит: столько выдержали французы и немцы
@@ -77,12 +77,12 @@ def main() -> int:
     ap.add_argument("--all", action="store_true", help="показать сводку по длинам")
     args = ap.parse_args()
 
-    data = load_json(WORK / "case2.json")
-    if not data:
-        print("нет work/case2.json — сначала tools/extract.py")
+    entries = load_entries()
+    if not entries:
+        print("нет work/case*.json — сначала tools/extract.py")
         return 1
 
-    translated = [e for e in data["entries"] if e.get("ru")]
+    translated = [e for e in entries if e.get("ru")]
     if not translated:
         print("переводов пока нет")
         return 0
@@ -126,7 +126,7 @@ def main() -> int:
                         f"{entry['id']}: строка {len(line)} символов (предел {limit}"
                         f"{', узкое окно' if mode == NARROW_MODE else ''}) — {line[:60]!r}")
 
-    print(f"переведено сегментов: {len(translated)} из {len(data['entries'])}")
+    print(f"переведено сегментов: {len(translated)} из {len(entries)}")
     if args.all and lengths:
         over_soft = sum(1 for n in lengths if n > LINE_SOFT)
         lengths.sort()

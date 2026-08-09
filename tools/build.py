@@ -1,4 +1,4 @@
-"""Собрать русский слот: подставить перевод из work/case2.json в бандл-носитель.
+"""Собрать русский слот: подставить перевод из work/case{N}.json в бандл-носитель.
 
 Английский бандл берётся как источник содержимого, переведённые сегменты подменяются,
 результат пишется поверх слота-носителя (см. common.HOST — сейчас немецкий) — так
@@ -15,7 +15,7 @@ common.BINARY_ONLY_FILES).
 
 При сборке 16 букв переписываются кодами-носителями (tools/carriers.py): на их
 родных кодах сидит письменность вымышленной Борджинии, и отобрать эти коды у неё
-нельзя — проверено, см. docs/font-atlas.md. В work/case2.json текст остаётся
+нельзя — проверено, см. docs/font-atlas.md. В work/case{N}.json текст остаётся
 обычным русским, подмена живёт только внутри собранного бандла.
 
     python tools/build.py            # собрать в work/build/, игру не трогать
@@ -30,7 +30,7 @@ import sys
 from bundle_io import asset_paths, write_text_assets
 import carriers as C
 from common import (HOST_SCRIPT, WORK, bundle, game_is_running,
-                    in_case_scope, load_json, read_scripts, sha256)
+                    in_case_scope, load_entries, read_scripts, sha256)
 import segments as S
 import tps as T
 
@@ -112,12 +112,13 @@ def main() -> int:
     ap.add_argument("--install", action="store_true", help="установить собранный бандл в игру")
     args = ap.parse_args()
 
-    data = load_json(WORK / "case2.json")
-    if not data:
-        print("нет work/case2.json — сначала tools/extract.py", file=sys.stderr)
+    # Бандл в игре один на все дела: собираем из всех work/case{N}.json сразу,
+    # иначе установка одного дела стёрла бы перевод другого.
+    entries = load_entries()
+    if not entries:
+        print("нет work/case*.json — сначала tools/extract.py", file=sys.stderr)
         return 1
 
-    entries = data["entries"]
     assets, replaced, russian_files, problems = build_assets(entries)
     if problems:
         print(f"ошибки разметки ({len(problems)}):", file=sys.stderr)
@@ -132,7 +133,7 @@ def main() -> int:
     print(f"коды-носители:        {C.CHOSEN} U+{C.CANDIDATES[C.CHOSEN]:04X}+ "
           f"для {len(C.BROKEN)} букв ({C.BROKEN})")
     if not assets:
-        print("нечего собирать — заполни поля \"ru\" в work/case2.json")
+        print("нечего собирать — заполни поля \"ru\" в work/case*.json")
         return 0
 
     src = bundle(HOST_SCRIPT)

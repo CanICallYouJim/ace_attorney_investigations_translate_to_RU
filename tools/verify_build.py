@@ -22,7 +22,7 @@ import sys
 
 from bundle_io import read_text_assets
 import carriers as C
-from common import BACKUP, HOST_SCRIPT, bundle, in_case_scope, load_json, read_scripts
+from common import BACKUP, HOST_SCRIPT, bundle, in_case_scope, load_entries, read_scripts
 import tps as T
 
 STAGE_DIR = "build"
@@ -100,7 +100,7 @@ def main() -> int:
             problems.append(f"{name}: собранный файл не переживает round-trip")
 
         if not in_case_scope(name):
-            problems.append(f"{name}: изменён файл вне дела 2")
+            problems.append(f"{name}: изменён файл вне дел в работе")
 
         raw_text = "".join(b.text for b in parsed.blocks)
         leaked = native_leaks(raw_text)
@@ -119,8 +119,7 @@ def main() -> int:
                 codes = ", ".join(f"{c:04X}" for c, _p in list(lost)[:5])
                 problems.append(f"{name}: потеряны коды {codes}")
 
-    data = load_json(WORK / "case2.json") or {"entries": []}
-    translated = sum(1 for e in data["entries"] if e.get("ru"))
+    translated = sum(1 for e in load_entries() if e.get("ru"))
 
     print(f"ассетов в бандле:     {len(new)}")
     print(f"английских как есть:  {untouched_english}")
@@ -142,7 +141,7 @@ def main() -> int:
         print("\nне во всех изменённых файлах есть кириллица — подозрительно")
         return 1
 
-    print("\nOK — бандл целостный, изменения только в деле 2, кириллица на месте.")
+    print("\nOK — бандл целостный, изменения только в делах в работе, кириллица на месте.")
     return 0
 
 

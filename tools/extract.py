@@ -1,4 +1,4 @@
-"""Извлечь реплики дела 2 в редактируемый work/case2.json.
+"""Извлечь реплики дела в редактируемый work/case{N}.json.
 
 Единица перевода — сегмент блока (см. tools/segments.py). Адрес сегмента —
 файл + идентификатор блока + порядковый номер — не зависит от длины текста,
@@ -10,27 +10,29 @@
 Скрипт не затирает уже сделанный перевод: если английский оригинал сегмента
 не изменился, поле "ru" переносится из прошлого запуска.
 
-    python tools/extract.py
+    python tools/extract.py            # все дела в работе, каждое в свой файл
+    python tools/extract.py --case 3   # только дело 3 -> work/case3.json
 """
 from __future__ import annotations
 
+import argparse
 import collections
 
-from common import WORK, in_case_scope, load_json, read_scripts, save_json
+from common import (CASES, case_json, case_prefixes, load_json, read_scripts,
+                    save_json)
 import segments as S
 import tps as T
 
-OUT = WORK / "case2.json"
 
-
-def main() -> int:
-    eng = read_scripts("script_eng")
-    previous = {e["id"]: e for e in (load_json(OUT, default={}) or {}).get("entries", [])}
+def extract_case(case: int, eng: dict[str, bytes]) -> int:
+    out = case_json(case)
+    previous = {e["id"]: e for e in (load_json(out, default={}) or {}).get("entries", [])}
+    prefixes = case_prefixes(case)
 
     entries = []
     skipped = 0
     for name in sorted(eng):
-        if not in_case_scope(name):
+        if not name.lower().startswith(prefixes):
             continue
         for block in T.parse(eng[name]).blocks:
             for idx, seg in enumerate(S.split(block.text)):
@@ -53,20 +55,34 @@ def main() -> int:
                     "status": old.get("status", "pending") if keep else "pending",
                 })
 
-    save_json(OUT, {"case": 2, "source": "gk2 eng", "entries": entries})
+    save_json(out, {"case": case, "source": "gk2 eng", "entries": entries})
 
     by_file = collections.Counter(e["file"] for e in entries)
     plain = sum(len(T.detokenize([t for t in T.from_markup(e["en"]) if isinstance(t, str)]))
                 for e in entries)
-    print(f"файлов дела 2:        {len(by_file)}")
+    print(f"=== дело {case} ===")
+    print(f"файлов:               {len(by_file)}")
     print(f"сегментов с текстом:  {len(entries)}")
     print(f"сегментов без текста: {skipped} (чистая логика, не переводится)")
     print(f"собственно текста:    {plain:,} символов")
     print(f"уже переведено:       {sum(1 for e in entries if e['ru'])}")
-    print(f"\n-> {OUT}")
-    print("\nкрупнейшие файлы:")
+    print(f"-> {out}")
+    print("крупнейшие файлы:")
     for name, n in by_file.most_common(8):
         print(f"   {n:4d}  {name}")
+    print()
+    return len(entries)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--case", type=int, choices=CASES, help="только это дело")
+    args = ap.parse_args()
+
+    eng = read_scripts("script_eng")
+    total = sum(extract_case(case, eng) for case in (CASES if args.case is None else (args.case,)))
+    print(f"всего сегментов в работе: {total}")
     return 0
 
 

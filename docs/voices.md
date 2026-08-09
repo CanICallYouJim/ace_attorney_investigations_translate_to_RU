@@ -161,6 +161,16 @@
 > And not just any story -- it's a love story! Isn't that dreamy?
 > I'm sure I could get the little sweetie to open up for us!
 
+### `0032` — безымянный заключённый (13 реплик)
+
+Сосед Карчерато по блоку, звучит в `sce1_c0_05`, `sce1_c0_08` и `sce1_c1_m06_npc`.
+Уличная речь того же покроя, что у Карчерато, но короче и без боксёрского антуража.
+По-русски — просторечие со съеденными словами: «чё», «слыхал», «грит», «тож».
+
+> Huh? Whaddaya want? I heard a scream. What of it?
+> He's right! Neither of us coulda done it!
+> The broken bracelet thing! 'Cause I want one too, ya hear!
+
 ### `002A` — охранник (63)
 
 Служебные фразы, в панике заикается.

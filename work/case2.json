@@ -46819,8 +46819,8 @@
       "index": 0,
       "mode": 2,
       "en": "It all fits perfectly,{E108:0008} except for the security footage,{E108:0008}\nwhich should have been recorded from around 9 AM.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Всё сходится,{E108:0008} кроме записи с камеры:{E108:0008}\nона должна была сниматься около 9 утра.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|1",
@@ -46829,8 +46829,8 @@
       "index": 1,
       "mode": 2,
       "en": "However,{E108:0008} the time stamp is three hours off.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Однако{E108:0008} отметка времени сдвинута на три часа.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|2",
@@ -46839,8 +46839,8 @@
       "index": 2,
       "mode": 2,
       "en": "But why would the time stamp be wrong?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А почему отметка неверная?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|3",
@@ -46849,8 +46849,8 @@
       "index": 3,
       "mode": 2,
       "en": "Detective.{E108:0010} I would like you to have the security camera\nexamined.{E108:0008} Right away, please.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Детектив.{E108:0010} Пусть камеру наблюдения осмотрят.{E108:0008}\nБудь добр, немедленно.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|4",
@@ -46859,8 +46859,8 @@
       "index": 4,
       "mode": 1,
       "en": "I'm back, sir!{E108:0018} {E12F:00010001}{E107:0002}I just talked to the guards, and...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я вернулся, сэр!{E108:0018} {E12F:00010001}{E107:0002}Поговорил с охраной, и...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|5",
@@ -46869,8 +46869,8 @@
       "index": 5,
       "mode": 2,
       "en": "...seems like the time codes can slip on these cameras\nif they lose power.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...похоже, у этих камер время сбивается,\nесли пропадает питание.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|6",
@@ -46879,8 +46879,8 @@
       "index": 6,
       "mode": 1,
       "en": "What?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|7",
@@ -46889,8 +46889,8 @@
       "index": 7,
       "mode": 2,
       "en": "They're pretty old, sir.{E108:0010} {E188:00300000}Guess the clock stops when the\npower's off.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Они старенькие, сэр.{E108:0010} {E188:00300000}Часы, видать, встают,\nкогда света нет.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|8",
@@ -46899,8 +46899,8 @@
       "index": 8,
       "mode": 2,
       "en": "Which would mean {E041}the power was off for\napproximately three hours{E040} at some point...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, в какой-то момент {E041}питания не было\nоколо трёх часов{E040}...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|9",
@@ -46909,8 +46909,8 @@
       "index": 9,
       "mode": 2,
       "en": "Security Camera Footage data updated\nin my Organizer.{E040}{E108:0010}{E106}{E1CF}{E100:0000}{E12F:00000000}{E12F:00010002}{E101:00010001}{E107:0002}That's not all, sir.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Запись с камеры» обновлены\nв органайзере.{E040}{E108:0010}{E106}{E1CF}{E100:0000}{E12F:00000000}{E12F:00010002}{E101:00010001}{E107:0002}И это не всё, сэр.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|10",
@@ -46919,8 +46919,8 @@
       "index": 10,
       "mode": 2,
       "en": "You remember how Knight denied stealing the keys?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Помните, Конев отрицал, что брал ключи?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|11",
@@ -46929,8 +46929,8 @@
       "index": 11,
       "mode": 2,
       "en": "No one believed him, considering...{E108:0008} well, y'know,{E108:0010} he\nseemed kinda like the only suspect...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ему никто не поверил, ведь...{E108:0008} ну, сами знаете,{E108:0010}\nбольше вроде и подозревать некого...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|12",
@@ -46939,8 +46939,8 @@
       "index": 12,
       "mode": 2,
       "en": "Turns out,{E108:0008} that wasn't all he said.{E108:0010} He also said {E188:002F0000}{E1D1}{E176:00010000}{E041}he was\nknocked out cold,{E108:0008} just like the other guy{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А оказалось,{E108:0008} это не всё.{E108:0010} Он ещё сказал, {E188:002F0000}{E1D1}{E176:00010000}{E041}что\nего вырубили,{E108:0008} как и того, второго{E040}.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|13",
@@ -46949,8 +46949,8 @@
       "index": 13,
       "mode": 2,
       "en": "Which may not necessarily have been a lie...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А это, возможно, и не ложь...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|14",
@@ -46959,8 +46959,8 @@
       "index": 14,
       "mode": 2,
       "en": "Darlings!{E108:0010} {E280}{E107:0001}There you all are!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Дорогуши!{E108:0010} {E280}{E107:0001}Вот вы где!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|15",
@@ -46969,8 +46969,8 @@
       "index": 15,
       "mode": 2,
       "en": "How goes the investigation?{E108:0010}\n{E188:00300000}Is there anything I can do to help things along?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как продвигается расследование?{E108:0010}\n{E188:00300000}Не могу ли я чем-нибудь помочь?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|16",
@@ -46979,8 +46979,8 @@
       "index": 16,
       "mode": 2,
       "en": "Actually,{E108:0008} there might be something we can do for you,\nWarden Laguarde.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пожалуй,{E108:0008} это мы можем кое-чем помочь вам,\nначальница Лястраж.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|17",
@@ -46989,8 +46989,8 @@
       "index": 17,
       "mode": 2,
       "en": "The escapee --{E108:0008} Mr. Carcerato --{E108:0010} {E1D1}I believe he may still\nbe on the premises.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Беглец —{E108:0008} Карчерато —{E108:0010} {E1D1}полагаю, он всё ещё\nздесь, на территории.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|18",
@@ -46999,8 +46999,8 @@
       "index": 18,
       "mode": 2,
       "en": "He is disguised as a guard.{E108:0010} {E12F:00000008}Here's the {E1CB:003A00020000}proof,{E1CD}{E108:0008} should\nyou need it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он переодет охранником.{E108:0010} {E12F:00000008}Вот {E1CB:003A00020000}доказательство,{E1CD}{E108:0008}\nесли нужно.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|19",
@@ -47009,8 +47009,8 @@
       "index": 19,
       "mode": 2,
       "en": "We're reasonably certain that the person captured on\nthis tape is {E282}our man.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мы вполне уверены, что человек на этой записи —\n{E282}он и есть.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|20",
@@ -47019,8 +47019,8 @@
       "index": 20,
       "mode": 2,
       "en": "And if I am correct...{E108:0010} {E12F:0000000B}{E176:00010000}{E284}he might even be right here in\nthis room with us now...!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И если я прав...{E108:0010} {E12F:0000000B}{E176:00010000}{E284}он, возможно, прямо сейчас\nздесь, с нами...!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|21",
@@ -47029,8 +47029,8 @@
       "index": 21,
       "mode": 2,
       "en": "Hey,{E108:0010} {E188:00300000}Mr. Carcerato would've been wearing a bracelet,\nright?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Слушайте,{E108:0010} {E188:00300000}на Карчерато же должен быть браслет,\nда?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|22",
@@ -47039,8 +47039,8 @@
       "index": 22,
       "mode": 2,
       "en": "Yes.{E108:0010} A bracelet that could easily be hidden under\nthe sleeves of his stolen uniform.{E108:0010} Furthermore...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} Браслет, который легко спрятать под рукавом\nкраденой формы.{E108:0010} Более того...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|23",
@@ -47049,8 +47049,8 @@
       "index": 23,
       "mode": 2,
       "en": "...the doors out of the prison proper don't have those\nsensors that detect the bracelets installed.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...на дверях из тюремного блока нет тех самых\nдатчиков, что ловят браслеты.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|24",
@@ -47059,8 +47059,8 @@
       "index": 24,
       "mode": 2,
       "en": "So if he avoided doors with sensors,{E108:0008} he could simply\nwait for an opportunity to finally make his escape.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Обходя двери с датчиками,{E108:0008} он мог спокойно\nждать случая, чтобы наконец уйти.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|25",
@@ -47069,8 +47069,8 @@
       "index": 25,
       "mode": 2,
       "en": "W-Well, yes,{E108:0010} I suppose he could...{E108:0010} He'd just have to\navoid the workshops and the cells,{E108:0008} {E107:0003}and...{E108:0010} Oh, my.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Н-Ну да,{E108:0010} пожалуй, мог бы...{E108:0010} Ему бы только\nобходить мастерские и камеры,{E108:0008} {E107:0003}и...{E108:0010} Батюшки.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|26",
@@ -47079,8 +47079,8 @@
       "index": 26,
       "mode": 1,
       "en": "He's one of YOU, isn't he!?{E108:0018} {E1D1}He's here right now!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он один из ВАС, да?!{E108:0018} {E1D1}Он прямо здесь!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|27",
@@ -47089,8 +47089,8 @@
       "index": 27,
       "mode": 1,
       "en": "Look!{E108:0018} {E1D1}It's Teddy!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Гляньте!{E108:0018} {E1D1}Это же Мишутка!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|28",
@@ -47099,8 +47099,8 @@
       "index": 28,
       "mode": 1,
       "en": "H-Hey,{E108:0010} paws off!{E108:0018}\n{E1D1}Get your mitts offa me, ya big palooka!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-Эй,{E108:0010} лапы убрал!{E108:0018}\n{E1D1}Отвали от меня, туша здоровая!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|29",
@@ -47109,8 +47109,8 @@
       "index": 29,
       "mode": 2,
       "en": "Thank you, Teddy.{E108:0010} {E188:00300000}Very kind of you to confirm our\nsuspicions.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Спасибо, Мишутка.{E108:0010} {E188:00300000}Весьма любезно с твоей стороны\nподтвердить наши подозрения.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|30",
@@ -47119,8 +47119,8 @@
       "index": 30,
       "mode": 3,
       "en": ".........{E107:0001}{E1D1}Gnrk.{E108:0020}\n{E283}GNNRRRAAAAAAAA{E1D5}{E1D2}AAAARGH!{E108:0020}{E104}{E100:0001}{E1C0:0000}{E188:00100000}{E182:010B0117}{E10D:000200010001}{E10E}{E110:00020000}{E111:0014000B0002000100000000}{E112:0014}{E10D:000000010001}{E10E}{E175:000200010000}{E100:0000}{E101:00140017}{E107:0001}{E188:00310000}{E1D1}Dangit, kid!{E108:0018} {E1D1}{E107:0002}If it wasn't for you, I'da--",
-      "ru": "",
-      "status": "pending"
+      "ru": ".........{E107:0001}{E1D1}Гнрх.{E108:0020}\n{E283}ГНРРРААААААА{E1D5}{E1D2}ААААРГХ!{E108:0020}{E104}{E100:0001}{E1C0:0000}{E188:00100000}{E182:010B0117}{E10D:000200010001}{E10E}{E110:00020000}{E111:0014000B0002000100000000}{E112:0014}{E10D:000000010001}{E10E}{E175:000200010000}{E100:0000}{E101:00140017}{E107:0001}{E188:00310000}{E1D1}Чёрт, малявка!{E108:0018} {E1D1}{E107:0002}Кабы не ты, я б--",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|31",
@@ -47129,8 +47129,8 @@
       "index": 31,
       "mode": 2,
       "en": "What a thing it is to be loved,{E108:0008} huh, Mr. Carcerato?{E108:0010}\nI'm almost envious...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Каково это — быть любимым,{E108:0008} а, господин Карчерато?{E108:0010}\nЯ почти завидую...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|32",
@@ -47139,8 +47139,8 @@
       "index": 32,
       "mode": 1,
       "en": "Guards!{E108:0018} {E281}Apprehend this man!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Охрана!{E108:0018} {E281}Задержать его!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|33",
@@ -47149,8 +47149,8 @@
       "index": 33,
       "mode": 2,
       "en": "A moment, if you will.{E108:0010} I have some questions for our\nwould-be escapee.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Минуту, будьте добры.{E108:0010} У меня есть вопросы\nк несостоявшемуся беглецу.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|34",
@@ -47159,8 +47159,8 @@
       "index": 34,
       "mode": 2,
       "en": "If we are to learn the truth,{E108:0008} I will need to speak with\nhim.{E108:0010} {E188:00300000}With your permission, of course.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чтобы узнать правду,{E108:0008} мне нужно с ним\nпоговорить.{E108:0010} {E188:00300000}С вашего позволения, разумеется.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|35",
@@ -47169,8 +47169,8 @@
       "index": 35,
       "mode": 2,
       "en": "...I can hardly say no now, can I?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Разве теперь откажешь?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|36",
@@ -47179,8 +47179,8 @@
       "index": 36,
       "mode": 7,
       "en": ".........{E108:0008}{E107:0001}Well, come on then.{E108:0018} Hit me with your best shot.",
-      "ru": "",
-      "status": "pending"
+      "ru": ".........{E108:0008}{E107:0001}Ну давай.{E108:0018} Выкладывай, чё там у тя.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|37",
@@ -47189,8 +47189,8 @@
       "index": 37,
       "mode": 2,
       "en": "(Mr. Carcerato's escape route led directly into Knight's\ncell.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Путь побега Карчерато вёл прямо в камеру\nКонева.)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|38",
@@ -47199,8 +47199,8 @@
       "index": 38,
       "mode": 2,
       "en": "(So it's highly possible he has something to offer!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Стало быть, ему вполне может быть что сказать!)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_09.bytes|01002320|39",
@@ -47209,8 +47209,8 @@
       "index": 39,
       "mode": 2,
       "en": "Tell me what you were doing on the day Mr. Knight's\nbody was discovered.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Расскажите, что вы делали в день,\nкогда нашли тело Конева.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_0a.bytes|01002420|0",
@@ -53609,8 +53609,8 @@
       "index": 0,
       "mode": 2,
       "en": "What is it, Mr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что такое, мистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|0",
@@ -53619,8 +53619,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ugh!{E108:0010} I can't believe I missed out!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эх!{E108:0010} Не могу поверить, что всё пропустила!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|1",
@@ -53629,8 +53629,8 @@
       "index": 1,
       "mode": 2,
       "en": "...On what, exactly?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Что именно пропустила?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|2",
@@ -53639,8 +53639,8 @@
       "index": 2,
       "mode": 2,
       "en": "The show, duh!{E108:0010}\nI always wanted to be in the circus!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Представление, ну!{E108:0010}\nЯ всегда хотела в цирк!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|3",
@@ -53649,8 +53649,8 @@
       "index": 3,
       "mode": 2,
       "en": "I mean,{E108:0008} {E1D1}I even have an escape act that would drive the\ncrowd totally wild and everything!",
-      "ru": "",
-      "status": "pending"
+      "ru": "У меня даже{E108:0008} {E1D1}номер с побегом есть — публика бы\nс ума посходила!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|4",
@@ -53659,8 +53659,8 @@
       "index": 4,
       "mode": 2,
       "en": "...Ah, yes.{E108:0010} A great loss, I'm sure.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Ах да.{E108:0010} Невосполнимая утрата, разумеется.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|5",
@@ -53669,8 +53669,8 @@
       "index": 5,
       "mode": 2,
       "en": "Well, I've got an in with Regina now,{E108:0008} so let's wrap this\ncase up lickety-split.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, теперь у меня есть свой человек — Реджина,{E108:0008}\nтак что давайте закруглим дело по-быстрому.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|6",
@@ -53679,8 +53679,8 @@
       "index": 6,
       "mode": 2,
       "en": "Because I'm gonna star in the next show,{E108:0008} {E1D1}if it's the last\nthing I do!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Потому что в следующем представлении{E108:0008} {E1D1}я буду\nзвездой, чего бы мне это ни стоило!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|7",
@@ -53689,8 +53689,8 @@
       "index": 7,
       "mode": 1,
       "en": "C'mon!{E108:0018} {E107:0002}The quicker we investigate,{E108:0008} {E1D1}the quicker we'll\nbe done!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Идёмте!{E108:0018} {E107:0002}Чем быстрее расследуем,{E108:0008} {E1D1}тем быстрее\nзакончим!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028A1|8",
@@ -53699,8 +53699,8 @@
       "index": 8,
       "mode": 2,
       "en": "A-{E108:0010}Alright.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Х-{E108:0010}Хорошо.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|0",
@@ -53709,8 +53709,8 @@
       "index": 0,
       "mode": 2,
       "en": "Being a pet stylist kinda sounds like fun.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А стилистом для зверей, наверное, весело.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|1",
@@ -53719,8 +53719,8 @@
       "index": 1,
       "mode": 2,
       "en": "Hey, Mr. Edgeworth.{E108:0010}\nWant me to give you a mudpack?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Эджворт.{E108:0010}\nСделать вам грязевое обёртывание?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|2",
@@ -53729,8 +53729,8 @@
       "index": 2,
       "mode": 2,
       "en": "Do I want you to cover me in filth?{E108:0010}\nNo.{E108:0008} I do not.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Желаю ли я быть вымазанным в грязи?{E108:0010}\nНет.{E108:0008} Не желаю.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|3",
@@ -53739,8 +53739,8 @@
       "index": 3,
       "mode": 2,
       "en": "Oh,{E108:0008} don't be like that!{E108:0010} Look,{E108:0010} {E1D1}we even have a rubber\nglove!{E108:0010} It's a sign!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой,{E108:0008} ну не будьте таким!{E108:0010} Глядите,{E108:0010} {E1D1}и перчатка\nрезиновая есть!{E108:0010} Это знак!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|4",
@@ -53749,8 +53749,8 @@
       "index": 4,
       "mode": 2,
       "en": "Kay!{E108:0010} {E107:0001}{E282}Stop playing with the evidence at once!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кей!{E108:0010} {E107:0001}{E282}Немедленно прекрати играть с уликами!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|5",
@@ -53759,8 +53759,8 @@
       "index": 5,
       "mode": 2,
       "en": "...Hm?{E108:0018}\n(The mud on that rubber glove...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Хм?{E108:0018}\n(Грязь на этой резиновой перчатке...)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|6",
@@ -53769,8 +53769,8 @@
       "index": 6,
       "mode": 2,
       "en": "What's the matter?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что такое?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|7",
@@ -53779,8 +53779,8 @@
       "index": 7,
       "mode": 2,
       "en": "Did I go too far?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я перегнула?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|8",
@@ -53789,8 +53789,8 @@
       "index": 8,
       "mode": 2,
       "en": "Not all.{E108:0010} In fact,{E108:0008} that was very helpful.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вовсе нет.{E108:0010} Напротив,{E108:0008} это очень помогло.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|9",
@@ -53799,8 +53799,8 @@
       "index": 9,
       "mode": 2,
       "en": "What?{E108:0010} But I didn't...{E108:0010}{E106}{E101:00020002}\n{E107:0002}I mean...{E108:0018} {E12F:0002000B}Glad to be of service!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что?{E108:0010} Но я же не...{E108:0010}{E106}{E101:00020002}\n{E107:0002}То есть...{E108:0018} {E12F:0002000B}Рада служить!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028AA|10",
@@ -53809,8 +53809,8 @@
       "index": 10,
       "mode": 2,
       "en": "(It seems that Mr. Sahwit has some explaining to do...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Похоже, Видаллу есть что объяснить...)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028B6|0",
@@ -53819,8 +53819,8 @@
       "index": 0,
       "mode": 2,
       "en": "That's a cool badge.{E108:0010} {E107:0003}Very...{E108:000C} {E107:0002}severe.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Клёвый значок.{E108:0010} {E107:0003}Очень...{E108:000C} {E107:0002}суровый.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028B6|1",
@@ -53829,8 +53829,8 @@
       "index": 1,
       "mode": 2,
       "en": "As it should be.{E108:0010} After all, it symbolizes both the\nsanctity and the strictness of the law.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как и должно.{E108:0010} Он ведь символизирует и святость\nзакона, и его строгость.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028B6|2",
@@ -53839,8 +53839,8 @@
       "index": 2,
       "mode": 2,
       "en": "Yeah, well my badge symbolizes...{E108:0020} {E107:0003}{E12F:00020002}{E1D1}Uh...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А мой значок символизирует...{E108:0020} {E107:0003}{E12F:00020002}{E1D1}Э-э...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028B6|3",
@@ -53849,8 +53849,8 @@
       "index": 3,
       "mode": 1,
       "en": "Love, justice, peace, courage, duty, and compassion!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Любовь, справедливость, мир, отвагу, долг\nи сострадание!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028B6|4",
@@ -53859,8 +53859,8 @@
       "index": 4,
       "mode": 2,
       "en": "(And what about your beloved truth...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А как же твоя любимая истина...?)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028BB|0",
@@ -53869,8 +53869,8 @@
       "index": 0,
       "mode": 2,
       "en": "So you wanna see some rope tricks, huh?{E108:0010} I could show\nyou how to stealthily escape when your hands are tied!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хотите фокусы с верёвкой?{E108:0010} Могу показать,\nкак незаметно вывернуться со связанными руками!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028BB|1",
@@ -53879,8 +53879,8 @@
       "index": 1,
       "mode": 2,
       "en": "...Surely there are some more everyday uses you can\nteach me instead?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Быть может, есть применения побытовее,\nкоторым ты меня научишь?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028BB|2",
@@ -53889,8 +53889,8 @@
       "index": 2,
       "mode": 3,
       "en": "Hmm,{E108:0008} let's see...{E108:0018} {E107:0002}{E1D2}{E188:00310000}{E12F:00020008}What about how to make a ladder?{E108:0010}\nOr how to tie an evil-doer up super tight?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хм,{E108:0008} сейчас...{E108:0018} {E107:0002}{E1D2}{E188:00310000}{E12F:00020008}Например, как сделать лестницу?{E108:0010}\nИли как связать злодея покрепче?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028BB|3",
@@ -53899,8 +53899,8 @@
       "index": 3,
       "mode": 2,
       "en": "There's no end to the cool stuff you can do with a good\npiece of rope!",
-      "ru": "",
-      "status": "pending"
+      "ru": "С хорошей верёвкой можно вытворять что угодно,\nи конца этому нет!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028BB|4",
@@ -53909,8 +53909,8 @@
       "index": 4,
       "mode": 2,
       "en": "(...Assuming you're a Great Thief,{E108:0008} I suppose.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Если ты Великий вор,{E108:0008} надо полагать.)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C0|0",
@@ -53919,8 +53919,8 @@
       "index": 0,
       "mode": 2,
       "en": "So the doors around here open whenever an animal\ntries to go through them, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, двери тут открываются, когда через них\nидёт зверь, да?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C0|1",
@@ -53929,8 +53929,8 @@
       "index": 1,
       "mode": 2,
       "en": "Meaning, if I had a furry friend with me,{E108:0008} I could go\nwherever I wanted, huh!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Выходит, будь со мной пушистый друг,{E108:0008} я могла бы\nходить куда вздумается!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C0|2",
@@ -53939,8 +53939,8 @@
       "index": 2,
       "mode": 2,
       "en": "I'd think the bigger problem would be getting in here\nin the first place.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Полагаю, большая трудность — вообще сюда\nпопасть.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C0|3",
@@ -53949,8 +53949,8 @@
       "index": 3,
       "mode": 2,
       "en": "Nah,{E108:0008} that's the easy part!{E108:0010} If you know the trick to\nopening any door in the world, that is...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не-а,{E108:0008} это как раз просто!{E108:0010} Если знаешь приёмчик,\nкоторым открывается любая дверь на свете...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C0|4",
@@ -53959,8 +53959,8 @@
       "index": 4,
       "mode": 3,
       "en": "...Interesting.{E108:0010} {E107:0002}And what is this trick, exactly?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Любопытно.{E108:0010} {E107:0002}И что же это за приёмчик?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C0|5",
@@ -53969,8 +53969,8 @@
       "index": 5,
       "mode": 3,
       "en": "Oh, umm...{E108:0010} {E107:0002}Sorry, Mr. Edgeworth.{E108:0010}\n{E282}It's a trade secret!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой, э-э...{E108:0010} {E107:0002}Простите, мистер Эджворт.{E108:0010}\n{E282}Профессиональная тайна!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C0|6",
@@ -53979,8 +53979,8 @@
       "index": 6,
       "mode": 2,
       "en": "(...Well, it was worth a shot.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Что ж, попытка не пытка.)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|0",
@@ -53989,8 +53989,8 @@
       "index": 0,
       "mode": 3,
       "en": "*shudder*{E108:0018} {E107:0002}The sight of that dog sends shivers down\nmy spine, Mr. Edgeworth...",
-      "ru": "",
-      "status": "pending"
+      "ru": "*бр-р*{E108:0018} {E107:0002}От вида этого пса у меня мороз\nпо коже, мистер Эджворт...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|1",
@@ -53999,8 +53999,8 @@
       "index": 1,
       "mode": 2,
       "en": "You have phobias, Kay?",
-      "ru": "",
-      "status": "pending"
+      "ru": "У тебя есть страхи, Кей?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|2",
@@ -54009,8 +54009,8 @@
       "index": 2,
       "mode": 1,
       "en": "Of course I do!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Конечно есть!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|3",
@@ -54019,8 +54019,8 @@
       "index": 3,
       "mode": 2,
       "en": "I'm scared of cops,{E108:0008} {E1D1}guards,{E108:0008} {E1D1}sirens...{E108:0010} {E1D1}All kinds of stuff!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Боюсь полицейских,{E108:0008} {E1D1}охранников,{E108:0008} {E1D1}сирен...{E108:0010}\n{E1D1}Да много чего!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|4",
@@ -54029,8 +54029,8 @@
       "index": 4,
       "mode": 2,
       "en": "The very things that assuage most people's fears.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ровно того, что большинству страхи унимает.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|5",
@@ -54039,8 +54039,8 @@
       "index": 5,
       "mode": 2,
       "en": "Yeah, well...{E108:0010} I'm not most people!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну так...{E108:0010} я и не большинство!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|6",
@@ -54049,8 +54049,8 @@
       "index": 6,
       "mode": 2,
       "en": "For you see,{E108:0008} I'm--",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ведь я,{E108:0008} видите ли,--",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|7",
@@ -54059,8 +54059,8 @@
       "index": 7,
       "mode": 2,
       "en": "Let me guess,{E108:0010} {E285}\"the Great Thief Yatagarasu\"?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Дай угадаю:{E108:0010} {E285}«Великий вор Ятагарасу»?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|8",
@@ -54069,8 +54069,8 @@
       "index": 8,
       "mode": 1,
       "en": "Hey!{E108:0018} {E107:0002}{E1D1}Stop stealing my lines!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эй!{E108:0018} {E107:0002}{E1D1}Хватит красть мои реплики!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028C7|9",
@@ -54079,8 +54079,8 @@
       "index": 9,
       "mode": 2,
       "en": "Heh,{E108:0010} I see now why you do it.{E108:0010} That was rather\nsatisfying, I must admit.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хех,{E108:0010} теперь понимаю, зачем ты этим занимаешься.{E108:0010}\nПризнаться, довольно приятно.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|0",
@@ -54089,8 +54089,8 @@
       "index": 0,
       "mode": 2,
       "en": "You know what I think, Mr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Знаете, что я думаю, мистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|1",
@@ -54099,8 +54099,8 @@
       "index": 1,
       "mode": 2,
       "en": "If the murder weapon can't be found...{E108:0010} {E285}then maybe\nthere wasn't one to begin with!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Если орудие убийства не находится...{E108:0010} {E285}может, его\nи не было вовсе!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|2",
@@ -54109,8 +54109,8 @@
       "index": 2,
       "mode": 2,
       "en": "Well.{E108:0010} That's certainly an interesting suggestion.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что ж.{E108:0010} Предположение и впрямь любопытное.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|3",
@@ -54119,8 +54119,8 @@
       "index": 3,
       "mode": 2,
       "en": "But then{E108:0008} {E284}how did our victim meet his end?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но тогда{E108:0008} {E284}отчего погиб потерпевший?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|4",
@@ -54129,8 +54129,8 @@
       "index": 4,
       "mode": 1,
       "en": "What are you talking about!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "О чём это вы!?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|5",
@@ -54139,8 +54139,8 @@
       "index": 5,
       "mode": 2,
       "en": "If there's no murder weapon,{E108:0008} there's no murder, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нет орудия убийства{E108:0008} — нет и убийства, верно?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|6",
@@ -54149,8 +54149,8 @@
       "index": 6,
       "mode": 2,
       "en": "...Come now, Kay.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Полно, Кей.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|7",
@@ -54159,8 +54159,8 @@
       "index": 7,
       "mode": 2,
       "en": "We cannot ignore the facts in front of us,{E108:0008} no matter\nhow much we might wish to.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мы не вправе закрывать глаза на факты,{E108:0008} как бы\nнам этого ни хотелось.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|8",
@@ -54169,8 +54169,8 @@
       "index": 8,
       "mode": 3,
       "en": "You're right...{E108:0010} {E107:0002}I know Mr. Knight's dead...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы правы...{E108:0010} {E107:0002}Я знаю, что Конев мёртв...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|9",
@@ -54179,8 +54179,8 @@
       "index": 9,
       "mode": 1,
       "en": "But I know something else, too!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но я знаю и кое-что ещё!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028D1|10",
@@ -54189,8 +54189,8 @@
       "index": 10,
       "mode": 2,
       "en": "We're going to find out who killed him,{E108:0008} if it's the last\nthing we do!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мы выясним, кто его убил,{E108:0008} чего бы нам это\nни стоило!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|0",
@@ -54199,8 +54199,8 @@
       "index": 0,
       "mode": 2,
       "en": "We lucked out finding this tape.{E108:0010}\nCan't believe they caught it on camera.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нам повезло с этой записью.{E108:0010}\nНадо же, камера всё поймала.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|1",
@@ -54209,8 +54209,8 @@
       "index": 1,
       "mode": 2,
       "en": "Indeed.{E108:0010} The actual moment Knight was killed.{E108:0010}\n{E285}One couldn't hope for a better clue.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно.{E108:0010} Сам момент убийства Конева.{E108:0010}\n{E285}О лучшей зацепке и мечтать нельзя.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|2",
@@ -54219,8 +54219,8 @@
       "index": 2,
       "mode": 3,
       "en": "Hmm...{E108:0018} {E107:0002}Can't really see the face of the person being\nattacked, though.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хм...{E108:0018} {E107:0002}Только лица того, на кого напали,\nтолком не разглядеть.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|3",
@@ -54229,8 +54229,8 @@
       "index": 3,
       "mode": 2,
       "en": "...True.{E108:0010}\n(That is a problem...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Верно.{E108:0010}\n(И это осложнение...)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|4",
@@ -54239,8 +54239,8 @@
       "index": 4,
       "mode": 2,
       "en": "(The video isn't quite the conclusive proof I'd like it to\nbe...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Запись не столь неопровержима, как мне\nхотелось бы...)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|5",
@@ -54249,8 +54249,8 @@
       "index": 5,
       "mode": 1,
       "en": "Ooh,{E108:0010} that gives me an idea!{E108:0018}\n{E107:0002}What if I deliberately covered my face?",
-      "ru": "",
-      "status": "pending"
+      "ru": "О,{E108:0010} а это мысль!{E108:0018}\n{E107:0002}А если нарочно закрывать лицо?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|6",
@@ -54259,8 +54259,8 @@
       "index": 6,
       "mode": 2,
       "en": "Then I wouldn't need to worry about security cameras\nat all!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тогда камеры наблюдения мне вообще\nне страшны!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|7",
@@ -54269,8 +54269,8 @@
       "index": 7,
       "mode": 2,
       "en": "Yeah,{E108:0010} then I can sneak into pretty much anywhere\nI want!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага,{E108:0010} и можно пробраться почти куда\nугодно!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|8",
@@ -54279,8 +54279,8 @@
       "index": 8,
       "mode": 2,
       "en": "I think your rather unique outfit might give you away.{E108:0010}\nYou'd have to do something about that first.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Полагаю, тебя выдаст твой своеобразный наряд.{E108:0010}\nС ним пришлось бы сперва что-то сделать.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|9",
@@ -54289,8 +54289,8 @@
       "index": 9,
       "mode": 2,
       "en": "Not on your life!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ни за что на свете!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|10",
@@ -54299,8 +54299,8 @@
       "index": 10,
       "mode": 2,
       "en": "I'm the Great Thief Yatagarasu!{E108:0010}\nThere ARE rules, you know!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я Великий вор Ятагарасу!{E108:0010}\nУ меня, между прочим, ЕСТЬ правила!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028DC|11",
@@ -54309,8 +54309,8 @@
       "index": 11,
       "mode": 2,
       "en": "(The type you get to pick and choose at will, I take it?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Из тех, что выбирают по настроению, надо думать?)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028E8|0",
@@ -54319,8 +54319,8 @@
       "index": 0,
       "mode": 2,
       "en": "So can a metal detector find any kind of metal?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А металлоискатель любой металл находит?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028E8|1",
@@ -54329,8 +54329,8 @@
       "index": 1,
       "mode": 2,
       "en": "I imagine so,{E108:0008} if it's one of those high-spec models.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Полагаю, да,{E108:0008} если прибор из хороших.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028E8|2",
@@ -54339,8 +54339,8 @@
       "index": 2,
       "mode": 2,
       "en": "I have heard that some metals can be harder to detect\nthan others, though.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хотя, говорят, иные металлы обнаружить\nтруднее прочих.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028E8|3",
@@ -54349,8 +54349,8 @@
       "index": 3,
       "mode": 2,
       "en": "Really?{E108:0010} {E285}Which ones?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Правда?{E108:0010} {E285}Какие?",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028E8|4",
@@ -54359,8 +54359,8 @@
       "index": 4,
       "mode": 2,
       "en": "Non-magnetic metals mostly, I believe.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В основном немагнитные, если не ошибаюсь.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028E8|5",
@@ -54369,8 +54369,8 @@
       "index": 5,
       "mode": 3,
       "en": "Interesting...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Любопытно...",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028E8|6",
@@ -54379,8 +54379,8 @@
       "index": 6,
       "mode": 2,
       "en": "Thanks, Mr. Edgeworth!{E108:0010} {E107:0001}{E282}You're just a treasure trove of\ninformation!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Спасибо, мистер Эджворт!{E108:0010} {E107:0001}{E282}Вы просто кладезь\nсведений!",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028E8|7",
@@ -54389,8 +54389,8 @@
       "index": 7,
       "mode": 2,
       "en": "(I hope I haven't just helped further a Great Thief's\ncareer...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Надеюсь, я не поспособствовал карьере\nВеликого вора...)",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028F0|0",
@@ -54399,8 +54399,8 @@
       "index": 0,
       "mode": 2,
       "en": "Hey, I'm a Great Thief.{E108:0010} I totally sympathize.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я же Великий вор.{E108:0010} Отлично вас понимаю.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028F0|1",
@@ -54409,8 +54409,8 @@
       "index": 1,
       "mode": 2,
       "en": "If you feel you gotta grab something,{E108:0008} you should just\ngo ahead and grab it.{E108:0010} Even if it's worthless.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Если чувствуешь, что надо что-то стащить,{E108:0008}\nбери и тащи.{E108:0010} Пусть даже оно бесполезное.",
+      "status": "translated"
     },
     {
       "id": "sce1_c2_partner.bytes|010028F0|2",
@@ -54419,8 +54419,8 @@
       "index": 2,
       "mode": 2,
       "en": "(She doesn't seem to think much of my little\n\"treasure\"...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Похоже, она невысокого мнения о моём маленьком\n«сокровище»...)",
+      "status": "translated"
     },
     {
       "id": "sce1_c3_00.bytes|01001620|0",

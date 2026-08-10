@@ -48,11 +48,14 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, int, list[
 
     # Английский держим рядом с русским: метка блока не уникальна в файле, и по одному
     # адресу (метка, номер) отзывается несколько блоков — см. проверку в цикле ниже.
-    by_file: dict[str, dict[tuple[str, int], tuple[str, str]]] = {}
+    # Поэтому на адрес кладётся не одна пара, а список: в sce2_opening.bytes по адресу
+    # FFFFFFFF|0 отзываются все одиннадцать блоков файла, и у каждого свой перевод.
+    by_file: dict[str, dict[tuple[str, int], list[tuple[str, str]]]] = {}
     for entry in entries:
         if entry.get("ru"):
-            by_file.setdefault(entry["file"], {})[(entry["block"], entry["index"])] = (
-                entry["en"], C.encode(entry["ru"], carriers))
+            by_file.setdefault(entry["file"], {}).setdefault(
+                (entry["block"], entry["index"]), []).append(
+                    (entry["en"], C.encode(entry["ru"], carriers)))
 
     eng = read_scripts("script_eng")
     # Путь внутри бандла-носителя берём из него самого: регистр в именах не всегда
@@ -81,7 +84,6 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, int, list[
                 key = (f"{block.label_id:08X}", idx)
                 if key not in wanted:
                     continue
-                english, russian = wanted[key]
                 try:
                     head, core, tail = seg.core()
                     # Метка блока в файле не уникальна: у одной и той же метки бывает
@@ -90,7 +92,9 @@ def build_assets(entries: list[dict]) -> tuple[dict[str, bytes], int, int, list[
                     # подставляем, только если на месте лежит ровно тот английский,
                     # который переводили. Иначе перевод уезжал в пустой блок-заглушку
                     # и в игре всплывала реплика, которой в оригинале нет.
-                    if T.to_markup(core) != english:
+                    here = T.to_markup(core)
+                    russian = next((ru for en, ru in wanted[key] if en == here), None)
+                    if russian is None:
                         continue
                     seg.body = head + T.from_markup(russian) + tail
                 except Exception as exc:

@@ -56,13 +56,13 @@ NAMES = {
         "003E": "?сборный",
     },
     3: COMMON | {
-        "001D": "?001D",
-        "001E": "?001E",
-        "001F": "?001F",
-        "0020": "?0020",
-        "0021": "?0021",
-        "002C": "?002C",
-        "0039": "?0039",
+        "001D": "Тангароа",
+        "001E": "Долгова",
+        "001F": "Сдобина",
+        "0020": "Густо",
+        "0021": "Морозов",
+        "002C": "полицейский",
+        "0039": "зевака",
         "003D": "?сборный",
         "003E": "?сборный",
         "0040": "?сборный",
@@ -94,6 +94,9 @@ def main() -> int:
     for name in sorted(eng):
         if not in_case_scope(name) or not name.startswith(args.file):
             continue
+        # Нумерация повторов та же, что в extract.py: метка блока не уникальна,
+        # и в sce2_opening.bytes все блоки помечены FFFFFFFF.
+        seen: dict[tuple[str, int], int] = {}
         for block in T.parse(eng[name]).blocks:
             current = None
             for idx, seg in enumerate(S.split(block.text)):
@@ -102,7 +105,9 @@ def main() -> int:
                     current = who
                 if not seg.has_text():
                     continue
-                key = f"{name}|{block.label_id:08X}|{idx}"
+                label = f"{block.label_id:08X}"
+                nth = seen[(label, idx)] = seen.get((label, idx), 0) + 1
+                key = f"{name}|{label}|{idx}" if nth == 1 else f"{name}|{label}#{nth}|{idx}"
                 entry = done.get(key, {})
                 if args.todo and entry.get("ru"):
                     continue

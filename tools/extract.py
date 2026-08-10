@@ -34,12 +34,19 @@ def extract_case(case: int, eng: dict[str, bytes]) -> int:
     for name in sorted(eng):
         if not name.lower().startswith(prefixes):
             continue
+        # Метка блока в файле не уникальна, и в sce2_opening.bytes все одиннадцать
+        # блоков помечены FFFFFFFF: адрес «файл|метка|номер» слипался в один на всех,
+        # и патч мог дотянуться только до последнего. Повторы нумеруются с двойки.
+        seen: collections.Counter = collections.Counter()
         for block in T.parse(eng[name]).blocks:
             for idx, seg in enumerate(S.split(block.text)):
                 if not seg.has_text():
                     skipped += 1
                     continue
-                key = f"{name}|{block.label_id:08X}|{idx}"
+                label = f"{block.label_id:08X}"
+                seen[(label, idx)] += 1
+                nth = seen[(label, idx)]
+                key = f"{name}|{label}|{idx}" if nth == 1 else f"{name}|{label}#{nth}|{idx}"
                 _head, core, _tail = seg.core()
                 english = T.to_markup(core)
                 old = previous.get(key)
@@ -47,7 +54,7 @@ def extract_case(case: int, eng: dict[str, bytes]) -> int:
                 entries.append({
                     "id": key,
                     "file": name,
-                    "block": f"{block.label_id:08X}",
+                    "block": label,
                     "index": idx,
                     "mode": seg.mode,
                     "en": english,

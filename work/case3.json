@@ -3499,8 +3499,8 @@
       "index": 0,
       "mode": 9,
       "en": "April 2, 10:05 AM\n{E20D}Zodiac Hall - Fountain Room",
-      "ru": "",
-      "status": "pending"
+      "ru": "2 апреля, 10:05\n{E20D}Зодиак-холл, зал фонтана",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|0",
@@ -3509,8 +3509,8 @@
       "index": 0,
       "mode": 2,
       "en": "Well, Fender?{E108:0010}\n{E107:0001}Are you finally going to tell me what we're doing here?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну что, Защитин?{E108:0010}\n{E107:0001}Вы наконец скажете, зачем мы сюда пришли?",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|1",
@@ -3519,8 +3519,8 @@
       "index": 1,
       "mode": 2,
       "en": "Why have you brought me to an art gallery, of\nall places?",
-      "ru": "",
-      "status": "pending"
+      "ru": "И почему именно в художественную\nгалерею, из всех возможных мест?",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|2",
@@ -3529,8 +3529,8 @@
       "index": 2,
       "mode": 1,
       "en": "Hey,{E108:0008} {E107:0002}you had nothing going on.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э,{E108:0008} {E107:0002}у тебя всё равно дел не было.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|3",
@@ -3539,8 +3539,8 @@
       "index": 3,
       "mode": 2,
       "en": "Seemed like the perfect chance to come and enjoy the\nmagic of star sign stuff together.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Отличный случай вместе проникнуться\nволшебством всей этой зодиакальной темы.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|4",
@@ -3549,8 +3549,8 @@
       "index": 4,
       "mode": 2,
       "en": "...I'm leaving.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Я ухожу.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|5",
@@ -3559,8 +3559,8 @@
       "index": 5,
       "mode": 1,
       "en": "Chill, big guy.{E108:0010} {E107:0002}I'm just joking.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Остынь, здоровяк.{E108:0010} {E107:0002}Я же шучу.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|6",
@@ -3569,8 +3569,8 @@
       "index": 6,
       "mode": 2,
       "en": "You know about the {E284}{E041}IS-7 Incident{E040}, yeah?{E108:0010}\nYour old man's last case?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Про {E284}{E041}дело IS-7{E040} слыхал, да?{E108:0010}\nПоследнее дело твоего старика.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|7",
@@ -3579,8 +3579,8 @@
       "index": 7,
       "mode": 2,
       "en": "Of course...{E108:0010} Von Karma took great pleasure in showing\nme the files as soon as I became a prosecutor.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Разумеется...{E108:0010} Фон Карма с большим удовольствием\nпоказал мне дело, едва я стал прокурором.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|8",
@@ -3589,8 +3589,8 @@
       "index": 8,
       "mode": 2,
       "en": "And I reviewed them again last night after your invite.{E108:0010}\nSee?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А вчера вечером, получив ваше приглашение,{E108:0010}\nя их перечитал. Видите?",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|9",
@@ -3599,8 +3599,8 @@
       "index": 9,
       "mode": 3,
       "en": "I...{E108:0008} {E107:0002}{E1D1}was also present at the trial all those years ago.{E108:0010}\nAlthough my memories of it are somewhat hazy...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0008} {E107:0002}{E1D1}тоже был на том процессе, много лет назад.{E108:0010}\nПравда, помню я всё довольно смутно...",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|10",
@@ -3609,8 +3609,8 @@
       "index": 10,
       "mode": 2,
       "en": "(As a child,{E108:0008} I was completely in awe of my father.{E108:0010}\nThe sight of him in court was inspirational.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Ребёнком{E108:0008} я смотрел на отца снизу вверх.{E108:0010}\nВ зале суда он был для меня образцом.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|11",
@@ -3619,8 +3619,8 @@
       "index": 11,
       "mode": 2,
       "en": "(Gregory Edgeworth,{E108:0008} attorney at law.{E108:0018}\nAnd opposite him...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Грегори Эджворт,{E108:0008} адвокат.{E108:0018}\nА напротив него...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|12",
@@ -3629,8 +3629,8 @@
       "index": 12,
       "mode": 2,
       "en": "(...the man who would become my mentor --{E108:0008} Manfred\nvon Karma.{E108:0010} It was quite a case.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...человек, которому предстояло стать моим\nнаставником, —{E108:0008} Манфред фон Карма.{E108:0010} То ещё дело.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|13",
@@ -3639,8 +3639,8 @@
       "index": 13,
       "mode": 2,
       "en": "(However,{E108:0008} it ended with the conviction of the\naccused...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Вот только{E108:0008} кончилось оно обвинительным\nприговором...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|14",
@@ -3649,8 +3649,8 @@
       "index": 14,
       "mode": 2,
       "en": "Ah...{E108:0010} So you were there, too?{E108:0010} You were in the\ncourtroom for Gregory's final outing?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А-а...{E108:0010} Так ты тоже там был?{E108:0010} Сидел в зале\nна последнем выходе Грегори?",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|15",
@@ -3659,8 +3659,8 @@
       "index": 15,
       "mode": 2,
       "en": "Well,{E108:0008} {E107:0001}that'll make explaining things easier.{E108:0020}{E12F:000A0000}\n{E107:0002}I wanted you to know something, see.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну,{E108:0008} {E107:0001}тогда объяснять будет проще.{E108:0020}{E12F:000A0000}\n{E107:0002}Я вот что хотел тебе рассказать.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|16",
@@ -3669,8 +3669,8 @@
       "index": 16,
       "mode": 2,
       "en": "That something being what really went down.{E108:0010}\nNot the \"truth\" in those files,{E108:0010} {E107:0003}but the capital T truth.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А именно — что там было на самом деле.{E108:0010}\nНе «правда» из бумажек,{E108:0010} {E107:0003}а Правда с большой буквы.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|17",
@@ -3679,8 +3679,8 @@
       "index": 17,
       "mode": 2,
       "en": "It was eighteen years ago,{E108:0008} smack dab in the middle of\na real doozy of a winter...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Было это восемнадцать лет назад,{E108:0008} в самый разгар\nлютой, что называется, зимы...",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|18",
@@ -3689,8 +3689,8 @@
       "index": 18,
       "mode": 2,
       "en": "The buildings were covered with a blanket of snow.{E108:0010}\nIt looked like the streets were lined with popsicles.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Дома укрыло снегом по самые крыши.{E108:0010}\nУлицы будто заставили эскимо на палочке.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|19",
@@ -3699,8 +3699,8 @@
       "index": 19,
       "mode": 2,
       "en": "But things weren't so innocent behind those frozen\ndoors.{E108:0010} In fact,{E108:0008} some pretty sordid stuff went down.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Только за промёрзшими дверями творилось\nвсякое.{E108:0010} И,{E108:0008} прямо скажем, довольно неприглядное.",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000081|20",
@@ -3709,8 +3709,8 @@
       "index": 20,
       "mode": 2,
       "en": "This was back before yours truly was the fine figure of\nan attorney you see before you today...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тогда моя скромная персона ещё не была тем\nбравым адвокатом, какого ты видишь сейчас...",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_02.bytes|02000100|0",
@@ -71879,108 +71879,108 @@
       "index": 0,
       "mode": 2,
       "en": "\"What shall we make today, kids?\"",
-      "ru": "",
-      "status": "pending"
+      "ru": "«Что будем печь сегодня, ребятки?»",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#2|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 3,
       "en": "Macarons,{E108:0014} waffles with cream,{E108:0028}\n{E107:0003}{E1D1}Chiffon cakes{E108:0008} that are {E1D1}light as a dream!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Макарон,{E108:0014} вафли, взбитый крем,{E108:0028}\n{E107:0003}{E1D1}шифоновый торт{E108:0008} — {E1D1}он лёгок совсем!",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#3|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 2,
       "en": "Laugh and sing,{E108:0014} {E107:0003}smile, it's true!{E108:001A}\n{E1D1}All that {E1D1}sweetness,{E108:0010} {E1D1}waiting for you!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Смейся и пой,{E108:0014} {E107:0003}улыбайся живей!{E108:001A}\n{E1D1}Столько {E1D1}сладостей{E108:0010} — {E1D1}подходи скорей!",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#4|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 1,
       "en": "Look, there!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Глянь-ка туда!",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#5|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 1,
       "en": "What? Where?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что? Где? Куда?",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#6|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 2,
       "en": "Over there!{E108:0036}\n{E107:0003}The oven's got something special to share!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да вот же, туда!{E108:0036}\n{E107:0003}В духовке поспело — бегите сюда!",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#7|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 2,
       "en": "...Ping!...",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Дзинь!...",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#8|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 4,
       "en": "Nooow {E107:0003}let's see what we've got for yooou!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну-у-у-ка, {E107:0003}глянем, что же вышло у на-а-ас!",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#9|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 2,
       "en": "\"Iiit's cooking time!{E108:0010} Are you ready to\n{E20D}make something special together?\"",
-      "ru": "",
-      "status": "pending"
+      "ru": "«Вре-е-емя готовить!{E108:0010} Ну что, испечём\n{E20D}вместе что-нибудь вкусное?»",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#10|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 3,
       "en": "Wow.{E108:0010} Talk about a blast from the past.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты.{E108:0010} Вот это привет из прошлого.",
+      "status": "translated"
     },
     {
-      "id": "sce2_opening.bytes|FFFFFFFF|0",
+      "id": "sce2_opening.bytes|FFFFFFFF#11|0",
       "file": "sce2_opening.bytes",
       "block": "FFFFFFFF",
       "index": 0,
       "mode": 3,
       "en": "Hey, Gregory...{E108:0046}{E104}{E107:0003}I'm...{E108:0008} going back there.{E108:0010} Tomorrow.{E108:0018}\nWith your boy.{E108:005A}{E104}{E107:0003}I'm finally going to find out what happened eighteen\nyears ago...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Слушай, Грегори...{E108:0046}{E104}{E107:0003}Я...{E108:0008} возвращаюсь туда.{E108:0010} Завтра.{E108:0018}\nС твоим мальчиком.{E108:005A}{E104}{E107:0003}Наконец узнаю, что случилось\nвосемнадцать лет назад...",
+      "status": "translated"
     }
   ]
 }

@@ -82,6 +82,14 @@
 → **[`docs/bytes-format.md`](docs/bytes-format.md)** — устройство формата ` TPS`,
 управляющие коды, чем проверяется корректность.
 
+### Хочу поставить перевод на другой компьютер
+
+→ **`tools/make_installer.py`**. Собирает папку `dist/AAI2-RU/` — файлы перевода
+плюс установщик на PowerShell, который на чужой машине сам находит игру через
+реестр Steam и `libraryfolders.vdf`, бэкапит оригиналы и умеет откатываться.
+Ни этого репозитория, ни Python там не нужно: двойной клик по `install.bat`.
+Разбор — [`docs/tools.md`](docs/tools.md#make_installerpy).
+
 ### Не ставится пакет, ломается кодировка, не пишется бандл, обновился Steam
 
 → **[`docs/environment.md`](docs/environment.md)**. Здесь собраны все грабли: сертификат
@@ -177,6 +185,7 @@ cd "C:\Users\Илья\Desktop\Code\Ace Attorney Translating"
 | `carriers.py` | Таблицы «буква → код-носителя»; выбранный участок — глаголица |
 | `alphabet_probe.py` | Диагностические билды: `basic`, `split`, `carriers`, `ident` |
 | `backup.py` | Бэкап оригиналов игры |
+| `make_installer.py` | Собрать переносимый комплект для другого компьютера в `dist/` |
 
 **Тесты** — `test_tps.py`, `test_tokens.py`, `test_segments.py`. Гонять после любых
 правок разбора формата.

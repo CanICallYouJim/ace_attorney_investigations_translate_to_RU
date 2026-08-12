@@ -108,6 +108,29 @@ def save_manifest(backup: Path, manifest: dict) -> None:
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def replace(staged: Path, target: Path) -> None:
+    """Заменить файл игры собранным. Windows отдаёт WinError 5, пока файл открыт.
+
+    Открытым его держит UnityPy: исходный бандл он читает с диска и не закрывает,
+    пока его внутренние объекты не соберёт сборщик мусора — они сидят в циклах
+    ссылок, и подсчёт ссылок их не освобождает. Отсюда `gc.collect()` перед
+    заменой; повторы — на случай антивируса или индексатора, схватившего файл
+    на секунду.
+    """
+    import gc
+
+    gc.collect()
+    for attempt in range(6):
+        try:
+            os.replace(staged, target)
+            return
+        except PermissionError:
+            if attempt == 5:
+                raise
+            gc.collect()
+            time.sleep(0.3 * (attempt + 1))
+
+
 def install_change(change, game: Path, backup: Path, manifest: dict,
                    keep_original: bool = True) -> str:
     """Сохранить оригинал, положить замену. Возвращает строку отчёта."""
@@ -130,7 +153,7 @@ def install_change(change, game: Path, backup: Path, manifest: dict,
 
     # staged лежит на том же томе, что и игра, поэтому замена атомарная:
     # оборванный на середине патчер не оставит наполовину записанный бандл.
-    os.replace(change.staged, change.target)
+    replace(change.staged, change.target)
     if rel in manifest["files"]:
         manifest["files"][rel]["sha_patched"] = digest
     return change.note
@@ -250,26 +273,35 @@ def run(args) -> int:
 
     started = time.time()
     done = 0
+    spent: dict[str, float] = {}
+
+    def phase(title: str) -> float:
+        say(f"  {title}")
+        return time.time()
+
     try:
         say()
-        say("  Собираю реплики...")
+        mark = phase("Собираю реплики...")
         for change in steps.scripts(stage):
             say(f"    {change.key}: {apply(change)}")
             done += 1
+        spent["реплики"] = time.time() - mark
 
-        say("  Собираю строковые таблицы...")
+        mark = phase("Собираю строковые таблицы...")
         for change in steps.strings(stage):
             say(f"    {change.key}: {apply(change)}")
             done += 1
+        spent["таблицы"] = time.time() - mark
 
         # Первая игра не переводится, но немецкий из неё убрать надо: игрок
         # выбрал «Русский» и не должен упираться в чужой язык.
-        say("  Убираю немецкий из первой игры...")
+        mark = phase("Убираю немецкий из первой игры...")
         for change in steps.gk1_scripts(stage):
             say(f"    {change.key}: {apply(change)}")
             done += 1
+        spent["первая игра"] = time.time() - mark
 
-        say("  Правлю гарнитуры (это самый долгий шаг, файл на 113 МБ)...")
+        mark = phase("Правлю гарнитуры — самый долгий шаг, файл на 113 МБ...")
         changes = steps.fonts(stage)
         if not changes:
             say("    менять нечего — гарнитуры уже пропатчены")
@@ -277,9 +309,10 @@ def run(args) -> int:
             say(f"    {change.note}")
             say(f"    data.unity3d: {apply(change)}")
             done += 1
+        spent["гарнитуры"] = time.time() - mark
 
         if not args.no_graphics:
-            say("  Меняю немецкие надписи, ролики и выкрики на английские.")
+            mark = phase("Меняю немецкие надписи, ролики и выкрики на английские.")
             say("    Это 2,9 ГБ и минут семь: файлы игры переписываются целиком.")
             if not args.backup_graphics:
                 say("    Оригиналы графики не бэкапятся — это ещё 2,9 ГБ на диске."
@@ -288,6 +321,7 @@ def run(args) -> int:
             for i, change in enumerate(steps.graphics(stage), 1):
                 say(f"    [{i}] {change.key}: {apply(change, args.backup_graphics)}")
                 done += 1
+            spent["графика"] = time.time() - mark
     finally:
         if not args.build_only:
             save_manifest(backup, manifest)
@@ -295,6 +329,7 @@ def run(args) -> int:
 
     say()
     say(f"  Готово: изменено файлов {done}, за {time.time() - started:.0f} с.")
+    say("  " + ", ".join(f"{name} {sec:.0f} с" for name, sec in spent.items()))
     say()
     say("  Запустите игру и выберите в настройках язык «Русский».")
     say(f"  Откат: тот же файл с ключом --uninstall. Оригиналы в {BACKUP_DIR}.")

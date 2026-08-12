@@ -26,6 +26,7 @@ from __future__ import annotations
 import argparse
 import ast
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -35,6 +36,7 @@ from pathlib import Path
 from common import CASES, DOCS, PROJECT, WORK, case_json, load_json, save_json
 
 PATCHER = PROJECT / "patcher"
+SHOWCASE = PROJECT / "release"     # исходник витрины: README, лицензия, кадры
 TOOLS = PROJECT / "tools"
 DEFAULT_OUT = PROJECT / "dist" / "release"
 ENTRY = "aai2ru"
@@ -149,6 +151,8 @@ def main() -> int:
         REQUIREMENTS.format(unitypy=stats["unitypy"], fonttools=stats["fonttools"]),
         encoding="utf-8")
 
+    write_showcase(out, stats)
+
     size = sum(p.stat().st_size for p in patcher_out.rglob("*") if p.is_file())
     print(f"\nреплик:  {stats['segments_done']} из {stats['segments_total']}")
     print(f"таблицы: {stats['strings_done']} из {stats['strings_total']}")
@@ -158,6 +162,45 @@ def main() -> int:
         return build_exe(patcher_out, out)
     print("\n(.exe не собирался; для сборки запусти с --exe)")
     return 0
+
+
+def write_showcase(out: Path, stats: dict) -> None:
+    """README витрины, лицензия и кадры.
+
+    Счётчики в README подставляются отсюда, а не пишутся руками: витрина, которая
+    врёт о том, сколько переведено, хуже отсутствующей. Кадр вставляется только
+    если файл есть — иначе на странице висела бы битая картинка.
+    """
+    press_src = SHOWCASE / "press"
+    if press_src.is_dir():
+        shutil.copytree(press_src, out / "press", dirs_exist_ok=True)
+
+    def shot(match: re.Match) -> str:
+        name, _, caption = match.group(1).partition("|")
+        if not (press_src / name).exists():
+            print(f"   кадра нет, пропускаю: {name}")
+            return ""
+        return f"![{caption}](press/{name})"
+
+    text = (SHOWCASE / "README.md").read_text(encoding="utf-8")
+    for key, value in stats.items():
+        text = text.replace("{{" + key + "}}", f"{value:,}".replace(",", " ")
+                            if isinstance(value, int) else str(value))
+    text = re.sub(r"\{\{shot:([^}]+)\}\}", shot, text)
+
+    # Ролик живёт на CDN гитхаба: файл в репозитории плеером не показывается.
+    # Ссылку кладёт человек в release/press/video.txt — см. docs/press-kit.md.
+    video = press_src / "video.txt"
+    text = text.replace("{{video}}", video.read_text(encoding="utf-8").strip()
+                        if video.exists() else "")
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
+    (out / "README.md").write_text(text, encoding="utf-8")
+    shutil.copy2(SHOWCASE / "LICENSE", out / "LICENSE")
+    # {{exe_mb}} закрывается позже, после сборки .exe — он тут не остаток.
+    left = [m for m in re.findall(r"\{\{[^}]+\}\}", text) if m != "{{exe_mb}}"]
+    if left:
+        print(f"   ! в README остались незакрытые подстановки: {left}", file=sys.stderr)
 
 
 def version_of(package: str) -> str:
@@ -200,6 +243,13 @@ def build_exe(patcher_out: Path, out: Path) -> int:
     exe = out / f"{EXE_NAME}.exe"
     print(f"\n-> {exe}  ({exe.stat().st_size / 2**20:.1f} МБ)")
     shutil.rmtree(work, ignore_errors=True)
+
+    # Размер .exe подставляется после сборки: в README он должен быть замером,
+    # а не обещанием. Заодно это последняя незакрытая подстановка — проверка
+    # на остатки в write_showcase про неё знает и ругаться перестанет.
+    readme = out / "README.md"
+    readme.write_text(readme.read_text(encoding="utf-8").replace(
+        "{{exe_mb}}", f"{exe.stat().st_size / 2**20:.0f}"), encoding="utf-8")
     return 0
 
 

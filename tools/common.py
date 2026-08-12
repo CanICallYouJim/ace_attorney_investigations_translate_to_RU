@@ -38,6 +38,11 @@ STRING_TABLE_PREFIXES = {
 
 BUNDLE_PREFIXES = {
     **{f"script_{lang}": f"gk2_scriptmessage_{lang}_assets_all_" for lang in SCRIPT_LANGS},
+    # Скриптовых бандлов на язык ДВА, как и строковых таблиц. Во втором — дело 1
+    # и общая механика (логические шахматы, экран проигрыша, реакции «Логики»),
+    # то есть текст, который всплывает в любом деле. Найдено 12 августа 2026:
+    # бандл не читался вовсе, и немецкий из него доходил до игрока.
+    **{f"script_{lang}_trial": f"gk2_scriptmessage_{lang}_trial_assets_all_" for lang in SCRIPT_LANGS},
     **{f"gk1_script_{lang}": f"gk1_scriptmessage_{lang}_assets_all_" for lang in SCRIPT_LANGS},
     **{f"strings_{lang}": f"{p}_assets_all_" for lang, p in STRING_TABLE_PREFIXES.items()},
     # Вопреки названию, в группе "_trial_" лежат основные строковые таблицы игры
@@ -48,19 +53,41 @@ BUNDLE_PREFIXES = {
 
 # Логические имена бандлов слота-носителя — ими пользуются сборка и проверки.
 HOST_SCRIPT = f"script_{HOST}"
+HOST_SCRIPT_TRIAL = f"script_{HOST}_trial"
 HOST_STRINGS = f"strings_{HOST}"
 HOST_STRINGS_MAIN = f"strings_{HOST}_main"
+
+# Оба скриптовых бандла разом: по ним ходят extract, build и проверки.
+SCRIPT_PAIR = ((HOST_SCRIPT, "script_eng"), (HOST_SCRIPT_TRIAL, "script_eng_trial"))
 
 # Бандлы, которые мы реально пишем -> их бэкапим.
 # HOST_STRINGS_MAIN — там лежат имена в плашке, названия улик и профили,
 # то есть основная часть строковых таблиц; см. комментарий к BUNDLE_PREFIXES.
-MODIFIED = [HOST_SCRIPT, HOST_STRINGS, HOST_STRINGS_MAIN, "locales"]
+MODIFIED = [HOST_SCRIPT, HOST_SCRIPT_TRIAL, HOST_STRINGS, HOST_STRINGS_MAIN, "locales"]
 
 # Дело N в GK2 — это файлы sce{N-1}_*, а также логика и предметы с тем же индексом.
 # В работе два дела: 2 (sce1 / logic01 / itm01) и 3 (sce2 / logic02 / itm02).
 # Перевод каждого лежит в своём work/case{N}.json, а бандл собирается из всех сразу —
 # он в игре один, и сборка только одного дела стёрла бы перевод другого.
-CASES = (2, 3)
+#
+# Плюс псевдодело 0 — файлы, которые к делу не привязаны вообще и всплывают в любом:
+# реплики логических шахмат, реакции «Логики», экран проигрыша, мини-игра
+# с металлоискателем. По имени они не опознаются никак (номера дела в нём нет),
+# поэтому перечислены поимённо. Их перевод лежит в work/common.json.
+COMMON_CASE = 0
+CASES = (COMMON_CASE, 2, 3)
+
+# Общие файлы: имя -> откуда взялось. Список закрытый и проверенный —
+# всё остальное в trial-бандле это либо дело 1 (вне объёма), либо японский мусор,
+# которого игра не показывает (detailmsg, backup, proper_name).
+COMMON_FILES = {
+    "mg_metal.bytes",        # мини-игра «металлоискатель», двор тюрьмы в деле 2
+    "exam.bytes",            # реплики логических шахмат, все дела вперемешку
+    "exam_ask.bytes",        # вопросы там же
+    "exam_ask_title.bytes",  # заголовки «Выяснить...»
+    "logic_common.bytes",    # «Логика»: реакция на неверную связку
+    "game_over.bytes",       # экран проигрыша
+}
 
 # Файлы, где блоки состоят из чистых бинарных данных без текста: они одинаковы во всех
 # семи локализациях, переводить в них нечего. Токенизатор на них ругается — это ожидаемо.
@@ -68,27 +95,41 @@ BINARY_ONLY_FILES = {"map0a.bytes", "map0c.bytes"}
 
 
 def case_prefixes(case: int) -> tuple[str, ...]:
+    """Шаблоны имён дела. У псевдодела 0 их нет — оно задано списком COMMON_FILES."""
+    if case == COMMON_CASE:
+        return ()
     return (f"sce{case-1}_", f"logic{case-1:02d}", f"itm{case-1:02d}")
 
 
 ALL_CASE_PREFIXES = tuple(p for case in CASES for p in case_prefixes(case))
 
 
-def in_case_scope(filename: str) -> bool:
-    return filename.lower().startswith(ALL_CASE_PREFIXES)
-
-
 def case_of(filename: str) -> int | None:
-    """Какому делу принадлежит файл сценария; None — вне объёма перевода."""
+    """Какому делу принадлежит файл сценария; None — вне объёма перевода.
+
+    Единственное место, где живёт правило «что мы переводим». Все остальные скрипты
+    обязаны спрашивать здесь, а не сверять имена своими списками: 12 августа 2026
+    ровно на таком расхождении audit_text.py год отчитывался «покрыто» о бандле,
+    который сборка не открывала ни разу.
+    """
     low = filename.lower()
+    if low in COMMON_FILES:
+        return COMMON_CASE
     for case in CASES:
-        if low.startswith(case_prefixes(case)):
+        prefixes = case_prefixes(case)
+        if prefixes and low.startswith(prefixes):
             return case
     return None
 
 
+def in_case_scope(filename: str) -> bool:
+    return case_of(filename) is not None
+
+
 def case_json(case: int) -> Path:
-    return WORK / f"case{case}.json"
+    # Псевдодело 0 названо по смыслу, а не номером: "case0" читалось бы как дело 1,
+    # у которого файлы sce0_*, и путаница была бы гарантирована.
+    return WORK / ("common.json" if case == COMMON_CASE else f"case{case}.json")
 
 
 def load_entries(case: int | None = None) -> list[dict]:
@@ -123,6 +164,23 @@ def read_scripts(bundle_key: str) -> dict[str, bytes]:
         script = data.m_Script
         raw = script.encode("utf-8", "surrogateescape") if isinstance(script, str) else bytes(script)
         out[path.split("/")[-1].lower()] = raw
+    return out
+
+
+def read_scripts_all(lang: str = "eng") -> dict[str, bytes]:
+    """Все скрипты языка — из ОБОИХ бандлов сразу: имя файла (lowercase) -> байты.
+
+    Бандла два (`..._assets_all_` и `..._trial_assets_all_`), имена файлов в них
+    не пересекаются: 399 + 44. Пересечение означало бы, что игра берёт какой-то файл
+    из одного бандла, а мы пишем в другой, — поэтому оно ошибка, а не повод объединять.
+    """
+    out: dict[str, bytes] = {}
+    for key in (f"script_{lang}", f"script_{lang}_trial"):
+        part = read_scripts(key)
+        clash = sorted(set(out) & set(part))
+        if clash:
+            raise RuntimeError(f"файл есть в обоих бандлах {lang}: {clash[:3]}")
+        out.update(part)
     return out
 
 

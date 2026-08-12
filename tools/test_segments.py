@@ -11,7 +11,7 @@ from __future__ import annotations
 import collections
 import sys
 
-from common import SCRIPT_LANGS, in_case_scope, read_scripts
+from common import SCRIPT_LANGS, in_case_scope, read_scripts_all
 import segments as S
 import tps as T
 
@@ -22,7 +22,7 @@ def main() -> int:
     total_segments = with_text = 0
 
     for lang in SCRIPT_LANGS:
-        for name, raw in sorted(read_scripts(f"script_{lang}").items()):
+        for name, raw in sorted(read_scripts_all(lang).items()):
             for block in T.parse(raw).blocks:
                 segs = S.split(block.text)
                 if S.join(segs) != block.text:

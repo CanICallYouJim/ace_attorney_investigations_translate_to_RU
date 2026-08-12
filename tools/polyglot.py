@@ -22,7 +22,7 @@ import argparse
 import collections
 import re
 
-from common import BACKUP, HOST, SCRIPT_LANGS, load_json, read_scripts
+from common import BACKUP, HOST, SCRIPT_LANGS, load_json, read_scripts_all
 import segments as S
 import tps as T
 
@@ -56,13 +56,22 @@ def load_all() -> dict[str, dict[str, bytes]]:
     out = {}
     for lang in SCRIPT_LANGS:
         if lang == HOST:
-            entry = (load_json(BACKUP / "manifest.json", default={}) or {}).get(f"script_{lang}")
-            saved = BACKUP / entry["file"] if entry else None
-            if saved and saved.exists():
-                out[lang] = read_bundle_scripts(saved)
+            # Бандла два, и оригинал каждого лежит в backup/ под своим ключом.
+            files: dict[str, bytes] = {}
+            manifest = load_json(BACKUP / "manifest.json", default={}) or {}
+            missing = False
+            for key in (f"script_{lang}", f"script_{lang}_trial"):
+                entry = manifest.get(key)
+                saved = BACKUP / entry["file"] if entry else None
+                if saved and saved.exists():
+                    files.update(read_bundle_scripts(saved))
+                else:
+                    missing = True
+            if files and not missing:
+                out[lang] = files
                 continue
             print(f"! оригинал {lang} не найден в backup/ — колонка будет нашим переводом")
-        out[lang] = read_scripts(f"script_{lang}")
+        out[lang] = read_scripts_all(lang)
     return out
 
 

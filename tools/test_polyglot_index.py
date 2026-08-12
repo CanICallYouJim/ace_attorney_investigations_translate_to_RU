@@ -17,7 +17,7 @@ from __future__ import annotations
 import collections
 import sys
 
-from common import load_entries, read_scripts
+from common import CASES, load_entries, read_scripts_all
 from polyglot import resolve
 
 
@@ -33,7 +33,7 @@ def check(case: int, eng: dict[str, bytes]) -> tuple[int, list[str]]:
     for (name, label_spec), entries in sorted(by_block.items()):
         raw = eng.get(name.lower())
         if raw is None:
-            bad.append(f"{name}: файла нет в script_eng")
+            bad.append(f"{name}: файла нет в английских бандлах")
             continue
         for e in entries:
             idx = e["index"]
@@ -52,9 +52,12 @@ def check(case: int, eng: dict[str, bytes]) -> tuple[int, list[str]]:
 
 
 def main() -> int:
-    eng = read_scripts("script_eng")
+    # Оба английских бандла и все дела из common.CASES, включая псевдодело 0:
+    # его файлы (game_over, exam, logic_common) лежат во втором бандле, и проверка
+    # по одному главному отчиталась бы «файла нет», а не «адрес сходится».
+    eng = read_scripts_all("eng")
     total, failures = 0, []
-    for case in (2, 3):
+    for case in CASES:
         try:
             checked, bad = check(case, eng)
         except FileNotFoundError:

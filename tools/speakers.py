@@ -16,7 +16,7 @@ from __future__ import annotations
 import argparse
 import collections
 
-from common import in_case_scope, read_scripts
+from common import in_case_scope, read_scripts_all
 import segments as S
 import tps as T
 
@@ -33,7 +33,7 @@ def speaker_of(seg: S.Segment) -> str | None:
 
 def collect() -> dict[str, list[tuple[str, str]]]:
     """id говорящего -> [(файл, текст реплики)]."""
-    eng = read_scripts("script_eng")
+    eng = read_scripts_all("eng")
     lines: dict[str, list[tuple[str, str]]] = collections.defaultdict(list)
     for name in sorted(eng):
         if not in_case_scope(name):

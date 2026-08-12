@@ -8588,8 +8588,8 @@
       "block": "01000560",
       "index": 2,
       "mode": 2,
-      "en": "(Fortunately,{E108:0010} {E188:00300000}I can use {E2B0:00060020}to look further up or down.)",
-      "ru": "(К счастью,{E108:0010} {E188:00300000}кнопкой {E2B0:00060020}можно смотреть выше и ниже.)",
+      "en": "(Fortunately,{E108:0010} {E188:00300000}I can use {E2B0:0006} to look further up or down.)",
+      "ru": "(К счастью,{E108:0010} {E188:00300000}кнопкой {E2B0:0006} можно смотреть выше и ниже.)",
       "status": "translated"
     },
     {
@@ -30659,7 +30659,7 @@
       "index": 2,
       "mode": 3,
       "en": "I see...{E108:0018}\n{E107:0002}{E188:002F0000}{E12F:00000008}And what kind of cases does the firm take on?",
-      "ru": "Понимаю...{E108:0018}\n{E107:0002}{E188:002F0000}{E12F:00000008}А какие дела берёт контора?",
+      "ru": "Понимаю...{E108:0018}\n{E107:0002}{E188:002F0000}{E12F:00000008}А какие дела берёт фирма?",
       "status": "translated"
     },
     {
@@ -30749,7 +30749,7 @@
       "index": 11,
       "mode": 3,
       "en": "(Edgeworth and Co.,{E108:0010} the firm my father built, huh...)",
-      "ru": "(«Эджворт и Ко»,{E108:0010} контора,\nкоторую построил отец...)",
+      "ru": "(«Эджворт и Ко»,{E108:0010} фирма,\nкоторую построил отец...)",
       "status": "translated"
     },
     {
@@ -38499,7 +38499,7 @@
       "index": 29,
       "mode": 2,
       "en": "...I am representing the firm of Edgeworth and Co.",
-      "ru": "...я представляю контору «Эджворт и Ко».",
+      "ru": "...я представляю фирму «Эджворт и Ко».",
       "status": "translated"
     },
     {
@@ -40459,7 +40459,7 @@
       "index": 32,
       "mode": 2,
       "en": "Although,{E108:0008} the way I taught him to do it is somewhat...{E108:0010}\n{E107:0003}{E1D1}unorthodox.",
-      "ru": "Правда,{E108:0008} способ, которому я его выучил,\nнесколько...{E108:0010} {E107:0003}{E1D1}необычен.",
+      "ru": "Правда,{E108:0008} способ, которому я его научил,\nнесколько...{E108:0010} {E107:0003}{E1D1}необычен.",
       "status": "translated"
     },
     {
@@ -45128,8 +45128,8 @@
       "block": "01002200",
       "index": 4,
       "mode": 2,
-      "en": "(And I can {E041}Examine{E042} things with {E2B0:0003002C} I see.)",
-      "ru": "(Значит, {E041}Осмотреть{E042} — это {E2B0:0003002C}.)",
+      "en": "(And I can {E041}Examine{E042} things with {E2B0:0003}, I see.)",
+      "ru": "(Значит, {E041}Осмотреть{E042} — это {E2B0:0003}.)",
       "status": "translated"
     },
     {
@@ -45178,8 +45178,8 @@
       "block": "01002200",
       "index": 9,
       "mode": 2,
-      "en": "(It seems I can also press {E2B0:00050020}to {E041}Fast Forward{E042} or {E2B0:00040020}to\n{E041}Rewind{E042} the footage.)",
-      "ru": "(Судя по всему, {E2B0:00050020}— {E041}Перемотка вперёд{E042}, {E2B0:00040020}— {E041}Перемотка\nназад{E042}.)",
+      "en": "(It seems I can also press {E2B0:0005} to {E041}Fast Forward{E042} or {E2B0:0004} to\n{E041}Rewind{E042} the footage.)",
+      "ru": "(Судя по всему, {E2B0:0005} — {E041}Перемотка вперёд{E042}, {E2B0:0004} — {E041}Перемотка\nназад{E042}.)",
       "status": "translated"
     },
     {
@@ -45188,8 +45188,8 @@
       "block": "01002200",
       "index": 10,
       "mode": 2,
-      "en": "(And I can press {E2B0:00000020}to {E041}Pause{E042}.)",
-      "ru": "(А {E2B0:00000020}— {E041}Пауза{E042}.)",
+      "en": "(And I can press {E2B0:0000} to {E041}Pause{E042}.)",
+      "ru": "(А {E2B0:0000} — {E041}Пауза{E042}.)",
       "status": "translated"
     },
     {
@@ -45198,8 +45198,8 @@
       "block": "01002200",
       "index": 11,
       "mode": 2,
-      "en": "When the video's paused,{E108:0008} you can go to the {E041}Previous\nFrame{E040} with {E2B0:00040020}or the {E041}Next Frame{E040} with ",
-      "ru": "На паузе{E108:0008} можно на {E041}Предыдущий\nкадр{E040} — {E2B0:00040020}или на {E041}Следующий кадр{E040} — ",
+      "en": "When the video's paused,{E108:0008} you can go to the {E041}Previous\nFrame{E040} with {E2B0:0004} or the {E041}Next Frame{E040} with {E2B0:0005}!",
+      "ru": "На паузе{E108:0008} можно на {E041}Предыдущий\nкадр{E040} — {E2B0:0004} или на {E041}Следующий кадр{E040} — {E2B0:0005}!",
       "status": "translated"
     },
     {
@@ -45258,8 +45258,8 @@
       "block": "01002200",
       "index": 17,
       "mode": 2,
-      "en": "(It would appear I can Zoom In by pressing {E2B0:0002002C} too.)",
-      "ru": "(Приблизить, судя по всему, можно и кнопкой {E2B0:0002002C}.)",
+      "en": "(It would appear I can Zoom In by pressing {E2B0:0002}, too.)",
+      "ru": "(Приблизить, судя по всему, можно и кнопкой {E2B0:0002}.)",
       "status": "translated"
     },
     {
@@ -55618,8 +55618,8 @@
       "block": "01002920",
       "index": 17,
       "mode": 2,
-      "en": "(I can switch between re-creations by using {E2B0:00030020}to {E150:00020030}{E041}talk\nwith Kay{E042}.)",
-      "ru": "(Переключить реконструкцию — {E2B0:00030020}и {E150:00020030}{E041}поговорить\nс Кей{E042}.)",
+      "en": "(I can switch between re-creations by using {E2B0:0003} to {E150:00020030}{E041}talk\nwith Kay{E042}.)",
+      "ru": "(Переключить реконструкцию — {E2B0:0003} и {E150:00020030}{E041}поговорить\nс Кей{E042}.)",
       "status": "translated"
     },
     {
@@ -64849,7 +64849,7 @@
       "index": 6,
       "mode": 2,
       "en": "Oh, come now.{E108:0010} {E188:00340000}{E1D1}Don't tell me you haven't taken a look\nat the chessboard in maximum security.",
-      "ru": "Ну полно.{E108:0010} {E188:00340000}{E1D1}Не говорите, что не заглядывали\nна доску в спецблоке.",
+      "ru": "Да будет вам.{E108:0010} {E188:00340000}{E1D1}Не говорите, что не заглядывали\nна доску в спецблоке.",
       "status": "translated"
     },
     {
@@ -70909,7 +70909,7 @@
       "index": 21,
       "mode": 2,
       "en": "(And I highly doubt that he taught his dog to suspend\nbodies halfway down wells...)",
-      "ru": "(И я сильно сомневаюсь, что он выучил пса\nподвешивать тела в колодцах...)",
+      "ru": "(И я сильно сомневаюсь, что он научил пса\nподвешивать тела в колодцах...)",
       "status": "translated"
     },
     {

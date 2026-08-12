@@ -22,7 +22,7 @@ import sys
 
 from bundle_io import read_text_assets
 import carriers as C
-from common import BACKUP, HOST_SCRIPT, bundle, in_case_scope, load_entries, read_scripts
+from common import BACKUP, SCRIPT_PAIR, bundle, in_case_scope, load_entries, read_scripts
 import tps as T
 
 STAGE_DIR = "build"
@@ -54,25 +54,25 @@ def opcode_bag(text: str) -> collections.Counter:
         (t.code, t.params) for t in T.tokenize(text) if isinstance(t, T.Op))
 
 
-def main() -> int:
+def check_bundle(host_key: str, eng_key: str, problems: list[str]) -> tuple[list[str], int, int, list[str]]:
+    """Проверить один собранный бандл. Возвращает (изменённые, английские, с кириллицей, немецкие)."""
     from common import WORK
 
-    src = bundle(HOST_SCRIPT)
+    src = bundle(host_key)
     built = WORK / STAGE_DIR / src.name
     if not built.exists():
-        print(f"нет собранного бандла {built} — сначала tools/build.py", file=sys.stderr)
-        return 1
+        problems.append(f"нет собранного бандла {built.name} — сначала tools/build.py")
+        return [], 0, 0, []
 
     german = read_text_assets(BACKUP / src.name)
     new = read_text_assets(built)
-    eng = read_scripts("script_eng")
+    eng = read_scripts(eng_key)
 
     if set(german) != set(new):
-        print("состав ассетов в бандле изменился — так быть не должно", file=sys.stderr)
-        return 1
+        problems.append(f"{host_key}: состав ассетов изменился — так быть не должно")
+        return [], 0, 0, []
 
     changed, untouched_english = [], 0
-    problems: list[str] = []
     cyrillic_files = 0
     still_german = []
 
@@ -119,17 +119,29 @@ def main() -> int:
                 codes = ", ".join(f"{c:04X}" for c, _p in list(lost)[:5])
                 problems.append(f"{name}: потеряны коды {codes}")
 
+    print(f"  {host_key:18s} ассетов {len(new):3d}, английских {untouched_english:3d}, "
+          f"с русским {len(changed):3d}, с кириллицей {cyrillic_files:3d}")
+    if changed:
+        print(f"      {', '.join(sorted(changed)[:6])}")
+    return changed, untouched_english, cyrillic_files, still_german
+
+
+def main() -> int:
+    problems: list[str] = []
+    changed: list[str] = []
+    cyrillic_files = 0
+
+    # Бандла два, и проверять надо оба: немецкий доходил до игрока именно из второго.
+    for host_key, eng_key in SCRIPT_PAIR:
+        ch, _eng_as_is, cyr, still_german = check_bundle(host_key, eng_key, problems)
+        changed += ch
+        cyrillic_files += cyr
+        if still_german:
+            problems.append(f"{host_key}: остались немецкими {len(still_german)} файлов "
+                            f"({', '.join(sorted(still_german)[:4])}) — должны быть английскими")
+
     translated = sum(1 for e in load_entries() if e.get("ru"))
-
-    print(f"ассетов в бандле:     {len(new)}")
-    print(f"английских как есть:  {untouched_english}")
-    print(f"с русским переводом:  {len(changed)}  {', '.join(sorted(changed)[:6])}")
-    print(f"с кириллицей:         {cyrillic_files}")
     print(f"переведено сегментов: {translated}")
-
-    if still_german:
-        problems.append(f"остались немецкими {len(still_german)} файлов "
-                        f"({', '.join(sorted(still_german)[:4])}) — должны быть английскими")
 
     if problems:
         print(f"\nпроблемы ({len(problems)}):")

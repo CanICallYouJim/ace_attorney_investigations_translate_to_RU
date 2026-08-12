@@ -13,7 +13,7 @@ from __future__ import annotations
 import sys
 from collections import Counter
 
-from common import SCRIPT_LANGS, read_scripts
+from common import SCRIPT_LANGS, read_scripts_all
 import tps as T
 
 
@@ -23,7 +23,7 @@ def main() -> int:
     problems: list[str] = []
 
     for lang in SCRIPT_LANGS:
-        files = read_scripts(f"script_{lang}")
+        files = read_scripts_all(lang)
         for name, raw in sorted(files.items()):
             total += 1
             try:

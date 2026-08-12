@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import argparse
 
-from common import case_of, in_case_scope, load_entries, read_scripts
+from common import case_of, in_case_scope, load_entries, read_scripts_all
 import segments as S
 import tps as T
 
@@ -86,7 +86,7 @@ def main() -> int:
     args = ap.parse_args()
 
     done = {e["id"]: e for e in load_entries()}
-    eng = read_scripts("script_eng")
+    eng = read_scripts_all("eng")
 
     # Говорящий объявляется не в каждом сегменте: если код E101 не встретился,
     # реплику продолжает тот же персонаж, что и раньше.

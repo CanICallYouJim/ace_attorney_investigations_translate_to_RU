@@ -12,13 +12,18 @@
 
     python tools/extract.py            # все дела в работе, каждое в свой файл
     python tools/extract.py --case 3   # только дело 3 -> work/case3.json
+    python tools/extract.py --case 0   # общие файлы -> work/common.json
+
+Дело 0 — псевдодело: файлы, не привязанные к делу и видимые в любом из них
+(логические шахматы, реакции «Логики», экран проигрыша, металлоискатель).
+Список — common.COMMON_FILES, часть из них лежит во втором скриптовом бандле.
 """
 from __future__ import annotations
 
 import argparse
 import collections
 
-from common import (CASES, case_json, case_prefixes, load_json, read_scripts,
+from common import (CASES, case_json, case_of, load_json, read_scripts_all,
                     save_json)
 import segments as S
 import tps as T
@@ -27,12 +32,13 @@ import tps as T
 def extract_case(case: int, eng: dict[str, bytes]) -> int:
     out = case_json(case)
     previous = {e["id"]: e for e in (load_json(out, default={}) or {}).get("entries", [])}
-    prefixes = case_prefixes(case)
 
     entries = []
     skipped = 0
     for name in sorted(eng):
-        if not name.lower().startswith(prefixes):
+        # Принадлежность дела спрашиваем у common.case_of, а не сверяем префиксы сами:
+        # у псевдодела 0 префиксов нет вовсе, оно задано списком файлов.
+        if case_of(name) != case:
             continue
         # Метка блока в файле не уникальна, и в sce2_opening.bytes все одиннадцать
         # блоков помечены FFFFFFFF: адрес «файл|метка|номер» слипался в один на всех,
@@ -67,7 +73,7 @@ def extract_case(case: int, eng: dict[str, bytes]) -> int:
     by_file = collections.Counter(e["file"] for e in entries)
     plain = sum(len(T.detokenize([t for t in T.from_markup(e["en"]) if isinstance(t, str)]))
                 for e in entries)
-    print(f"=== дело {case} ===")
+    print(f"=== {'общие файлы (видны в любом деле)' if case == 0 else f'дело {case}'} ===")
     print(f"файлов:               {len(by_file)}")
     print(f"сегментов с текстом:  {len(entries)}")
     print(f"сегментов без текста: {skipped} (чистая логика, не переводится)")
@@ -87,7 +93,9 @@ def main() -> int:
     ap.add_argument("--case", type=int, choices=CASES, help="только это дело")
     args = ap.parse_args()
 
-    eng = read_scripts("script_eng")
+    # Оба скриптовых бандла: общая механика (exam*, logic_common, game_over)
+    # лежит во втором, и без него псевдодело 0 вышло бы пустым.
+    eng = read_scripts_all("eng")
     total = sum(extract_case(case, eng) for case in (CASES if args.case is None else (args.case,)))
     print(f"всего сегментов в работе: {total}")
     return 0

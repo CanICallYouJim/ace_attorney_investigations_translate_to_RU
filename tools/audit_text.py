@@ -21,13 +21,9 @@ import argparse
 import collections
 import re
 
-from common import (BUNDLES, CASES, HOST, SCRIPT_LANGS, STRING_TABLE_PREFIXES,
-                    load_entries, WORK, load_json)
-
-# Что уже покрыто конвейерами. Ключ — по какому куску имени бандла узнаём.
-COVERED_SCRIPTS = f"gk2_scriptmessage_{HOST}_"
-COVERED_TABLES = (f"{STRING_TABLE_PREFIXES[HOST]}_assets_all_",
-                  f"{STRING_TABLE_PREFIXES[HOST]}_trial_assets_all_")
+from common import (BUNDLES, CASES, HOST, HOST_SCRIPT, HOST_SCRIPT_TRIAL, HOST_STRINGS,
+                    HOST_STRINGS_MAIN, SCRIPT_LANGS, STRING_TABLE_PREFIXES,
+                    bundle, load_entries, WORK, load_json)
 
 # Тот же текст на других языках — источники, не работа.
 OTHER_LANG = tuple(f"{kind}_{lang}_" for kind in ("gk2_scriptmessage", "gk1_scriptmessage")
@@ -37,13 +33,37 @@ OTHER_TABLES = tuple(p + "_" for lang, p in STRING_TABLE_PREFIXES.items() if lan
 # Первая игра — решение пользователя от 9 августа 2026: в объём перевода не входит.
 GK1 = ("gk1_",)
 
+# Какие бандлы конвейер РЕАЛЬНО открывает. Не список имён на глаз, а те самые ключи,
+# которыми ходят build.py и build_strings.py, разрешённые тем же common.bundle().
+#
+# Так было не всегда, и это стоило дыры: прежняя версия узнавала свои скрипты
+# по началу имени `gk2_scriptmessage_ger_`, под которое подошёл и бандл
+# `gk2_scriptmessage_ger_trial_assets_all_`. Аудит год отчитывался «покрыто»
+# о бандле, который сборка не открывала ни разу, — оттуда до игрока доходил немецкий.
+# Правило простое: покрытие проверяется тем же кодом, что и собирает.
+COVERED_KEYS = {
+    HOST_SCRIPT: "наше: скрипты",
+    HOST_SCRIPT_TRIAL: "наше: скрипты (trial: дело 1 и общая механика)",
+    HOST_STRINGS: "наше: строковые таблицы",
+    HOST_STRINGS_MAIN: "наше: строковые таблицы",
+}
 
-def classify(name: str) -> str:
+
+def covered_files() -> dict[str, str]:
+    """Имя файла бандла -> чем покрыт. Сверка по точному имени, а не по префиксу."""
+    out: dict[str, str] = {}
+    for key, label in COVERED_KEYS.items():
+        try:
+            out[bundle(key).name] = label
+        except (FileNotFoundError, RuntimeError) as exc:
+            print(f"  ! {key}: {exc}")
+    return out
+
+
+def classify(name: str, covered: dict[str, str]) -> str:
     low = name.lower()
-    if low.startswith(COVERED_SCRIPTS):
-        return "наше: скрипты"
-    if any(low.startswith(p.lower()) for p in COVERED_TABLES):
-        return "наше: строковые таблицы"
+    if name in covered:
+        return covered[name]
     if any(p.lower() in low for p in OTHER_LANG) or any(low.startswith(p.lower()) for p in OTHER_TABLES):
         return "исходники: другие языки"
     if low.startswith(GK1):
@@ -52,10 +72,17 @@ def classify(name: str) -> str:
 
 
 def scan_bundle(path):
-    """Что за объекты с текстом лежат в бандле: тип -> сколько, плюс примеры."""
+    """Что за объекты с текстом лежат в бандле: тип -> сколько, плюс примеры.
+
+    Нечитаемый бандл не должен ронять перебор: смысл аудита в полном обходе,
+    а прерваться на середине — значит снова отчитаться о покрытии, которого нет.
+    """
     import UnityPy
 
-    env = UnityPy.load(str(path))
+    try:
+        env = UnityPy.load(str(path))
+    except Exception as exc:
+        return collections.Counter({"НЕ ЧИТАЕТСЯ": 1}), [str(exc)[:70]]
     kinds = collections.Counter()
     samples = []
     for obj in env.objects:
@@ -93,11 +120,13 @@ def main() -> int:
     bundles = sorted(BUNDLES.glob("*.bundle"))
     print(f"бандлов в игре: {len(bundles)}\n")
 
+    covered = covered_files()
     groups: dict[str, list] = collections.defaultdict(list)
     for path in bundles:
-        groups[classify(path.name)].append(path)
+        groups[classify(path.name, covered)].append(path)
 
-    order = ["наше: скрипты", "наше: строковые таблицы", "не покрыто",
+    order = ["наше: скрипты", "наше: скрипты (trial: дело 1 и общая механика)",
+             "наше: строковые таблицы", "не покрыто",
              "исходники: другие языки", "вне объёма: первая игра"]
     for key in order:
         paths = groups.get(key, [])

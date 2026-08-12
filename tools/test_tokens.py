@@ -17,7 +17,7 @@ from __future__ import annotations
 import collections
 import sys
 
-from common import BINARY_ONLY_FILES, SCRIPT_LANGS, in_case_scope, read_scripts
+from common import BINARY_ONLY_FILES, SCRIPT_LANGS, in_case_scope, read_scripts_all
 import tps as T
 
 ALLOWED_LOW = {"\n"}
@@ -34,7 +34,7 @@ def main() -> int:
     table = T.opcode_table()
 
     for lang in SCRIPT_LANGS:
-        for name, raw in sorted(read_scripts(f"script_{lang}").items()):
+        for name, raw in sorted(read_scripts_all(lang).items()):
             for block in T.parse(raw).blocks:
                 blocks += 1
                 tokens = T.tokenize(block.text)

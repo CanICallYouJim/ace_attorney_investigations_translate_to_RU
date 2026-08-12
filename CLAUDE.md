@@ -78,6 +78,11 @@ Python — только из venv проекта, Docker не предлагат
 .venv\Scripts\python.exe tools\check_all.py
 ```
 
+Ходовое собрано в [`Makefile`](Makefile) — он сам подставляет питон из venv
+и `PYTHONIOENCODING`, забыть их нельзя. Список целей — просто `make`, из Git Bash.
+`make check`, `make install`, `make patch`, `make release`, `make publish`;
+`install` и `release` зависят от `check`, так что проверки гоняются сами.
+
 `check_all.py` гонит все проверки разом и возвращает один код: длины и коды в репликах,
 геометрию и разметку таблиц, словарь калек. `--full` добавляет разбор всех бандлов
 игры, `--build` — проверку собранного. Упавшая проверка **чинится или получает

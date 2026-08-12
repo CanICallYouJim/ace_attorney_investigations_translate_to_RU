@@ -256,6 +256,8 @@ def run(args) -> int:
         need = (game / "GK12_Data" / "data.unity3d").stat().st_size * 2
         if not args.no_graphics:
             need += 700 * 2**20 + (3 * 2**30 if args.backup_graphics else 0)
+            if args.gk1_graphics:
+                need += 2500 * 2**20 if args.backup_graphics else 0
         problem = preflight(game, need)
         if problem:
             return fail(problem)
@@ -313,12 +315,13 @@ def run(args) -> int:
 
         if not args.no_graphics:
             mark = phase("Меняю немецкие надписи, ролики и выкрики на английские.")
-            say("    Это 2,9 ГБ и минут семь: файлы игры переписываются целиком.")
+            say(f"    Это {'5,2 ГБ и минут двенадцать' if args.gk1_graphics else '2,9 ГБ и минут семь'}:"
+                " файлы игры переписываются целиком.")
             if not args.backup_graphics:
                 say("    Оригиналы графики не бэкапятся — это ещё 2,9 ГБ на диске."
                     " Вернуть их\n    можно через Steam: Проверить целостность файлов."
                     " Нужен бэкап — ключ --backup-graphics.")
-            for i, change in enumerate(steps.graphics(stage), 1):
+            for i, change in enumerate(steps.graphics(stage, args.gk1_graphics), 1):
                 say(f"    [{i}] {change.key}: {apply(change, args.backup_graphics)}")
                 done += 1
             spent["графика"] = time.time() - mark
@@ -350,12 +353,21 @@ def check(args) -> int:
     say(f"  Данные перевода: {data}")
     setup_env(game, data, game / BACKUP_DIR)
 
-    from common import BUNDLES, SCRIPT_PAIR, bundle, load_entries
+    from common import BUNDLES, SCRIPT_PAIR, bundle, load_entries, load_json
 
+    # В комплекте лежат только переведённые сегменты — непереведённые патчеру
+    # не нужны. Поэтому общее число берём из version.json, а не из длины списка:
+    # иначе счётчик всегда показывал бы честные, но бессмысленные 100%.
     entries = load_entries()
     ru = sum(1 for e in entries if e.get("ru"))
+    stats = load_json(data / "version.json", default={}) or {}
+    total = stats.get("segments_total", len(entries))
     say()
-    say(f"  Реплик переведено: {ru} из {len(entries)} ({100 * ru / max(len(entries), 1):.0f}%)")
+    say(f"  Реплик переведено: {ru} из {total} ({100 * ru / max(total, 1):.0f}%)")
+    if stats.get("strings_total"):
+        say(f"  Записей таблиц:    {stats['strings_done']} из {stats['strings_total']}")
+    if stats.get("built"):
+        say(f"  Перевод собран:    {stats['built']}")
     say("  Будет заменено:")
     for host_key, _ in SCRIPT_PAIR:
         path = bundle(host_key)
@@ -395,6 +407,8 @@ def parse_args(argv=None):
                     help="только текст: немецкие надписи и выкрики оставить как есть")
     ap.add_argument("--backup-graphics", action="store_true",
                     help="бэкапить и графику тоже (+2,9 ГБ на диске)")
+    ap.add_argument("--gk1-graphics", action="store_true",
+                    help="заодно поправить надписи на картинках первой игры (+2,3 ГБ, +5 минут)")
     ap.add_argument("--game-path", help="папка игры, если найти её не удалось")
     ap.add_argument("--data", help="папка с данными перевода (по умолчанию рядом)")
     ap.add_argument("--build-only", metavar="ПАПКА",

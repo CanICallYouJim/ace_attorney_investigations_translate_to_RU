@@ -144,9 +144,17 @@ def build(tps: Tps) -> bytes:
 
 @lru_cache(maxsize=1)
 def opcode_table() -> dict[int, int]:
-    """Код -> число слов-параметров. Строится tools/derive_opcodes.py."""
-    path = Path(__file__).resolve().parent.parent / "docs" / "opcodes.json"
-    return {int(k, 16): v for k, v in json.loads(path.read_text(encoding="utf-8")).items()}
+    """Код -> число слов-параметров. Строится tools/derive_opcodes.py.
+
+    Ищется в двух местах: рядом с модулем и в docs/ репозитория. Рядом — потому
+    что этот же модуль уезжает в патчер, где никакого docs/ нет, а таблица
+    обязана уехать вместе с ним: без неё не разобрать ни одной реплики.
+    """
+    here = Path(__file__).resolve().parent
+    for path in (here / "opcodes.json", here.parent / "docs" / "opcodes.json"):
+        if path.exists():
+            return {int(k, 16): v for k, v in json.loads(path.read_text(encoding="utf-8")).items()}
+    raise FileNotFoundError(f"нет opcodes.json ни в {here}, ни в {here.parent / 'docs'}")
 
 
 @dataclass

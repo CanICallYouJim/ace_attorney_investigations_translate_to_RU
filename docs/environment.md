@@ -74,6 +74,37 @@ Get-Content читает UTF-8 как ANSI, Set-Content пишет обратн�
 При запуске в фоне вывод не появляется, пока процесс не закончится. Длинные скрипты
 запускать с ключом `-u`.
 
+### git не может в SSH: кириллица в имени пользователя
+
+`git push` и `git ls-remote` отваливаются с «Could not read from remote repository»,
+хотя ключ в GitHub залит и правильный. Причина не в ключе: ssh из состава
+Git for Windows берёт домашнюю папку через ANSI-функцию Windows, и `C:\Users\Илья`
+превращается в путь из cp1251-байтов:
+
+```
+debug1: identity file /c/Users/\310\353\374\377/.ssh/id_rsa type -1
+```
+
+`type -1` — файла по этому пути нет. Ключ не предъявляется вовсе, и до
+аутентификации дело не доходит; тот же промах по `known_hosts` даёт
+«Host key verification failed». Виндовый OpenSSH читает путь как UTF-8 и всё находит.
+
+**Лечение — сказать git пользоваться системным ssh:**
+
+```bash
+git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+```
+
+Проверка, что ключ вообще принимается (должно ответить `Hi <логин>!`):
+
+```bash
+"/c/Windows/System32/OpenSSH/ssh.exe" -T git@github.com
+```
+
+Диагностика вслепую не работает: `ssh -vT` из Git Bash покажет ровно ту же
+кракозябру, и её легко принять за проблему с правами на ключ. Смотреть надо на
+строку `identity file ... type -1` — она и означает «ключ не найден», а не «отвергнут».
+
 ## Steam: что может затереть перевод
 
 Проверено по `appmanifest_2401970.acf` и `remotecache.vdf`.

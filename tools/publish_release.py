@@ -199,7 +199,7 @@ def write_showcase(out: Path, stats: dict) -> None:
     if exe.exists():
         text = text.replace("{{exe_mb}}", f"{exe.stat().st_size / 2**20:.0f}")
 
-    (out / "README.md").write_text(text, encoding="utf-8")
+    (out / "README.md").write_text(text, encoding="utf-8", newline="\n")
     shutil.copy2(SHOWCASE / "LICENSE", out / "LICENSE")
     # {{exe_mb}} закрывается позже, после сборки .exe — он тут не остаток.
     left = [m for m in re.findall(r"\{\{[^}]+\}\}", text) if m != "{{exe_mb}}"]
@@ -253,7 +253,7 @@ def build_exe(patcher_out: Path, out: Path) -> int:
     # на остатки в write_showcase про неё знает и ругаться перестанет.
     readme = out / "README.md"
     readme.write_text(readme.read_text(encoding="utf-8").replace(
-        "{{exe_mb}}", f"{exe.stat().st_size / 2**20:.0f}"), encoding="utf-8")
+        "{{exe_mb}}", f"{exe.stat().st_size / 2**20:.0f}"), encoding="utf-8", newline="\n")
     return 0
 
 

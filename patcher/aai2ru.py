@@ -105,7 +105,7 @@ def load_manifest(backup: Path) -> dict:
 def save_manifest(backup: Path, manifest: dict) -> None:
     backup.mkdir(parents=True, exist_ok=True)
     (backup / "manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 
 
 def replace(staged: Path, target: Path) -> None:
@@ -166,7 +166,7 @@ def uninstall(game: Path, backup: Path) -> int:
     if not manifest["files"]:
         return fail(
             "бэкапа нет — возвращать нечем.\n\n"
-            "Оригиналы вернёт сама Steam: свойства игры -> Установленные файлы ->\n"
+            "Оригиналы вернёт сам Steam: свойства игры -> Установленные файлы ->\n"
             "Проверить целостность файлов игры.")
 
     back = broken = 0

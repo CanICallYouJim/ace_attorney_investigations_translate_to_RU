@@ -1,0 +1,8 @@
+# Зависимости патчера. Ставятся только тем, кто запускает его скриптом,
+# а не .exe: в .exe они уже внутри.
+#
+#     pip install -r requirements.txt
+#     python aai2ru.py
+#
+UnityPy==1.25.3
+fonttools==4.63.0

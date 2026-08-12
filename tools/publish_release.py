@@ -195,6 +195,10 @@ def write_showcase(out: Path, stats: dict) -> None:
                         if video.exists() else "")
     text = re.sub(r"\n{3,}", "\n\n", text)
 
+    exe = out / f"{EXE_NAME}.exe"
+    if exe.exists():
+        text = text.replace("{{exe_mb}}", f"{exe.stat().st_size / 2**20:.0f}")
+
     (out / "README.md").write_text(text, encoding="utf-8")
     shutil.copy2(SHOWCASE / "LICENSE", out / "LICENSE")
     # {{exe_mb}} закрывается позже, после сборки .exe — он тут не остаток.

@@ -105,7 +105,7 @@ def load_manifest(backup: Path) -> dict:
 def save_manifest(backup: Path, manifest: dict) -> None:
     backup.mkdir(parents=True, exist_ok=True)
     (backup / "manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 
 
 def replace(staged: Path, target: Path) -> None:

@@ -214,7 +214,10 @@ def load_json(path: Path, default=None):
 
 def save_json(path: Path, data) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    # newline="\n" обязателен: без него write_text на Windows превращает \n в \r\n,
+    # и каждый прогон переписывает файл целиком — в диффе шум вместо правки.
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2),
+                    encoding="utf-8", newline="\n")
 
 
 def game_is_running() -> bool:

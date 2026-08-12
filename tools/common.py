@@ -3,14 +3,23 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parent.parent
-BACKUP = PROJECT / "backup"
-WORK = PROJECT / "work"
 DOCS = PROJECT / "docs"
 
-GAME = Path(r"C:\Program Files (x86)\Steam\steamapps\common\Ace Attorney Investigations Collection")
+# Пути переопределяются переменными окружения — ради патчера (patcher/aai2ru.py),
+# который гоняет эти же модули на чужой машине: игра там в другом месте, данные
+# перевода лежат рядом с ним, а бэкап должен уехать внутрь папки игры.
+# Переменные читаются на импорте, потому что модули берут пути через `from common
+# import GAME` — то есть значением, а не ссылкой; переприсваивать потом поздно.
+# В обычной работе из репозитория ничего не задано и всё как было.
+BACKUP = Path(os.environ.get("AAI2_BACKUP") or PROJECT / "backup")
+WORK = Path(os.environ.get("AAI2_WORK") or PROJECT / "work")
+
+GAME = Path(os.environ.get("AAI2_GAME")
+            or r"C:\Program Files (x86)\Steam\steamapps\common\Ace Attorney Investigations Collection")
 BUNDLES = GAME / "GK12_Data" / "StreamingAssets" / "aa" / "StandaloneWindows64"
 CATALOG = GAME / "GK12_Data" / "StreamingAssets" / "aa" / "catalog.json"
 
@@ -43,7 +52,12 @@ BUNDLE_PREFIXES = {
     # то есть текст, который всплывает в любом деле. Найдено 12 августа 2026:
     # бандл не читался вовсе, и немецкий из него доходил до игрока.
     **{f"script_{lang}_trial": f"gk2_scriptmessage_{lang}_trial_assets_all_" for lang in SCRIPT_LANGS},
+    # У первой игры бандлов тоже два. Она вне объёма перевода, но её немецкие
+    # реплики патчер переписывает английскими: игрок выбрал «Русский», и немецкий
+    # текст для него мусор, а английский читается.
     **{f"gk1_script_{lang}": f"gk1_scriptmessage_{lang}_assets_all_" for lang in SCRIPT_LANGS},
+    **{f"gk1_script_{lang}_trial": f"gk1_scriptmessage_{lang}_trial_assets_all_"
+       for lang in SCRIPT_LANGS},
     **{f"strings_{lang}": f"{p}_assets_all_" for lang, p in STRING_TABLE_PREFIXES.items()},
     # Вопреки названию, в группе "_trial_" лежат основные строковые таблицы игры
     # (имена говорящих, названия улик, кнопки логики) — она в разы больше обычной.

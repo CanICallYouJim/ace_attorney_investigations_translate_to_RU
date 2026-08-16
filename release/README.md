@@ -6,7 +6,7 @@
 
 {{shot:01-dialogue.png|Реплика в игре}}
 
-### [⬇ Скачать AAI2-RU.exe](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/raw/main/AAI2-RU.exe) — {{exe_mb}} МБ
+### [⬇ Скачать AAI2-RU.exe](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe) — {{exe_mb}} МБ
 
 Клик — и патчер сам найдёт игру в Steam, сохранит оригиналы и поставит
 перевод. В настройках игры появится язык **«Русский»**.

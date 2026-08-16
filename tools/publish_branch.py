@@ -26,6 +26,13 @@ from common import PROJECT, load_json
 TREE = PROJECT / "dist" / "release"
 BRANCH = "main"
 
+# .exe в ветку не кладётся: git не забывает блобы, и каждая пересборка добавляла бы
+# 23 МБ в историю навсегда (к 17 августа 2026 их там уже два, 46 МБ из 81 МБ .git).
+# Решение пользователя от 17 августа: файл раздаётся через GitHub Releases, а в витрине
+# остаётся ссылка на `/releases/latest/download/AAI2-RU.exe` — она всегда ведёт
+# на свежий выпуск и не зависит от номера версии.
+ASSETS = ("AAI2-RU.exe",)
+
 # Метка в сообщении коммита: по ней видно, что коммит сделан отсюда, а не руками.
 # Нужна ровно для одного — не затереть молча правку, внесённую через веб-интерфейс
 # GitHub. Такое уже случалось: витрину правили прямо в ветке, а ветка генерируется.
@@ -121,7 +128,8 @@ def main() -> int:
             git("reset", "--hard", "--quiet", remote, cwd=work)
         # содержимое заменяется целиком: ветка — снимок дерева, а не его история
         git("rm", "-rf", "--quiet", ".", cwd=work, check=False)
-        shutil.copytree(TREE, work, dirs_exist_ok=True)
+        shutil.copytree(TREE, work, dirs_exist_ok=True,
+                        ignore=shutil.ignore_patterns(*ASSETS))
         git("add", "-A", cwd=work)
 
         if not git("status", "--porcelain", cwd=work).stdout.strip():
@@ -144,6 +152,20 @@ def main() -> int:
             print(f"отправлено: origin/{BRANCH}")
         else:
             print("\n(коммит готов, но не отправлен; для отправки запусти с --push)")
+
+        remaining = [name for name in ASSETS if (TREE / name).exists()]
+        if remaining:
+            stats = load_json(TREE / "patcher" / "data" / "version.json", default={}) or {}
+            tag = f"v{stats.get('built', 'YYYY-MM-DD')}"
+            print("\nВ ветку НЕ положено (раздаётся через GitHub Releases):")
+            for name in remaining:
+                size = (TREE / name).stat().st_size / 2**20
+                print(f"   {name}  {size:.0f} МБ  ->  {TREE / name}")
+            print(f"\nВыложить выпуск (нужен gh, иначе руками через веб-интерфейс):"
+                  f"\n   gh release create {tag} \"{TREE / ASSETS[0]}\" "
+                  f"--title {tag} --notes \"Сборка от {stats.get('built', '')}\"")
+            print("Ссылка в витрине ведёт на /releases/latest/download/ — она заработает,\n"
+                  "только когда выпуск с этим файлом существует.")
         return 0
     finally:
         git("worktree", "remove", "--force", str(work), check=False)

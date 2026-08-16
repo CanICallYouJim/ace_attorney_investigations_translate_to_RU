@@ -30,11 +30,54 @@ from __future__ import annotations
 
 import collections
 
+import re
+
 from common import CASES, COMMON_CASE, WORK, load_entries, load_json
 
 # Что считаем «подписями»: короткие строки, которые дублируются внутри реплик
 # и потому обязаны быть переведены раньше их.
 LABEL_TABLES = ("gk2_item_name", "gk2_logic_name", "gk2_logic_button")
+
+# Уведомление органайзера — то самое место, где имя улики стоит в реплике
+# в рамке: «X data jotted down in my Organizer» -> «Данные «X» записаны
+# в органайзер». Кавычки-ёлочки в переводе позволяют сверить имя дословно.
+VERB = r"(?:jotted down|recorded|updated|added)"
+NOTIFY = re.compile(rf"{VERB}\s+(?:in|to)\s+(?:the\s+|your\s+|my\s+)?(?:Organizer|Court Record)",
+                    re.I)
+NAME_IN_EN = re.compile(rf"^(.*?)\s+(?:data\s+)?{VERB}\s")
+CODE = re.compile(r"\{[0-9A-Fa-f]{4}(?::[0-9A-Fa-f]+)?\}")
+
+
+def flat(text: str) -> str:
+    return re.sub(r"\s+", " ", CODE.sub("", text or "").replace("\n", " ")).strip()
+
+
+def notify_mismatches(case: int, keys: dict, tables: dict) -> list[str]:
+    """Имя улики в уведомлении обязано совпасть с её именем в таблице.
+
+    Именно здесь два хранилища встречаются на одном экране: игра говорит
+    «Данные «Рубильники» записаны в органайзер», игрок открывает органайзер —
+    а там «Электрощит». Такое расхождение жило в деле 2 в четырёх уликах.
+    """
+    km = keys.get("gk2_item_name", {})
+    items = {(v.get("en") or "").strip(): (v.get("ru") or "").strip()
+             for mid, v in tables["gk2_item_name"].items()
+             if re.match(rf"^gk2_itm{case-1:02d}_", km.get(int(mid), ""))}
+    out = []
+    for seg in load_entries(case):
+        en = flat(seg["en"])
+        if not NOTIFY.search(en) or not seg.get("ru"):
+            continue
+        m = NAME_IN_EN.match(en)
+        name = m.group(1).strip() if m else ""
+        table = items.get(name)
+        if not table:                       # улика не переведена — это уже видно счётчиком
+            continue
+        quoted = re.findall(r"«(.+?)»", flat(seg["ru"]))
+        if quoted and quoted[0] != table:
+            out.append(f"дело {case}: «{name}» — в органайзере «{table}», "
+                       f"в реплике «{quoted[0]}» ({seg['file']}|{seg['block']}|{seg['index']})")
+    return out
 
 
 def plural(n: int, one: str, few: str, many: str) -> str:
@@ -100,6 +143,8 @@ def main() -> int:
         pct = 100 * done / len(entries)
         print(f"{case:>5} {done:>7}/{len(entries):<5} {pct:3.0f}%"
               f" {lab_ru:>6}/{lab_n:<5} {oth_ru:>7}/{oth_n:<5}")
+
+        broken += notify_mismatches(case, keys, tables)
 
         if done == len(entries) and (lab_ru < lab_n or oth_ru < oth_n):
             broken.append(f"дело {case}: реплики переведены целиком, "

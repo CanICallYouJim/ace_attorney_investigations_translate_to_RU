@@ -14019,8 +14019,8 @@
       "index": 0,
       "mode": 2,
       "en": "Hey, Ruffles!{E108:0018} How's the investigation comin' along?{E108:0018}\nAnything y'all wanna share?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эй, Кружавчик!{E108:0018} Как там расследование движется?{E108:0018}\nНе поделитесь чем-нибудь?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000820|1",
@@ -14029,8 +14029,8 @@
       "index": 1,
       "mode": 2,
       "en": "(Urngh.{E108:0010} Here we go again...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Нгрх.{E108:0010} Ну вот, опять...)",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000820|2",
@@ -14039,8 +14039,8 @@
       "index": 2,
       "mode": 2,
       "en": "I am not in the habit of sharing the details of\nconfidential investigations with strangers.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я не имею привычки делиться подробностями\nтайного следствия с посторонними.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000820|3",
@@ -14049,8 +14049,8 @@
       "index": 3,
       "mode": 3,
       "en": "Dang!{E108:0018} {E107:0002}{E280}You sure are one tough cookie!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот ведь!{E108:0018} {E107:0002}{E280}Крепкий вы орешек!",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000820|4",
@@ -14059,8 +14059,8 @@
       "index": 4,
       "mode": 1,
       "en": "But I ain't about to head back to Chief Lotta\nempty-handed!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но с пустыми руками я к Шефу Лотте\nне вернусь!",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000820|5",
@@ -14069,8 +14069,8 @@
       "index": 5,
       "mode": 2,
       "en": "(Don't I know that name from somewhere...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Кажется, это имя мне откуда-то знакомо...?)",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000820|6",
@@ -14079,8 +14079,8 @@
       "index": 6,
       "mode": 2,
       "en": "(No.{E108:0010} {E107:0003}Must be my imagination...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Нет.{E108:0010} {E107:0003}Должно быть, почудилось...)",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000827|0",
@@ -14089,8 +14089,8 @@
       "index": 0,
       "mode": 2,
       "en": "What is the officer here taking pictures of, Detective?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что снимает этот сотрудник, детектив?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000827|1",
@@ -14099,8 +14099,8 @@
       "index": 1,
       "mode": 2,
       "en": "\"The wicked will be crushed beneath the\nrighteous hammer of justice!\"",
-      "ru": "",
-      "status": "pending"
+      "ru": "«Злодеи будут сокрушены праведным\nмолотом правосудия!»",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000827|2",
@@ -14109,8 +14109,8 @@
       "index": 2,
       "mode": 2,
       "en": "Looks like he's reading off of these papers here,\nMr. Edgeworth.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Похоже, он читает вот с этих бумаг,\nмистер Эджворт.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000827|3",
@@ -14119,8 +14119,8 @@
       "index": 3,
       "mode": 3,
       "en": "\"Pro Speech Tips, Number 3:{E108:0010} Speak slowly and\nconfidently to win your audience around.\"",
-      "ru": "",
-      "status": "pending"
+      "ru": "«Советы оратору, №3:{E108:0010} говорите медленно\nи уверенно — и зал ваш».",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000827|4",
@@ -14129,8 +14129,8 @@
       "index": 4,
       "mode": 2,
       "en": "Hey,{E108:0008} this is good stuff.{E108:0018} {E150:002E001E}Better get a shot of this one,\ntoo...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Слушайте,{E108:0008} а неплохо.{E108:0018} {E150:002E001E}Надо и это заснять,\nпожалуй...",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000827|5",
@@ -14139,8 +14139,8 @@
       "index": 5,
       "mode": 2,
       "en": "(Instead of focusing on that speech,{E108:0008} {E1D1}how about you\nfocus on your work instead, Officer?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Вместо того чтобы вникать в речь,{E108:0008} {E1D1}не вникнуть ли\nвам в свою работу, офицер?)",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|0000082D|0",
@@ -14149,8 +14149,8 @@
       "index": 0,
       "mode": 2,
       "en": "Have you found anything of note, Officer?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нашли что-нибудь примечательное, офицер?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|0000082D|1",
@@ -14159,8 +14159,8 @@
       "index": 1,
       "mode": 1,
       "en": "No, sir!{E108:0018} Not a thing!{E108:0018} No fingerprints,{E108:0010} no footprints --{E108:0018}\nnothing!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Никак нет!{E108:0018} Ничего!{E108:0018} Ни отпечатков,{E108:0010} ни следов --{E108:0018}\nничего!",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|0000082D|2",
@@ -14169,8 +14169,8 @@
       "index": 2,
       "mode": 1,
       "en": "That is to say,{E108:0010} none that stand out, sir!{E108:0010} Not after\neverybody touched and walked all over everything!",
-      "ru": "",
-      "status": "pending"
+      "ru": "То есть,{E108:0010} ничего заметного, сэр!{E108:0010} После того как\nвсё облапали и истоптали!",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|0000082D|3",
@@ -14179,8 +14179,8 @@
       "index": 3,
       "mode": 3,
       "en": "Detective Gumshoe --{E108:0010} did he sound...{E108:0010} {E107:0002}{E1D1}pleased about\nhaving no evidence to catalogue?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Детектив Гамшу —{E108:0010} мне послышалось...{E108:0010} {E107:0002}{E1D1}или он рад,\nчто описывать нечего?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|0000082D|4",
@@ -14189,8 +14189,8 @@
       "index": 4,
       "mode": 3,
       "en": "I'll, uh...{E108:0010} {E107:0002}{E280}speak to his commanding officer about it, sir.{E108:0010}\nSalary review's coming up soon and all...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я, э-э...{E108:0010} {E107:0002}{E280}поговорю с его начальством, сэр.{E108:0010}\nСкоро как раз пересмотр жалованья...",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000832|0",
@@ -14269,8 +14269,8 @@
       "index": 0,
       "mode": 2,
       "en": "Is the president okay?",
-      "ru": "",
-      "status": "pending"
+      "ru": "С президентом всё в порядке?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000839|1",
@@ -14279,8 +14279,8 @@
       "index": 1,
       "mode": 2,
       "en": "We're not at liberty to share that information with\nlocal law enforcement.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мы не вправе сообщать это местным\nправоохранительным органам.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000839|2",
@@ -14289,8 +14289,8 @@
       "index": 2,
       "mode": 1,
       "en": "What did you just say to him!?{E108:0020} You let us on that\nplane, pal,{E108:0010} or you might just regret it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что вы ему сейчас сказали!?{E108:0020} Пустите нас на борт,\nдружище,{E108:0010} а не то пожалеете!",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000839|3",
@@ -14299,8 +14299,8 @@
       "index": 3,
       "mode": 2,
       "en": "Sorry.{E108:0010} I can't let you do that.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Извините.{E108:0010} Не могу вас пустить.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000839|4",
@@ -14309,8 +14309,8 @@
       "index": 4,
       "mode": 3,
       "en": "*sigh*{E108:0010} {E107:0002}No one respects the badge anymore...",
-      "ru": "",
-      "status": "pending"
+      "ru": "*вздох*{E108:0010} {E107:0002}Совсем перестали уважать удостоверение...",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000839|5",
@@ -14319,8 +14319,8 @@
       "index": 5,
       "mode": 3,
       "en": "(I suppose this is something of an international\nincident...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Похоже, это уже нечто вроде\nмеждународного инцидента...)",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000839|6",
@@ -14329,8 +14329,8 @@
       "index": 6,
       "mode": 2,
       "en": "(All the more reason to find the killer as soon as we\npossibly can...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Тем более надо найти убийцу\nкак можно скорее...)",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|0",
@@ -14339,8 +14339,8 @@
       "index": 0,
       "mode": 3,
       "en": "Can I help you?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чем могу помочь?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|1",
@@ -14349,8 +14349,8 @@
       "index": 1,
       "mode": 2,
       "en": "You're one of the president's bodyguards, correct?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы один из телохранителей президента, верно?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|2",
@@ -14359,8 +14359,8 @@
       "index": 2,
       "mode": 2,
       "en": "Could you tell me how his security detail was\narranged during the speech?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не расскажете, как была устроена его охрана\nво время речи?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|3",
@@ -14369,8 +14369,8 @@
       "index": 3,
       "mode": 2,
       "en": "Two of our senior operatives were attached to\nthe president.{E108:0010} The rest secured the stage.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Двое старших сотрудников были при президенте.{E108:0010}\nОстальные держали сцену.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|4",
@@ -14379,8 +14379,8 @@
       "index": 4,
       "mode": 2,
       "en": "This isn't our first rodeo.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не первый год работаем.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|5",
@@ -14389,8 +14389,8 @@
       "index": 5,
       "mode": 2,
       "en": "Anything suspicious in that crowd, and we would've\nspotted it right away.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Будь в толпе что-то подозрительное,\nмы бы сразу заметили.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|6",
@@ -14409,8 +14409,8 @@
       "index": 7,
       "mode": 2,
       "en": "So the {E043}president's security was tightly orchestrated{E040}\nfor the duration of his speech.{E106}{E198:00000019}{E100:0001}{E1AE}{E12D:0001004C}{E12D:000100D2}{E100:0000}{E12F:00000002}{E101:00000000}{E107:0002}Let's investigate further.{E108:0010} We should speak with other\nwitnesses and continue to look over the crime scene.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, {E043}охрана президента была выстроена плотно{E040}\nна всё время речи.{E106}{E198:00000019}{E100:0001}{E1AE}{E12D:0001004C}{E12D:000100D2}{E100:0000}{E12F:00000002}{E101:00000000}{E107:0002}Ведём следствие дальше.{E108:0010} Нужно опросить других\nсвидетелей и ещё раз пройти место преступления.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|8",
@@ -14419,8 +14419,8 @@
       "index": 8,
       "mode": 2,
       "en": "We can't afford to leave any stone unturned.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нельзя упустить ни одной мелочи.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|00000840|9",
@@ -14429,8 +14429,8 @@
       "index": 9,
       "mode": 3,
       "en": "...{E1D1}Hm?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...{E1D1}Хм?",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|0000084B|0",
@@ -14439,8 +14439,8 @@
       "index": 0,
       "mode": 2,
       "en": "Sir!{E108:0018} The president's bodyguards are in front of\nthe plane!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сэр!{E108:0018} Телохранители президента перед\nсамолётом!",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|0000084B|1",
@@ -14449,8 +14449,8 @@
       "index": 1,
       "mode": 3,
       "en": "Ah...{E108:0010} {E107:0002}So they are.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А...{E108:0010} {E107:0002}И правда.",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m00_npc.bytes|0000084B|2",
@@ -14459,8 +14459,8 @@
       "index": 2,
       "mode": 2,
       "en": "(I should walk up to the bodyguards and press {E2B0:0000} to\ntalk to them...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Надо подойти к телохранителям и нажать {E2B0:0000},\nчтобы поговорить...)",
+      "status": "translated"
     },
     {
       "id": "sce0_c0_m01_check.bytes|00000920|0",

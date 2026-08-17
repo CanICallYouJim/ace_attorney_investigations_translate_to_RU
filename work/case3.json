@@ -9,8 +9,8 @@
       "index": 0,
       "mode": 2,
       "en": "Your badge is in the shape of a sunflower,{E108:0008} right,\nMr. E?",
-      "ru": "",
-      "status": "pending"
+      "ru": "У вас значок в форме подсолнуха,{E108:0008} верно,\nмистер Э.?",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D0|1",
@@ -19,8 +19,8 @@
       "index": 1,
       "mode": 2,
       "en": "Does that have some kind of special meaning, or...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это что-то особенное значит, или...?",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D0|2",
@@ -29,8 +29,8 @@
       "index": 2,
       "mode": 2,
       "en": "It does.{E108:0010} Sunflowers follow the sun, correct?{E108:0010}\nIn other words,{E108:0008} they always face the light.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит.{E108:0010} Подсолнух ведь тянется к солнцу?{E108:0010}\nТо есть{E108:0008} всегда обращён к свету.",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D0|3",
@@ -39,8 +39,8 @@
       "index": 3,
       "mode": 2,
       "en": "Just as we attorneys do.{E108:0010} We should always aim to be\non the side of liberty and justice.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как и мы, адвокаты.{E108:0010} Мы всегда должны быть\nна стороне свободы и справедливости.",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D0|4",
@@ -49,8 +49,8 @@
       "index": 4,
       "mode": 2,
       "en": "Wow!{E108:0010} {E285}Then I'm going to work hard and be just like a\nsunflower when I'm an attorney!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты!{E108:0010} {E285}Тогда я буду стараться и стану\nтаким же подсолнухом, когда выучусь на адвоката!",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D0|5",
@@ -59,8 +59,8 @@
       "index": 5,
       "mode": 2,
       "en": "Heh.{E108:0010} I've no doubt that you will.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе.{E108:0010} Не сомневаюсь, что станешь.",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D6|0",
@@ -69,8 +69,8 @@
       "index": 0,
       "mode": 2,
       "en": "Is this your badge number here on the back?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А сзади — это номер значка?",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D6|1",
@@ -79,8 +79,8 @@
       "index": 1,
       "mode": 2,
       "en": "That's right.{E108:0010} The number itself doesn't mean much, of\ncourse.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно.{E108:0010} Сам по себе номер, конечно, мало что\nзначит.",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D6|2",
@@ -89,8 +89,8 @@
       "index": 2,
       "mode": 2,
       "en": "Well, if it doesn't really matter,{E108:0008} then I want mine to be\na string of repeating digits!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, раз это неважно,{E108:0008} то я хочу себе номер\nиз одинаковых цифр подряд!",
+      "status": "translated"
     },
     {
       "id": "itm02_000.bytes|050001D6|3",
@@ -99,8 +99,8 @@
       "index": 3,
       "mode": 2,
       "en": "(I'd...{E108:0018} {E285}actually pay to see that.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Я бы...{E108:0018} {E285}за такое и денег не пожалел.)",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000210|0",
@@ -109,8 +109,8 @@
       "index": 0,
       "mode": 2,
       "en": "Yes...{E108:0008} what a gorgeous design.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да...{E108:0008} какая изящная работа.",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000210|1",
@@ -119,8 +119,8 @@
       "index": 1,
       "mode": 2,
       "en": "...Really?{E108:0010}\nJust seems a bit out there to me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Правда?{E108:0010}\nПо мне, так странноватая какая-то.",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000210|2",
@@ -129,8 +129,8 @@
       "index": 2,
       "mode": 2,
       "en": "Like,{E108:0008} how do you even get your tea in there?",
-      "ru": "",
-      "status": "pending"
+      "ru": "В смысле,{E108:0008} как в неё вообще чай наливать?",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000210|3",
@@ -139,8 +139,8 @@
       "index": 3,
       "mode": 2,
       "en": "Art isn't about function, Eddie --{E108:0008} it's about form.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Искусство не про пользу, Эдди, —{E108:0008} оно про форму.",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000210|4",
@@ -149,8 +149,8 @@
       "index": 4,
       "mode": 7,
       "en": "Hmm...{E108:0008} {E107:0002}Guess I'll have to take your word for it, Mr. E.{E108:0010}\n{E282}This art stuff is way beyond me!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хм-м...{E108:0008} {E107:0002}Придётся поверить вам на слово, мистер Э.{E108:0010}\n{E282}Это искусство мне не по зубам!",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000215|0",
@@ -159,8 +159,8 @@
       "index": 0,
       "mode": 2,
       "en": "Look!{E108:0010} There's something stamped on the bottom!{E108:0018}\nIt says...{E108:0008} {E284}\"PH\"...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Смотрите!{E108:0010} Снизу что-то оттиснуто!{E108:0018}\nТут...{E108:0008} {E284}«ПР»...",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000215|1",
@@ -169,8 +169,8 @@
       "index": 1,
       "mode": 2,
       "en": "I suppose that must be Paul Halique's pottery mark.{E108:0010}\nThose are his initials, after all.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Наверное, это клеймо мастера — Поля Резника.{E108:0010}\nВедь это его инициалы.",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000215|2",
@@ -179,8 +179,8 @@
       "index": 2,
       "mode": 2,
       "en": "Ms. Bound said she is a big fan of his work.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Долгова говорила, что она большая\nпоклонница его работ.",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000215|3",
@@ -189,8 +189,8 @@
       "index": 3,
       "mode": 2,
       "en": "His initials, huh?{E108:0010}\nSo if I'd made it,{E108:0008} {E285}it would say \"EF\"?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Инициалы, значит?{E108:0010}\nА если бы делал я,{E108:0008} {E285}было бы «ЭЗ»?",
+      "status": "translated"
     },
     {
       "id": "itm02_005.bytes|05000215|4",
@@ -199,8 +199,8 @@
       "index": 4,
       "mode": 2,
       "en": "...Perhaps you should practice by initialing your\npersonal belongings first.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Начни, пожалуй, с того, что подпишешь\nинициалами свои вещи.",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000250|0",
@@ -209,8 +209,8 @@
       "index": 0,
       "mode": 2,
       "en": "This lamp isn't working.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Лампа не горит.",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000250|1",
@@ -219,8 +219,8 @@
       "index": 1,
       "mode": 2,
       "en": "No.{E108:0010} Unfortunately,{E108:0008} it appears to be broken.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не горит.{E108:0010} К сожалению,{E108:0008} похоже, она разбита.",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000250|2",
@@ -229,8 +229,8 @@
       "index": 2,
       "mode": 2,
       "en": "Would have been nice to see it all lit up just once.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хоть бы разок поглядеть на неё зажжённой.",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000250|3",
@@ -239,8 +239,8 @@
       "index": 3,
       "mode": 2,
       "en": "Ms. Scone said it's good for relaxation, right?{E108:0010}\nI could use some of that!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Сдобина говорила, от неё расслабляешься?{E108:0010}\nМне бы сейчас в самый раз!",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000250|4",
@@ -249,8 +249,8 @@
       "index": 4,
       "mode": 2,
       "en": "(Perhaps I'll get one for the office...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Пожалуй, заведу такую в конторе...)",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000255|0",
@@ -259,8 +259,8 @@
       "index": 0,
       "mode": 3,
       "en": "*shudder*{E108:0010} There's so much blood...",
-      "ru": "",
-      "status": "pending"
+      "ru": "*бр-р*{E108:0010} Сколько крови...",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000255|1",
@@ -269,8 +269,8 @@
       "index": 1,
       "mode": 2,
       "en": "I still can't believe it...{E108:0010}\nA murder weapon stashed away in a candy castle...",
-      "ru": "",
-      "status": "pending"
+      "ru": "До сих пор не верится...{E108:0010}\nОрудие убийства — в карамельном замке...",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000255|2",
@@ -279,8 +279,8 @@
       "index": 2,
       "mode": 2,
       "en": "You don't have to look, Eddie.{E108:0010} It's okay.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Можешь не смотреть, Эдди.{E108:0010} Ничего страшного.",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000255|3",
@@ -289,8 +289,8 @@
       "index": 3,
       "mode": 2,
       "en": "I...{E108:0010} {E107:0001}{E282}I'm fine!{E108:0018} {E107:0002}{E1D1}I mean,{E108:0008} if I'm going to be an attorney,{E108:0008}\n{E280}I need to get used to this stuff, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0010} {E107:0001}{E282}Я в норме!{E108:0018} {E107:0002}{E1D1}В смысле,{E108:0008} раз уж я буду адвокатом,{E108:0008}\n{E280}надо к такому привыкать, верно?",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|05000255|4",
@@ -299,8 +299,8 @@
       "index": 4,
       "mode": 2,
       "en": "Yes...{E108:0010} I suppose you do.{E108:0010}\n(I look forward to seeing the man you become.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да...{E108:0010} Пожалуй, надо.{E108:0010}\n(Хочется увидеть, каким человеком ты станешь.)",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|0500025A|0",
@@ -309,8 +309,8 @@
       "index": 0,
       "mode": 2,
       "en": "So the lamps both have these hexagonal stands on the\nbottom, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, у обеих ламп снизу шестиугольные\nподставки, да?",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|0500025A|1",
@@ -319,8 +319,8 @@
       "index": 1,
       "mode": 2,
       "en": "Yes.{E108:0010} I imagine the indentations in the pillars were\nmade to accomodate them.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} Похоже, углубления в столбиках как раз\nпод них и сделаны.",
+      "status": "translated"
     },
     {
       "id": "itm02_009.bytes|0500025A|2",
@@ -329,8 +329,8 @@
       "index": 2,
       "mode": 2,
       "en": "And boy do they fit like a glove!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И садятся как влитые!",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000290|0",
@@ -339,8 +339,8 @@
       "index": 0,
       "mode": 2,
       "en": "A roll of cloth of navy blue.{E108:0010}\nIt's a very calming hue.{E108:0010} I like it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Рулон тёмно-синей ткани.{E108:0010}\nОчень спокойный оттенок.{E108:0010} Мне нравится.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000290|1",
@@ -349,8 +349,8 @@
       "index": 1,
       "mode": 2,
       "en": "Yeah,{E108:0008} that was real deep and all, Mr. E!{E108:0010}\n{E1D1}But let's get to the main event already and light it up!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага,{E108:0008} глубокая мысль, мистер Э.!{E108:0010}\n{E1D1}Но давайте уже к главному — включим её!",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000290|2",
@@ -359,8 +359,8 @@
       "index": 2,
       "mode": 2,
       "en": "A-{E108:0008}Alright.{E108:0010}\n{E284}(But I wasn't trying to be deep or anything, though...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Х-{E108:0008}Хорошо.{E108:0010}\n{E284}(Хотя я вовсе не глубокомысленничал...?)",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000293|0",
@@ -369,8 +369,8 @@
       "index": 0,
       "mode": 2,
       "en": "Whoa!{E108:0018} Look at all these buttons!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты!{E108:0018} Сколько тут кнопок!",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000293|1",
@@ -379,8 +379,8 @@
       "index": 1,
       "mode": 2,
       "en": "I believe they're for changing the color of the light.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Думаю, ими меняют цвет свечения.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000293|2",
@@ -389,8 +389,8 @@
       "index": 2,
       "mode": 2,
       "en": "Try pressing one, Eddie.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нажми какую-нибудь, Эдди.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000293|3",
@@ -399,8 +399,8 @@
       "index": 3,
       "mode": 2,
       "en": "There.{E108:0010} Now the cloth is all lit up.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот.{E108:0010} Теперь ткань светится.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000293|4",
@@ -409,8 +409,8 @@
       "index": 4,
       "mode": 2,
       "en": "It's so pretty no matter how many times I see it...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сколько ни смотрю, всё равно красиво...",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000298|0",
@@ -419,8 +419,8 @@
       "index": 0,
       "mode": 2,
       "en": "The cloth is now glowing with a pale blue hue thanks\nto the light-emitting device.",
-      "ru": "",
-      "status": "pending"
+      "ru": "От светоизлучающего устройства ткань светится\nбледно-голубым.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000298|1",
@@ -429,8 +429,8 @@
       "index": 1,
       "mode": 2,
       "en": "Didn't Ms. Scone say {E284}one of these cloths and its\nmachine are missing?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Сдобина же говорила, что {E284}одна такая ткань\nи устройство пропали?",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000298|2",
@@ -439,8 +439,8 @@
       "index": 2,
       "mode": 2,
       "en": "Who do you think could've taken them?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кто, по-вашему, мог их забрать?",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|05000298|3",
@@ -449,8 +449,8 @@
       "index": 3,
       "mode": 2,
       "en": "I have no idea.{E108:0010} But I suspect it might have something\nto do with our case somehow.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Понятия не имею.{E108:0010} Но подозреваю, что это как-то\nсвязано с нашим делом.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|0500029C|0",
@@ -459,8 +459,8 @@
       "index": 0,
       "mode": 2,
       "en": "This dark shade of blue...{E108:0010} Being around such a calming\ncolor from time to time just might do me some good.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Такой глубокий синий...{E108:0010} Побыть иногда рядом\nс таким спокойным цветом было бы даже полезно.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|0500029C|1",
@@ -469,8 +469,8 @@
       "index": 1,
       "mode": 2,
       "en": "Jeez Louise, Milesarino!{E108:0010} {E282}Talk about corny!{E108:0018}\nYou could fill an entire extra-large bucket by yourself.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Батюшки, Майлзюша!{E108:0010} {E282}Ну и патока!{E108:0018}\nТебя одного на целую бочку хватит.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|0500029C|2",
@@ -479,8 +479,8 @@
       "index": 2,
       "mode": 2,
       "en": "(That's rich coming from you, Fender...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Кто бы говорил, Защитин...)",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|0500029F|0",
@@ -489,8 +489,8 @@
       "index": 0,
       "mode": 2,
       "en": "These must be the switches that change the color of\nthe cloth.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Видимо, этими кнопками и меняют цвет ткани.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|0500029F|1",
@@ -499,8 +499,8 @@
       "index": 1,
       "mode": 2,
       "en": "Let's see if they work...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Посмотрим, работают ли...",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|0500029F|2",
@@ -509,8 +509,8 @@
       "index": 2,
       "mode": 2,
       "en": "Well...{E108:0010} the cloth has certainly changed color.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что ж...{E108:0010} цвет ткани и правда изменился.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002A2|0",
@@ -519,8 +519,8 @@
       "index": 0,
       "mode": 2,
       "en": "It's glowing with a pale blue hue.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Светится бледно-голубым.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002A2|1",
@@ -529,8 +529,8 @@
       "index": 1,
       "mode": 2,
       "en": "And according to Detective Gumshoe,{E108:0008} {E285}this is what it\nlooked like when it was still draped over that statue.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И, по словам детектива Гамшу,{E108:0008} {E285}именно так она\nи выглядела, пока была наброшена на статую.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002A2|2",
@@ -549,8 +549,8 @@
       "index": 3,
       "mode": 2,
       "en": "(But what does that have to do with the case...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Вот только при чём тут наше дело...?)",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002A6|0",
@@ -559,8 +559,8 @@
       "index": 0,
       "mode": 2,
       "en": "This dark shade of blue...{E108:0010} Being around such a calming\ncolor from time to time just might do me some good.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Такой глубокий синий...{E108:0010} Побыть иногда рядом\nс таким спокойным цветом было бы даже полезно.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002A6|1",
@@ -569,8 +569,8 @@
       "index": 1,
       "mode": 2,
       "en": "It's also just the right color for sneaking around in the\ndead of night!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А ещё в самый раз, чтобы красться глухой\nночью!",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002A6|2",
@@ -579,8 +579,8 @@
       "index": 2,
       "mode": 2,
       "en": "But I'd need something a lot brighter if I wanted to\nmake a big, splashy entrance...{E108:0010} {E107:0003}Hmm...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А вот для эффектного появления нужно что-то\nпоярче...{E108:0010} {E107:0003}Хм-м...",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002A6|3",
@@ -589,8 +589,8 @@
       "index": 3,
       "mode": 2,
       "en": "...You can do both with this cloth through the power of\nbuttons, though?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Но с этой тканью можно и то и другое —\nдостаточно нажать кнопку.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002A6|4",
@@ -599,8 +599,8 @@
       "index": 4,
       "mode": 2,
       "en": "Oh, yeah!{E108:0018}\nIn that case,{E108:0008} {E1D1}I'll take five!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И правда!{E108:0018}\nТогда{E108:0008} {E1D1}беру пять штук!",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002AB|0",
@@ -609,8 +609,8 @@
       "index": 0,
       "mode": 2,
       "en": "This cloth went missing at the time of the IS-7\nIncident...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эта ткань пропала во время дела IS-7...",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002AB|1",
@@ -619,8 +619,8 @@
       "index": 1,
       "mode": 2,
       "en": "...only to be found eighteen years later floating in the\nZodiac Hall fountain.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...и через восемнадцать лет всплыла в фонтане\nЗодиак-холла.",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002AB|2",
@@ -629,8 +629,8 @@
       "index": 2,
       "mode": 2,
       "en": "And there was another one that was all lit up and\ndraped around the Pisces statue, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А ещё одна светилась и была наброшена\nна статую Рыб, да?",
+      "status": "translated"
     },
     {
       "id": "itm02_00b.bytes|050002AB|3",
@@ -639,8 +639,8 @@
       "index": 3,
       "mode": 2,
       "en": "(It seems these cloths may have a connection to both\ncases,{E108:0008} past and present.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Похоже, эти ткани связывают оба дела —{E108:0008}\nпрошлое и нынешнее.)",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D0|0",
@@ -649,8 +649,8 @@
       "index": 0,
       "mode": 2,
       "en": "Looks like this pedal lets you adjust the height of the\nplatform, Mr. Edgeworth!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Похоже, этой педалью меняют высоту площадки,\nмистер Эджворт!",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D0|1",
@@ -659,8 +659,8 @@
       "index": 1,
       "mode": 2,
       "en": "Indeed.{E108:0010} Let's give it a try.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Именно.{E108:0010} Давай попробуем.",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D0|2",
@@ -669,8 +669,8 @@
       "index": 2,
       "mode": 2,
       "en": "If you would, Kay.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Будь добра, Кей.",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D0|3",
@@ -689,8 +689,8 @@
       "index": 4,
       "mode": 2,
       "en": "...Ta-da!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Та-дам!",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D0|5",
@@ -699,8 +699,8 @@
       "index": 5,
       "mode": 2,
       "en": "A single person could transport quite a heavy load\nusing one of these.",
-      "ru": "",
-      "status": "pending"
+      "ru": "С такой тележкой и один человек увезёт\nизрядный груз.",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D0|6",
@@ -709,8 +709,8 @@
       "index": 6,
       "mode": 2,
       "en": "I'll say!{E108:0010} {E285}I bet I could even cart Gummy off with it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё бы!{E108:0010} {E285}Я на ней и Гамми увезу!",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D0|7",
@@ -719,8 +719,8 @@
       "index": 7,
       "mode": 1,
       "en": "(And for what purpose exactly, may I ask...!?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(И, позволь спросить, зачем...!?)",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D8|0",
@@ -729,8 +729,8 @@
       "index": 0,
       "mode": 2,
       "en": "The top of the platform is wet...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Площадка сверху мокрая...",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D8|1",
@@ -739,8 +739,8 @@
       "index": 1,
       "mode": 2,
       "en": "Maybe someone used it to move something liquidy\naround?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Может, на ней возили что-то жидкое?",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002D8|2",
@@ -749,8 +749,8 @@
       "index": 2,
       "mode": 2,
       "en": "(Yes,{E108:0008} but the question is who?{E108:0010} ...And what?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Да,{E108:0008} но вопрос — кто?{E108:0010} ...И что именно?)",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002DB|0",
@@ -759,8 +759,8 @@
       "index": 0,
       "mode": 2,
       "en": "To think this was disguised as a serving cart and used\nto transport the body.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Подумать только: её выдали за чайную тележку\nи перевезли на ней тело.",
+      "status": "translated"
     },
     {
       "id": "itm02_01d.bytes|050002DB|1",
@@ -769,8 +769,8 @@
       "index": 1,
       "mode": 2,
       "en": "Don't forget the body was inside a hollow ice block.{E108:0010}\nAt least now we know why the platform was wet.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И не забудьте: тело было внутри полой глыбы льда.{E108:0010}\nЗато ясно, почему площадка мокрая.",
+      "status": "translated"
     },
     {
       "id": "itm02_01e.bytes|05000310|0",
@@ -779,8 +779,8 @@
       "index": 0,
       "mode": 2,
       "en": "Boy did this thing get smashed up good, huh?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну и вдребезги же его разнесло, а?",
+      "status": "translated"
     },
     {
       "id": "itm02_01e.bytes|05000310|1",
@@ -789,8 +789,8 @@
       "index": 1,
       "mode": 2,
       "en": "Indeed.{E108:0010} To the point where it's hard to make out what\nit might have once been.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Именно.{E108:0010} Настолько, что и не понять, чем это\nбыло раньше.",
+      "status": "translated"
     },
     {
       "id": "itm02_01e.bytes|05000310|2",
@@ -799,8 +799,8 @@
       "index": 2,
       "mode": 2,
       "en": "It'd be nice if it had some kind of distinguishing\nfeature or something...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хорошо бы найти на нём какую-нибудь примету...",
+      "status": "translated"
     },
     {
       "id": "itm02_01e.bytes|05000313|0",
@@ -809,8 +809,8 @@
       "index": 0,
       "mode": 2,
       "en": "Wait,{E108:0010} haven't we seen these letters before?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Погодите,{E108:0010} мы же уже видели эти буквы?",
+      "status": "translated"
     },
     {
       "id": "itm02_01e.bytes|05000313|1",
@@ -819,8 +819,8 @@
       "index": 1,
       "mode": 2,
       "en": "...This is the mark of the sculptor Paul Halique,\nI believe.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Кажется, это клеймо скульптора Поля Резника.",
+      "status": "translated"
     },
     {
       "id": "itm02_01e.bytes|05000313|2",
@@ -829,8 +829,8 @@
       "index": 2,
       "mode": 2,
       "en": "But how did a chunk of ceramic end up in the middle\nof a puddle of tea anyway?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но как осколок керамики вообще оказался\nпосреди чайной лужи?",
+      "status": "translated"
     },
     {
       "id": "itm02_01e.bytes|05000313|3",
@@ -839,8 +839,8 @@
       "index": 3,
       "mode": 2,
       "en": "(It's just a hunch,{E108:0008} but one suspect quickly comes to\nmind...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Догадка,{E108:0008} но одна подозреваемая приходит\nна ум сразу...)",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000350|0",
@@ -849,8 +849,8 @@
       "index": 0,
       "mode": 2,
       "en": "That is one swanky teapot!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну и шикарный чайник!",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000350|1",
@@ -859,8 +859,8 @@
       "index": 1,
       "mode": 2,
       "en": "That's one way of putting it.{E108:0010}\nI lean more towards \"eccentric\", myself.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Можно и так сказать.{E108:0010}\nЯ бы, скорее, назвал его «чудным».",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000350|2",
@@ -869,8 +869,8 @@
       "index": 2,
       "mode": 2,
       "en": "Whatever it is,{E108:0008} {E107:0001}{E280}it won't do for a Great Thief to remain\nso ignorant about such chic things!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как ни назови,{E108:0008} {E107:0001}{E280}Великому вору не пристало\nне разбираться в таких шикарных вещах!",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000350|3",
@@ -879,8 +879,8 @@
       "index": 3,
       "mode": 7,
       "en": "...{E108:0010}{E107:0002}Actually,{E108:0008} your ignorance is my bliss.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...{E108:0010}{E107:0002}Вообще-то,{E108:0008} меньше знаешь — крепче сплю.",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000354|0",
@@ -889,8 +889,8 @@
       "index": 0,
       "mode": 2,
       "en": "These letters say \"PH\",{E108:0008} right, Mr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тут написано «ПР»,{E108:0008} верно, мистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000354|1",
@@ -899,8 +899,8 @@
       "index": 1,
       "mode": 2,
       "en": "Yes.{E108:0010} They show that the teapot was made by Paul\nHalique.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} Они говорят, что чайник сделал\nПоль Резник.",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000354|2",
@@ -909,8 +909,8 @@
       "index": 2,
       "mode": 2,
       "en": "They're his initials, obviously.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это, очевидно, его инициалы.",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000354|3",
@@ -919,8 +919,8 @@
       "index": 3,
       "mode": 2,
       "en": "Right,{E108:0008} but...{E108:0010} I thought his real name was {E284}Artie Frost?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так-то да,{E108:0008} но...{E108:0010} его ведь на самом деле\nзвали {E284}Арти Морозов?",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000354|4",
@@ -929,8 +929,8 @@
       "index": 4,
       "mode": 2,
       "en": "...It was.{E108:0010} Thereby making this a piece by the victim of\nthe IS-7 Incident as well.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Звали.{E108:0010} Значит, и это работа потерпевшего\nпо делу IS-7.",
+      "status": "translated"
     },
     {
       "id": "itm02_01f.bytes|05000354|5",
@@ -939,8 +939,8 @@
       "index": 5,
       "mode": 2,
       "en": "(And his works seem to be everywhere here in Zodiac\nHall...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А его работы, похоже, тут по всему\nЗодиак-холлу...)",
+      "status": "translated"
     },
     {
       "id": "logic02_00.bytes|05000B90|0",
@@ -949,8 +949,8 @@
       "index": 0,
       "mode": 2,
       "en": "The stand broke,{E108:0008} and the ship collapsed with it...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Подставка сломалась,{E108:0008} и корабль рухнул...",
+      "status": "translated"
     },
     {
       "id": "logic02_00.bytes|05000B90|1",
@@ -959,8 +959,8 @@
       "index": 1,
       "mode": 2,
       "en": "And the loud sound it made brought Ms. Bound\nrunning.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На громкий звук и прибежала мисс Долгова.",
+      "status": "translated"
     },
     {
       "id": "logic02_00.bytes|05000B90|2",
@@ -969,8 +969,8 @@
       "index": 2,
       "mode": 3,
       "en": "Yeah...{E108:0010} {E107:0002}Said the ship had already keeled over by the\ntime she got in here...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага...{E108:0010} {E107:0002}Говорит, корабль уже лежал, когда она\nсюда вошла...",
+      "status": "translated"
     },
     {
       "id": "logic02_00.bytes|05000B90|3",
@@ -979,8 +979,8 @@
       "index": 3,
       "mode": 2,
       "en": "But why did the stand collapse?{E108:0010}\n{E043}What caused it to break{E040}?{E106}{E198:00020003}{E100:0001}{E1AE}{E12D:0003085B}{E100:0000}{E101:00060006}{E107:0003}...Maybe the whole thing was off-balance from the\nget-go...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но отчего подставка рухнула?{E108:0010}\n{E043}Почему она сломалась{E040}?{E106}{E198:00020003}{E100:0001}{E1AE}{E12D:0003085B}{E100:0000}{E101:00060006}{E107:0003}...Может, там с самого начала\nне было равновесия...",
+      "status": "translated"
     },
     {
       "id": "logic02_00.bytes|05000B90|4",
@@ -989,8 +989,8 @@
       "index": 4,
       "mode": 2,
       "en": "(Could that really have been the case...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Неужели и правда так...?)",
+      "status": "translated"
     },
     {
       "id": "logic02_01.bytes|05000C10|0",
@@ -999,8 +999,8 @@
       "index": 0,
       "mode": 2,
       "en": "All of Mr. Tangaroa's creations are missing a little\npiece each.",
-      "ru": "",
-      "status": "pending"
+      "ru": "У каждой из работ Тангароа не хватает\nпо кусочку.",
+      "status": "translated"
     },
     {
       "id": "logic02_01.bytes|05000C10|1",
@@ -1009,8 +1009,8 @@
       "index": 1,
       "mode": 2,
       "en": "Including one of the stands that was holding up the\nship.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В том числе у одной из подставок,\nна которых стоял корабль.",
+      "status": "translated"
     },
     {
       "id": "logic02_01.bytes|05000C10|2",
@@ -1019,8 +1019,8 @@
       "index": 2,
       "mode": 2,
       "en": "Somebody really went all out.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кто-то постарался на славу.",
+      "status": "translated"
     },
     {
       "id": "logic02_01.bytes|05000C10|3",
@@ -1029,8 +1029,8 @@
       "index": 3,
       "mode": 2,
       "en": "Do you think it could've been the killer!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Думаете, это был убийца!?",
+      "status": "translated"
     },
     {
       "id": "logic02_01.bytes|05000C10|4",
@@ -1039,8 +1039,8 @@
       "index": 4,
       "mode": 2,
       "en": "...It's certainly a possibility.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Не исключено.",
+      "status": "translated"
     },
     {
       "id": "logic02_01.bytes|05000C10|5",
@@ -1049,8 +1049,8 @@
       "index": 5,
       "mode": 2,
       "en": "Either way,{E108:0008} I think we can safely say the stand was\ndamaged in our mystery person's tampering spree.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так или иначе,{E108:0008} подставку явно повредили\nв тот же заход, что и всё остальное.",
+      "status": "translated"
     },
     {
       "id": "logic02_01.bytes|05000C10|6",
@@ -1059,8 +1059,8 @@
       "index": 6,
       "mode": 2,
       "en": "(And when it broke,{E108:0008} the ship fell and smashed open\nthe treasure chest...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А когда она сломалась,{E108:0008} корабль упал и разбил\nсундук с сокровищами...)",
+      "status": "translated"
     },
     {
       "id": "logic02_01.bytes|05000C10|7",
@@ -1069,8 +1069,8 @@
       "index": 7,
       "mode": 2,
       "en": "(...which would have remained closed otherwise.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...а иначе он остался бы закрытым.)",
+      "status": "translated"
     },
     {
       "id": "logic02_02.bytes|05000C90|0",
@@ -1079,8 +1079,8 @@
       "index": 0,
       "mode": 2,
       "en": "The rock crystal stands and the pillars in front of the\ncastle feature the same hexagonal shape.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Подставки кристаллов и столбики перед замком —\nодной шестиугольной формы.",
+      "status": "translated"
     },
     {
       "id": "logic02_02.bytes|05000C90|1",
@@ -1089,8 +1089,8 @@
       "index": 1,
       "mode": 2,
       "en": "I believe the crystals are meant to be placed on top of\nthe pillars.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Похоже, кристаллы должны стоять\nна этих столбиках.",
+      "status": "translated"
     },
     {
       "id": "logic02_02.bytes|05000C90|2",
@@ -1099,8 +1099,8 @@
       "index": 2,
       "mode": 2,
       "en": "Oh, yeah!{E108:0010} {E1D1}Hexagon to hexagon!{E108:0010} Makes perfect sense!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А ведь верно!{E108:0010} {E1D1}Шестиугольник в шестиугольник!{E108:0010}\nВсё сходится!",
+      "status": "translated"
     },
     {
       "id": "logic02_02.bytes|05000C90|3",
@@ -1109,8 +1109,8 @@
       "index": 3,
       "mode": 2,
       "en": "(But if that's the case,{E108:0008} then why were they being\nhidden inside the castle...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но если так,{E108:0008} зачем их прятали\nвнутри замка...?)",
+      "status": "translated"
     },
     {
       "id": "logic02_02.bytes|05000C90|4",
@@ -1599,8 +1599,8 @@
       "index": 0,
       "mode": 2,
       "en": "We know that the victim was struck and killed with\nsomething blunt.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Известно, что потерпевшего убили ударом\nтупого предмета.",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|1",
@@ -1609,8 +1609,8 @@
       "index": 1,
       "mode": 2,
       "en": "And we found blood on one of the lamps,{E108:0008} which has a\nsmashed bulb inside.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А на одной из ламп нашлась кровь,{E108:0008} и лампочка\nвнутри разбита.",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|2",
@@ -1619,8 +1619,8 @@
       "index": 2,
       "mode": 2,
       "en": "Could the lamp not have been the murder weapon?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не она ли и есть орудие убийства?",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|3",
@@ -1629,8 +1629,8 @@
       "index": 3,
       "mode": 1,
       "en": "For sure!{E108:0018} {E107:0002}It could definitely do enough damage to kill\nsomeone!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё как!{E108:0018} {E107:0002}Такой точно можно убить\nчеловека!",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|4",
@@ -1639,8 +1639,8 @@
       "index": 4,
       "mode": 3,
       "en": "...You,{E108:0008} science guy.{E108:0010} Did you finish analyzing the blood\nfrom the lamp yet?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Эй,{E108:0008} наука.{E108:0010} Кровь с лампы уже разобрали\nили нет?",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|5",
@@ -1649,8 +1649,8 @@
       "index": 5,
       "mode": 1,
       "en": "Yessir!{E108:0018} Just got done a minute ago, sir!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так точно!{E108:0018} Только что закончили!",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|6",
@@ -1659,8 +1659,8 @@
       "index": 6,
       "mode": 2,
       "en": "The blood is the victim's.{E108:0010} No doubt about it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кровь потерпевшего.{E108:0010} Никаких сомнений.",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|7",
@@ -1669,8 +1669,8 @@
       "index": 7,
       "mode": 3,
       "en": "...There you have it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Вот вам и ответ.",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|8",
@@ -1679,8 +1679,8 @@
       "index": 8,
       "mode": 3,
       "en": "Salt Lamp added to the Court Record.{E040}{E106}{E1CF}{E176:00030000}{E146:00050001}{E143}{E12A:0005}{E150:00050018}{E100:0000}{E101:00050005}{E107:0002}(So the murder weapon was hidden in Ms. Scone's\nroom...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "В досье добавлено:\n«Соляная лампа».{E040}{E106}{E1CF}{E176:00030000}{E146:00050001}{E143}{E12A:0005}{E150:00050018}{E100:0000}{E101:00050005}{E107:0002}(Значит, орудие убийства прятали\nв комнате мисс Сдобиной...)",
+      "status": "translated"
     },
     {
       "id": "logic02_03.bytes|05000D10|9",
@@ -1689,8 +1689,8 @@
       "index": 9,
       "mode": 2,
       "en": "(I'm beginning to think we may need to add her to our\nlist of suspects.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Пожалуй, её пора вносить\nв список подозреваемых.)",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|0",
@@ -1699,8 +1699,8 @@
       "index": 0,
       "mode": 2,
       "en": "The whipped cream in this room is collapsing because\nthe temperature is too high.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сливки в этой комнате текут — здесь\nслишком высокая температура.",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|1",
@@ -1709,8 +1709,8 @@
       "index": 1,
       "mode": 3,
       "en": "It's 68 degrees...{E108:0010} My messed-up shoes can vouch for\nthat...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Двадцать градусов...{E108:0010} Мои загубленные ботинки\nне дадут соврать...",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|2",
@@ -1719,8 +1719,8 @@
       "index": 2,
       "mode": 3,
       "en": "And yet...",
-      "ru": "",
-      "status": "pending"
+      "ru": "И всё же...",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|3",
@@ -1729,8 +1729,8 @@
       "index": 3,
       "mode": 2,
       "en": "When you opened the doors to the castle,{E108:0008} the handles\nthemselves were just fine.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Когда вы открывали двери замка,{E108:0008} с самими ручками\nничего не случилось.",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|4",
@@ -1739,8 +1739,8 @@
       "index": 4,
       "mode": 3,
       "en": "Yeah...{E108:0010} They were sturdier than expected...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага...{E108:0010} Крепче, чем ожидалось...",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|5",
@@ -1749,8 +1749,8 @@
       "index": 5,
       "mode": 2,
       "en": "\"Sturdy\"...?{E108:0010} That's not the way I would describe most\nthings made of confectionaries.",
-      "ru": "",
-      "status": "pending"
+      "ru": "«Крепкие»...?{E108:0010} Не то слово, которым описывают\nизделия из сладостей.",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|6",
@@ -1759,8 +1759,8 @@
       "index": 6,
       "mode": 2,
       "en": "I think we'd better take another look at those handles,{E108:0008}\ndon't you?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пожалуй, стоит взглянуть на эти ручки ещё раз,{E108:0008}\nсогласны?",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|8",
@@ -1769,8 +1769,8 @@
       "index": 8,
       "mode": 1,
       "en": "...What the...!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Это что за...!?",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D90|9",
@@ -1779,8 +1779,8 @@
       "index": 9,
       "mode": 2,
       "en": "I think it's safe to say {E172:00100000}those handles aren't made of\ncandy.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Смело можно сказать: {E172:00100000}эти ручки не из\nкарамели.",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D9A|0",
@@ -1789,8 +1789,8 @@
       "index": 0,
       "mode": 2,
       "en": "...It's not just the handles.{E108:0010} The whole castle,{E108:0008} the little\nelves...",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Дело не только в ручках.{E108:0010} Весь замок,{E108:0008} эльфы\nэти...",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D9A|1",
@@ -1799,8 +1799,8 @@
       "index": 1,
       "mode": 2,
       "en": "They're all just plastic models with whipped cream\nsmeared on top.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Всё это пластмассовые макеты, сверху\nобмазанные сливками.",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D9A|2",
@@ -1809,8 +1809,8 @@
       "index": 2,
       "mode": 1,
       "en": "Whaaat!?{E108:0020} {E12F:001E0007}{E107:0002}So none of this is confectionery art after all?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что-о-о!?{E108:0020} {E12F:001E0007}{E107:0002}Так это вообще не кондитерское\nискусство?",
+      "status": "translated"
     },
     {
       "id": "logic02_04.bytes|05000D9A|3",
@@ -1819,8 +1819,8 @@
       "index": 3,
       "mode": 2,
       "en": "No.{E108:0010} It's simply {E043}made to look like candy{E040},{E108:0008} with the cream\nhaving been added to lend it all an air of authenticity.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нет.{E108:0010} Всё это просто {E043}сделано под карамель{E040},{E108:0008}\nа сливки добавлены для убедительности.",
+      "status": "translated"
     },
     {
       "id": "logic02_05.bytes|05000E10|0",
@@ -1829,8 +1829,8 @@
       "index": 0,
       "mode": 2,
       "en": "So not only did she use decorations that were against\nthe rules,{E108:0008} she didn't even make any real sweets...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мало того что украшения не по правилам,{E108:0008}\nтак и настоящих сластей она не делала...",
+      "status": "translated"
     },
     {
       "id": "logic02_05.bytes|05000E10|1",
@@ -1839,8 +1839,8 @@
       "index": 1,
       "mode": 2,
       "en": "Ms. Scone made a mockery of the rules.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Сдобина посмеялась над правилами.",
+      "status": "translated"
     },
     {
       "id": "logic02_05.bytes|05000E10|2",
@@ -1849,8 +1849,8 @@
       "index": 2,
       "mode": 3,
       "en": "Yeah...{E108:0010} Guess she's not gonna get crowned \"World's\nGreatest\" now...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага...{E108:0010} Звания «лучшей в мире» ей теперь\nне видать...",
+      "status": "translated"
     },
     {
       "id": "logic02_05.bytes|05000E10|3",
@@ -1859,8 +1859,8 @@
       "index": 3,
       "mode": 2,
       "en": "And why's it so warm in here?{E108:0010}\n{E107:0001}{E1D1}Do you think it's got something to do with all this?",
-      "ru": "",
-      "status": "pending"
+      "ru": "И почему тут так тепло?{E108:0010}\n{E107:0001}{E1D1}Думаете, это как-то со всем этим связано?",
+      "status": "translated"
     },
     {
       "id": "logic02_05.bytes|05000E10|4",
@@ -1869,8 +1869,8 @@
       "index": 4,
       "mode": 3,
       "en": "Fake Confections added\nto the Court Record.{E106}{E1CF}{E12F:00050006}{E100:0000}{E101:00050005}{E107:0002}That's a good question.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В досье добавлено:\n«Поддельные сласти».{E106}{E1CF}{E12F:00050006}{E100:0000}{E101:00050005}{E107:0002}Хороший вопрос.",
+      "status": "translated"
     },
     {
       "id": "logic02_05.bytes|05000E10|5",
@@ -1879,8 +1879,8 @@
       "index": 5,
       "mode": 2,
       "en": "I think we'd better go ask Ms. Scone herself.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пожалуй, лучше спросить у самой мисс Сдобиной.",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|0",
@@ -1889,8 +1889,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ms. Scone appears to lack basic knowledge about how\nconfectionery is created.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Сдобиной, похоже, не хватает азов\nкондитерского дела.",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|1",
@@ -1899,8 +1899,8 @@
       "index": 1,
       "mode": 2,
       "en": "And she says that she snuck into another entrant's\nroom for \"research\" purposes...",
-      "ru": "",
-      "status": "pending"
+      "ru": "И, по её словам, она пробралась в чужую комнату\n«поизучать»...",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|2",
@@ -1909,8 +1909,8 @@
       "index": 2,
       "mode": 2,
       "en": "Hardly the actions of a world-class confectioner\ncompeting for a major prize.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не похоже на поступки кондитера мирового\nуровня, борющегося за главный приз.",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|3",
@@ -1919,8 +1919,8 @@
       "index": 3,
       "mode": 3,
       "en": "Yeah...{E108:0008} Not how I'd picture a top pro acting.{E108:0010}\n{E107:0002}Does she maybe just lack a little confidence, or...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага...{E108:0008} Не так я представляю себе мастера.{E108:0010}\n{E107:0002}Может, ей просто уверенности не хватает?",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|4",
@@ -1929,8 +1929,8 @@
       "index": 4,
       "mode": 2,
       "en": "(Or is she not actually a confectioner at all...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Или она вовсе не кондитер...?)",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|5",
@@ -1939,8 +1939,8 @@
       "index": 5,
       "mode": 2,
       "en": "Perhaps she had another agenda altogether.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Возможно, у неё была совсем другая цель.",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|6",
@@ -1949,8 +1949,8 @@
       "index": 6,
       "mode": 2,
       "en": "...After all,{E108:0008} we only have her word for it that she went\ninto that room to do some \"research\".",
-      "ru": "",
-      "status": "pending"
+      "ru": "...В конце концов,{E108:0008} что она полезла туда\n«поизучать», мы знаем только с её слов.",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|7",
@@ -1959,8 +1959,8 @@
       "index": 7,
       "mode": 2,
       "en": "Wait,{E108:0008} you mean...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Погодите,{E108:0008} вы хотите сказать...",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|8",
@@ -1969,8 +1969,8 @@
       "index": 8,
       "mode": 2,
       "en": "Maybe she went in there to commit a murder?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Может, она пошла туда убивать?",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|9",
@@ -1979,8 +1979,8 @@
       "index": 9,
       "mode": 2,
       "en": "There's no way of saying so for certain just yet.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пока об этом нельзя сказать наверняка.",
+      "status": "translated"
     },
     {
       "id": "logic02_06.bytes|05000E90|10",
@@ -1989,8 +1989,8 @@
       "index": 10,
       "mode": 2,
       "en": "(But she is hiding something,{E108:0008} that much I'm certain\nof...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но что-то она скрывает —{E108:0008} в этом\nя уверен...)",
+      "status": "translated"
     },
     {
       "id": "logic02_07.bytes|05000F10|0",
@@ -1999,8 +1999,8 @@
       "index": 0,
       "mode": 2,
       "en": "(Mr. Frost's blood went missing from the crime\nscene...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Кровь мистера Морозова пропала с места\nпреступления...)",
+      "status": "translated"
     },
     {
       "id": "logic02_07.bytes|05000F10|1",
@@ -2009,8 +2009,8 @@
       "index": 1,
       "mode": 2,
       "en": "(But traces of it showed up in the fountain.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Зато следы её нашлись в фонтане.)",
+      "status": "translated"
     },
     {
       "id": "logic02_07.bytes|05000F10|2",
@@ -2019,8 +2019,8 @@
       "index": 2,
       "mode": 2,
       "en": "(Why go to the trouble of removing the blood from the\nscene after the body had been discovered?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Зачем понадобилось убирать кровь с места\nпреступления уже после того, как нашли тело?)",
+      "status": "translated"
     },
     {
       "id": "logic02_07.bytes|05000F10|3",
@@ -2029,8 +2029,8 @@
       "index": 3,
       "mode": 2,
       "en": "(And why only the blood?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(И почему только кровь?)",
+      "status": "translated"
     },
     {
       "id": "logic02_07.bytes|05000F10|4",
@@ -2039,8 +2039,8 @@
       "index": 4,
       "mode": 2,
       "en": "(Surely the body would've also been in the way?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Тело ведь тоже должно было мешать?)",
+      "status": "translated"
     },
     {
       "id": "logic02_07.bytes|05000F10|5",
@@ -2049,8 +2049,8 @@
       "index": 5,
       "mode": 3,
       "en": "(Wait...{E108:0010} {E107:0002}{E284}Could someone have {E043}moved the body aside{E042} to\nget to the blood?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Постойте...{E108:0010} {E107:0002}{E284}А не {E043}отодвинули ли тело{E042},\nчтобы добраться до крови?)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|0",
@@ -2059,8 +2059,8 @@
       "index": 0,
       "mode": 2,
       "en": "(So the body might have been moved aside...{E108:0018} Or even\nremoved from the scene of the crime entirely...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Значит, тело могли отодвинуть...{E108:0018} А то и вовсе\nунести с места преступления...)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|1",
@@ -2069,8 +2069,8 @@
       "index": 1,
       "mode": 2,
       "en": "(After all,{E108:0008} as far as we know,{E108:0008} {E188:00300000}{E1D5}there's still no autopsy\nreport.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(В конце концов,{E108:0008} насколько мы знаем,{E108:0008} {E188:00300000}{E1D5}заключения\nвскрытия до сих пор нет.)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|2",
@@ -2079,8 +2079,8 @@
       "index": 2,
       "mode": 2,
       "en": "(We've learned plenty about the murder weapon and\nthe suspect,{E108:0008} {E1D1}but very little about the body itself.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Об орудии убийства и подозреваемой мы узнали\nмного,{E108:0008} {E1D1}а о самом теле — почти ничего.)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|3",
@@ -2089,8 +2089,8 @@
       "index": 3,
       "mode": 2,
       "en": "(Our assumption thus far has been that {E041}the body had\nbeen recovered by the forensics team{E042}...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(До сих пор мы исходили из того, что {E041}тело\nзабрали криминалисты{E042}...)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|4",
@@ -2099,8 +2099,8 @@
       "index": 4,
       "mode": 2,
       "en": "(But what if that {E041}assumption{E042} is false...!?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А что, если это {E041}допущение{E042} неверно...!?)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|5",
@@ -2109,8 +2109,8 @@
       "index": 5,
       "mode": 2,
       "en": "(What if Mr. von Karma wouldn't show Detective Badd\nthe autopsy report out of something other than spite?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Что, если фон Карма не показал детективу Бадду\nзаключение вскрытия вовсе не назло?)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|6",
@@ -2119,8 +2119,8 @@
       "index": 6,
       "mode": 2,
       "en": "(What if we've been thinking about this{E108:0008} {E285}{E12F:00050006}{E041}the wrong way\naround{E042} {E172:003C0001}all along!?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Что, если мы всё это время{E108:0008} {E285}{E12F:00050006}{E041}глядели на это\nне с той стороны{E042}{E172:003C0001}!?)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|7",
@@ -2129,8 +2129,8 @@
       "index": 7,
       "mode": 2,
       "en": "(The question isn't{E108:0008} {E1D1}{E041}why did Mr. von Karma hold back\ninformation about the body?{E042})",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Вопрос не в том,{E108:0008} {E1D1}{E041}почему фон Карма утаил\nсведения о теле{E042}.)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|8",
@@ -2139,8 +2139,8 @@
       "index": 8,
       "mode": 2,
       "en": "(It's{E108:0008} {E1D5}{E041}did Mr. von Karma even have any information\nabout the body in the first place?{E042})",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А в том,{E108:0008} {E1D5}{E041}были ли у фон Кармы сведения\nо теле вообще{E042}.)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|9",
@@ -2149,8 +2149,8 @@
       "index": 9,
       "mode": 2,
       "en": "(...How do things look from that angle?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Как всё выглядит с этой стороны?)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|10",
@@ -2159,8 +2159,8 @@
       "index": 10,
       "mode": 2,
       "en": "(Perhaps the body hadn't been removed by the police\nin order to carry out an autopsy.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Возможно, тело унесла вовсе не полиция\nи вовсе не ради вскрытия.)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|11",
@@ -2169,8 +2169,8 @@
       "index": 11,
       "mode": 1,
       "en": "(Perhaps it had already been removed and hidden\naway by the culprit before their arrival!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Возможно, его унёс и спрятал преступник\nещё до их приезда!)",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|12",
@@ -2179,8 +2179,8 @@
       "index": 12,
       "mode": 3,
       "en": "Um,{E108:0008} Mr. E...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э,{E108:0008} мистер Э...?",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|13",
@@ -2189,8 +2189,8 @@
       "index": 13,
       "mode": 2,
       "en": "...We've both heard {E1D5}the rumors about Mr. von Karma's\nquestionable methods.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Мы оба слышали {E1D5}слухи о сомнительных\nметодах фон Кармы.",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|14",
@@ -2199,8 +2199,8 @@
       "index": 14,
       "mode": 2,
       "en": "Fabricated witness statements,{E108:0008} shady deals...{E108:0010} forged\nevidence, even.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Подложные показания,{E108:0008} тёмные сделки...{E108:0010} даже\nподделка улик.",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|15",
@@ -2209,8 +2209,8 @@
       "index": 15,
       "mode": 2,
       "en": "Sure.{E108:0010} {E107:0001}{E188:00310000}{E1D1}Everybody's heard of that stuff.{E108:001E}\n{E107:0002}{E12F:001E0007}But...{E108:0010} {E1D1}what's that got to do with us right now?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну да.{E108:0010} {E107:0001}{E188:00310000}{E1D1}Об этом все слышали.{E108:001E}\n{E107:0002}{E12F:001E0007}Но...{E108:0010} {E1D1}при чём тут мы сейчас?",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|16",
@@ -2219,8 +2219,8 @@
       "index": 16,
       "mode": 2,
       "en": "I would never judge a person on the basis of rumors\nalone.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я никогда не стал бы судить о человеке\nпо одним лишь слухам.",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|17",
@@ -2229,8 +2229,8 @@
       "index": 17,
       "mode": 2,
       "en": "Even Mr. von Karma.{E108:0010} I've tried my best not to let my\npreconceptions color our interactions with him.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Даже о фон Карме.{E108:0010} Я старался не давать\nпредубеждениям влиять на разговоры с ним.",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|18",
@@ -2239,8 +2239,8 @@
       "index": 18,
       "mode": 3,
       "en": "Nonetheless...{E108:0010} {E107:0002}it appears he may indeed be willing {E1D5}{E1D1}to\ntwist the truth to his own ends.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И всё же...{E108:0010} {E107:0002}похоже, он и правда готов {E1D5}{E1D1}выворачивать\nправду в свою пользу.",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|19",
@@ -2249,8 +2249,8 @@
       "index": 19,
       "mode": 3,
       "en": "T-Twist the truth?{E108:001E}\nYou mean...{E108:0010} {E12F:001E0001}{E280}{E107:0001}he's been playing dirty!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "В-Выворачивать правду?{E108:001E}\nТо есть...{E108:0010} {E12F:001E0001}{E280}{E107:0001}он играет нечестно!?",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|20",
@@ -2259,8 +2259,8 @@
       "index": 20,
       "mode": 2,
       "en": "...I fear he might have been,{E108:0010} {E107:0003}and still is.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Боюсь, что играл{E108:0010} {E107:0003}и играет.",
+      "status": "translated"
     },
     {
       "id": "logic02_08.bytes|05000F90|21",
@@ -2269,8 +2269,8 @@
       "index": 21,
       "mode": 1,
       "en": "(And I'm not about to let him get away with it!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(И спускать ему это я не намерен!)",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001010|0",
@@ -2279,8 +2279,8 @@
       "index": 0,
       "mode": 2,
       "en": "I suspect the difference in aroma we noticed is due to\nthe teapots having been switched.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Подозреваю, что разница в аромате — от того,\nчто чайники подменили.",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001010|1",
@@ -2299,8 +2299,8 @@
       "index": 2,
       "mode": 2,
       "en": "I can't see what else it could have been.{E108:0010}\nThe tea itself hadn't changed.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не вижу другого объяснения.{E108:0010}\nСам чай остался прежним.",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001010|3",
@@ -2309,8 +2309,8 @@
       "index": 3,
       "mode": 2,
       "en": "...Why don't we ask Ms. Bound,{E108:0008} just to be sure?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Спросим у мисс Долговой,{E108:0008} для верности?",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001014|0",
@@ -2319,8 +2319,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ms. Bound.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Долгова.",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001014|1",
@@ -2329,8 +2329,8 @@
       "index": 1,
       "mode": 2,
       "en": "The difference in aroma we noticed --{E108:0008} do you think it\ncould have been because of the different teapot?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Та разница в аромате —{E108:0008} не могла ли она быть\nиз-за другого чайника?",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001014|2",
@@ -2339,8 +2339,8 @@
       "index": 2,
       "mode": 3,
       "en": "I...{E108:0018} {E107:0002}I suppose so.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0018} {E107:0002}Пожалуй, да.",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001014|3",
@@ -2349,8 +2349,8 @@
       "index": 3,
       "mode": 2,
       "en": "My cup just now had a subtle minty scent.{E108:0010}\nRather like Uva tea...",
-      "ru": "",
-      "status": "pending"
+      "ru": "В моей чашке был лёгкий мятный запах.{E108:0010}\nПохоже на чай ува...",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001014|4",
@@ -2359,8 +2359,8 @@
       "index": 4,
       "mode": 1,
       "en": "Oh!{E108:0018} {E107:0002}I just remembered!{E108:0010} I made some peppermint tea\nin that pot only yesterday.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах!{E108:0018} {E107:0002}Вспомнила!{E108:0010} Я вчера заваривала в этом\nчайнике мятный чай.",
+      "status": "translated"
     },
     {
       "id": "logic02_09.bytes|05001014|5",
@@ -2369,8 +2369,8 @@
       "index": 5,
       "mode": 2,
       "en": "That must be where the minty aroma is coming from.{E106}{E198:00020022}{E100:0001}{E1AE}{E12D:0003087E}{E113:001C00000002}{E112:001C}{E111:000000010000000000000002}{E112:0000}{E100:0000}{E101:00000000}{E107:0003}(...Could that really be it?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот откуда, должно быть, мятный аромат.{E106}{E198:00020022}{E100:0001}{E1AE}{E12D:0003087E}{E113:001C00000002}{E112:001C}{E111:000000010000000000000002}{E112:0000}{E100:0000}{E101:00000000}{E107:0003}(...Неужели и правда так?)",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|0",
@@ -2379,8 +2379,8 @@
       "index": 0,
       "mode": 2,
       "en": "The tea from the teapot Larry switched in from under\nthe cart smelled faintly of mint.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чай из чайника, который Ларри подменил\nиз-под тележки, слабо пах мятой.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|1",
@@ -2389,8 +2389,8 @@
       "index": 1,
       "mode": 2,
       "en": "Right.{E108:0010} Ms. Bound said she used that pot to make\npeppermint tea yesterday.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага.{E108:0010} Мисс Долгова сказала, что вчера заваривала\nв нём мятный чай.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|2",
@@ -2399,8 +2399,8 @@
       "index": 2,
       "mode": 3,
       "en": "Yes...{E108:0010} {E107:0002}But there's something else that's been troubling\nme.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да...{E108:0010} {E107:0002}Но меня беспокоит кое-что ещё.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|3",
@@ -2409,8 +2409,8 @@
       "index": 3,
       "mode": 2,
       "en": "Ms. Bound seemed more taken aback by the switching\nof the teapots than the breaking of one.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Долгову подмена чайников поразила\nсильнее, чем то, что один разбился.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|4",
@@ -2419,8 +2419,8 @@
       "index": 4,
       "mode": 2,
       "en": "...You're right!{E108:0010} {E107:0001}{E280}You'd expect it to be the other way\naround!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...А ведь правда!{E108:0010} {E107:0001}{E280}Должно было быть\nнаоборот!",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|5",
@@ -2429,8 +2429,8 @@
       "index": 5,
       "mode": 2,
       "en": "I suspect she might have been deliberately hiding the\nteapot underneath the cart.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Подозреваю, что чайник под тележкой она\nпрятала нарочно.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|6",
@@ -2449,8 +2449,8 @@
       "index": 7,
       "mode": 2,
       "en": "One of Ubiquium's key characteristics is its {E041}minty\nfragrance{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Одно из главных свойств Убиквиума — {E041}мятный\nаромат{E040}.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|8",
@@ -2459,8 +2459,8 @@
       "index": 8,
       "mode": 2,
       "en": "So what if she had been hiding some in that teapot?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что, если она прятала его в том чайнике?",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|9",
@@ -2469,8 +2469,8 @@
       "index": 9,
       "mode": 1,
       "en": "Whaaaaaat!?{E108:0018}\n{E1D1}In the teapot!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что-о-о-о!?{E108:0018}\n{E1D1}В чайнике!?",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|05001090|10",
@@ -2479,8 +2479,8 @@
       "index": 10,
       "mode": 2,
       "en": "It's simply a possibility,{E108:0008} but one worth investigating,\nI believe.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это лишь предположение,{E108:0008} но его, думаю,\nстоит проверить.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109B|0",
@@ -2489,8 +2489,8 @@
       "index": 0,
       "mode": 2,
       "en": "Mr. Winner,{E108:0010} any luck finding that Ubiquium?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Победин,{E108:0010} Убиквиум нашёлся?",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109B|1",
@@ -2499,8 +2499,8 @@
       "index": 1,
       "mode": 2,
       "en": "Huh?{E108:0020} {E107:0003}Erm...{E108:0010} {E107:0001}{E150:000A0005}{E188:00340000}{E1D1}Oh!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0020} {E107:0003}Э-э...{E108:0010} {E107:0001}{E150:000A0005}{E188:00340000}{E1D1}А!",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|0",
@@ -2509,8 +2509,8 @@
       "index": 0,
       "mode": 2,
       "en": "My people are searching the entire gallery,{E108:0008} but they\nhaven't found anything yet.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мои люди обыскивают всю галерею,{E108:0008} но пока\nничего не нашли.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|1",
@@ -2519,8 +2519,8 @@
       "index": 1,
       "mode": 2,
       "en": "And what about you?{E108:0018} {E12F:00090005}Don't tell me you know where it\ncame from!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А вы?{E108:0018} {E12F:00090005}Только не говорите, что знаете,\nоткуда он взялся!",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|2",
@@ -2529,8 +2529,8 @@
       "index": 2,
       "mode": 3,
       "en": "...I may have an idea.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Есть догадка.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|3",
@@ -2539,8 +2539,8 @@
       "index": 3,
       "mode": 2,
       "en": "Ha!{E108:0010} I knew it!{E108:0010} If I can't find it,{E108:0008} there's no chance a\nuseless--{E108:0020} {E188:00300000}{E1D5}{E12F:00090002}What?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ха!{E108:0010} Так и знал!{E108:0010} Раз уж я не нашёл,{E108:0008} то куда\nкакому-то бездарю--{E108:0020} {E188:00300000}{E1D5}{E12F:00090002}Что?",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|4",
@@ -2549,8 +2549,8 @@
       "index": 4,
       "mode": 1,
       "en": "You DO know where it came from!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы что, ЗНАЕТЕ, откуда он!?",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|5",
@@ -2569,8 +2569,8 @@
       "index": 6,
       "mode": 3,
       "en": "Wh...{E108:0010} {E107:0001}{E280}Where?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Отк...{E108:0010} {E107:0001}{E280}Откуда?",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|7",
@@ -2579,8 +2579,8 @@
       "index": 7,
       "mode": 2,
       "en": "...Ms. Bound's teapot.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Из чайника мисс Долговой.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|8",
@@ -2589,8 +2589,8 @@
       "index": 8,
       "mode": 2,
       "en": "Wow!{E108:0018} Nice piece!{E108:0010} {E1D1}I like it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты!{E108:0018} Славная вещица!{E108:0010} {E1D1}Мне нравится!",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|9",
@@ -2599,8 +2599,8 @@
       "index": 9,
       "mode": 2,
       "en": "...Yeah,{E108:0008} this looks like a fitting prize for a\nnatural-born Winner.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Да,{E108:0008} вполне достойный приз для прирождённого\nпобедителя.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|10",
@@ -2609,8 +2609,8 @@
       "index": 10,
       "mode": 1,
       "en": "It's not a prize!{E108:0018} {E107:0002}It's a vital piece of evidence!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это не приз!{E108:0018} {E107:0002}Это важнейшая улика!",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|0500109D|11",
@@ -2619,8 +2619,8 @@
       "index": 11,
       "mode": 2,
       "en": "Oh,{E108:0008} it's just evidence?{E108:0010} Then I'll have one of the\nforensics people check it out.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А,{E108:0008} всего лишь улика?{E108:0010} Тогда пусть криминалисты\nеё и проверят.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|0",
@@ -2629,8 +2629,8 @@
       "index": 0,
       "mode": 3,
       "en": "Mr. Edgeworth...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Эджворт...",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|1",
@@ -2639,8 +2639,8 @@
       "index": 1,
       "mode": 2,
       "en": "Is there some sort of problem with my teapot?",
-      "ru": "",
-      "status": "pending"
+      "ru": "С моим чайником что-то не так?",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|2",
@@ -2649,8 +2649,8 @@
       "index": 2,
       "mode": 2,
       "en": "Possibly.{E108:0010} The minty fragrance we noticed coming from\nit...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Возможно.{E108:0010} Тот мятный аромат, что мы от него\nуловили...",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|3",
@@ -2659,8 +2659,8 @@
       "index": 3,
       "mode": 2,
       "en": "...I think it just might be the scent of one of the\nchemicals used to make the poison gas.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Думаю, это запах одного из веществ,\nиз которых составлен ядовитый газ.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|4",
@@ -2669,8 +2669,8 @@
       "index": 4,
       "mode": 3,
       "en": "But,{E108:0008} {E1D1}Mr. Edgeworth...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но,{E108:0008} {E1D1}мистер Эджворт...",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|5",
@@ -2679,8 +2679,8 @@
       "index": 5,
       "mode": 2,
       "en": "Surely you don't think I had anything to do with that?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Неужели вы думаете, что я к этому причастна?",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|6",
@@ -2689,8 +2689,8 @@
       "index": 6,
       "mode": 7,
       "en": ".........{E108:0010}{E107:0003}I'm afraid I do.",
-      "ru": "",
-      "status": "pending"
+      "ru": ".........{E108:0010}{E107:0003}Боюсь, что думаю.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|7",
@@ -2699,8 +2699,8 @@
       "index": 7,
       "mode": 2,
       "en": "The method used to create the gas would have\nrequired considerable preparation.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Способ, которым получили газ, требовал\nнемалой подготовки.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|8",
@@ -2709,8 +2709,8 @@
       "index": 8,
       "mode": 2,
       "en": "Nobody would have had the time or the opportunity to\nset that up{E108:0008} {E188:00300000}{E1D5}{E1D1}except you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ни времени, ни возможности устроить такое\nне было ни у кого,{E108:0008} {E188:00300000}{E1D5}{E1D1}кроме вас.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|9",
@@ -2719,8 +2719,8 @@
       "index": 9,
       "mode": 3,
       "en": "...That's not strictly true.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Это не совсем так.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|10",
@@ -2729,8 +2729,8 @@
       "index": 10,
       "mode": 2,
       "en": "It took around a week to get Zodiac Hall ready for the\nexhibition.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Зодиак-холл готовили к выставке около недели.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|11",
@@ -2739,8 +2739,8 @@
       "index": 11,
       "mode": 2,
       "en": "There were all kinds of people coming and going\nthrough here during that time.{E108:0010} Delicia, for one.",
-      "ru": "",
-      "status": "pending"
+      "ru": "За это время тут ходили самые разные люди.{E108:0010}\nХоть бы Делиция.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|12",
@@ -2749,8 +2749,8 @@
       "index": 12,
       "mode": 2,
       "en": "So you see,{E108:0008} I'm not the only person who could have set\nit up at all.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так что,{E108:0008} как видите, устроить это могла\nне я одна.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|13",
@@ -2759,8 +2759,8 @@
       "index": 13,
       "mode": 2,
       "en": "Ms. Scone is on our radar too, of course.{E108:0010}\nYou needn't worry about that.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Сдобина, разумеется, тоже у нас на виду.{E108:0010}\nНа этот счёт не беспокойтесь.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|14",
@@ -2769,8 +2769,8 @@
       "index": 14,
       "mode": 3,
       "en": "And besides...{E108:0018} {E107:0002}{E188:00300000}{E1D5}{E12F:001C0004}I wouldn't know the first thing about\nmaking poison gas.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И потом...{E108:0018} {E107:0002}{E188:00300000}{E1D5}{E12F:001C0004}я о том, как делают ядовитый газ,\nне имею ни малейшего понятия.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|15",
@@ -2779,8 +2779,8 @@
       "index": 15,
       "mode": 2,
       "en": "So even if you did find some Ubiquium in my teapot...",
-      "ru": "",
-      "status": "pending"
+      "ru": "И даже если вы найдёте Убиквиум в моём чайнике...",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|16",
@@ -2789,8 +2789,8 @@
       "index": 16,
       "mode": 2,
       "en": "...I wouldn't have had any idea what to do with it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...я всё равно не знала бы, что с ним делать.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|18",
@@ -2799,8 +2799,8 @@
       "index": 18,
       "mode": 2,
       "en": "But I suppose we should see what the test results say\nfirst.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но, пожалуй, сперва стоит дождаться\nрезультатов проверки.",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|19",
@@ -2809,8 +2809,8 @@
       "index": 19,
       "mode": 2,
       "en": "(Ms. Bound claims she {E041}doesn't know the first thing\nabout making poison gas{E042}.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Мисс Долгова уверяет, что {E041}не имеет понятия,\nкак делают ядовитый газ{E042}.)",
+      "status": "translated"
     },
     {
       "id": "logic02_10.bytes|050010A9|20",
@@ -2819,8 +2819,8 @@
       "index": 20,
       "mode": 2,
       "en": "(I need to find a way to prove that she's lying...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Нужно доказать, что она лжёт...)",
+      "status": "translated"
     },
     {
       "id": "logic02_11.bytes|05001110|0",
@@ -2829,8 +2829,8 @@
       "index": 0,
       "mode": 2,
       "en": "The ultimate cookbook contained instructions on how\nto create the poison gas.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В Заветной книге рецептов было описано,\nкак получить ядовитый газ.",
+      "status": "translated"
     },
     {
       "id": "logic02_11.bytes|05001110|1",
@@ -2839,8 +2839,8 @@
       "index": 1,
       "mode": 2,
       "en": "And the current owner of that book is none other than\nMs. Judy Bound...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А нынешняя владелица книги — не кто иная,\nкак мисс Джуди Долгова...",
+      "status": "translated"
     },
     {
       "id": "logic02_11.bytes|05001110|2",
@@ -2849,8 +2849,8 @@
       "index": 2,
       "mode": 1,
       "en": "No way!{E108:0018} {E107:0002}You mean...!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не может быть!{E108:0018} {E107:0002}Значит...!?",
+      "status": "translated"
     },
     {
       "id": "logic02_11.bytes|05001110|3",
@@ -2859,8 +2859,8 @@
       "index": 3,
       "mode": 2,
       "en": "I'm afraid I do.{E108:0010} Ms. Bound would have been perfectly\ncapable of setting up the gas trap.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Боюсь, что да.{E108:0010} Мисс Долгова вполне могла\nустроить эту газовую ловушку.",
+      "status": "translated"
     },
     {
       "id": "logic02_11.bytes|05001110|4",
@@ -2869,8 +2869,8 @@
       "index": 4,
       "mode": 3,
       "en": "Finally...{E108:0018} {E107:0001}{E1DA}we can prove that she's been lying to us!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Наконец-то...{E108:0018} {E107:0001}{E1DA}мы можем доказать,\nчто она нам лгала!",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|05001190|0",
@@ -2879,8 +2879,8 @@
       "index": 0,
       "mode": 2,
       "en": "Photographing the cookbook's contents would be the\nperfect way to steal its secrets undetected.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сфотографировать книгу — лучший способ\nукрасть её секреты незаметно.",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|05001190|1",
@@ -2889,8 +2889,8 @@
       "index": 1,
       "mode": 2,
       "en": "And what if Mr. Gusto...{E108:0008} did just that?{E108:0010} {E285}What if he used\nMr. Tangaroa's camera to photograph the book?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А если мистер Густо...{E108:0008} так и сделал?{E108:0010} {E285}Если он снял\nкнигу камерой мистера Тангароа?",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|05001190|2",
@@ -2899,8 +2899,8 @@
       "index": 2,
       "mode": 2,
       "en": "It'd be the perfect crime!{E108:0010} {E12F:00020008}{E107:0001}{E282}So much better than stealing\nit and getting chased by the cops!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Идеальное преступление!{E108:0010} {E12F:00020008}{E107:0001}{E282}Куда лучше, чем красть\nи удирать от полиции!",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|05001190|3",
@@ -2909,8 +2909,8 @@
       "index": 3,
       "mode": 3,
       "en": "A sneaky snapshot or twenty, huh?{E108:0010}\n{E107:0002}That could work...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тайком щёлкнуть кадров двадцать, а?{E108:0010}\n{E107:0002}А ведь может выйти...",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|05001190|4",
@@ -2919,8 +2919,8 @@
       "index": 4,
       "mode": 2,
       "en": "The only question is,{E108:0008} when would he have done it?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вопрос один:{E108:0008} когда он успел бы это сделать?",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|05001190|5",
@@ -2929,8 +2929,8 @@
       "index": 5,
       "mode": 3,
       "en": "Good question...{E108:0018}\n{E107:0002}What about {E1D1}during afternoon tea?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хороший вопрос...{E108:0018}\n{E107:0002}А если {E1D1}за послеобеденным чаем?",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|05001190|6",
@@ -2939,8 +2939,8 @@
       "index": 6,
       "mode": 2,
       "en": "Didn't Delicia say that Gusto and Frost had {E043}missed out\non the little tea party they had{E040}?{E106}{E198:0002002C}{E100:0001}{E1AE}{E12D:00030887}{E12F:00000001}{E112:0000}{E100:0000}{E101:00000000}{E107:0002}(Which brings me to the next question:{E108:0010} When do we\nknow for certain that Mr. Frost was still alive...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Делиция же говорила: Густо и Морозов {E043}пропустили\nих чаепитие{E040}?{E106}{E198:0002002C}{E100:0001}{E1AE}{E12D:00030887}{E12F:00000001}{E112:0000}{E100:0000}{E101:00000000}{E107:0002}(И тут же следующий вопрос:{E108:0010} когда мы\nточно знаем, что Морозов был ещё жив...?)",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|05001198|0",
@@ -2999,8 +2999,8 @@
       "index": 0,
       "mode": 2,
       "en": "(Mr. Frost had kept to himself inside his room after the\ncontest had started.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(После начала конкурса мистер Морозов\nне выходил из своей комнаты.)",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|0500119D|1",
@@ -3009,8 +3009,8 @@
       "index": 1,
       "mode": 2,
       "en": "(But he was gone by the time Ms. Scone snuck into it\nto sample his work.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но когда мисс Сдобина пробралась туда\nпопробовать его работу, его уже не было.)",
+      "status": "translated"
     },
     {
       "id": "logic02_12.bytes|0500119D|2",
@@ -3019,8 +3019,8 @@
       "index": 2,
       "mode": 2,
       "en": "(Meaning there's a good chance he was murdered\n{E1D2}before the end of afternoon tea.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Значит, весьма вероятно, что его убили\n{E1D2}до конца послеобеденного чая.)",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|0",
@@ -3029,8 +3029,8 @@
       "index": 0,
       "mode": 2,
       "en": "...Mr. Gusto.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Мистер Густо.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|1",
@@ -3039,8 +3039,8 @@
       "index": 1,
       "mode": 2,
       "en": "You and Mr. Frost conspired to create works for the\ncontest together, did you not?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы с мистером Морозовым сговорились делать\nработы для конкурса вместе, верно?",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|2",
@@ -3049,8 +3049,8 @@
       "index": 2,
       "mode": 3,
       "en": "Huh...{E108:0018} {E107:0002}So you know my little secret.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хах...{E108:0018} {E107:0002}Значит, знаете мой секрет.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|3",
@@ -3059,8 +3059,8 @@
       "index": 3,
       "mode": 2,
       "en": "Mr. Fender was kind enough to inform me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мне любезно сообщил мистер Защитин.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|4",
@@ -3069,8 +3069,8 @@
       "index": 4,
       "mode": 2,
       "en": "Mr. Frost was in charge of the designs,{E108:0008} while you were\nin charge of the flavor.{E108:0010} Is that correct?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Морозов отвечал за замысел,{E108:0008} а вы —\nза вкус.{E108:0010} Верно?",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|5",
@@ -3079,8 +3079,8 @@
       "index": 5,
       "mode": 3,
       "en": "Hngh...{E108:0010} What can I say?{E108:0010} {E107:0002}I still had a long way to travel\non the road to becoming a master confectioner.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хнгх...{E108:0010} Что тут скажешь?{E108:0010} {E107:0002}Мне было ещё далеко\nдо мастера. Путь длинный.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|6",
@@ -3089,8 +3089,8 @@
       "index": 6,
       "mode": 2,
       "en": "But you only collaborated up through the semifinal.{E108:0010}\nSomething changed after that.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но вместе вы работали только до полуфинала.{E108:0010}\nПотом что-то изменилось.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|7",
@@ -3099,8 +3099,8 @@
       "index": 7,
       "mode": 2,
       "en": "We both wanted to show what we could do.{E108:0010}\nShow that we were better than Tangaroa.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Оба хотели показать, на что способны.{E108:0010}\nЧто мы сильнее Тангароа.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|8",
@@ -3109,8 +3109,8 @@
       "index": 8,
       "mode": 1,
       "en": "Then why did you help Mr. Frost with his entry for\nthe final!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тогда почему вы помогали мистеру Морозову\nс работой на финал!?",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|9",
@@ -3119,8 +3119,8 @@
       "index": 9,
       "mode": 3,
       "en": "Nrngh...{E108:0010} {E107:0002}What grounds do you have to say that?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нрнгх...{E108:0010} {E107:0002}На каком основании?",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|10",
@@ -3129,8 +3129,8 @@
       "index": 10,
       "mode": 2,
       "en": "Your own statement,{E108:0010} made to Mr. von Karma eighteen\nyears ago.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На вашем же показании,{E108:0010} данном фон Карме\nвосемнадцать лет назад.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001210|11",
@@ -3139,8 +3139,8 @@
       "index": 11,
       "mode": 2,
       "en": "You told him that you had been working together right\nup until the day before the final.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы сказали ему, что работали вместе\nвплоть до дня перед финалом.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|0500121C|0",
@@ -3219,8 +3219,8 @@
       "index": 0,
       "mode": 2,
       "en": "So,{E108:0008} why didn't Mr. Frost help you in return,{E108:0010} hm?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так почему же{E108:0008} мистер Морозов\nне помог вам в ответ,{E108:0010} а?",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|1",
@@ -3229,8 +3229,8 @@
       "index": 1,
       "mode": 3,
       "en": "Hngh......",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хнгх......",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|2",
@@ -3239,8 +3239,8 @@
       "index": 2,
       "mode": 2,
       "en": "I submit that your relationship broke down for some\nreason...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Полагаю, ваши отношения по какой-то причине\nразладились...",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|3",
@@ -3249,8 +3249,8 @@
       "index": 3,
       "mode": 2,
       "en": "...and that that became the basis of your motive for\nmurder!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...и что именно это стало основой вашего\nмотива для убийства!",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|4",
@@ -3259,8 +3259,8 @@
       "index": 4,
       "mode": 1,
       "en": "Hrrrrrrrnnnghhhhh...!{E108:0018}\n{E107:0002}That's not how it was!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хррррррнгххххх...!{E108:0018}\n{E107:0002}Всё было не так!",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|5",
@@ -3269,8 +3269,8 @@
       "index": 5,
       "mode": 1,
       "en": "Sure!{E108:0010} {E107:0002}We stopped working together.{E108:0010}\n{E188:002F0000}{E1D1}But it was all perfectly friendly!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да!{E108:0010} {E107:0002}Работать вместе перестали.{E108:0010}\n{E188:002F0000}{E1D1}Но разошлись по-хорошему!",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|6",
@@ -3279,8 +3279,8 @@
       "index": 6,
       "mode": 2,
       "en": "You stopped working together...{E108:0008} in a friendly way?{E108:0018}\nKinda hard to imagine, but okay...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Перестали работать вместе...{E108:0008} по-хорошему?{E108:0018}\nВерится с трудом, ну ладно...",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|7",
@@ -3289,8 +3289,8 @@
       "index": 7,
       "mode": 2,
       "en": "Besides,{E108:0010} how do you think I did it, exactly?{E108:0010} {E188:00340000}{E1D1}You think\nI just strolled into Tangaroa's room and killed Frost?",
-      "ru": "",
-      "status": "pending"
+      "ru": "И потом,{E108:0010} как я, по-вашему, это сделал?{E108:0010} {E188:00340000}{E1D1}Зашёл\nк Тангароа в комнату и убил Морозова?",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|8",
@@ -3299,8 +3299,8 @@
       "index": 8,
       "mode": 2,
       "en": "I {E043}couldn't have killed the man{E040} while Tangaroa was in\nthere working on his chocolate pieces, could I!?{E106}{E198:0002002D}{E100:0001}{E1AE}{E12D:00030888}{E100:0000}{E12F:00200000}{E112:0020}{E101:00200020}{E107:0002}So you see?{E108:0010} It can't have been me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "{E043}Я не мог его убить{E040}, пока Тангароа был там\nи работал над шоколадом, так ведь!?{E106}{E198:0002002D}{E100:0001}{E1AE}{E12D:00030888}{E100:0000}{E12F:00200000}{E112:0020}{E101:00200020}{E107:0002}Вот видите?{E108:0010} Это не мог быть я.",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|9",
@@ -3309,8 +3309,8 @@
       "index": 9,
       "mode": 2,
       "en": "(...I wouldn't be so sure.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Я бы не был так уверен.)",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|10",
@@ -3319,8 +3319,8 @@
       "index": 10,
       "mode": 2,
       "en": "(There must be a window of time when Mr. Tangaroa\nwasn't in his room.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Должен быть промежуток, когда мистера Тангароа\nв комнате не было.)",
+      "status": "translated"
     },
     {
       "id": "logic02_13.bytes|05001223|11",
@@ -3329,8 +3329,8 @@
       "index": 11,
       "mode": 2,
       "en": "(And if I can prove that,{E108:0008} I can prove that Mr. Gusto\nhad the opportunity to kill Mr. Frost!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А доказав это,{E108:0008} я докажу, что у мистера Густо\nбыла возможность убить мистера Морозова!)",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|0",
@@ -3339,8 +3339,8 @@
       "index": 0,
       "mode": 2,
       "en": "(We can be sure that Mr. Frost was alive until the\nbeginning of afternoon tea.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Мы точно знаем, что мистер Морозов был жив\nдо начала послеобеденного чая.)",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|1",
@@ -3349,8 +3349,8 @@
       "index": 1,
       "mode": 2,
       "en": "(Making tea time the only window during which\nMr. Gusto could have killed him.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Значит, чаепитие — единственный промежуток,\nкогда мистер Густо мог его убить.)",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|2",
@@ -3359,8 +3359,8 @@
       "index": 2,
       "mode": 2,
       "en": "Are you satisfied with Mr. Gusto's story now,\nMr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Довольны ли вы теперь рассказом мистера Густо,\nмистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|3",
@@ -3369,8 +3369,8 @@
       "index": 3,
       "mode": 2,
       "en": "Heh...{E108:0010} Sadly, I'm afraid I'm still rather unsatisfied.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хех...{E108:0010} Увы, боюсь, что всё ещё не вполне.",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|4",
@@ -3379,8 +3379,8 @@
       "index": 4,
       "mode": 2,
       "en": "But things are finally starting to become clear.{E108:0010}\n{E188:00200000}{E107:0001}And the truth will soon come to light at last!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но всё наконец начинает проясняться.{E108:0010}\n{E188:00200000}{E107:0001}И правда скоро выйдет на свет!",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|5",
@@ -3389,8 +3389,8 @@
       "index": 5,
       "mode": 2,
       "en": "Do you mean to say that you have uncovered new\nevidence?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы хотите сказать, что нашли новые улики?",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|6",
@@ -3399,8 +3399,8 @@
       "index": 6,
       "mode": 2,
       "en": "Evidence?{E108:0010} {E107:0003}No.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Улики?{E108:0010} {E107:0003}Нет.",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|7",
@@ -3409,8 +3409,8 @@
       "index": 7,
       "mode": 2,
       "en": "I was hoping I might convince Mr. Gusto to open up to\nus about it instead.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я надеялся, что мистер Густо сам расскажет\nнам об этом.",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|8",
@@ -3419,8 +3419,8 @@
       "index": 8,
       "mode": 2,
       "en": "Oh!{E108:0018}\nIs it mind games time again!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "О!{E108:0018}\nОпять психологические игры!?",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|9",
@@ -3429,8 +3429,8 @@
       "index": 9,
       "mode": 2,
       "en": "It is.{E108:0018}\n{E12F:00000008}...Mr. Gusto,{E108:0008} I have a question for you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Опять.{E108:0018}\n{E12F:00000008}...Мистер Густо,{E108:0008} у меня к вам вопрос.",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|11",
@@ -3439,8 +3439,8 @@
       "index": 11,
       "mode": 1,
       "en": "I said,{E108:0010} I have a question for you!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я говорю,{E108:0010} у меня к вам вопрос!",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|12",
@@ -3449,8 +3449,8 @@
       "index": 12,
       "mode": 1,
       "en": "Nrrrraaaggghhh!{E108:0018}\n{E107:0002}Wh-What is it!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нрррраааггххх!{E108:0018}\n{E107:0002}Ч-Что такое!?",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|13",
@@ -3459,8 +3459,8 @@
       "index": 13,
       "mode": 2,
       "en": "You chose to make your entry for the final on your\nown.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Работу на финал вы решили делать\nсами.",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|14",
@@ -3469,8 +3469,8 @@
       "index": 14,
       "mode": 2,
       "en": "I told you.{E108:0008} I wanted to test myself.{E108:0010}\nI wanted to prove I was the best in the world.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я же сказал.{E108:0008} Хотел проверить себя.{E108:0010}\nДоказать, что я лучший в мире.",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|15",
@@ -3479,8 +3479,8 @@
       "index": 15,
       "mode": 2,
       "en": "If that were the case,{E108:0008} {E107:0001}{E1D1}then surely you wouldn't have\nchosen to cheat in the first place.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Если так,{E108:0008} {E107:0001}{E1D1}то вы бы вообще не стали\nмошенничать.",
+      "status": "translated"
     },
     {
       "id": "logic02_14.bytes|05001290|16",
@@ -3489,8 +3489,8 @@
       "index": 16,
       "mode": 2,
       "en": "So tell me, Mr. Gusto:{E108:0010} Why did you feel the need to\nteam up with Mr. Frost?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так объясните, мистер Густо:{E108:0010} зачем вам вообще\nпонадобился союз с мистером Морозовым?",
+      "status": "translated"
     },
     {
       "id": "sce2_c0_01.bytes|02000080|0",

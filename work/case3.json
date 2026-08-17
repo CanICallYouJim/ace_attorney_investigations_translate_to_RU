@@ -47149,8 +47149,8 @@
       "index": 0,
       "mode": 1,
       "en": "Hey, Edgey!{E108:0018} {E1D1}Get outta the way, will ya!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эй, Эджи!{E108:0018} {E1D1}Отойди-ка с дороги!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023DC|1",
@@ -47159,8 +47159,8 @@
       "index": 1,
       "mode": 2,
       "en": "Wh-{E108:0008}{E107:0001}What are you talking about, Larry?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ч-{E108:0008}{E107:0001}Что ты такое говоришь, Ларри?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023DC|2",
@@ -47169,8 +47169,8 @@
       "index": 2,
       "mode": 2,
       "en": "I'm trying to sketch the lovely Verity!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я рисую прелестную Верити!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023DC|3",
@@ -47179,8 +47179,8 @@
       "index": 3,
       "mode": 2,
       "en": "And I just know it's going to be a masterpiece!{E108:0010}\n{E107:0001}{E188:00360000}{E1D2}So quit getting in the way!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И я точно знаю: выйдет шедевр!{E108:0010}\n{E107:0001}{E188:00360000}{E1D2}Так что не мешай!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023DC|4",
@@ -47189,8 +47189,8 @@
       "index": 4,
       "mode": 2,
       "en": "Nice!{E108:0018}\nHow far did you get?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Круто!{E108:0018}\nИ сколько уже нарисовал?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023DC|5",
@@ -47199,8 +47199,8 @@
       "index": 5,
       "mode": 2,
       "en": "I just mapped out my composition,{E108:0008} {E107:0001}{E1D1}so I'm ready to go\nto work!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Только что наметил композицию,{E108:0008} {E107:0001}{E1D1}так что готов\nбраться за дело!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023DC|6",
@@ -47209,8 +47209,8 @@
       "index": 6,
       "mode": 2,
       "en": "Then surely it's a little early to be declaring it a\nmasterpiece.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тогда объявлять его шедевром, пожалуй,\nрановато.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023DC|7",
@@ -47219,8 +47219,8 @@
       "index": 7,
       "mode": 2,
       "en": "That's our Laurice!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Узнаю нашего Лориса!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|0",
@@ -47229,8 +47229,8 @@
       "index": 0,
       "mode": 2,
       "en": "I'm going to keep this simple, Larry.{E108:0010}\nYou're hiding something,{E108:0008} so just tell me what it is.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Скажу просто, Ларри.{E108:0010}\nТы что-то скрываешь,{E108:0008} так что говори что.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|3",
@@ -47239,8 +47239,8 @@
       "index": 3,
       "mode": 2,
       "en": "Whoa,{E108:0010} {E107:0001}{E188:00340000}{E1DA}quit it with the glare-off, you two!{E108:0010}\nIt's weird!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эй,{E108:0010} {E107:0001}{E188:00340000}{E1DA}хватит переглядываться, вы двое!{E108:0010}\nЭто жутко!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|4",
@@ -47249,8 +47249,8 @@
       "index": 4,
       "mode": 2,
       "en": "...Ah, c'mon, Kay.{E108:0010} {E1D2}You know me better than that!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Ну брось, Кей.{E108:0010} {E1D2}Ты же меня знаешь!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|5",
@@ -47259,8 +47259,8 @@
       "index": 5,
       "mode": 1,
       "en": "I wasn't staring!{E108:0018} I was struck by an idea for a picture!{E108:0018}\n{E107:0002}Now Edgey...{E108:0010} HE was glaring!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я не пялился!{E108:0018} Меня осенила мысль для картины!{E108:0018}\n{E107:0002}А вот Эджи...{E108:0010} ОН зыркал!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|6",
@@ -47269,8 +47269,8 @@
       "index": 6,
       "mode": 2,
       "en": "Yes,{E108:0008} and I'll keep glaring at you until you tell us what\nit is you're hiding!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да,{E108:0008} и буду зыркать, пока не скажешь,\nчто ты прячешь!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|7",
@@ -47279,8 +47279,8 @@
       "index": 7,
       "mode": 1,
       "en": "Quit it!{E108:0018} I already told you,{E108:0010} {E1D1}I'm not talking to you\nanymore!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Прекрати!{E108:0018} Я же сказал,{E108:0010} {E1D1}я с тобой больше\nне разговариваю!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|8",
@@ -47289,8 +47289,8 @@
       "index": 8,
       "mode": 2,
       "en": "...You're talking to me right now.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Ты со мной разговариваешь прямо сейчас.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|9",
@@ -47299,8 +47299,8 @@
       "index": 9,
       "mode": 1,
       "en": "I,{E108:0008} I mean...{E108:0010} {E188:00340000}{E1DA}From now on!{E108:0018} I'm not talking to you ever\nagain...{E108:0010} starting...{E108:0010} {E1D1}now!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я,{E108:0008} я в смысле...{E108:0010} {E188:00340000}{E1DA}с этой минуты!{E108:0018} Больше никогда\nне заговорю...{E108:0010} начиная...{E108:0010} {E1D1}с этого мига!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|10",
@@ -47309,8 +47309,8 @@
       "index": 10,
       "mode": 2,
       "en": "(...This is getting me nowhere.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Так я ничего не добьюсь.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023E4|11",
@@ -47319,8 +47319,8 @@
       "index": 11,
       "mode": 2,
       "en": "(I suppose I'll have to figure out what he's hiding first\nbefore I can get the whole truth out of him.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Видимо, сперва придётся понять, что он прячет,\nи только потом вытягивать из него правду.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F0|0",
@@ -47329,8 +47329,8 @@
       "index": 0,
       "mode": 2,
       "en": "What's the point of having a badge if you just keep it in\nyour pocket?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Какой прок от значка, если ты держишь его\nв кармане?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F0|1",
@@ -47339,8 +47339,8 @@
       "index": 1,
       "mode": 2,
       "en": "It proves my status as a qualified prosecutor.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он подтверждает мой статус прокурора.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F0|2",
@@ -47349,8 +47349,8 @@
       "index": 2,
       "mode": 2,
       "en": "Meh.{E108:0010} Stuff like that...{E108:0010} {E12F:000C0001}{E107:0001}{E188:00340000}{E1D1}just gets in the way of doing good\nwork.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пф.{E108:0010} Такие штуки...{E108:0010} {E12F:000C0001}{E107:0001}{E188:00340000}{E1D1}только мешают делать\nхорошую работу.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F0|3",
@@ -47359,8 +47359,8 @@
       "index": 3,
       "mode": 1,
       "en": "...!{E108:0018}\nWh-What is that supposed to mean...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...!{E108:0018}\nЧ-Что это значит...?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F0|4",
@@ -47369,8 +47369,8 @@
       "index": 4,
       "mode": 2,
       "en": "As in,{E108:0008} your official status doesn't mean a thing, man!{E108:0010}\n{E107:0001}It's about the person,{E108:0010} not the badge!",
-      "ru": "",
-      "status": "pending"
+      "ru": "В смысле,{E108:0008} твоё звание ничего не значит, старик!{E108:0010}\n{E107:0001}Дело в человеке,{E108:0010} а не в значке!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F0|5",
@@ -47379,8 +47379,8 @@
       "index": 5,
       "mode": 2,
       "en": "I mean,{E108:0008} look at me.{E108:0010} How many job titles have I had?{E108:0010}\nBut I'm still the same old me!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот,{E108:0008} глянь на меня.{E108:0010} Сколько у меня было мест?{E108:0010}\nА я всё тот же!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F0|6",
@@ -47389,8 +47389,8 @@
       "index": 6,
       "mode": 2,
       "en": "...Hmph.{E108:0010} Still the same old pain in the neck, too.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Хмф.{E108:0010} И всё та же заноза, что и был.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F0|7",
@@ -47399,8 +47399,8 @@
       "index": 7,
       "mode": 2,
       "en": "You just couldn't help yourself, could you!?{E108:0010}\n{E107:0001}{E12F:000C0004}{E283}Would it kill you to be nice just once in your life!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну не мог удержаться, да!?{E108:0010}\n{E107:0001}{E12F:000C0004}{E283}Тебя убудет хоть раз в жизни быть милым!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F8|0",
@@ -47409,8 +47409,8 @@
       "index": 0,
       "mode": 2,
       "en": "Whoa...{E108:0010} That's one terrifying picture!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ого...{E108:0010} Жуткая картинка!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F8|1",
@@ -47419,8 +47419,8 @@
       "index": 1,
       "mode": 1,
       "en": "You should know.{E108:0010} You drew it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кому знать, как не тебе.{E108:0010} Ты её и нарисовал!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F8|2",
@@ -47429,8 +47429,8 @@
       "index": 2,
       "mode": 2,
       "en": "...You did draw the scene accurately,{E108:0008} didn't you?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Ты ведь нарисовал сцену точно,{E108:0008} верно?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F8|3",
@@ -47439,8 +47439,8 @@
       "index": 3,
       "mode": 2,
       "en": "You bet I did!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё как точно!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F8|4",
@@ -47449,8 +47449,8 @@
       "index": 4,
       "mode": 2,
       "en": "A sight like that burns itself into your eyeballs!{E108:0010}\nI'll never forget it as long as I live!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Такое зрелище выжигается прямо в глазах!{E108:0010}\nВовек не забуду!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F8|5",
@@ -47459,8 +47459,8 @@
       "index": 5,
       "mode": 2,
       "en": "But it takes a rare talent to get something like that\ndown on paper exactly as it looked in real life!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но чтобы перенести такое на бумагу ровно так,\nкак оно было, нужен редкий талант!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023F8|6",
@@ -47469,8 +47469,8 @@
       "index": 6,
       "mode": 2,
       "en": "...You certainly have a rare talent for something.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Редкий талант к чему-то у тебя точно есть.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023FF|0",
@@ -47479,8 +47479,8 @@
       "index": 0,
       "mode": 3,
       "en": "Hoowee!{E108:0010} {E107:0002}This page's a real beauty, right?{E108:0010}\nI've really done my subjects justice here!",
-      "ru": "",
-      "status": "pending"
+      "ru": "У-ух!{E108:0010} {E107:0002}Красота же страница, а?{E108:0010}\nВот тут я моделям воздал по заслугам!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023FF|1",
@@ -47489,8 +47489,8 @@
       "index": 1,
       "mode": 2,
       "en": "Which one's your favorite?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А какая тебе больше всех?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023FF|2",
@@ -47499,8 +47499,8 @@
       "index": 2,
       "mode": 2,
       "en": "Oh,{E108:0010} {E188:00340000}{E1D1}{E107:0001}I really couldn't decide...{E108:0018}\n{E107:0002}{E1D1}They're all perfect in their own way!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ох,{E108:0010} {E188:00340000}{E1D1}{E107:0001}никак не выберу...{E108:0018}\n{E107:0002}{E1D1}Каждая хороша по-своему!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023FF|3",
@@ -47509,8 +47509,8 @@
       "index": 3,
       "mode": 2,
       "en": "...I'm sure you think all of your portraits are perfect,{E108:0008}\ndon't you?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Уверен, ты все свои портреты считаешь\nсовершенными,{E108:0008} верно?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023FF|4",
@@ -47519,8 +47519,8 @@
       "index": 4,
       "mode": 1,
       "en": "Of course not!{E108:0018}\n{E1D1}Not everybody's a suitable subject, you know!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот уж нет!{E108:0018}\n{E1D1}Не всякий годится в натурщики, знаешь ли!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023FF|5",
@@ -47529,8 +47529,8 @@
       "index": 5,
       "mode": 1,
       "en": "Take you, for example!{E108:0010} You're the dictionary definition\nof \"super hot mess\"!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Взять хоть тебя!{E108:0010} Ты — ходячее определение\nслова «недоразумение»!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020023FF|6",
@@ -47539,8 +47539,8 @@
       "index": 6,
       "mode": 1,
       "en": "(I don't resemble that description...{E108:0010} do I!?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Я ведь не подхожу под это описание...{E108:0010} правда!?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|0",
@@ -47549,8 +47549,8 @@
       "index": 0,
       "mode": 2,
       "en": "Judy gave me a chocolate earlier, you know.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А мне Джуди недавно дала шоколадку.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|1",
@@ -47559,8 +47559,8 @@
       "index": 1,
       "mode": 2,
       "en": "And the way she looked at me when she handed it\nover...{E108:0010} {E107:0001}{E188:00310000}{E1D1}My heart just melted!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И как она на меня посмотрела, когда\nдавала...{E108:0010} {E107:0001}{E188:00310000}{E1D1}Сердце просто растаяло!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|2",
@@ -47569,8 +47569,8 @@
       "index": 2,
       "mode": 2,
       "en": "...Well,{E108:0008} she gave us some chocolates, too.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Что ж,{E108:0008} нам она тоже дала шоколад.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|3",
@@ -47579,8 +47579,8 @@
       "index": 3,
       "mode": 1,
       "en": "Wh-What!?{E108:0018}\n{E1D1}Y-You've gotta be kidding me!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ч-Что!?{E108:0018}\n{E1D1}Т-Ты шутишь!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|4",
@@ -47589,8 +47589,8 @@
       "index": 4,
       "mode": 2,
       "en": "Ugh!{E108:0018}\n{E107:0001}{E1D1}Kill me now, why don't you!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А-а!{E108:0018}\n{E107:0001}{E1D1}Убейте меня сразу, что ли!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|5",
@@ -47599,8 +47599,8 @@
       "index": 5,
       "mode": 1,
       "en": "And then, I'll come back every Valentine's Day{E108:0010} {E1D2}and\nhaunt each and every happy couple!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А потом буду возвращаться каждый День святого\nВалентина{E108:0010} {E1D2}и являться всем счастливым парам!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|6",
@@ -47609,8 +47609,8 @@
       "index": 6,
       "mode": 2,
       "en": "Sh-Should we do something, Mr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Н-Надо что-то делать, мистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|7",
@@ -47619,8 +47619,8 @@
       "index": 7,
       "mode": 2,
       "en": "He'll be fine.{E108:0010} Much like melted chocolate,{E108:0008} a hot head\ncools eventually.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Обойдётся.{E108:0010} Как и растаявший шоколад,{E108:0008} горячая\nголова рано или поздно остывает.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002406|8",
@@ -47629,8 +47629,8 @@
       "index": 8,
       "mode": 2,
       "en": "And even he can't hold out until next Valentine's Day\nto enact his outlandish \"curse\", anyway.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да и до следующего Валентинова дня он свою\nдикую «кару» всё равно не дотерпит.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002410|0",
@@ -47639,8 +47639,8 @@
       "index": 0,
       "mode": 2,
       "en": "...Yeah!{E108:0010} That's it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Да!{E108:0010} Вот оно!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002410|1",
@@ -47649,8 +47649,8 @@
       "index": 1,
       "mode": 2,
       "en": "That's what I'll call my next picture book!{E108:0018}\n{E107:0001}\"Verity's Grand Gavelling Gala\"!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так я и назову следующую книжку с картинками!{E108:0018}\n{E107:0001}«Молоточное шествие Верити»!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002410|2",
@@ -47659,8 +47659,8 @@
       "index": 2,
       "mode": 2,
       "en": "A worthy sequel to \"Franzy's Whippity-Whip Trip\",{E108:0008}\nand another guaranteed bestselling blockbuster!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Достойное продолжение «Большого хлыстового\nпохода Франци»{E108:0008} — и снова верный бестселлер!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002410|3",
@@ -47669,8 +47669,8 @@
       "index": 3,
       "mode": 2,
       "en": "Larry!{E108:0010} {E107:0001}Could you please focus on the piece of evidence\nI'm showing you!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ларри!{E108:0010} {E107:0001}Будь добр, сосредоточься на улике,\nкоторую я тебе показываю!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002410|4",
@@ -47679,8 +47679,8 @@
       "index": 4,
       "mode": 2,
       "en": "Huh?{E108:0010}\nWere you saying something?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0010}\nТы что-то говорил?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002410|5",
@@ -47689,8 +47689,8 @@
       "index": 5,
       "mode": 2,
       "en": "Urngh...{E108:0010} Ignored by Larry of all people...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нгх...{E108:0010} Меня не слышит Ларри, надо же...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002416|0",
@@ -47699,8 +47699,8 @@
       "index": 0,
       "mode": 2,
       "en": "Come on, Larry.{E108:0010} {E1D1}What are you hiding?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну же, Ларри.{E108:0010} {E1D1}Что ты скрываешь?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002416|1",
@@ -47709,8 +47709,8 @@
       "index": 1,
       "mode": 2,
       "en": "Not saying.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не скажу.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002416|5",
@@ -47719,8 +47719,8 @@
       "index": 5,
       "mode": 2,
       "en": "Look, you two.{E108:0010} {E1D1}This no time for kids games.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Слушайте, вы двое.{E108:0010} {E1D1}Не время для детских игр.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002416|6",
@@ -47729,8 +47729,8 @@
       "index": 6,
       "mode": 3,
       "en": "Hmph...{E108:0018}\n{E107:0002}(Well, I certainly wasn't playing...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хмф...{E108:0018}\n{E107:0002}(Я-то уж точно не играл...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002416|7",
@@ -47739,8 +47739,8 @@
       "index": 7,
       "mode": 2,
       "en": "It's pretty clear Laurice isn't going to talk to you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ясно же, что Лорис с вами говорить не станет.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002416|8",
@@ -47749,8 +47749,8 @@
       "index": 8,
       "mode": 2,
       "en": "Oh, he'll talk.{E108:0010} Don't you worry about that...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Заговорит.{E108:0010} На этот счёт не волнуйся...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002416|9",
@@ -47759,8 +47759,8 @@
       "index": 9,
       "mode": 2,
       "en": "(I need to know what Larry is hiding.{E108:0010}\nAnd I think I might have an idea of what it is...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Мне нужно знать, что прячет Ларри.{E108:0010}\nИ, кажется, я догадываюсь что...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002416|10",
@@ -47769,8 +47769,8 @@
       "index": 10,
       "mode": 2,
       "en": "(Perhaps presenting him with the right piece of\nevidence will force him to come clean...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Возможно, нужная улика заставит его\nсознаться...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002421|0",
@@ -47779,8 +47779,8 @@
       "index": 0,
       "mode": 2,
       "en": "(I need to know what Larry is hiding.{E108:0010}\nPerhaps something around here can give me a clue.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Мне нужно знать, что прячет Ларри.{E108:0010}\nМожет, что-то здесь подскажет.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002421|1",
@@ -47789,8 +47789,8 @@
       "index": 1,
       "mode": 2,
       "en": "(I'd better take another look around the room.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Стоит ещё раз осмотреть зал.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|0",
@@ -47799,8 +47799,8 @@
       "index": 0,
       "mode": 2,
       "en": "Alright, Larry.{E108:0010} Enough is enough.{E108:0018}\n{E188:00340000}{E1DA}Now, confess!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Довольно, Ларри.{E108:0010} Хватит.{E108:0018}\n{E188:00340000}{E1DA}Признавайся!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|1",
@@ -47809,8 +47809,8 @@
       "index": 1,
       "mode": 3,
       "en": "Nnghhh...{E108:0018}\n{E107:0001}{E280}Is this any way to treat your best friend, Edgey?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нгх-х...{E108:0018}\n{E107:0001}{E280}Разве так обращаются с лучшим другом, Эджи?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|2",
@@ -47819,8 +47819,8 @@
       "index": 2,
       "mode": 3,
       "en": "Hmph.{E108:0010} {E107:0002}Is this any way for you treat yours?{E108:0010}\nBy lying to him?{E108:0010} Hiding things?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хмф.{E108:0010} {E107:0002}А ты со своим как обращаешься?{E108:0010}\nВрёшь ему?{E108:0010} Скрываешь?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|3",
@@ -47829,8 +47829,8 @@
       "index": 3,
       "mode": 1,
       "en": "I get the picture, already!{E108:0010} So stop glaring at me like\nthat!{E108:0018} {E1D1}I'll tell you everything, okay?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да понял я, понял!{E108:0010} Хватит на меня так\nзыркать!{E108:0018} {E1D1}Всё расскажу, ладно?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|4",
@@ -47839,8 +47839,8 @@
       "index": 4,
       "mode": 2,
       "en": "Earlier,{E108:0008} I, uh...{E108:0010} I thought Verity might like a cup of tea,{E108:0010}\nso I went to pour one for her...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тут я, э-э...{E108:0008} подумал,{E108:0010} что Верити не прочь чаю,{E108:0010}\nи пошёл наливать...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|5",
@@ -47849,8 +47849,8 @@
       "index": 5,
       "mode": 2,
       "en": "But I got distracted,{E108:0008} and my hand slipped,{E108:0008} and...{E108:0010}\n{E107:0003}{E1D1}SMASH!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но я отвлёкся,{E108:0008} рука дрогнула,{E108:0008} и...{E108:0010}\n{E107:0003}{E1D1}ДЗЫНЬ!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|6",
@@ -47859,8 +47859,8 @@
       "index": 6,
       "mode": 1,
       "en": "I broke the teapot!{E108:0010} A priceless work of art!{E108:0018}\nIt's in pieces because of meeeeeee!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я разбил чайник!{E108:0010} Бесценное произведение!{E108:0018}\nОн вдребезги из-за меня-а-а-а!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|7",
@@ -47869,8 +47869,8 @@
       "index": 7,
       "mode": 2,
       "en": "(...No words exist to describe how far away I saw this\ncoming from.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Нет слов, чтобы описать, за сколько вёрст\nя это предвидел.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|8",
@@ -47879,8 +47879,8 @@
       "index": 8,
       "mode": 2,
       "en": "Ouch...{E108:0010} You really messed up this time, Laurice.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой...{E108:0010} Ну ты и влип на этот раз, Лорис.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|9",
@@ -47889,8 +47889,8 @@
       "index": 9,
       "mode": 1,
       "en": "See, Edgey!?{E108:0010} Everyone's going to think less of me now!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот видишь, Эджи!?{E108:0010} Теперь все будут думать\nобо мне хуже!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|10",
@@ -47899,8 +47899,8 @@
       "index": 10,
       "mode": 3,
       "en": "I...{E108:0010} {E1D1}She...{E108:0018}\n{E107:0001}{E281}Judy's never going to forgive me for this!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0010} {E1D1}Она...{E108:0018}\n{E107:0001}{E281}Джуди мне этого никогда не простит!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002423|11",
@@ -47909,8 +47909,8 @@
       "index": 11,
       "mode": 2,
       "en": "...Crying to me won't do you any good.{E108:0010}\nI think you need to apologize to Ms. Bound.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Плакаться мне тут бесполезно.{E108:0010}\nИзвиниться нужно перед мисс Долговой.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200242F|0",
@@ -47919,8 +47919,8 @@
       "index": 0,
       "mode": 3,
       "en": "...My teapot?{E108:0010} {E107:0002}I...{E108:0010} I see.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Мой чайник?{E108:0010} {E107:0002}Я...{E108:0010} понимаю.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200242F|1",
@@ -47929,8 +47929,8 @@
       "index": 1,
       "mode": 1,
       "en": "I'm sorry, Judy!{E108:0018} I'm sooo, sooo sorry!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Прости, Джуди!{E108:0018} Мне та-а-ак, та-а-ак жаль!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200242F|2",
@@ -47939,8 +47939,8 @@
       "index": 2,
       "mode": 3,
       "en": "I,{E108:0008} I...{E108:0010} {E107:0002}I don't have any money, but...{E108:0010} {E107:0001}{E188:00340000}{E1D2}I'll paint your\nportrait!{E108:0018} I'll paint you fifty portraits!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я,{E108:0008} я...{E108:0010} {E107:0002}денег у меня нет, но...{E108:0010} {E107:0001}{E188:00340000}{E1D2}я напишу твой\nпортрет!{E108:0018} Пятьдесят портретов напишу!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002432|0",
@@ -47949,8 +47949,8 @@
       "index": 0,
       "mode": 2,
       "en": "Please, Mr. Deauxnim.{E108:0010} It's really me who should be\napologizing.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что вы, мистер Доним.{E108:0010} Это мне следует\nизвиняться.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002432|1",
@@ -47959,8 +47959,8 @@
       "index": 1,
       "mode": 2,
       "en": "How could I have failed to notice that there were\nbroken pieces of ceramics on the floor?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как я могла не заметить, что на полу\nлежат осколки?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002432|2",
@@ -47969,8 +47969,8 @@
       "index": 2,
       "mode": 2,
       "en": "Somebody could have been hurt.{E108:0010} {E1CB:008700000000}Here,{E108:0008} let me make\nsure that's safely disposed of.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кто-нибудь мог пораниться.{E108:0010} {E1CB:008700000000}Давайте,{E108:0008} я сама\nих уберу как следует.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|0",
@@ -47979,8 +47979,8 @@
       "index": 0,
       "mode": 2,
       "en": "...The teapot in question was designed by Artie Frost,\ncorrect?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Тот чайник ведь придумал Арти Морозов,\nверно?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|1",
@@ -47989,8 +47989,8 @@
       "index": 1,
       "mode": 2,
       "en": "I understand it was something you've long treasured.{E108:0010}\nYou must be upset...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Насколько я понял, вы им очень дорожили.{E108:0010}\nВам, должно быть, тяжело...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|2",
@@ -47999,8 +47999,8 @@
       "index": 2,
       "mode": 3,
       "en": "Oh,{E108:0008} I am...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах,{E108:0008} да...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|3",
@@ -48009,8 +48009,8 @@
       "index": 3,
       "mode": 2,
       "en": "But of course...{E108:0008} {E1D1}all things break eventually.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но что поделать...{E108:0008} {E1D1}всё рано или поздно бьётся.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|4",
@@ -48019,8 +48019,8 @@
       "index": 4,
       "mode": 2,
       "en": "And as luck would have it,{E108:0008} I have another identical\nteapot.{E108:0010} It's far from the end of the world.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И, по счастью,{E108:0008} у меня есть точно такой же\nвторой.{E108:0010} Это далеко не конец света.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|5",
@@ -48029,8 +48029,8 @@
       "index": 5,
       "mode": 3,
       "en": "(...Is she less attached to Mr. Frost's work than she\nused to be?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Неужели работы Морозова стали ей\nменее дороги?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|6",
@@ -48039,8 +48039,8 @@
       "index": 6,
       "mode": 2,
       "en": "I can't believe this, Judy!{E108:0010}\n{E107:0001}{E280}You're the sweetest,{E108:0010} the kindest--!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Джуди, ушам не верю!{E108:0010}\n{E107:0001}{E280}Ты самая милая,{E108:0010} самая добрая—!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|7",
@@ -48049,8 +48049,8 @@
       "index": 7,
       "mode": 2,
       "en": "...Ah.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...А.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|8",
@@ -48059,8 +48059,8 @@
       "index": 8,
       "mode": 2,
       "en": "This other teapot you're talking about...{E108:0010}\nIt's the one sitting on top of the cart right now, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Этот второй чайник, о котором ты говоришь...{E108:0010}\nОн ведь сейчас стоит наверху тележки, да?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|9",
@@ -48079,8 +48079,8 @@
       "index": 10,
       "mode": 2,
       "en": "Yeah, so when I smashed the first one,{E108:0008} I tried to hide\nthe pieces in the bottom of the cart.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну вот, когда я разбил первый,{E108:0008} я хотел спрятать\nосколки внизу тележки.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002435|11",
@@ -48089,8 +48089,8 @@
       "index": 11,
       "mode": 2,
       "en": "And that's when I saw that other pot under there.{E108:0010} So I\ntook it out and basically {E043}switched the two pots{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И там-то увидел второй чайник.{E108:0010} Ну я его достал\nи, считай, {E043}поменял чайники местами{E040}.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|0",
@@ -48099,8 +48099,8 @@
       "index": 0,
       "mode": 3,
       "en": "O-Oh...{E108:0010} I see...",
-      "ru": "",
-      "status": "pending"
+      "ru": "О-о...{E108:0010} Вот как...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|1",
@@ -48109,8 +48109,8 @@
       "index": 1,
       "mode": 1,
       "en": "Yup!{E108:0018} And that's everything I have to tell you!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага!{E108:0018} И это всё, что я хотел сказать!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|2",
@@ -48119,8 +48119,8 @@
       "index": 2,
       "mode": 2,
       "en": "I'll be extra careful not to break the other one,{E108:0010}\nI promise!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Со вторым буду осторожен как никогда,{E108:0010}\nобещаю!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|3",
@@ -48129,8 +48129,8 @@
       "index": 3,
       "mode": 3,
       "en": "You...{E108:0018} {E107:0001}{E188:00340000}{E1DA}{E12F:00000009}You have no shame whatsoever, do you!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты...{E108:0018} {E107:0001}{E188:00340000}{E1DA}{E12F:00000009}У тебя совсем совести нет, да!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|4",
@@ -48139,8 +48139,8 @@
       "index": 4,
       "mode": 3,
       "en": "I...{E108:0010} {E1D1}I'm sorryyy...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0010} {E1D1}Прости-и-и...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|5",
@@ -48149,8 +48149,8 @@
       "index": 5,
       "mode": 2,
       "en": "...It's really quite alright.{E108:0010} Thank you for being so\nhonest.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Право, всё в порядке.{E108:0010} Спасибо, что были\nтак честны.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|6",
@@ -48159,8 +48159,8 @@
       "index": 6,
       "mode": 2,
       "en": "See, Edgey?{E108:0010} Isn't Judy{E108:0008} {E1D1}the absolute best...!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот видишь, Эджи?{E108:0010} Джуди{E108:0008} {E1D1}просто лучшая...!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|7",
@@ -48169,8 +48169,8 @@
       "index": 7,
       "mode": 2,
       "en": "I trust you won't take advantage of her kindness and\nwill make amends somehow?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Надеюсь, ты не станешь злоупотреблять её\nдобротой и как-то загладишь вину?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|8",
@@ -48179,8 +48179,8 @@
       "index": 8,
       "mode": 1,
       "en": "I sure will!{E108:0018} {E107:0002}Once I make it as an artist,{E108:0008} I'm going to give\nher one of my paintings!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё как!{E108:0018} {E107:0002}Как только прославлюсь,{E108:0008} подарю ей\nодну из своих картин!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|9",
@@ -48189,8 +48189,8 @@
       "index": 9,
       "mode": 2,
       "en": "She was one of my models, after all!{E108:0010} It's only fair!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Она же была моей моделью!{E108:0010} Это по-честному!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|10",
@@ -48199,8 +48199,8 @@
       "index": 10,
       "mode": 2,
       "en": "(At this rate,{E108:0008} I suspect he's likely to make more trouble\nthan amends...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Такими темпами,{E108:0008} подозреваю, он больше бед\nнаделает, чем загладит...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|11",
@@ -48209,8 +48209,8 @@
       "index": 11,
       "mode": 2,
       "en": "Don't you think it would be better for you to keep out\nof her way for a very long while?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не лучше ли тебе не попадаться ей на глаза\nещё очень долго?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|12",
@@ -48219,8 +48219,8 @@
       "index": 12,
       "mode": 1,
       "en": "Oh, but I WILL be keeping out of her way!{E108:0018}\nBecause I sketched her and the others already!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так я и БУДУ держаться подальше!{E108:0018}\nЯ ведь уже нарисовал и её, и остальных!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|13",
@@ -48229,8 +48229,8 @@
       "index": 13,
       "mode": 3,
       "en": "...\"Her and the others\"?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...«И остальных»?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|14",
@@ -48239,8 +48239,8 @@
       "index": 14,
       "mode": 2,
       "en": "Keen to see my work, huh?{E108:0010} Yeah,{E108:0008} I drew a few great\nsketches of some ravishing beauties!{E108:0010} Wanna see?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не терпится взглянуть, а?{E108:0010} Ага,{E108:0008} я набросал\nобворожительных красавиц!{E108:0010} Показать?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|15",
@@ -48249,8 +48249,8 @@
       "index": 15,
       "mode": 2,
       "en": "Interested in Laurice's \"{E041}ravishing beauties{E040}\", huh,\nMr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Заинтересовались «{E041}обворожительными красавицами{E040}»\nЛориса, мистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|16",
@@ -48259,8 +48259,8 @@
       "index": 16,
       "mode": 7,
       "en": "...{E108:0018}{E107:0002}{E12F:00000001}I'm afraid you've greatly misjudged, Kay.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...{E108:0018}{E107:0002}{E12F:00000001}Боюсь, ты сильно ошиблась, Кей.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|17",
@@ -48269,8 +48269,8 @@
       "index": 17,
       "mode": 2,
       "en": "I simply wish to see if Larry has captured any unusual\ndetails this time, too.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я лишь хочу проверить, не подметил ли Ларри\nи на этот раз чего-то необычного.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|18",
@@ -48279,8 +48279,8 @@
       "index": 18,
       "mode": 1,
       "en": "Unusual details!?{E108:0018} Nothing's unusual about these!{E108:0010}\nThey're my best work yet!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Необычного!?{E108:0018} Ничего необычного там нет!{E108:0010}\nЭто моя лучшая работа!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|19",
@@ -48289,8 +48289,8 @@
       "index": 19,
       "mode": 2,
       "en": "Really?{E108:0010} Now I want to see them, too!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Правда?{E108:0010} Теперь и мне хочется посмотреть!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|20",
@@ -48299,8 +48299,8 @@
       "index": 20,
       "mode": 1,
       "en": "Aww,{E108:0018} you're a sweetheart, Kay!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О-о,{E108:0018} ты душечка, Кей!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|21",
@@ -48309,8 +48309,8 @@
       "index": 21,
       "mode": 2,
       "en": "Alright,{E108:0008} let me dig them out for you.{E108:0010}\nGimme a sec, okay?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ладно,{E108:0008} сейчас достану.{E108:0010}\nСекундочку, ага?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002441|22",
@@ -48319,8 +48319,8 @@
       "index": 22,
       "mode": 2,
       "en": "(...I suppose we might as well take a look.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Что ж, взглянуть не помешает.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002458|0",
@@ -48329,8 +48329,8 @@
       "index": 0,
       "mode": 2,
       "en": "So,{E108:0008} these sketches of yours...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Итак,{E108:0008} твои наброски...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002458|1",
@@ -48339,8 +48339,8 @@
       "index": 1,
       "mode": 1,
       "en": "Seriously, Edgey!{E108:0018} If you wanted to check out my art,{E108:0010}\nyou shoulda just said so from the get-go!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну правда, Эджи!{E108:0018} Хотел посмотреть моё искусство —{E108:0010}\nтак и сказал бы сразу!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002458|2",
@@ -48349,8 +48349,8 @@
       "index": 2,
       "mode": 2,
       "en": "...Here.{E108:0010} {E1D1}Feast your eyes on this!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Вот.{E108:0010} {E1D1}Услада для глаз!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|0",
@@ -48359,8 +48359,8 @@
       "index": 0,
       "mode": 2,
       "en": "...What am I looking at here?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...На что я, собственно, смотрю?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|1",
@@ -48369,8 +48369,8 @@
       "index": 1,
       "mode": 1,
       "en": "I told you already!{E108:0010} Ravishing beauties!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я же сказал!{E108:0010} Обворожительные красавицы!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|2",
@@ -48379,8 +48379,8 @@
       "index": 2,
       "mode": 2,
       "en": "Just a few of the fair faces that have caught my eye\nsince I've been here, you know?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Просто несколько прелестных лиц, что попались\nмне на глаза, пока я тут, понимаешь?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|3",
@@ -48389,8 +48389,8 @@
       "index": 3,
       "mode": 1,
       "en": "There's Verity.{E108:0010} And Judy.{E108:0010} And...{E108:0008} uhh,{E108:0010} somebody else.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот Верити.{E108:0010} Вот Джуди.{E108:0010} И...{E108:0008} э-э,{E108:0010} ещё кто-то.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|4",
@@ -48399,8 +48399,8 @@
       "index": 4,
       "mode": 2,
       "en": "Why did you draw them all on the same page?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А почему они все на одной странице?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|5",
@@ -48409,8 +48409,8 @@
       "index": 5,
       "mode": 2,
       "en": "Well, I meant to draw the room at first.{E108:0010} Just something\nto pass the time.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, сперва я собирался нарисовать зал.{E108:0010} Просто\nчтобы время скоротать.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|6",
@@ -48419,8 +48419,8 @@
       "index": 6,
       "mode": 2,
       "en": "And then I saw one beauty,{E108:0008} and another,{E108:0008} and well...{E108:0010}\nI just scribbled them all down as I went.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А потом увидел одну красавицу,{E108:0008} другую,{E108:0008} и вот...{E108:0010}\nтак и черкал их всех подряд.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|7",
@@ -48429,8 +48429,8 @@
       "index": 7,
       "mode": 2,
       "en": "So these were all drawn at different times?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, рисовал ты их в разное время?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|8",
@@ -48439,8 +48439,8 @@
       "index": 8,
       "mode": 2,
       "en": "Huh?{E108:0018} Uh, yeah,{E108:0008} I guess.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0018} Ну да,{E108:0008} вроде того.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|9",
@@ -48449,8 +48449,8 @@
       "index": 9,
       "mode": 2,
       "en": "I did one of you too, Kay!{E108:0010} You're on a different page,\nthough.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тебя я тоже нарисовал, Кей!{E108:0010} Правда,\nна другой странице.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|10",
@@ -48459,8 +48459,8 @@
       "index": 10,
       "mode": 1,
       "en": "Wow!{E108:0010} You did!?{E108:0018}\n{E107:0002}{E1D1}Hee hee!{E108:0010} {E107:0001}I'm flattered!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты!{E108:0010} Правда!?{E108:0018}\n{E107:0002}{E1D1}Хи-хи!{E108:0010} {E107:0001}Мне лестно!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|11",
@@ -48469,8 +48469,8 @@
       "index": 11,
       "mode": 2,
       "en": "How true to life are these sketches?{E108:0010} Did you only draw\nwhat you actually saw?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Насколько наброски верны натуре?{E108:0010} Ты рисовал\nтолько то, что видел?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|12",
@@ -48479,8 +48479,8 @@
       "index": 12,
       "mode": 1,
       "en": "Of course!{E108:0018} {E107:0002}You think I draw things I can't see!?{E108:0010}\nLike,{E108:0008} using my {E1D1}imagination!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Конечно!{E108:0018} {E107:0002}Думаешь, я рисую то, чего не вижу!?{E108:0010}\nНу там,{E108:0008} из {E1D1}воображения!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|13",
@@ -48489,8 +48489,8 @@
       "index": 13,
       "mode": 2,
       "en": "Nope,{E108:0010} {E107:0001}{E1D1}these are 100% true to life,{E108:0010} right down to the\nexact shade of each color!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не-а,{E108:0010} {E107:0001}{E1D1}тут всё точно как в жизни,{E108:0010} вплоть\nдо каждого оттенка!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|14",
@@ -48499,8 +48499,8 @@
       "index": 14,
       "mode": 2,
       "en": "(So the colors are accurate...{E108:0010} Interesting.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Значит, цвета верны...{E108:0010} Любопытно.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|15",
@@ -48509,8 +48509,8 @@
       "index": 15,
       "mode": 2,
       "en": "(Much as it pains me to admit it,{E108:0008} Larry may have\nprovided me with a useful piece of evidence yet again.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Как ни горько признать,{E108:0008} Ларри, похоже, снова\nподкинул мне полезную улику.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|16",
@@ -48519,8 +48519,8 @@
       "index": 16,
       "mode": 2,
       "en": "(The serving cart in the sketch, for example.{E108:0010}\nIf I compare it to the one here in the room...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Хоть бы тележка на наброске.{E108:0010}\nЕсли сравнить её с той, что в зале...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|17",
@@ -48529,8 +48529,8 @@
       "index": 17,
       "mode": 2,
       "en": "(...there's a clear {E041}contradiction{E042} between the two.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...между ними явное {E041}противоречие{E042}.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|18",
@@ -48539,8 +48539,8 @@
       "index": 18,
       "mode": 2,
       "en": "(I think a little {E041}deduction{E042} is in order.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Здесь напрашивается {E041}дедукция{E042}.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|19",
@@ -48549,8 +48549,8 @@
       "index": 19,
       "mode": 2,
       "en": "Could I borrow this page for a while, Larry?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Могу я одолжить эту страницу, Ларри?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|20",
@@ -48559,8 +48559,8 @@
       "index": 20,
       "mode": 1,
       "en": "Sure thing!{E108:0018} {E107:0002}You want me to sign it for you?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Конечно!{E108:0018} {E107:0002}Хочешь, подпишу?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|21",
@@ -48569,8 +48569,8 @@
       "index": 21,
       "mode": 2,
       "en": "...Just the page, please.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Только страницу, будь добр.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200245B|22",
@@ -48579,8 +48579,8 @@
       "index": 22,
       "mode": 3,
       "en": "Larry's Sketches data jotted down\nin my Organizer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Наброски Ларри» записаны\nв органайзер.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|0",
@@ -48589,8 +48589,8 @@
       "index": 0,
       "mode": 2,
       "en": "Would you mind taking a look at this for me, Larry?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Взглянешь на это, Ларри?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|1",
@@ -48599,8 +48599,8 @@
       "index": 1,
       "mode": 7,
       "en": ".........{E108:0010}{E107:0003}Uh.{E108:0018}\n{E107:0001}{E12F:000C0004}{E280}Wh-Why would you show me that!?",
-      "ru": "",
-      "status": "pending"
+      "ru": ".........{E108:0010}{E107:0003}Э.{E108:0018}\n{E107:0001}{E12F:000C0004}{E280}З-Зачем ты мне это показываешь!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|2",
@@ -48609,8 +48609,8 @@
       "index": 2,
       "mode": 2,
       "en": "Tell me,{E108:0008} what is it about Ms. Bound's tea set that's got\nyou so agitated?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Скажи,{E108:0008} что такого в сервизе мисс Долговой,\nчто ты так разволновался?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|3",
@@ -48619,8 +48619,8 @@
       "index": 3,
       "mode": 3,
       "en": "Umm...{E108:0010} {E1D1}Nnghuhhh...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э...{E108:0010} {E1D1}Нгх-х-х...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|4",
@@ -48629,8 +48629,8 @@
       "index": 4,
       "mode": 2,
       "en": "If you won't tell me...{E108:0010} then perhaps you'd prefer to\nexplain it to Judge Gavèlle?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не скажешь мне...{E108:0010} может, предпочтёшь\nобъясниться с судьёй Молотовой?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|5",
@@ -48639,8 +48639,8 @@
       "index": 5,
       "mode": 1,
       "en": "Wait!{E108:0018} Don't make me look bad in front of Verity!{E108:0018}\nShe thinks I'm a sensible,{E108:0008} cool,{E108:0010} clean-cut guy!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стой!{E108:0018} Не позорь меня перед Верити!{E108:0018}\nОна считает меня разумным,{E108:0008} крутым,{E108:0010} приличным!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|6",
@@ -48649,8 +48649,8 @@
       "index": 6,
       "mode": 2,
       "en": "I don't want her to see the real me.{E108:0010}\n{E107:0001}{E280}The real low-down,{E108:0008} dirty me!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не хочу, чтоб она увидела меня настоящего.{E108:0010}\n{E107:0001}{E280}Того самого,{E108:0008} низкого и грязного!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|7",
@@ -48659,8 +48659,8 @@
       "index": 7,
       "mode": 2,
       "en": "I'm not so sure anybody here thinks you're\nparticularly clean-cut, Larry...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не уверен, что здесь хоть кто-то считает тебя\nособенно приличным, Ларри...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|8",
@@ -48669,8 +48669,8 @@
       "index": 8,
       "mode": 2,
       "en": "...but if you don't want her to think badly of you,{E108:0008} the\nbest thing you can do is talk to me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...но если не хочешь, чтоб она о тебе думала\nдурно,{E108:0008} лучше поговори со мной.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002472|9",
@@ -48679,8 +48679,8 @@
       "index": 9,
       "mode": 3,
       "en": "I...{E108:0018}\n{E107:0001}{E280}{E12F:000C0004}A-Alright!{E108:0018} I'll talk,{E108:0010} I'll talk!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0018}\n{E107:0001}{E280}{E12F:000C0004}Л-Ладно!{E108:0018} Скажу,{E108:0010} скажу!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200247C|0",
@@ -48689,8 +48689,8 @@
       "index": 0,
       "mode": 2,
       "en": "Where were you before you rejoined us here,\nMs. Bound?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Где вы были до того, как вернулись к нам,\nмисс Долгова?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200247C|1",
@@ -48699,8 +48699,8 @@
       "index": 1,
       "mode": 2,
       "en": "I had to go and tell our visitors we're closed.{E108:0010}\nOh,{E108:0008} and hand out a little something in apology.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пришлось сказать посетителям, что мы закрыты.{E108:0010}\nАх,{E108:0008} и раздать им кое-что в извинение.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200247C|2",
@@ -48709,8 +48709,8 @@
       "index": 2,
       "mode": 2,
       "en": "Was there something you wanted to talk to me about?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы хотели о чём-то со мной поговорить?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200247C|3",
@@ -48719,8 +48719,8 @@
       "index": 3,
       "mode": 2,
       "en": "Yes.{E108:0010} A few things, actually.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} О нескольких вещах, вообще-то.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200247C|4",
@@ -48729,8 +48729,8 @@
       "index": 4,
       "mode": 2,
       "en": "(Not least of all...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(И не в последнюю очередь...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200247C|5",
@@ -48739,8 +48739,8 @@
       "index": 5,
       "mode": 2,
       "en": "(...the fact that I think you might be {E1D1}the one who set\nthe poison gas trap...!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...о том, что ловушку с газом, по-моему, {E1D1}устроили\nименно вы...!)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002482|0",
@@ -48749,8 +48749,8 @@
       "index": 0,
       "mode": 2,
       "en": "I must admit I was a little surprised to learn that\nGregory Edgeworth's son had become a prosecutor.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Признаюсь, я немного удивилась, узнав,\nчто сын Грегори Эджворта стал прокурором.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002482|1",
@@ -48759,8 +48759,8 @@
       "index": 1,
       "mode": 2,
       "en": "But then,{E108:0008} I'm sure a lot has happened since.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но, наверное,{E108:0008} с тех пор многое случилось.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002482|2",
@@ -48769,8 +48769,8 @@
       "index": 2,
       "mode": 3,
       "en": "...Yes.{E108:0010} {E107:0002}That much is certainly true.{E108:0010}\nThough I'll spare you the details.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Да.{E108:0010} {E107:0002}Это чистая правда.{E108:0010}\nХотя подробностей я вас избавлю.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002482|3",
@@ -48779,8 +48779,8 @@
       "index": 3,
       "mode": 2,
       "en": "Hee hee.{E108:0010} And yet,{E108:0008} {E285}the two of you are so alike.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хи-хи.{E108:0010} И всё же{E108:0008} {E285}вы так похожи.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002482|4",
@@ -48789,8 +48789,8 @@
       "index": 4,
       "mode": 2,
       "en": "You may have chosen different paths,{E108:0008} but I can tell\nyou're every bit as righteous and noble as he was.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пути вы выбрали разные,{E108:0008} но я вижу: вы такой же\nправедный и благородный, как он.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002482|5",
@@ -48799,8 +48799,8 @@
       "index": 5,
       "mode": 2,
       "en": "That's very kind of you to say...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы очень добры...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002482|6",
@@ -48809,8 +48809,8 @@
       "index": 6,
       "mode": 2,
       "en": "(When it came to his work,{E108:0008} my father always had the\nstrength of his convictions.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(В работе{E108:0008} отец всегда твёрдо держался\nсвоих убеждений.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002482|7",
@@ -48819,8 +48819,8 @@
       "index": 7,
       "mode": 2,
       "en": "(But right now,{E108:0008} I'm like a ship lost at sea.{E108:0010} I'm not even\nsure which way to go,{E108:0008} let alone who I should be...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А я сейчас{E108:0008} — как корабль без курса.{E108:0010} Не знаю даже,\nкуда идти,{E108:0008} не то что кем мне быть...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200248A|0",
@@ -48829,8 +48829,8 @@
       "index": 0,
       "mode": 2,
       "en": "You were a very successful actress, Ms. Bound.{E108:0010}\nWhy did you decide to become a gallery owner?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы были очень успешной актрисой, мисс Долгова.{E108:0010}\nПочему вы решили держать галерею?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200248A|1",
@@ -48839,8 +48839,8 @@
       "index": 1,
       "mode": 2,
       "en": "...You know,{E108:0008} the two things don't feel all that different\nto me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Знаете,{E108:0008} для меня это не такие уж разные\nвещи.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200248A|2",
@@ -48849,8 +48849,8 @@
       "index": 2,
       "mode": 2,
       "en": "Movies,{E108:0008} musicals,{E108:0008} confectionery,{E108:0008} sculptures,{E108:0008} art...{E108:0010}\nThey're all the same, really.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кино,{E108:0008} мюзиклы,{E108:0008} сласти,{E108:0008} скульптура,{E108:0008} живопись...{E108:0010}\nВсё одно и то же, право.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200248A|3",
@@ -48859,8 +48859,8 @@
       "index": 3,
       "mode": 2,
       "en": "They all have {E285}the same aim in mind.",
-      "ru": "",
-      "status": "pending"
+      "ru": "У всего этого {E285}одна и та же цель.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200248A|4",
@@ -48869,8 +48869,8 @@
       "index": 4,
       "mode": 2,
       "en": "To evoke an emotional response.{E108:0010}\nThat's what all artists strive for.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вызвать отклик в душе.{E108:0010}\nК этому стремится всякий художник.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200248A|5",
@@ -48879,8 +48879,8 @@
       "index": 5,
       "mode": 2,
       "en": "So is that what's Laurice is striving for, too?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, и Лорис к этому стремится?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200248A|6",
@@ -48889,8 +48889,8 @@
       "index": 6,
       "mode": 2,
       "en": "...Let's get one thing straight:{E108:0010} Try as Larry might,{E108:0008} a\nfancy name does not an artist make.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Скажем прямо:{E108:0010} как бы Ларри ни старался,{E108:0008}\nкрасивое имя художника не делает.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002491|0",
@@ -48899,8 +48899,8 @@
       "index": 0,
       "mode": 2,
       "en": "Delicia gave me a few of these cloths.{E108:0010} They light up\nwhen you attach them to a special device.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Делиция дала мне несколько таких тканей.{E108:0010}\nОни светятся от особого устройства.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002491|1",
@@ -48909,8 +48909,8 @@
       "index": 1,
       "mode": 2,
       "en": "How many did she give you, exactly?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сколько именно она вам дала?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002491|2",
@@ -48919,8 +48919,8 @@
       "index": 2,
       "mode": 7,
       "en": ".........{E108:0008}{E107:0003}Four,{E108:0008} {E107:0002}I believe.",
-      "ru": "",
-      "status": "pending"
+      "ru": ".........{E108:0008}{E107:0003}Четыре,{E108:0008} {E107:0002}кажется.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002491|3",
@@ -48929,8 +48929,8 @@
       "index": 3,
       "mode": 2,
       "en": "(There were four luminous cloths in the Autumn Wing,{E108:0008}\nbut I'm sure I saw another one somewhere else.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(В Осеннем крыле было четыре светящиеся ткани,{E108:0008}\nно ещё одну я точно видел где-то ещё.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002491|4",
@@ -48939,8 +48939,8 @@
       "index": 4,
       "mode": 2,
       "en": "(I get the feeling Ms. Bound is hiding something...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Кажется, мисс Долгова что-то скрывает...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002496|0",
@@ -48949,8 +48949,8 @@
       "index": 0,
       "mode": 2,
       "en": "What kinds of pharmaceutical \"recipes\" are in\nthe ultimate cookbook?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Какие лекарственные «рецепты» есть\nв заветной книге?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002496|1",
@@ -48959,8 +48959,8 @@
       "index": 1,
       "mode": 2,
       "en": "Oh, there are so many.{E108:0010} It would take a while to go\nthrough them all.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах, их так много.{E108:0010} Перебрать все — дело\nдолгое.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002496|2",
@@ -48969,8 +48969,8 @@
       "index": 2,
       "mode": 2,
       "en": "But if you really {E107:0003}want to know...{E108:0018}\n{E107:0002}{E1D1}Well then let's start the show!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но раз уж вам {E107:0003}и вправду интересно...{E108:0018}\n{E107:0002}{E1D1}тогда начнём — и будет пре-еле-естно!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002496|3",
@@ -48979,8 +48979,8 @@
       "index": 3,
       "mode": 2,
       "en": "Come join me {E107:0003}as we sing this song!{E108:0010}\n{E107:0002}It's a nifty,{E108:0008} thrifty two hours long!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Со мною вместе {E107:0003}песню заводи!{E108:0010}\n{E107:0002}Всего два часика{E108:0008} — и всё позади!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002496|4",
@@ -48989,8 +48989,8 @@
       "index": 4,
       "mode": 2,
       "en": "Now one by one, we'll sing the things,{E108:0010}\nThat the world's best little cookbook brings!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И по порядку споём обо всём,{E108:0010}\nчто в лучшей книге рецептов найдё-ом!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002496|5",
@@ -48999,8 +48999,8 @@
       "index": 5,
       "mode": 2,
       "en": "...What do you think, Mr. Edgeworth?{E108:0010}\n{E1D1}Wanna listen to the rest?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Что скажете, мистер Эджворт?{E108:0010}\n{E1D1}Дослушаем до конца?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002496|6",
@@ -49009,8 +49009,8 @@
       "index": 6,
       "mode": 2,
       "en": "N-{E108:0008}{E1D1}{E188:00310000}No.{E108:0010} {E107:0001}That won't be necessary.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Н-{E108:0008}{E1D1}{E188:00310000}Нет.{E108:0010} {E107:0001}В этом нет нужды.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200249D|0",
@@ -49019,8 +49019,8 @@
       "index": 0,
       "mode": 2,
       "en": "This lift cart...{E108:0010} {E188:002F0000}I heard it was in use eighteen years ago,\ntoo...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эта подъёмная тележка...{E108:0010} {E188:002F0000}Говорят, ею пользовались\nи восемнадцать лет назад...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200249D|1",
@@ -49029,8 +49029,8 @@
       "index": 1,
       "mode": 2,
       "en": "That's right.{E108:0010} It was in another room earlier until I\nbrought it out here.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно.{E108:0010} Она стояла в другом зале, пока я\nне выкатила её сюда.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200249D|2",
@@ -49039,8 +49039,8 @@
       "index": 2,
       "mode": 2,
       "en": "It's very useful for moving large, heavy objects around.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Очень удобна для больших тяжёлых вещей.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200249D|3",
@@ -49049,8 +49049,8 @@
       "index": 3,
       "mode": 2,
       "en": "(But why is it wet?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но почему она мокрая?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200249D|4",
@@ -49059,8 +49059,8 @@
       "index": 4,
       "mode": 2,
       "en": "(Was it used to carry something wet...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(На ней везли что-то мокрое...?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A2|0",
@@ -49069,8 +49069,8 @@
       "index": 0,
       "mode": 2,
       "en": "Oh, my...!{E108:0018}\nIs that...{E108:0010} {E107:0003}me?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах, боже...!{E108:0018}\nЭто...{E108:0010} {E107:0003}я?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A2|1",
@@ -49079,8 +49079,8 @@
       "index": 1,
       "mode": 2,
       "en": "Yes.{E108:0010} It was painted by the so-called artist over there.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} Работа вон того, с позволения сказать,\nхудожника.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A2|2",
@@ -49089,8 +49089,8 @@
       "index": 2,
       "mode": 2,
       "en": "It's wonderfully drawn.{E108:0010}\n{E12F:001C000C}Would you mind if I kept it?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чудесно нарисовано.{E108:0010}\n{E12F:001C000C}Вы не против, если я оставлю его себе?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A2|3",
@@ -49099,8 +49099,8 @@
       "index": 3,
       "mode": 3,
       "en": "I...{E108:0010} {E107:0002}{E1D1}{E188:00310000}I'm sorry, Ms. Bound.{E108:0010} I'm afraid it's an important\npiece of evidence.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0010} {E107:0002}{E1D1}{E188:00310000}Простите, мисс Долгова.{E108:0010} Боюсь, это важная\nулика.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A2|4",
@@ -49109,8 +49109,8 @@
       "index": 4,
       "mode": 3,
       "en": "Oh.{E108:0010} I see.{E108:0010} {E107:0002}That's a shame.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах.{E108:0010} Понимаю.{E108:0010} {E107:0002}Как жаль.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A2|5",
@@ -49119,8 +49119,8 @@
       "index": 5,
       "mode": 2,
       "en": "(I suppose Larry's charm is something of a talent if he\ncan impress a gallery owner with sketches like these.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Обаяние Ларри — тоже своего рода талант, если\nтакими набросками он покорил хозяйку галереи.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A8|0",
@@ -49129,8 +49129,8 @@
       "index": 0,
       "mode": 2,
       "en": "Did you like my chocolates?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Понравился мой шоколад?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A8|1",
@@ -49139,8 +49139,8 @@
       "index": 1,
       "mode": 1,
       "en": "Oh, yeah!{E108:0010} {E107:0002}They were super sweet!{E108:0010} I loved them!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О да!{E108:0010} {E107:0002}Такой сладкий!{E108:0010} Просто прелесть!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A8|2",
@@ -49149,8 +49149,8 @@
       "index": 2,
       "mode": 2,
       "en": "Hee hee...{E108:0010} I'm very happy to hear it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хи-хи...{E108:0010} Очень рада это слышать.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A8|3",
@@ -49159,8 +49159,8 @@
       "index": 3,
       "mode": 2,
       "en": "Samson has such a sweet tooth,{E108:0008} he wouldn't have them\nany other way.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Самсон такой сластёна,{E108:0008} что иных\nи не признаёт.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024A8|4",
@@ -49169,8 +49169,8 @@
       "index": 4,
       "mode": 2,
       "en": "(They may not look the best at the moment,{E108:0008} but her\nlove for her family shines through in how they taste.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Вид у них сейчас не лучший,{E108:0008} но во вкусе слышна\nеё любовь к близким.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024AD|0",
@@ -49179,8 +49179,8 @@
       "index": 0,
       "mode": 3,
       "en": "The hunt is on...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Идёт охота...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024AD|1",
@@ -49189,8 +49189,8 @@
       "index": 1,
       "mode": 3,
       "en": "The truth will {E1D1}come out...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Правда {E1D1}придёт...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024AD|2",
@@ -49199,8 +49199,8 @@
       "index": 2,
       "mode": 3,
       "en": "But I don't know...{E108:0010}\n{E107:0002}What that's abooout!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот только я не пойму,{E108:0010}\n{E107:0002}к чему мы идё-о-ом!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024AD|3",
@@ -49209,8 +49209,8 @@
       "index": 3,
       "mode": 7,
       "en": "...{E107:0002}{E188:009E0001}Ping!{E107:0007}...",
-      "ru": "",
-      "status": "pending"
+      "ru": "...{E107:0002}{E188:009E0001}Дзинь!{E107:0007}...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024AD|4",
@@ -49219,8 +49219,8 @@
       "index": 4,
       "mode": 3,
       "en": "I guess...{E108:0020} {E12F:00020003}{E12F:001C0006}we're{E108:0010} going to{E108:0010} find ooout!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Похоже...{E108:0020} {E12F:00020003}{E12F:001C0006}скоро{E108:0010} мы всё{E108:0010} найдё-о-ом!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024AD|5",
@@ -49229,8 +49229,8 @@
       "index": 5,
       "mode": 2,
       "en": "(...Have I inadvertantly stumbled onto the set of\n\"Cake Crimes: The Musical\" or something?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Я что, ненароком забрёл на съёмки\n«Тортовых преступлений: мюзикла»?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|0",
@@ -49239,8 +49239,8 @@
       "index": 0,
       "mode": 2,
       "en": "Are there two serving carts here at the gallery,\nMs. Bound?",
-      "ru": "",
-      "status": "pending"
+      "ru": "В галерее две сервировочные тележки,\nмисс Долгова?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|1",
@@ -49249,8 +49249,8 @@
       "index": 1,
       "mode": 2,
       "en": "Oh,{E108:0008} um...{E108:0018} {E107:0003}{E12F:001C0000}{E1D1}Y-Yes.{E108:0010} {E107:0002}Why do you ask?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах,{E108:0008} э-э...{E108:0018} {E107:0003}{E12F:001C0000}{E1D1}Д-Да.{E108:0010} {E107:0002}А почему вы спрашиваете?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|2",
@@ -49259,8 +49259,8 @@
       "index": 2,
       "mode": 2,
       "en": "A certain so-called artist showed us this sketch...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Один, с позволения сказать, художник показал\nнам этот набросок...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|3",
@@ -49269,8 +49269,8 @@
       "index": 3,
       "mode": 2,
       "en": "I couldn't help but notice the color of the tablecloth.{E108:0008}\nIt's light blue.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не мог не заметить цвет скатерти.{E108:0008}\nОна голубая.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|4",
@@ -49279,8 +49279,8 @@
       "index": 4,
       "mode": 2,
       "en": "Light blue...?{E108:0018}\nI'm afraid your friend must be mistaken.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Голубая...?{E108:0018}\nБоюсь, ваш друг ошибается.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|5",
@@ -49289,8 +49289,8 @@
       "index": 5,
       "mode": 2,
       "en": "I only use white tablecloths,{E108:0008} freshly laundered and\nstarched.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я беру только белые скатерти,{E108:0008} свежевыстиранные\nи накрахмаленные.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|6",
@@ -49299,8 +49299,8 @@
       "index": 6,
       "mode": 2,
       "en": "Like the perfect, wrinkle-free one on the cart here in\nthe fountain room, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как та безупречная, без единой складки,\nна тележке в зале фонтана, да?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|7",
@@ -49309,8 +49309,8 @@
       "index": 7,
       "mode": 2,
       "en": "Exactly.{E108:0010} If I saw so much as a blemish,{E108:0008} I would replace\nit right away.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Именно.{E108:0010} Заметь я хоть пятнышко,{E108:0008} тут же\nбы заменила.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|8",
@@ -49319,8 +49319,8 @@
       "index": 8,
       "mode": 2,
       "en": "(Could the color of the tablecloth in the sketch simply\nbe a mistake on Larry's part...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Может, цвет скатерти на наброске — просто\nошибка Ларри...?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|9",
@@ -49329,8 +49329,8 @@
       "index": 9,
       "mode": 2,
       "en": "Do you have any idea of what you might have been\ndoing when this sketch was drawn?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не припомните, чем вы были заняты,\nкогда рисовали этот набросок?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|10",
@@ -49339,8 +49339,8 @@
       "index": 10,
       "mode": 3,
       "en": "Let me see...{E108:0018} {E107:0002}{E1D1}I appear to be carrying out my usual\nduties.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Дайте подумать...{E108:0018} {E107:0002}{E1D1}Похоже, я занималась\nобычными делами.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024B3|11",
@@ -49349,8 +49349,8 @@
       "index": 11,
       "mode": 2,
       "en": "I'd like to ask you a little more about these \"duties\", if\nI may.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Позвольте расспросить об этих «делах»\nподробнее.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|0",
@@ -49359,8 +49359,8 @@
       "index": 0,
       "mode": 2,
       "en": "What exactly were you doing when this sketch was\ndrawn?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чем именно вы были заняты, когда рисовали\nэтот набросок?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|1",
@@ -49369,8 +49369,8 @@
       "index": 1,
       "mode": 2,
       "en": "Because from what I can see...{E108:0010} your cart doesn't have\na tea set on it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Потому что, как я вижу...{E108:0010} на тележке нет\nчайного сервиза.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|2",
@@ -49379,8 +49379,8 @@
       "index": 2,
       "mode": 2,
       "en": "I was delivering some chocolates to the investigating\nofficers.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я развозила шоколад полицейским,\nчто ведут расследование.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|3",
@@ -49389,8 +49389,8 @@
       "index": 3,
       "mode": 3,
       "en": "Aww...{E108:0010} {E107:0002}Now I'm jealous.{E108:0010} {E280}I love chocolate!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой...{E108:0010} {E107:0002}Теперь завидую.{E108:0010} {E280}Обожаю шоколад!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|4",
@@ -49399,8 +49399,8 @@
       "index": 4,
       "mode": 2,
       "en": "Well, there were a few left over,{E108:0008} so here.{E108:0010} For you both.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Немного осталось,{E108:0008} так что вот.{E108:0010} Вам обоим.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|5",
@@ -49409,8 +49409,8 @@
       "index": 5,
       "mode": 2,
       "en": "I made them myself.{E108:0010} I hope you like them...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я делала сама.{E108:0010} Надеюсь, понравится...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|6",
@@ -49419,8 +49419,8 @@
       "index": 6,
       "mode": 1,
       "en": "Woohoo!{E108:0020}\n{E107:0002}{E12F:00020004}Hee hee!{E108:0010} {E107:0001}{E1D2}Thanks, Ms. Bound!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ура!{E108:0020}\n{E107:0002}{E12F:00020004}Хи-хи!{E108:0010} {E107:0001}{E1D2}Спасибо, мисс Долгова!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|7",
@@ -49429,8 +49429,8 @@
       "index": 7,
       "mode": 3,
       "en": "Well...{E108:0010} {E107:0002}Why not.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что ж...{E108:0010} {E107:0002}Почему бы и нет.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|8",
@@ -49439,8 +49439,8 @@
       "index": 8,
       "mode": 2,
       "en": "(They're a little melted,{E108:0008} but I suppose that's because\nthey've been sitting around in her pocket.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Слегка подтаяли,{E108:0008} но, видимо, оттого,\nчто пролежали у неё в кармане.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024BF|9",
@@ -49449,8 +49449,8 @@
       "index": 9,
       "mode": 3,
       "en": "Chocolates data jotted down\nin my Organizer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Шоколадные конфеты» записаны\nв органайзер.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024C9|0",
@@ -49459,8 +49459,8 @@
       "index": 0,
       "mode": 1,
       "en": "Mmm!{E108:0018} {E107:0002}They're super sweet!{E108:0010} {E107:0001}I love them!",
-      "ru": "",
-      "status": "pending"
+      "ru": "М-м!{E108:0018} {E107:0002}Такой сладкий!{E108:0010} {E107:0001}Обожаю!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024C9|1",
@@ -49469,8 +49469,8 @@
       "index": 1,
       "mode": 2,
       "en": "Hee hee...{E108:0010} I'm very glad to hear it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хи-хи...{E108:0010} Очень рада это слышать.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024C9|2",
@@ -49479,8 +49479,8 @@
       "index": 2,
       "mode": 2,
       "en": "(They may not be the prettiest,{E108:0008} but I'm grateful for the\nenergy boost nonetheless.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Красотой не блещут,{E108:0008} но за прилив сил\nвсё равно спасибо.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024C9|3",
@@ -49489,8 +49489,8 @@
       "index": 3,
       "mode": 2,
       "en": "(...Though perhaps they could do with a little less\nsugar.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Хотя сахару в них можно бы\nи поменьше.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|0",
@@ -49499,8 +49499,8 @@
       "index": 0,
       "mode": 2,
       "en": "The original ice sculptures melted eighteen years ago,\ncorrect?{E108:0010} How did you manage to recreate them?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Первые ледяные скульптуры растаяли восемнадцать\nлет назад, верно?{E108:0010} Как вам удалось их воссоздать?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|1",
@@ -49509,8 +49509,8 @@
       "index": 1,
       "mode": 1,
       "en": "Oh!{E108:0018} {E107:0002}You know about what happened back then?",
-      "ru": "",
-      "status": "pending"
+      "ru": "О!{E108:0018} {E107:0002}Вы знаете, что тогда случилось?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|2",
@@ -49519,8 +49519,8 @@
       "index": 2,
       "mode": 2,
       "en": "In that case,{E108:0008} you might also know I took pictures of\nthem during the contest.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тогда,{E108:0008} возможно, знаете и о том, что я снимала\nих во время конкурса.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|3",
@@ -49529,8 +49529,8 @@
       "index": 3,
       "mode": 2,
       "en": "I commissioned the creation of a set of replicas based\non those photographs for this current exhibit.",
-      "ru": "",
-      "status": "pending"
+      "ru": "По этим снимкам я заказала копии\nдля нынешней выставки.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|4",
@@ -49539,8 +49539,8 @@
       "index": 4,
       "mode": 2,
       "en": "...But why go through the trouble of creating replicas?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Но зачем было затевать копии?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|5",
@@ -49549,8 +49549,8 @@
       "index": 5,
       "mode": 2,
       "en": "Mr. Frost's zodiac series was his great unfinished\nmasterwork.{E108:0010} I wanted to see it completed at last.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Зодиак мистера Морозова остался незавершённым\nшедевром.{E108:0010} Я хотела наконец увидеть его целым.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|6",
@@ -49559,8 +49559,8 @@
       "index": 6,
       "mode": 2,
       "en": "Or rather...{E108:0010} re-completed.{E108:0010} It was my fault that the\noriginal set melted in the first place, after all.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Точнее...{E108:0010} снова целым.{E108:0010} Ведь это по моей вине\nпервый набор тогда и растаял.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|7",
@@ -49569,8 +49569,8 @@
       "index": 7,
       "mode": 2,
       "en": "...I see.{E108:0010} And is there any particular reason why the\nWinter and Autumn Wings look so similar?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Понятно.{E108:0010} А есть ли причина, по которой Зимнее\nи Осеннее крылья так похожи?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|8",
@@ -49579,8 +49579,8 @@
       "index": 8,
       "mode": 2,
       "en": "Oh, my!{E108:0018} You really think they look alike?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах, боже!{E108:0018} Вам правда кажется, что они похожи?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|9",
@@ -49589,8 +49589,8 @@
       "index": 9,
       "mode": 2,
       "en": "Perhaps I used some of the decorations from one in\nthe other by accident?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Может, я нечаянно взяла украшения одного\nдля другого?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|10",
@@ -49599,8 +49599,8 @@
       "index": 10,
       "mode": 2,
       "en": "(She's clearly lying.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Она явно лжёт.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024CD|11",
@@ -49609,8 +49609,8 @@
       "index": 11,
       "mode": 2,
       "en": "(But I don't have the evidence to prove it just yet...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но улик, чтобы это доказать, у меня пока нет...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|0",
@@ -49619,8 +49619,8 @@
       "index": 0,
       "mode": 1,
       "en": "Hello there, dearie!{E108:0018} Still investigating away, are you?{E108:0018}\nFound anything interesting?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Здравствуй, голубчик!{E108:0018} Всё расследуешь, да?{E108:0018}\nНашёл что-нибудь занятное?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|1",
@@ -49629,8 +49629,8 @@
       "index": 1,
       "mode": 2,
       "en": "No, dearie!{E108:0010}\nWell,{E108:0008} nothing much, anyway!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нет, голубчик!{E108:0010}\nНу,{E108:0008} ничего особенного!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|2",
@@ -49639,8 +49639,8 @@
       "index": 2,
       "mode": 1,
       "en": "Silly girl!{E108:0018} That wasn't a \"dearie\" moment.{E108:0010} {E1D1}That was\nmore of a \"lambkin\".",
-      "ru": "",
-      "status": "pending"
+      "ru": "Глупышка!{E108:0018} Тут «голубчик» не годится.{E108:0010} {E1D1}Тут скорее\n«ягнёночек».",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|3",
@@ -49649,8 +49649,8 @@
       "index": 3,
       "mode": 2,
       "en": "\"Sweetheart\" is for when you're being sympathetic, of\ncourse.{E108:0010} {E1D1}And \"treasure\" is for when they're in a tizz...",
-      "ru": "",
-      "status": "pending"
+      "ru": "«Душенька» — это когда сочувствуешь, ясное\nдело.{E108:0010} {E1D1}А «сокровище» — когда кто-то в смятении...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|4",
@@ -49659,8 +49659,8 @@
       "index": 4,
       "mode": 2,
       "en": "\"Love\" is for people you're not that keen on,{E108:0010} {E1D1}{E107:0001}and \"petal\"\nyou use when you're trying to get someone's attention.",
-      "ru": "",
-      "status": "pending"
+      "ru": "«Милый» — для тех, кто не очень-то нравится,{E108:0010}\n{E1D1}{E107:0001}а «лепесточек» — чтобы привлечь внимание.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|5",
@@ -49669,8 +49669,8 @@
       "index": 5,
       "mode": 2,
       "en": "Wow...{E108:0010} I didn't realize there were so many rules!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты...{E108:0010} Я и не знала, что тут столько правил!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|6",
@@ -49679,8 +49679,8 @@
       "index": 6,
       "mode": 1,
       "en": "Mr. Edgeworth, petal!{E108:0018} I hope you're getting all this\ndown!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Эджворт, лепесточек!{E108:0018} Надеюсь, вы всё это\nзаписываете!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|7",
@@ -49689,8 +49689,8 @@
       "index": 7,
       "mode": 2,
       "en": "...Don't even try it, Kay.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Даже не пытайся, Кей.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024D9|8",
@@ -49699,8 +49699,8 @@
       "index": 8,
       "mode": 3,
       "en": "Oh, dearie me...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ох, голубчики мои...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E2|0",
@@ -49709,8 +49709,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ms. Scone.{E108:0010}\nI'd like to ask you a few questions, if I may.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Сдобина.{E108:0010}\nПозвольте задать вам несколько вопросов.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E2|1",
@@ -49719,8 +49719,8 @@
       "index": 1,
       "mode": 1,
       "en": "Of course, dear!{E108:0010} Fire away!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Конечно, милый!{E108:0010} Спрашивай!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E2|2",
@@ -49729,8 +49729,8 @@
       "index": 2,
       "mode": 2,
       "en": "Anything for you, Milesy Smilesy{E108:0008} and dear, sweet little\nTooth De-Kay!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Для тебя что угодно, Майлзушка-улыбушка,{E108:0008} и для\nмилой малышки Кей-риес!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E2|3",
@@ -49739,8 +49739,8 @@
       "index": 3,
       "mode": 2,
       "en": "...I'd appreciate it if that was the last time you called\nme {E041}Milesy Smilesy{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Буду признателен, если вы больше никогда\nне назовёте меня {E041}Майлзушкой-улыбушкой{E040}.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E2|4",
@@ -49749,8 +49749,8 @@
       "index": 4,
       "mode": 2,
       "en": "I'm not a fan of {E041}Tooth De-Kay{E040}, either!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И {E041}Кей-риес{E040} мне тоже не по душе!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E2|5",
@@ -49759,8 +49759,8 @@
       "index": 5,
       "mode": 1,
       "en": "Well you'll just have to like it or lump it!{E108:0018} {E1D1}I can't change\na nickname once I've settled on it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А тут уж нравится не нравится — терпи!{E108:0018}\n{E1D1}Раз прозвище выбрано, менять его я не стану!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E2|6",
@@ -49769,8 +49769,8 @@
       "index": 6,
       "mode": 3,
       "en": "Ugh...{E108:0018} {E107:0002}Well,{E108:0008} I guess we tried...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эх...{E108:0018} {E107:0002}Ну,{E108:0008} мы хотя бы попытались...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E9|0",
@@ -49779,8 +49779,8 @@
       "index": 0,
       "mode": 2,
       "en": "Hold on,{E108:0010} that badge of yours.{E108:0018}\nIt's not the same as Greggy Pegleg's.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Постой-ка,{E108:0010} значок у тебя.{E108:0018}\nНе такой, как у Грегушки-вкусняшки.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E9|1",
@@ -49789,8 +49789,8 @@
       "index": 1,
       "mode": 2,
       "en": "That's right.{E108:0010} My father was a defense attorney.{E108:0010}\n{E107:0003}I...{E108:0010} {E107:0002}took a different path.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно.{E108:0010} Отец был адвокатом защиты.{E108:0010}\n{E107:0003}Я...{E108:0010} {E107:0002}выбрал другой путь.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E9|2",
@@ -49799,8 +49799,8 @@
       "index": 2,
       "mode": 2,
       "en": "Oho!{E108:0010} {E107:0001}{E285}{E1D1}I see!{E108:0018} It's like that, is it?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ого!{E108:0010} {E107:0001}{E285}{E1D1}Вот оно что!{E108:0018} Значит, вот как?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E9|3",
@@ -49809,8 +49809,8 @@
       "index": 3,
       "mode": 2,
       "en": "Well,{E108:0010} I suppose it's to be expected at your age, dearie.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что ж,{E108:0010} в твои годы это дело обычное, голубчик.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E9|4",
@@ -49819,8 +49819,8 @@
       "index": 4,
       "mode": 2,
       "en": "But once you're grown up a bit,{E108:0008} {E107:0001}{E1D1}I'm sure you'll start to\nappreciate your old man a little more.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А как подрастёшь чуток,{E108:0008} {E107:0001}{E1D1}так и отца своего\nценить начнёшь побольше.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E9|6",
@@ -49829,8 +49829,8 @@
       "index": 6,
       "mode": 1,
       "en": "Everyone goes through a little rebellious phase.{E108:0018}\n{E1D1}Lord knows I had mine.{E108:0008} Tee hee!",
-      "ru": "",
-      "status": "pending"
+      "ru": "У всех бывает бунтарская пора.{E108:0018}\n{E1D1}Уж я-то свою помню.{E108:0008} Ти-хи!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024E9|7",
@@ -49839,8 +49839,8 @@
       "index": 7,
       "mode": 2,
       "en": "My...{E108:0010} {E107:0001}{E280}My career path is not the result of some\nadolescent \"phase\", Ms. Scone!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мой...{E108:0010} {E107:0001}{E280}Мой выбор — вовсе не следствие какой-то\nподростковой «поры», мисс Сдобина!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F1|0",
@@ -49849,8 +49849,8 @@
       "index": 0,
       "mode": 2,
       "en": "That stuff doesn't come cheap, you know!{E108:0010} {E107:0001}{E1D1}{E188:00310000}Or easy!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стоит это недёшево, знаешь ли!{E108:0010}\n{E107:0001}{E1D1}{E188:00310000}И достаётся непросто!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F1|1",
@@ -49859,8 +49859,8 @@
       "index": 1,
       "mode": 1,
       "en": "It's pretty amazing, though!{E108:0018} It looks sooo cool when it's\nall lit up!{E108:0018} {E107:0002}I wonder how it's made...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но до чего же здорово!{E108:0018} Так круто светится,\nкогда включат!{E108:0018} {E107:0002}Интересно, как её делают...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F1|2",
@@ -49869,8 +49869,8 @@
       "index": 2,
       "mode": 1,
       "en": "Oho!{E108:0018} Well, if you really want to know,{E108:0010} I'll let you in on\na little secret...!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ого!{E108:0018} Ну, если и правда хочешь знать,{E108:0010} открою тебе\nмаленький секрет...!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F1|3",
@@ -49879,8 +49879,8 @@
       "index": 3,
       "mode": 2,
       "en": "Huh...{E108:0010} {E284}So it was developed by Blue Screens, Inc...{E108:0018}\n{E107:0001}I know where the Great Thief is striking next!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага...{E108:0010} {E284}Разработка фирмы «Синий экран»...{E108:0018}\n{E107:0001}Теперь я знаю, куда Великий вор наведается!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F1|4",
@@ -49889,8 +49889,8 @@
       "index": 4,
       "mode": 2,
       "en": "With their tech,{E108:0008} I could make a glowing cloak {E285}and\nshine brighter than the brightest thief of all!",
-      "ru": "",
-      "status": "pending"
+      "ru": "С их-то техникой{E108:0008} я сошью светящийся плащ {E285}и\nзасияю ярче всех воров на свете!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F1|5",
@@ -49899,8 +49899,8 @@
       "index": 5,
       "mode": 2,
       "en": "So much for what I wanted to ask...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот и спросил, называется...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F7|0",
@@ -49909,8 +49909,8 @@
       "index": 0,
       "mode": 2,
       "en": "It's true, dearie.{E108:0010} I do know how to make poison gas.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Правда твоя, голубчик.{E108:0010} Я умею делать ядовитый газ.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F7|1",
@@ -49919,8 +49919,8 @@
       "index": 1,
       "mode": 2,
       "en": "But the fact that someone knows how to hold a gun\ndoesn't mean they've shot anybody now, does it?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но если человек умеет держать ружьё,\nэто ведь не значит, что он в кого-то стрелял?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F7|2",
@@ -49929,8 +49929,8 @@
       "index": 2,
       "mode": 2,
       "en": "...I'm not accusing you, Ms. Scone.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Я вас не обвиняю, мисс Сдобина.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F7|3",
@@ -49939,8 +49939,8 @@
       "index": 3,
       "mode": 2,
       "en": "She's right, you know.{E108:0010} Just because I'm a Great Thief,{E108:0010}\n{E107:0001}{E188:00340000}{E1D2}that doesn't mean I can't do good!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А ведь она права.{E108:0010} Я вот Великий вор,{E108:0010}\n{E107:0001}{E188:00340000}{E1D2}и это не мешает мне делать добро!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F7|4",
@@ -49949,8 +49949,8 @@
       "index": 4,
       "mode": 2,
       "en": "Exactly, dear!{E108:0010} And just because I'm a confectioner,{E108:0010}\n{E107:0001}{E280}that doesn't mean I can cook!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот именно, милый!{E108:0010} А я вот кондитер,{E108:0010}\n{E107:0001}{E280}и это не значит, что я умею готовить!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024F7|5",
@@ -49959,8 +49959,8 @@
       "index": 5,
       "mode": 2,
       "en": "(Surely that only applies to fake confectioners...!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Это, надо думать, относится только\nк поддельным кондитерам...!)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|0",
@@ -49969,8 +49969,8 @@
       "index": 0,
       "mode": 2,
       "en": "Have you read the ultimate cookbook, Ms. Scone?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы читали Заветную книгу рецептов, мисс Сдобина?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|1",
@@ -49979,8 +49979,8 @@
       "index": 1,
       "mode": 1,
       "en": "Of course I have!{E108:0018} {E1D1}I am a pharmacist, you know,{E108:0010} even if\nI do wear a big, pink hat!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Конечно, читала!{E108:0018} {E1D1}Я всё-таки фармацевт,{E108:0010} пусть\nи в большой розовой шляпе!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|2",
@@ -49989,8 +49989,8 @@
       "index": 2,
       "mode": 1,
       "en": "I think it's so cool you're a pharmacist!",
-      "ru": "",
-      "status": "pending"
+      "ru": "По-моему, быть фармацевтом — это круто!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|3",
@@ -49999,8 +49999,8 @@
       "index": 3,
       "mode": 2,
       "en": "Well, so do I, dearie!{E108:0008} So do I!{E108:0010}\n{E107:0001}Aren't you a sweetheart,{E108:0008} my little Tooth De-Kay!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И я так думаю, голубушка!{E108:0008} И я!{E108:0010}\n{E107:0001}Ну не душенька ли,{E108:0008} моя маленькая Кей-риес!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|4",
@@ -50009,8 +50009,8 @@
       "index": 4,
       "mode": 2,
       "en": "Since when were you interested in pharmaceuticals?",
-      "ru": "",
-      "status": "pending"
+      "ru": "С каких пор тебя занимает фармацевтика?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|5",
@@ -50019,8 +50019,8 @@
       "index": 5,
       "mode": 2,
       "en": "Shh!{E108:0010} I'm working my magic, Mr. Edgeworth!{E108:0010}\nButtering her up so she'll do what I want!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тс-с!{E108:0010} Я тут чары навожу, мистер Эджворт!{E108:0010}\nПодмасливаю, чтоб сделала, что мне надо!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|6",
@@ -50029,8 +50029,8 @@
       "index": 6,
       "mode": 1,
       "en": "Anyway, Ms. Scone --{E108:0010} {E1D1}Delicia --{E108:0018} I was wondering if you\ncould maybe--",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так вот, мисс Сдобина --{E108:0010} {E1D1}Делиция --{E108:0018} я хотела\nспросить, не могли бы вы--",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|7",
@@ -50039,8 +50039,8 @@
       "index": 7,
       "mode": 1,
       "en": "No!{E108:0018} How many times, you cheeky little imp!{E108:0018}\n{E1D1}Once your name's decided,{E108:0008} I can't change it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нет!{E108:0018} Сколько раз повторять, озорница ты этакая!{E108:0018}\n{E1D1}Раз прозвище выбрано,{E108:0008} менять его я не могу!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|8",
@@ -50049,8 +50049,8 @@
       "index": 8,
       "mode": 2,
       "en": "Dang...!{E108:0010} So much for the sneaky approach.{E108:0018}\nWhat kind of Great Thief am I...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот же...!{E108:0010} Вот тебе и хитрый подход.{E108:0018}\nКакой из меня Великий вор...?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020024FD|9",
@@ -50059,8 +50059,8 @@
       "index": 9,
       "mode": 2,
       "en": "...Not a very good one.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Так себе вор.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002507|0",
@@ -50069,8 +50069,8 @@
       "index": 0,
       "mode": 2,
       "en": "Who knew you could make a lamp out of rock salt?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кто бы знал, что из каменной соли делают лампы?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002507|1",
@@ -50079,8 +50079,8 @@
       "index": 1,
       "mode": 2,
       "en": "Of course you can, dear!{E108:0010} You wouldn't want to get it\nwet,{E108:0008} but it's fireproof!{E108:0010} And ever so sturdy!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну конечно, милая!{E108:0010} Мочить её не стоит,{E108:0008} зато\nогня не боится!{E108:0010} И крепкая — страсть!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002507|2",
@@ -50089,8 +50089,8 @@
       "index": 2,
       "mode": 2,
       "en": "...Sturdy enough to make for a surprisingly good\nmurder weapon, in fact.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Настолько крепкая, что выходит на редкость\nудобное орудие убийства.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002507|3",
@@ -50099,8 +50099,8 @@
       "index": 3,
       "mode": 3,
       "en": "Y-Yeah...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Д-Да уж...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002507|4",
@@ -50109,8 +50109,8 @@
       "index": 4,
       "mode": 2,
       "en": "(We know that the bulb in this lamp probably broke\nbecause it was used in the murder...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Мы знаем, что лампочка в ней, вероятно,\nразбилась при убийстве...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002507|5",
@@ -50119,8 +50119,8 @@
       "index": 5,
       "mode": 2,
       "en": "(...but then,{E108:0008} what happened to the other one...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...но тогда{E108:0008} куда делась вторая...?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200250D|0",
@@ -50129,8 +50129,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ooh, look at that!{E108:0010} {E188:002F0000}A picture of silly old me!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой, гляньте-ка!{E108:0010} {E188:002F0000}Это же я, глупая старушка!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200250D|1",
@@ -50139,8 +50139,8 @@
       "index": 1,
       "mode": 2,
       "en": "That's right.{E108:0010} You seem to have caught the artist's eye.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Именно.{E108:0010} Похоже, вы приглянулись художнику.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200250D|2",
@@ -50149,8 +50149,8 @@
       "index": 2,
       "mode": 2,
       "en": "You mean lovely Laurie Lambkin?{E108:0010}\nI'll have to have a word with him and say thanks!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это милый Лорюша-ягнюша?{E108:0010}\nНадо будет его поблагодарить!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200250D|3",
@@ -50159,8 +50159,8 @@
       "index": 3,
       "mode": 2,
       "en": "Heh.{E108:0010} Well, I'll be glad to introduce you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе.{E108:0010} Что ж, с радостью вас познакомлю.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200250D|4",
@@ -50169,8 +50169,8 @@
       "index": 4,
       "mode": 3,
       "en": "And...{E108:0008} {E107:0002}{E1D1}there's the evil smirk.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И вот...{E108:0008} {E107:0002}{E1D1}коварная ухмылочка.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002512|0",
@@ -50179,8 +50179,8 @@
       "index": 0,
       "mode": 2,
       "en": "Oho!{E108:0010} Those are Moody Judy's chocolates, aren't they?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ого!{E108:0010} Это же шоколад Джуди-Зануди, верно?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002512|1",
@@ -50189,8 +50189,8 @@
       "index": 1,
       "mode": 2,
       "en": "Oh,{E108:0008} but dearie me...{E108:0010} They're all a bit melted!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ох,{E108:0008} батюшки мои...{E108:0010} Да они же подтаяли!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002512|2",
@@ -50199,8 +50199,8 @@
       "index": 2,
       "mode": 2,
       "en": "You're supposed to eat them before that happens,{E108:0008} {E1D1}you\nsilly billy!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Их полагается съедать раньше,{E108:0008} {E1D1}глупыш\nты этакий!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002512|3",
@@ -50209,8 +50209,8 @@
       "index": 3,
       "mode": 2,
       "en": "Actually,{E108:0008} they were already like this when she gave\nthem to us.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вообще-то{E108:0008} они уже такими были, когда она\nнам их отдала.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002512|4",
@@ -50219,8 +50219,8 @@
       "index": 4,
       "mode": 2,
       "en": "Maybe she was taken in by your sweet face and\nbecame all hot and bothered,{E108:0010} huh, Milesey Smiles!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Может, её сразило ваше милое личико, вот её\nи бросило в жар,{E108:0010} а, Майлзушка-улыбушка!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002512|5",
@@ -50229,8 +50229,8 @@
       "index": 5,
       "mode": 1,
       "en": "Kay Faraday!{E108:0018} {E107:0002}I'll thank you never to call me that again!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кей Фарадей!{E108:0018} {E107:0002}Чтобы я больше этого не слышал!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002518|0",
@@ -50239,8 +50239,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ooh,{E108:0008} you really do carry some cute rubbish around\nwith you, don't you, Milesey Smiles?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ох,{E108:0008} и до чего же милый хлам ты с собой\nтаскаешь, Майлзушка-улыбушка!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002518|1",
@@ -50249,8 +50249,8 @@
       "index": 1,
       "mode": 2,
       "en": "What I could do is cover it in whipped cream for you,{E108:0010}\nthen sprinkle a few--",
-      "ru": "",
-      "status": "pending"
+      "ru": "А хочешь, я тебе его взбитыми сливками покрою,{E108:0010}\nа сверху посыплю--",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002518|2",
@@ -50259,8 +50259,8 @@
       "index": 2,
       "mode": 1,
       "en": "Th-There'll be no need for that, thank you, Ms. Scone!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Н-Не нужно, благодарю вас, мисс Сдобина!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|0",
@@ -50269,8 +50269,8 @@
       "index": 0,
       "mode": 2,
       "en": "What can you tell us about the various devices used to\ndecorate the gallery's exhibits?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что вы можете рассказать об устройствах,\nкоторыми украшены экспонаты галереи?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|1",
@@ -50279,8 +50279,8 @@
       "index": 1,
       "mode": 2,
       "en": "There seem to be some pretty specialized items in use.{E108:0010}\nLight-emitting devices,{E108:0008} luminous fabrics...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Здесь применяют довольно особые вещи.{E108:0010}\nСветоизлучающие устройства,{E108:0008} светящиеся ткани...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|2",
@@ -50289,8 +50289,8 @@
       "index": 2,
       "mode": 1,
       "en": "Oh,{E108:0018} {E107:0002}I can tell you ALL about those, dearie!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ох,{E108:0018} {E107:0002}об этом я расскажу тебе ВСЁ, голубчик!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|3",
@@ -50299,8 +50299,8 @@
       "index": 3,
       "mode": 2,
       "en": "After all,{E108:0008} {E188:00300000}{E1D5}I'm the one who gave them to Moody Judy!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ведь это{E108:0008} {E188:00300000}{E1D5}я подарила их Джуди-Зануди!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|4",
@@ -50309,8 +50309,8 @@
       "index": 4,
       "mode": 2,
       "en": "It was my way of saying sorry after I broke the rules\nall those years ago...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так я просила прощения за то, что нарушила\nправила восемнадцать лет назад...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|5",
@@ -50319,8 +50319,8 @@
       "index": 5,
       "mode": 2,
       "en": "I bought her four lovely new salt lamps,{E108:0008} and I gave her\nthe four pieces of luminous cloth I used for the contest.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Купила ей четыре новые соляные лампы{E108:0008} и отдала\nчетыре куска ткани, что были у меня на конкурсе.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|6",
@@ -50329,8 +50329,8 @@
       "index": 6,
       "mode": 1,
       "en": "Wow!{E108:0018} {E107:0002}{E1D5}That's super generous of you!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты!{E108:0018} {E107:0002}{E1D5}Вот это щедрость!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|7",
@@ -50339,8 +50339,8 @@
       "index": 7,
       "mode": 1,
       "en": "Tee hee hee!{E108:0018} {E107:0002}Well, us girls have to do our best, don't\nwe?{E108:0010} Not everybody understands, of course.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ти-хи-хи!{E108:0018} {E107:0002}Мы, девочки, должны стараться,\nверно?{E108:0010} Хотя понимают это не все.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|8",
@@ -50349,8 +50349,8 @@
       "index": 8,
       "mode": 2,
       "en": "That had better not be a dig at me, Delish!{E108:0010}\nI told you how kind I thought that was!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это, надеюсь, не камешек в мой огород, Деличка!{E108:0010}\nЯ ж говорил, что считаю это добрым делом!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|9",
@@ -50359,8 +50359,8 @@
       "index": 9,
       "mode": 2,
       "en": "Yes,{E108:0008} back when you were a dear,{E108:0008} sweet,{E108:0008} innocent baby\nboy!{E108:0010} What happened to you, eh?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да,{E108:0008} когда ты был милым,{E108:0008} сладким,{E108:0008} невинным\nмальчонкой!{E108:0010} И что же с тобой стало, а?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|10",
@@ -50369,8 +50369,8 @@
       "index": 10,
       "mode": 2,
       "en": "A...{E108:0008} {E188:002F0000}{E1D5}{E1D1}dear, sweet, innocent baby boy!?{E108:0010} Mr. Fender?{E108:0018}\n{E12F:00020002}{E1D1}Can't quite picture that, I have to say...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Милым...{E108:0008} {E188:002F0000}{E1D5}{E1D1}сладким, невинным мальчонкой!?{E108:0010}\nМистер Защитин?{E108:0018} {E12F:00020002}{E1D1}Честно говоря, не представляю...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|11",
@@ -50379,8 +50379,8 @@
       "index": 11,
       "mode": 2,
       "en": "So these decorations --{E108:0008} they're all the same as the ones\nyou saw eighteen years ago, correct?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Итак, это убранство --{E108:0008} всё то же самое, что вы\nвидели восемнадцать лет назад, верно?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|12",
@@ -50389,8 +50389,8 @@
       "index": 12,
       "mode": 3,
       "en": "Yup.{E108:0010} {E107:0002}Salt lamps,{E108:0008} glowing fabric,{E108:0008} light-emitting\ndoodads --{E108:0008} the whole bit.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага.{E108:0010} {E107:0002}Соляные лампы,{E108:0008} светящаяся ткань,{E108:0008} всякие\nсветяшки --{E108:0008} весь набор.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|13",
@@ -50399,8 +50399,8 @@
       "index": 13,
       "mode": 2,
       "en": "(There were four luminous cloths in use in the\nAutumn Wing.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(В Осеннем крыле было четыре куска\nсветящейся ткани.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|14",
@@ -50409,8 +50409,8 @@
       "index": 14,
       "mode": 2,
       "en": "(But I'm sure I saw another one somewhere...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но я точно видел где-то ещё один...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200251B|15",
@@ -50469,8 +50469,8 @@
       "index": 20,
       "mode": 2,
       "en": "(Maybe I should jog her memory with something so\nMs. Scone will tell us more...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Может, стоит освежить мисс Сдобиной память,\nчтобы она рассказала больше...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|0",
@@ -50479,8 +50479,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ms. Scone,{E108:0008} you're something of a specialist.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Сдобина,{E108:0008} вы ведь в некотором роде специалист.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|1",
@@ -50489,8 +50489,8 @@
       "index": 1,
       "mode": 2,
       "en": "How might someone learn to make the poison gas that\nwas used in the attack, hm?{E108:0010} Any ideas?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Откуда человек может узнать, как сделать тот\nсамый ядовитый газ?{E108:0010} Есть мысли?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|2",
@@ -50499,8 +50499,8 @@
       "index": 2,
       "mode": 2,
       "en": "Well, any pharmacist who's ever handled Infesticide\nUltra would know, for a start!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, для начала — любой фармацевт, который имел\nдело с «Морилкой Ультра»!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|3",
@@ -50509,8 +50509,8 @@
       "index": 3,
       "mode": 2,
       "en": "After all,{E108:0008} it says it right there on the label:{E108:0010} {E188:00300000}{E1D5}\"{E041}Do not mix\nwith products containing Ubiquium!{E108:0010} Ever!{E040}\"",
-      "ru": "",
-      "status": "pending"
+      "ru": "Там ведь{E108:0008} прямо на этикетке написано:{E108:0010} {E188:00300000}{E1D5}«{E041}Не смешивать\nсо средствами с Убиквиумом!{E108:0010} Никогда!{E040}»",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|4",
@@ -50519,8 +50519,8 @@
       "index": 4,
       "mode": 2,
       "en": "But what about a layperson?{E108:0010} It's unlikely they'd know,\nwouldn't you say?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А человек несведущий?{E108:0010} Едва ли он это знает,\nкак по-вашему?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|5",
@@ -50529,8 +50529,8 @@
       "index": 5,
       "mode": 3,
       "en": "Hmm...{E108:0010} I suppose so, yes...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хмм...{E108:0010} Пожалуй, что так...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|6",
@@ -50539,8 +50539,8 @@
       "index": 6,
       "mode": 2,
       "en": "Well,{E108:0008} {E1D1}not unless they'd had a nose through the\nultimate cookbook, anyway!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Разве что{E108:0008} {E1D1}сунул нос в Заветную книгу\nрецептов!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|7",
@@ -50549,8 +50549,8 @@
       "index": 7,
       "mode": 2,
       "en": "(The prize from the contest eighteen years ago...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Приз конкурса восемнадцатилетней давности...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002530|8",
@@ -50559,8 +50559,8 @@
       "index": 8,
       "mode": 2,
       "en": "The recipe for making Infesticide Ultra,{E108:0008} along with that\nnot mixing with Ubiquium bit,{E108:0008} is {E043}in there{E040}, you know.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Рецепт «Морилки Ультра»{E108:0008} и та самая оговорка\nпро Убиквиум{E108:0008} — всё {E043}там{E040}, знаешь ли.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002539|0",
@@ -50569,8 +50569,8 @@
       "index": 0,
       "mode": 2,
       "en": "So you're familiar with the contents of the book?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, содержание книги вам знакомо?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002539|1",
@@ -50579,8 +50579,8 @@
       "index": 1,
       "mode": 1,
       "en": "Oh, yes, dear!{E108:0018} {E107:0002}I know it inside-out!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О да, милый!{E108:0018} {E107:0002}Знаю её вдоль и поперёк!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002539|2",
@@ -50589,8 +50589,8 @@
       "index": 2,
       "mode": 2,
       "en": "Because I work for {E188:00300000}{E1D5}the Tangaroa Group, you see.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я ведь работаю в {E188:00300000}{E1D5}Группе Тангароа, вот в чём дело.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002539|3",
@@ -50599,8 +50599,8 @@
       "index": 3,
       "mode": 2,
       "en": "We're the company behind {E041}Coldkiller X{E040}!{E108:0010}\nI'm sure you've heard of it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это мы делаем {E041}«Простудобой Икс»{E040}!{E108:0010}\nНаверняка ты о нём слышал!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002539|4",
@@ -50609,8 +50609,8 @@
       "index": 4,
       "mode": 3,
       "en": "(Coldkiller X...{E108:0010} {E107:0002}Fights back sniffles and sneezes with\nease...{E108:0008} apparently.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(«Простудобой Икс»...{E108:0010} {E107:0002}Насморк и чих одолеет\nиграючи...{E108:0008} если верить рекламе.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002539|5",
@@ -50619,8 +50619,8 @@
       "index": 5,
       "mode": 2,
       "en": "After Sammypoople was found guilty,{E108:0008} the company\ntook custody of the book.",
-      "ru": "",
-      "status": "pending"
+      "ru": "После приговора Самсончику-пупсончику{E108:0008} книга\nотошла компании.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002539|6",
@@ -50629,8 +50629,8 @@
       "index": 6,
       "mode": 2,
       "en": "But they only grant their most trusted people access to\nit, of course.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но допускают к ней, конечно, только самых\nдоверенных людей.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002539|7",
@@ -50639,8 +50639,8 @@
       "index": 7,
       "mode": 2,
       "en": "(Which means Ms. Scone is one of these \"elites\",\nI suppose...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Стало быть, мисс Сдобина — из этих самых\n«избранных»...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|0",
@@ -50649,8 +50649,8 @@
       "index": 0,
       "mode": 2,
       "en": "Why didn't you want me to know you had a piece of\nluminous cloth in your bag?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Почему вы скрывали, что у вас в сумке лежит\nкусок светящейся ткани?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|1",
@@ -50659,8 +50659,8 @@
       "index": 1,
       "mode": 4,
       "en": "Ohhh...{E108:0018} {E107:0002}Well, I suppose there's no point hiding it now,\nis there...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ох-х...{E108:0018} {E107:0002}Что ж, теперь уж прятать это ни к чему,\nверно...?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|2",
@@ -50669,8 +50669,8 @@
       "index": 2,
       "mode": 2,
       "en": "If you must know,{E108:0008} I fished it out of the fountain.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Если уж так хочешь знать,{E108:0008} я выловила её\nиз фонтана.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|3",
@@ -50679,8 +50679,8 @@
       "index": 3,
       "mode": 2,
       "en": "It was right before they called me into the Autumn\nWing.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как раз перед тем, как меня позвали\nв Осеннее крыло.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|4",
@@ -50689,8 +50689,8 @@
       "index": 4,
       "mode": 2,
       "en": "(So Larry's sketch of Ms. Scone is of when she was\ntrying to retrieve the cloth...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Значит, на наброске Ларри мисс Сдобина как раз\nдостаёт эту ткань...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|5",
@@ -50699,8 +50699,8 @@
       "index": 5,
       "mode": 2,
       "en": "At first,{E108:0008} I thought it was one of the ones I'd given\nMoody Judy...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сперва{E108:0008} я решила, что это одна из тех, что я\nотдала Джуди-Зануди...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|6",
@@ -50709,8 +50709,8 @@
       "index": 6,
       "mode": 2,
       "en": "One of the four you'd given to the gallery, correct?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Одна из четырёх, что вы отдали галерее, верно?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|7",
@@ -50719,8 +50719,8 @@
       "index": 7,
       "mode": 2,
       "en": "...Exactly.{E108:0010} But all four were being used in the Autumn\nWing, weren't they?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Именно.{E108:0010} Но все четыре были в Осеннем крыле,\nне правда ли?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|8",
@@ -50729,8 +50729,8 @@
       "index": 8,
       "mode": 3,
       "en": "So I realized...",
-      "ru": "",
-      "status": "pending"
+      "ru": "И тут до меня дошло...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|9",
@@ -50739,8 +50739,8 @@
       "index": 9,
       "mode": 2,
       "en": "...it must be the one that went missing all those years\nago!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...это же та самая, что пропала\nвосемнадцать лет назад!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|11",
@@ -50749,8 +50749,8 @@
       "index": 11,
       "mode": 2,
       "en": "I'd already had my Infesticide Ultra pinched and used\nto make poison gas.",
-      "ru": "",
-      "status": "pending"
+      "ru": "У меня уже стянули «Морилку Ультра» и сделали\nиз неё ядовитый газ.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|12",
@@ -50759,8 +50759,8 @@
       "index": 12,
       "mode": 2,
       "en": "If one of my cloths turned out to have been used in\nsome sort of dastardly deed, too,{E108:0008} well...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А если бы ещё и моя ткань оказалась замешана\nв каком-нибудь злодействе,{E108:0008} то...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|13",
@@ -50769,8 +50769,8 @@
       "index": 13,
       "mode": 2,
       "en": "...I was going to look guilty as sin, wasn't I?{E108:0010} So I kept it\nhidden in my bag and hoped for the best!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...вот я и вышла бы виноватой, верно?{E108:0010} Так что\nдержала её в сумке да надеялась на авось!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|14",
@@ -50789,8 +50789,8 @@
       "index": 15,
       "mode": 2,
       "en": "Ooh,{E108:0008} {E188:00300000}{E1D5}it does feel good to get it off my chest, though!{E108:0010}\nStress is no good for the complexion!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ох,{E108:0008} {E188:00300000}{E1D5}зато как гора с плеч!{E108:0010}\nНервы для цвета лица — сущая беда!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|16",
@@ -50799,8 +50799,8 @@
       "index": 16,
       "mode": 3,
       "en": "(So the cloth that disappeared eighteen years ago...{E108:0010}\nThe one that the victim was wrapped in...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Итак, ткань, пропавшая восемнадцать лет назад...{E108:0010}\nТа самая, в которую был завёрнут потерпевший...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|17",
@@ -50809,8 +50809,8 @@
       "index": 17,
       "mode": 2,
       "en": "(...just happens to reappeared in the fountain at the\nsame time as the body...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...всплыла в фонтане ровно тогда же,\nкогда и тело...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002541|18",
@@ -50819,8 +50819,8 @@
       "index": 18,
       "mode": 3,
       "en": "Luminous Cloth data updated\nin my Organizer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Светящаяся ткань» обновлены\nв органайзере.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002554|0",
@@ -50829,8 +50829,8 @@
       "index": 0,
       "mode": 2,
       "en": "You had a piece of fabric like this in your bag,{E108:0008} did you\nnot, Ms. Scone?{E108:0010} Albeit a somewhat...{E108:0008} grimier one.",
-      "ru": "",
-      "status": "pending"
+      "ru": "У вас в сумке лежал такой же лоскут,{E108:0008} не так ли,\nмисс Сдобина?{E108:0010} Разве что...{E108:0008} погрязнее.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002554|1",
@@ -50839,8 +50839,8 @@
       "index": 1,
       "mode": 1,
       "en": "Grimy!?{E108:0018} {E107:0002}How rude!{E108:0010} You won't get people to cooperate\nwith your little investigation like that, young man!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Грязный!?{E108:0018} {E107:0002}Какая грубость!{E108:0010} Так, молодой человек,\nникто вам в вашем следствии помогать не станет!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002554|2",
@@ -50849,8 +50849,8 @@
       "index": 2,
       "mode": 2,
       "en": "Shall I call it a {E1D1}dish towel then?{E108:0010} Perhaps you used it to\nwipe up some sort of spillage...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тогда назовём это {E1D1}кухонным полотенцем?{E108:0010} Может, вы\nим что-то пролитое вытирали...?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002554|3",
@@ -50859,8 +50859,8 @@
       "index": 3,
       "mode": 1,
       "en": "A spillage, he says!{E108:0018} The cheek!{E108:0018} {E188:00300000}{E1D5}That's a piece of highly\nspecialized luminous cloth!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пролитое, вы слышали!{E108:0018} Каков нахал!{E108:0018} {E188:00300000}{E1D5}Это особая\nсветящаяся ткань высшего разбора!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002554|4",
@@ -50869,8 +50869,8 @@
       "index": 4,
       "mode": 2,
       "en": "...Oh.{E108:0010} {E1D1}I probably shouldn't have told you that...!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Ой.{E108:0010} {E1D1}Пожалуй, не стоило мне этого говорить...!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002554|5",
@@ -50879,8 +50879,8 @@
       "index": 5,
       "mode": 2,
       "en": "...I think I'd like to know a little more about this\n\"highly specialized luminous cloth\", if you don't mind.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Пожалуй, я хотел бы узнать побольше об этой\n«светящейся ткани высшего разбора», если можно.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200255A|0",
@@ -50889,8 +50889,8 @@
       "index": 0,
       "mode": 2,
       "en": "M-Mr. Winner was very clear that {E1D1}you're only allowed\nto investigate in this room.",
-      "ru": "",
-      "status": "pending"
+      "ru": "М-Мистер Победин ясно сказал, что {E1D1}осматривать\nвам разрешено только этот зал.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200255A|1",
@@ -50899,8 +50899,8 @@
       "index": 1,
       "mode": 2,
       "en": "So I'm afraid I can't let you pass!{E108:0018}\nSorry, sir!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так что пропустить вас я не могу!{E108:0018}\nИзвините!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200255A|2",
@@ -50909,8 +50909,8 @@
       "index": 2,
       "mode": 2,
       "en": "It wouldn't make much difference if you did, Officer.{E108:0010}\nYou're standing in front of a wall.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это мало что изменило бы, офицер.{E108:0010}\nВы стоите перед стеной.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200255A|3",
@@ -50919,8 +50919,8 @@
       "index": 3,
       "mode": 1,
       "en": "Oh!{E108:0010} {E1D1}B-But we all know a few bricks won't stop you,\nMr. Miles Edgeworth, sir!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой!{E108:0010} {E1D1}Н-Но мы-то знаем, что вас пара кирпичей\nне остановит, мистер Майлз Эджворт!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200255A|4",
@@ -50929,8 +50929,8 @@
       "index": 4,
       "mode": 2,
       "en": "Wow...{E108:0010}\n{E107:0001}{E1D1}{E188:00310000}He actually sounds kinda scared of you!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты...{E108:0010}\n{E107:0001}{E1D1}{E188:00310000}Он вас, похоже, и правда побаивается!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200255A|5",
@@ -50939,8 +50939,8 @@
       "index": 5,
       "mode": 2,
       "en": "(Just what kind of reputation do I have down at the\nprecinct...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Какая же обо мне слава ходит\nв участке...?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002560|0",
@@ -50949,8 +50949,8 @@
       "index": 0,
       "mode": 2,
       "en": "The body's been taken back to the lab, sir.{E108:0010}\nAutopsy's underway.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тело увезли в лабораторию.{E108:0010}\nВскрытие уже идёт.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002560|1",
@@ -50959,8 +50959,8 @@
       "index": 1,
       "mode": 2,
       "en": "And how's the rest of the fountain looking?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А что с самим фонтаном?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002560|2",
@@ -50969,8 +50969,8 @@
       "index": 2,
       "mode": 2,
       "en": "Rather beautiful, actually, sir.{E108:0010}\nThe water's crystal clear, and kind of soothing...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да красиво, если честно.{E108:0010}\nВода прозрачная, аж на душе спокойно...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002560|3",
@@ -50979,8 +50979,8 @@
       "index": 3,
       "mode": 2,
       "en": "(...Almost as if there wasn't a body floating in it not so\nlong ago, hm?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Будто и не плавало в нём тело\nсовсем недавно, да?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002564|0",
@@ -50989,8 +50989,8 @@
       "index": 0,
       "mode": 2,
       "en": "Hey there, Milesarino!{E108:0010}\nWhat's the situation with the investigation?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Привет, Майлзюша!{E108:0010}\nКак там дела со следствием?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002564|1",
@@ -50999,8 +50999,8 @@
       "index": 1,
       "mode": 2,
       "en": "Things are...{E108:0010} progressing.{E108:0010} I think a fuller picture of\nwhat happened is beginning to emerge.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Дела...{E108:0010} движутся.{E108:0010} Кажется, картина случившегося\nначинает складываться.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002564|2",
@@ -51009,8 +51009,8 @@
       "index": 2,
       "mode": 1,
       "en": "Good to hear!{E108:0018} {E107:0002}Guess I better step up my game, too,\nthen!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Рад слышать!{E108:0018} {E107:0002}Значит, и мне пора поднажать!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002567|0",
@@ -51019,8 +51019,8 @@
       "index": 0,
       "mode": 2,
       "en": "Miles Edgeworth,{E108:0008} prosecutor.{E108:0010} I gotta say,{E108:0008} I never saw\nthat coming.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Майлз Эджворт{E108:0008} — прокурор.{E108:0010} Скажу честно,{E108:0008} вот уж\nчего не ждал.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002567|1",
@@ -51029,8 +51029,8 @@
       "index": 1,
       "mode": 3,
       "en": "...I'm sorry, Fender.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Простите, Защитин.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002567|2",
@@ -51039,8 +51039,8 @@
       "index": 2,
       "mode": 2,
       "en": "Hey, hey!{E108:0010} {E107:0001}That wasn't a dig!{E108:0018}\n{E107:0002}You had your reasons, I'm sure.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э, стой!{E108:0010} {E107:0001}Это был не упрёк!{E108:0018}\n{E107:0002}У тебя были свои причины, я уверен.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002567|3",
@@ -51049,8 +51049,8 @@
       "index": 3,
       "mode": 2,
       "en": "I'm just...{E108:0010} glad you'll get to see what the courtroom\nlooks like from the other side for once.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я просто...{E108:0010} рад, что ты хоть раз увидишь зал суда\nс другой стороны.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002567|4",
@@ -51059,8 +51059,8 @@
       "index": 4,
       "mode": 2,
       "en": "It's a whole different ball game,{E108:0008} let me tell ya.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это, скажу я тебе,{E108:0008} совсем другой коленкор.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002567|5",
@@ -51069,8 +51069,8 @@
       "index": 5,
       "mode": 2,
       "en": "(Actually,{E108:0008} I have stood at the defense's bench once\nbefore...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Вообще-то{E108:0008} я однажды уже стоял\nза скамьёй защиты...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002567|6",
@@ -51079,8 +51079,8 @@
       "index": 6,
       "mode": 2,
       "en": "(And I have to say...{E108:0010} it wasn't bad.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(И скажу честно...{E108:0010} было неплохо.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200256E|0",
@@ -51089,8 +51089,8 @@
       "index": 0,
       "mode": 3,
       "en": "IS-7's not just another case for me, Miles.{E108:0010}\nYou know that, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "IS-7 для меня не просто дело, Майлз.{E108:0010}\nТы ведь знаешь?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200256E|1",
@@ -51099,8 +51099,8 @@
       "index": 1,
       "mode": 2,
       "en": "...Of course.{E108:0010} It's important to me, too.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Разумеется.{E108:0010} Для меня оно тоже важно.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200256E|2",
@@ -51109,8 +51109,8 @@
       "index": 2,
       "mode": 2,
       "en": "I've put some serious thought into this little mystery\nover the years...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я за эти годы немало думал над этой\nзагадкой...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200256E|3",
@@ -51119,8 +51119,8 @@
       "index": 3,
       "mode": 2,
       "en": "Like,{E108:0008} just what do the letters \"IS\" stand for?{E108:0010}\n{E188:00340000}{E1D1}\"Indecent Snacks\"?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну вот{E108:0008} что вообще значат буквы «IS»?{E108:0010}\n{E188:00340000}{E1D1}«Игривые Сладости»?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200256E|4",
@@ -51129,8 +51129,8 @@
       "index": 4,
       "mode": 1,
       "en": "\"Instant Sweets\"?{E108:0018}\nNo, wait!{E108:0010} \"Ironic Strudels\"!",
-      "ru": "",
-      "status": "pending"
+      "ru": "«Изумительные Сласти»?{E108:0018}\nНет, стой!{E108:0010} «Ироничные Струдели»!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200256E|5",
@@ -51139,8 +51139,8 @@
       "index": 5,
       "mode": 2,
       "en": "See!{E108:0010} There are so many options,{E108:0008} I can't pick just one!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот!{E108:0010} Вариантов столько,{E108:0008} что не выбрать один!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200256E|6",
@@ -51149,8 +51149,8 @@
       "index": 6,
       "mode": 2,
       "en": "(Sometimes,{E108:0008} I seriously don't know whether Fender is\nbeing serious or not...{E108:0010} And this is one of those times.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Порой{E108:0008} я всерьёз не понимаю, шутит Защитин\nили нет...{E108:0010} Сейчас как раз такой случай.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002575|0",
@@ -51159,8 +51159,8 @@
       "index": 0,
       "mode": 2,
       "en": "One of those pieces of cloth went missing eighteen\nyears ago now.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Один из тех кусков ткани пропал восемнадцать\nлет назад.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002575|1",
@@ -51169,8 +51169,8 @@
       "index": 1,
       "mode": 2,
       "en": "Hard to lose something like that, right?{E108:0010}\nLights up like a danged Christmas tree.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Такое ведь не так просто потерять, а?{E108:0010}\nСветится, что твоя ёлка.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002575|2",
@@ -51179,8 +51179,8 @@
       "index": 2,
       "mode": 2,
       "en": "It's possible no one just happened to have found it.{E108:0010}\nAlthough,{E108:0008} the more likely scenario is...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Возможно, её просто никто не нашёл.{E108:0010}\nХотя{E108:0008} куда вероятнее другое...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002575|3",
@@ -51189,8 +51189,8 @@
       "index": 3,
       "mode": 2,
       "en": "...That somebody decided to play hide the thimble.{E108:0018}\n{E12F:000A0002}{E188:002F0000}The question is who?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Что кто-то решил поиграть в прятки.{E108:0018}\n{E12F:000A0002}{E188:002F0000}Вопрос — кто?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002579|0",
@@ -51199,8 +51199,8 @@
       "index": 0,
       "mode": 2,
       "en": "The ultimate cookbook...{E108:0010} I'll bet there's some\nhumdinging recipes in there, huh?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Заветная книга рецептов...{E108:0010} Небось там рецепты —\nзакачаешься, а?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002579|1",
@@ -51209,8 +51209,8 @@
       "index": 1,
       "mode": 2,
       "en": "Any you might be interested in, perhaps?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Есть там что-нибудь и для вас?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002579|2",
@@ -51219,8 +51219,8 @@
       "index": 2,
       "mode": 2,
       "en": "Who, me?{E108:0010} Not that I can think of.{E108:0010}\nWhat about you, Kaysterino?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я-то?{E108:0010} Да вроде нет.{E108:0010}\nА ты как, Кеюша?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002579|3",
@@ -51229,8 +51229,8 @@
       "index": 3,
       "mode": 2,
       "en": "Uh...{E108:0010} I guess I'd like to be a genius...{E108:0010} and invisible...{E108:0010}\n{E107:0001}{E12F:00020008}{E188:00340000}{E1D1}Ooh,{E108:0008} and able to fly!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э...{E108:0010} Хочу быть гением...{E108:0010} и невидимой...{E108:0010}\n{E107:0001}{E12F:00020008}{E188:00340000}{E1D1}Ой,{E108:0008} и чтоб летать умела!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002579|4",
@@ -51239,8 +51239,8 @@
       "index": 4,
       "mode": 2,
       "en": "...We're talking about medicines here, Kay.{E108:0010}\nNot miracles.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Речь о лекарствах, Кей.{E108:0010}\nНе о чудесах.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200257E|0",
@@ -51249,8 +51249,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ahh,{E108:0008} this takes me back...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эх,{E108:0008} как будто вчера всё было...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200257E|1",
@@ -51259,8 +51259,8 @@
       "index": 1,
       "mode": 2,
       "en": "Perhaps you could take a closer look?{E108:0010}\nYou might notice something new.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Может, посмотрите повнимательнее?{E108:0010}\nВдруг заметите что-то новое.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200257E|2",
@@ -51269,8 +51269,8 @@
       "index": 2,
       "mode": 2,
       "en": "Thing is, Milesarino...{E108:0010} I've been racking my brains\nabout this case for eighteen years now.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Такое дело, Майлзюша...{E108:0010} Я над этим делом\nголову ломаю восемнадцать лет.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200257E|3",
@@ -51279,8 +51279,8 @@
       "index": 3,
       "mode": 2,
       "en": "I wouldn't hold out much hope for a eureka moment.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На озарение я бы особо не рассчитывал.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200257E|4",
@@ -51289,8 +51289,8 @@
       "index": 4,
       "mode": 2,
       "en": "You, on the other hand --{E108:0008} fresh eyes, fresh face, fresh\nattitude...{E108:0010} {E188:002F0000}You might spot something.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А вот ты --{E108:0008} свежий глаз, свежее лицо, свежий\nнастрой...{E108:0010} {E188:002F0000}Ты можешь и заметить.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200257E|6",
@@ -51299,8 +51299,8 @@
       "index": 6,
       "mode": 2,
       "en": "I'm gonna take a stab at what His Coolness is saying,\nbut...{E108:0018} {E12F:00020008}{E188:00300000}\"No comment.\"",
-      "ru": "",
-      "status": "pending"
+      "ru": "Попробую угадать, что говорит Его Крутейшество,\nно...{E108:0018} {E12F:00020008}{E188:00300000}«Без комментариев».",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200257E|7",
@@ -51309,8 +51309,8 @@
       "index": 7,
       "mode": 2,
       "en": "Eh heh heh.{E108:0010} Alright,{E108:0008} I'll try not to pass the buck next\ntime.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-хе-хе.{E108:0010} Ладно,{E108:0008} в другой раз постараюсь\nне спихивать.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200257E|8",
@@ -51319,8 +51319,8 @@
       "index": 8,
       "mode": 2,
       "en": "(...Well,{E108:0008} that was a waste of time.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Что ж,{E108:0008} время потрачено впустую.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002587|0",
@@ -51329,8 +51329,8 @@
       "index": 0,
       "mode": 2,
       "en": "Ooh,{E108:0010} {E107:0001}{E188:00300000}Judy's special home-made chocolate delights!{E108:0018}\n{E107:0002}The sweetest treat a guy could hope to eat!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О-о,{E108:0010} {E107:0001}{E188:00300000}фирменный шоколад Джуди!{E108:0018}\n{E107:0002}Слаще лакомства и желать нельзя!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002587|1",
@@ -51339,8 +51339,8 @@
       "index": 1,
       "mode": 2,
       "en": "Heh heh.{E108:0010} You know what goes well with one of these,\nMiles-o?{E108:0010} A nice, strong coffee,{E108:0008} that's what.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе-хе.{E108:0010} Знаешь, что к такому идёт лучше всего,\nМайлзик?{E108:0010} Крепкий-крепкий кофе,{E108:0008} вот что.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002587|2",
@@ -51349,8 +51349,8 @@
       "index": 2,
       "mode": 2,
       "en": "Is that so?{E108:0010} I'll have to give it a try.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот как?{E108:0010} Надо будет попробовать.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002587|3",
@@ -51359,8 +51359,8 @@
       "index": 3,
       "mode": 2,
       "en": "Did I tell you these are Samson's favorite?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я говорил, что это любимое лакомство Самсона?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002587|4",
@@ -51369,8 +51369,8 @@
       "index": 4,
       "mode": 2,
       "en": "I hope they still bring him some sweet comfort after\neverything he's been through...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Надеюсь, они и теперь его хоть немного утешают\nпосле всего, что он пережил...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200258C|0",
@@ -51429,8 +51429,8 @@
       "index": 0,
       "mode": 2,
       "en": "This case seems to have a lot in common with the\nincident from eighteen years ago...",
-      "ru": "",
-      "status": "pending"
+      "ru": "У этого дела, похоже, немало общего\nс происшествием восемнадцатилетней давности...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|1",
@@ -51439,8 +51439,8 @@
       "index": 1,
       "mode": 2,
       "en": "And how!{E108:0010} It's got the lot!{E108:0018} Melting statues in the Winter\nWing,{E108:0008} and even the murder victim's body!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё как!{E108:0010} Всё как тогда!{E108:0018} Тающие статуи в Зимнем\nкрыле{E108:0008} — и даже тело убитого!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|2",
@@ -51449,8 +51449,8 @@
       "index": 2,
       "mode": 2,
       "en": "But how did nobody ever figure out that the body\nhad gone missing?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но как же никто не заметил,\nчто тело пропало?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|3",
@@ -51459,8 +51459,8 @@
       "index": 3,
       "mode": 2,
       "en": "...Frost had no family apart from his son.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Из родни у Морозова был только сын.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|4",
@@ -51469,8 +51469,8 @@
       "index": 4,
       "mode": 3,
       "en": "And, well...{E108:0010} {E107:0002}the kid kinda vanished.{E108:0010} Nobody's seen him\nsince around the time of the incident.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А он...{E108:0010} {E107:0002}вроде как исчез.{E108:0010} Никто его не видел\nс самого того происшествия.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|5",
@@ -51479,8 +51479,8 @@
       "index": 5,
       "mode": 2,
       "en": "Gusto's son, too.{E108:0010} Him and his best pal from school\nboth just up and disappeared.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И сын Густо тоже.{E108:0010} Он и его лучший школьный друг\nвзяли да и пропали.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|6",
@@ -51489,8 +51489,8 @@
       "index": 6,
       "mode": 1,
       "en": "What!?{E108:0018} {E107:0002}And they were never found!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что!?{E108:0018} {E107:0002}И их так и не нашли!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|7",
@@ -51499,8 +51499,8 @@
       "index": 7,
       "mode": 2,
       "en": "Gusto's boy wasn't.{E108:0010} Not as far as I heard, anyhow.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сына Густо — нет.{E108:0010} По крайней мере, я не слышал.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|8",
@@ -51509,8 +51509,8 @@
       "index": 8,
       "mode": 2,
       "en": "Guess Frost's kid turned up in the end, though.{E108:0010}\nHe collected his inheritance at some point.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А вот сын Морозова, похоже, всё же объявился.{E108:0010}\nНаследство-то он в своё время получил.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|9",
@@ -51519,8 +51519,8 @@
       "index": 9,
       "mode": 2,
       "en": "But yeah,{E108:0008} with no family around just after the incident,{E108:0008}\nFrost got no funeral,{E108:0008} no nothing.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но да,{E108:0008} родни сразу после случившегося не было,{E108:0008}\nи Морозова не хоронили{E108:0008} — вообще ничего.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|10",
@@ -51529,8 +51529,8 @@
       "index": 10,
       "mode": 2,
       "en": "So no need for the police to release the body.{E108:0010} And no\nneed for anybody to find out they didn't have it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Полиции и не надо было выдавать тело.{E108:0010} И никому\nне надо было узнавать, что тела у них нет.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|11",
@@ -51539,8 +51539,8 @@
       "index": 11,
       "mode": 2,
       "en": "They filed their fake autopsy report,{E108:0008} and nobody was\nany the wiser.{E108:0010} Well,{E108:0008} almost nobody...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Подшили липовое заключение{E108:0008} — и никто ничего\nне заподозрил.{E108:0010} Ну,{E108:0008} почти никто...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|02002591|12",
@@ -51549,8 +51549,8 @@
       "index": 12,
       "mode": 2,
       "en": "(I still can't believe Mr. von Karma would've {E1D1}stooped\nso low...!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(До сих пор не верится, что мистер фон Карма {E1D1}пал\nтак низко...!)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|0",
@@ -51559,8 +51559,8 @@
       "index": 0,
       "mode": 2,
       "en": "Tell me, Fender...{E108:0010}\nWhat kind of person is Ms. Bound?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Скажите, Защитин...{E108:0010}\nЧто за человек мисс Долгова?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|1",
@@ -51569,8 +51569,8 @@
       "index": 1,
       "mode": 2,
       "en": "Huh?{E108:0018} {E1D1}Wait a minute...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0018} {E1D1}Погоди-ка...",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|2",
@@ -51579,8 +51579,8 @@
       "index": 2,
       "mode": 2,
       "en": "Don't tell me you've got a thing for her, Milester?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Уж не запал ли ты на неё, Майлзыч?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|3",
@@ -51589,8 +51589,8 @@
       "index": 3,
       "mode": 3,
       "en": "...I do not.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Не запал.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|4",
@@ -51599,8 +51599,8 @@
       "index": 4,
       "mode": 2,
       "en": "Chill, chill!{E108:0010} I'm just yanking your chain!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тише, тише!{E108:0010} Да я просто подкалываю!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|5",
@@ -51609,8 +51609,8 @@
       "index": 5,
       "mode": 2,
       "en": "Anyway,{E108:0008} what can I say about Judes?{E108:0018}\nWell...{E108:0008} she's a real brave trooper, for one.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В общем,{E108:0008} что сказать про Джудси?{E108:0018}\nДа вот...{E108:0008} стойкая она, каких поискать.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|6",
@@ -51619,8 +51619,8 @@
       "index": 6,
       "mode": 2,
       "en": "What else do you call someone who waits around for\neighteen whole years like she has for Samson?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как ещё назвать того, кто ждёт целых\nвосемнадцать лет, как она ждала Самсона?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|7",
@@ -51629,8 +51629,8 @@
       "index": 7,
       "mode": 2,
       "en": "Even after his extended family kicked her out of this\nplace.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Даже после того, как его родня выставила её\nотсюда.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|8",
@@ -51639,8 +51639,8 @@
       "index": 8,
       "mode": 1,
       "en": "Whaaaaaat!?{E108:0018}\n{E107:0002}{E1D1}They threw her out!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что-о-о-о-о!?{E108:0018}\n{E107:0002}{E1D1}Её выгнали!?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|9",
@@ -51649,8 +51649,8 @@
       "index": 9,
       "mode": 3,
       "en": "Yup.{E108:0010} {E107:0002}Judes wasn't technically part of the family.{E108:0010}\nSo there was nothing she could do.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага.{E108:0010} {E107:0002}Джудси формально в семью не входила.{E108:0010}\nТак что поделать она ничего не могла.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|10",
@@ -51659,8 +51659,8 @@
       "index": 10,
       "mode": 2,
       "en": "She had nothing.{E108:0010} Nobody.{E108:0010} And no job after Samson\ntook the fall.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ни кола ни двора.{E108:0010} Никого.{E108:0010} И работы никакой,\nкогда Самсон сел.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|11",
@@ -51669,8 +51669,8 @@
       "index": 11,
       "mode": 2,
       "en": "So she had no choice but to take what he'd taught her\nand make her own way in showbiz.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пришлось ей взять то, чему он её научил,\nи пробиваться в шоу-бизнесе самой.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|12",
@@ -51679,8 +51679,8 @@
       "index": 12,
       "mode": 2,
       "en": "She's retired from all that now, though.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Правда, теперь она с этим завязала.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|13",
@@ -51689,8 +51689,8 @@
       "index": 13,
       "mode": 2,
       "en": "Yes...{E108:0010} Why did she retire?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да...{E108:0010} А почему завязала?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|14",
@@ -51699,8 +51699,8 @@
       "index": 14,
       "mode": 2,
       "en": "...She'd finally made enough to buy the old place back.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Наконец скопила, чтобы выкупить особняк.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|0200259E|15",
@@ -51709,8 +51709,8 @@
       "index": 15,
       "mode": 2,
       "en": "She even {E043}got the ultimate cookbook back{E040} from the\nTangaroa Group after they basically stole it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Она даже {E043}вернула Заветную книгу рецептов{E040}\nу Группы Тангароа — те её попросту прикарманили.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025AE|0",
@@ -51719,8 +51719,8 @@
       "index": 0,
       "mode": 2,
       "en": "Guess this place and everything to do with it was all\nshe ever cared about.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Похоже, это место и всё, что с ним связано,\nбыло для неё единственным.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025AE|1",
@@ -51729,8 +51729,8 @@
       "index": 1,
       "mode": 2,
       "en": "So she just wanted it back.{E108:0010} All of it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот она и хотела всё вернуть.{E108:0010} Всё до крупицы.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025AE|2",
@@ -51739,8 +51739,8 @@
       "index": 2,
       "mode": 2,
       "en": "(Fender seems very sympathetic to Ms. Bound's\nplight...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Защитин очень сочувствует\nмисс Долговой...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025AE|3",
@@ -51749,8 +51749,8 @@
       "index": 3,
       "mode": 2,
       "en": "(But from a less charitable perspective,{E108:0008} she has, in a\nway,{E108:0008} taken everything of Mr. Tangaroa's for herself.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но, если без снисхождения,{E108:0008} она ведь в каком-то\nсмысле{E108:0008} присвоила себе всё, что было у Тангароа.)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B2|0",
@@ -51759,8 +51759,8 @@
       "index": 0,
       "mode": 2,
       "en": "Do you mind, Mr. Winner?{E108:0010} You're in my way.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы позволите, мистер Победин?{E108:0010} Вы мне мешаете.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B2|1",
@@ -51769,8 +51769,8 @@
       "index": 1,
       "mode": 1,
       "en": "I DO mind, actually!{E108:0010} {E1D1}And I'm not going anywhere!{E108:0018}\nYou'll just have to go around me!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А вот НЕ позволю!{E108:0010} {E1D1}И никуда я не уйду!{E108:0018}\nОбходите меня стороной!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B2|2",
@@ -51779,8 +51779,8 @@
       "index": 2,
       "mode": 2,
       "en": "Well, we just thought you might want to move to a\nBETTER spot,{E108:0008} that's all!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да мы просто подумали, что ты захочешь встать\nна МЕСТО ПОЛУЧШЕ,{E108:0008} вот и всё!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B2|3",
@@ -51789,8 +51789,8 @@
       "index": 3,
       "mode": 2,
       "en": "What better spot!?{E108:0018}\n{E107:0001}{E1D1}I demand you show it to me at once!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Какое ещё место получше!?{E108:0018}\n{E107:0001}{E1D1}Немедленно показывай!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B2|4",
@@ -51799,8 +51799,8 @@
       "index": 4,
       "mode": 2,
       "en": "(...Is that really all it takes to make you do whatever\nwe want?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Неужели этого хватает, чтобы ты делал\nвсё, что нам нужно?)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B7|0",
@@ -51809,8 +51809,8 @@
       "index": 0,
       "mode": 2,
       "en": "Don't think you've gotten away with anything,\nMr. Edgeworth.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не думайте, что вам это сойдёт с рук,\nмистер Эджворт.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B7|1",
@@ -51819,8 +51819,8 @@
       "index": 1,
       "mode": 2,
       "en": "I'll be reporting your actions to the Committee.",
-      "ru": "",
-      "status": "pending"
+      "ru": "О ваших действиях я доложу Комитету.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B7|2",
@@ -51829,8 +51829,8 @@
       "index": 2,
       "mode": 2,
       "en": "...Do whatever you need to do, Judge Gavèlle.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Поступайте как считаете нужным, судья Молотова.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B7|3",
@@ -51839,8 +51839,8 @@
       "index": 3,
       "mode": 1,
       "en": "...And we'll do the same!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...А мы поступим так же!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B7|4",
@@ -51849,8 +51849,8 @@
       "index": 4,
       "mode": 2,
       "en": "You are the self-styled Great Thief,{E108:0008} correct?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы ведь зовёте себя Великим вором,{E108:0008} верно?",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B7|5",
@@ -51859,8 +51859,8 @@
       "index": 5,
       "mode": 2,
       "en": "Mr. Edgeworth's association with such a character will\nbe of interest to the Committee too, of course.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Знакомство мистера Эджворта с подобной особой\nКомитет, разумеется, тоже заинтересует.",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B7|6",
@@ -51869,8 +51869,8 @@
       "index": 6,
       "mode": 1,
       "en": "Go ahead and report me to your stupid Committee!{E108:0018}\nI'll be the toast of the thieving community!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да докладывайте своему дурацкому Комитету!{E108:0018}\nЯ стану гордостью всего воровского братства!",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_m0a_npc.bytes|020025B7|8",
@@ -51879,8 +51879,8 @@
       "index": 8,
       "mode": 2,
       "en": "(It looks like Judge Gavèlle will have to think up some\nnew threats if she wants to intimidate Kay...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Похоже, судье Молотовой придётся придумать\nновые угрозы, чтобы напугать Кей...)",
+      "status": "translated"
     },
     {
       "id": "sce2_c6_partner.bytes|020025DC|0",

@@ -34,6 +34,7 @@ CHECKS = [
     ("fast", "таблицы: длины, теги шрифта, подстановки", ["check_strings.py"]),
     ("fast", "кальки с идиом", ["find_idioms.py", "--calques", "--case", "all"]),
     ("fast", "два хранилища: подписи дела не отстают от реплик", ["check_pipelines.py"]),
+    ("fast", "покрытие таблиц: английского по недосмотру нет", ["check_coverage.py"]),
     ("full", "формат .bytes: round-trip по всем бандлам", ["test_tps.py"]),
     ("full", "токенизатор: параметры не текут в текст", ["test_tokens.py"]),
     ("full", "нарезка блоков на сегменты", ["test_segments.py"]),

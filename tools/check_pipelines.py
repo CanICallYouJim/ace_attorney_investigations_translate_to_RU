@@ -113,6 +113,13 @@ def main() -> int:
 
     # дело -> {"подписи": [всего, переведено], "прочее": [...]}
     per = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))
+    # Профили персонажей номером дела не размечены (ключ `gk2_castNNN_MM` говорит
+    # о персонаже и версии, не о деле), поэтому по делам их разложить нельзя —
+    # но и промолчать о них нельзя тоже. До 18 августа 2026 здесь стоял голый
+    # `continue`, и 103 английские записи профилей не попадали ни в один счётчик:
+    # пользователь увидел их в игре раньше, чем проверка. Теперь они идут общей
+    # строкой, а «переведено или сознательно оставлено» сторожит check_coverage.py.
+    profiles = [0, 0]
     for table, rows in tables.items():
         if not table.startswith("gk2_"):
             continue
@@ -120,8 +127,12 @@ def main() -> int:
         kind = "подписи" if table in LABEL_TABLES else "прочее"
         for mid, entry in rows.items():
             group = TK.case_of_key(km.get(int(mid), "?"))
+            if group == "профиль":
+                profiles[0] += 1
+                profiles[1] += 1 if entry.get("ru") else 0
+                continue
             if not group.startswith("дело "):
-                continue                          # профили делом не размечены
+                continue
             cell = per[int(group.split()[1])][kind]
             cell[0] += 1
             cell[1] += 1 if entry.get("ru") else 0
@@ -157,6 +168,10 @@ def main() -> int:
                   f"(названия улик и карточки логики) ещё английские")
             lagging.append(f"дело {case} — {behind} "
                            f"{plural(behind, 'подпись', 'подписи', 'подписей')}")
+
+    # Профили всплывают в органайзере любого дела, поэтому строка одна на всех.
+    print(f"профили персонажей (имена, возрасты, описания): "
+          f"{profiles[1]} из {profiles[0]}")
 
     if broken:
         print()

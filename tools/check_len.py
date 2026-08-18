@@ -44,12 +44,17 @@ def is_demo_placeholder(entry) -> bool:
     остальных западных версий.
 
     Поэтому такие сегменты — записанное решение «оставить как есть»
-    (правило №7 в CLAUDE.md), а не долг. Исключение адресное: оно
-    срабатывает, только когда и оригинал, и перевод — в точности эта
-    строка. Разбор — docs/decisions.md, раздел про DEMO TEXT.
+    (правило №7 в CLAUDE.md), а не долг. Исключение адресное: перевод
+    обязан совпадать с оригиналом слово в слово, а весь видимый текст —
+    состоять только из самой заглушки (в ``sce0_c0_00`` она повторена
+    девять раз вперемешку с кодами). Любой другой английский остаток
+    проверка по-прежнему валит. Разбор — docs/decisions.md.
     """
-    return (plain_text(entry["en"]).strip() == DEMO_PLACEHOLDER
-            and plain_text(entry["ru"]).strip() == DEMO_PLACEHOLDER)
+    en, ru = plain_text(entry["en"]), plain_text(entry["ru"])
+    if not en.strip() or en != ru:
+        return False
+    # весь видимый текст — только сама заглушка, повторённая сколько угодно раз
+    return not en.replace(DEMO_PLACEHOLDER, "").strip()
 
 
 def plain_text(markup: str) -> str:

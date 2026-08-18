@@ -30,6 +30,28 @@ NARROW_LIMIT = 24
 WINDOW_BREAKS = {0xE104, 0xE106}
 
 
+DEMO_PLACEHOLDER = "DEMO TEXT"
+
+
+def is_demo_placeholder(entry) -> bool:
+    """Заглушка сборки, которую западные локализации не переводили.
+
+    В деле 1 семьдесят один сегмент содержит ровно ``DEMO TEXT``. Это не
+    недосмотр переводчиков: у японцев, корейцев и китайцев там настоящая
+    реплика, а **английская, французская и немецкая** версии все три
+    оставили заглушку — проверено ``tools/polyglot.py``. Русский занимает
+    немецкий слот, то есть игрок увидит ровно то же, что видят игроки
+    остальных западных версий.
+
+    Поэтому такие сегменты — записанное решение «оставить как есть»
+    (правило №7 в CLAUDE.md), а не долг. Исключение адресное: оно
+    срабатывает, только когда и оригинал, и перевод — в точности эта
+    строка. Разбор — docs/decisions.md, раздел про DEMO TEXT.
+    """
+    return (plain_text(entry["en"]).strip() == DEMO_PLACEHOLDER
+            and plain_text(entry["ru"]).strip() == DEMO_PLACEHOLDER)
+
+
 def plain_text(markup: str) -> str:
     """Только видимый текст: коды и их параметры выбрасываются."""
     return "".join(t for t in T.from_markup(markup) if isinstance(t, str))
@@ -110,7 +132,8 @@ def main() -> int:
         # 2. текст должен быть русским, а не забытым английским
         text = plain_text(entry["ru"])
         if text.strip() and not any("а" <= c.lower() <= "я" or c == "ё" for c in text):
-            problems.append(f"{entry['id']}: в переводе нет кириллицы — {text[:50]!r}")
+            if not is_demo_placeholder(entry):
+                problems.append(f"{entry['id']}: в переводе нет кириллицы — {text[:50]!r}")
 
         # 3. геометрия — считаем по каждому окну и с учётом смены режима по ходу реплики
         for win_no, window in enumerate(windows(entry["ru"], entry.get("mode")), 1):

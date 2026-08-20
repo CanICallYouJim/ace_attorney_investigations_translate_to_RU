@@ -3299,8 +3299,8 @@
       "index": 0,
       "mode": 2,
       "en": "No response from the metal detector, sir.{E108:0010}\nIt's kinda sad, really,{E108:0008} but let's keep looking.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Металлоискатель молчит, сэр.{E108:0010}\nОбидно, конечно,{E108:0008} но давайте искать дальше.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C91|0",
@@ -3309,8 +3309,8 @@
       "index": 0,
       "mode": 2,
       "en": "We're getting warmer,{E108:0008} but it's still weak, sir!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Теплее, сэр,{E108:0008} но сигнал ещё слабый!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C92|0",
@@ -3319,8 +3319,8 @@
       "index": 0,
       "mode": 1,
       "en": "We're close, sir!{E108:0018} There's something metallic nearby!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Совсем близко, сэр!{E108:0018} Рядом что-то металлическое!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|0",
@@ -3329,8 +3329,8 @@
       "index": 0,
       "mode": 1,
       "en": "Sir!{E108:0018} {E107:0002}I'm picking up something over here!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сэр!{E108:0018} {E107:0002}Здесь что-то есть!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|1",
@@ -3339,8 +3339,8 @@
       "index": 1,
       "mode": 2,
       "en": "Let's take a little look-see...{E108:0018}\n{E107:0001}{E188:002F0000}{E1D1}{E176:00010000}Huh?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сейчас поглядим...{E108:0018}\n{E107:0001}{E188:002F0000}{E1D1}{E176:00010000}А?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|2",
@@ -3349,8 +3349,8 @@
       "index": 2,
       "mode": 1,
       "en": "Found these little guys in the grass!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нашёл вот такие штуки в траве!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|3",
@@ -3359,8 +3359,8 @@
       "index": 3,
       "mode": 2,
       "en": "They're the same as the weight we found by the well.{E108:0010}\n{E283}{E174:00000000}They must be from Mr. Saint's trick!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Такие же, как гиря у колодца.{E108:0010}\n{E283}{E174:00000000}Не иначе из трюка Святова!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|4",
@@ -3369,8 +3369,8 @@
       "index": 4,
       "mode": 2,
       "en": "(Did someone hide these here on purpose?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Их спрятали здесь нарочно?)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|5",
@@ -3379,8 +3379,8 @@
       "index": 5,
       "mode": 2,
       "en": "I count...{E108:0010} {E107:0001}{E188:00300000}{E1D5}four all together, sir!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Насчитал...{E108:0010} {E107:0001}{E188:00300000}{E1D5}всего четыре, сэр!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|6",
@@ -3389,8 +3389,8 @@
       "index": 6,
       "mode": 2,
       "en": "They would be more than heavy enough {E1D1}to send him\nflying!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Веса тут с лихвой хватит, {E1D1}чтобы его\nподбросить!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|7",
@@ -3399,8 +3399,8 @@
       "index": 7,
       "mode": 2,
       "en": "So somebody hid several of the same weights as the\none by the well...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, кто-то спрятал несколько таких же\nгирь, как та у колодца...",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|8",
@@ -3409,8 +3409,8 @@
       "index": 8,
       "mode": 2,
       "en": "(But why?{E108:0010} And why over here?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но зачем?{E108:0010} И почему именно здесь?)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|9",
@@ -3419,8 +3419,8 @@
       "index": 9,
       "mode": 2,
       "en": "Yes!{E108:0018} {E1D1}{E188:00340000}Nice work, me!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Есть!{E108:0018} {E1D1}{E188:00340000}Ай да я!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|10",
@@ -3429,8 +3429,8 @@
       "index": 10,
       "mode": 1,
       "en": "EEEEEE{E174:00000000}{E1D1}EEEK!{E108:0024}{E104}{E100:0001}{E131:0011}{E141:00B400C800000003}{E143}{E108:003C}{E1C0:0001}{E100:0000}{E150:0002004E}{E101:00020002}{E107:0001}{E1D1}A--!{E108:0018} {E285}Alligator!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И-И-И-И-И{E174:00000000}{E1D1}И-И!{E108:0024}{E104}{E100:0001}{E131:0011}{E141:00B400C800000003}{E143}{E108:003C}{E1C0:0001}{E100:0000}{E150:0002004E}{E101:00020002}{E107:0001}{E1D1}А—!{E108:0018} {E285}Аллигатор!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|11",
@@ -3439,8 +3439,8 @@
       "index": 11,
       "mode": 2,
       "en": "That thing nearly gave me a heart attack...",
-      "ru": "",
-      "status": "pending"
+      "ru": "У меня чуть сердце не выпрыгнуло...",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|12",
@@ -3449,8 +3449,8 @@
       "index": 12,
       "mode": 2,
       "en": "Huh?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|13",
@@ -3459,8 +3459,8 @@
       "index": 13,
       "mode": 2,
       "en": "What's the matter, Detective?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что случилось, детектив?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|14",
@@ -3469,8 +3469,8 @@
       "index": 14,
       "mode": 2,
       "en": "It's the metal detector, sir!{E108:0010}\nIt's, uh...{E108:0008} reacting to the alligator!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Металлоискатель, сэр!{E108:0010}\nОн, э...{E108:0008} звенит на аллигаторшу!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|15",
@@ -3479,8 +3479,8 @@
       "index": 15,
       "mode": 1,
       "en": "What!?{E108:0018} {E107:0002}How?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что!?{E108:0018} {E107:0002}Как?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|16",
@@ -3489,8 +3489,8 @@
       "index": 16,
       "mode": 2,
       "en": "You're sure it's not responding to the weights we\njust found?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Уверен, что не на гири, которые мы\nтолько что нашли?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|17",
@@ -3499,8 +3499,8 @@
       "index": 17,
       "mode": 2,
       "en": "No, sir!{E108:0010} I'm sure this is something different!{E108:0010}\n{E284}And I'm sure it's coming from the alligator!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Никак нет, сэр!{E108:0010} Это точно другое!{E108:0010}\n{E284}И идёт оно точно от аллигаторши!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|18",
@@ -3509,8 +3509,8 @@
       "index": 18,
       "mode": 2,
       "en": "(And she's gone...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А её уже нет...)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|19",
@@ -3519,8 +3519,8 @@
       "index": 19,
       "mode": 2,
       "en": "Ha!{E108:0010} {E280}We scared that big snapper good!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ха!{E108:0010} {E280}Ну и напугали мы эту зубастую!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|20",
@@ -3529,8 +3529,8 @@
       "index": 20,
       "mode": 3,
       "en": "Um...{E108:0010} {E107:0002}I don't think that's it, Kay...",
-      "ru": "",
-      "status": "pending"
+      "ru": "М-м...{E108:0010} {E107:0002}Боюсь, дело не в этом, Кей...",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|21",
@@ -3539,8 +3539,8 @@
       "index": 21,
       "mode": 2,
       "en": "Huh?{E108:0010} Then,{E108:0008} what is it?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0010} Тогда{E108:0008} в чём же?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|22",
@@ -3549,8 +3549,8 @@
       "index": 22,
       "mode": 2,
       "en": "Ally hasn't been herself lately.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Алли последние дни сама не своя.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|23",
@@ -3559,8 +3559,8 @@
       "index": 23,
       "mode": 2,
       "en": "(That's the name.{E108:0010} Ally,{E108:0008} the warden's favorite pet.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Так её зовут.{E108:0010} Алли,{E108:0008} любимица начальницы.)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|24",
@@ -3569,8 +3569,8 @@
       "index": 24,
       "mode": 2,
       "en": "She wouldn't even look at the food Warden Laguarde\nbrought her yesterday...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вчера она даже не взглянула на еду,\nчто принесла начальница Лястраж...",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|25",
@@ -3579,8 +3579,8 @@
       "index": 25,
       "mode": 3,
       "en": "She was acting as if...{E108:0010} {E107:0002}{E284}I don't know,{E108:0008} as if maybe she'd\neaten something that didn't agree with her.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Она вела себя так, будто...{E108:0010} {E107:0002}{E284}не знаю,{E108:0008} будто\nсъела что-то не то.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|26",
@@ -3589,8 +3589,8 @@
       "index": 26,
       "mode": 2,
       "en": "Maybe the metal detector was responding to whatever\nshe ate, sir.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Может, металлоискатель и звенит на то,\nчто она съела, сэр.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|27",
@@ -3599,8 +3599,8 @@
       "index": 27,
       "mode": 1,
       "en": "Oh no!{E108:0018} {E107:0002}What if she ate {E1D1}one of the weights?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой!{E108:0018} {E107:0002}А вдруг она проглотила {E1D1}гирю?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|28",
@@ -3609,8 +3609,8 @@
       "index": 28,
       "mode": 2,
       "en": "I highly doubt that even an alligator could swallow a\n30-pound lump of iron.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сильно сомневаюсь, что даже аллигатор\nпроглотит железяку в 15 кг.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|29",
@@ -3619,8 +3619,8 @@
       "index": 29,
       "mode": 2,
       "en": "(So what did the metal detector actually pick up...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Так на что же он всё-таки звенел...?)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|30",
@@ -3629,8 +3629,8 @@
       "index": 30,
       "mode": 3,
       "en": "(And...{E108:0010} {E107:0002}{E1D1}why would someone hide those weights?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(И...{E108:0010} {E107:0002}{E1D1}зачем кому-то прятать эти гири?)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|31",
@@ -3639,8 +3639,8 @@
       "index": 31,
       "mode": 2,
       "en": "(Hmm...{E108:0010} {E188:00300000}{E1D5}Perhaps I missed something when I looked at\nthe {E041}equipment by the well{E042}...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Хм...{E108:0010} {E188:00300000}{E1D5}Возможно, я упустил что-то, осматривая\n{E041}вещи вокруг колодца{E042}...)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|32",
@@ -3649,8 +3649,8 @@
       "index": 32,
       "mode": 2,
       "en": "Kay,{E108:0008} could you re-create the scene again?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кей,{E108:0008} собери реконструкцию ещё раз.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C93|33",
@@ -3659,8 +3659,8 @@
       "index": 33,
       "mode": 2,
       "en": "Coming right up!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Сию минуту!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|0",
@@ -3669,8 +3669,8 @@
       "index": 0,
       "mode": 1,
       "en": "I got something!{E108:0018}\n{E1D1}There's something here, sir!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Есть!{E108:0018}\n{E1D1}Тут что-то есть, сэр!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|1",
@@ -3679,8 +3679,8 @@
       "index": 1,
       "mode": 3,
       "en": "O-{E108:0008}{E107:0001}{E1D1}{E188:00340000}Oooh!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О-{E108:0008}{E107:0001}{E1D1}{E188:00340000}О-о-ох!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|2",
@@ -3689,8 +3689,8 @@
       "index": 2,
       "mode": 1,
       "en": "It's a gold coin, sir!{E108:0018}\n{E107:0002}{E1D1}What a find!{E108:0010} It'll go down in history!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Золотая монета, сэр!{E108:0018}\n{E107:0002}{E1D1}Вот это находка!{E108:0010} В историю войдёт!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|3",
@@ -3699,8 +3699,8 @@
       "index": 3,
       "mode": 2,
       "en": "I don't imagine a gold coin would stay hidden long in a\nprison yard.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Едва ли золотая монета долго пролежала бы\nв тюремном дворе.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|4",
@@ -3709,8 +3709,8 @@
       "index": 4,
       "mode": 2,
       "en": "Oh,{E108:0008} {E107:0001}{E1D1}you found it!{E108:0018} {E107:0002}Never would have guessed it was\nhiding there this whole time!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О,{E108:0008} {E107:0001}{E1D1}нашли!{E108:0018} {E107:0002}И не подумала бы, что она\nвсё это время там пряталась!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|5",
@@ -3719,8 +3719,8 @@
       "index": 5,
       "mode": 2,
       "en": "That's one of the coins from the big coin hunt we hold\nonce every two weeks.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это монета с большой охоты за монетами,\nмы её раз в две недели устраиваем.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|6",
@@ -3729,8 +3729,8 @@
       "index": 6,
       "mode": 1,
       "en": "Hey, that sounds kinda interesting.{E108:0018}\n{E107:0002}{E1D1}Must be fun for the {E1D1}whole family!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О, а это любопытно.{E108:0018}\n{E107:0002}{E1D1}Небось всей {E1D1}семьёй весело!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|7",
@@ -3739,8 +3739,8 @@
       "index": 7,
       "mode": 2,
       "en": "Sure is.{E108:0010} The prisoners have to hunt for the coins the\nwarden buried around the yard.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё как.{E108:0010} Заключённые ищут монеты,\nкоторые начальница закопала во дворе.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|8",
@@ -3749,8 +3749,8 @@
       "index": 8,
       "mode": 2,
       "en": "And if they find three silver coins or one gold coin,{E108:0010}\n{E280}they can swap 'em for a jelly donut!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А за три серебряных или одну золотую{E108:0010}\n{E280}дают пончик с джемом!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|9",
@@ -3759,8 +3759,8 @@
       "index": 9,
       "mode": 2,
       "en": "(First the show,{E108:0008} now a treasure hunt...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(То представление,{E108:0008} теперь охота за кладом...)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|10",
@@ -3769,8 +3769,8 @@
       "index": 10,
       "mode": 2,
       "en": "(Is this a prison or a playground?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Это тюрьма или детская площадка?)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CB6|11",
@@ -3779,8 +3779,8 @@
       "index": 11,
       "mode": 2,
       "en": "Alright,{E108:0008} let's get back to it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну что ж,{E108:0008} вернёмся к делу!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|0",
@@ -3789,8 +3789,8 @@
       "index": 0,
       "mode": 1,
       "en": "I found something!{E108:0018}\n{E1D1}There's something here, sir!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нашёл!{E108:0018}\n{E1D1}Тут что-то есть, сэр!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|1",
@@ -3799,8 +3799,8 @@
       "index": 1,
       "mode": 2,
       "en": "I don't see anything metallic.{E108:0010}\n{E284}What did the detector pick up?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ничего металлического не вижу.{E108:0010}\n{E284}На что он звенел?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|2",
@@ -3809,8 +3809,8 @@
       "index": 2,
       "mode": 3,
       "en": "Hmm...{E108:0010} {E107:0002}Guess it musta just picked up some {E188:00300000}iron sand.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хм...{E108:0010} {E107:0002}Видать, звенел на {E188:00300000}железный песок.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|3",
@@ -3819,8 +3819,8 @@
       "index": 3,
       "mode": 3,
       "en": "Iron sand...{E108:0010} {E107:0002}As in,{E108:0008} sand you can pick up with a\nmagnet?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Железный песок...{E108:0010} {E107:0002}Тот,{E108:0008} что притягивается\nмагнитом?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|4",
@@ -3829,8 +3829,8 @@
       "index": 4,
       "mode": 2,
       "en": "That's the stuff.{E108:0010} You can find it at the beach\nsometimes.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он самый.{E108:0010} На пляже иногда попадается.",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|5",
@@ -3839,8 +3839,8 @@
       "index": 5,
       "mode": 2,
       "en": "And I got just the thing we need right here!{E108:0010}\nIntroducing...{E108:0008} Secret Weapon Number...{E108:0010} {E1D1}6 or 7!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А у меня как раз есть что надо!{E108:0010}\nВстречайте...{E108:0008} Тайное орудие №...{E108:0010} {E1D1}6 или 7!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|6",
@@ -3849,8 +3849,8 @@
       "index": 6,
       "mode": 2,
       "en": "A-Are you making this up as you go along...!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Т-Ты что, придумываешь на ходу...!?",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|7",
@@ -3859,8 +3859,8 @@
       "index": 7,
       "mode": 2,
       "en": "A seemingly ordinary magnet that I found at the\nhardware store!",
-      "ru": "",
-      "status": "pending"
+      "ru": "С виду обычный магнит, куплен\nв хозяйственном!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|8",
@@ -3869,8 +3869,8 @@
       "index": 8,
       "mode": 2,
       "en": "Watch this!{E108:0010} I just bring it close to the ground, and...{E108:0010}\n{E107:0001}{E1D1}Ta-da!{E108:0018} It's picking out the iron!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Смотрите!{E108:0010} Подношу его к земле, и...{E108:0010}\n{E107:0001}{E1D1}Та-дам!{E108:0018} Железо само липнет!",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|9",
@@ -3879,8 +3879,8 @@
       "index": 9,
       "mode": 2,
       "en": "Whoo!{E108:0010} {E1D1}Heh{E108:0008} {E1D1}heh{E108:0008} {E1D1}heh...{E108:0010}\nC'mon, little guys...{E108:0008} Come to Papa...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух!{E108:0010} {E1D1}Хе{E108:0008} {E1D1}хе{E108:0008} {E1D1}хе...{E108:0010}\nДавайте, малыши...{E108:0008} Идите к мамочке...",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|10",
@@ -3889,8 +3889,8 @@
       "index": 10,
       "mode": 2,
       "en": "(It must be nice to be so easily entertained.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Хорошо тем, кого так легко занять.)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|11",
@@ -3899,8 +3899,8 @@
       "index": 11,
       "mode": 2,
       "en": "(Regardless,{E108:0008} the investigation must continue.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Как бы то ни было,{E108:0008} осмотр надо продолжать.)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001CC2|12",
@@ -3909,8 +3909,8 @@
       "index": 12,
       "mode": 2,
       "en": "Alright,{E108:0008} let's get back to it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну что ж,{E108:0008} вернёмся к делу!",
+      "status": "translated"
     }
   ]
 }

@@ -3109,8 +3109,8 @@
       "index": 0,
       "mode": 1,
       "en": "Gnrk!{E108:0020}\n{E107:0002}{E280}No,{E108:0010} it can't end like this...!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Гнрх!{E108:0020}\n{E107:0002}{E280}Нет,{E108:0010} так это кончиться не может...!",
+      "status": "translated"
     },
     {
       "id": "game_over.bytes|05000000|1",
@@ -3119,8 +3119,8 @@
       "index": 1,
       "mode": 3,
       "en": "And yet...{E108:0010} there's nothing more I can do...",
-      "ru": "",
-      "status": "pending"
+      "ru": "И всё же...{E108:0010} сделать я больше ничего не могу...",
+      "status": "translated"
     },
     {
       "id": "game_over.bytes|05000000|2",
@@ -3129,8 +3129,8 @@
       "index": 2,
       "mode": 3,
       "en": "And with that,{E108:0010} the truth receded into the darkness.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На том{E108:0010} истина и осталась во тьме.",
+      "status": "translated"
     },
     {
       "id": "game_over.bytes|05000003|0",
@@ -3139,8 +3139,8 @@
       "index": 0,
       "mode": 1,
       "en": "Nngh!{E108:0018}\n{E107:0002}{E280}Now we'll never know what really happened...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нгх!{E108:0018}\n{E107:0002}{E280}Теперь правды нам уже не узнать...",
+      "status": "translated"
     },
     {
       "id": "game_over.bytes|05000003|1",
@@ -3149,8 +3149,8 @@
       "index": 1,
       "mode": 3,
       "en": "But...{E108:0010} there's nothing more I can do...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но...{E108:0010} сделать я больше ничего не могу...",
+      "status": "translated"
     },
     {
       "id": "game_over.bytes|05000003|2",
@@ -3159,8 +3159,8 @@
       "index": 2,
       "mode": 3,
       "en": "And with that,{E108:0010} the truth receded into the darkness.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На том{E108:0010} истина и осталась во тьме.",
+      "status": "translated"
     },
     {
       "id": "game_over.bytes|05000006|0",
@@ -3169,8 +3169,8 @@
       "index": 0,
       "mode": null,
       "en": "DEMO TEXT",
-      "ru": "",
-      "status": "pending"
+      "ru": "DEMO TEXT",
+      "status": "translated"
     },
     {
       "id": "game_over.bytes|05000006|1",
@@ -3179,8 +3179,8 @@
       "index": 1,
       "mode": null,
       "en": "DEMO TEXT",
-      "ru": "",
-      "status": "pending"
+      "ru": "DEMO TEXT",
+      "status": "translated"
     },
     {
       "id": "game_over.bytes|05000006|2",
@@ -3189,8 +3189,8 @@
       "index": 2,
       "mode": null,
       "en": "DEMO TEXT",
-      "ru": "",
-      "status": "pending"
+      "ru": "DEMO TEXT",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D0|0",
@@ -3199,8 +3199,8 @@
       "index": 0,
       "mode": 2,
       "en": "(That doesn't add up...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Не сходится...)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D0|1",
@@ -3209,8 +3209,8 @@
       "index": 1,
       "mode": null,
       "en": "(I'd better think again...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Стоит подумать ещё раз...)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D2|0",
@@ -3219,8 +3219,8 @@
       "index": 0,
       "mode": 2,
       "en": "(There's no logical connection between those\ntwo things...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Между этими двумя зацепками нет\nникакой логической связи...)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D3|0",
@@ -3229,8 +3229,8 @@
       "index": 0,
       "mode": 2,
       "en": "(That's not quite right...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Не совсем так...)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D3|1",
@@ -3239,8 +3239,8 @@
       "index": 1,
       "mode": null,
       "en": "(I need to reconsider the information at hand.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Следует пересмотреть собранные зацепки.)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D5|0",
@@ -3249,8 +3249,8 @@
       "index": 0,
       "mode": 2,
       "en": "(There's no connection there...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Связи здесь нет...)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D5|1",
@@ -3259,8 +3259,8 @@
       "index": 1,
       "mode": 2,
       "en": "(Perhaps I was a little hasty.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Пожалуй, я поторопился.)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D7|0",
@@ -3269,8 +3269,8 @@
       "index": 0,
       "mode": 2,
       "en": "(Hmm,{E108:0008} I suppose that was a bit forced...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Хм,{E108:0008} пожалуй, это было натянуто...)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D8|0",
@@ -3279,8 +3279,8 @@
       "index": 0,
       "mode": 2,
       "en": "(I really thought I had something...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А мне казалось, что-то в этом есть...)",
+      "status": "translated"
     },
     {
       "id": "logic_common.bytes|050004D8|1",
@@ -3289,8 +3289,8 @@
       "index": 1,
       "mode": 2,
       "en": "(Let's go back to the beginning.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Вернёмся к началу.)",
+      "status": "translated"
     },
     {
       "id": "mg_metal.bytes|05001C90|0",

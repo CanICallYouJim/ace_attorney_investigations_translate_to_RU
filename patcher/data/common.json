@@ -1,4 +1,2742 @@
 {
   "case": 0,
-  "entries": []
+  "entries": [
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Yet, I will be heard!",
+      "ru": "И всё же меня выслушают!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Do you really think I'm going to give up?",
+      "ru": "Вы правда думаете, что я отступлю?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Are they related to our current location?",
+      "ru": "Они связаны с этим местом?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Are things getting too hot for you?",
+      "ru": "Что, земля под ногами загорелась?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I have nothing to be ashamed of.",
+      "ru": "Мне стыдиться нечего."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're the one who should be ashamed!",
+      "ru": "Это вам должно быть стыдно!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "She fired at you from outside the plane?",
+      "ru": "Она стреляла в вас снаружи самолёта?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Do you really think I'll obey you?",
+      "ru": "Вы правда думаете, что я подчинюсь?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Well, I still have plenty to say!",
+      "ru": "А мне ещё есть что сказать!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Yes, of course she is the culprit!",
+      "ru": "Разумеется, преступница — она!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Hand it over or you're under arrest!",
+      "ru": "Отдайте — или пойдёте под арест!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You heard gunfire, did you?",
+      "ru": "Значит, вы слышали выстрелы?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You must have a record of your reporting!",
+      "ru": "У вас должна быть запись репортажа!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'll \"young lady\" you as many times as I like!",
+      "ru": "Буду звать вас барышней сколько захочу!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'm not interested in your tape recorder!",
+      "ru": "Ваш диктофон меня не интересует!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Play me that tape!",
+      "ru": "Включите запись!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're clearly hiding something!",
+      "ru": "Вы явно что-то скрываете!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What was that about \"scoops\"?",
+      "ru": "Так что там про «сенсации»?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Prepare for a straight right punch!",
+      "ru": "Готовьтесь — прямой справа!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Oh, believe me, I will!",
+      "ru": "О, поверьте, ещё как!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I thought you took it easy?",
+      "ru": "Я думал, вы человек невозмутимый?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Well? Answer me!",
+      "ru": "Ну? Отвечайте!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "How do you know my profession?",
+      "ru": "Откуда вы знаете, кто я по профессии?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Worn out already?",
+      "ru": "Что, уже выдохлись?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Don't play dumb!",
+      "ru": "Не прикидывайтесь!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You were exercising!",
+      "ru": "Вы разминались!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Hmph. Rude.",
+      "ru": "Хм. Как грубо."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "\"Already\", you say?",
+      "ru": "«Уже», говорите?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "A good person who's in prison?",
+      "ru": "Хороший человек — и в тюрьме?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You seem angry, Mr. Sahwit.",
+      "ru": "Вы, кажется, сердитесь, мистер Видалл."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "\"The person who found the body\", you say?",
+      "ru": "«Тот, кто нашёл тело», говорите?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What were you doing?",
+      "ru": "Что вы делали?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "How were things in the prison?",
+      "ru": "Что творилось в тюрьме?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Were they screaming?",
+      "ru": "Они кричали?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Were they laughing?",
+      "ru": "Они смеялись?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You said you heard a scream!",
+      "ru": "Вы говорили, что слышали крик!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Temper temper!",
+      "ru": "Спокойнее, спокойнее!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you give them a fright?",
+      "ru": "Это вы их напугали?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "A scream would certainly frighten them.",
+      "ru": "Крик их, конечно, напугал бы."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Enough with that phony smile!",
+      "ru": "Довольно этой фальшивой улыбки!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Well, someone seems to be hopping mad.",
+      "ru": "Ну и ну, кто-то не помнит себя от злости."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "And did you ride this whale?",
+      "ru": "И вы на этом ките катались?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You weren't actually at the show, were you?",
+      "ru": "Вы ведь не были на представлении?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You weren't at any show!",
+      "ru": "Ни на каком представлении вы не были!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Fine, then! We're done!",
+      "ru": "Ну и прекрасно! Мы закончили!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Wait, it wasn't the victim who screamed?",
+      "ru": "Постойте, кричал не потерпевший?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Because you're the one who found the body!",
+      "ru": "Потому что тело нашли вы!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Because you're the victim!",
+      "ru": "Потому что потерпевший — вы!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "That's exactly what I think!",
+      "ru": "Именно так я и думаю!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "They're all just scribbles to begin with.",
+      "ru": "Это и так одни каракули."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "And those people lack an eye for aesthetics.",
+      "ru": "А у этих людей попросту нет вкуса."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Why not come here together!?",
+      "ru": "Почему было не прийти вместе!?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So you're here for the Gemini sculpture?",
+      "ru": "Значит, ты здесь ради статуи Близнецов?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You didn't get a pamphlet?",
+      "ru": "Тебе не дали буклет?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You didn't pay upon entry?",
+      "ru": "Ты не платил за вход?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Ms. Bound wasn't at the reception desk?",
+      "ru": "Мисс Долговой не было за стойкой?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You know a lot about the Winter Wing...",
+      "ru": "А ты немало знаешь о Зимнем крыле..."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You mean you didn't go in?",
+      "ru": "То есть внутрь ты не заходил?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "The victim prevented you from entering?",
+      "ru": "Потерпевший тебя не пустил?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So what became of your sketch?",
+      "ru": "И где же твой набросок?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So you saw something \"totally terrifying\", did you?",
+      "ru": "Значит, ты видел нечто «совсем ужасное»?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What, were you blinking too hard?",
+      "ru": "Что, слишком усердно моргал?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What, you couldn't do that on your own?",
+      "ru": "Что, сам не мог?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Wake up!",
+      "ru": "Проснись!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Face it, you were never going to win.",
+      "ru": "Признай: тебе было не выиграть."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'll believe it when I see it.",
+      "ru": "Поверю, когда увижу."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So you were interested in the book, too?",
+      "ru": "Значит, книга занимала и вас?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You know more than you're letting on.",
+      "ru": "Вы знаете больше, чем говорите."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Except, you knew that's not what's really in there!",
+      "ru": "Вот только вы знали, что там не то!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You were trying to become a pharmacist!",
+      "ru": "Вы метили в фармацевты!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You needed medicine, didn't you?",
+      "ru": "Вам нужно было лекарство, верно?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Somehow, I don't believe you.",
+      "ru": "Что-то мне не верится."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So he wasn't too sick to join you?",
+      "ru": "Значит, он был не так уж болен?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "But you cared about Mr. Tangaroa's work!",
+      "ru": "Но вам была дорога работа мистера Тангароа!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "But it wasn't life-threatening, was it?",
+      "ru": "Но жизни это не угрожало, верно?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did he have a taste disorder?",
+      "ru": "У него было расстройство вкуса?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Was he overweight?",
+      "ru": "У него был лишний вес?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You were sick yourself, weren't you?",
+      "ru": "Вы и сами были больны, верно?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "That must have been really something!",
+      "ru": "Должно быть, зрелище было ещё то!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "But weren't you working with Mr. Frost!?",
+      "ru": "Но вы же работали с мистером Морозовым!?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I know your apprentice pretty well.",
+      "ru": "Вашу ученицу я знаю неплохо."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You have a scoop of some kind, don't you?",
+      "ru": "У вас ведь есть сенсация, не так ли?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You were on your way to school, weren't you?",
+      "ru": "Вы ведь шли в школу, верно?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You don't look very calm to me!",
+      "ru": "На спокойного вы не похожи!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'll stop when you actually calm down!",
+      "ru": "Перестану, когда вы и правда успокоитесь!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "She was your apprentice.",
+      "ru": "Она была вашей ученицей."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "She was your sister.",
+      "ru": "Она была вашей сестрой."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you hear something from Ms. Lloyd?",
+      "ru": "Вы что-то слышали от мисс Ллойд?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So you did hear the sound of something, then?",
+      "ru": "Значит, какой-то звук вы всё же слышали?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You sneaking in is a problem!",
+      "ru": "Вы пробрались тайком — вот это и беда!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Well, you should've snuck into someplace else!",
+      "ru": "Вот и пробирались бы в другое место!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So you committed a murder?",
+      "ru": "Так вы совершили убийство?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So your scoop is about a murder?",
+      "ru": "Значит, ваша сенсация — про убийство?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "But you did hear something, didn't you?",
+      "ru": "Но что-то вы всё-таки слышали?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I thought you were \"honester\" than everybody?",
+      "ru": "А я думал, вы «честнее всех на свете»?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What are you grumbling about!?",
+      "ru": "Что вы там бормочете!?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You can prove it, can you?",
+      "ru": "И вы можете это доказать?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're definitely still hiding something!",
+      "ru": "Вы точно что-то ещё скрываете!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'm the one who should be angry!",
+      "ru": "Это мне впору сердиться!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Go ahead! Stay mad!",
+      "ru": "Извольте! Сердитесь дальше!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'm a prosecutor!",
+      "ru": "Я прокурор!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'm a prisoner!",
+      "ru": "Я заключённый!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "And? So what!?",
+      "ru": "И что с того!?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "That would be a good thing!",
+      "ru": "Это было бы к лучшему!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Maybe I should just leave it alone...",
+      "ru": "Может, лучше это оставить..."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "\"Coming along nicely\"...?",
+      "ru": "«Продвигается неплохо»...?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "No, I'm putting you in your place!",
+      "ru": "Нет, я ставлю вас на место!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'd like to see you try!",
+      "ru": "Посмотрю я, как у вас выйдет!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You think my fate matters to me now?",
+      "ru": "Думаете, мне сейчас есть дело до своей судьбы?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I don't remember entrusting my fate to you!",
+      "ru": "Не припомню, чтобы вверял вам свою судьбу!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "\"The decision has been made\"...?",
+      "ru": "«Решение принято»...?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'm not giving up now!",
+      "ru": "Сейчас я не отступлю!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "That you planned to have her arrested!",
+      "ru": "Что вы задумали её арест!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I can't live without that badge!",
+      "ru": "Без этого значка мне не жить!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I don't need that badge anyway!",
+      "ru": "Да и не нужен мне этот значок!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Who gave the order?",
+      "ru": "Кто отдал приказ?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What grounds did you have?",
+      "ru": "На каком основании?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You remembered all the evidence pretty well!",
+      "ru": "А улики вы запомнили отменно!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You, of course!",
+      "ru": "Вы, разумеется!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Judge Gavèlle!",
+      "ru": "Судья Молотова!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "And what about my fuse?",
+      "ru": "А что с моим терпением?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Oh, you have no idea how rude I can be.",
+      "ru": "О, вы не знаете, каким грубым я бываю."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're hoping to avoid talking about the case.",
+      "ru": "Вы надеетесь увести разговор от дела."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're trying to make me feel sorry for you.",
+      "ru": "Вы пытаетесь меня разжалобить."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'd say the same of you.",
+      "ru": "То же самое я скажу о вас."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Actually, I have the perfect explanation!",
+      "ru": "А у меня есть отличное объяснение!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Yet you know every other detail about the case!",
+      "ru": "Зато все прочие мелочи дела вы знаете!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Go ahead, keep trying to imitate me!",
+      "ru": "Извольте, подражайте мне и дальше!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You don't have what it takes to be me!",
+      "ru": "Мною вам не стать!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "\"Load her down with\"...?",
+      "ru": "«Навесить на неё»...?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "That evidence doesn't prove anything.",
+      "ru": "Эта улика ничего не доказывает."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Why so quiet all of a sudden?",
+      "ru": "Что это вы вдруг притихли?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Careful with that lighter!",
+      "ru": "Осторожнее с зажигалкой!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "But you keep saying how busy you are...",
+      "ru": "А ведь вы всё твердите, что заняты..."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you really read it all?",
+      "ru": "Вы правда всё это прочли?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you see exactly where she was found?",
+      "ru": "Вы видели, где именно её нашли?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "And what was the weather like that day?",
+      "ru": "А какая в тот день была погода?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Except I know it wasn't her!",
+      "ru": "Вот только я знаю: это не она!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I know the president personally!",
+      "ru": "Я лично знаком с президентом!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You helped us this morning!",
+      "ru": "Утром вы нам помогли!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You and the accused are both guilty!",
+      "ru": "Виновны и вы, и обвиняемая!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're worried about somebody else as well?",
+      "ru": "Вы тревожитесь и о ком-то ещё?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're no servant -- you're a person!",
+      "ru": "Вы не прислуга — вы человек!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're just going to abandon him?",
+      "ru": "И вы просто его бросите?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "A test? It's an ordeal!",
+      "ru": "Испытание? Это мучение!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're calling Eustace \"that poor child\"?",
+      "ru": "Это Юстас у вас «бедное дитя»?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "\"That poor child\"? Who do you mean?",
+      "ru": "«Бедное дитя»? О ком вы?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Is there something wrong with how he died?",
+      "ru": "Что-то не так с тем, как он умер?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Is there something wrong with where he died?",
+      "ru": "Что-то не так с тем, где он умер?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "A crew member found him.",
+      "ru": "Его нашёл кто-то из съёмочной группы."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're worried about its box office chances?",
+      "ru": "Вас тревожат сборы?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "\"That poor child\" is missing, aren't they?",
+      "ru": "«Бедное дитя» пропало, не так ли?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "It's someone from the movie, isn't it?",
+      "ru": "Это кто-то из фильма, верно?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "\"Extraordinaire\"? I'm not so sure...",
+      "ru": "«Непревзойдённый»? Не уверен..."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "That doesn't sound a lot like you...",
+      "ru": "На вас это мало похоже..."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you hear that from Shaun himself?",
+      "ru": "Это вам сам Актёркин сказал?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You really are obsessed, aren't you?",
+      "ru": "Вы и впрямь одержимы, да?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me some of his likes and dislikes.",
+      "ru": "Что он любит, а что нет?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I really couldn't care less about him.",
+      "ru": "Мне до него совершенно нет дела."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You must have spoken to him!",
+      "ru": "Вы наверняка с ним говорили!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "The two of you are very much connected!",
+      "ru": "Вас двоих очень многое связывает!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "The person who chased him?",
+      "ru": "Тот, кто за ним гнался?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "The person who kidnapped him?",
+      "ru": "Тот, кто его похитил?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're right! I won't!",
+      "ru": "Верно! Не стану!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I can pretend to listen!",
+      "ru": "Могу сделать вид, что слушаю!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Objection!",
+      "ru": "Протестую!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Hold it!",
+      "ru": "Постойте!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did somebody steal something from you?",
+      "ru": "У вас что-то украли?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Aww, poor you.",
+      "ru": "Ах, какое горе."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You have to believe in yourself!",
+      "ru": "Нужно верить в себя!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You don't have to believe in anything!",
+      "ru": "Верить вовсе не обязательно!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I think you mean \"incompetent\".",
+      "ru": "Вы, вероятно, хотели сказать «некомпетентен»."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You don't even know that much!?",
+      "ru": "Вы даже этого не знаете!?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're no victim!",
+      "ru": "Никакая вы не жертва!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Give me something to work with here!",
+      "ru": "Дайте мне хоть что-нибудь!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "The owner? Eustace Winner?",
+      "ru": "Владелец? Юстас Победин?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "The owner? Excelsius Winner?",
+      "ru": "Владелец? Эксцельсиус Победин?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Your father was behind your kidnapping!",
+      "ru": "За вашим похищением стоял ваш отец!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Of course not!",
+      "ru": "Разумеется, нет!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Maybe...",
+      "ru": "Возможно..."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "That wasn't your father's motive!",
+      "ru": "У вашего отца был не тот мотив!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What did they ask you?",
+      "ru": "О чём они вас спрашивали?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You made it so easy for them.",
+      "ru": "Вы им всё и облегчили."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You mean me?",
+      "ru": "Вы обо мне?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You mean your father?",
+      "ru": "Вы о своём отце?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're NOT good enough!",
+      "ru": "Вы НЕ дотягиваете!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "No, but I'M good enough!",
+      "ru": "Нет, зато Я дотягиваю!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'll bet it is stupid and dumb.",
+      "ru": "Готов поспорить, что глупость несусветная."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I know that already.",
+      "ru": "Это я уже знаю."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You wanted to join the Committee?",
+      "ru": "Вы хотели попасть в Комитет?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You wanted your father's approval?",
+      "ru": "Вы хотели, чтобы отец вас одобрил?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Because you want to be of use to your father.",
+      "ru": "Потому что хотите быть полезны отцу."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Because you hate your father.",
+      "ru": "Потому что вы ненавидите отца."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "That's not possible!",
+      "ru": "Это невозможно!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "It's \"clear his name\"!",
+      "ru": "Правильно — «ОБЕЛИТЬ его имя»!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What else do you remember?",
+      "ru": "Что ещё вы помните?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Of course they did!",
+      "ru": "Разумеется, так и было!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're jealous of her!?",
+      "ru": "Вы ей завидуете!?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "He doesn't like you at all, does he?",
+      "ru": "Вы ему совсем не нравитесь, верно?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I don't want to hear your excuses!",
+      "ru": "Не желаю слушать оправдания!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "No! You'll listen to MY side of the story!",
+      "ru": "Нет! Теперь вы выслушаете МЕНЯ!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You gave the evidence to your father!",
+      "ru": "Улику вы отдали отцу!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "He wanted to make you a laughing stock!",
+      "ru": "Он хотел выставить вас на посмешище!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "He wanted to mess with the trial!",
+      "ru": "Он хотел сорвать процесс!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Do you mean \"the milk of human kindness\"?",
+      "ru": "Вы хотели сказать «милосердие»?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You'll get no kindness from me!",
+      "ru": "От меня милосердия не ждите!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I can be that person for you.",
+      "ru": "Я могу стать для вас таким человеком."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I guess you don't, huh?",
+      "ru": "Стало быть, нет?"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Only you can answer that!",
+      "ru": "На это ответите только вы!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "No, you shouldn't!",
+      "ru": "Нет, не стоит!"
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "It's \"clothes make the man\".",
+      "ru": "Правильно — «по одёжке встречают»."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I think it would suit me pretty nicely.",
+      "ru": "Думаю, мне это вполне пойдёт."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Don't get too excited.",
+      "ru": "Не спешите радоваться."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Oh, they'll still make fun of you.",
+      "ru": "О, смеяться над вами всё равно будут."
+    },
+    {
+      "file": "exam.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You'll be a different kind of prosecutor.",
+      "ru": "Вы станете другим прокурором."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "So who will take over the case?",
+      "ru": "Так кто же заберёт дело?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Explain to me why I'm off the case.",
+      "ru": "Объясните, почему меня отстраняют."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Does that rule really apply here?",
+      "ru": "Это правило и правда здесь действует?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You've overplayed your hand.",
+      "ru": "Вы перегибаете палку."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Where's the record of your reporting?",
+      "ru": "Где записи вашего репортажа?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Were you at the scene of the crime?",
+      "ru": "Вы были на месте преступления?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What did you record? {E041}(Correct Answer)",
+      "ru": "Что вы записали? {E041}(Верный ответ)"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me about your tape recorder.",
+      "ru": "Расскажите про ваш диктофон."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What is it that you do?",
+      "ru": "Чем вы занимаетесь?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me about your day so far.",
+      "ru": "Расскажите, как прошёл ваш день."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What were you doing?",
+      "ru": "Что вы делали?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What was it like around here?",
+      "ru": "Что здесь творилось?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What's your connection to this incident?",
+      "ru": "Как вы связаны с происшествием?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me about the day of the incident.",
+      "ru": "Расскажите про день происшествия."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "When did you hear the scream?",
+      "ru": "Когда вы услышали крик?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Who did you hear screaming?",
+      "ru": "Чей это был крик?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Why are you here?",
+      "ru": "Зачем вы здесь?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What did you do once you got here?",
+      "ru": "Что вы делали, когда пришли?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you enter the Winter Wing?",
+      "ru": "Вы заходили в Зимнее крыло?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What did you see in the Winter Wing?",
+      "ru": "Что вы видели в Зимнем крыле?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I'm done with you. Go home.",
+      "ru": "С вами всё. Ступайте домой."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Why did you collaborate with Mr. Frost?",
+      "ru": "Зачем вы связались с мистером Морозовым?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you want to appear on Bake 'n' Bop?",
+      "ru": "Вы хотели попасть в «Пеки и пляши»?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you want more than just the title?",
+      "ru": "Вам нужен был не только титул?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you know what the book was really worth?",
+      "ru": "Вы знали, сколько на деле стоит книга?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Did you need it to help you make your sweets?",
+      "ru": "Она была нужна вам для ваших сладостей?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What was the name of your son's condition?",
+      "ru": "Как называется болезнь вашего сына?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me more about your son.",
+      "ru": "Расскажите о сыне подробнее."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Was the book necessary for him to get better?",
+      "ru": "Без книги его было не вылечить?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me what you know.",
+      "ru": "Расскажите, что вам известно."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Let's talk about this reasonably.",
+      "ru": "Давайте говорить по существу."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Is it related to the auction?",
+      "ru": "Это связано с аукционом?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Is it related to an incident of some kind?",
+      "ru": "Это связано с каким-то происшествием?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me more about the incident.",
+      "ru": "Расскажите про происшествие."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "There's something you're still not telling me!",
+      "ru": "Вы всё ещё что-то недоговариваете!"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Were you really \"in the middle\" of the scene?",
+      "ru": "Вы правда «оказались в самой гуще»?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Why the rush to arrest Kay?",
+      "ru": "К чему была спешка с арестом Кей?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "How much time did you spend investigating?",
+      "ru": "Сколько вы вели расследование?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You were the one calling the shots, weren't you?",
+      "ru": "Всем этим заправляли вы, не так ли?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "I still have questions!",
+      "ru": "У меня остались вопросы!"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me what you know about Kay.",
+      "ru": "Расскажите, что вы знаете о Кей."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You seem to know an awful lot about the case.",
+      "ru": "Вы что-то слишком много знаете о деле."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Kay is innocent!",
+      "ru": "Кей невиновна!"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What did you talk to the president about?",
+      "ru": "О чём вы говорили с президентом?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Where's Mr. Winner?",
+      "ru": "Где мистер Победин?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Who are you worried about?",
+      "ru": "За кого вы волнуетесь?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Are you worried about Mr. Winner?",
+      "ru": "Вы волнуетесь за мистера Победина?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Are you worried about Taurusaurus?",
+      "ru": "Вы тревожитесь за Быкозавра?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Do you know him?",
+      "ru": "Вы его знаете?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Do you know where he is?",
+      "ru": "Вы знаете, где он?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Are you a fan?",
+      "ru": "Вы из его поклонников?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Tell me what's on your mind.",
+      "ru": "Расскажите, что у вас на душе."
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "You're a total failure of a human being!",
+      "ru": "Как человек вы полное ничтожество!"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Who were you kidnapped by?",
+      "ru": "Кто вас похитил?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Why were you taken to your own home?",
+      "ru": "Почему вас увезли в ваш же дом?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What did the kidnappers want?",
+      "ru": "Чего хотели похитители?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What is it you remembered?",
+      "ru": "Что именно вы вспомнили?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Where's the evidence from the case?",
+      "ru": "Где улики по тому делу?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What connects Laguarde and your father?",
+      "ru": "Что связывает Лястраж и вашего отца?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "If you're covering for him, you're an accomplice!",
+      "ru": "Покрываете его — значит, соучастник!"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "What do you mean to do now?",
+      "ru": "Что вы намерены делать теперь?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Will you walk the same path as your father?",
+      "ru": "Пойдёте по стопам отца?"
+    },
+    {
+      "file": "exam_ask.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Will you continue to work as a prosecutor?",
+      "ru": "Останетесь ли вы прокурором?"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}why they're taking over the case",
+      "ru": "Выяснить, {E04C}почему дело забирают себе"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out if {E04C}extraterritoriality really applies",
+      "ru": "Выяснить, {E04C}действует ли экстерриториальность"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what she does for a living",
+      "ru": "Выяснить, {E04C}чем она зарабатывает на жизнь"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what she knows",
+      "ru": "Выяснить, {E04C}что ей известно"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what he did today",
+      "ru": "Выяснить, {E04C}что он делал сегодня"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what was happening at the time of the incident",
+      "ru": "Выяснить, {E04C}что было в момент происшествия"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}who he is",
+      "ru": "Выяснить, {E04C}кто он такой"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what he did yesterday",
+      "ru": "Выяснить, {E04C}что он делал вчера"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out more about {E04C}the scream",
+      "ru": "Расспросить про {E04C}крик"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what Larry's doing here",
+      "ru": "Выяснить, {E04C}что здесь делает Ларри"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Dig into {E04C}what he did at the gallery",
+      "ru": "Разузнать, {E04C}что он делал в галерее"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Dig into the {E04C}Winter Wing",
+      "ru": "Разузнать про {E04C}Зимнее крыло"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}why he collaborated with Mr. Frost",
+      "ru": "Выяснить, {E04C}зачем он связался с Морозовым"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what he was really after",
+      "ru": "Выяснить, {E04C}чего он добивался на самом деле"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}why he wanted the book",
+      "ru": "Выяснить, {E04C}зачем ему понадобилась книга"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out about {E04C}his son's illness",
+      "ru": "Расспросить про {E04C}болезнь его сына"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what she's hiding",
+      "ru": "Выяснить, {E04C}что она скрывает"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what the scoop is about",
+      "ru": "Выяснить, {E04C}что за сенсация у неё"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}how credible the information is",
+      "ru": "Выяснить, {E04C}насколько сведения надёжны"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}why he rushed to have Kay arrested",
+      "ru": "Выяснить, {E04C}зачем он спешил арестовать Кей"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}whether the investigation was sufficient",
+      "ru": "Выяснить, {E04C}довели ли расследование до конца"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}how legal Kay's arrest was",
+      "ru": "Выяснить, {E04C}законен ли арест Кей"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}how much he really knows",
+      "ru": "Выяснить, {E04C}много ли он на самом деле знает"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what she discussed with the president",
+      "ru": "Выяснить, {E04C}о чём она говорила с президентом"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what Judge Gavèlle is hiding",
+      "ru": "Выяснить, {E04C}что скрывает судья Молотова"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}who she's looking for",
+      "ru": "Выяснить, {E04C}кого она ищет"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}why she's looking for Shaun",
+      "ru": "Выяснить, {E04C}зачем она ищет Актёркина"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}how he really feels",
+      "ru": "Выяснить, {E04C}что у него на душе"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}about the kidnapping",
+      "ru": "Расспросить {E04C}про похищение"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what he just remembered",
+      "ru": "Выяснить, {E04C}что он сейчас вспомнил"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}Excelsius's secret",
+      "ru": "Выяснить {E04C}тайну Эксцельсиуса"
+    },
+    {
+      "file": "exam_ask_title.bytes",
+      "block": "FFFFFFFF",
+      "index": 0,
+      "en": "Find out {E04C}what he means to do now",
+      "ru": "Выяснить, {E04C}что он намерен делать теперь"
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000000",
+      "index": 0,
+      "en": "Gnrk!{E108:0020}\n{E107:0002}{E280}No,{E108:0010} it can't end like this...!",
+      "ru": "Гнрх!{E108:0020}\n{E107:0002}{E280}Нет,{E108:0010} так это кончиться не может...!"
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000000",
+      "index": 1,
+      "en": "And yet...{E108:0010} there's nothing more I can do...",
+      "ru": "И всё же...{E108:0010} сделать я больше ничего не могу..."
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000000",
+      "index": 2,
+      "en": "And with that,{E108:0010} the truth receded into the darkness.",
+      "ru": "На том{E108:0010} истина и осталась во тьме."
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000003",
+      "index": 0,
+      "en": "Nngh!{E108:0018}\n{E107:0002}{E280}Now we'll never know what really happened...",
+      "ru": "Нгх!{E108:0018}\n{E107:0002}{E280}Теперь правды нам уже не узнать..."
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000003",
+      "index": 1,
+      "en": "But...{E108:0010} there's nothing more I can do...",
+      "ru": "Но...{E108:0010} сделать я больше ничего не могу..."
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000003",
+      "index": 2,
+      "en": "And with that,{E108:0010} the truth receded into the darkness.",
+      "ru": "На том{E108:0010} истина и осталась во тьме."
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000006",
+      "index": 0,
+      "en": "DEMO TEXT",
+      "ru": "DEMO TEXT"
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000006",
+      "index": 1,
+      "en": "DEMO TEXT",
+      "ru": "DEMO TEXT"
+    },
+    {
+      "file": "game_over.bytes",
+      "block": "05000006",
+      "index": 2,
+      "en": "DEMO TEXT",
+      "ru": "DEMO TEXT"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D0",
+      "index": 0,
+      "en": "(That doesn't add up...)",
+      "ru": "(Не сходится...)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D0",
+      "index": 1,
+      "en": "(I'd better think again...)",
+      "ru": "(Стоит подумать ещё раз...)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D2",
+      "index": 0,
+      "en": "(There's no logical connection between those\ntwo things...)",
+      "ru": "(Между этими двумя зацепками нет\nникакой логической связи...)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D3",
+      "index": 0,
+      "en": "(That's not quite right...)",
+      "ru": "(Не совсем так...)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D3",
+      "index": 1,
+      "en": "(I need to reconsider the information at hand.)",
+      "ru": "(Следует пересмотреть собранные зацепки.)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D5",
+      "index": 0,
+      "en": "(There's no connection there...)",
+      "ru": "(Связи здесь нет...)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D5",
+      "index": 1,
+      "en": "(Perhaps I was a little hasty.)",
+      "ru": "(Пожалуй, я поторопился.)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D7",
+      "index": 0,
+      "en": "(Hmm,{E108:0008} I suppose that was a bit forced...)",
+      "ru": "(Хм,{E108:0008} пожалуй, это было натянуто...)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D8",
+      "index": 0,
+      "en": "(I really thought I had something...)",
+      "ru": "(А мне казалось, что-то в этом есть...)"
+    },
+    {
+      "file": "logic_common.bytes",
+      "block": "050004D8",
+      "index": 1,
+      "en": "(Let's go back to the beginning.)",
+      "ru": "(Вернёмся к началу.)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C90",
+      "index": 0,
+      "en": "No response from the metal detector, sir.{E108:0010}\nIt's kinda sad, really,{E108:0008} but let's keep looking.",
+      "ru": "Металлоискатель молчит, сэр.{E108:0010}\nОбидно, конечно,{E108:0008} но давайте искать дальше."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C91",
+      "index": 0,
+      "en": "We're getting warmer,{E108:0008} but it's still weak, sir!",
+      "ru": "Теплее, сэр,{E108:0008} но сигнал ещё слабый!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C92",
+      "index": 0,
+      "en": "We're close, sir!{E108:0018} There's something metallic nearby!",
+      "ru": "Совсем близко, сэр!{E108:0018} Рядом что-то металлическое!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 0,
+      "en": "Sir!{E108:0018} {E107:0002}I'm picking up something over here!",
+      "ru": "Сэр!{E108:0018} {E107:0002}Здесь что-то есть!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 1,
+      "en": "Let's take a little look-see...{E108:0018}\n{E107:0001}{E188:002F0000}{E1D1}{E176:00010000}Huh?",
+      "ru": "Сейчас поглядим...{E108:0018}\n{E107:0001}{E188:002F0000}{E1D1}{E176:00010000}А?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 2,
+      "en": "Found these little guys in the grass!",
+      "ru": "Нашёл вот такие штуки в траве!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 3,
+      "en": "They're the same as the weight we found by the well.{E108:0010}\n{E283}{E174:00000000}They must be from Mr. Saint's trick!",
+      "ru": "Такие же, как гиря у колодца.{E108:0010}\n{E283}{E174:00000000}Не иначе из трюка Святова!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 4,
+      "en": "(Did someone hide these here on purpose?)",
+      "ru": "(Их спрятали здесь нарочно?)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 5,
+      "en": "I count...{E108:0010} {E107:0001}{E188:00300000}{E1D5}four all together, sir!",
+      "ru": "Насчитал...{E108:0010} {E107:0001}{E188:00300000}{E1D5}всего четыре, сэр!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 6,
+      "en": "They would be more than heavy enough {E1D1}to send him\nflying!",
+      "ru": "Веса тут с лихвой хватит, {E1D1}чтобы его\nподбросить!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 7,
+      "en": "So somebody hid several of the same weights as the\none by the well...",
+      "ru": "Значит, кто-то спрятал несколько таких же\nгирь, как та у колодца..."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 8,
+      "en": "(But why?{E108:0010} And why over here?)",
+      "ru": "(Но зачем?{E108:0010} И почему именно здесь?)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 9,
+      "en": "Yes!{E108:0018} {E1D1}{E188:00340000}Nice work, me!",
+      "ru": "Есть!{E108:0018} {E1D1}{E188:00340000}Ай да я!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 10,
+      "en": "EEEEEE{E174:00000000}{E1D1}EEEK!{E108:0024}{E104}{E100:0001}{E131:0011}{E141:00B400C800000003}{E143}{E108:003C}{E1C0:0001}{E100:0000}{E150:0002004E}{E101:00020002}{E107:0001}{E1D1}A--!{E108:0018} {E285}Alligator!",
+      "ru": "И-И-И-И-И{E174:00000000}{E1D1}И-И!{E108:0024}{E104}{E100:0001}{E131:0011}{E141:00B400C800000003}{E143}{E108:003C}{E1C0:0001}{E100:0000}{E150:0002004E}{E101:00020002}{E107:0001}{E1D1}А—!{E108:0018} {E285}Аллигатор!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 11,
+      "en": "That thing nearly gave me a heart attack...",
+      "ru": "У меня чуть сердце не выпрыгнуло..."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 12,
+      "en": "Huh?",
+      "ru": "А?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 13,
+      "en": "What's the matter, Detective?",
+      "ru": "Что случилось, детектив?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 14,
+      "en": "It's the metal detector, sir!{E108:0010}\nIt's, uh...{E108:0008} reacting to the alligator!",
+      "ru": "Металлоискатель, сэр!{E108:0010}\nОн, э...{E108:0008} звенит на аллигаторшу!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 15,
+      "en": "What!?{E108:0018} {E107:0002}How?",
+      "ru": "Что!?{E108:0018} {E107:0002}Как?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 16,
+      "en": "You're sure it's not responding to the weights we\njust found?",
+      "ru": "Уверен, что не на гири, которые мы\nтолько что нашли?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 17,
+      "en": "No, sir!{E108:0010} I'm sure this is something different!{E108:0010}\n{E284}And I'm sure it's coming from the alligator!",
+      "ru": "Никак нет, сэр!{E108:0010} Это точно другое!{E108:0010}\n{E284}И идёт оно точно от аллигаторши!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 18,
+      "en": "(And she's gone...)",
+      "ru": "(А её уже нет...)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 19,
+      "en": "Ha!{E108:0010} {E280}We scared that big snapper good!",
+      "ru": "Ха!{E108:0010} {E280}Ну и напугали мы эту зубастую!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 20,
+      "en": "Um...{E108:0010} {E107:0002}I don't think that's it, Kay...",
+      "ru": "М-м...{E108:0010} {E107:0002}Боюсь, дело не в этом, Кей..."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 21,
+      "en": "Huh?{E108:0010} Then,{E108:0008} what is it?",
+      "ru": "А?{E108:0010} Тогда{E108:0008} в чём же?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 22,
+      "en": "Ally hasn't been herself lately.",
+      "ru": "Алли последние дни сама не своя."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 23,
+      "en": "(That's the name.{E108:0010} Ally,{E108:0008} the warden's favorite pet.)",
+      "ru": "(Так её зовут.{E108:0010} Алли,{E108:0008} любимица начальницы.)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 24,
+      "en": "She wouldn't even look at the food Warden Laguarde\nbrought her yesterday...",
+      "ru": "Вчера она даже не взглянула на еду,\nчто принесла начальница Лястраж..."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 25,
+      "en": "She was acting as if...{E108:0010} {E107:0002}{E284}I don't know,{E108:0008} as if maybe she'd\neaten something that didn't agree with her.",
+      "ru": "Она вела себя так, будто...{E108:0010} {E107:0002}{E284}не знаю,{E108:0008} будто\nсъела что-то не то."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 26,
+      "en": "Maybe the metal detector was responding to whatever\nshe ate, sir.",
+      "ru": "Может, металлоискатель и звенит на то,\nчто она съела, сэр."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 27,
+      "en": "Oh no!{E108:0018} {E107:0002}What if she ate {E1D1}one of the weights?",
+      "ru": "Ой!{E108:0018} {E107:0002}А вдруг она проглотила {E1D1}гирю?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 28,
+      "en": "I highly doubt that even an alligator could swallow a\n30-pound lump of iron.",
+      "ru": "Сильно сомневаюсь, что даже аллигатор\nпроглотит железяку в 15 кг."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 29,
+      "en": "(So what did the metal detector actually pick up...?)",
+      "ru": "(Так на что же он всё-таки звенел...?)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 30,
+      "en": "(And...{E108:0010} {E107:0002}{E1D1}why would someone hide those weights?)",
+      "ru": "(И...{E108:0010} {E107:0002}{E1D1}зачем кому-то прятать эти гири?)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 31,
+      "en": "(Hmm...{E108:0010} {E188:00300000}{E1D5}Perhaps I missed something when I looked at\nthe {E041}equipment by the well{E042}...)",
+      "ru": "(Хм...{E108:0010} {E188:00300000}{E1D5}Возможно, я упустил что-то, осматривая\n{E041}вещи вокруг колодца{E042}...)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 32,
+      "en": "Kay,{E108:0008} could you re-create the scene again?",
+      "ru": "Кей,{E108:0008} собери реконструкцию ещё раз."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001C93",
+      "index": 33,
+      "en": "Coming right up!",
+      "ru": "Сию минуту!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 0,
+      "en": "I got something!{E108:0018}\n{E1D1}There's something here, sir!",
+      "ru": "Есть!{E108:0018}\n{E1D1}Тут что-то есть, сэр!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 1,
+      "en": "O-{E108:0008}{E107:0001}{E1D1}{E188:00340000}Oooh!",
+      "ru": "О-{E108:0008}{E107:0001}{E1D1}{E188:00340000}О-о-ох!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 2,
+      "en": "It's a gold coin, sir!{E108:0018}\n{E107:0002}{E1D1}What a find!{E108:0010} It'll go down in history!",
+      "ru": "Золотая монета, сэр!{E108:0018}\n{E107:0002}{E1D1}Вот это находка!{E108:0010} В историю войдёт!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 3,
+      "en": "I don't imagine a gold coin would stay hidden long in a\nprison yard.",
+      "ru": "Едва ли золотая монета долго пролежала бы\nв тюремном дворе."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 4,
+      "en": "Oh,{E108:0008} {E107:0001}{E1D1}you found it!{E108:0018} {E107:0002}Never would have guessed it was\nhiding there this whole time!",
+      "ru": "О,{E108:0008} {E107:0001}{E1D1}нашли!{E108:0018} {E107:0002}И не подумала бы, что она\nвсё это время там пряталась!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 5,
+      "en": "That's one of the coins from the big coin hunt we hold\nonce every two weeks.",
+      "ru": "Это монета с большой охоты за монетами,\nмы её раз в две недели устраиваем."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 6,
+      "en": "Hey, that sounds kinda interesting.{E108:0018}\n{E107:0002}{E1D1}Must be fun for the {E1D1}whole family!",
+      "ru": "О, а это любопытно.{E108:0018}\n{E107:0002}{E1D1}Небось всей {E1D1}семьёй весело!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 7,
+      "en": "Sure is.{E108:0010} The prisoners have to hunt for the coins the\nwarden buried around the yard.",
+      "ru": "Ещё как.{E108:0010} Заключённые ищут монеты,\nкоторые начальница закопала во дворе."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 8,
+      "en": "And if they find three silver coins or one gold coin,{E108:0010}\n{E280}they can swap 'em for a jelly donut!",
+      "ru": "А за три серебряных или одну золотую{E108:0010}\n{E280}дают пончик с джемом!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 9,
+      "en": "(First the show,{E108:0008} now a treasure hunt...)",
+      "ru": "(То представление,{E108:0008} теперь охота за кладом...)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 10,
+      "en": "(Is this a prison or a playground?)",
+      "ru": "(Это тюрьма или детская площадка?)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CB6",
+      "index": 11,
+      "en": "Alright,{E108:0008} let's get back to it!",
+      "ru": "Ну что ж,{E108:0008} вернёмся к делу!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 0,
+      "en": "I found something!{E108:0018}\n{E1D1}There's something here, sir!",
+      "ru": "Нашёл!{E108:0018}\n{E1D1}Тут что-то есть, сэр!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 1,
+      "en": "I don't see anything metallic.{E108:0010}\n{E284}What did the detector pick up?",
+      "ru": "Ничего металлического не вижу.{E108:0010}\n{E284}На что он звенел?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 2,
+      "en": "Hmm...{E108:0010} {E107:0002}Guess it musta just picked up some {E188:00300000}iron sand.",
+      "ru": "Хм...{E108:0010} {E107:0002}Видать, звенел на {E188:00300000}железный песок."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 3,
+      "en": "Iron sand...{E108:0010} {E107:0002}As in,{E108:0008} sand you can pick up with a\nmagnet?",
+      "ru": "Железный песок...{E108:0010} {E107:0002}Тот,{E108:0008} что притягивается\nмагнитом?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 4,
+      "en": "That's the stuff.{E108:0010} You can find it at the beach\nsometimes.",
+      "ru": "Он самый.{E108:0010} На пляже иногда попадается."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 5,
+      "en": "And I got just the thing we need right here!{E108:0010}\nIntroducing...{E108:0008} Secret Weapon Number...{E108:0010} {E1D1}6 or 7!",
+      "ru": "А у меня как раз есть что надо!{E108:0010}\nВстречайте...{E108:0008} Тайное орудие №...{E108:0010} {E1D1}6 или 7!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 6,
+      "en": "A-Are you making this up as you go along...!?",
+      "ru": "Т-Ты что, придумываешь на ходу...!?"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 7,
+      "en": "A seemingly ordinary magnet that I found at the\nhardware store!",
+      "ru": "С виду обычный магнит, куплен\nв хозяйственном!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 8,
+      "en": "Watch this!{E108:0010} I just bring it close to the ground, and...{E108:0010}\n{E107:0001}{E1D1}Ta-da!{E108:0018} It's picking out the iron!",
+      "ru": "Смотрите!{E108:0010} Подношу его к земле, и...{E108:0010}\n{E107:0001}{E1D1}Та-дам!{E108:0018} Железо само липнет!"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 9,
+      "en": "Whoo!{E108:0010} {E1D1}Heh{E108:0008} {E1D1}heh{E108:0008} {E1D1}heh...{E108:0010}\nC'mon, little guys...{E108:0008} Come to Papa...",
+      "ru": "Ух!{E108:0010} {E1D1}Хе{E108:0008} {E1D1}хе{E108:0008} {E1D1}хе...{E108:0010}\nДавайте, малыши...{E108:0008} Идите к мамочке..."
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 10,
+      "en": "(It must be nice to be so easily entertained.)",
+      "ru": "(Хорошо тем, кого так легко занять.)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 11,
+      "en": "(Regardless,{E108:0008} the investigation must continue.)",
+      "ru": "(Как бы то ни было,{E108:0008} осмотр надо продолжать.)"
+    },
+    {
+      "file": "mg_metal.bytes",
+      "block": "05001CC2",
+      "index": 12,
+      "en": "Alright,{E108:0008} let's get back to it!",
+      "ru": "Ну что ж,{E108:0008} вернёмся к делу!"
+    }
+  ]
 }

@@ -4909,7 +4909,7 @@
       "index": 19,
       "mode": 2,
       "en": "(None of this makes any sense.{E108:0010} Not the least of which,{E108:0010}\n{E280}nobody could fall from this height and survive!)",
-      "ru": "(Всё это лишено смысла.{E108:0010} И главное —{E108:0010}\n{E280}с такой высоты не падают и выживают!)",
+      "ru": "(Всё это лишено смысла.{E108:0010} И главное —{E108:0010}\n{E280}с такой высоты упасть и выжить невозможно!)",
       "status": "translated"
     },
     {
@@ -5009,8 +5009,8 @@
       "index": 0,
       "mode": 2,
       "en": "...I'm sorry.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Простите.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000280|1",
@@ -5019,8 +5019,8 @@
       "index": 1,
       "mode": 2,
       "en": "I...{E108:0008} don't remember you well enough to accept\na gift like that just yet.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0008} ещё вас плохо помню, чтобы принимать\nтакие подарки.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000280|2",
@@ -5029,8 +5029,8 @@
       "index": 2,
       "mode": 2,
       "en": "I, I...{E108:0008} wasn't offering it to you...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я, я...{E108:0008} и не собирался его тебе дарить...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000283|0",
@@ -5039,8 +5039,8 @@
       "index": 0,
       "mode": 2,
       "en": "Is that...{E108:0010} for somebody who protects people?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это...{E108:0010} для тех, кто защищает людей?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000283|1",
@@ -5049,8 +5049,8 @@
       "index": 1,
       "mode": 3,
       "en": "Is it...{E108:0010} {E107:0002}a hero of justice's pin...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это...{E108:0010} {E107:0002}значок героя правосудия...?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000283|2",
@@ -5059,8 +5059,8 @@
       "index": 2,
       "mode": 2,
       "en": "No.{E108:0010} It's a prosecutor's badge.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нет.{E108:0010} Это прокурорский значок.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000283|3",
@@ -5069,8 +5069,8 @@
       "index": 3,
       "mode": 2,
       "en": "I believe you're thinking of an attorney's badge.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты, кажется, путаешь его с адвокатским.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000283|4",
@@ -5079,8 +5079,8 @@
       "index": 4,
       "mode": 3,
       "en": "I...{E108:0010} I am...?{E108:0018}\n{E107:0002}But it feels...{E108:0010} warm, somehow...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0010} Разве...?{E108:0018}\n{E107:0002}Но от него как-то...{E108:0010} тепло...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000283|5",
@@ -5089,8 +5089,8 @@
       "index": 5,
       "mode": 3,
       "en": "I feel like somebody I know used to have one...{E108:0010}\n{E107:0002}Somebody important...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кажется, такой был у кого-то из моих...{E108:0010}\n{E107:0002}У кого-то очень важного...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000283|6",
@@ -5099,8 +5099,8 @@
       "index": 6,
       "mode": 2,
       "en": "(Her father was a prosecutor.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Её отец был прокурором.)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000283|7",
@@ -5109,8 +5109,8 @@
       "index": 7,
       "mode": 2,
       "en": "(I suppose perhaps she's recalling flashes of her\nchildhood...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Должно быть, к ней возвращаются обрывки\nдетства...)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300028B|0",
@@ -5119,8 +5119,8 @@
       "index": 0,
       "mode": 2,
       "en": "You like pins, huh, Mr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы любите значки, мистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300028B|1",
@@ -5129,8 +5129,8 @@
       "index": 1,
       "mode": 2,
       "en": "I...{E108:0018}\nNot particularly,{E108:0008} no.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0018}\nНе особенно,{E108:0008} нет.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300028B|2",
@@ -5139,8 +5139,8 @@
       "index": 2,
       "mode": 2,
       "en": "Still,{E108:0008} you always seem to have one on you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И всё же{E108:0008} у вас вечно при себе какой-нибудь.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300028B|3",
@@ -5149,8 +5149,8 @@
       "index": 3,
       "mode": 2,
       "en": "It's a part of the job, I'm afraid.{E108:0010}\nAnd this one is also a piece of evidence.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Такая работа, увы.{E108:0010}\nА этот к тому же улика.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300028B|4",
@@ -5159,8 +5159,8 @@
       "index": 4,
       "mode": 2,
       "en": "Oh.{E108:0010} So you carry things you don't like around as a\nform of willpower training!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А!{E108:0010} Значит, вы носите нелюбимые вещи,\nчтобы закалять волю!?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300028B|5",
@@ -5169,8 +5169,8 @@
       "index": 5,
       "mode": 2,
       "en": "...That's not it at all.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Совсем не для этого.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000291|0",
@@ -5179,8 +5179,8 @@
       "index": 0,
       "mode": 2,
       "en": "I was carrying this, wasn't I?{E108:0018}\n{E107:0003}...I'm sorry.{E108:0010} I don't remember anything about it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это было при мне, да?{E108:0018}\n{E107:0003}...Простите.{E108:0010} Я про него совсем ничего не помню.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000291|1",
@@ -5189,8 +5189,8 @@
       "index": 1,
       "mode": 2,
       "en": "Nothing at all?{E108:0018}\nEven the tiniest clue could help.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Совсем ничего?{E108:0018}\nПоможет любая мелочь.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000291|2",
@@ -5199,8 +5199,8 @@
       "index": 2,
       "mode": 3,
       "en": "Alright,{E108:0008} let's see...{E108:0018} {E107:0002}{E285}Ah!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хорошо,{E108:0008} сейчас...{E108:0018} {E107:0002}{E285}А!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000291|3",
@@ -5209,8 +5209,8 @@
       "index": 3,
       "mode": 2,
       "en": "I think I might have just grabbed it on reflex when\nwhatever happened to me happened!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кажется, я схватила его машинально —\nкогда со мной случилось то, что случилось!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000291|4",
@@ -5219,8 +5219,8 @@
       "index": 4,
       "mode": 2,
       "en": "There's a saying, right?{E108:0010}\n\"A falling person will clutch at a straw\"?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Есть же поговорка, да?{E108:0010}\n«Падающий хватается за соломинку»?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000291|6",
@@ -5229,8 +5229,8 @@
       "index": 6,
       "mode": 2,
       "en": "What's the matter?{E108:0010} You're making a strange face.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что случилось?{E108:0010} У вас лицо переменилось.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000291|7",
@@ -5239,8 +5239,8 @@
       "index": 7,
       "mode": 2,
       "en": "...I don't want to dissuade you from trying,{E108:0010} but please,{E108:0008}\nI need you to think a little more before you speak.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Я не хочу отбивать у тебя охоту вспоминать,{E108:0010}\nно прошу:{E108:0008} думай чуть дольше, прежде чем говорить.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|03000291|8",
@@ -5249,8 +5249,8 @@
       "index": 8,
       "mode": 3,
       "en": "I...{E108:0010} I understand.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0010} Я поняла.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|0",
@@ -5259,8 +5259,8 @@
       "index": 0,
       "mode": 2,
       "en": "(Hmm...{E108:0010} Where to even start...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Хм...{E108:0010} С чего же начать...?)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|1",
@@ -5269,8 +5269,8 @@
       "index": 1,
       "mode": 2,
       "en": "So do you remember your name, kid?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А имя своё вы помните, девочка?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|2",
@@ -5279,8 +5279,8 @@
       "index": 2,
       "mode": 2,
       "en": "My...?{E108:0010} Oh, I...{E108:0008} Sorry.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Моё...?{E108:0010} Ой, я...{E108:0008} Простите.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|3",
@@ -5289,8 +5289,8 @@
       "index": 3,
       "mode": 2,
       "en": "She's been like this since she came in yesterday.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Она такая с самого поступления, со вчера.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|4",
@@ -5299,8 +5299,8 @@
       "index": 4,
       "mode": 2,
       "en": "...Hmm.{E108:0010} So she's only been in the hospital for a day.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Хм.{E108:0010} Значит, в клинике она всего сутки.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|5",
@@ -5309,8 +5309,8 @@
       "index": 5,
       "mode": 2,
       "en": "No way!{E108:0018} Amazing!{E108:0018} How did you figure that out?{E108:0010}\nWowww!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ничего себе!{E108:0018} Вот это да!{E108:0018} Как вы догадались?{E108:0010}\nУх тыыы!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|6",
@@ -5319,8 +5319,8 @@
       "index": 6,
       "mode": 2,
       "en": "(I...{E108:0008} might grow a little tired of our friend here\nbefore too long...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Я...{E108:0008} кажется, скоро устану от этой\nособы...)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|7",
@@ -5329,8 +5329,8 @@
       "index": 7,
       "mode": 2,
       "en": "They found her wandering around late at night\nand brought her in.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Её нашли поздно вечером, она бродила\nодна, — и привезли к нам.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|8",
@@ -5339,8 +5339,8 @@
       "index": 8,
       "mode": 2,
       "en": "I wanted to help out, {E108:0010}so I went through her stuff\nto see what I could find...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я хотела помочь{E108:0010} и перебрала её вещи —\nвдруг что найдётся...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|9",
@@ -5349,8 +5349,8 @@
       "index": 9,
       "mode": 2,
       "en": "And did you find anything apart from my\nbusiness card?",
-      "ru": "",
-      "status": "pending"
+      "ru": "И нашлось что-нибудь, кроме моей\nвизитной карточки?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|10",
@@ -5359,8 +5359,8 @@
       "index": 10,
       "mode": 2,
       "en": "Nothing with her name or her home address or--{E108:0010}\nOh!{E108:0018} Wait a second!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ни имени, ни адреса, ни--{E108:0010}\nОй!{E108:0018} Секундочку!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|11",
@@ -5369,8 +5369,8 @@
       "index": 11,
       "mode": 2,
       "en": "She was wearing this!{E108:0010} It's a pretty unique\ndesign, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот это было на ней!{E108:0010} Правда, необычная\nвещица?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|12",
@@ -5379,8 +5379,8 @@
       "index": 12,
       "mode": 2,
       "en": "Wh...{E108:0010} Th-This pin...!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чт...{E108:0010} Э-Этот значок...!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|13",
@@ -5389,8 +5389,8 @@
       "index": 13,
       "mode": 2,
       "en": "Whaaaaaaaat!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "ЧТООООООО!?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|14",
@@ -5399,8 +5399,8 @@
       "index": 14,
       "mode": 2,
       "en": "The Yatagarasu symbol!?{E108:0018} So does that mean...?{E108:0010}\nIt can't be!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Знак Ятагарасу!?{E108:0018} Значит...?{E108:0010}\nДа не может быть!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|15",
@@ -5409,8 +5409,8 @@
       "index": 15,
       "mode": 2,
       "en": "Kay!{E108:0010} Is it really you!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кей!{E108:0010} Неужели это ты!?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|16",
@@ -5419,8 +5419,8 @@
       "index": 16,
       "mode": 2,
       "en": "K-Kay...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "К-Кей...?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|0300029A|17",
@@ -5429,8 +5429,8 @@
       "index": 17,
       "mode": 2,
       "en": "Yatagarasu Pin data jotted down\nin my Organizer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Значок Ятагарасу» записаны\nв органайзер.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|0",
@@ -5439,8 +5439,8 @@
       "index": 0,
       "mode": 2,
       "en": "So, Kay...{E108:0010} Do you mind if we call you that?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Итак, Кей...{E108:0010} Ты не против, если мы так\nбудем тебя звать?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|1",
@@ -5449,8 +5449,8 @@
       "index": 1,
       "mode": 2,
       "en": "I...{E108:0010}\n\"Kay\"...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я...{E108:0010}\n«Кей»...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|2",
@@ -5459,8 +5459,8 @@
       "index": 2,
       "mode": 2,
       "en": "What kind of person is this Kay...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А какая она, эта Кей...?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|3",
@@ -5469,8 +5469,8 @@
       "index": 3,
       "mode": 2,
       "en": "Well, her --{E108:0008} your --{E108:0008} full name is Kay Faraday.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, её --{E108:0008} твоё --{E108:0008} полное имя — Кей Фарадей.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|4",
@@ -5479,8 +5479,8 @@
       "index": 4,
       "mode": 2,
       "en": "You're bright, and fun, and full of energy, and...{E108:0010}\nOh yeah!{E108:0008} You're a great thief!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты умная, весёлая, энергии хоть отбавляй, и...{E108:0010}\nА, да!{E108:0008} Ты Великий вор!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|5",
@@ -5489,8 +5489,8 @@
       "index": 5,
       "mode": 2,
       "en": "A...{E108:0010} great thief...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Великий...{E108:0010} вор...?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|6",
@@ -5499,8 +5499,8 @@
       "index": 6,
       "mode": 2,
       "en": "Well, {E108:0010}there's a little more to it than that, but...{E108:0008} yes.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну,{E108:0010} там всё несколько сложнее, но...{E108:0008} да.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|7",
@@ -5509,8 +5509,8 @@
       "index": 7,
       "mode": 2,
       "en": "You see, thieves generally take things \nwithout permission.{E108:0008} Stealing, in--",
-      "ru": "",
-      "status": "pending"
+      "ru": "Понимаешь, воры обычно берут чужое\nбез спроса.{E108:0008} Кража, то есть--",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|8",
@@ -5519,8 +5519,8 @@
       "index": 8,
       "mode": 2,
       "en": "No need to overcomplicate things, sir.{E108:0010} It's just\na type of criminal, Kay.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не надо всё усложнять, сэр.{E108:0010} Это просто\nразновидность преступника, Кей.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|9",
@@ -5529,8 +5529,8 @@
       "index": 9,
       "mode": 2,
       "en": "A...{E108:0010} criminal!?{E108:0018} I'm a...?{E108:0010} But that's...!{E108:0010} That must be so\nawful for the people I take things from!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пре...{E108:0010} преступница!?{E108:0018} Я...?{E108:0010} Но это же...!{E108:0010}\nКаково же тем, у кого я беру вещи!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|10",
@@ -5539,8 +5539,8 @@
       "index": 10,
       "mode": 2,
       "en": "N-No, that's...{E108:0010} That's not it at all...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Н-Нет, это...{E108:0010} Это совсем не так...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|11",
@@ -5549,8 +5549,8 @@
       "index": 11,
       "mode": 2,
       "en": "Gahhh...{E108:0010} Guess maybe oversimplifying things\nwasn't a good idea, either...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эхх...{E108:0010} Похоже, упрощать тоже было\nне лучшей мыслью...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|12",
@@ -5559,8 +5559,8 @@
       "index": 12,
       "mode": 2,
       "en": "Well, that sure explains a couple things!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, тогда кое-что становится понятно!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|13",
@@ -5569,8 +5569,8 @@
       "index": 13,
       "mode": 2,
       "en": "Look at these gloves --{E108:0008} they're just the kind of\nthing a, uhh...{E108:0010} person like that would wear.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот, гляньте на перчатки --{E108:0008} как раз то,\nчто носят, э-э...{E108:0010} такие люди.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|14",
@@ -5579,8 +5579,8 @@
       "index": 14,
       "mode": 2,
       "en": "I, I'm...{E108:0008} a criminal...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я, я...{E108:0008} преступница...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|15",
@@ -5589,8 +5589,8 @@
       "index": 15,
       "mode": 2,
       "en": "You're the Great Thief Yatagarasu.{E108:0008} You're no criminal.{E108:0010}\nYou've never committed a crime in your life.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты Великий вор Ятагарасу.{E108:0008} Ты не преступница.{E108:0010}\nТы ни одного преступления не совершила.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|16",
@@ -5599,8 +5599,8 @@
       "index": 16,
       "mode": 2,
       "en": "I need you to believe me when I say that.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И я хочу, чтобы ты мне поверила.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|17",
@@ -5609,8 +5609,8 @@
       "index": 17,
       "mode": 2,
       "en": "Well...{E108:0008} alright...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну...{E108:0008} хорошо...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002AC|18",
@@ -5619,8 +5619,8 @@
       "index": 18,
       "mode": 2,
       "en": "(I think perhaps we'd better leave it there for now...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Пожалуй, на этом лучше пока остановиться...)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|0",
@@ -5629,8 +5629,8 @@
       "index": 0,
       "mode": 2,
       "en": "...I'm sorry.{E108:0010} I wish I could remember who you are.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Простите.{E108:0010} Мне бы так хотелось вас вспомнить.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|1",
@@ -5639,8 +5639,8 @@
       "index": 1,
       "mode": 2,
       "en": "Uhh...{E108:0010} How do we know each other, exactly?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э...{E108:0010} А откуда мы с вами знакомы?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|2",
@@ -5649,8 +5649,8 @@
       "index": 2,
       "mode": 2,
       "en": "Hm.{E108:0010} Well, we...{E108:0008} You, uh...{E108:0010}\n(It's not exactly easy to explain...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хм.{E108:0010} Мы...{E108:0008} Ты, э-э...{E108:0010}\n(Объяснить это не так просто...)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|3",
@@ -5659,8 +5659,8 @@
       "index": 3,
       "mode": 2,
       "en": "You're Prosecutor Edgeworth's assistant!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты помощница прокурора Эджворта!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|4",
@@ -5669,8 +5669,8 @@
       "index": 4,
       "mode": 2,
       "en": "I am?{E108:0010} So...{E108:0008} a prosecutor is...{E108:0010} the head of some sort\nof great thief network...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да?{E108:0010} Значит...{E108:0008} прокурор — это...{E108:0010} главный\nв какой-то шайке великих воров...?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|5",
@@ -5679,8 +5679,8 @@
       "index": 5,
       "mode": 2,
       "en": "Well, uh...{E108:0008} No.{E108:0010} That's not quite it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, э-э...{E108:0008} Нет.{E108:0010} Не совсем так.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|6",
@@ -5689,8 +5689,8 @@
       "index": 6,
       "mode": 2,
       "en": "(We last saw Kay two days ago...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Мы виделись с Кей два дня назад...)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|7",
@@ -5699,8 +5699,8 @@
       "index": 7,
       "mode": 2,
       "en": "(Perhaps we should try to find out what she's \nbeen doing since then.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Пожалуй, стоит выяснить, что она делала\nс тех пор.)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|8",
@@ -5709,8 +5709,8 @@
       "index": 8,
       "mode": 2,
       "en": "Was the pin the only item she was carrying,\nMiss Niedler?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значок был единственной её вещью,\nмисс Нидлер?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|9",
@@ -5719,8 +5719,8 @@
       "index": 9,
       "mode": 2,
       "en": "Well, no, but I don't think the rest of that stuff will\nbe of much use to you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да нет, но остальное вам вряд ли\nчем-то поможет.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|10",
@@ -5729,8 +5729,8 @@
       "index": 10,
       "mode": 2,
       "en": "I'll be the judge of that.{E108:0010} Could you show us, please?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Об этом судить мне.{E108:0010} Покажите, будьте добры.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|11",
@@ -5739,8 +5739,8 @@
       "index": 11,
       "mode": 2,
       "en": "Well, alright, then!{E108:0010} In no particular order, I present...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну хорошо!{E108:0010} Тогда, в произвольном порядке,\nвстречайте...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|12",
@@ -5749,8 +5749,8 @@
       "index": 12,
       "mode": 2,
       "en": "Uhh, a Jammin' Ninja mask?{E108:0010} Was she at a show\nor something?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э, маска Джазового Ниндзи?{E108:0010} Она что,\nна представлении была?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|13",
@@ -5759,8 +5759,8 @@
       "index": 13,
       "mode": 2,
       "en": "Hmm...{E108:0010} A letter.{E108:0010} And it's addressed to Kay.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хм...{E108:0010} Письмо.{E108:0010} И адресовано Кей.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|14",
@@ -5769,8 +5769,8 @@
       "index": 14,
       "mode": 2,
       "en": "Next...{E108:0008} a ticket stub.{E108:0010} And finally...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Далее...{E108:0008} корешок билета.{E108:0010} И наконец...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|15",
@@ -5779,8 +5779,8 @@
       "index": 15,
       "mode": 2,
       "en": "A fake flower.{E108:0018} They have these in the men's\nroom at a place I go to!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Искусственный цветок!{E108:0018} Такие в одном баре\nв мужском туалете стоят!",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|16",
@@ -5789,8 +5789,8 @@
       "index": 16,
       "mode": 2,
       "en": "It's called a corsage, detective.{E108:0010} Your prom date\nmight have worn one.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это бутоньерка, детектив.{E108:0010} Её прикалывают\nк лацкану, а не ставят в туалете.",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|17",
@@ -5799,8 +5799,8 @@
       "index": 17,
       "mode": 2,
       "en": "Aaand that's that!{E108:0010} Well?{E108:0008} Anything useful in there?",
-      "ru": "",
-      "status": "pending"
+      "ru": "И-и-и всё!{E108:0010} Ну как?{E108:0008} Есть что-нибудь полезное?",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|18",
@@ -5809,8 +5809,8 @@
       "index": 18,
       "mode": 2,
       "en": "Uhh, {E108:0010}kinda hard to tell.{E108:0010} It's a weird bunch of stuff...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э,{E108:0010} трудно сказать.{E108:0010} Странный какой-то набор...",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|19",
@@ -5819,8 +5819,8 @@
       "index": 19,
       "mode": 2,
       "en": "(We should take a closer look at it all when we\nhave the chance...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Надо будет всё это как следует осмотреть,\nкогда появится время...)",
+      "status": "translated"
     },
     {
       "id": "sce3_c0_m20_npc.bytes|030002BF|20",
@@ -5829,8 +5829,8 @@
       "index": 20,
       "mode": 2,
       "en": "Jammin' Ninja Mask data jotted down\nin my Organizer.{E040}{E106}{E1CF}{E158:009F}{E1CE:009F}{E100:0000}{E101:FFFF003F}{E107:0002}{E042}Letter data jotted down\nin my Organizer.{E040}{E106}{E1CF}{E158:00A0}{E1CE:00A0}{E100:0000}{E101:FFFF003F}{E107:0002}{E042}Ticket Stub data jotted down\nin my Organizer.{E040}{E106}{E1CF}{E158:00A1}{E1CE:00A1}{E100:0000}{E101:FFFF003F}{E107:0002}{E042}Pink Flower data jotted down\nin my Organizer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Маска Джазового Ниндзи» записаны\nв органайзер.{E040}{E106}{E1CF}{E158:009F}{E1CE:009F}{E100:0000}{E101:FFFF003F}{E107:0002}{E042}Данные «Письмо» записаны\nв органайзер.{E040}{E106}{E1CF}{E158:00A0}{E1CE:00A0}{E100:0000}{E101:FFFF003F}{E107:0002}{E042}Данные «Корешок билета» записаны\nв органайзер.{E040}{E106}{E1CF}{E158:00A1}{E1CE:00A1}{E100:0000}{E101:FFFF003F}{E107:0002}{E042}Данные «Пурпурный цветок» записаны\nв органайзер.",
+      "status": "translated"
     },
     {
       "id": "sce3_c1_00.bytes|03000300|0",

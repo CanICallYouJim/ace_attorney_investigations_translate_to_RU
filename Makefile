@@ -28,8 +28,8 @@ endif
 export PYTHONIOENCODING := utf-8
 
 .DEFAULT_GOAL := help
-.PHONY: help check check-full selftest build install graphics restore status \
-        patch patch-check uninstall release publish extract clean
+.PHONY: help check check-full selftest build install graphics graphics-ru restore \
+        status patch patch-check uninstall release publish extract clean
 
 help:                ## показать этот список
 	@$(PY) tools/mk.py
@@ -58,6 +58,10 @@ install: check       ## собрать и поставить в игру — и�
 
 graphics:            ## подменить немецкую графику, ролики и выкрики английскими
 	$(PY) tools/swap_localized.py --build --install
+
+graphics-ru:         ## поставить в игру наши русские картинки — игра должна быть закрыта
+	$(PY) tools/inject_localized.py work/graphics_ru/case1 --install
+	$(PY) tools/inject_localized.py work/graphics_ru/case3 --install
 
 restore:             ## вернуть игру к оригиналам
 	$(PY) tools/restore.py

@@ -30,3 +30,4 @@ tools/win-ca-bundle.pem
 # tools/export_localized.py + сборщик из docs/localized-assets.md.
 # Промпт и манифест — наши, они остаются.
 work/graphics_en/**/*.png
+work/graphics_ru/**/*.png

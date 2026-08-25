@@ -58,9 +58,9 @@ import argparse
 import json
 from pathlib import Path
 
-from PIL import Image, ImageFilter
+from PIL import Image, ImageDraw, ImageFilter
 
-from relabel import strip_text
+from relabel import remap, strip_text
 
 MAGENTA = (255, 0, 255)
 
@@ -149,26 +149,87 @@ def run(spec_path: Path, only: str | None) -> int:
     for name, job in spec.items():
         if only and name != only:
             continue
+        if "как" in job:
+            own = {k: v for k, v in job.items()
+                   if k not in ("как", "якорь_там", "якорь_тут")}
+            job = {**remap(spec[job["как"]], job["якорь_там"], job["якорь_тут"]), **own}
         src = src_dir / f"{name}.png"
+        if job.get("основа") == "готовое" and (out_dir / f"{name}.png").exists():
+            # На картинке есть и набираемое, и рисованное: сперва по ней проходит
+            # relabel.py, потом этот скрипт. Оба пишут в одну папку, поэтому
+            # второй должен брать за основу результат первого, а не оригинал.
+            src = out_dir / f"{name}.png"
         if not src.exists():
             print(f"  {name}: нет исходника {src}")
             continue
         im = Image.open(src).convert("RGBA")
         alpha = im.getchannel("A")          # альфа оригинала: у cut* она 254..255
         flat = im.convert("RGB")
+        pristine = flat.copy()              # для «вернуть»: снятие уже не отменить
 
         for cut in job.get("снять", []):
             strip_text(flat, cut["box"], tuple(cut["fill"]), tuple(cut["stroke"]),
-                       cut.get("pad", 6))
+                       cut.get("pad", 6), tol_fill=cut.get("допуск", job.get("допуск", 45)),
+                       tol_stroke=cut.get("допуск_обводки", job.get("допуск_обводки", 25)))
         im = flat.convert("RGBA")
         im.putalpha(alpha)
 
+        if "уменьшить" in job:
+            # Третий приём — для копий, где набирать уже нечего. На карточке
+            # логики 158x158 лист занимает 141x97, и буква шапки выходит в три
+            # пикселя: снятие мажет, а набранное превращается в кашу. Проверено
+            # 25 августа 2026. Тогда готовая большая картинка ужимается в рамку
+            # ориентира этой. Линии игра рисует резче, чем выходит уменьшением,
+            # но ровное уменьшение верного кадра лучше сломанной сборки.
+            u = job["уменьшить"]
+            big = Image.open(out_dir / f'{u["из"]}.png').convert("RGBA")
+            there, here = u["якорь_там"], u["якорь_тут"]
+            patch = big.crop(tuple(there)).resize(
+                (here[2] - here[0], here[3] - here[1]), Image.LANCZOS)
+            im.paste(patch, (here[0], here[1]))
+
         for glue in job.get("вклеить", []):
             art_path = (spec_path.parent / glue["art"]).resolve()
+            raw = Image.open(art_path)
+            if "отрезать" in glue:
+                # Строки на листе идут лесенкой и налезают друг на друга по
+                # вертикали: прямоугольником одну от другой не отделить.
+                # Режем прямой через две точки — «выше» или «ниже» неё стирается
+                # фоном. Нужно, когда пометку надо разложить в одну строку,
+                # а нейросеть нарисовала её в две.
+                raw = raw.convert("RGB")
+                bg = tuple(glue.get("key", MAGENTA))
+                rp = raw.load()
+                for cut_ in glue["отрезать"]:
+                    side = "ниже" if "ниже" in cut_ else "выше"
+                    (ax, ay), (bx, by) = cut_[side]
+                    k = (by - ay) / (bx - ax)
+                    for x in range(raw.width):
+                        edge = ay + k * (x - ax)
+                        rng = (range(max(0, int(edge)), raw.height) if side == "ниже"
+                               else range(0, min(raw.height, int(edge) + 1)))
+                        for y in rng:
+                            rp[x, y] = bg
+            if "из" in glue:
+                # на одном листе нейросеть прислала несколько пометок сразу —
+                # берём нужную. Просить по одной за запрос выходит дороже,
+                # а лист режется рамкой без потерь.
+                raw = raw.crop(tuple(glue["из"]))
+            if "кроме" in glue:
+                # пометки на листе стоят лесенкой, и прямоугольник вокруг одной
+                # обязательно прихватывает угол соседней. Проверено: в первую
+                # пометку плана 24 марта заехало «Ладья перестав» из второй.
+                # Лишнее закрашивается фоном, а не вырезается рамкой, — иначе
+                # придётся резать пометку на куски.
+                raw = raw.convert("RGB")
+                bg = tuple(glue.get("key", MAGENTA))
+                d = ImageDraw.Draw(raw)
+                for rect in glue["кроме"]:
+                    d.rectangle(tuple(rect), fill=bg)
             if "взять" in glue:
                 # арт лежит на плашке, а не на пурпуре: берём только буквы
                 art = keep_only(
-                    Image.open(art_path),
+                    raw,
                     tuple(glue["взять"]),
                     tol_in=glue.get("tol_in", 45),
                     tol_out=glue.get("tol_out", 110),
@@ -176,17 +237,39 @@ def run(spec_path: Path, only: str | None) -> int:
                 )
             else:
                 art = key_out(
-                    Image.open(art_path),
+                    raw,
                     key=tuple(glue.get("key", MAGENTA)),
                     tol=glue.get("key_tol", 90),
                     despill=glue.get("despill", True),
                     shrink=glue.get("shrink", 2),
                 )
+            if glue.get("поворот"):
+                # пометка от руки лежит на плане под углом; лист от нейросети
+                # ровный. Поворот с expand, чтобы углы букв не срезало.
+                art = art.rotate(glue["поворот"], Image.BICUBIC, expand=True)
+                box = art.getbbox()
+                if box:
+                    art = art.crop(box)
             art, at = fit(art, glue["box"])
             if glue.get("opacity", 1.0) != 1.0:
                 a = art.getchannel("A").point(lambda v: int(v * glue["opacity"]))
                 art.putalpha(a)
             im.alpha_composite(art, at)
+
+        for back in job.get("вернуть", []):
+            # Стрелка от пометки к фигуре нарисована той же красной ручкой и
+            # проходит сквозь буквы, поэтому снятие надписи откусывает ей хвост.
+            # Здесь кусок стрелки возвращается из нетронутого оригинала: рамка
+            # берётся такая, где из красного есть только стрелка.
+            x0, y0, x1, y1 = back["box"]
+            col = tuple(back["цвет"])
+            tol = back.get("допуск", 60)
+            sp, dp = pristine.load(), im.load()
+            for y in range(y0, y1):
+                for x in range(x0, x1):
+                    q = sp[x, y]
+                    if max(abs(q[i] - col[i]) for i in range(3)) <= tol:
+                        dp[x, y] = (*q, 255)
 
         dest = out_dir / f"{name}.png"
         im.save(dest)

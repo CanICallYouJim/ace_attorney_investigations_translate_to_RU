@@ -83,8 +83,16 @@ def inpaint(im: Image.Image, mask: Image.Image, box, passes: int = 24) -> None:
             hole.discard((x, y))
 
 
-def strip_text(im: Image.Image, box, fill, stroke, pad: int = 6) -> None:
-    """Снять старую надпись: маска по цвету букв и обводки, затем inpaint."""
+def strip_text(im: Image.Image, box, fill, stroke, pad: int = 6,
+               tol_fill: int = 45, tol_stroke: int = 25) -> None:
+    """Снять старую надпись: маска по цвету букв и обводки, затем inpaint.
+
+    Допуск вынесен в аргументы не для красоты. На мелких копиях той же картинки
+    (карточка логики 158x158 против врезки 1920x1080) буква занимает три-четыре
+    пикселя и почти вся состоит из сглаживания: её средний цвет уходит к бумаге,
+    и маска с допуском 45 не берёт ничего. Проверено 25 августа 2026 —
+    английская надпись осталась под русской, и на карточке они задвоились.
+    """
     x0, y0, x1, y1 = box
     X0, Y0 = max(0, x0 - pad), max(0, y0 - pad)
     X1, Y1 = min(im.width, x1 + pad), min(im.height, y1 + pad)
@@ -94,10 +102,50 @@ def strip_text(im: Image.Image, box, fill, stroke, pad: int = 6) -> None:
     for y in range(Y0, Y1):
         for x in range(X0, X1):
             p = px[x, y]
-            if near(p, fill, 45) or near(p, stroke, 25):
+            if near(p, fill, tol_fill) or near(p, stroke, tol_stroke):
                 mp[x - X0, y - Y0] = 255
     mask = mask.filter(ImageFilter.MaxFilter(5))
     inpaint(im, mask, (X0, Y0))
+
+
+def remap(job: dict, there, here) -> dict:
+    """Пересчитать рамки задания под другой файл с той же картинкой.
+
+    Дело 1 повторяется само в себе: план охраны лежит в трёх файлах, газета
+    в пяти. Файлы **не одна картинка в разных размерах** — у карточки улики
+    свой кадр, и врезка, вписанная в её рамку, расходится с ней на 24 из 255:
+    мелкие копии игра рисует отдельно и резче. Уменьшать готовую врезку нельзя,
+    собирать надо в родном масштабе.
+
+    Зато рисунок один и тот же. Если указать в обоих файлах общий ориентир —
+    у планов это лист бумаги, — рамки пересчитываются сами, и размечать руками
+    надо только первый файл.
+
+    `there` и `here` — рамка ориентира в исходном и в целевом файле.
+    """
+    sx = (here[2] - here[0]) / (there[2] - there[0])
+    sy = (here[3] - here[1]) / (there[3] - there[1])
+
+    def box(b):
+        return [round(here[0] + (b[0] - there[0]) * sx),
+                round(here[1] + (b[1] - there[1]) * sy),
+                round(here[2] + (b[2] - there[2]) * sx),
+                round(here[3] + (b[3] - there[3]) * sy)]
+
+    out = {k: v for k, v in job.items() if k not in ("снять", "вернуть", "вклеить", "labels")}
+    for key in ("снять", "вернуть", "вклеить"):
+        if key in job:
+            out[key] = [dict(it, box=box(it["box"])) for it in job[key]]
+    if "labels" in job:
+        out["labels"] = []
+        for lb in job["labels"]:
+            new = dict(lb, box=box(lb["box"]))
+            if "max_width" in lb:
+                new["max_width"] = max(1, round(lb["max_width"] * sx))
+            if "size" in lb:
+                new["size"] = max(6, round(lb["size"] * sy))
+            out["labels"].append(new)
+    return out
 
 
 def pick_size(draw, labels, font_path, hi=64, lo=10):
@@ -121,6 +169,10 @@ def run(spec_path: Path, only: str | None) -> int:
     for name, cfg in spec.items():
         if only and name != only:
             continue
+        if "как" in cfg:
+            own = {k: v for k, v in cfg.items()
+                   if k not in ("как", "якорь_там", "якорь_тут")}
+            cfg = {**remap(spec[cfg["как"]], cfg["якорь_там"], cfg["якорь_тут"]), **own}
         src = src_dir / f"{name}.png"
         if not src.exists():
             print(f"  ! нет исходника {src}")
@@ -132,14 +184,22 @@ def run(spec_path: Path, only: str | None) -> int:
         labels = cfg["labels"]
 
         for lb in labels:
-            strip_text(im, lb["box"], fill, stroke)
+            strip_text(im, lb["box"], fill, stroke,
+                       tol_fill=cfg.get("допуск", 45),
+                       tol_stroke=cfg.get("допуск_обводки", 25))
 
         draw = ImageDraw.Draw(im)
         size = pick_size(draw, labels, font_path)
         sw = cfg.get("stroke_width", 3)
         for lb in labels:
             lines = lb["text"].split("|")
-            s = size if len(lines) == 1 else max(10, size - 4)
+            # Общий кегль — правило, но бывают картинки с двумя настоящими
+            # размерами шрифта: на плане охраны «Ладья» вдвое крупнее шапки
+            # «План охраны президента». Тогда у надписи свой кегль, явно.
+            if "size" in lb:
+                s = lb["size"]
+            else:
+                s = size if len(lines) == 1 else max(10, size - 4)
             while s > 10:
                 f = ImageFont.truetype(str(font_path), s)
                 if max(draw.textbbox((0, 0), t, font=f)[2] for t in lines) <= lb.get(
@@ -155,7 +215,7 @@ def run(spec_path: Path, only: str | None) -> int:
             yy = cy - total // 2
             for t, hh in zip(lines, hs):
                 bb = draw.textbbox((0, 0), t, font=f)
-                draw.text((cx - bb[2] // 2, yy), t, font=f, fill=fill,
+                draw.text((cx - bb[2] // 2, yy), t, font=f, fill=tuple(lb.get("fill", fill)),
                           stroke_width=sw, stroke_fill=stroke)
                 yy += hh + 6
         out = out_dir / f"{name}.png"

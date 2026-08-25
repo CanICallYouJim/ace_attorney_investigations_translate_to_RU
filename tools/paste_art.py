@@ -92,6 +92,44 @@ def key_out(im: Image.Image, key=MAGENTA, tol: int = 90, despill: bool = True,
     return out.crop(box) if box else out
 
 
+def keep_only(im: Image.Image, colour, tol_in: int = 45, tol_out: int = 110,
+              recolour=None) -> Image.Image:
+    """Оставить только пиксели около заданного цвета — остальное прозрачным.
+
+    Нужно, когда нейросеть нарисовала не одно слово, а слово **на плашке**:
+    плашку рисовал Capcom, её надо сохранить, а взять только буквы. Ключом
+    по фону тут не обойтись — фонов два.
+
+    Край букв сглажен и уезжает в цвет плашки, поэтому альфа не ступенькой,
+    а полосой: до `tol_in` непрозрачно, после `tol_out` прозрачно, между —
+    линейно. Иначе буквы приезжают с зубцами.
+
+    `recolour` перекрашивает буквы в цвет оригинала: нейросеть рисует при
+    своём освещении, а плашка в кадре бывает в тени (у `cut02_032` буквы
+    оригинала (42,20,15), у нейросети (63,27,12) — заметно светлее).
+    """
+    im = im.convert("RGB")
+    w, h = im.size
+    px = im.load()
+    out = Image.new("RGBA", (w, h))
+    op = out.load()
+    span = max(1, tol_out - tol_in)
+    for y in range(h):
+        for x in range(w):
+            p = px[x, y]
+            d = max(abs(p[i] - colour[i]) for i in range(3))
+            if d <= tol_in:
+                a = 255
+            elif d >= tol_out:
+                op[x, y] = (0, 0, 0, 0)
+                continue
+            else:
+                a = int(255 * (tol_out - d) / span)
+            op[x, y] = (*(recolour or p), a)
+    box = out.getbbox()
+    return out.crop(box) if box else out
+
+
 def fit(art: Image.Image, box) -> tuple[Image.Image, tuple[int, int]]:
     """Вписать арт в рамку, сохранив пропорции. Возвращает картинку и левый верх."""
     x0, y0, x1, y1 = box
@@ -127,13 +165,23 @@ def run(spec_path: Path, only: str | None) -> int:
 
         for glue in job.get("вклеить", []):
             art_path = (spec_path.parent / glue["art"]).resolve()
-            art = key_out(
-                Image.open(art_path),
-                key=tuple(glue.get("key", MAGENTA)),
-                tol=glue.get("key_tol", 90),
-                despill=glue.get("despill", True),
-                shrink=glue.get("shrink", 2),
-            )
+            if "взять" in glue:
+                # арт лежит на плашке, а не на пурпуре: берём только буквы
+                art = keep_only(
+                    Image.open(art_path),
+                    tuple(glue["взять"]),
+                    tol_in=glue.get("tol_in", 45),
+                    tol_out=glue.get("tol_out", 110),
+                    recolour=tuple(glue["перекрасить"]) if "перекрасить" in glue else None,
+                )
+            else:
+                art = key_out(
+                    Image.open(art_path),
+                    key=tuple(glue.get("key", MAGENTA)),
+                    tol=glue.get("key_tol", 90),
+                    despill=glue.get("despill", True),
+                    shrink=glue.get("shrink", 2),
+                )
             art, at = fit(art, glue["box"])
             if glue.get("opacity", 1.0) != 1.0:
                 a = art.getchannel("A").point(lambda v: int(v * glue["opacity"]))

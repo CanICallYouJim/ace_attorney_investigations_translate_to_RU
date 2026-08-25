@@ -133,6 +133,8 @@ Kaspersky и pip, порча UTF-8 через PowerShell, блокировка �
 | [`docs/limits.md`](docs/limits.md) | Текст не влезает | Перезамерены лимиты |
 | [`docs/font-atlas.md`](docs/font-atlas.md) | Проблемы с отрисовкой букв | Новая находка по шрифтам |
 | [`docs/localized-assets.md`](docs/localized-assets.md) | Немецкая надпись на картинке, в ролике, на модели | Новая находка по графике |
+| [`docs/graphics-handoff.md`](docs/graphics-handoff.md) | **Продолжаем графику с нуля** — состояние, инструменты, уже сделанные ошибки | Закрыт файл, найдена ошибка, решено имя |
+| [`docs/graphics-workflow.md`](docs/graphics-workflow.md) | Порядок работы с надписями на картинках | Уточнился приём или образец запроса |
 | [`docs/bytes-format.md`](docs/bytes-format.md) | Проблемы с разбором скриптов | Уточнён формат |
 | [`docs/environment.md`](docs/environment.md) | Что-то не запускается | Новая грабля |
 

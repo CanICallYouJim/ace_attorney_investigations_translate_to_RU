@@ -29,6 +29,13 @@
     python tools/check_address.py --case 3               # всё дело
     python tools/check_address.py --case 3 --who Грегори # один говорящий
     python tools/check_address.py --case 3 --imperative  # только повеления
+    python tools/check_address.py --tables               # кнопки тем и врезки
+
+`--tables` — про второе хранилище. Кнопку темы переводят отдельным проходом,
+до диалогов (правило №6), и собеседника в ней нет вовсе: «What are you hiding» —
+и всё. Так в списке тем Ларри оказалось «Что вы скрываете» при «Что ты скрываешь?»
+в реплике под ней, а в списке тем к потерявшей память Кей — «Что вы помните».
+Обе нашёл игрок 31 августа 2026.
 
 Кто с кем на «ты» — записано в [`docs/voices.md`](../docs/voices.md), возрасты
 персонажей — в [`docs/glossary.md`](../docs/glossary.md).
@@ -42,7 +49,8 @@ import re
 import polyglot as P
 import segments as S
 import tps as T
-from common import BACKUP, HOST, case_of, in_case_scope, load_entries, load_json, read_scripts_all
+from common import (BACKUP, HOST, WORK, case_of, in_case_scope, load_entries,
+                    load_json, read_scripts_all)
 from who import NAMES, speaker_of
 
 DE_DU = re.compile(r"\b(?:du|dich|dir|dein|deine[mnrs]?|deiner)\b", re.I)
@@ -62,6 +70,11 @@ RU_VY = re.compile(r"\b(?:вы|вас|вам|вами|ваш(?:а|е|и|его|�
 RU_TY = re.compile(r"\b(?:ты|тебя|тебе|тобой|тво(?:й|я|ё|и|его|ей|ем|ему|ю|им|их))\b", re.I)
 # «Ух ты!», «ишь ты», «вот ты как» — междометия, обращения в них нет.
 RU_TY_INTERJ = re.compile(r"\b(?:ух|ишь|вон|вот|ну|ой|ай)\s+ты\b", re.I)
+# Кнопка темы — не реплика: местоимения в ней может не быть вовсе («Что вы
+# скрываете»), а форма всё равно видна по окончанию глагола. В репликах этот
+# признак не нужен и только шумит — там местоимение почти всегда есть.
+RU_VERB_VY = re.compile(r"\b[а-яё]{2,}(?:ете|ёте|ите)\b", re.I)
+RU_VERB_TY = re.compile(r"\b[а-яё]{2,}(?:ешь|ёшь|ишь)\b", re.I)
 
 # Форма, решённая за персонажем целиком. Проверка её не показывает, но и
 # не прячет: число снятых мест печатается в конце. Без этого список нечитаем —
@@ -152,14 +165,70 @@ def polite_imperative(ru: str) -> bool:
     return any(w.lower() not in NOT_IMP for w in RU_IMP.findall(ru))
 
 
+def tables() -> int:
+    """То же самое по строковым таблицам: кнопки тем, врезки, подписи.
+
+    Здесь ошибка живёт вольготнее, чем в репликах. Кнопку темы переводят
+    отдельным проходом, до диалогов (правило №6), а в самой кнопке нет ни
+    говорящего, ни собеседника: «What are you hiding» — и всё. Так и вышло,
+    что в списке тем Ларри стояло «Что вы скрываете», а в реплике под ней —
+    «Что ты скрываешь?». Нашёл игрок.
+
+    Немецкий столбец лежит рядом в work/strings.json, читать бандлы не нужно.
+    """
+    data = load_json(WORK / "strings.json")
+    if not data:
+        print("нет work/strings.json — сначала tools/extract_strings.py")
+        return 1
+
+    hits = seen = 0
+    for table, rows in sorted(data["tables"].items()):
+        for key, entry in rows.items():
+            ru = (entry.get("ru") or "").replace("\n", " ")
+            de = (entry.get("de") or "").replace("\n", " ")
+            if not ru or not de:
+                continue
+            formal = bool(DE_SIE_ALWAYS.search(de)) or bool(DE_SIE_MID.search(de))
+            familiar = bool(DE_DU.search(de))
+            if not (formal or familiar):
+                continue
+            seen += 1
+            ru_vy = bool(RU_VY.search(ru)) or bool(RU_VERB_VY.search(ru))
+            ru_ty = bool(RU_TY.search(RU_TY_INTERJ.sub(" ", ru))) or bool(RU_VERB_TY.search(ru))
+            if familiar and not formal and ru_vy and not ru_ty:
+                why = "у них «ты», у нас «вы»"
+            elif formal and not familiar and ru_ty and not ru_vy:
+                why = "у них «вы», у нас «ты»"
+            else:
+                continue
+            hits += 1
+            print(f"{table} {key} — {why}")
+            print(f"   EN: {entry.get('en')}")
+            print(f"   DE: {de}")
+            print(f"   RU: {ru}")
+
+    print()
+    print(f"записей с немецким признаком: {seen}, мест на разбор: {hits}")
+    print("Признак вероятностный: письмо по-немецки вежливо и между друзьями,")
+    print("а интерфейс обращается к игроку, а не к персонажу. Решать глазами.")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--case", type=int, required=True, help="номер дела")
+    ap.add_argument("--case", type=int, help="номер дела")
+    ap.add_argument("--tables", action="store_true",
+                    help="не реплики, а строковые таблицы: кнопки тем, врезки")
     ap.add_argument("--who", help="только этот говорящий, как в who.py")
     ap.add_argument("--imperative", action="store_true",
                     help="только повеления (там местоимений нет)")
     args = ap.parse_args()
+
+    if args.tables:
+        return tables()
+    if args.case is None:
+        ap.error("нужен --case или --tables")
 
     ger, fre = lang_index("ger"), lang_index("fre")
     who = speakers_index(args.case)

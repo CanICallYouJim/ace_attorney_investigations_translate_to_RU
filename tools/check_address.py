@@ -75,6 +75,20 @@ RU_TY_INTERJ = re.compile(r"\b(?:ух|ишь|вон|вот|ну|ой|ай)\s+т�
 # признак не нужен и только шумит — там местоимение почти всегда есть.
 RU_VERB_VY = re.compile(r"\b[а-яё]{2,}(?:ете|ёте|ите)\b", re.I)
 RU_VERB_TY = re.compile(r"\b[а-яё]{2,}(?:ешь|ёшь|ишь)\b", re.I)
+# Второе лицо прячется и в прошедшем времени, и это худший из тайников: «Что-нибудь
+# заметили?» — вежливое «вы», а «Тело отодвинули?» — безличное «они», и морфология
+# их не различает. Поэтому признак берётся только в вопросе: в кнопке темы вопрос
+# почти всегда обращён к собеседнику. Так нашлось `gk2_topic00_00a` (игрок,
+# 1 сентября 2026) — форму там выбрали только мы, у остальных семи её нет вовсе.
+RU_PAST_PL = re.compile(r"\b[а-яё]{3,}ли\b", re.I)
+# Английский тоже бывает виден: где стоит `you`, форму выбирали не мы одни.
+EN_YOU = re.compile(r"\byou(?:r|rs|rself)?\b", re.I)
+
+# Таблицы, где у строки есть собеседник: кнопки тем, варианты ответа, ярлыки
+# логики. Врезки (`gk2_txtcut`), описания улик и интерфейс сюда не входят —
+# там речь о третьих лицах или обращение к самому игроку.
+ADDRESSED_TABLES = ("gk2_select_short", "gk2_select_long",
+                    "gk2_logic_button", "gk2_logic_name")
 
 # Форма, решённая за персонажем целиком. Проверка её не показывает, но и
 # не прячет: число снятых мест печатается в конце. Без этого список нечитаем —
@@ -165,6 +179,33 @@ def polite_imperative(ru: str) -> bool:
     return any(w.lower() not in NOT_IMP for w in RU_IMP.findall(ru))
 
 
+def french_tables() -> dict[str, dict[str, str]]:
+    """Французские строковые таблицы: имя таблицы -> {m_Id: строка}.
+
+    Немецкий столбец лежит в work/strings.json, а французский приходится читать
+    из бандла — но читать обязательно. Немецкий молчит там, где французский
+    говорит (`Ihr Alibi` в начале строки неотличимо от «её алиби», а `Votre
+    alibi` однозначно), и оба молчат там, где ушли от формы нарочно.
+    """
+    import UnityPy
+
+    from common import bundle
+
+    out: dict[str, dict[str, str]] = {}
+    for key in ("strings_fre", "strings_fre_main"):
+        env = UnityPy.load(str(bundle(key)))
+        for obj in env.objects:
+            if obj.type.name != "MonoBehaviour":
+                continue
+            tree = obj.read_typetree()
+            if "m_TableData" not in tree:
+                continue
+            name = tree["m_Name"].rsplit("_", 1)[0]
+            out.setdefault(name, {}).update(
+                {str(row["m_Id"]): row["m_Localized"] for row in tree["m_TableData"]})
+    return out
+
+
 def tables() -> int:
     """То же самое по строковым таблицам: кнопки тем, врезки, подписи.
 
@@ -174,27 +215,55 @@ def tables() -> int:
     что в списке тем Ларри стояло «Что вы скрываете», а в реплике под ней —
     «Что ты скрываешь?». Нашёл игрок.
 
-    Немецкий столбец лежит рядом в work/strings.json, читать бандлы не нужно.
+    Два списка, и второй важнее первого:
+
+    * **расхождение** — у немцев или французов форма есть, и она не наша;
+    * **форму выбрали только мы** — ни в английском, ни у немцев, ни у французов
+      формы нет вовсе, а по-русски она есть. Это не мелочь: строка таблицы
+      **одна на всю игру**, а собеседник у неё в каждой сцене свой. Кнопка
+      «Notice anything?» показывается и Кей, и Гамшу, и Бадду — а Эджворт с Кей
+      на «ты», с Гамшу в деле 1 на «вы», Грегори с Баддом на «вы». Все семь
+      локализаций ушли от формы (яп. 気づいたこと, фр. `Quelque chose à signaler ?`,
+      нем. `Etwas bemerkt?`), и мы обязаны уйти тоже. Найдено игроком
+      1 сентября 2026: стояло «Что-нибудь заметили?», стало «Что удалось
+      заметить?».
     """
     data = load_json(WORK / "strings.json")
     if not data:
         print("нет work/strings.json — сначала tools/extract_strings.py")
         return 1
+    fre = french_tables()
 
-    hits = seen = 0
+    hits = seen = only_ours = 0
     for table, rows in sorted(data["tables"].items()):
         for key, entry in rows.items():
             ru = (entry.get("ru") or "").replace("\n", " ")
             de = (entry.get("de") or "").replace("\n", " ")
-            if not ru or not de:
+            en = (entry.get("en") or "").replace("\n", " ")
+            fr = (fre.get(table, {}).get(key) or "").replace("\n", " ")
+            if not ru:
                 continue
-            formal = bool(DE_SIE_ALWAYS.search(de)) or bool(DE_SIE_MID.search(de))
-            familiar = bool(DE_DU.search(de))
-            if not (formal or familiar):
-                continue
-            seen += 1
+            formal = (bool(DE_SIE_ALWAYS.search(de)) or bool(DE_SIE_MID.search(de))
+                      or bool(FR_VOUS.search(fr)) or bool(FR_VOUS_VERB.search(fr)))
+            familiar = bool(DE_DU.search(de)) or bool(FR_TU.search(fr))
             ru_vy = bool(RU_VY.search(ru)) or bool(RU_VERB_VY.search(ru))
             ru_ty = bool(RU_TY.search(RU_TY_INTERJ.sub(" ", ru))) or bool(RU_VERB_TY.search(ru))
+
+            if not (formal or familiar):
+                # Ни у кого формы нет. Если она есть у нас — разбирать: строка
+                # одна, а собеседников у неё несколько.
+                if (table in ADDRESSED_TABLES and not EN_YOU.search(en)
+                        and (ru_vy or ru_ty
+                             or (ru.rstrip().endswith("?") and RU_PAST_PL.search(ru)))):
+                    only_ours += 1
+                    print(f"{table} {key} — форму выбрали только мы")
+                    print(f"   EN: {en}")
+                    print(f"   DE: {de}")
+                    print(f"   FR: {fr}")
+                    print(f"   RU: {ru}")
+                continue
+
+            seen += 1
             if familiar and not formal and ru_vy and not ru_ty:
                 why = "у них «ты», у нас «вы»"
             elif formal and not familiar and ru_ty and not ru_vy:
@@ -203,12 +272,14 @@ def tables() -> int:
                 continue
             hits += 1
             print(f"{table} {key} — {why}")
-            print(f"   EN: {entry.get('en')}")
+            print(f"   EN: {en}")
             print(f"   DE: {de}")
+            print(f"   FR: {fr}")
             print(f"   RU: {ru}")
 
     print()
-    print(f"записей с немецким признаком: {seen}, мест на разбор: {hits}")
+    print(f"записей с чужим признаком: {seen}, расхождений: {hits}, "
+          f"«форму выбрали только мы»: {only_ours}")
     print("Признак вероятностный: письмо по-немецки вежливо и между друзьями,")
     print("а интерфейс обращается к игроку, а не к персонажу. Решать глазами.")
     return 0

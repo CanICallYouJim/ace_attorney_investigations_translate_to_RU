@@ -37,3 +37,7 @@ work/graphics_ru/**/*.png
 # Приходят от пользователя, кладутся в work/graphics_ai/<дело>/, задание
 # на вклейку (art.json) — наше, оно остаётся.
 work/graphics_ai/**/*.png
+
+# Кэш карты «сегмент -> говорящий» для find_translationese.py. Считается за
+# восемь секунд из бандлов игры, версионировать нечего.
+work/.speakers_cache.json

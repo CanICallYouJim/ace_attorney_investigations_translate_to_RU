@@ -89,6 +89,7 @@ PARTICLES = w(
     "правда", "действительно", "верно", "ещё бы", "конечно", "однако", "пожалуй",
     "впрочем", "разумеется", "надо же", "в конце концов", "более чем", "точно",
     "никак", "нате же", "то ли дело", "стало быть", "стал-быть", "выходит",
+    "впрямь", "наверняка", "значит", "небось", "будто", "словно бы", "как раз",
 )
 # Частица на конце реплики: «..., а?», «..., да?», «..., нет?» — интонация есть.
 TAIL = re.compile(r"[,—-]\s*(?:а|да|нет|ага|угу|правда|верно|точно)\s*[?!]+", re.I)
@@ -273,6 +274,9 @@ def main() -> int:
     ap.add_argument("--file", default="", help="ограничить участком: sce1_c1")
     ap.add_argument("--who", help="слот говорящего, например 0000")
     ap.add_argument("--limit", type=int, default=60, help="сколько мест печатать")
+    ap.add_argument("--offset", type=int, default=0, help="пропустить первые N мест")
+    ap.add_argument("--context", action="store_true",
+                    help="показать перевод соседней реплики сверху")
     ap.add_argument("--by-speaker", action="store_true", help="сводка по говорящим")
     ap.add_argument("--weak", action="store_true",
                     help="частицы: считать и слабую эмфазу (just, even, actually)")
@@ -306,10 +310,23 @@ def main() -> int:
             print("%6d  %s" % (k, name))
         return 0
 
+    # Соседняя реплика сверху: короткий отклик переводится по ней, а не сам
+    # по себе (правило №9), да и частица выбирается по тому, на что отвечают.
+    prev = {}
+    for case in cases:
+        before = None
+        for e in load_entries(case):
+            if before is not None:
+                prev[e["id"]] = before
+            before = e
+
     print("%s: %d мест, показаны первые %d\n" % (args.kind, len(found),
                                                  min(args.limit, len(found))))
-    for e, case, name, tag in found[:args.limit]:
+    for e, case, name, tag in found[args.offset:args.offset + args.limit]:
         print("[%d] %s  %s  <%s>" % (case, e["id"], name or "—", tag))
+        p = prev.get(e["id"])
+        if p is not None and args.context:
+            print("  ^^  " + CODES.sub("", p["ru"]).replace("\n", " / "))
         print("  EN  " + CODES.sub("", e["en"]).replace("\n", " / "))
         print("  RU  " + CODES.sub("", e["ru"]).replace("\n", " / "))
         print()

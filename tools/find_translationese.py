@@ -129,7 +129,9 @@ NOT_PARTICIPLE = w(
 )
 # Врезка органайзера — служебная формула игры, а не канцелярит переводчика.
 ORGANIZER = re.compile(r"Данные\s+[«„\"]", re.I)
-GERUND = re.compile(r"[а-яё]{3,}(?:вши|учи|ючи)\b|[а-яё]{4,}(?:ая|яя)сь\b", re.I)
+# Дефис в хвосте — не граница слова, а растяжка звука: «получи-и-ил» не деепричастие.
+GERUND = re.compile(r"[а-яё]{3,}(?:вши|учи|ючи)(?![а-яё-])|[а-яё]{4,}(?:ая|яя)сь(?![а-яё-])",
+                    re.I)
 VERBAL_NOUN = w(
     "осуществление", "проведение", "получение", "использование", "применение",
     "обнаружение", "установление", "подтверждение", "предоставление", "совершение",
@@ -248,8 +250,18 @@ def scan(cases, file_prefix, who_id, kind, weak=False):
                 continue
             hits = []
             for rx, tag in SYNTAX:
+                if tag == "причастие":
+                    # Одно причастие — законная русская речь: «пуля, оборвавшая
+                    # жизнь». Брак начинается с нагромождения: два оборота в одной
+                    # реплике читаются как протокол. Разбор — russian.md §2.7.
+                    found = [w_ for w_ in rx.findall(ru)] if rx.groups else [
+                        m.group(0) for m in rx.finditer(ru)]
+                    found = [x for x in found if not NOT_PARTICIPLE.fullmatch(x)]
+                    if len(found) >= 2:
+                        hits.append(tag + ": " + ", ".join(found[:3]))
+                    continue
                 m = rx.search(ru)
-                if m and not (tag == "причастие" and NOT_PARTICIPLE.fullmatch(m.group(0))):
+                if m:
                     hits.append(tag + ": " + m.group(0))
             if hits:
                 yield e, case, name, "; ".join(hits)

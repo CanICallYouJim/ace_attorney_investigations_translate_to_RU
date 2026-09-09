@@ -39,6 +39,7 @@ CHECKS = [
     ("fast", "сторож рода сам не ослеп", ["test_check_gender.py"]),
     ("fast", "два хранилища: подписи дела не отстают от реплик", ["check_pipelines.py"]),
     ("fast", "покрытие таблиц: английского по недосмотру нет", ["check_coverage.py"]),
+    ("fast", "принятые решения применены везде", ["check_decisions.py"]),
     ("full", "формат .bytes: round-trip по всем бандлам", ["test_tps.py"]),
     ("full", "токенизатор: параметры не текут в текст", ["test_tokens.py"]),
     ("full", "нарезка блоков на сегменты", ["test_segments.py"]),

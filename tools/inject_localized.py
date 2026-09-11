@@ -14,6 +14,10 @@
   3. Вставить:
          tools\\inject_localized.py work\\localized_ru
          tools\\inject_localized.py work\\localized_ru --install
+         tools\\inject_localized.py --install     # весь work\\graphics_ru, все дела
+
+Без папки берётся весь русский слой `work/graphics_ru/<дело>/` — так его
+ставит `make install` вместе с текстом.
 
 `--list` показывает все имена, которые тут принимаются, с размерами оригиналов.
 
@@ -26,13 +30,14 @@
 from __future__ import annotations
 
 import argparse
+import re
 import shutil
 import sys
 from collections import defaultdict
 from pathlib import Path
 
 import UnityPy
-from PIL import Image
+from PIL import Image, ImageChops, ImageStat
 from UnityPy.enums import TextureFormat
 
 from common import BUNDLES, HOST, WORK, game_is_running, load_json
@@ -74,6 +79,38 @@ def do_list() -> None:
         print(f"  {base:34} {where}")
 
 
+def flat(im: Image.Image) -> Image.Image:
+    """Серая миниатюра для сравнения: прозрачное — на средний серый, а не в чёрный."""
+    im = im.convert("RGBA")
+    bg = Image.new("RGB", im.size, (128, 128, 128))
+    bg.paste(im, mask=im.split()[3])
+    return bg.convert("L").resize((64, 64))
+
+
+def stored_flipped(env, key: str, src: Image.Image) -> bool:
+    """Хранит ли бандл эту текстуру вверх ногами — по английскому соседу.
+
+    Картинки на отдачу лежат лицом вверх, а бандлы хранят по-разному, и правило
+    «по имени бандла» не держится: `gk2_idcom` и `gk2_logickeyword` перевёрнуты,
+    а их двойники `_trial` (дело 1) — лицом вверх. Замер 12 сентября 2026; до него
+    переворота здесь не было вовсе, хотя документы его обещали, и дело 1 уцелело
+    только потому, что его бандлы лицом вверх.
+
+    Надёжно одно: русская картинка совпадает с английской везде, кроме надписи,
+    значит и класть её надо той стороной, какой она с английской совпадает.
+    Английского соседа в бандле нет (плашки локали лежат в чужом) — как есть.
+    """
+    eng_key = re.sub(r"_ger(?=\.[^./]+$)", "_eng", key)
+    if eng_key == key or eng_key not in env.container:
+        return False
+    eng = flat(env.container[eng_key].read().image)
+    mine = flat(src)
+    same = ImageStat.Stat(ImageChops.difference(mine, eng)).mean[0]
+    flipped = ImageStat.Stat(ImageChops.difference(
+        mine, eng.transpose(Image.FLIP_TOP_BOTTOM))).mean[0]
+    return flipped < same
+
+
 def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[bytes, list[str]]:
     """Вписать картинки в немецкие текстуры бандла и вернуть им адреса."""
     env = UnityPy.load(str(BUNDLES / bundle_name))
@@ -87,6 +124,9 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[by
         if src.size != (tex.m_Width, tex.m_Height):
             notes.append(f"{png.name}: {src.size[0]}x{src.size[1]} -> {tex.m_Width}x{tex.m_Height}")
             src = src.resize((tex.m_Width, tex.m_Height), Image.LANCZOS)
+        if stored_flipped(env, key, src):
+            src = src.transpose(Image.FLIP_TOP_BOTTOM)
+            notes.append(f"{png.name}: бандл хранит её вверх ногами — перевернул")
 
         want = RAW if raw else int(tex.m_TextureFormat)
         try:
@@ -115,7 +155,8 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[by
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("folder", nargs="?", help="папка с PNG")
+    ap.add_argument("folder", nargs="?",
+                    help="папка с PNG; по умолчанию work/graphics_ru со всеми делами")
     ap.add_argument("--install", action="store_true", help="поставить собранное в игру")
     ap.add_argument("--list", action="store_true", help="показать принимаемые имена")
     ap.add_argument("--raw", action="store_true",
@@ -125,13 +166,26 @@ def main() -> None:
     if args.list:
         do_list()
         return
-    if not args.folder:
-        sys.exit("укажите папку с PNG или запустите с --list")
 
-    folder = Path(args.folder)
-    pngs = sorted(folder.glob("*.png"))
+    # Без папки — весь русский слой разом, work/graphics_ru/<дело>/*.png. Так его
+    # ставит `make install`, и новое дело подхватывается без правки Makefile:
+    # требование пользователя от 11 сентября 2026 — русские картинки ставятся
+    # той же командой, что и текст, без отдельных флагов.
+    folder = Path(args.folder) if args.folder else WORK / "graphics_ru"
+    pngs = sorted(folder.rglob("*.png"))
     if not pngs:
-        sys.exit(f"в {folder} нет PNG")
+        if args.folder:
+            sys.exit(f"в {folder} нет PNG")
+        # PNG в .gitignore: на свежем клоне их нет, и установка текста
+        # не должна из-за этого падать.
+        print(f"русских картинок нет ({folder}) — ставить нечего")
+        return
+    seen: dict[str, Path] = {}
+    for png in pngs:
+        if png.stem in seen:
+            sys.exit(f"одна картинка лежит дважды: {seen[png.stem]} и {png} — "
+                     f"какую ставить, не угадать")
+        seen[png.stem] = png
 
     idx = index()
     jobs: dict[str, list[tuple[str, Path]]] = defaultdict(list)

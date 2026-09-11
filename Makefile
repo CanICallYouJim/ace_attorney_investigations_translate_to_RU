@@ -51,17 +51,17 @@ build: check         ## собрать бандлы в work/build, игру не
 	$(PY) tools/build.py
 	$(PY) tools/build_strings.py
 
-install: check       ## собрать и поставить в игру — игра должна быть закрыта
+install: check       ## собрать и поставить в игру текст и русские картинки — игра закрыта
 	$(PY) tools/build.py --install
 	$(PY) tools/build_strings.py --install
+	$(PY) tools/inject_localized.py --install
 	$(PY) tools/check_all.py --build
 
 graphics:            ## подменить немецкую графику, ролики и выкрики английскими
 	$(PY) tools/swap_localized.py --build --install
 
-graphics-ru:         ## поставить в игру наши русские картинки — игра должна быть закрыта
-	$(PY) tools/inject_localized.py work/graphics_ru/case1 --install
-	$(PY) tools/inject_localized.py work/graphics_ru/case3 --install
+graphics-ru:         ## только русские картинки (их ставит и install) — игра закрыта
+	$(PY) tools/inject_localized.py --install
 
 restore:             ## вернуть игру к оригиналам
 	$(PY) tools/restore.py

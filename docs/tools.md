@@ -504,7 +504,7 @@ PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe tools/table_keys.py --dump     #
 | `scan_localized.py` | Перепись всех языковых ассетов игры в `work/localized_assets.json` |
 | `export_localized.py` | Выгрузить картинки в PNG, `--sheet` — контактные листы, `--full` — в оригинальном разрешении |
 | `swap_localized.py` | Отдать немецким адресам английские объекты; `--install` — в игру, `--check` — что стоит |
-| `inject_localized.py` | Вставить свои PNG на место немецких — если надпись хочется по-русски |
+| `inject_localized.py` | Вставить свои PNG на место немецких — если надпись хочется по-русски; без папки берёт весь `work/graphics_ru`, так его зовёт `make install` |
 
 Подмена пикселей не трогает: она идёт правкой таблицы «адрес → объект» внутри
 бандла (`AssetBundle.m_Container`), а для локальной таблицы картинок — заменой GUID

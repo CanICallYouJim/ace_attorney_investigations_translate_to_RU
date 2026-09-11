@@ -7569,7 +7569,7 @@
       "index": 0,
       "mode": 2,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обойти место преступления и осмотреть\nвсё, что бросится в глаза.",
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание.",
       "status": "translated"
     },
     {
@@ -7579,7 +7579,7 @@
       "index": 0,
       "mode": 2,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Больше тут, кажется, ничего не найти.",
+      "ru": "Не думаю, что здесь есть ещё что-то.",
       "status": "translated"
     },
     {
@@ -7589,7 +7589,7 @@
       "index": 0,
       "mode": 2,
       "en": "There's nothing of interest here.",
-      "ru": "Ничего примечательного тут нет.",
+      "ru": "Здесь нет ничего интересного.",
       "status": "translated"
     },
     {
@@ -9419,7 +9419,7 @@
       "index": 0,
       "mode": 2,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обойти место преступления и осмотреть\nвсё, что бросится в глаза.",
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание.",
       "status": "translated"
     },
     {
@@ -9429,7 +9429,7 @@
       "index": 0,
       "mode": 2,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Больше тут, кажется, ничего не найти.",
+      "ru": "Не думаю, что здесь есть ещё что-то.",
       "status": "translated"
     },
     {
@@ -9439,7 +9439,7 @@
       "index": 0,
       "mode": 2,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обойти место преступления и осмотреть\nвсё, что бросится в глаза.",
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание.",
       "status": "translated"
     },
     {
@@ -9449,7 +9449,7 @@
       "index": 0,
       "mode": 2,
       "en": "There's nothing of interest here.",
-      "ru": "Ничего примечательного тут нет.",
+      "ru": "Здесь нет ничего интересного.",
       "status": "translated"
     },
     {
@@ -10609,7 +10609,7 @@
       "index": 1,
       "mode": 3,
       "en": "You trample the scene...{E108:0008} {E1D1}jump to conclusions...",
-      "ru": "Топчете место...{E108:0008} {E1D1}спешите с выводами...",
+      "ru": "Топчете место преступления...{E108:0008} {E1D1}спешите\nс выводами...",
       "status": "translated"
     },
     {
@@ -10689,7 +10689,7 @@
       "index": 0,
       "mode": 3,
       "en": "This case,{E108:0008} it's...{E108:0010} Well...{E108:0010}\nI can't get my head around a few parts of it.",
-      "ru": "Это дело,{E108:0008} оно...{E108:0010} Ну...{E108:0010}\nМестами в голове не укладывается.",
+      "ru": "Это дело,{E108:0008} оно...{E108:0010} Ну...{E108:0010}\nКое-что у меня в голове не укладывается.",
       "status": "translated"
     },
     {
@@ -10699,7 +10699,7 @@
       "index": 1,
       "mode": 2,
       "en": "If you wouldn't mind,{E108:0008} I'd like some more information\nabout the scene of the crime.",
-      "ru": "Если позволите,{E108:0008} я бы хотел узнать побольше\nо месте преступления.",
+      "ru": "Если не возражаете,{E108:0008} я хотел бы узнать побольше\nо месте преступления.",
       "status": "translated"
     },
     {
@@ -10719,7 +10719,7 @@
       "index": 3,
       "mode": 2,
       "en": "That's how {E1D1}the pros do it.",
-      "ru": "Так {E1D1}работают профессионалы.",
+      "ru": "Так и работают {E1D1}настоящие профи.",
       "status": "translated"
     },
     {
@@ -10749,7 +10749,7 @@
       "index": 7,
       "mode": 2,
       "en": "(The detective clearly sees himself as the strong silent\ntype.)",
-      "ru": "(Детектив явно считает себя человеком\nсуровым и немногословным.)",
+      "ru": "(Детектив явно считает себя человеком дела,\nа не слова.)",
       "status": "translated"
     },
     {
@@ -10759,7 +10759,7 @@
       "index": 8,
       "mode": 2,
       "en": "(...I suppose that is also \"how the pros do it\".)",
-      "ru": "(...Видимо, это тоже «как у профессионалов».)",
+      "ru": "(...Видимо, это тоже «как работают профи».)",
       "status": "translated"
     },
     {
@@ -10779,7 +10779,7 @@
       "index": 1,
       "mode": 3,
       "en": "Couldn't lift squat...{E108:0008} from those finger marks.",
-      "ru": "С этих следов пальцев...{E108:0008} ничего не снять.",
+      "ru": "Ни черта не снять...{E108:0008} с этих следов пальцев.",
       "status": "translated"
     },
     {
@@ -10789,7 +10789,7 @@
       "index": 2,
       "mode": 2,
       "en": "But perhaps you can extrapolate something about the\ntheir owner from the size of their fingers, for example?",
-      "ru": "Но по размеру пальцев, быть может,\nчто-то о владельце сказать всё же можно?",
+      "ru": "Но, может быть, о хозяине что-то скажет\nхотя бы размер пальцев?",
       "status": "translated"
     },
     {
@@ -10799,7 +10799,7 @@
       "index": 3,
       "mode": 3,
       "en": "...It's not as easy as it sounds.{E108:0018} Sorry,{E108:0008} but these finger\nmarks...{E108:0008} are pretty worthless as evidence goes.",
-      "ru": "...Это не так просто.{E108:0018} Увы,{E108:0008} но как улика\nэти следы...{E108:0008} почти ничего не стоят.",
+      "ru": "...Всё не так просто.{E108:0018} Уж простите,{E108:0008} но эти следы...{E108:0008}\nкак улика почти ничего не стоят.",
       "status": "translated"
     },
     {
@@ -10839,7 +10839,7 @@
       "index": 7,
       "mode": 2,
       "en": "Heh.{E108:0010} I'll take that as a compliment.",
-      "ru": "Хех.{E108:0010} Приму это за похвалу.",
+      "ru": "Хе.{E108:0010} Сочту за комплимент.",
       "status": "translated"
     },
     {
@@ -10849,7 +10849,7 @@
       "index": 0,
       "mode": 2,
       "en": "There seems little doubt that this is the murder\nweapon.",
-      "ru": "Сомнений почти нет: это орудие убийства.",
+      "ru": "Сомнений почти нет: это и есть орудие\nубийства.",
       "status": "translated"
     },
     {
@@ -10879,7 +10879,7 @@
       "index": 3,
       "mode": 2,
       "en": "Something's rotten in this house of candied sweets.",
-      "ru": "Не всё ладно в этом сахарном королевстве.",
+      "ru": "Прогнило что-то в этом сахарном королевстве.",
       "status": "translated"
     },
     {
@@ -10889,7 +10889,7 @@
       "index": 4,
       "mode": 2,
       "en": "(Hmm...{E108:0010} Could Ms. Scone be hiding something?)",
-      "ru": "(Хм...{E108:0010} Неужели мисс Сдобина что-то скрывает?)",
+      "ru": "(Хм...{E108:0010} Не скрывает ли мисс Сдобина чего-то?)",
       "status": "translated"
     },
     {
@@ -10899,7 +10899,7 @@
       "index": 0,
       "mode": 2,
       "en": "I'd like your opinion on this, if you don't mind.",
-      "ru": "Хотел бы услышать ваше мнение, если можно.",
+      "ru": "Хотел бы услышать ваше мнение, если вы не против.",
       "status": "translated"
     },
     {
@@ -10909,7 +10909,7 @@
       "index": 1,
       "mode": 3,
       "en": "...I do...{E108:0018}\nIf there's one thing I hate...{E108:0008} it's small talk...",
-      "ru": "...Нельзя...{E108:0018}\nЧего не терплю...{E108:0008} так это болтовни...",
+      "ru": "...Против...{E108:0018}\nЧего не выношу...{E108:0008} так это болтовни...",
       "status": "translated"
     },
     {
@@ -14829,7 +14829,7 @@
       "index": 0,
       "mode": 2,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Не думаю, что здесь найдётся что-то ещё.",
+      "ru": "Не думаю, что здесь есть ещё что-то.",
       "status": "translated"
     },
     {
@@ -14839,7 +14839,7 @@
       "index": 0,
       "mode": 2,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Нужно обойти место преступления и осмотреть\nвсё, что привлечёт внимание.",
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание.",
       "status": "translated"
     },
     {
@@ -15479,7 +15479,7 @@
       "index": 0,
       "mode": 2,
       "en": "There's nothing of interest here.",
-      "ru": "Здесь нет ничего примечательного.",
+      "ru": "Здесь нет ничего интересного.",
       "status": "translated"
     },
     {
@@ -16279,7 +16279,7 @@
       "index": 0,
       "mode": 2,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Не думаю, что здесь найдётся что-то ещё.",
+      "ru": "Не думаю, что здесь есть ещё что-то.",
       "status": "translated"
     },
     {
@@ -16289,7 +16289,7 @@
       "index": 0,
       "mode": 2,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Нужно обойти место преступления и осмотреть\nвсё, что привлечёт внимание.",
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание.",
       "status": "translated"
     },
     {
@@ -16299,7 +16299,7 @@
       "index": 0,
       "mode": 2,
       "en": "There's nothing of interest here.",
-      "ru": "Здесь нет ничего примечательного.",
+      "ru": "Здесь нет ничего интересного.",
       "status": "translated"
     },
     {
@@ -16309,7 +16309,7 @@
       "index": 0,
       "mode": 2,
       "en": "Could this be related to the evidence somehow?",
-      "ru": "Может, это как-то связано с уликами?",
+      "ru": "Не связано ли это как-то с уликами?",
       "status": "translated"
     },
     {
@@ -17689,7 +17689,7 @@
       "index": 0,
       "mode": 3,
       "en": "...Attorneys are bad luck...{E108:0010}\nNothing good ever happens with you guys around...",
-      "ru": "...Адвокаты — дурная примета...{E108:0010}\nНичего хорошего с вами не бывает...",
+      "ru": "...Адвокаты — дурная примета...{E108:0010}\nГде вы, там добра не жди...",
       "status": "translated"
     },
     {
@@ -17699,7 +17699,7 @@
       "index": 1,
       "mode": 3,
       "en": "You trample the scene...{E108:0008} {E1D1}jump to conclusions...",
-      "ru": "Топчете место преступления...{E108:0008}\n{E1D1}делаете скорые выводы...",
+      "ru": "Топчете место преступления...{E108:0008} {E1D1}спешите\nс выводами...",
       "status": "translated"
     },
     {
@@ -17789,7 +17789,7 @@
       "index": 1,
       "mode": 2,
       "en": "If you wouldn't mind,{E108:0008} I'd like some more information\nabout the scene of the crime.",
-      "ru": "Если вас не затруднит,{E108:0008} я хотел бы побольше узнать\nо месте преступления.",
+      "ru": "Если не возражаете,{E108:0008} я хотел бы узнать побольше\nо месте преступления.",
       "status": "translated"
     },
     {
@@ -17799,7 +17799,7 @@
       "index": 2,
       "mode": 2,
       "en": "Sure...{E108:0010} You got legs, don't you?{E108:0010}\nTry using them...",
-      "ru": "Ладно...{E108:0010} Ноги-то у вас есть?{E108:0010}\nВот и пользуйтесь...",
+      "ru": "Ну да...{E108:0010} Ноги-то у вас есть?{E108:0010}\nВот и пользуйтесь...",
       "status": "translated"
     },
     {
@@ -17819,7 +17819,7 @@
       "index": 4,
       "mode": 2,
       "en": "Our duties may differ, Detective,{E108:0008} but we both want\nto get to the bottom of what happened, don't we?",
-      "ru": "У нас разные обязанности, детектив,{E108:0008} но докопаться\nдо истины хотим мы оба, разве нет?",
+      "ru": "Обязанности у нас разные, детектив,{E108:0008} но докопаться\nдо истины хотим оба, разве нет?",
       "status": "translated"
     },
     {
@@ -17829,7 +17829,7 @@
       "index": 5,
       "mode": 2,
       "en": "Wouldn't it be better if we worked together?",
-      "ru": "Не лучше ли нам работать сообща?",
+      "ru": "Не лучше ли работать сообща?",
       "status": "translated"
     },
     {
@@ -17839,7 +17839,7 @@
       "index": 7,
       "mode": 2,
       "en": "(The detective clearly sees himself as the strong silent\ntype.)",
-      "ru": "(Детектив явно считает себя молчаливым\nкрепким орешком.)",
+      "ru": "(Детектив явно считает себя человеком дела,\nа не слова.)",
       "status": "translated"
     },
     {
@@ -17879,7 +17879,7 @@
       "index": 2,
       "mode": 2,
       "en": "But perhaps you can extrapolate something about the\ntheir owner from the size of their fingers, for example?",
-      "ru": "Но, может, по размеру пальцев удастся что-то\nсказать об их хозяине?",
+      "ru": "Но, может быть, о хозяине что-то скажет\nхотя бы размер пальцев?",
       "status": "translated"
     },
     {
@@ -17919,7 +17919,7 @@
       "index": 6,
       "mode": 3,
       "en": "Hmph.{E108:0010} You lawyers have an answer for everything,\ndon't you...",
-      "ru": "Хмф.{E108:0010} У вас, юристов, на всё готов ответ,\nа...",
+      "ru": "Хмф.{E108:0010} У вас, адвокатов, на всё готов ответ...",
       "status": "translated"
     },
     {
@@ -17929,7 +17929,7 @@
       "index": 7,
       "mode": 2,
       "en": "Heh.{E108:0010} I'll take that as a compliment.",
-      "ru": "Хе.{E108:0010} Приму это за похвалу.",
+      "ru": "Хе.{E108:0010} Сочту за комплимент.",
       "status": "translated"
     },
     {
@@ -17959,7 +17959,7 @@
       "index": 2,
       "mode": 3,
       "en": "And who had easy access to the lamp...?{E108:0010}\nOur little lady friend...{E108:0008} that's who.",
-      "ru": "А у кого лампа была под рукой...?{E108:0010}\nУ нашей милой дамы...{E108:0008} вот у кого.",
+      "ru": "А у кого лампа была под рукой...?{E108:0010}\nУ нашей дамочки...{E108:0008} вот у кого.",
       "status": "translated"
     },
     {
@@ -17989,7 +17989,7 @@
       "index": 0,
       "mode": 2,
       "en": "I'd like your opinion on this, if you don't mind.",
-      "ru": "Хотелось бы услышать ваше мнение, если не против.",
+      "ru": "Хотел бы услышать ваше мнение, если вы не против.",
       "status": "translated"
     },
     {
@@ -42449,7 +42449,7 @@
       "index": 0,
       "mode": 3,
       "en": "...Attorneys are bad luck...{E108:0010}\nNothing good ever happens with you guys around...",
-      "ru": "...Адвокаты — дурная примета...{E108:0010}\nОт вас добра не жди...",
+      "ru": "...Адвокаты — дурная примета...{E108:0010}\nГде вы, там добра не жди...",
       "status": "translated"
     },
     {
@@ -42539,7 +42539,7 @@
       "index": 0,
       "mode": 3,
       "en": "This case,{E108:0008} it's...{E108:0010} Well...{E108:0010}\nI can't get my head around a few parts of it.",
-      "ru": "Это дело...{E108:0008} оно...{E108:0010} Ну...{E108:0010}\nКое-что в нём у меня в голове не укладывается.",
+      "ru": "Это дело,{E108:0008} оно...{E108:0010} Ну...{E108:0010}\nКое-что у меня в голове не укладывается.",
       "status": "translated"
     },
     {
@@ -42559,7 +42559,7 @@
       "index": 2,
       "mode": 2,
       "en": "Sure...{E108:0010} You got legs, don't you?{E108:0010}\nTry using them...",
-      "ru": "Ага...{E108:0010} Ноги-то у вас есть?{E108:0010}\nВот и пользуйтесь...",
+      "ru": "Ну да...{E108:0010} Ноги-то у вас есть?{E108:0010}\nВот и пользуйтесь...",
       "status": "translated"
     },
     {
@@ -42569,7 +42569,7 @@
       "index": 3,
       "mode": 2,
       "en": "That's how {E1D1}the pros do it.",
-      "ru": "Так {E1D1}работает профессионал.",
+      "ru": "Так и работают {E1D1}настоящие профи.",
       "status": "translated"
     },
     {
@@ -42579,7 +42579,7 @@
       "index": 4,
       "mode": 2,
       "en": "Our duties may differ, Detective,{E108:0008} but we both want\nto get to the bottom of what happened, don't we?",
-      "ru": "У нас разные обязанности, детектив,{E108:0008} но докопаться\nдо истины хотим оба, разве нет?",
+      "ru": "Обязанности у нас разные, детектив,{E108:0008} но докопаться\nдо истины хотим оба, разве нет?",
       "status": "translated"
     },
     {
@@ -42609,7 +42609,7 @@
       "index": 8,
       "mode": 2,
       "en": "(...I suppose that is also \"how the pros do it\".)",
-      "ru": "(...Видимо, это тоже «работа профессионала».)",
+      "ru": "(...Видимо, это тоже «как работают профи».)",
       "status": "translated"
     },
     {
@@ -42619,7 +42619,7 @@
       "index": 0,
       "mode": 3,
       "en": "Seems the culprit...{E108:0008} made sure to wear gloves...",
-      "ru": "Похоже, преступник...{E108:0008} перчатки надеть не забыл...",
+      "ru": "Преступник, видать...{E108:0008} про перчатки не забыл...",
       "status": "translated"
     },
     {
@@ -42629,7 +42629,7 @@
       "index": 1,
       "mode": 3,
       "en": "Couldn't lift squat...{E108:0008} from those finger marks.",
-      "ru": "С этих следов пальцев...{E108:0008} ничего не снять.",
+      "ru": "Ни черта не снять...{E108:0008} с этих следов пальцев.",
       "status": "translated"
     },
     {
@@ -42649,7 +42649,7 @@
       "index": 3,
       "mode": 3,
       "en": "...It's not as easy as it sounds.{E108:0018} Sorry,{E108:0008} but these finger\nmarks...{E108:0008} are pretty worthless as evidence goes.",
-      "ru": "...Не так это просто.{E108:0018} Уж извините,{E108:0008} но эти следы\nпальцев...{E108:0008} как улика почти ничего не стоят.",
+      "ru": "...Всё не так просто.{E108:0018} Уж простите,{E108:0008} но эти следы...{E108:0008}\nкак улика почти ничего не стоят.",
       "status": "translated"
     },
     {
@@ -42679,7 +42679,7 @@
       "index": 6,
       "mode": 3,
       "en": "Hmph.{E108:0010} You lawyers have an answer for everything,\ndon't you...",
-      "ru": "Хмф.{E108:0010} У вас, юристов, на всё есть ответ,\nда?..",
+      "ru": "Хмф.{E108:0010} У вас, адвокатов, на всё готов ответ...",
       "status": "translated"
     },
     {
@@ -42689,7 +42689,7 @@
       "index": 7,
       "mode": 2,
       "en": "Heh.{E108:0010} I'll take that as a compliment.",
-      "ru": "Хе.{E108:0010} Приму это за комплимент.",
+      "ru": "Хе.{E108:0010} Сочту за комплимент.",
       "status": "translated"
     },
     {
@@ -42709,7 +42709,7 @@
       "index": 1,
       "mode": 3,
       "en": "Whacking a guy with something like this...{E108:0010}\nMakes me think it was a spur of the moment thing.",
-      "ru": "Огреть человека такой штукой...{E108:0010}\nПохоже, всё вышло сгоряча.",
+      "ru": "Огреть человека такой штукой...{E108:0010}\nСдаётся, сгоряча вышло.",
       "status": "translated"
     },
     {
@@ -42719,7 +42719,7 @@
       "index": 2,
       "mode": 3,
       "en": "And who had easy access to the lamp...?{E108:0010}\nOur little lady friend...{E108:0008} that's who.",
-      "ru": "А у кого лампа была под рукой...?{E108:0010}\nДа у нашей дамочки...{E108:0008} вот у кого.",
+      "ru": "А у кого лампа была под рукой...?{E108:0010}\nУ нашей дамочки...{E108:0008} вот у кого.",
       "status": "translated"
     },
     {
@@ -42739,7 +42739,7 @@
       "index": 4,
       "mode": 2,
       "en": "(Hmm...{E108:0010} Could Ms. Scone be hiding something?)",
-      "ru": "(Хм...{E108:0010} Не скрывает ли чего мисс Сдобина?)",
+      "ru": "(Хм...{E108:0010} Не скрывает ли мисс Сдобина чего-то?)",
       "status": "translated"
     },
     {
@@ -42749,7 +42749,7 @@
       "index": 0,
       "mode": 2,
       "en": "I'd like your opinion on this, if you don't mind.",
-      "ru": "Хотел бы услышать ваше мнение, если позволите.",
+      "ru": "Хотел бы услышать ваше мнение, если вы не против.",
       "status": "translated"
     },
     {
@@ -42759,7 +42759,7 @@
       "index": 1,
       "mode": 3,
       "en": "...I do...{E108:0018}\nIf there's one thing I hate...{E108:0008} it's small talk...",
-      "ru": "...Не позволю...{E108:0018}\nЧего не выношу...{E108:0008} так это болтовни...",
+      "ru": "...Против...{E108:0018}\nЧего не выношу...{E108:0008} так это болтовни...",
       "status": "translated"
     },
     {
@@ -45979,7 +45979,7 @@
       "index": 0,
       "mode": 2,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Не думаю, что здесь найдётся что-то ещё.",
+      "ru": "Не думаю, что здесь есть ещё что-то.",
       "status": "translated"
     },
     {
@@ -45989,7 +45989,7 @@
       "index": 0,
       "mode": 2,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обшарить место и осмотреть всё,\nчто привлечёт внимание.",
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание.",
       "status": "translated"
     },
     {
@@ -46549,7 +46549,7 @@
       "index": 0,
       "mode": 2,
       "en": "There's nothing of interest here.",
-      "ru": "Здесь нет ничего примечательного.",
+      "ru": "Здесь нет ничего интересного.",
       "status": "translated"
     },
     {
@@ -51909,7 +51909,7 @@
       "index": 1,
       "mode": 2,
       "en": "As it should be.{E108:0010} After all, it symbolizes both the\nsanctity and the strictness of the law.",
-      "ru": "Так и должно быть.{E108:0010} Он ведь символ и святости\nзакона, и его строгости.",
+      "ru": "Так и должно быть.{E108:0010} Он ведь символизирует\nи святость закона, и его строгость.",
       "status": "translated"
     },
     {

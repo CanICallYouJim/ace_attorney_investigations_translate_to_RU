@@ -5779,6 +5779,8 @@ to bother you at all...)` в деле 1 — «(А вас это...)», в дел
 | `I don't believe there is any more to be found here.` | Не думаю, что здесь есть ещё что-то. | 6 вариантов, включая «Полагаю, больше здесь ничего не найти» |
 | `There's nothing of interest here.` | Здесь нет ничего интересного. | 4 варианта |
 | `Could this be related to the evidence somehow?` | Не связано ли это как-то с уликами? | 4 варианта; «Может ли это быть связано» — калька `Could this be` |
+| `Hmph... Well... No, nothing seems out of place!` | Хмф... Так... Нет, всё вроде бы на месте! | 5 вариантов в семи копиях дел 1–4; служебная пара логики, добавлена по ходу дела 4 |
+| `Nngh! (Well that blew up in my face...)` | Нгх! (Вот и аукнулось...) | решено в деле 2; в деле 4 две копии оставались «Что ж, вышло себе дороже» — `check_decisions` этого отвергнутого варианта не знал |
 
 Сведено патчем `work/patch_retro_repeats.json` — **138 сегментов** во всех
 пяти делах. **Сторож — [`tools/check_repeats.py`](../tools/check_repeats.py)**,

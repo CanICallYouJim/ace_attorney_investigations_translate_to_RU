@@ -153,7 +153,7 @@
       "block": "05000250",
       "index": 1,
       "en": "No.{E108:0010} Unfortunately,{E108:0008} it appears to be broken.",
-      "ru": "Не горит.{E108:0010} К сожалению,{E108:0008} похоже, она разбита."
+      "ru": "Не горит.{E108:0010} К сожалению,{E108:0008} она разбита."
     },
     {
       "file": "itm02_009.bytes",
@@ -223,7 +223,7 @@
       "block": "0500025A",
       "index": 1,
       "en": "Yes.{E108:0010} I imagine the indentations in the pillars were\nmade to accomodate them.",
-      "ru": "Да.{E108:0010} Похоже, углубления в столбиках как раз\nпод них и сделаны."
+      "ru": "Да.{E108:0010} Углубления в столбиках, надо думать, как раз\nпод них и сделаны."
     },
     {
       "file": "itm02_009.bytes",
@@ -356,7 +356,7 @@
       "block": "0500029F",
       "index": 2,
       "en": "Well...{E108:0010} the cloth has certainly changed color.",
-      "ru": "Что ж...{E108:0010} цвет ткани и правда изменился."
+      "ru": "Так...{E108:0010} цвет ткани и правда изменился."
     },
     {
       "file": "itm02_00b.bytes",
@@ -447,14 +447,14 @@
       "block": "050002AB",
       "index": 3,
       "en": "(It seems these cloths may have a connection to both\ncases,{E108:0008} past and present.)",
-      "ru": "(Похоже, эти ткани связывают оба дела —{E108:0008}\nпрошлое и нынешнее.)"
+      "ru": "(Эти ткани, кажется, связывают оба дела —{E108:0008}\nпрошлое и нынешнее.)"
     },
     {
       "file": "itm02_01d.bytes",
       "block": "050002D0",
       "index": 0,
       "en": "Looks like this pedal lets you adjust the height of the\nplatform, Mr. Edgeworth!",
-      "ru": "Похоже, этой педалью меняют высоту площадки,\nмистер Эджворт!"
+      "ru": "Так этой педалью меняют высоту площадки,\nмистер Эджворт!"
     },
     {
       "file": "itm02_01d.bytes",
@@ -566,7 +566,7 @@
       "block": "05000313",
       "index": 0,
       "en": "Wait,{E108:0010} haven't we seen these letters before?",
-      "ru": "Погодите,{E108:0010} мы же уже видели эти буквы?"
+      "ru": "Стоп,{E108:0010} мы же уже видели эти буквы?"
     },
     {
       "file": "itm02_01e.bytes",
@@ -657,7 +657,7 @@
       "block": "05000354",
       "index": 5,
       "en": "(And his works seem to be everywhere here in Zodiac\nHall...)",
-      "ru": "(А его работы, похоже, тут по всему\nЗодиак-холлу...)"
+      "ru": "(А работы его тут, куда ни глянь, по всему\nЗодиак-холлу...)"
     },
     {
       "file": "logic02_00.bytes",
@@ -762,7 +762,7 @@
       "block": "05000C90",
       "index": 1,
       "en": "I believe the crystals are meant to be placed on top of\nthe pillars.",
-      "ru": "Похоже, кристаллы должны стоять\nна этих столбиках."
+      "ru": "Кристаллы, если не ошибаюсь, должны стоять\nна этих столбиках."
     },
     {
       "file": "logic02_02.bytes",
@@ -832,7 +832,7 @@
       "block": "05000C90",
       "index": 11,
       "en": "(It seems the prosecution really has no intention of\nsharing anything with the defense.)",
-      "ru": "(Похоже, обвинение и впрямь не собирается\nделиться с защитой ничем.)"
+      "ru": "(Обвинение, как видно, и впрямь не собирается\nделиться с защитой ничем.)"
     },
     {
       "file": "logic02_02.bytes",
@@ -1077,7 +1077,7 @@
       "block": "05000CAC",
       "index": 19,
       "en": "(One of the elves must be feeling a little left out...)",
-      "ru": "(Один эльф, похоже, остался обделён...)"
+      "ru": "(Одного эльфа, должно быть, обделили...)"
     },
     {
       "file": "logic02_02.bytes",
@@ -1098,7 +1098,7 @@
       "block": "05000CAC",
       "index": 22,
       "en": "Wait...{E108:0018} Shouldn't the lamps be lit up, too?",
-      "ru": "Погодите...{E108:0018} А лампы разве не должны гореть?"
+      "ru": "Секундочку...{E108:0018} А лампы разве не должны гореть?"
     },
     {
       "file": "logic02_02.bytes",
@@ -1322,7 +1322,7 @@
       "block": "05000E90",
       "index": 0,
       "en": "Ms. Scone appears to lack basic knowledge about how\nconfectionery is created.",
-      "ru": "Мисс Сдобиной, похоже, не хватает азов\nкондитерского дела."
+      "ru": "Мисс Сдобиной явно не хватает азов\nкондитерского дела."
     },
     {
       "file": "logic02_06.bytes",
@@ -1371,7 +1371,7 @@
       "block": "05000E90",
       "index": 7,
       "en": "Wait,{E108:0008} you mean...",
-      "ru": "Погодите,{E108:0008} вы хотите сказать..."
+      "ru": "Минутку,{E108:0008} вы хотите сказать..."
     },
     {
       "file": "logic02_06.bytes",
@@ -1434,7 +1434,7 @@
       "block": "05000F10",
       "index": 5,
       "en": "(Wait...{E108:0010} {E107:0002}{E284}Could someone have {E043}moved the body aside{E042} to\nget to the blood?)",
-      "ru": "(Постойте...{E108:0010} {E107:0002}{E284}А не {E043}отодвинули ли тело{E042},\nчтобы добраться до крови?)"
+      "ru": "(Стоп...{E108:0010} {E107:0002}{E284}А не {E043}отодвинули ли тело{E042},\nчтобы добраться до крови?)"
     },
     {
       "file": "logic02_08.bytes",
@@ -1567,7 +1567,7 @@
       "block": "05000F90",
       "index": 18,
       "en": "Nonetheless...{E108:0010} {E107:0002}it appears he may indeed be willing {E1D5}{E1D1}to\ntwist the truth to his own ends.",
-      "ru": "И всё же...{E108:0010} {E107:0002}похоже, он и правда готов {E1D5}{E1D1}выворачивать\nправду в свою пользу."
+      "ru": "И всё же...{E108:0010} {E107:0002}он и правда готов {E1D5}{E1D1}выворачивать\nправду в свою пользу."
     },
     {
       "file": "logic02_08.bytes",
@@ -1931,7 +1931,7 @@
       "block": "050010A9",
       "index": 13,
       "en": "Ms. Scone is on our radar too, of course.{E108:0010}\nYou needn't worry about that.",
-      "ru": "Мисс Сдобина, разумеется, тоже у нас на виду.{E108:0010}\nНа этот счёт не беспокойтесь."
+      "ru": "Мисс Сдобина, само собой, тоже у нас на виду.{E108:0010}\nНа этот счёт не беспокойтесь."
     },
     {
       "file": "logic02_10.bytes",
@@ -1994,7 +1994,7 @@
       "block": "05001110",
       "index": 2,
       "en": "No way!{E108:0018} {E107:0002}You mean...!?",
-      "ru": "Не может быть!{E108:0018} {E107:0002}Значит...!?"
+      "ru": "Да ну!{E108:0018} {E107:0002}Значит...!?"
     },
     {
       "file": "logic02_11.bytes",
@@ -2113,7 +2113,7 @@
       "block": "0500119D",
       "index": 2,
       "en": "(Meaning there's a good chance he was murdered\n{E1D2}before the end of afternoon tea.)",
-      "ru": "(Значит, весьма вероятно, что его убили\n{E1D2}до конца послеобеденного чая.)"
+      "ru": "(Значит, скорее всего, его убили\n{E1D2}до конца послеобеденного чая.)"
     },
     {
       "file": "logic02_13.bytes",
@@ -2267,7 +2267,7 @@
       "block": "05001223",
       "index": 2,
       "en": "I submit that your relationship broke down for some\nreason...",
-      "ru": "Полагаю, ваши отношения по какой-то причине\nразладились..."
+      "ru": "Я утверждаю, что ваши отношения по какой-то\nпричине разладились..."
     },
     {
       "file": "logic02_13.bytes",
@@ -2302,7 +2302,7 @@
       "block": "05001223",
       "index": 7,
       "en": "Besides,{E108:0010} how do you think I did it, exactly?{E108:0010} {E188:00340000}{E1D1}You think\nI just strolled into Tangaroa's room and killed Frost?",
-      "ru": "И потом,{E108:0010} как я, по-вашему, это сделал?{E108:0010} {E188:00340000}{E1D1}Зашёл\nк Тангароа в комнату и убил Морозова?"
+      "ru": "И потом,{E108:0010} как я, по-вашему, это сделал?{E108:0010} {E188:00340000}{E1D1}Что,\nпрогулялся к Тангароа в комнату и убил Морозова?"
     },
     {
       "file": "logic02_13.bytes",
@@ -2505,7 +2505,7 @@
       "block": "02000081",
       "index": 7,
       "en": "Of course...{E108:0010} Von Karma took great pleasure in showing\nme the files as soon as I became a prosecutor.",
-      "ru": "Разумеется...{E108:0010} Фон Карма с большим удовольствием\nпоказал мне дело, едва я стал прокурором."
+      "ru": "Ещё бы...{E108:0010} Фон Карма с большим удовольствием\nпоказал мне дело, едва я стал прокурором."
     },
     {
       "file": "sce2_c0_01.bytes",
@@ -2841,7 +2841,7 @@
       "block": "0200011A",
       "index": 8,
       "en": "(It seems Eddie knows something of our client...)",
-      "ru": "(Похоже, Эдди знает, кто перед нами...)"
+      "ru": "(Эдди, кажется, знает, кто перед нами...)"
     },
     {
       "file": "sce2_c0_02.bytes",
@@ -2862,7 +2862,7 @@
       "block": "0200012D",
       "index": 0,
       "en": "No waaay!{E108:0018} I got to sing with Samson Tangaroa!{E108:0018}\n{E107:0002}This is a dream come true!",
-      "ru": "Не может быть!{E108:0018} Я пел с самим Тангароа!{E108:0018}\n{E107:0002}Мечта сбылась!"
+      "ru": "Вот это да-а-а!{E108:0018} Я пел с самим Тангароа!{E108:0018}\n{E107:0002}Мечта сбылась!"
     },
     {
       "file": "sce2_c0_02.bytes",
@@ -2890,7 +2890,7 @@
       "block": "0200012D",
       "index": 4,
       "en": "Alright,{E108:0008} where would you like me to start?",
-      "ru": "Что ж,{E108:0008} с чего мне начать?"
+      "ru": "Так{E108:0008} с чего мне начать?"
     },
     {
       "file": "sce2_c0_02.bytes",
@@ -3058,7 +3058,7 @@
       "block": "02000146",
       "index": 3,
       "en": "(He seems genuinely upset over the victim's death...)",
-      "ru": "(Похоже, он искренне горюет о погибшем...)"
+      "ru": "(Он и вправду горюет о погибшем...)"
     },
     {
       "file": "sce2_c0_02.bytes",
@@ -3170,7 +3170,7 @@
       "block": "02000154",
       "index": 5,
       "en": "............\n{E107:0003}{E1D1}(He seems quite sincere.)",
-      "ru": "............\n{E107:0003}{E1D1}(Похоже, искренне.)"
+      "ru": "............\n{E107:0003}{E1D1}(А ведь искренне.)"
     },
     {
       "file": "sce2_c0_02.bytes",
@@ -3233,7 +3233,7 @@
       "block": "02000180",
       "index": 2,
       "en": "Yes.{E108:0010} And it doesn't seem like it will be letting up\nanytime soon.",
-      "ru": "Да.{E108:0010} И, похоже, в ближайшее время\nне уймётся."
+      "ru": "Да.{E108:0010} И в ближайшее время, видно,\nне уймётся."
     },
     {
       "file": "sce2_c0_03.bytes",
@@ -3331,7 +3331,7 @@
       "block": "0200018D",
       "index": 3,
       "en": "You know a little something of my work?",
-      "ru": "Вы немного знакомы с моей работой?"
+      "ru": "Так вам немного знакомо моё творчество?"
     },
     {
       "file": "sce2_c0_03.bytes",
@@ -3471,7 +3471,7 @@
       "block": "020001A7",
       "index": 5,
       "en": "I see...{E108:0018} {E12F:00050004}{E107:0002}These teacups are very unique, too.{E108:0010}\nThe design is really something.",
-      "ru": "Понятно...{E108:0018} {E12F:00050004}{E107:0002}И чашки у вас необычные.{E108:0010}\nРисунок просто замечательный."
+      "ru": "Надо же...{E108:0018} {E12F:00050004}{E107:0002}И чашки у вас необычные.{E108:0010}\nРисунок просто замечательный."
     },
     {
       "file": "sce2_c0_03.bytes",
@@ -3639,7 +3639,7 @@
       "block": "020001C1",
       "index": 3,
       "en": "...Of course.",
-      "ru": "...Разумеется."
+      "ru": "...Конечно."
     },
     {
       "file": "sce2_c0_03.bytes",
@@ -3800,14 +3800,14 @@
       "block": "02000207",
       "index": 10,
       "en": "(Although I'd be the first to admit that's easier said\nthan done...)",
-      "ru": "(Хотя, признаться, сказать это проще,\nчем сделать...)"
+      "ru": "(Хотя, признаться, легко сказать...)"
     },
     {
       "file": "sce2_c0_04.bytes",
       "block": "02000207",
       "index": 11,
       "en": "With introductions out of the way...",
-      "ru": "Что ж, со знакомством покончено..."
+      "ru": "Со знакомством покончено..."
     },
     {
       "file": "sce2_c0_04.bytes",
@@ -3975,7 +3975,7 @@
       "block": "0200022A",
       "index": 0,
       "en": "We'd better get started, then.{E108:0010}\n{E150:00050020}{E107:0002}I'll need you to take notes, Eddie.",
-      "ru": "Что ж, приступим.{E108:0010}\n{E150:00050020}{E107:0002}Эдди, записывай."
+      "ru": "Тогда приступим.{E108:0010}\n{E150:00050020}{E107:0002}Эдди, записывай."
     },
     {
       "file": "sce2_c0_04.bytes",
@@ -4038,7 +4038,7 @@
       "block": "0200022E",
       "index": 5,
       "en": "...I see.{E108:0010} {E1D1}{E284}And who had access to that key?",
-      "ru": "...Понятно.{E108:0010} {E1D1}{E284}И у кого был доступ к ключу?"
+      "ru": "...Так.{E108:0010} {E1D1}{E284}И у кого был доступ к ключу?"
     },
     {
       "file": "sce2_c0_04.bytes",
@@ -4388,7 +4388,7 @@
       "block": "020002A8",
       "index": 3,
       "en": "Exactly!{E108:0018} {E107:0002}And besides,{E108:0008} there's no way he would've\ndisrespected his sweets!",
-      "ru": "Вот именно!{E108:0018} {E107:0002}И вообще,{E108:0008} он бы нипочём\nне обошёлся так со сладостями!"
+      "ru": "Точно!{E108:0018} {E107:0002}И вообще,{E108:0008} он бы нипочём\nне обошёлся так со сладостями!"
     },
     {
       "file": "sce2_c0_06.bytes",
@@ -4983,7 +4983,7 @@
       "block": "0200031A",
       "index": 10,
       "en": "But...{E108:0010} {E1D1}I guess you did pick up a couple of useful clues\nalready...",
-      "ru": "Хотя...{E108:0010} {E1D1}пару полезных зацепок вы уже\nоткопали..."
+      "ru": "Хотя...{E108:0010} {E1D1}пару полезных зацепок вы всё-таки\nуже откопали..."
     },
     {
       "file": "sce2_c0_07.bytes",
@@ -5109,7 +5109,7 @@
       "block": "02000403",
       "index": 1,
       "en": "Sadly,{E108:0008} it doesn't look like there's much to be found in\nthe way of clues...",
-      "ru": "Увы,{E108:0008} на зацепки тут, похоже,\nрассчитывать не приходится..."
+      "ru": "Увы,{E108:0008} на зацепки тут\nрассчитывать не приходится..."
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
@@ -5228,14 +5228,14 @@
       "block": "02000414",
       "index": 1,
       "en": "It looks like this title is the inspiration for everything\non display here in this room.",
-      "ru": "Похоже, всё выставленное в этой комнате\nотталкивается от этого названия."
+      "ru": "Всё в этой комнате, видимо, отталкивается\nот этого названия."
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
       "block": "02000414",
       "index": 2,
       "en": "The ship and the treasure chest of course,{E108:0008} but also,{E108:0008} all\nthe other nautical objects on display.",
-      "ru": "Корабль и сундук, разумеется,{E108:0008} но и всё{E108:0008}\nостальное морское убранство."
+      "ru": "Корабль и сундук, само собой,{E108:0008} но и всё{E108:0008}\nостальное морское убранство."
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
@@ -5298,21 +5298,21 @@
       "block": "0200041F",
       "index": 0,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обойти место преступления и осмотреть\nвсё, что бросится в глаза."
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание."
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
       "block": "02000420",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Больше тут, кажется, ничего не найти."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
       "block": "02000421",
       "index": 0,
       "en": "There's nothing of interest here.",
-      "ru": "Ничего примечательного тут нет."
+      "ru": "Здесь нет ничего интересного."
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
@@ -5361,7 +5361,7 @@
       "block": "02000423",
       "index": 5,
       "en": "A very conspicuous {E041}pool of blood{E040} that should be here\nis clearly missing!",
-      "ru": "Здесь бросается в глаза отсутствие\n{E041}лужи крови{E040}, которая должна быть!"
+      "ru": "Здесь должна быть {E041}лужа крови{E040}, а её нет —\nи это сразу бросается в глаза!"
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
@@ -5494,7 +5494,7 @@
       "block": "0200043C",
       "index": 0,
       "en": "It appears the body was inside the treasure chest.",
-      "ru": "Судя по всему, тело лежало в сундуке."
+      "ru": "По всему видно, тело лежало в сундуке."
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
@@ -5522,7 +5522,7 @@
       "block": "0200043C",
       "index": 4,
       "en": "Seems she {E043}heard something breaking{E040}...{E108:0008} and came in to\nsee what it was.{E106}{E198:00020000}{E100:0001}{E1AE}{E12D:00030858}{E100:0000}{E101:00050005}{E042}{E107:0002}(...If only we had just a little more information.)",
-      "ru": "Похоже, она {E043}услышала, как что-то бьётся{E040}...{E108:0008}\nи зашла посмотреть.{E106}{E198:00020000}{E100:0001}{E1AE}{E12D:00030858}{E100:0000}{E101:00050005}{E042}{E107:0002}(...Вот бы ещё немного сведений.)"
+      "ru": "Услыхала, видать, {E043}как что-то бьётся{E040}...{E108:0008}\nи зашла посмотреть.{E106}{E198:00020000}{E100:0001}{E1AE}{E12D:00030858}{E100:0000}{E101:00050005}{E042}{E107:0002}(...Вот бы ещё немного сведений.)"
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
@@ -5662,7 +5662,7 @@
       "block": "02000450",
       "index": 5,
       "en": "(I do sometimes wish Eddie could keep his cool a\nlittle better...)",
-      "ru": "(Порой мне хочется, чтобы Эдди\nдержал себя в руках получше...)"
+      "ru": "(Порой мне так хочется, чтобы Эдди\nдержал себя в руках получше...)"
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
@@ -5795,7 +5795,7 @@
       "block": "02000463",
       "index": 6,
       "en": "(Now then,{E108:0008} I'd better get my facts straight and take\ndown some notes of my own.)",
-      "ru": "(Что ж,{E108:0008} надо привести факты в порядок\nи сделать свои записи.)"
+      "ru": "(Итак,{E108:0008} надо привести факты в порядок\nи сделать свои записи.)"
     },
     {
       "file": "sce2_c0_m0d_check.bytes",
@@ -5949,7 +5949,7 @@
       "block": "02000480",
       "index": 18,
       "en": "(Makes sense,{E108:0008} seeing as he's a contestant.{E108:0010}\nPerhaps I should ask him a few questions of my own.)",
-      "ru": "(Понятно,{E108:0008} он ведь участник конкурса.{E108:0010}\nПожалуй, и мне стоит его порасспросить.)"
+      "ru": "(Ещё бы —{E108:0008} он ведь участник конкурса.{E108:0010}\nПожалуй, и мне стоит его порасспросить.)"
     },
     {
       "file": "sce2_c0_m0d_npc.bytes",
@@ -6089,7 +6089,7 @@
       "block": "020004A1",
       "index": 6,
       "en": "(...The way of the confectioner sounds like a long one,\ntoo, if he's still injuring himself on a daily basis.)",
-      "ru": "(...Похоже, путь кондитера ещё и долгий,\nраз он до сих пор калечится каждый день.)"
+      "ru": "(...Путь кондитера, выходит, ещё и долгий,\nраз он до сих пор калечится каждый день.)"
     },
     {
       "file": "sce2_c0_m0d_npc.bytes",
@@ -6572,7 +6572,7 @@
       "block": "020004E3",
       "index": 9,
       "en": "Of course.{E108:0010} Confectionery is my life.",
-      "ru": "Разумеется.{E108:0010} Кондитерское дело — моя жизнь."
+      "ru": "А как же.{E108:0010} Кондитерское дело — моя жизнь."
     },
     {
       "file": "sce2_c0_m0d_npc.bytes",
@@ -6593,28 +6593,28 @@
       "block": "020004EF",
       "index": 0,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обойти место преступления и осмотреть\nвсё, что бросится в глаза."
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание."
     },
     {
       "file": "sce2_c0_m0d_npc.bytes",
       "block": "020004F0",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Больше тут, кажется, ничего не найти."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce2_c0_m0d_npc.bytes",
       "block": "020004F1",
       "index": 0,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обойти место преступления и осмотреть\nвсё, что бросится в глаза."
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание."
     },
     {
       "file": "sce2_c0_m0d_npc.bytes",
       "block": "020004F2",
       "index": 0,
       "en": "There's nothing of interest here.",
-      "ru": "Ничего примечательного тут нет."
+      "ru": "Здесь нет ничего интересного."
     },
     {
       "file": "sce2_c0_m0d_npc.bytes",
@@ -7426,14 +7426,14 @@
       "block": "02000601",
       "index": 1,
       "en": "You trample the scene...{E108:0008} {E1D1}jump to conclusions...",
-      "ru": "Топчете место...{E108:0008} {E1D1}спешите с выводами..."
+      "ru": "Топчете место преступления...{E108:0008} {E1D1}спешите\nс выводами..."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "02000601",
       "index": 2,
       "en": "You really think that of all of us?{E108:0010} Me included?",
-      "ru": "Вы так обо всех нас?{E108:0010} И обо мне тоже?"
+      "ru": "Вы правда так думаете обо всех нас?{E108:0010} И обо мне?"
     },
     {
       "file": "sce2_c0_partner.bytes",
@@ -7475,21 +7475,21 @@
       "block": "02000606",
       "index": 3,
       "en": "(It sounds like Detective Badd might be a fan of\nbaseball...?)",
-      "ru": "(Похоже, детектив Бадд из бейсбольных\nболельщиков...?)"
+      "ru": "(Детектив Бадд, сдаётся мне, из бейсбольных\nболельщиков...?)"
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "0200060A",
       "index": 0,
       "en": "This case,{E108:0008} it's...{E108:0010} Well...{E108:0010}\nI can't get my head around a few parts of it.",
-      "ru": "Это дело,{E108:0008} оно...{E108:0010} Ну...{E108:0010}\nМестами в голове не укладывается."
+      "ru": "Это дело,{E108:0008} оно...{E108:0010} Ну...{E108:0010}\nКое-что у меня в голове не укладывается."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "0200060A",
       "index": 1,
       "en": "If you wouldn't mind,{E108:0008} I'd like some more information\nabout the scene of the crime.",
-      "ru": "Если позволите,{E108:0008} я бы хотел узнать побольше\nо месте преступления."
+      "ru": "Если не возражаете,{E108:0008} я хотел бы узнать побольше\nо месте преступления."
     },
     {
       "file": "sce2_c0_partner.bytes",
@@ -7503,7 +7503,7 @@
       "block": "0200060A",
       "index": 3,
       "en": "That's how {E1D1}the pros do it.",
-      "ru": "Так {E1D1}работают профессионалы."
+      "ru": "Так и работают {E1D1}настоящие профи."
     },
     {
       "file": "sce2_c0_partner.bytes",
@@ -7524,42 +7524,42 @@
       "block": "0200060A",
       "index": 7,
       "en": "(The detective clearly sees himself as the strong silent\ntype.)",
-      "ru": "(Детектив явно считает себя человеком\nсуровым и немногословным.)"
+      "ru": "(Детектив явно считает себя человеком дела,\nа не слова.)"
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "0200060A",
       "index": 8,
       "en": "(...I suppose that is also \"how the pros do it\".)",
-      "ru": "(...Видимо, это тоже «как у профессионалов».)"
+      "ru": "(...Видимо, это тоже «как работают профи».)"
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "02000613",
       "index": 0,
       "en": "Seems the culprit...{E108:0008} made sure to wear gloves...",
-      "ru": "Похоже, преступник...{E108:0008} не забыл про перчатки..."
+      "ru": "Преступник, видать...{E108:0008} про перчатки не забыл..."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "02000613",
       "index": 1,
       "en": "Couldn't lift squat...{E108:0008} from those finger marks.",
-      "ru": "С этих следов пальцев...{E108:0008} ничего не снять."
+      "ru": "Ни черта не снять...{E108:0008} с этих следов пальцев."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "02000613",
       "index": 2,
       "en": "But perhaps you can extrapolate something about the\ntheir owner from the size of their fingers, for example?",
-      "ru": "Но по размеру пальцев, быть может,\nчто-то о владельце сказать всё же можно?"
+      "ru": "Но, может быть, о хозяине что-то скажет\nхотя бы размер пальцев?"
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "02000613",
       "index": 3,
       "en": "...It's not as easy as it sounds.{E108:0018} Sorry,{E108:0008} but these finger\nmarks...{E108:0008} are pretty worthless as evidence goes.",
-      "ru": "...Это не так просто.{E108:0018} Увы,{E108:0008} но как улика\nэти следы...{E108:0008} почти ничего не стоят."
+      "ru": "...Всё не так просто.{E108:0018} Уж простите,{E108:0008} но эти следы...{E108:0008}\nкак улика почти ничего не стоят."
     },
     {
       "file": "sce2_c0_partner.bytes",
@@ -7573,7 +7573,7 @@
       "block": "02000613",
       "index": 5,
       "en": "After all,{E108:0008} {E1D1}even the absence of fingerprints tells us\nsomething of interest, don't you think?",
-      "ru": "В конце концов,{E108:0008} {E1D1}само отсутствие отпечатков\nуже кое о чём говорит, согласны?"
+      "ru": "В конце концов,{E108:0008} {E1D1}само отсутствие отпечатков\nуже кое о чём говорит, вам не кажется?"
     },
     {
       "file": "sce2_c0_partner.bytes",
@@ -7587,21 +7587,21 @@
       "block": "02000613",
       "index": 7,
       "en": "Heh.{E108:0010} I'll take that as a compliment.",
-      "ru": "Хех.{E108:0010} Приму это за похвалу."
+      "ru": "Хе.{E108:0010} Сочту за комплимент."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "0200061B",
       "index": 0,
       "en": "There seems little doubt that this is the murder\nweapon.",
-      "ru": "Сомнений почти нет: это орудие убийства."
+      "ru": "Сомнений почти нет: это и есть орудие\nубийства."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "0200061B",
       "index": 1,
       "en": "Whacking a guy with something like this...{E108:0010}\nMakes me think it was a spur of the moment thing.",
-      "ru": "Огреть человека такой штукой...{E108:0010}\nПохоже, действовали сгоряча."
+      "ru": "Огреть человека такой штукой...{E108:0010}\nСдаётся, сгоряча вышло."
     },
     {
       "file": "sce2_c0_partner.bytes",
@@ -7615,35 +7615,35 @@
       "block": "0200061B",
       "index": 3,
       "en": "Something's rotten in this house of candied sweets.",
-      "ru": "Не всё ладно в этом сахарном королевстве."
+      "ru": "Прогнило что-то в этом сахарном королевстве."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "0200061B",
       "index": 4,
       "en": "(Hmm...{E108:0010} Could Ms. Scone be hiding something?)",
-      "ru": "(Хм...{E108:0010} Неужели мисс Сдобина что-то скрывает?)"
+      "ru": "(Хм...{E108:0010} Не скрывает ли мисс Сдобина чего-то?)"
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "02000620",
       "index": 0,
       "en": "I'd like your opinion on this, if you don't mind.",
-      "ru": "Хотел бы услышать ваше мнение, если можно."
+      "ru": "Хотел бы услышать ваше мнение, если вы не против."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "02000620",
       "index": 1,
       "en": "...I do...{E108:0018}\nIf there's one thing I hate...{E108:0008} it's small talk...",
-      "ru": "...Нельзя...{E108:0018}\nЧего не терплю...{E108:0008} так это болтовни..."
+      "ru": "...Против...{E108:0018}\nЧего не выношу...{E108:0008} так это болтовни..."
     },
     {
       "file": "sce2_c0_partner.bytes",
       "block": "02000620",
       "index": 2,
       "en": "(It seems he only cares about things that are directly\nrelated to the incident.)",
-      "ru": "(Похоже, его занимает только то,\nчто прямо касается дела.)"
+      "ru": "(Занимает его только то,\nчто прямо касается дела.)"
     },
     {
       "file": "sce2_c0_partner.bytes",
@@ -8063,14 +8063,14 @@
       "block": "0200072E",
       "index": 2,
       "en": "(They don't seem to know each other well enough for\nthere to be bad blood between them...)",
-      "ru": "(Знакомы они, похоже, слишком мало,\nчтобы между ними была вражда...)"
+      "ru": "(Знакомы они слишком мало,\nчтобы между ними была вражда...)"
     },
     {
       "file": "sce2_c1_00.bytes",
       "block": "02000731",
       "index": 0,
       "en": "Well,{E108:0008} looks like we have permission to investigate!{E108:0010}\nGuess we better get to it!",
-      "ru": "Ну,{E108:0008} осматривать нам, похоже, разрешили!{E108:0010}\nЗначит, за дело!"
+      "ru": "Ну,{E108:0008} осматривать нам разрешили!{E108:0010}\nЗначит, за дело!"
     },
     {
       "file": "sce2_c1_00.bytes",
@@ -8154,7 +8154,7 @@
       "block": "02000731",
       "index": 12,
       "en": "...Hmph.{E108:0018} Guess I'm stuck with you...{E108:0008} for a little while\nlonger.",
-      "ru": "...Хмф.{E108:0018} Похоже, я с вами застрял...{E108:0008}\nещё ненадолго."
+      "ru": "...Хмф.{E108:0018} Застрял я с вами, выходит...{E108:0008}\nещё ненадолго."
     },
     {
       "file": "sce2_c1_00.bytes",
@@ -8182,7 +8182,7 @@
       "block": "02000731",
       "index": 16,
       "en": "Of course.{E108:0010} We understand.{E108:0018}{E13E:0005}{E150:00050021}\nNow,{E108:0008} shall we begin?",
-      "ru": "Разумеется.{E108:0010} Мы понимаем.{E108:0018}{E13E:0005}{E150:00050021}\nЧто ж,{E108:0008} начнём?"
+      "ru": "Конечно.{E108:0010} Мы понимаем.{E108:0018}{E13E:0005}{E150:00050021}\nИтак,{E108:0008} начнём?"
     },
     {
       "file": "sce2_c1_00.bytes",
@@ -8259,7 +8259,7 @@
       "block": "02000745",
       "index": 7,
       "en": "(It appears Detective Badd is just as suspicious of\nMr. von Karma and Ms. Scone as I am.)",
-      "ru": "(Похоже, детектив Бадд подозревает фон Карму\nи мисс Сдобину не меньше моего.)"
+      "ru": "(Детектив Бадд, видимо, подозревает фон Карму\nи мисс Сдобину не меньше моего.)"
     },
     {
       "file": "sce2_c1_00.bytes",
@@ -8357,7 +8357,7 @@
       "block": "02000780",
       "index": 10,
       "en": "You have an explanation, I assume?",
-      "ru": "У вас, полагаю, есть объяснение?"
+      "ru": "У вас, надо думать, есть объяснение?"
     },
     {
       "file": "sce2_c1_02.bytes",
@@ -8371,7 +8371,7 @@
       "block": "02000780",
       "index": 12,
       "en": "Hmph.{E108:0010} {E107:0002}Of course I do.{E108:0018}\n{E1D1}And I'll be delighted to share it with you.",
-      "ru": "Хмф.{E108:0010} {E107:0002}Разумеется, есть.{E108:0018}\n{E1D1}И я с удовольствием им поделюсь."
+      "ru": "Хмф.{E108:0010} {E107:0002}Есть, и ещё какое.{E108:0018}\n{E1D1}И я с удовольствием им поделюсь."
     },
     {
       "file": "sce2_c1_02.bytes",
@@ -8707,7 +8707,7 @@
       "block": "020007BA",
       "index": 3,
       "en": "(I think you mean{E108:0008} you COULDN'T help yourself, no?)",
-      "ru": "(Вернее,{E108:0008} не могли удержаться, не так ли?)"
+      "ru": "(Вы хотели сказать,{E108:0008} не могли удержаться?)"
     },
     {
       "file": "sce2_c1_02.bytes",
@@ -8952,7 +8952,7 @@
       "block": "020008DC",
       "index": 3,
       "en": "I guess he doesn't know how it works.",
-      "ru": "Он, похоже, не знает, как она работает."
+      "ru": "Да он не знает, как она работает."
     },
     {
       "file": "sce2_c1_03.bytes",
@@ -9512,7 +9512,7 @@
       "block": "02000932",
       "index": 3,
       "en": "It seems you're the only one who isn't satisfied here.",
-      "ru": "Похоже, покоя нет одному вам."
+      "ru": "Покоя, как видно, нет одному вам."
     },
     {
       "file": "sce2_c1_03.bytes",
@@ -9834,7 +9834,7 @@
       "block": "0200095E",
       "index": 7,
       "en": "Very well.{E108:0010} Allow me to exploit my privilege as a youth\nand try that again.",
-      "ru": "Что ж.{E108:0010} Воспользуюсь привилегией молодости\nи попробую ещё раз."
+      "ru": "Извольте.{E108:0010} Воспользуюсь привилегией молодости\nи попробую ещё раз."
     },
     {
       "file": "sce2_c1_03.bytes",
@@ -9925,7 +9925,7 @@
       "block": "02000967",
       "index": 14,
       "en": "(With her lies exposed like this,{E108:0008} surely he can't\ncontinue to deny the facts.)",
-      "ru": "(Ложь раскрыта,{E108:0008} и отрицать факты\nдальше он не сможет.)"
+      "ru": "(Ложь раскрыта,{E108:0008} не станет же он\nи дальше отрицать факты.)"
     },
     {
       "file": "sce2_c1_03.bytes",
@@ -9995,7 +9995,7 @@
       "block": "0200097C",
       "index": 3,
       "en": "(I can't blame him for being so surprised.{E108:0010}\nThis couldn't be further from what we'd imagined.)",
-      "ru": "(Его удивление понятно.{E108:0010}\nДальше от наших догадок и быть не могло.)"
+      "ru": "(Немудрено, что он так удивился.{E108:0010}\nДальше от наших догадок и быть не могло.)"
     },
     {
       "file": "sce2_c1_03.bytes",
@@ -10079,7 +10079,7 @@
       "block": "0200097C",
       "index": 16,
       "en": "Exactly, lambkin!{E108:0010} {E107:0001}{E1D1}Greggy Pegleg's got the right end\nof the stick!{E108:0018} {E107:0002}I'm an innocent woman!",
-      "ru": "Вот именно, ягнёночек!{E108:0010} {E107:0001}{E1D1}Грегушка-вкусняшка\nвсё верно понял!{E108:0018} {E107:0002}Я ни в чём не виновата!"
+      "ru": "Вот-вот, ягнёночек!{E108:0010} {E107:0001}{E1D1}Грегушка-вкусняшка\nвсё верно понял!{E108:0018} {E107:0002}Я ни в чём не виновата!"
     },
     {
       "file": "sce2_c1_03.bytes",
@@ -10380,14 +10380,14 @@
       "block": "02000A68",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Не думаю, что здесь найдётся что-то ещё."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
       "block": "02000A69",
       "index": 0,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Нужно обойти место преступления и осмотреть\nвсё, что привлечёт внимание."
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -10674,7 +10674,7 @@
       "block": "02000A8F",
       "index": 3,
       "en": "Wait,{E108:0010} they're all...{E108:0008} poisons...?",
-      "ru": "Погодите,{E108:0010} это что же...{E108:0008} яды...?"
+      "ru": "Так,{E108:0010} это что же...{E108:0008} яды...?"
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -10835,7 +10835,7 @@
       "block": "02000AAB",
       "index": 0,
       "en": "There's nothing of interest here.",
-      "ru": "Здесь нет ничего примечательного."
+      "ru": "Здесь нет ничего интересного."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -10863,7 +10863,7 @@
       "block": "02000AAC",
       "index": 3,
       "en": "Wait,{E108:0010} there's a bunch of stuff inside.{E108:0018} {E107:0003}{E1D1}Let's see...",
-      "ru": "Погодите,{E108:0010} там внутри куча всего.{E108:0018} {E107:0003}{E1D1}Сейчас\nгляну..."
+      "ru": "О,{E108:0010} там внутри куча всего.{E108:0018} {E107:0003}{E1D1}Сейчас\nгляну..."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -10905,7 +10905,7 @@
       "block": "02000AB5",
       "index": 0,
       "en": "Two big...{E108:0010} rock crystals?{E108:0010} {E107:0002}Looks like somebody was\nusing the the castle for storage...",
-      "ru": "Два больших...{E108:0010} кристалла?{E108:0010} {E107:0002}Похоже, замок кому-то\nслужил кладовкой..."
+      "ru": "Два больших...{E108:0010} кристалла?{E108:0010} {E107:0002}Никак, замок кому-то\nслужил кладовкой..."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -10989,7 +10989,7 @@
       "block": "02000ABE",
       "index": 3,
       "en": "Almost looks like...{E108:0008} somebody hid it in here...",
-      "ru": "Похоже на то...{E108:0008} что кто-то это сюда спрятал..."
+      "ru": "Прямо будто...{E108:0008} кто-то это сюда спрятал..."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -11010,7 +11010,7 @@
       "block": "02000AC3",
       "index": 1,
       "en": "Looks like something's supposed to go in there...{E108:0018}\nWell,{E108:0008} whatever they were...{E108:0008} they're long gone.",
-      "ru": "Похоже, туда что-то вставлялось...{E108:0018}\nНу,{E108:0008} чем бы оно ни было...{E108:0008} его давно нет."
+      "ru": "Туда, видно, что-то вставлялось...{E108:0018}\nНу,{E108:0008} чем бы оно ни было...{E108:0008} его давно нет."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -11108,7 +11108,7 @@
       "block": "02000ACB",
       "index": 7,
       "en": "(It seems the prosecution really has no intention of\nsharing anything with the defense.)",
-      "ru": "(Похоже, обвинение и впрямь не собирается\nделиться с защитой ничем.)"
+      "ru": "(Обвинение, как видно, и впрямь не собирается\nделиться с защитой ничем.)"
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -11353,7 +11353,7 @@
       "block": "02000AE3",
       "index": 19,
       "en": "(One of the elves must be feeling a little left out...)",
-      "ru": "(Один эльф, похоже, остался обделён...)"
+      "ru": "(Одного эльфа, должно быть, обделили...)"
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -11374,7 +11374,7 @@
       "block": "02000AE3",
       "index": 22,
       "en": "Wait...{E108:0018} Shouldn't the lamps be lit up, too?",
-      "ru": "Погодите...{E108:0018} А лампы разве не должны гореть?"
+      "ru": "Секундочку...{E108:0018} А лампы разве не должны гореть?"
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -11395,28 +11395,28 @@
       "block": "02000AFC",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Не думаю, что здесь найдётся что-то ещё."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
       "block": "02000AFD",
       "index": 0,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Нужно обойти место преступления и осмотреть\nвсё, что привлечёт внимание."
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
       "block": "02000AFE",
       "index": 0,
       "en": "There's nothing of interest here.",
-      "ru": "Здесь нет ничего примечательного."
+      "ru": "Здесь нет ничего интересного."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
       "block": "02000AFF",
       "index": 0,
       "en": "Could this be related to the evidence somehow?",
-      "ru": "Может, это как-то связано с уликами?"
+      "ru": "Не связано ли это как-то с уликами?"
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -11619,7 +11619,7 @@
       "block": "02000B1D",
       "index": 0,
       "en": "The lamps appear to be broken.",
-      "ru": "Лампы, похоже, разбиты."
+      "ru": "Лампы, кажется, разбиты."
     },
     {
       "file": "sce2_c1_m0e_check.bytes",
@@ -11780,7 +11780,7 @@
       "block": "02000B5F",
       "index": 10,
       "en": "It seems our English gentlewoman has taken a liking to\nyou, Eddie.{E108:0010} No small accomplishment.",
-      "ru": "Похоже, наша английская дама к тебе прониклась,\nЭдди.{E108:0010} Это дорогого стоит."
+      "ru": "Наша английская дама к тебе прониклась,\nЭдди.{E108:0010} Это дорогого стоит."
     },
     {
       "file": "sce2_c1_m0e_npc.bytes",
@@ -12130,7 +12130,7 @@
       "block": "02000B97",
       "index": 5,
       "en": "Yes --{E108:0018} that, I...{E108:0018} {E107:0002}Well, it stands to reason I'd leave\nfingerprints, doesn't it?",
-      "ru": "Да —{E108:0018} это я...{E108:0018} {E107:0002}Ну так ведь понятно, что отпечатки\nостанутся, правда?"
+      "ru": "Да —{E108:0018} это я...{E108:0018} {E107:0002}Ну так а как же без отпечатков-то,\nправда?"
     },
     {
       "file": "sce2_c1_m0e_npc.bytes",
@@ -12256,7 +12256,7 @@
       "block": "02000BAC",
       "index": 3,
       "en": "We ladies have to stay young, don't you know?",
-      "ru": "Нам, дамам, положено оставаться молодыми!"
+      "ru": "Нам, дамам, положено оставаться молодыми,\nзнаешь ли!"
     },
     {
       "file": "sce2_c1_m0e_npc.bytes",
@@ -12382,14 +12382,14 @@
       "block": "02000BDD",
       "index": 0,
       "en": "...Attorneys are bad luck...{E108:0010}\nNothing good ever happens with you guys around...",
-      "ru": "...Адвокаты — дурная примета...{E108:0010}\nНичего хорошего с вами не бывает..."
+      "ru": "...Адвокаты — дурная примета...{E108:0010}\nГде вы, там добра не жди..."
     },
     {
       "file": "sce2_c1_partner.bytes",
       "block": "02000BDD",
       "index": 1,
       "en": "You trample the scene...{E108:0008} {E1D1}jump to conclusions...",
-      "ru": "Топчете место преступления...{E108:0008}\n{E1D1}делаете скорые выводы..."
+      "ru": "Топчете место преступления...{E108:0008} {E1D1}спешите\nс выводами..."
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12438,7 +12438,7 @@
       "block": "02000BE2",
       "index": 3,
       "en": "(It sounds like Detective Badd might be a fan of\nbaseball...?)",
-      "ru": "(Похоже, детектив Бадд из бейсбольных\nболельщиков...?)"
+      "ru": "(Детектив Бадд, сдаётся мне, из бейсбольных\nболельщиков...?)"
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12452,14 +12452,14 @@
       "block": "02000BE6",
       "index": 1,
       "en": "If you wouldn't mind,{E108:0008} I'd like some more information\nabout the scene of the crime.",
-      "ru": "Если вас не затруднит,{E108:0008} я хотел бы побольше узнать\nо месте преступления."
+      "ru": "Если не возражаете,{E108:0008} я хотел бы узнать побольше\nо месте преступления."
     },
     {
       "file": "sce2_c1_partner.bytes",
       "block": "02000BE6",
       "index": 2,
       "en": "Sure...{E108:0010} You got legs, don't you?{E108:0010}\nTry using them...",
-      "ru": "Ладно...{E108:0010} Ноги-то у вас есть?{E108:0010}\nВот и пользуйтесь..."
+      "ru": "Ну да...{E108:0010} Ноги-то у вас есть?{E108:0010}\nВот и пользуйтесь..."
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12473,21 +12473,21 @@
       "block": "02000BE6",
       "index": 4,
       "en": "Our duties may differ, Detective,{E108:0008} but we both want\nto get to the bottom of what happened, don't we?",
-      "ru": "У нас разные обязанности, детектив,{E108:0008} но докопаться\nдо истины хотим мы оба, разве нет?"
+      "ru": "Обязанности у нас разные, детектив,{E108:0008} но докопаться\nдо истины хотим оба, разве нет?"
     },
     {
       "file": "sce2_c1_partner.bytes",
       "block": "02000BE6",
       "index": 5,
       "en": "Wouldn't it be better if we worked together?",
-      "ru": "Не лучше ли нам работать сообща?"
+      "ru": "Не лучше ли работать сообща?"
     },
     {
       "file": "sce2_c1_partner.bytes",
       "block": "02000BE6",
       "index": 7,
       "en": "(The detective clearly sees himself as the strong silent\ntype.)",
-      "ru": "(Детектив явно считает себя молчаливым\nкрепким орешком.)"
+      "ru": "(Детектив явно считает себя человеком дела,\nа не слова.)"
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12501,7 +12501,7 @@
       "block": "02000BEF",
       "index": 0,
       "en": "Seems the culprit...{E108:0008} made sure to wear gloves...",
-      "ru": "Похоже, преступник...{E108:0008} позаботился о перчатках..."
+      "ru": "Преступник, видать...{E108:0008} про перчатки не забыл..."
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12515,7 +12515,7 @@
       "block": "02000BEF",
       "index": 2,
       "en": "But perhaps you can extrapolate something about the\ntheir owner from the size of their fingers, for example?",
-      "ru": "Но, может, по размеру пальцев удастся что-то\nсказать об их хозяине?"
+      "ru": "Но, может быть, о хозяине что-то скажет\nхотя бы размер пальцев?"
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12536,21 +12536,21 @@
       "block": "02000BEF",
       "index": 5,
       "en": "After all,{E108:0008} {E1D1}even the absence of fingerprints tells us\nsomething of interest, don't you think?",
-      "ru": "В конце концов,{E108:0008} {E1D1}само отсутствие отпечатков\nо чём-то говорит, вам не кажется?"
+      "ru": "В конце концов,{E108:0008} {E1D1}само отсутствие отпечатков\nуже кое о чём говорит, вам не кажется?"
     },
     {
       "file": "sce2_c1_partner.bytes",
       "block": "02000BEF",
       "index": 6,
       "en": "Hmph.{E108:0010} You lawyers have an answer for everything,\ndon't you...",
-      "ru": "Хмф.{E108:0010} У вас, юристов, на всё готов ответ,\nа..."
+      "ru": "Хмф.{E108:0010} У вас, адвокатов, на всё готов ответ..."
     },
     {
       "file": "sce2_c1_partner.bytes",
       "block": "02000BEF",
       "index": 7,
       "en": "Heh.{E108:0010} I'll take that as a compliment.",
-      "ru": "Хе.{E108:0010} Приму это за похвалу."
+      "ru": "Хе.{E108:0010} Сочту за комплимент."
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12564,14 +12564,14 @@
       "block": "02000BF7",
       "index": 1,
       "en": "Whacking a guy with something like this...{E108:0010}\nMakes me think it was a spur of the moment thing.",
-      "ru": "Огреть человека такой штукой...{E108:0010}\nПохоже, вышло сгоряча."
+      "ru": "Огреть человека такой штукой...{E108:0010}\nСдаётся, сгоряча вышло."
     },
     {
       "file": "sce2_c1_partner.bytes",
       "block": "02000BF7",
       "index": 2,
       "en": "And who had easy access to the lamp...?{E108:0010}\nOur little lady friend...{E108:0008} that's who.",
-      "ru": "А у кого лампа была под рукой...?{E108:0010}\nУ нашей милой дамы...{E108:0008} вот у кого."
+      "ru": "А у кого лампа была под рукой...?{E108:0010}\nУ нашей дамочки...{E108:0008} вот у кого."
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12592,7 +12592,7 @@
       "block": "02000BFC",
       "index": 0,
       "en": "I'd like your opinion on this, if you don't mind.",
-      "ru": "Хотелось бы услышать ваше мнение, если не против."
+      "ru": "Хотел бы услышать ваше мнение, если вы не против."
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12606,7 +12606,7 @@
       "block": "02000BFC",
       "index": 2,
       "en": "(It seems he only cares about things that are directly\nrelated to the incident.)",
-      "ru": "(Похоже, его занимает только то, что прямо\nсвязано с делом.)"
+      "ru": "(Занимает его только то,\nчто прямо касается дела.)"
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12662,7 +12662,7 @@
       "block": "02000BFF",
       "index": 7,
       "en": "(Detective's intuition, huh?{E108:0010} Well, I have to say,{E108:0008} I don't\ndisagree.{E108:0010} Something's not right here.)",
-      "ru": "(Сыщицкое чутьё?{E108:0010} Что ж, признаться,{E108:0008} я не спорю.{E108:0010}\nЧто-то здесь не так.)"
+      "ru": "(Сыщицкое чутьё?{E108:0010} Признаться,{E108:0008} не спорю.{E108:0010}\nЧто-то здесь не так.)"
     },
     {
       "file": "sce2_c1_partner.bytes",
@@ -12844,7 +12844,7 @@
       "block": "02000CDD",
       "index": 11,
       "en": "...I see.",
-      "ru": "...Понятно."
+      "ru": "...Ясно."
     },
     {
       "file": "sce2_c2_00.bytes",
@@ -12858,7 +12858,7 @@
       "block": "02000CDD",
       "index": 13,
       "en": "Well...",
-      "ru": "Что ж..."
+      "ru": "Ну..."
     },
     {
       "file": "sce2_c2_00.bytes",
@@ -12963,7 +12963,7 @@
       "block": "02000CF9",
       "index": 1,
       "en": "Huh!?{E108:0018}\nI don't believe it.{E108:0010} {E107:0001}{E1D1}It's locked.",
-      "ru": "А!?{E108:0018}\nНе может быть.{E108:0010} {E107:0001}{E1D1}Заперто."
+      "ru": "А!?{E108:0018}\nВот те раз.{E108:0010} {E107:0001}{E1D1}Заперто."
     },
     {
       "file": "sce2_c2_00.bytes",
@@ -13082,7 +13082,7 @@
       "block": "02000D61",
       "index": 6,
       "en": "...Of course.",
-      "ru": "...Разумеется."
+      "ru": "...Наверняка."
     },
     {
       "file": "sce2_c2_01.bytes",
@@ -13264,7 +13264,7 @@
       "block": "02000E5E",
       "index": 1,
       "en": "Not good.{E108:0010} He inhaled a lot of gas.{E108:0010}\nHe's still out,{E108:0008} and it sounds like it's pretty serious.",
-      "ru": "Плохо.{E108:0010} Газа наглотался изрядно.{E108:0010}\nВсё ещё без сознания,{E108:0008} и дело, похоже, серьёзное."
+      "ru": "Плохо.{E108:0010} Газа наглотался изрядно.{E108:0010}\nВсё ещё без сознания,{E108:0008} и дело нешуточное."
     },
     {
       "file": "sce2_c2_03.bytes",
@@ -13292,7 +13292,7 @@
       "block": "02000E5E",
       "index": 5,
       "en": "I see.{E108:0018} ...I couldn't help noticing that it seemed like\nyou knew him, Fender.",
-      "ru": "Понятно.{E108:0018} ...Я невольно заметил, что вы, кажется,\nего знаете, Защитин."
+      "ru": "Понимаю.{E108:0018} ...Я невольно заметил, что вы, кажется,\nего знаете, Защитин."
     },
     {
       "file": "sce2_c2_03.bytes",
@@ -13376,7 +13376,7 @@
       "block": "02000E5E",
       "index": 17,
       "en": "(...But new name or not,{E108:0008} he's still the same old Larry.)",
-      "ru": "(...Но, новое имя или нет,{E108:0008} он всё тот же Ларри.)"
+      "ru": "(...Но хоть имя и новое,{E108:0008} он всё тот же Ларри.)"
     },
     {
       "file": "sce2_c2_03.bytes",
@@ -13677,7 +13677,7 @@
       "block": "02000E92",
       "index": 8,
       "en": "Well,{E108:0008} if you're sure you'd even want such a thing...",
-      "ru": "Что ж,{E108:0008} если вам и правда это нужно..."
+      "ru": "Ну,{E108:0008} если вам и правда это нужно..."
     },
     {
       "file": "sce2_c2_03.bytes",
@@ -13859,7 +13859,7 @@
       "block": "02000EA4",
       "index": 16,
       "en": "Sure have!{E108:0010} Sounds like our IS-7 bingo card is\ncomplete!",
-      "ru": "Ещё как!{E108:0010} Похоже, по делу IS-7 у нас полный сбор!"
+      "ru": "Ещё как!{E108:0010} По делу IS-7 у нас, считай, полный сбор!"
     },
     {
       "file": "sce2_c2_03.bytes",
@@ -13929,7 +13929,7 @@
       "block": "02000EBF",
       "index": 0,
       "en": "Mmm...{E108:0010} This is a fine blend.{E108:0010} A top-quality Ceylon\nindeed.",
-      "ru": "М-м...{E108:0010} Прекрасный купаж.{E108:0010} Цейлон высшего сорта."
+      "ru": "М-м...{E108:0010} Прекрасный купаж.{E108:0010} Так и есть —\nцейлон высшего сорта."
     },
     {
       "file": "sce2_c2_03.bytes",
@@ -13957,7 +13957,7 @@
       "block": "02000EBF",
       "index": 5,
       "en": "There's just one difference:{E108:0010} Judes cooled the saucers\nback then.{E108:0010} Not today, though, it seems.",
-      "ru": "Разница одна:{E108:0010} тогда Джудси охлаждала блюдца.{E108:0010}\nА сегодня, похоже, нет."
+      "ru": "Разница одна:{E108:0010} тогда Джудси охлаждала блюдца.{E108:0010}\nА сегодня, выходит, нет."
     },
     {
       "file": "sce2_c2_03.bytes",
@@ -14132,7 +14132,7 @@
       "block": "02000EEF",
       "index": 1,
       "en": "Mr. Edgeworth!{E108:0018} {E107:0002}Looks like the gas has mostly\ndissipated, sir!",
-      "ru": "Мистер Эджворт!{E108:0018} {E107:0002}Газ, похоже, почти\nразвеялся, сэр!"
+      "ru": "Мистер Эджворт!{E108:0018} {E107:0002}Газ, вроде, почти\nразвеялся, сэр!"
     },
     {
       "file": "sce2_c2_04.bytes",
@@ -14251,7 +14251,7 @@
       "block": "02000EFB",
       "index": 6,
       "en": "Yup.{E108:0010} {E285}Seems they can only be switched on manually.{E108:0010}\nAnd only from there.",
-      "ru": "Ага.{E108:0010} {E285}Включаются они, похоже, только вручную.{E108:0010}\nИ только оттуда."
+      "ru": "Ага.{E108:0010} {E285}Включаются они, видать, только вручную.{E108:0010}\nИ только оттуда."
     },
     {
       "file": "sce2_c2_04.bytes",
@@ -14405,7 +14405,7 @@
       "block": "02000F5D",
       "index": 9,
       "en": "(Ugh,{E108:0010} if we have to.{E108:0010} {E107:0003}And I guess we have to...)",
-      "ru": "(Ох,{E108:0010} если придётся.{E108:0010} {E107:0003}А придётся, похоже...)"
+      "ru": "(Ох,{E108:0010} если придётся.{E108:0010} {E107:0003}А придётся...)"
     },
     {
       "file": "sce2_c2_05.bytes",
@@ -14559,7 +14559,7 @@
       "block": "02000F68",
       "index": 21,
       "en": "(...I suppose {E1D1}I'd better find out what he did this time.)",
-      "ru": "(...Придётся выяснить, {E1D1}что он натворил\nна сей раз.)"
+      "ru": "(...Придётся выяснить, {E1D1}что он натворил\nна этот раз.)"
     },
     {
       "file": "sce2_c2_06.bytes",
@@ -14937,7 +14937,7 @@
       "block": "02001012",
       "index": 4,
       "en": "I expect she wasn't at the reception desk because she\nwas busy responding to the incident.",
-      "ru": "Полагаю, за стойкой её не было потому,\nчто она разбиралась с происшествием."
+      "ru": "Надо думать, за стойкой её не было потому,\nчто она разбиралась с происшествием."
     },
     {
       "file": "sce2_c2_06.bytes",
@@ -15126,7 +15126,7 @@
       "block": "0200102D",
       "index": 5,
       "en": "Larry seems to have the Autumn and Winter Wings\nmixed up...",
-      "ru": "Ларри, похоже, путает Осеннее крыло с Зимним..."
+      "ru": "Ларри, видно, путает Осеннее крыло с Зимним..."
     },
     {
       "file": "sce2_c2_06.bytes",
@@ -15364,7 +15364,7 @@
       "block": "02001051",
       "index": 3,
       "en": "Alright...{E108:0018} {E283}Once more unto the breach!",
-      "ru": "Что ж...{E108:0018} {E283}Идём на новый приступ!"
+      "ru": "Итак...{E108:0018} {E283}Идём на новый приступ!"
     },
     {
       "file": "sce2_c2_06.bytes",
@@ -15679,7 +15679,7 @@
       "block": "02001080",
       "index": 8,
       "en": "I imagine you simply mistook one statue for the other.",
-      "ru": "Полагаю, ты просто спутал одну статую с другой."
+      "ru": "Ты, должно быть, просто спутал одну статую с другой."
     },
     {
       "file": "sce2_c2_07.bytes",
@@ -15749,14 +15749,14 @@
       "block": "02001090",
       "index": 3,
       "en": "Thanks.{E108:0010} Good work, Detective.",
-      "ru": "Спасибо.{E108:0010} Хорошая работа, детектив."
+      "ru": "Спасибо.{E108:0010} Отлично сработано, детектив."
     },
     {
       "file": "sce2_c2_07.bytes",
       "block": "02001090",
       "index": 4,
       "en": "...It seems it's finally safe to enter the Autumn Wing.",
-      "ru": "...Похоже, в Осеннее крыло наконец можно войти."
+      "ru": "...Ну вот, в Осеннее крыло наконец можно войти."
     },
     {
       "file": "sce2_c2_07.bytes",
@@ -15770,7 +15770,7 @@
       "block": "02001090",
       "index": 6,
       "en": "Come on,{E108:0010} let's go take a look!{E108:0018} I wanna see this Pisces\nstatue!",
-      "ru": "Идёмте,{E108:0010} посмотрим!{E108:0018} Хочу увидеть эту статую Рыб!"
+      "ru": "Ну идёмте,{E108:0010} посмотрим!{E108:0018}\nХочу увидеть эту статую Рыб!"
     },
     {
       "file": "sce2_c2_07.bytes",
@@ -15910,7 +15910,7 @@
       "block": "020010EA",
       "index": 3,
       "en": "This is the Autumn Wing,{E108:0008} so I imagine it should be\nCapricorn.",
-      "ru": "Это Осеннее крыло,{E108:0008} так что, полагаю,\nтам Козерог."
+      "ru": "Это Осеннее крыло,{E108:0008} так что там, по идее,\nКозерог."
     },
     {
       "file": "sce2_c2_08.bytes",
@@ -15952,7 +15952,7 @@
       "block": "020010F4",
       "index": 0,
       "en": "It seems there's a piece of luminous cloth on each of\nthe other cases, too.",
-      "ru": "Похоже, кусок светящейся ткани лежит\nи на каждой из прочих витрин."
+      "ru": "Кусок светящейся ткани лежит\nи на каждой из прочих витрин."
     },
     {
       "file": "sce2_c2_08.bytes",
@@ -16099,7 +16099,7 @@
       "block": "02001107",
       "index": 2,
       "en": "Mr. Edgeworth...{E108:0010} It seems I have failed in my duty yet\nagain.",
-      "ru": "Мистер Эджворт...{E108:0010} Похоже, я вновь не исполнила\nсвой долг."
+      "ru": "Мистер Эджворт...{E108:0010} Я вновь не исполнила\nсвой долг."
     },
     {
       "file": "sce2_c2_08.bytes",
@@ -16547,7 +16547,7 @@
       "block": "02001124",
       "index": 37,
       "en": "Indeed.{E108:0010} I haven't known him long,{E108:0008} but he's a little\nprone to jumping to the wrong conclusions.",
-      "ru": "Да.{E108:0010} Знаком я с ним недолго,{E108:0008} но он слегка склонен\nк поспешным выводам."
+      "ru": "Да уж.{E108:0010} Знаком я с ним недолго,{E108:0008} но он\nслегка склонен к поспешным выводам."
     },
     {
       "file": "sce2_c2_08.bytes",
@@ -16701,7 +16701,7 @@
       "block": "0200115C",
       "index": 17,
       "en": "Hah.{E108:0010} I have better things to do than pick holes in your\nfaulty logic.{E108:0010} But I don't suppose I have much choice...",
-      "ru": "Ха.{E108:0010} У меня есть дела поважнее, чем искать дыры\nв вашей логике.{E108:0010} Но выбора, похоже, нет..."
+      "ru": "Ха.{E108:0010} У меня есть дела поважнее, чем искать дыры\nв вашей логике.{E108:0010} Но выбора-то нет..."
     },
     {
       "file": "sce2_c2_09.bytes",
@@ -16813,7 +16813,7 @@
       "block": "0200117D",
       "index": 0,
       "en": "We do indeed.{E108:0010} It seems it's found in a number of\neveryday products.",
-      "ru": "Знаем.{E108:0010} Он, похоже, входит в целый ряд\nбытовых товаров."
+      "ru": "Ещё как знаем.{E108:0010} Он, как выясняется, входит\nв целый ряд бытовых товаров."
     },
     {
       "file": "sce2_c2_09.bytes",
@@ -17023,7 +17023,7 @@
       "block": "02001199",
       "index": 2,
       "en": "Of course not, Eustace.",
-      "ru": "Разумеется, нет, Юстас."
+      "ru": "Ну что вы, Юстас."
     },
     {
       "file": "sce2_c2_09.bytes",
@@ -17086,7 +17086,7 @@
       "block": "020011A0",
       "index": 4,
       "en": "It did!{E108:0018} {E107:0002}And it was created by the artist guy!",
-      "ru": "Вот именно!{E108:0018} {E107:0002}И создал его тот художник!"
+      "ru": "Ага!{E108:0018} {E107:0002}И создал его тот художник!"
     },
     {
       "file": "sce2_c2_09.bytes",
@@ -17198,7 +17198,7 @@
       "block": "020011A0",
       "index": 20,
       "en": "What I am doing is demonstrating that you do not have\nthe aptitude required to head up this investigation.",
-      "ru": "Я показываю, что у вас нет закалки,\nнеобходимой, чтобы вести это расследование."
+      "ru": "Я не потешаюсь, а показываю: чтобы вести это\nрасследование, вам не хватает закалки."
     },
     {
       "file": "sce2_c2_09.bytes",
@@ -17506,7 +17506,7 @@
       "block": "020011E8",
       "index": 5,
       "en": "Larry,{E108:0010} you claim to be something of a painter.{E108:0010}\nI imagine you have some experience mixing colors?",
-      "ru": "Ларри,{E108:0010} ты называешь себя живописцем.{E108:0010}\nПолагаю, краски смешивать доводилось?"
+      "ru": "Ларри,{E108:0010} ты называешь себя живописцем.{E108:0010}\nКраски смешивать, надо думать, доводилось?"
     },
     {
       "file": "sce2_c2_0a.bytes",
@@ -17891,7 +17891,7 @@
       "block": "02001223",
       "index": 1,
       "en": "Huh!?{E108:0018}\nI don't believe it.{E108:0010} {E107:0001}{E1D1}It's locked.",
-      "ru": "А!?{E108:0018}\nНе может быть.{E108:0010} {E107:0001}{E1D1}Заперто."
+      "ru": "А!?{E108:0018}\nВот те раз.{E108:0010} {E107:0001}{E1D1}Заперто."
     },
     {
       "file": "sce2_c2_0a.bytes",
@@ -17933,7 +17933,7 @@
       "block": "02001226",
       "index": 4,
       "en": "...I see.{E108:0010} {E107:0002}{E173:0000}{E284}Then I suppose we will have to take you at\nyour collective word.",
-      "ru": "...Ясно.{E108:0010} {E107:0002}{E173:0000}{E284}Тогда, полагаю, придётся поверить вам\nна слово."
+      "ru": "...Ясно.{E108:0010} {E107:0002}{E173:0000}{E284}Тогда придётся поверить вам\nна слово."
     },
     {
       "file": "sce2_c2_0a.bytes",
@@ -18108,7 +18108,7 @@
       "block": "0200125C",
       "index": 1,
       "en": "Guess these are remakes of Frost's work from\neighteen years back.",
-      "ru": "Похоже, это повторы работ Морозова\nвосемнадцатилетней давности."
+      "ru": "Это, поди, повторы работ Морозова\nвосемнадцатилетней давности."
     },
     {
       "file": "sce2_c2_m0b_check.bytes",
@@ -18297,7 +18297,7 @@
       "block": "02001275",
       "index": 3,
       "en": "They appear to represent Taurus and Gemini.{E108:0008}\n{E041}Two constellations best observed during winter time{E040}.",
-      "ru": "Похоже, Тельца и Близнецов.{E108:0008}\n{E041}Два созвездия, которые лучше всего видны зимой{E040}."
+      "ru": "Тельца и Близнецов, надо полагать.{E108:0008}\n{E041}Два созвездия, которые лучше всего видны зимой{E040}."
     },
     {
       "file": "sce2_c2_m0b_check.bytes",
@@ -18318,7 +18318,7 @@
       "block": "0200127B",
       "index": 0,
       "en": "Anyway,{E108:0008} seeing as I'm the nicest old rogue on the\nblock,{E108:0008} that one's yours for keepsies.",
-      "ru": "В общем,{E108:0008} поскольку я тут самый добрый прохвост\nв округе,{E108:0008} этот снимок твой насовсем."
+      "ru": "В общем,{E108:0008} раз уж я тут самый добрый прохвост\nв округе,{E108:0008} этот снимок твой насовсем."
     },
     {
       "file": "sce2_c2_m0b_check.bytes",
@@ -18423,7 +18423,7 @@
       "block": "02001289",
       "index": 2,
       "en": "There seems to be some sort of lighting device\nattached to the case.",
-      "ru": "К витрине, похоже, приделан какой-то\nосветительный прибор."
+      "ru": "К витрине приделан какой-то\nосветительный прибор."
     },
     {
       "file": "sce2_c2_m0b_check.bytes",
@@ -18437,7 +18437,7 @@
       "block": "0200128D",
       "index": 0,
       "en": "This lamp appears to be made of rock salt.{E108:0010}\nIt's illuminating the diagram of the zodiac just above it.",
-      "ru": "Лампа, похоже, из каменной соли.{E108:0010}\nОна подсвечивает схему зодиака над собой."
+      "ru": "Лампа, судя по виду, из каменной соли.{E108:0010}\nОна подсвечивает схему зодиака над собой."
     },
     {
       "file": "sce2_c2_m0b_check.bytes",
@@ -18479,7 +18479,7 @@
       "block": "02001293",
       "index": 0,
       "en": "It's a statue of a rather ferocious-looking bull.{E108:0010}\nNot a gaze one would want to be fixed with.",
-      "ru": "Статуя весьма свирепого на вид быка.{E108:0010}\nПод таким взглядом оказаться не хочется."
+      "ru": "Статуя довольно свирепого на вид быка.{E108:0010}\nПод таким взглядом оказаться не хочется."
     },
     {
       "file": "sce2_c2_m0b_check.bytes",
@@ -18675,14 +18675,14 @@
       "block": "020012AE",
       "index": 3,
       "en": "In exchange for your jacket, of course.",
-      "ru": "В обмен на твой пиджак, разумеется."
+      "ru": "В обмен на твой пиджак, ясное дело."
     },
     {
       "file": "sce2_c2_m0b_check.bytes",
       "block": "020012AE",
       "index": 4,
       "en": "...I'll be fine,{E108:0008} thank you.{E108:0010}\n(Seems I'll have to stick it out a little longer.)",
-      "ru": "...Обойдусь,{E108:0008} благодарю.{E108:0010}\n(Похоже, придётся потерпеть ещё немного.)"
+      "ru": "...Обойдусь,{E108:0008} благодарю.{E108:0010}\n(Придётся потерпеть ещё немного.)"
     },
     {
       "file": "sce2_c2_m0b_check.bytes",
@@ -18766,7 +18766,7 @@
       "block": "020012DC",
       "index": 4,
       "en": "...Well, I don't see any signs and we weren't told not\nto...{E108:0010} so I suppose it's probably okay.",
-      "ru": "...Что ж, табличек не видно, и нам ничего\nне запрещали...{E108:0010} так что, полагаю, можно."
+      "ru": "...Что ж, табличек не видно, и нам ничего\nне запрещали...{E108:0010} так что, думаю, можно."
     },
     {
       "file": "sce2_c2_m0b_npc.bytes",
@@ -19074,7 +19074,7 @@
       "block": "020013EC",
       "index": 13,
       "en": "Apparently,{E108:0008} he's famous these days!{E108:0010} One of the best\nconfectioners in the world,{E108:0008} or so they say.",
-      "ru": "Говорят,{E108:0008} нынче он знаменит!{E108:0010} Один из лучших\nкондитеров мира,{E108:0008} если верить людям."
+      "ru": "Говорят,{E108:0008} теперь он знаменит!{E108:0010} Один из лучших\nкондитеров мира,{E108:0008} если верить людям."
     },
     {
       "file": "sce2_c3_00.bytes",
@@ -19221,7 +19221,7 @@
       "block": "020013FD",
       "index": 17,
       "en": "Ubiquim's awfully thick and sticky,{E108:0008} and it heats up\nvery quickly indeed.",
-      "ru": "Убиквиум ужасно густой и липкий,{E108:0008} и греется\nочень быстро."
+      "ru": "Убиквиум ужасно густой и липкий,{E108:0008} и греется\nох как быстро."
     },
     {
       "file": "sce2_c3_00.bytes",
@@ -19284,7 +19284,7 @@
       "block": "020013FD",
       "index": 27,
       "en": "Yes, Ms. Scone.{E108:0010} Very interesting indeed.{E108:0018}{E12F:00080001}\nI think that tells us all we need to know.",
-      "ru": "Да, мисс Сдобина.{E108:0010} Весьма любопытно.{E108:0018}{E12F:00080001}\nДумаю, это говорит нам всё, что нужно."
+      "ru": "Да, мисс Сдобина.{E108:0010} Весьма любопытно.{E108:0018}{E12F:00080001}\nДумаю, больше нам знать и не нужно."
     },
     {
       "file": "sce2_c3_00.bytes",
@@ -19620,7 +19620,7 @@
       "block": "02001447",
       "index": 2,
       "en": "...Correct.{E108:0010} That appears to be the only logical answer.",
-      "ru": "...Верно.{E108:0010} Похоже, это единственный логичный ответ."
+      "ru": "...Верно.{E108:0010} Иного логичного ответа и нет."
     },
     {
       "file": "sce2_c3_00.bytes",
@@ -19641,7 +19641,7 @@
       "block": "02001447",
       "index": 5,
       "en": "...Understood.",
-      "ru": "...Понятно."
+      "ru": "...Понял."
     },
     {
       "file": "sce2_c3_00.bytes",
@@ -19739,7 +19739,7 @@
       "block": "0200145F",
       "index": 6,
       "en": "I see.{E108:0010} So we have a cracked piece of glass that we\nknow was ice cold on its inner-facing side.",
-      "ru": "Понятно.{E108:0010} Итак, треснувшее стекло, которое изнутри\nбыло ледяным."
+      "ru": "Ясно.{E108:0010} Итак, треснувшее стекло, которое изнутри\nбыло ледяным."
     },
     {
       "file": "sce2_c3_01.bytes",
@@ -19879,14 +19879,14 @@
       "block": "0200147A",
       "index": 0,
       "en": "The blowtorch showed signs of having being used\nrecently when it was found here in the Autumn Wing.",
-      "ru": "У горелки, найденной здесь, в Осеннем крыле,\nбыли следы недавнего использования."
+      "ru": "Горелку нашли здесь, в Осеннем крыле, —\nи ею явно недавно пользовались."
     },
     {
       "file": "sce2_c3_01.bytes",
       "block": "0200147A",
       "index": 1,
       "en": "I think it's likely that it was used on the glass lid,{E108:0008}\ncausing it to crack.",
-      "ru": "Полагаю, её и применили к стеклу крышки,{E108:0008}\nотчего оно и треснуло."
+      "ru": "Скорее всего, её и применили к стеклу крышки,{E108:0008}\nотчего оно и треснуло."
     },
     {
       "file": "sce2_c3_01.bytes",
@@ -20509,7 +20509,7 @@
       "block": "02001513",
       "index": 19,
       "en": "I always have some in my medicine bag.{E108:0010}\nJust in case, you know.",
-      "ru": "Я всегда держу немного в аптечной сумке.{E108:0010}\nНа всякий случай."
+      "ru": "Я всегда держу немного в аптечной сумке.{E108:0010}\nНа всякий случай, знаете ли."
     },
     {
       "file": "sce2_c3_02.bytes",
@@ -20530,7 +20530,7 @@
       "block": "02001513",
       "index": 22,
       "en": "I see...{E108:0010} {E107:0002}But why on earth would you carry such a\nhazardous substance around with you?",
-      "ru": "Понятно...{E108:0010} {E107:0002}Но зачем вообще носить с собой\nстоль опасное вещество?"
+      "ru": "Вот как...{E108:0010} {E107:0002}Но зачем вообще носить с собой\nтакое опасное вещество?"
     },
     {
       "file": "sce2_c3_02.bytes",
@@ -20579,7 +20579,7 @@
       "block": "02001513",
       "index": 29,
       "en": "It can't hurt to verify Ms. Scone's story, after all.{E108:0010}\nShe may be lying to us.",
-      "ru": "Проверить рассказ мисс Сдобиной не помешает.{E108:0010}\nОна может нам лгать."
+      "ru": "Проверить рассказ мисс Сдобиной не помешает.{E108:0010}\nОна ведь может нам лгать."
     },
     {
       "file": "sce2_c3_02.bytes",
@@ -21062,7 +21062,7 @@
       "block": "02001571",
       "index": 9,
       "en": "Heh.{E108:0010} Great minds think alike.{E108:0018}\nAlrighty then...",
-      "ru": "Хе.{E108:0010} У великих умов мысли сходятся.{E108:0018}\nНу что ж..."
+      "ru": "Хе.{E108:0010} У великих умов мысли сходятся.{E108:0018}\nНу, поехали..."
     },
     {
       "file": "sce2_c3_03.bytes",
@@ -21139,7 +21139,7 @@
       "block": "0200165D",
       "index": 1,
       "en": "(Mr. von Karma wasn't very happy.{E108:0010}\nHe told us to get out --{E108:0008} and in no uncertain terms.)",
-      "ru": "(Господин фон Карма был недоволен.{E108:0010}\nОн велел нам уйти —{E108:0008} и весьма недвусмысленно.)"
+      "ru": "(Господин фон Карма был недоволен.{E108:0010}\nОн велел нам уйти —{E108:0008} без всяких обиняков.)"
     },
     {
       "file": "sce2_c4_01.bytes",
@@ -21237,7 +21237,7 @@
       "block": "0200165D",
       "index": 15,
       "en": "Now,{E108:0008} we may not be able to investigate Mr. Frost's\nroom as hoped...{E108:0010} but that doesn't mean we give up.",
-      "ru": "Что ж,{E108:0008} осмотреть комнату Морозова нам,\nкак хотелось, не дадут...{E108:0010} но сдаваться рано."
+      "ru": "Осмотреть комнату Морозова нам,{E108:0008}\nкак хотелось, не дадут...{E108:0010} но сдаваться рано."
     },
     {
       "file": "sce2_c4_01.bytes",
@@ -21356,7 +21356,7 @@
       "block": "02001672",
       "index": 12,
       "en": "...Although he does spend most of the time coaching\nme on how to improve my technique.",
-      "ru": "...Хотя большую часть времени он учит меня,\nкак улучшить технику."
+      "ru": "...Хотя вообще-то большую часть времени\nон учит меня оттачивать технику."
     },
     {
       "file": "sce2_c4_01.bytes",
@@ -21398,14 +21398,14 @@
       "block": "02001672",
       "index": 18,
       "en": "It seems you're quite committed to the work you do\nfor Mr. Tangaroa, Ms. Bound.",
-      "ru": "Похоже, вы весьма преданы своей работе\nу мистера Тангароа, мисс Долгова."
+      "ru": "Вы, как я погляжу, очень преданы своей работе\nу мистера Тангароа, мисс Долгова."
     },
     {
       "file": "sce2_c4_01.bytes",
       "block": "02001672",
       "index": 19,
       "en": "Of course.{E108:0010} {E284}What right would I have to stay here\notherwise?",
-      "ru": "Разумеется.{E108:0010} {E284}Иначе какое право я имела бы\nздесь оставаться?"
+      "ru": "Конечно.{E108:0010} {E284}Иначе какое право я имела бы\nздесь оставаться?"
     },
     {
       "file": "sce2_c4_01.bytes",
@@ -21608,7 +21608,7 @@
       "block": "02001699",
       "index": 11,
       "en": "Wait,{E108:0008} really?{E108:0018} But I thought you just said you didn't\nknow him very well...?",
-      "ru": "Погодите,{E108:0008} правда?{E108:0018} А вы вроде только что сказали,\nчто знали его не близко...?"
+      "ru": "Да ну,{E108:0008} правда?{E108:0018} А вы вроде только что сказали,\nчто знали его не близко...?"
     },
     {
       "file": "sce2_c4_01.bytes",
@@ -21622,7 +21622,7 @@
       "block": "02001699",
       "index": 13,
       "en": "(...It seems she's got something to hide, too.)",
-      "ru": "(...Похоже, и ей есть что скрывать.)"
+      "ru": "(...И ей, выходит, есть что скрывать.)"
     },
     {
       "file": "sce2_c4_02.bytes",
@@ -21671,7 +21671,7 @@
       "block": "020016DC",
       "index": 6,
       "en": "Well...{E108:0010} alright, then.{E108:0018}\n{E285}{E12F:00050005}(It would be a shame to waste a good hair day...)",
-      "ru": "Что ж...{E108:0010} так и быть.{E108:0018}\n{E285}{E12F:00050005}(Жаль упускать день, когда причёска удалась...)"
+      "ru": "Ну...{E108:0010} так и быть.{E108:0018}\n{E285}{E12F:00050005}(Жаль упускать день, когда причёска удалась...)"
     },
     {
       "file": "sce2_c4_02.bytes",
@@ -21720,7 +21720,7 @@
       "block": "020016E9",
       "index": 0,
       "en": "I assume Mr. Tangaroa used {E1D1}this same camera during\nthe contest?",
-      "ru": "Полагаю, мистер Тангароа во время конкурса\nснимал {E1D1}этой же камерой?"
+      "ru": "Мистер Тангароа, надо полагать, во время конкурса\nснимал {E1D1}этой же камерой?"
     },
     {
       "file": "sce2_c4_02.bytes",
@@ -21874,7 +21874,7 @@
       "block": "0200175C",
       "index": 0,
       "en": "I see...",
-      "ru": "Понятно..."
+      "ru": "Вот как..."
     },
     {
       "file": "sce2_c4_03.bytes",
@@ -22119,7 +22119,7 @@
       "block": "02001762",
       "index": 31,
       "en": "Alright,{E108:0010} {E107:0001}let's take a look at that photograph.",
-      "ru": "Что ж,{E108:0010} {E107:0001}взглянем на этот снимок."
+      "ru": "Ну-ка,{E108:0010} {E107:0001}взглянем на этот снимок."
     },
     {
       "file": "sce2_c4_03.bytes",
@@ -22147,7 +22147,7 @@
       "block": "02001783",
       "index": 2,
       "en": "(The floor appears to be completely covered in a pale\nblue liquid...)",
-      "ru": "(Пол, похоже, сплошь залит бледно-голубой\nжидкостью...)"
+      "ru": "(Пол сплошь залит бледно-голубой\nжидкостью...)"
     },
     {
       "file": "sce2_c4_03.bytes",
@@ -22161,7 +22161,7 @@
       "block": "02001783",
       "index": 4,
       "en": "I assume that the unplugged power cord has\nsomething to do with all this.",
-      "ru": "Полагаю, выдернутый шнур питания имеет к этому\nотношение."
+      "ru": "Выдернутый шнур питания, сдаётся мне, тут\nне случаен."
     },
     {
       "file": "sce2_c4_03.bytes",
@@ -22182,7 +22182,7 @@
       "block": "02001783",
       "index": 7,
       "en": "It looks like they were all connected to the same power\nstrip.",
-      "ru": "Похоже, все они были включены в один удлинитель."
+      "ru": "Все они были включены в один удлинитель."
     },
     {
       "file": "sce2_c4_03.bytes",
@@ -22266,7 +22266,7 @@
       "block": "02001783",
       "index": 19,
       "en": "Wait,{E108:0010} THAT's why it had no strings!?{E108:0010}\nBecause you ate them!?",
-      "ru": "Погодите,{E108:0010} ТАК ВОТ почему у неё нет струн!?{E108:0010}\nВы их съели!?"
+      "ru": "Стоп,{E108:0010} ТАК ВОТ почему у неё нет струн!?{E108:0010}\nВы их съели!?"
     },
     {
       "file": "sce2_c4_03.bytes",
@@ -22364,7 +22364,7 @@
       "block": "020017DC",
       "index": 5,
       "en": "Is that so?{E108:0010} You certainly seem to have some strong\nopinions about his attitude toward his work...",
-      "ru": "Вот как?{E108:0010} А у вас, похоже, вполне твёрдое мнение\nо его отношении к работе..."
+      "ru": "Вот как?{E108:0010} А мнение о его отношении к работе\nу вас, однако, вполне твёрдое..."
     },
     {
       "file": "sce2_c4_04.bytes",
@@ -22392,7 +22392,7 @@
       "block": "020017DC",
       "index": 9,
       "en": "I have an item of evidence that appears to have been\none of Mr. Frost's possessions...",
-      "ru": "У меня есть улика, которая, судя по всему,\nпринадлежала мистеру Морозову..."
+      "ru": "У меня есть улика, которая, видимо,\nпринадлежала мистеру Морозову..."
     },
     {
       "file": "sce2_c4_04.bytes",
@@ -22406,7 +22406,7 @@
       "block": "020017DC",
       "index": 11,
       "en": "!{E108:0010} Well...{E108:0010} {E107:0001}I won't know what you're talking about if you\ndon't share!",
-      "ru": "!{E108:0010} Что ж...{E108:0010} {E107:0001}Я не пойму, о чём вы, пока вы\nне покажете!"
+      "ru": "!{E108:0010} Ну...{E108:0010} {E107:0001}Я не пойму, о чём вы, пока вы\nне покажете!"
     },
     {
       "file": "sce2_c4_04.bytes",
@@ -22693,7 +22693,7 @@
       "block": "0200180D",
       "index": 5,
       "en": "Hmph...{E108:0010} Try again.{E108:0010} And this time,{E108:0008} it'd better be good...",
-      "ru": "Хмф...{E108:0010} Попробуйте ещё.{E108:0010} И на сей раз{E108:0008} получше..."
+      "ru": "Хмф...{E108:0010} Попробуйте ещё.{E108:0010} И на этот раз{E108:0008} получше..."
     },
     {
       "file": "sce2_c4_04.bytes",
@@ -22910,7 +22910,7 @@
       "block": "0200182F",
       "index": 2,
       "en": "(...All it's contradicting is everyone's assumptions\nabout me, it would seem.)",
-      "ru": "(...Похоже, она противоречит лишь общим\nпредположениям обо мне.)"
+      "ru": "(...Противоречит она разве что общим\nпредположениям обо мне.)"
     },
     {
       "file": "sce2_c4_04.bytes",
@@ -23022,7 +23022,7 @@
       "block": "020018DC",
       "index": 2,
       "en": "Looks like she took pictures of his work from every\npossible angle.",
-      "ru": "Похоже, она сняла его работы со всех возможных\nсторон."
+      "ru": "Сняла она его работы со всех возможных\nсторон."
     },
     {
       "file": "sce2_c4_06.bytes",
@@ -23162,7 +23162,7 @@
       "block": "020018EB",
       "index": 7,
       "en": "What he said!{E108:0018} {E107:0002}No hard feelings, Ms. Bound!",
-      "ru": "Вот именно!{E108:0018} {E107:0002}Мы не в обиде, мисс Долгова!"
+      "ru": "Золотые слова!{E108:0018} {E107:0002}Мы не в обиде, мисс Долгова!"
     },
     {
       "file": "sce2_c4_06.bytes",
@@ -23225,7 +23225,7 @@
       "block": "0200195C",
       "index": 4,
       "en": "It seems you don't know when to shut up, either.{E108:0018}\n{E107:0003}{E1D1}But I commend you on your stubbornness.",
-      "ru": "Похоже, вы и молчать не умеете.{E108:0018}\n{E107:0003}{E1D1}Но упорство ваше я отмечаю."
+      "ru": "Молчать вы, как я погляжу, тоже не умеете.{E108:0018}\n{E107:0003}{E1D1}Но упорство ваше я отмечаю."
     },
     {
       "file": "sce2_c4_07.bytes",
@@ -23400,7 +23400,7 @@
       "block": "020019DC",
       "index": 6,
       "en": "Indeed...{E108:0010} Well,{E108:0008} I suppose that means there's little point\nin us hanging around, either.",
-      "ru": "Действительно...{E108:0010} Что ж,{E108:0008} тогда и нам тут торчать\nособого смысла нет."
+      "ru": "Действительно...{E108:0010} Тогда{E108:0008} и нам тут торчать\nособого смысла нет."
     },
     {
       "file": "sce2_c4_08.bytes",
@@ -23428,7 +23428,7 @@
       "block": "020019DC",
       "index": 10,
       "en": "...Heh.{E108:0010} Guess my stomach's in agreement, too.",
-      "ru": "...Хе.{E108:0010} Мой живот, похоже, тоже согласен."
+      "ru": "...Хе.{E108:0010} И живот мой, гляжу, согласен."
     },
     {
       "file": "sce2_c4_08.bytes",
@@ -23498,7 +23498,7 @@
       "block": "02001A5C",
       "index": 6,
       "en": "Yes,{E108:0008} though he really only seemed interested in how I\nmelted those sculptures.",
-      "ru": "Да,{E108:0008} хотя его, похоже, занимало лишь то,\nкак я растопила те скульптуры."
+      "ru": "Да,{E108:0008} хотя занимало его, кажется, лишь то,\nкак я растопила те скульптуры."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -23659,14 +23659,14 @@
       "block": "02001A79",
       "index": 1,
       "en": "Uh...{E108:0008} Of course,{E108:0010} I...{E108:0008} Thank you...",
-      "ru": "Э-э...{E108:0008} Конечно,{E108:0010} я...{E108:0008} Благодарю..."
+      "ru": "Э-э...{E108:0008} Конечно,{E108:0010} я...{E108:0008} Спасибо..."
     },
     {
       "file": "sce2_c5_00.bytes",
       "block": "02001A79",
       "index": 2,
       "en": "Are you alright, Mr. Tangaroa?{E108:0010}\nYou seem kinda...{E108:0008} spaced out.",
-      "ru": "Вы в порядке, мистер Тангароа?{E108:0010}\nВы какой-то...{E108:0008} рассеянный."
+      "ru": "Что с вами, мистер Тангароа?{E108:0010}\nВы какой-то...{E108:0008} рассеянный."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24009,7 +24009,7 @@
       "block": "02001AA0",
       "index": 12,
       "en": "Much appreciated, Ms. Bound.",
-      "ru": "Весьма признателен, мисс Долгова."
+      "ru": "Очень признателен, мисс Долгова."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24135,7 +24135,7 @@
       "block": "02001ABA",
       "index": 4,
       "en": "I will,{E108:0008} and I do.{E108:0018}\nThank you.",
-      "ru": "Буду,{E108:0008} и верю.{E108:0018}\nБлагодарю вас."
+      "ru": "Буду,{E108:0008} и верю.{E108:0018}\nСпасибо вам."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24149,7 +24149,7 @@
       "block": "02001ABF",
       "index": 1,
       "en": "But you're already known as the greatest in the world.{E108:0010}\nDo you really need to codify it into a title?",
-      "ru": "Но вас и так знают как величайшего в мире.{E108:0010}\nЗачем закреплять это титулом?"
+      "ru": "Но вас и так знают как величайшего в мире.{E108:0010}\nЗачем вам ещё и титул?"
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24219,7 +24219,7 @@
       "block": "02001AC9",
       "index": 1,
       "en": "Ah,{E108:0008} I see.{E108:0010} That explains why she carries it around with\nher everywhere.",
-      "ru": "А,{E108:0008} понятно.{E108:0010} Вот почему она носит её с собой\nповсюду."
+      "ru": "А,{E108:0008} вот оно что.{E108:0010} Потому она и носит её с собой\nповсюду."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24583,7 +24583,7 @@
       "block": "02001AFA",
       "index": 8,
       "en": "Nah...{E108:0010} Seems he was making statues for each season...",
-      "ru": "Не-а...{E108:0010} Похоже, делал статуи на каждый\nсезон..."
+      "ru": "Не-а...{E108:0010} Статуи он, стало быть, делал на каждый\nсезон..."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24632,7 +24632,7 @@
       "block": "02001AFA",
       "index": 15,
       "en": "One last thing...{E108:0010} {E107:0003}Seems he had himself a bit of a\nspending habit when it came to his work...",
-      "ru": "И последнее...{E108:0010} {E107:0003}Похоже, денег на свои работы\nон не жалел..."
+      "ru": "И последнее...{E108:0010} {E107:0003}Денег на свои работы\nон, видать, не жалел..."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24660,7 +24660,7 @@
       "block": "02001AFA",
       "index": 19,
       "en": "I guess not even famous artists are safe from money\nproblems...",
-      "ru": "Похоже, и знаменитые мастера не застрахованы\nот денежных бед..."
+      "ru": "Стало быть, и знаменитые мастера не застрахованы\nот денежных бед..."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24681,7 +24681,7 @@
       "block": "02001AFA",
       "index": 22,
       "en": "I see...",
-      "ru": "Понятно..."
+      "ru": "Ясно..."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -24779,14 +24779,14 @@
       "block": "02001B1A",
       "index": 4,
       "en": "By all means.{E108:0010} I'll gladly share all that I can.",
-      "ru": "Извольте.{E108:0010} С радостью расскажу всё, что смогу."
+      "ru": "Конечно.{E108:0010} С радостью расскажу всё, что смогу."
     },
     {
       "file": "sce2_c5_00.bytes",
       "block": "02001B1F",
       "index": 0,
       "en": "Well...{E108:0010} {E150:001F0020}I suppose I should be getting back.",
-      "ru": "Что ж...{E108:0010} {E150:001F0020}Мне, пожалуй, пора возвращаться."
+      "ru": "Ну...{E108:0010} {E150:001F0020}Мне, пожалуй, пора возвращаться."
     },
     {
       "file": "sce2_c5_00.bytes",
@@ -25122,7 +25122,7 @@
       "block": "02001BDC",
       "index": 1,
       "en": "...Detective Badd.{E108:0010}{E150:0005002E}\nThank you again for what you did earlier.",
-      "ru": "...Детектив Бадд.{E108:0010}{E150:0005002E}\nЕщё раз спасибо за то, что вы сделали."
+      "ru": "...Детектив Бадд.{E108:0010}{E150:0005002E}\nЕщё раз спасибо за то, что вы для нас сделали."
     },
     {
       "file": "sce2_c5_02.bytes",
@@ -25164,7 +25164,7 @@
       "block": "02001BDF",
       "index": 4,
       "en": "Never mind that now...{E108:0018} I'm guessing you two are back\nhere...{E108:0008} looking to investigate some more?",
-      "ru": "Ладно, не о том...{E108:0018} Полагаю, вы двое снова здесь...{E108:0008}\nчтобы ещё поосматривать?"
+      "ru": "Ладно, не о том...{E108:0018} Вы двое, никак, снова здесь...{E108:0008}\nчтобы ещё поосматривать?"
     },
     {
       "file": "sce2_c5_02.bytes",
@@ -25192,7 +25192,7 @@
       "block": "02001BDF",
       "index": 8,
       "en": "...This is Mr. von Karma's doing, I presume?",
-      "ru": "...Полагаю, это дело рук господина фон Кармы?"
+      "ru": "...Это, если не ошибаюсь, дело рук\nгосподина фон Кармы?"
     },
     {
       "file": "sce2_c5_02.bytes",
@@ -25402,7 +25402,7 @@
       "block": "02001C05",
       "index": 0,
       "en": "Good luck with that.{E108:0010} {E107:0002}{E1D1}Because I have no intention of\nallowing it.",
-      "ru": "Желаю удачи.{E108:0010} {E107:0002}{E1D1}Ибо позволять этого я не намерен."
+      "ru": "Желаю удачи.{E108:0010}\n{E107:0002}{E1D1}Потому что позволять этого я не намерен."
     },
     {
       "file": "sce2_c5_02.bytes",
@@ -25416,14 +25416,14 @@
       "block": "02001C05",
       "index": 2,
       "en": "I am already in the midst of my own investigation into\nGusto.",
-      "ru": "Я уже веду собственное расследование\nв отношении Густо."
+      "ru": "Густо я уже занимаюсь сам."
     },
     {
       "file": "sce2_c5_02.bytes",
       "block": "02001C05",
       "index": 3,
       "en": "So there is no need for the likes of you to pester him\nwith the same questions again.",
-      "ru": "Так что таким, как вы, незачем донимать его\nтеми же вопросами повторно."
+      "ru": "Так что таким, как вы, незачем донимать его\nтеми же вопросами."
     },
     {
       "file": "sce2_c5_02.bytes",
@@ -25451,7 +25451,7 @@
       "block": "02001C05",
       "index": 7,
       "en": "...Very well,{E108:0010} what is it?",
-      "ru": "...Извольте,{E108:0010} что же это?"
+      "ru": "...Хорошо,{E108:0010} и что же это?"
     },
     {
       "file": "sce2_c5_02.bytes",
@@ -25542,7 +25542,7 @@
       "block": "02001C67",
       "index": 0,
       "en": "It seems Mr. von Karma is keen to keeping us away\nfrom the truth.",
-      "ru": "Похоже, господин фон Карма очень старается\nне подпустить нас к истине."
+      "ru": "Господин фон Карма, как видно, очень старается\nне подпустить нас к истине."
     },
     {
       "file": "sce2_c5_03.bytes",
@@ -25640,7 +25640,7 @@
       "block": "02001C73",
       "index": 2,
       "en": "I do hate to repeat myself, but...",
-      "ru": "Я не люблю повторяться, но..."
+      "ru": "Терпеть не могу повторяться, но..."
     },
     {
       "file": "sce2_c5_03.bytes",
@@ -25801,7 +25801,7 @@
       "block": "02001C8A",
       "index": 2,
       "en": "...Both are {E284}quite exquisitely crafted,{E108:0008} wouldn't you\nagree?",
-      "ru": "...Обе {E284}сработаны весьма изысканно,{E108:0008} не находите?"
+      "ru": "...Обе {E284}сработаны очень изысканно,{E108:0008} не находите?"
     },
     {
       "file": "sce2_c5_03.bytes",
@@ -25948,7 +25948,7 @@
       "block": "02001CDC",
       "index": 3,
       "en": "It seems they were helping one another right up until\nthe day before the final.",
-      "ru": "Похоже, они помогали друг другу вплоть до дня\nперед финалом."
+      "ru": "Выходит, они помогали друг другу вплоть до дня\nперед финалом."
     },
     {
       "file": "sce2_c5_04.bytes",
@@ -26025,7 +26025,7 @@
       "block": "02001CEA",
       "index": 0,
       "en": "It seems they were helping one another right up until\nthe day before the final.",
-      "ru": "Похоже, они помогали друг другу вплоть до дня\nперед финалом."
+      "ru": "Выходит, они помогали друг другу вплоть до дня\nперед финалом."
     },
     {
       "file": "sce2_c5_04.bytes",
@@ -26144,7 +26144,7 @@
       "block": "02001CF8",
       "index": 3,
       "en": "I imagine Mr. Gusto probably {E188:00300000}{E1D1}meditated his way\nthrough the difficult parts.",
-      "ru": "Полагаю, мистер Густо {E188:00300000}{E1D1}пережидал трудные места\nмедитацией."
+      "ru": "Мистер Густо, должно быть, {E188:00300000}{E1D1}пережидал трудные места\nмедитацией."
     },
     {
       "file": "sce2_c5_04.bytes",
@@ -26571,7 +26571,7 @@
       "block": "02001D29",
       "index": 16,
       "en": "No more objections,{E108:0008} I take it?",
-      "ru": "Возражений больше нет,{E108:0008} я полагаю?"
+      "ru": "Возражений больше нет,{E108:0008} я так понимаю?"
     },
     {
       "file": "sce2_c5_04.bytes",
@@ -26613,7 +26613,7 @@
       "block": "02001D29",
       "index": 22,
       "en": "I would imagine so.",
-      "ru": "Полагаю, да."
+      "ru": "Надо думать."
     },
     {
       "file": "sce2_c5_04.bytes",
@@ -26648,7 +26648,7 @@
       "block": "02001D29",
       "index": 28,
       "en": ".........{E107:0002}{E188:00300000}{E1D5}Perhaps there's some lawyerly instinct in you\nafter all, Eddie.",
-      "ru": ".........{E107:0002}{E188:00300000}{E1D5}Похоже, адвокатское чутьё\nв тебе всё же есть, Эдди."
+      "ru": ".........{E107:0002}{E188:00300000}{E1D5}А ведь адвокатское чутьё\nв тебе всё же есть, Эдди."
     },
     {
       "file": "sce2_c5_04.bytes",
@@ -26739,7 +26739,7 @@
       "block": "02001D5F",
       "index": 8,
       "en": "\"{E041}{E1D5}They were helping one another right up until the day\nbefore the final.{E040}\"",
-      "ru": "«{E041}{E1D5}Похоже, они помогали друг другу вплоть до дня\nперед финалом.{E040}»"
+      "ru": "«{E041}{E1D5}Они помогали друг другу вплоть до самого дня\nперед финалом.{E040}»"
     },
     {
       "file": "sce2_c5_05.bytes",
@@ -26907,7 +26907,7 @@
       "block": "02001D5F",
       "index": 35,
       "en": "(And I imagine Mr. von Karma is aware of exactly what\nthat suspicious action was.)",
-      "ru": "(И, полагаю, господин фон Карма прекрасно знает,\nчто это был за поступок.)"
+      "ru": "(И господин фон Карма, надо думать, прекрасно знает,\nчто это был за поступок.)"
     },
     {
       "file": "sce2_c5_05.bytes",
@@ -27068,7 +27068,7 @@
       "block": "02001D9A",
       "index": 0,
       "en": "It seems their sons attended the same elementary\nschool.",
-      "ru": "Похоже, их сыновья ходили в одну начальную\nшколу."
+      "ru": "Сыновья их, как выясняется, ходили в одну\nначальную школу."
     },
     {
       "file": "sce2_c5_05.bytes",
@@ -27411,7 +27411,7 @@
       "block": "02001DF7",
       "index": 20,
       "en": "You did it to stop him from finding out that you don't\nhave the body!",
-      "ru": "Вы сделали это, чтобы он не узнал,\nчто тела у вас нет!"
+      "ru": "А затем, чтобы он не узнал,\nчто тела у вас нет!"
     },
     {
       "file": "sce2_c5_06.bytes",
@@ -27544,7 +27544,7 @@
       "block": "02001DF7",
       "index": 39,
       "en": "Of course.{E108:0010} After all,{E108:0008} {E188:00300000}{E1D5}{E041}evidence is everything{E040}, as you\nnever tire of telling us.",
-      "ru": "Разумеется.{E108:0010} Ведь{E108:0008} {E188:00300000}{E1D5}{E041}улики решают всё{E040} — вы сами\nне устаёте это повторять."
+      "ru": "А как же.{E108:0010} Ведь{E108:0008} {E188:00300000}{E1D5}{E041}улики решают всё{E040} — вы сами\nне устаёте это повторять."
     },
     {
       "file": "sce2_c5_06.bytes",
@@ -27789,7 +27789,7 @@
       "block": "02001E5C",
       "index": 3,
       "en": "...You know,{E108:0008} I think you might be right about the body\nbeing missing.",
-      "ru": "...Знаете,{E108:0008} а вы, похоже, правы насчёт того,\nчто тела нет."
+      "ru": "...Знаете,{E108:0008} а вы, пожалуй, правы насчёт того,\nчто тела нет."
     },
     {
       "file": "sce2_c5_07.bytes",
@@ -27880,7 +27880,7 @@
       "block": "02001E64",
       "index": 8,
       "en": "Of course I am.{E108:0010} You are my assistant, after all.",
-      "ru": "Разумеется.{E108:0010} Ты же мой помощник."
+      "ru": "А как же иначе.{E108:0010} Ты же мой помощник."
     },
     {
       "file": "sce2_c5_07.bytes",
@@ -28055,7 +28055,7 @@
       "block": "02001EE8",
       "index": 3,
       "en": "Makes sense...{E108:0010} Prizes,{E108:0008} fame...{E108:0010}\nNone of it lasts forever, right?",
-      "ru": "Оно и понятно...{E108:0010} Призы,{E108:0008} слава...{E108:0010}\nНичто ведь не вечно, а?"
+      "ru": "Ну да...{E108:0010} Призы,{E108:0008} слава...{E108:0010}\nНичто ведь не вечно, а?"
     },
     {
       "file": "sce2_c5_m0c_check.bytes",
@@ -28083,7 +28083,7 @@
       "block": "02001EED",
       "index": 2,
       "en": "Sounds like...{E108:0008} they live a pretty charmed life.{E108:0010}\nTea parties,{E108:0008} candy-making,{E108:0008} that kinda thing...",
-      "ru": "Говорят...{E108:0008} живут они там припеваючи.{E108:0010}\nЧаепития,{E108:0008} варят карамель,{E108:0008} и всё в таком духе..."
+      "ru": "Говорят...{E108:0008} живут они там припеваючи.{E108:0010}\nЧаи гоняют,{E108:0008} карамель варят,{E108:0008} и всё в таком духе..."
     },
     {
       "file": "sce2_c5_m0c_check.bytes",
@@ -28125,7 +28125,7 @@
       "block": "02001EF4",
       "index": 1,
       "en": "But they're not all for confectionery contests.{E108:0010}\nSome appear to be for charity work.",
-      "ru": "Но не все за кондитерские конкурсы.{E108:0010}\nЕсть, похоже, и за благотворительность."
+      "ru": "Но не все за кондитерские конкурсы.{E108:0010}\nЕсть среди них и за благотворительность."
     },
     {
       "file": "sce2_c5_m0c_check.bytes",
@@ -28167,7 +28167,7 @@
       "block": "02001EFA",
       "index": 1,
       "en": "It's marked by a snowman.{E108:0010}\n{E107:0003}{E285}...A candy snowman,{E108:0008} by the look of it.",
-      "ru": "Её отмечает снеговик.{E108:0010}\n{E107:0003}{E285}...И тоже из карамели,{E108:0008} судя по всему."
+      "ru": "Её отмечает снеговик.{E108:0010}\n{E107:0003}{E285}...И тоже, на вид,{E108:0008} из карамели."
     },
     {
       "file": "sce2_c5_m0c_check.bytes",
@@ -28216,7 +28216,7 @@
       "block": "02001F02",
       "index": 0,
       "en": "It seems these instruments are used on Mr. Tangaroa\nand Ms. Bound's TV show, \"Bake 'n' Bop\".",
-      "ru": "Похоже, эти инструменты — с передачи мистера\nТангароа и мисс Долговой «Пеки и пляши»."
+      "ru": "Эти инструменты, видимо, с передачи мистера\nТангароа и мисс Долговой «Пеки и пляши»."
     },
     {
       "file": "sce2_c5_m0c_check.bytes",
@@ -28426,7 +28426,7 @@
       "block": "02001F5C",
       "index": 3,
       "en": "Chocolate{E108:0010} and what looks like the kind of flavorings\nand colorings used in frozen desserts, sir.",
-      "ru": "Шоколад{E108:0010} и, похоже, ароматизаторы с красителями,\nкакие идут в замороженные десерты, сэр."
+      "ru": "Шоколад{E108:0010} и что-то вроде ароматизаторов с красителями,\nкакие идут в замороженные десерты, сэр."
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -28489,7 +28489,7 @@
       "block": "02001F5C",
       "index": 12,
       "en": "A very conspicuous {E041}pool of blood{E040} that should be here\nis clearly missing!",
-      "ru": "Здесь бросается в глаза отсутствие\n{E041}лужи крови{E040}, которая должна быть!"
+      "ru": "Здесь должна быть {E041}лужа крови{E040}, а её нет —\nи это сразу бросается в глаза!"
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -28517,7 +28517,7 @@
       "block": "02001F6E",
       "index": 0,
       "en": "I believe that the blood probably belonged to...{E040}{E106}{E19C}{E163:00010001}{E100:0001}{E164:011D0003}{E100:0000}{E12F:00050006}{E101:00050005}{E107:0002}I think the blood belonged to this person...?",
-      "ru": "Полагаю, эта кровь принадлежала...{E040}{E106}{E19C}{E163:00010001}{E100:0001}{E164:011D0003}{E100:0000}{E12F:00050006}{E101:00050005}{E107:0002}Думаю, кровь принадлежала вот этому человеку...?"
+      "ru": "Кровь эта, по всей видимости, принадлежала...{E040}{E106}{E19C}{E163:00010001}{E100:0001}{E164:011D0003}{E100:0000}{E12F:00050006}{E101:00050005}{E107:0002}Думаю, кровь принадлежала вот этому человеку...?"
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -28545,7 +28545,7 @@
       "block": "02001F6E",
       "index": 4,
       "en": "(Guess I smelled blood too soon...)",
-      "ru": "(Похоже, я почуял кровь слишком рано...)"
+      "ru": "(Кровь я, выходит, почуял слишком рано...)"
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -28685,7 +28685,7 @@
       "block": "02001F7D",
       "index": 10,
       "en": "However,{E108:0008} their respective entries for the final tasted\nnothing alike, it seems.",
-      "ru": "А вот в финале,{E108:0008} похоже, их работы на вкус\nбыли совсем разными."
+      "ru": "А вот в финале{E108:0008} работы их на вкус\nбыли совсем разными."
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -28769,7 +28769,7 @@
       "block": "02001F7D",
       "index": 22,
       "en": "What!?{E108:0018} {E107:0002}The cure is in the {E041}ultimate cookbook{E040}?",
-      "ru": "Что!?{E108:0018} {E107:0002}Лекарство — в {E041}заветной книге рецептов{E040}?"
+      "ru": "Что!?{E108:0018} {E107:0002}Лекарство — в {E041}Заветной книге рецептов{E040}?"
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -28797,7 +28797,7 @@
       "block": "02001F7D",
       "index": 26,
       "en": "(So the contestants all knew what the ultimate\ncookbook was this whole time...)",
-      "ru": "(Значит, участники всё это время знали,\nчто такое заветная книга рецептов...)"
+      "ru": "(Значит, участники всё это время знали,\nчто такое Заветная книга рецептов...)"
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -28832,7 +28832,7 @@
       "block": "02001F9B",
       "index": 2,
       "en": "I see.{E108:0010} I guess that must be quite useful.{E108:0010} Perhaps there\nshould be a confectioner's badge, too.",
-      "ru": "Понятно.{E108:0010} Должно быть, удобно.{E108:0010} Может, и кондитерам\nнужен свой значок."
+      "ru": "Ясно.{E108:0010} Должно быть, удобно.{E108:0010} Может, и кондитерам\nнужен свой значок."
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -29000,7 +29000,7 @@
       "block": "02001FB5",
       "index": 0,
       "en": "So if I understand correctly,{E108:0008} the ultimate cookbook is\nactually a collection of recipes for different medicines?",
-      "ru": "Если я верно понял,{E108:0008} заветная книга рецептов —\nэто на самом деле сборник рецептов лекарств?"
+      "ru": "Если я верно понял,{E108:0008} Заветная книга рецептов —\nэто на самом деле сборник рецептов лекарств?"
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -29147,7 +29147,7 @@
       "block": "02001FC0",
       "index": 10,
       "en": "...They hated the idea, of course.",
-      "ru": "...Разумеется, они были против."
+      "ru": "...Они, ясное дело, были против."
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -29462,7 +29462,7 @@
       "block": "02001FF2",
       "index": 5,
       "en": "The first time I saw Mr. E. do his thing in court,{E108:0008} I knew\nI'd found my calling!",
-      "ru": "Как увидел мистера Э. в деле в суде,{E108:0008} так и понял:\nвот моё призвание!"
+      "ru": "Как увидел мистера Э. за работой в суде,{E108:0008}\nтак и понял: вот моё призвание!"
     },
     {
       "file": "sce2_c5_m0c_npc.bytes",
@@ -29700,7 +29700,7 @@
       "block": "02002016",
       "index": 3,
       "en": "(Both he and his note still have a long ways to go,\nI suppose...)",
-      "ru": "(И ему, и его записям ещё расти и расти,\nпохоже...)"
+      "ru": "(И ему, и его записям ещё расти и расти,\nнадо полагать...)"
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -29714,7 +29714,7 @@
       "block": "0200205D",
       "index": 0,
       "en": "...Attorneys are bad luck...{E108:0010}\nNothing good ever happens with you guys around...",
-      "ru": "...Адвокаты — дурная примета...{E108:0010}\nОт вас добра не жди..."
+      "ru": "...Адвокаты — дурная примета...{E108:0010}\nГде вы, там добра не жди..."
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -29770,14 +29770,14 @@
       "block": "02002062",
       "index": 3,
       "en": "(It sounds like Detective Badd might be a fan of\nbaseball...?)",
-      "ru": "(Похоже, детектив Бадд из бейсбольных\nболельщиков...?)"
+      "ru": "(Детектив Бадд, сдаётся мне, из бейсбольных\nболельщиков...?)"
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "02002066",
       "index": 0,
       "en": "This case,{E108:0008} it's...{E108:0010} Well...{E108:0010}\nI can't get my head around a few parts of it.",
-      "ru": "Это дело...{E108:0008} оно...{E108:0010} Ну...{E108:0010}\nКое-что в нём у меня в голове не укладывается."
+      "ru": "Это дело,{E108:0008} оно...{E108:0010} Ну...{E108:0010}\nКое-что у меня в голове не укладывается."
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -29791,21 +29791,21 @@
       "block": "02002066",
       "index": 2,
       "en": "Sure...{E108:0010} You got legs, don't you?{E108:0010}\nTry using them...",
-      "ru": "Ага...{E108:0010} Ноги-то у вас есть?{E108:0010}\nВот и пользуйтесь..."
+      "ru": "Ну да...{E108:0010} Ноги-то у вас есть?{E108:0010}\nВот и пользуйтесь..."
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "02002066",
       "index": 3,
       "en": "That's how {E1D1}the pros do it.",
-      "ru": "Так {E1D1}работает профессионал."
+      "ru": "Так и работают {E1D1}настоящие профи."
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "02002066",
       "index": 4,
       "en": "Our duties may differ, Detective,{E108:0008} but we both want\nto get to the bottom of what happened, don't we?",
-      "ru": "У нас разные обязанности, детектив,{E108:0008} но докопаться\nдо истины хотим оба, разве нет?"
+      "ru": "Обязанности у нас разные, детектив,{E108:0008} но докопаться\nдо истины хотим оба, разве нет?"
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -29826,21 +29826,21 @@
       "block": "02002066",
       "index": 8,
       "en": "(...I suppose that is also \"how the pros do it\".)",
-      "ru": "(...Видимо, это тоже «работа профессионала».)"
+      "ru": "(...Видимо, это тоже «как работают профи».)"
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "0200206F",
       "index": 0,
       "en": "Seems the culprit...{E108:0008} made sure to wear gloves...",
-      "ru": "Похоже, преступник...{E108:0008} перчатки надеть не забыл..."
+      "ru": "Преступник, видать...{E108:0008} про перчатки не забыл..."
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "0200206F",
       "index": 1,
       "en": "Couldn't lift squat...{E108:0008} from those finger marks.",
-      "ru": "С этих следов пальцев...{E108:0008} ничего не снять."
+      "ru": "Ни черта не снять...{E108:0008} с этих следов пальцев."
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -29854,7 +29854,7 @@
       "block": "0200206F",
       "index": 3,
       "en": "...It's not as easy as it sounds.{E108:0018} Sorry,{E108:0008} but these finger\nmarks...{E108:0008} are pretty worthless as evidence goes.",
-      "ru": "...Не так это просто.{E108:0018} Уж извините,{E108:0008} но эти следы\nпальцев...{E108:0008} как улика почти ничего не стоят."
+      "ru": "...Всё не так просто.{E108:0018} Уж простите,{E108:0008} но эти следы...{E108:0008}\nкак улика почти ничего не стоят."
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -29868,21 +29868,21 @@
       "block": "0200206F",
       "index": 5,
       "en": "After all,{E108:0008} {E1D1}even the absence of fingerprints tells us\nsomething of interest, don't you think?",
-      "ru": "В конце концов,{E108:0008} {E1D1}само отсутствие отпечатков\nо чём-то говорит, вам не кажется?"
+      "ru": "В конце концов,{E108:0008} {E1D1}само отсутствие отпечатков\nуже кое о чём говорит, вам не кажется?"
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "0200206F",
       "index": 6,
       "en": "Hmph.{E108:0010} You lawyers have an answer for everything,\ndon't you...",
-      "ru": "Хмф.{E108:0010} У вас, юристов, на всё есть ответ,\nда?.."
+      "ru": "Хмф.{E108:0010} У вас, адвокатов, на всё готов ответ..."
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "0200206F",
       "index": 7,
       "en": "Heh.{E108:0010} I'll take that as a compliment.",
-      "ru": "Хе.{E108:0010} Приму это за комплимент."
+      "ru": "Хе.{E108:0010} Сочту за комплимент."
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -29896,14 +29896,14 @@
       "block": "02002077",
       "index": 1,
       "en": "Whacking a guy with something like this...{E108:0010}\nMakes me think it was a spur of the moment thing.",
-      "ru": "Огреть человека такой штукой...{E108:0010}\nПохоже, всё вышло сгоряча."
+      "ru": "Огреть человека такой штукой...{E108:0010}\nСдаётся, сгоряча вышло."
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "02002077",
       "index": 2,
       "en": "And who had easy access to the lamp...?{E108:0010}\nOur little lady friend...{E108:0008} that's who.",
-      "ru": "А у кого лампа была под рукой...?{E108:0010}\nДа у нашей дамочки...{E108:0008} вот у кого."
+      "ru": "А у кого лампа была под рукой...?{E108:0010}\nУ нашей дамочки...{E108:0008} вот у кого."
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -29917,28 +29917,28 @@
       "block": "02002077",
       "index": 4,
       "en": "(Hmm...{E108:0010} Could Ms. Scone be hiding something?)",
-      "ru": "(Хм...{E108:0010} Не скрывает ли чего мисс Сдобина?)"
+      "ru": "(Хм...{E108:0010} Не скрывает ли мисс Сдобина чего-то?)"
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "0200207C",
       "index": 0,
       "en": "I'd like your opinion on this, if you don't mind.",
-      "ru": "Хотел бы услышать ваше мнение, если позволите."
+      "ru": "Хотел бы услышать ваше мнение, если вы не против."
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "0200207C",
       "index": 1,
       "en": "...I do...{E108:0018}\nIf there's one thing I hate...{E108:0008} it's small talk...",
-      "ru": "...Не позволю...{E108:0018}\nЧего не выношу...{E108:0008} так это болтовни..."
+      "ru": "...Против...{E108:0018}\nЧего не выношу...{E108:0008} так это болтовни..."
     },
     {
       "file": "sce2_c5_partner.bytes",
       "block": "0200207C",
       "index": 2,
       "en": "(It seems he only cares about things that are directly\nrelated to the incident.)",
-      "ru": "(Похоже, его занимает только то, что прямо\nсвязано с делом.)"
+      "ru": "(Занимает его только то,\nчто прямо касается дела.)"
     },
     {
       "file": "sce2_c5_partner.bytes",
@@ -30631,7 +30631,7 @@
       "block": "020021B6",
       "index": 4,
       "en": "I'm a prosecutor, Fender.{E108:0010} I don't look at these things in\nthe same way as you or my father.",
-      "ru": "Я прокурор, Защитин.{E108:0010} Я смотрю на такие вещи иначе,\nчем вы или мой отец."
+      "ru": "Я прокурор, Защитин.{E108:0010} И смотрю на всё это иначе,\nчем вы или мой отец."
     },
     {
       "file": "sce2_c6_00.bytes",
@@ -30806,7 +30806,7 @@
       "block": "020021DC",
       "index": 0,
       "en": "The events of the present day would appear to be\nintimately linked with the events of the past.",
-      "ru": "События нынешнего дня, судя по всему, тесно\nсвязаны с событиями прошлого."
+      "ru": "Сегодняшние события, судя по всему, тесно\nсвязаны с событиями прошлого."
     },
     {
       "file": "sce2_c6_01.bytes",
@@ -30862,7 +30862,7 @@
       "block": "020021DC",
       "index": 8,
       "en": "Of course not.{E108:0010} I am simply offering once again to do\nwhat I can to help with this investigation.",
-      "ru": "Разумеется, нет.{E108:0010} Я лишь снова предлагаю сделать\nвсё, что могу, для этого расследования."
+      "ru": "Отнюдь.{E108:0010} Я лишь снова предлагаю сделать\nвсё, что могу, для этого расследования."
     },
     {
       "file": "sce2_c6_01.bytes",
@@ -30932,7 +30932,7 @@
       "block": "020021EE",
       "index": 0,
       "en": "(The body in the fountain may also be a visitor from\nthe past!){E106}{E163:00010001}{E100:0001}{E164:011E0005}{E100:0000}{E12F:00000009}{E101:00000000}{E107:0002}There is a strong possibility that this is our victim!",
-      "ru": "(Тело в фонтане — тоже, возможно, гость\nиз прошлого!){E106}{E163:00010001}{E100:0001}{E164:011E0005}{E100:0000}{E12F:00000009}{E101:00000000}{E107:0002}Весьма вероятно, что это и есть наш потерпевший!"
+      "ru": "(Тело в фонтане — тоже, возможно, гость\nиз прошлого!){E106}{E163:00010001}{E100:0001}{E164:011E0005}{E100:0000}{E12F:00000009}{E101:00000000}{E107:0002}Скорее всего, это и есть наш потерпевший!"
     },
     {
       "file": "sce2_c6_01.bytes",
@@ -31177,7 +31177,7 @@
       "block": "0200225C",
       "index": 8,
       "en": "We do not need to do anything,{E108:0008} and you do not need\nto know the truth.{E108:0010} This case is none of your concern.",
-      "ru": "Нам ничего не придётся,{E108:0008} и знать правду вам\nни к чему.{E108:0010} Это дело вас не касается."
+      "ru": "Ничего нам не придётся,{E108:0008} и знать правду вам\nни к чему.{E108:0010} Это дело вас не касается."
     },
     {
       "file": "sce2_c6_02.bytes",
@@ -31254,7 +31254,7 @@
       "block": "0200225C",
       "index": 21,
       "en": "(Judge Gavèlle seems to know the facts of the IS-7\nIncident in some detail...)",
-      "ru": "(Судья Молотова, похоже, знает дело IS-7\nдовольно подробно...)"
+      "ru": "(Судья Молотова, как выясняется, знает дело IS-7\nдовольно подробно...)"
     },
     {
       "file": "sce2_c6_02.bytes",
@@ -31660,7 +31660,7 @@
       "block": "02002290",
       "index": 28,
       "en": "(It seems that the equipment from eighteen years ago\nis more than just for show...)",
-      "ru": "(Похоже, оборудование восемнадцатилетней\nдавности здесь не для красоты...)"
+      "ru": "(Оборудование восемнадцатилетней давности\nздесь, стало быть, не для красоты...)"
     },
     {
       "file": "sce2_c6_02.bytes",
@@ -31702,7 +31702,7 @@
       "block": "02002290",
       "index": 34,
       "en": "He did.{E108:0010} And all of it very useful.",
-      "ru": "Было.{E108:0010} И всё весьма полезное."
+      "ru": "Было.{E108:0010} И всё очень полезное."
     },
     {
       "file": "sce2_c6_02.bytes",
@@ -31905,7 +31905,7 @@
       "block": "020022F5",
       "index": 0,
       "en": "It seems the elevator is only accessible to select\nindividuals.",
-      "ru": "Похоже, лифт доступен лишь избранным."
+      "ru": "Лифт, по всей видимости, доступен лишь избранным."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -31954,7 +31954,7 @@
       "block": "020022FB",
       "index": 1,
       "en": "Evidently,{E108:0008} he was a very well-respected artist.",
-      "ru": "Судя по всему,{E108:0008} его очень уважали как мастера."
+      "ru": "Видно,{E108:0008} его очень уважали как мастера."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32003,7 +32003,7 @@
       "block": "02002301",
       "index": 2,
       "en": "I suppose it's all part of the deception.",
-      "ru": "Полагаю, это часть обмана."
+      "ru": "Всё это, видимо, часть обмана."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32038,7 +32038,7 @@
       "block": "02002306",
       "index": 2,
       "en": "I suppose it's all part of someone's elaborate ruse.",
-      "ru": "Полагаю, это часть чьей-то хитрой уловки."
+      "ru": "Всё это, должно быть, часть чьей-то хитрой уловки."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32122,7 +32122,7 @@
       "block": "02002312",
       "index": 2,
       "en": "He did.{E108:0010} It seems he was fascinated by fantasy and\nmythology when he was a young man.",
-      "ru": "Он.{E108:0010} В молодости его, похоже, увлекали\nсказания и мифы."
+      "ru": "Он.{E108:0010} В молодости его, видно, увлекали\nсказания и мифы."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32185,14 +32185,14 @@
       "block": "0200231D",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Не думаю, что здесь найдётся что-то ещё."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
       "block": "0200231E",
       "index": 0,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обшарить место и осмотреть всё,\nчто привлечёт внимание."
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32437,7 +32437,7 @@
       "block": "0200233C",
       "index": 7,
       "en": "It's just that the cup you gave me earlier had {E188:00300000}{E1D5}a slightly\n{E043}different aroma{E040}.{E106}{E198:00020026}{E100:0001}{E1AE}{E12D:0003087C}{E113:000000000002}{E112:0000}{E111:001C000B0002000000000002}{E112:001C}{E100:0000}{E101:001C001E}{E107:0002}Really?{E108:0010} {E1D1}That's odd.{E108:0010} I used the exact same blend both\ntimes.",
-      "ru": "Просто у той чашки, что вы дали раньше, был {E188:00300000}{E1D5}чуть\n{E043}иной аромат{E040}.{E106}{E198:00020026}{E100:0001}{E1AE}{E12D:0003087C}{E113:000000000002}{E112:0000}{E111:001C000B0002000000000002}{E112:001C}{E100:0000}{E101:001C001E}{E107:0002}Правда?{E108:0010} {E1D1}Странно.{E108:0010} Оба раза я брала\nодин и тот же сорт."
+      "ru": "Просто у той чашки, что вы дали раньше, был {E188:00300000}{E1D5}чуть\n{E043}другой аромат{E040}.{E106}{E198:00020026}{E100:0001}{E1AE}{E12D:0003087C}{E113:000000000002}{E112:0000}{E111:001C000B0002000000000002}{E112:001C}{E100:0000}{E101:001C001E}{E107:0002}Правда?{E108:0010} {E1D1}Странно.{E108:0010} Оба раза я брала\nодин и тот же сорт."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32528,7 +32528,7 @@
       "block": "0200233C",
       "index": 20,
       "en": "(...but it does seem likely that {E188:00300000}{E1D5}{E1D1}the poison gas was her\ndoing.)",
-      "ru": "(...но похоже, что {E188:00300000}{E1D5}{E1D1}ядовитый газ — её\nрук дело.)"
+      "ru": "(...но {E188:00300000}{E1D5}{E1D1}ядовитый газ, скорее всего, её\nрук дело.)"
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32584,7 +32584,7 @@
       "block": "02002359",
       "index": 0,
       "en": "There's nothing of interest here.",
-      "ru": "Здесь нет ничего примечательного."
+      "ru": "Здесь нет ничего интересного."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32724,7 +32724,7 @@
       "block": "0200236D",
       "index": 0,
       "en": "And what did she do with this second serving cart?",
-      "ru": "И что она сделала со второй тележкой?"
+      "ru": "И куда она дела вторую тележку?"
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32913,7 +32913,7 @@
       "block": "02002389",
       "index": 0,
       "en": "It seems the police have already removed the body.",
-      "ru": "Похоже, полиция уже увезла тело."
+      "ru": "Тело полиция уже увезла."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -32941,7 +32941,7 @@
       "block": "02002389",
       "index": 4,
       "en": "It seems likely that the body was preserved somehow.",
-      "ru": "Похоже, тело как-то сохранили."
+      "ru": "Тело, вероятно, как-то сохранили."
     },
     {
       "file": "sce2_c6_m0a_check.bytes",
@@ -33172,7 +33172,7 @@
       "block": "020023F0",
       "index": 6,
       "en": "...Hmph.{E108:0010} Still the same old pain in the neck, too.",
-      "ru": "...Хмф.{E108:0010} И всё та же заноза, что и был."
+      "ru": "...Хмф.{E108:0010} И всё такая же заноза."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -33207,7 +33207,7 @@
       "block": "020023F8",
       "index": 3,
       "en": "You bet I did!",
-      "ru": "Ещё как точно!"
+      "ru": "Ещё как нарисовал!"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -33270,7 +33270,7 @@
       "block": "020023FF",
       "index": 5,
       "en": "Take you, for example!{E108:0010} You're the dictionary definition\nof \"super hot mess\"!",
-      "ru": "Взять хоть тебя!{E108:0010} Ты — ходячее определение\nслова «недоразумение»!"
+      "ru": "Взять хоть тебя!{E108:0010} Ты же ходячее недоразумение!"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -33298,7 +33298,7 @@
       "block": "02002406",
       "index": 2,
       "en": "...Well,{E108:0008} she gave us some chocolates, too.",
-      "ru": "...Что ж,{E108:0008} нам она тоже дала шоколад."
+      "ru": "...Она{E108:0008} и нам дала шоколад."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -33564,7 +33564,7 @@
       "block": "02002432",
       "index": 0,
       "en": "Please, Mr. Deauxnim.{E108:0010} It's really me who should be\napologizing.",
-      "ru": "Что вы, мистер Доним.{E108:0010} Это мне следует\nизвиняться."
+      "ru": "Что вы, мистер Доним.{E108:0010} Это я должна\nперед вами извиняться."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -33774,7 +33774,7 @@
       "block": "02002441",
       "index": 15,
       "en": "Interested in Laurice's \"{E041}ravishing beauties{E040}\", huh,\nMr. Edgeworth?",
-      "ru": "Заинтересовались «{E041}обворожительными красавицами{E040}»\nЛориса, мистер Эджворт?"
+      "ru": "Что, мистер Эджворт, заинтересовались\n«{E041}обворожительными красавицами{E040}» Лориса?"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -33823,7 +33823,7 @@
       "block": "02002441",
       "index": 22,
       "en": "(...I suppose we might as well take a look.)",
-      "ru": "(...Что ж, взглянуть не помешает.)"
+      "ru": "(...Взглянуть, пожалуй, не помешает.)"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -33956,7 +33956,7 @@
       "block": "0200245B",
       "index": 15,
       "en": "(Much as it pains me to admit it,{E108:0008} Larry may have\nprovided me with a useful piece of evidence yet again.)",
-      "ru": "(Как ни горько признать,{E108:0008} Ларри, похоже, снова\nподкинул мне полезную улику.)"
+      "ru": "(Как ни горько признать,{E108:0008} Ларри снова\nподкинул мне полезную улику.)"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -34264,7 +34264,7 @@
       "block": "02002496",
       "index": 0,
       "en": "What kinds of pharmaceutical \"recipes\" are in\nthe ultimate cookbook?",
-      "ru": "Какие лекарственные «рецепты» есть\nв заветной книге?"
+      "ru": "Какие лекарственные «рецепты» есть\nв Заветной книге?"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -34600,7 +34600,7 @@
       "block": "020024BF",
       "index": 7,
       "en": "Well...{E108:0010} {E107:0002}Why not.",
-      "ru": "Что ж...{E108:0010} {E107:0002}Почему бы и нет."
+      "ru": "Ну...{E108:0010} {E107:0002}Почему бы и нет."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -34866,7 +34866,7 @@
       "block": "020024E9",
       "index": 3,
       "en": "Well,{E108:0010} I suppose it's to be expected at your age, dearie.",
-      "ru": "Что ж,{E108:0010} в твои годы это дело обычное, голубчик."
+      "ru": "Ну,{E108:0010} в твои годы это дело обычное, голубчик."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -34964,7 +34964,7 @@
       "block": "020024F7",
       "index": 4,
       "en": "Exactly, dear!{E108:0010} And just because I'm a confectioner,{E108:0010}\n{E107:0001}{E280}that doesn't mean I can cook!",
-      "ru": "Вот именно, милая!{E108:0010} А я вот кондитер,{E108:0010}\n{E107:0001}{E280}и это не значит, что я умею готовить!"
+      "ru": "Вот-вот, милая!{E108:0010} А я вот кондитер,{E108:0010}\n{E107:0001}{E280}и это не значит, что я умею готовить!"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -35097,7 +35097,7 @@
       "block": "0200250D",
       "index": 1,
       "en": "That's right.{E108:0010} You seem to have caught the artist's eye.",
-      "ru": "Именно.{E108:0010} Похоже, вы приглянулись художнику."
+      "ru": "Именно.{E108:0010} Вы, я гляжу, приглянулись художнику."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -35111,7 +35111,7 @@
       "block": "0200250D",
       "index": 3,
       "en": "Heh.{E108:0010} Well, I'll be glad to introduce you.",
-      "ru": "Хе.{E108:0010} Что ж, с радостью вас познакомлю."
+      "ru": "Хе.{E108:0010} Отчего же, с радостью вас познакомлю."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -35461,7 +35461,7 @@
       "block": "02002541",
       "index": 1,
       "en": "Ohhh...{E108:0018} {E107:0002}Well, I suppose there's no point hiding it now,\nis there...?",
-      "ru": "Ох-х...{E108:0018} {E107:0002}Что ж, теперь уж прятать это ни к чему,\nверно...?"
+      "ru": "Ох-х...{E108:0018} {E107:0002}Ну, теперь уж прятать это ни к чему,\nверно...?"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -35545,7 +35545,7 @@
       "block": "02002541",
       "index": 14,
       "en": "...I see.",
-      "ru": "...Понятно."
+      "ru": "...Вот оно что."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -35769,7 +35769,7 @@
       "block": "0200256E",
       "index": 1,
       "en": "...Of course.{E108:0010} It's important to me, too.",
-      "ru": "...Разумеется.{E108:0010} Для меня оно тоже важно."
+      "ru": "...Конечно.{E108:0010} Для меня оно тоже важно."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -35923,7 +35923,7 @@
       "block": "0200257E",
       "index": 8,
       "en": "(...Well,{E108:0008} that was a waste of time.)",
-      "ru": "(...Что ж,{E108:0008} время потрачено впустую.)"
+      "ru": "(...Время{E108:0008} потрачено впустую.)"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -35993,14 +35993,14 @@
       "block": "0200258C",
       "index": 4,
       "en": "(...I guess he doesn't think much of it.)",
-      "ru": "(...Похоже, он невысокого о ней мнения.)"
+      "ru": "(...Невысокого он о ней мнения.)"
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
       "block": "02002591",
       "index": 0,
       "en": "This case seems to have a lot in common with the\nincident from eighteen years ago...",
-      "ru": "У этого дела, похоже, немало общего\nс происшествием восемнадцатилетней давности..."
+      "ru": "У этого дела немало общего\nс происшествием восемнадцатилетней давности..."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -36112,7 +36112,7 @@
       "block": "0200259E",
       "index": 3,
       "en": "...I do not.",
-      "ru": "...Не запал."
+      "ru": "...Нисколько."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -36301,7 +36301,7 @@
       "block": "020025B7",
       "index": 5,
       "en": "Mr. Edgeworth's association with such a character will\nbe of interest to the Committee too, of course.",
-      "ru": "Знакомство мистера Эджворта с подобной особой\nКомитет, разумеется, тоже заинтересует."
+      "ru": "Знакомство мистера Эджворта с подобной особой\nКомитет, само собой, тоже заинтересует."
     },
     {
       "file": "sce2_c6_m0a_npc.bytes",
@@ -36315,7 +36315,7 @@
       "block": "020025B7",
       "index": 8,
       "en": "(It looks like Judge Gavèlle will have to think up some\nnew threats if she wants to intimidate Kay...)",
-      "ru": "(Похоже, судье Молотовой придётся придумать\nновые угрозы, чтобы напугать Кей...)"
+      "ru": "(Судье Молотовой придётся придумать\nновые угрозы, чтобы напугать Кей...)"
     },
     {
       "file": "sce2_c6_partner.bytes",
@@ -36336,7 +36336,7 @@
       "block": "020025DD",
       "index": 1,
       "en": "As it should be.{E108:0010} After all, it symbolizes both the\nsanctity and the strictness of the law.",
-      "ru": "Так и должно быть.{E108:0010} Он ведь символ и святости\nзакона, и его строгости."
+      "ru": "Так и должно быть.{E108:0010} Он ведь символизирует\nи святость закона, и его строгость."
     },
     {
       "file": "sce2_c6_partner.bytes",
@@ -36490,7 +36490,7 @@
       "block": "020025F4",
       "index": 2,
       "en": "Looks like he can draw normal,{E108:0008} non-freaky pictures\nwhen he picks the right subjects, huh!",
-      "ru": "Похоже, он умеет рисовать нормально,{E108:0008} без жути,\nесли выберет верную натуру!"
+      "ru": "А ведь умеет он рисовать нормально,{E108:0008} без жути,\nкогда натура подходящая!"
     },
     {
       "file": "sce2_c6_partner.bytes",
@@ -36595,7 +36595,7 @@
       "block": "02002603",
       "index": 2,
       "en": "(She doesn't seem to think much of my little\n\"treasure\"...)",
-      "ru": "(Похоже, она невысокого мнения о моём маленьком\n«сокровище»...)"
+      "ru": "(Моё маленькое «сокровище» её, кажется,\nне впечатлило...)"
     },
     {
       "file": "sce2_c6_partner.bytes",
@@ -37050,7 +37050,7 @@
       "block": "020026F6",
       "index": 9,
       "en": "Can I ask exactly how the gas was triggered?",
-      "ru": "Позвольте узнать, как именно газ был выпущен?"
+      "ru": "Можно узнать, как именно сработал газ?"
     },
     {
       "file": "sce2_c7_00.bytes",
@@ -37071,7 +37071,7 @@
       "block": "020026F6",
       "index": 12,
       "en": "But he locked himself in the room too, didn't he?{E108:0010}\nSurely that and the fact that he triggered it himself...",
-      "ru": "Но ведь он и сам заперся в зале, не так ли?{E108:0010}\nИ ловушку спустил тоже он сам..."
+      "ru": "Но ведь он и сам заперся в зале?{E108:0010}\nИ ловушку спустил тоже он сам..."
     },
     {
       "file": "sce2_c7_00.bytes",
@@ -37365,7 +37365,7 @@
       "block": "02002728",
       "index": 5,
       "en": "And yet,{E108:0008} {E188:002F0000}{E1D5}what you did allowed you to open this\nexhibit, no?",
-      "ru": "И всё же{E108:0008} {E188:002F0000}{E1D5}именно это позволило вам открыть\nэту выставку, не так ли?"
+      "ru": "И всё же{E108:0008} {E188:002F0000}{E1D5}именно это позволило вам открыть\nэту выставку, разве нет?"
     },
     {
       "file": "sce2_c7_00.bytes",
@@ -37869,7 +37869,7 @@
       "block": "02002796",
       "index": 4,
       "en": "Let's try for an encore,{E108:0008} shall we?{E108:0018}\n...If you wouldn't mind, Ms. Bound.",
-      "ru": "Ну что ж,{E108:0008} на бис?{E108:0018}\n...Если вы не против, мисс Долгова."
+      "ru": "Повторим,{E108:0008} стало быть, на бис?{E108:0018}\n...Если вы не против, мисс Долгова."
     },
     {
       "file": "sce2_c7_01.bytes",
@@ -37960,7 +37960,7 @@
       "block": "020027A1",
       "index": 6,
       "en": "(So her tears were all an act.{E108:0010}\nI suppose she is an accomplished actor...)",
-      "ru": "(Значит, слёзы были игрой.{E108:0010}\nЧто ж, артистка она отменная...)"
+      "ru": "(Значит, слёзы были игрой.{E108:0010}\nАртистка она, надо признать, отменная...)"
     },
     {
       "file": "sce2_c7_01.bytes",
@@ -38142,7 +38142,7 @@
       "block": "020027A8",
       "index": 26,
       "en": "...I see.",
-      "ru": "...Понятно."
+      "ru": "...Вот как."
     },
     {
       "file": "sce2_c7_01.bytes",
@@ -38415,7 +38415,7 @@
       "block": "0200287E",
       "index": 3,
       "en": "...I could hardly have spirited the sculptures away\nwhile Samson was standing right there, could I?",
-      "ru": "...вряд ли я могла умыкнуть скульптуры,\nкогда Самсон стоял прямо там, не так ли?"
+      "ru": "...не могла же я умыкнуть скульптуры,\nкогда Самсон стоял прямо там?"
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -38639,7 +38639,7 @@
       "block": "0200289D",
       "index": 4,
       "en": "(Hmm...{E108:0010} {E107:0002}Looks like I got it wrong.)",
-      "ru": "(Хм...{E108:0010} {E107:0002}Похоже, я ошибся.)"
+      "ru": "(Хм...{E108:0010} {E107:0002}Опять не то.)"
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -38688,7 +38688,7 @@
       "block": "020028A4",
       "index": 4,
       "en": "(Hmm...{E108:0010} {E107:0002}Looks like I got it wrong.)",
-      "ru": "(Хм...{E108:0010} {E107:0002}Похоже, я ошибся.)"
+      "ru": "(Хм...{E108:0010} {E107:0002}Ошибся.)"
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -38737,7 +38737,7 @@
       "block": "020028AB",
       "index": 4,
       "en": "Let's try for an encore,{E108:0008} shall we?{E108:0018}\n...If you wouldn't mind, Ms. Bound.",
-      "ru": "Ну что ж,{E108:0008} на бис?{E108:0018}\n...Если вы не против, мисс Долгова."
+      "ru": "Повторим,{E108:0008} стало быть, на бис?{E108:0018}\n...Если вы не против, мисс Долгова."
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -38828,14 +38828,14 @@
       "block": "020028B6",
       "index": 6,
       "en": "(So her tears were all an act.{E108:0010}\nI suppose she is an accomplished actor...)",
-      "ru": "(Значит, слёзы были игрой.{E108:0010}\nЧто ж, артистка она отменная...)"
+      "ru": "(Значит, слёзы были игрой.{E108:0010}\nАртистка она, надо признать, отменная...)"
     },
     {
       "file": "sce2_c7_02.bytes",
       "block": "020028BD",
       "index": 0,
       "en": "Ms. Bound,{E108:0010} {E1D5}{E1D1}I believe this was when you stole the\nsculptures!",
-      "ru": "Мисс Долгова,{E108:0010} {E1D5}{E1D1}я полагаю, скульптуры вы украли\nименно тогда!"
+      "ru": "Мисс Долгова,{E108:0010} {E1D5}{E1D1}скульптуры вы украли\nименно тогда!"
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -38877,7 +38877,7 @@
       "block": "020028C3",
       "index": 0,
       "en": "This was where you hid the sculptures, wasn't it?",
-      "ru": "Вот где вы спрятали скульптуры, не так ли?"
+      "ru": "Вот где вы спрятали скульптуры, верно?"
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -38905,7 +38905,7 @@
       "block": "020028C3",
       "index": 4,
       "en": "(Perhaps it's me who needs glasses...)",
-      "ru": "(Похоже, очки нужны как раз мне...)"
+      "ru": "(Может, это мне очки нужны...)"
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -38989,7 +38989,7 @@
       "block": "020028D2",
       "index": 1,
       "en": "...I see.{E108:0010} {E12F:0008000E}{E112:0008}{E284}{E12F:0008000F}And would you care to give us a demonstration\nwith it, Mr. Edgeworth?",
-      "ru": "...Понятно.{E108:0010} {E12F:0008000E}{E112:0008}{E284}{E12F:0008000F}Не покажете ли нам это на деле,\nмистер Эджворт?"
+      "ru": "...Вот как.{E108:0010} {E12F:0008000E}{E112:0008}{E284}{E12F:0008000F}Не покажете ли нам это на деле,\nмистер Эджворт?"
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -39017,7 +39017,7 @@
       "block": "020028D2",
       "index": 5,
       "en": "I expect you will be preparing a written apology?",
-      "ru": "Полагаю, вы подготовите письменное извинение?"
+      "ru": "Письменное извинение вы, я надеюсь, подготовите?"
     },
     {
       "file": "sce2_c7_02.bytes",
@@ -39311,7 +39311,7 @@
       "block": "02002A5C",
       "index": 18,
       "en": "However,{E108:0008} despite everything I've shared...{E108:0010} {E188:002F0000}{E1D5}{E12F:001C000C}you can't\ncharge me with anything now, can you?",
-      "ru": "Однако{E108:0008} при всём сказанном...{E108:0010} {E188:002F0000}{E1D5}{E12F:001C000C}предъявить мне\nтеперь нечего, не так ли?"
+      "ru": "Однако{E108:0008} что бы я вам ни рассказала...{E108:0010} {E188:002F0000}{E1D5}{E12F:001C000C}предъявить\nмне теперь нечего, верно?"
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -39353,7 +39353,7 @@
       "block": "02002A5C",
       "index": 24,
       "en": "Prosecutors {E041}only have a certain amount of time within\nwhich they can put a suspect on trial for a given crime{E040}.",
-      "ru": "У обвинения {E041}есть лишь определённый срок, чтобы\nпредать подозреваемого суду за данное деяние{E040}."
+      "ru": "У обвинения {E041}на каждое преступление есть\nсвой срок, чтобы отдать подозреваемого под суд{E040}."
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -39388,7 +39388,7 @@
       "block": "02002A77",
       "index": 3,
       "en": "I don't believe it...",
-      "ru": "Не может быть..."
+      "ru": "Поверить не могу..."
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -39458,7 +39458,7 @@
       "block": "02002A77",
       "index": 13,
       "en": "By hiding it in{E108:0008} {E1D5}a very unusual way.",
-      "ru": "Спрятав его{E108:0008} {E1D5}весьма необычным способом."
+      "ru": "Спрятав его{E108:0008} {E1D5}очень необычным способом."
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -39752,7 +39752,7 @@
       "block": "02002AB0",
       "index": 2,
       "en": "Isn't that right, Ms. Scone?",
-      "ru": "Не так ли, мисс Сдобина?"
+      "ru": "Верно, мисс Сдобина?"
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -39801,7 +39801,7 @@
       "block": "02002AB0",
       "index": 9,
       "en": "One of the very {E041}light-emitting devices{E040} in question.{E1CD}{E108:0010}\nDetective Gumshoe even confirmed its presence.",
-      "ru": "Одно из тех самых {E041}светоизлучающих устройств{E040}.{E1CD}{E108:0010}\nЕго наличие подтвердил и детектив Гамшу."
+      "ru": "Одно из тех самых {E041}светоизлучающих устройств{E040}.{E1CD}{E108:0010}\nЧто оно на месте, подтвердил и детектив Гамшу."
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -39920,7 +39920,7 @@
       "block": "02002AB0",
       "index": 26,
       "en": "I believe she wheeled the body into one of the other\nwings,{E108:0008} and floated it down the stream to the fountain.",
-      "ru": "Полагаю, она отвезла тело в другое крыло{E108:0008}\nи пустила его по ручью к фонтану."
+      "ru": "Она отвезла тело в другое крыло{E108:0008}\nи пустила его по ручью к фонтану."
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -40004,14 +40004,14 @@
       "block": "02002AB0",
       "index": 39,
       "en": "Well, Mr. Edgeworth?{E108:0010} Do you have any evidence to\nsupport your allegation?",
-      "ru": "Итак, мистер Эджворт?{E108:0010} Есть ли у вас улика\nв подтверждение?"
+      "ru": "Итак, мистер Эджворт?{E108:0010} Есть ли у вас улика,\nкоторая это подтвердит?"
     },
     {
       "file": "sce2_c7_04.bytes",
       "block": "02002AB0",
       "index": 40,
       "en": "Of course.{E108:0010} I have a piece of very compelling proof right\nhere.",
-      "ru": "Разумеется.{E108:0010} У меня есть весьма веское\nдоказательство."
+      "ru": "Разумеется.{E108:0010} У меня есть очень веское\nдоказательство."
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -40025,7 +40025,7 @@
       "block": "02002ADA",
       "index": 0,
       "en": "What evidence do you have that proves Ms. Bound\nacted as you claim?{E040}{E106}{E163:00010000}{E100:0001}{E164:0089000C}{E123:0000000000040001}{E124:0000}{E100:0000}{E12F:00000008}{E101:00000000}{E107:0002}I think you'll find that this proves things beyond any\ndoubt.",
-      "ru": "Какая улика доказывает, что мисс Долгова\nпоступила так, как вы говорите?{E040}{E106}{E163:00010000}{E100:0001}{E164:0089000C}{E123:0000000000040001}{E124:0000}{E100:0000}{E12F:00000008}{E101:00000000}{E107:0002}Полагаю, это доказывает всё\nбез тени сомнения."
+      "ru": "Какая улика доказывает, что мисс Долгова\nпоступила так, как вы говорите?{E040}{E106}{E163:00010000}{E100:0001}{E164:0089000C}{E123:0000000000040001}{E124:0000}{E100:0000}{E12F:00000008}{E101:00000000}{E107:0002}Вот это докажет всё\nбез тени сомнения."
     },
     {
       "file": "sce2_c7_04.bytes",
@@ -40256,7 +40256,7 @@
       "block": "02002B5C",
       "index": 6,
       "en": "...But that sketch alone isn't really enough to prove\nyour theory, is it?",
-      "ru": "...Но одного наброска для доказательства\nвсё же маловато, не так ли?"
+      "ru": "...Но одного наброска для доказательства\nвсё же маловато, согласитесь?"
     },
     {
       "file": "sce2_c7_05.bytes",
@@ -40501,7 +40501,7 @@
       "block": "02002B83",
       "index": 3,
       "en": "I see.{E108:0010} {E107:0002}So you are saying it is somewhere out there in\nthe wider world?",
-      "ru": "Понятно.{E108:0010} {E107:0002}То есть она где-то там,\nв большом мире?"
+      "ru": "Понимаю.{E108:0010} {E107:0002}То есть она где-то там,\nв большом мире?"
     },
     {
       "file": "sce2_c7_05.bytes",
@@ -40851,7 +40851,7 @@
       "block": "02002C5C",
       "index": 7,
       "en": "Of course, by that point,{E108:0008} {E1D1}the statute of limitations had\nexpired.",
-      "ru": "Разумеется, к тому дню{E108:0008} {E1D1}срок давности\nуже истёк."
+      "ru": "Правда, к тому дню{E108:0008} {E1D1}срок давности\nуже истёк."
     },
     {
       "file": "sce2_c7_06.bytes",
@@ -40872,7 +40872,7 @@
       "block": "02002C5C",
       "index": 11,
       "en": "(...It seems I've misunderstood her intentions.)",
-      "ru": "(...Похоже, я не так понял её намерения.)"
+      "ru": "(...Намерения её я, выходит, понял не так.)"
     },
     {
       "file": "sce2_c7_06.bytes",
@@ -41054,7 +41054,7 @@
       "block": "02002C75",
       "index": 14,
       "en": "I am.{E108:0020} {E12F:00000008}{E107:0002}You were betting on one thing, Ms. Bound,{E108:0008}\nweren't you?",
-      "ru": "Да.{E108:0020} {E12F:00000008}{E107:0002}Вы ставили на одно, мисс Долгова,{E108:0008}\nне так ли?"
+      "ru": "Да.{E108:0020} {E12F:00000008}{E107:0002}Вы ставили на одно, мисс Долгова,{E108:0008}\nверно?"
     },
     {
       "file": "sce2_c7_06.bytes",
@@ -41698,7 +41698,7 @@
       "block": "02002D5C",
       "index": 7,
       "en": "(...It sounds to me like all she's doing is acting in\nservice of the Committee in covering up the truth.)",
-      "ru": "(...Похоже, служит она только Комитету —\nи тому, чтобы правда не всплыла.)"
+      "ru": "(...Служит она, сдаётся, только Комитету —\nи тому, чтобы правда не всплыла.)"
     },
     {
       "file": "sce2_c8_01.bytes",
@@ -41936,7 +41936,7 @@
       "block": "02002D80",
       "index": 6,
       "en": "...Very well.{E108:0010} Then let us pass judgment on what we\nknow she did in the present.",
-      "ru": "...Хорошо.{E108:0010} Тогда вынесем суждение о том,\nчто она совершила теперь."
+      "ru": "...Хорошо.{E108:0010} Тогда будем судить её за то,\nчто она, как нам известно, совершила теперь."
     },
     {
       "file": "sce2_c8_01.bytes",
@@ -41971,7 +41971,7 @@
       "block": "02002D89",
       "index": 4,
       "en": "Do you have any evidence to support that line of\nreasoning?",
-      "ru": "Есть ли у вас улики в подтверждение\nэтого рассуждения?"
+      "ru": "Есть ли у вас улики, которые подкрепят\nэту версию?"
     },
     {
       "file": "sce2_c8_01.bytes",
@@ -42083,7 +42083,7 @@
       "block": "02002D93",
       "index": 10,
       "en": "Hah hah...{E108:0010} {E107:0002}Of course.{E108:0018}\nNow,{E108:0008} where was I...?",
-      "ru": "Ха-ха...{E108:0010} {E107:0002}Разумеется.{E108:0018}\nИтак,{E108:0008} на чём я остановилась...?"
+      "ru": "Ха-ха...{E108:0010} {E107:0002}Полноте.{E108:0018}\nИтак,{E108:0008} на чём я остановилась...?"
     },
     {
       "file": "sce2_c8_01.bytes",
@@ -42230,7 +42230,7 @@
       "block": "02002DB1",
       "index": 2,
       "en": "Hmph...{E108:0010} Well...{E108:0020}\n{E107:0001}{E12F:00000009}{E282}No,{E108:0010} nothing seems out of place!",
-      "ru": "Хмф...{E108:0010} Ну...{E108:0020}\n{E107:0001}{E12F:00000009}{E282}Нет,{E108:0010} всё вроде бы на месте!"
+      "ru": "Хмф...{E108:0010} Так...{E108:0020}\n{E107:0001}{E12F:00000009}{E282}Нет,{E108:0010} всё вроде бы на месте!"
     },
     {
       "file": "sce2_c8_01.bytes",
@@ -42244,7 +42244,7 @@
       "block": "02002DB1",
       "index": 4,
       "en": "Nngh!{E108:0018}\n(Well that blew up in my face...)",
-      "ru": "Нгх!{E108:0018}\n(Что ж, это вышло мне боком...)"
+      "ru": "Нгх!{E108:0018}\n(Вот и аукнулось...)"
     },
     {
       "file": "sce2_c8_01.bytes",
@@ -42321,7 +42321,7 @@
       "block": "02002DB8",
       "index": 8,
       "en": "...I was planning to tell Mr. Winner about it myself, of\ncourse.",
-      "ru": "...Мистеру Победину я, разумеется, собирался\nсказать сам."
+      "ru": "...Мистеру Победину я и сам собирался\nсказать."
     },
     {
       "file": "sce2_c8_01.bytes",
@@ -42790,7 +42790,7 @@
       "block": "02002E10",
       "index": 11,
       "en": "...I see.",
-      "ru": "...Понятно."
+      "ru": "...Так-так."
     },
     {
       "file": "sce2_c8_02.bytes",
@@ -43189,7 +43189,7 @@
       "block": "02002E5C",
       "index": 4,
       "en": "(Hmm...{E108:0010} Mr. Gusto seems to have a habit of {E188:00300000}{E1D5}{E041}pretending\nto be asleep{E042} when things aren't going his way...)",
-      "ru": "(Хм...{E108:0010} У мистера Густо, похоже, привычка\n{E188:00300000}{E1D5}{E041}притворяться спящим{E042}, когда дело против него...)"
+      "ru": "(Хм...{E108:0010} У мистера Густо привычка\n{E188:00300000}{E1D5}{E041}притворяться спящим{E042}, когда дело против него...)"
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -43322,7 +43322,7 @@
       "block": "02002E73",
       "index": 3,
       "en": "In which case,{E108:0008} {E1D1}he probably had a different motive for\ntaking part in the contest,{E108:0008} wouldn't you say?",
-      "ru": "А раз так,{E108:0008} {E1D1}на конкурс он шёл, надо думать,\nс другой целью,{E108:0008} не так ли?"
+      "ru": "А раз так,{E108:0008} {E1D1}на конкурс он шёл, надо думать,\nс другой целью,{E108:0008} согласны?"
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -43476,7 +43476,7 @@
       "block": "02002E8C",
       "index": 0,
       "en": "You too had your eyes on something other than the\ntitle, didn't you?",
-      "ru": "У вас ведь тоже был на примете не только титул,\nне так ли?"
+      "ru": "У вас ведь тоже был на примете\nне только титул?"
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -43546,7 +43546,7 @@
       "block": "02002E95",
       "index": 3,
       "en": "Sounds to me like Mr. Tangaroa's work {E188:002F0000}was especially\ninfluential in your early studies.",
-      "ru": "Судя по всему, работы мистера Тангароа {E188:002F0000}особенно\nповлияли на вас в начале пути."
+      "ru": "Выходит, работы мистера Тангароа {E188:002F0000}особенно\nповлияли на вас в начале пути."
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -43581,7 +43581,7 @@
       "block": "02002E9D",
       "index": 1,
       "en": "...yet you also seem to have had an interest in the\ncontest's prize, the ultimate cookbook.",
-      "ru": "...и всё же приз конкурса, Заветная книга,\nвас, похоже, тоже занимал."
+      "ru": "...и всё же приз конкурса, Заветная книга,\nвас тоже занимал."
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -43742,7 +43742,7 @@
       "block": "02002EAF",
       "index": 7,
       "en": "It's a collection of chemical formulas and ways to\nsynthesize new medicines {E188:00340000}{E1D1}nobody had ever heard of.",
-      "ru": "Собрание химических формул и способов получения\nлекарств, {E188:00340000}{E1D1}о которых никто и не слыхал."
+      "ru": "Химические формулы. Рецепты новых лекарств,\n{E188:00340000}{E1D1}о которых никто и не слыхал."
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -43847,7 +43847,7 @@
       "block": "02002EC5",
       "index": 1,
       "en": "Which suggests{E108:0008} {E188:00200000}{E1D2}that your interest must have been\npersonal.",
-      "ru": "А значит,{E108:0008} {E188:00200000}{E1D2}занимали они вас по причине\nличной."
+      "ru": "А значит,{E108:0008} {E188:00200000}{E1D2}интерес у вас был личный."
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -43966,7 +43966,7 @@
       "block": "02002ED5",
       "index": 3,
       "en": "If you were trying to beat Samson Tangaroa,{E108:0008} {E107:0001}{E188:00340000}{E1D1}surely\nyou didn't have the time to look after a child!",
-      "ru": "Если вы собирались обойти Самсона Тангароа,{E108:0008} {E107:0001}{E188:00340000}{E1D1}то\nнянчиться с ребёнком было некогда!"
+      "ru": "Если вы собирались обойти Самсона Тангароа,{E108:0008} {E107:0001}{E188:00340000}{E1D1}то\nнянчиться с ребёнком вам уж точно было некогда!"
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -44015,7 +44015,7 @@
       "block": "02002EDB",
       "index": 4,
       "en": "(Hmm...{E108:0010} This feels like it could be {E285}an important {E041}clue{E042}...)",
-      "ru": "(Хм...{E108:0010} Похоже, это может быть {E285}важной {E041}зацепкой{E042}...)"
+      "ru": "(Хм...{E108:0010} А это может оказаться {E285}важной {E041}зацепкой{E042}...)"
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -44099,7 +44099,7 @@
       "block": "02002EE7",
       "index": 4,
       "en": "I'd had plenty of chances throughout the contest to see\nand sample my rivals' work, you know.",
-      "ru": "За конкурс у меня хватало случаев посмотреть\nи попробовать чужие работы."
+      "ru": "За конкурс у меня хватало случаев посмотреть\nи попробовать чужие работы. Не спорю."
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -44127,7 +44127,7 @@
       "block": "02002EE7",
       "index": 8,
       "en": "(That seems like it could be {E285}an important {E041}clue{E042}...)",
-      "ru": "(Похоже, это может быть {E285}важной {E041}зацепкой{E042}...)"
+      "ru": "(А вот это, пожалуй, {E285}важная {E041}зацепка{E042}...)"
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -44225,7 +44225,7 @@
       "block": "02002EFF",
       "index": 0,
       "en": "As I understand it,{E108:0008} the ultimate cookbook contains the\nrecipe for a very particular medication.",
-      "ru": "Насколько я понимаю,{E108:0008} в Заветной книге есть рецепт\nодного весьма особого лекарства."
+      "ru": "Насколько я понимаю,{E108:0008} в Заветной книге есть рецепт\nодного совершенно особого лекарства."
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -44337,7 +44337,7 @@
       "block": "02002F0C",
       "index": 3,
       "en": "Which would seem to suggest that {E284}you were suffering\nfrom a taste disorder.",
-      "ru": "А это, похоже, значит, что {E284}расстройством вкуса\nстрадали вы сами."
+      "ru": "А это уже наводит на мысль, что {E284}расстройством вкуса\nстрадали вы сами."
     },
     {
       "file": "sce2_c8_03.bytes",
@@ -44533,7 +44533,7 @@
       "block": "02002F2A",
       "index": 3,
       "en": "Alright...{E108:0018} {E283}Once more unto the breach!",
-      "ru": "Что ж...{E108:0018} {E283}Идём на новый приступ!"
+      "ru": "Итак...{E108:0018} {E283}Идём на новый приступ!"
     },
     {
       "file": "sce2_c8_04.bytes",
@@ -44659,7 +44659,7 @@
       "block": "02002F5C",
       "index": 17,
       "en": "Hmph...{E108:0010} {E107:0002}Of course.",
-      "ru": "Хмф...{E108:0010} {E107:0002}Разумеется."
+      "ru": "Хмф...{E108:0010} {E107:0002}А как же."
     },
     {
       "file": "sce2_c8_04.bytes",
@@ -44981,7 +44981,7 @@
       "block": "02002FFD",
       "index": 4,
       "en": "And you wanted the book even more than you wanted\nthe title.{E108:0010} Isn't that right, Mr. Gusto?",
-      "ru": "И книгу вы хотели даже сильнее, чем титул.{E108:0010}\nНе так ли, мистер Густо?"
+      "ru": "И книгу вы хотели даже сильнее, чем титул.{E108:0010}\nЯ прав, мистер Густо?"
     },
     {
       "file": "sce2_c8_05.bytes",
@@ -45233,7 +45233,7 @@
       "block": "0200301F",
       "index": 7,
       "en": "(The lack of Mr. Frost's assistance shouldn't have\naffected that.{E108:0010} {E1D1}So was there some other difference...?)",
-      "ru": "(Отсутствие помощи Морозова на это повлиять\nне могло.{E108:0010} {E1D1}Значит, было и другое отличие...?)"
+      "ru": "(Без помощи Морозова вкус пострадать\nне должен был.{E108:0010} {E1D1}Значит, было и другое отличие...?)"
     },
     {
       "file": "sce2_c8_05.bytes",
@@ -45282,7 +45282,7 @@
       "block": "02003027",
       "index": 6,
       "en": "But these days,{E108:0008} you can find most of the stuff in there\non any drugstore shelf.",
-      "ru": "А нынче{E108:0008} почти всё оттуда лежит на полке\nв любой аптеке."
+      "ru": "А сейчас{E108:0008} почти всё оттуда лежит на полке\nв любой аптеке."
     },
     {
       "file": "sce2_c8_05.bytes",
@@ -45429,14 +45429,14 @@
       "block": "0200303F",
       "index": 4,
       "en": "What indeed.{E108:0010} He was here with you until the semifinal,{E108:0008}\nuntil he suddenly wasn't for the final.",
-      "ru": "Вот именно.{E108:0010} Он был с вами до полуфинала,{E108:0008}\nа на финал вдруг не пришёл."
+      "ru": "А вот что.{E108:0010} Он был с вами до полуфинала,{E108:0008}\nа на финал вдруг не пришёл."
     },
     {
       "file": "sce2_c8_05.bytes",
       "block": "0200303F",
       "index": 5,
       "en": "And just as suddenly,{E108:0008} your work went from being\nlauded for its flavor to being lambasted for it.",
-      "ru": "И столь же вдруг{E108:0008} вашу работу вместо похвал\nза вкус за него же и разругали."
+      "ru": "И так же внезапно{E108:0008} вашу работу вместо похвал\nза вкус за него же и разругали."
     },
     {
       "file": "sce2_c8_05.bytes",
@@ -45506,7 +45506,7 @@
       "block": "0200303F",
       "index": 15,
       "en": "I'm sure your son was here to cheer you on.{E108:0010}\n{E284}But that wasn't all he was here to do, was it?",
-      "ru": "Не сомневаюсь, сын приходил вас поддержать.{E108:0010}\n{E284}Но ведь не только за этим, не так ли?"
+      "ru": "Не сомневаюсь, сын приходил вас поддержать.{E108:0010}\n{E284}Но ведь не только за этим?"
     },
     {
       "file": "sce2_c8_05.bytes",
@@ -45884,7 +45884,7 @@
       "block": "02003063",
       "index": 36,
       "en": "Therefore, Mr. Edgeworth,{E108:0010} I believe it is time for you\nto admit defeat.",
-      "ru": "А потому, мистер Эджворт,{E108:0010} полагаю, вам пора\nпризнать поражение."
+      "ru": "А потому, мистер Эджворт,{E108:0010} вам пора\nпризнать поражение."
     },
     {
       "file": "sce2_c8_05.bytes",
@@ -46024,7 +46024,7 @@
       "block": "020030DC",
       "index": 0,
       "en": "I take it you have the test results, Detective?",
-      "ru": "Полагаю, результаты у вас, детектив?"
+      "ru": "Результаты, как я понимаю, у вас, детектив?"
     },
     {
       "file": "sce2_c8_06.bytes",
@@ -46241,7 +46241,7 @@
       "block": "020030DE",
       "index": 30,
       "en": "And if you remember,{E108:0008} one particular part of\nMr. Frost's work was allegedly very salty indeed.",
-      "ru": "А если помните,{E108:0008} одна часть работы мистера Морозова\nбыла, по рассказам, очень солёной."
+      "ru": "А если помните,{E108:0008} одна часть работы мистера Морозова\nбыла, по рассказам, на редкость солёной."
     },
     {
       "file": "sce2_c8_06.bytes",
@@ -46367,7 +46367,7 @@
       "block": "02003165",
       "index": 1,
       "en": "Indeed.{E108:0010} And I believe that the salt that gave the lyre\nits flavor{E108:0008} {E285}came from just such a lamp.",
-      "ru": "Именно.{E108:0010} И я полагаю, что соль, давшая лире вкус,{E108:0008}\n{E285}взялась как раз из такой лампы."
+      "ru": "Именно.{E108:0010} И соль, давшая лире вкус,{E108:0008}\n{E285}взялась, я уверен, как раз из такой лампы."
     },
     {
       "file": "sce2_c8_07.bytes",
@@ -46437,7 +46437,7 @@
       "block": "02003170",
       "index": 0,
       "en": "The lamps appear to be broken.",
-      "ru": "Лампы, похоже, разбиты."
+      "ru": "Лампы, кажется, разбиты."
     },
     {
       "file": "sce2_c8_07.bytes",
@@ -46703,7 +46703,7 @@
       "block": "020031FE",
       "index": 3,
       "en": "...Did you?{E108:0018}\nAnd you can prove that, I suppose?",
-      "ru": "...Разве?{E108:0018}\nИ ты, полагаю, можешь это доказать?"
+      "ru": "...Разве?{E108:0018}\nИ доказать это ты, конечно, можешь?"
     },
     {
       "file": "sce2_c8_08.bytes",
@@ -47221,7 +47221,7 @@
       "block": "02003305",
       "index": 3,
       "en": "S-Sorry about that.{E108:0010}\n(I guess that wasn't it...)",
-      "ru": "П-Прошу прощения.{E108:0010}\n(Похоже, дело не в этом...)"
+      "ru": "П-Прошу прощения.{E108:0010}\n(Не то...)"
     },
     {
       "file": "sce2_c8_0a.bytes",
@@ -47249,7 +47249,7 @@
       "block": "0200330A",
       "index": 2,
       "en": "Umm...{E108:0010} {E107:0002}So he wanted to...{E108:0010} confuse them over where it\nreally happened...?",
-      "ru": "Э-э...{E108:0010} {E107:0002}То есть он хотел...{E108:0010} запутать их с тем,\nгде всё случилось...?"
+      "ru": "Э-э...{E108:0010} {E107:0002}То есть он хотел...{E108:0010} чтобы они не поняли,\nгде всё случилось на самом деле...?"
     },
     {
       "file": "sce2_c8_0a.bytes",
@@ -47445,7 +47445,7 @@
       "block": "02003310",
       "index": 25,
       "en": "Either way,{E108:0008} it seems that Mr. von Karma didn't know\nabout the body until {E1D1}after the arrest had been made.",
-      "ru": "Так или иначе,{E108:0008} похоже, мистер фон Карма узнал\nо теле лишь {E1D1}после ареста."
+      "ru": "Так или иначе,{E108:0008} о теле мистер фон Карма узнал\nлишь {E1D1}после ареста."
     },
     {
       "file": "sce2_c8_0a.bytes",
@@ -47732,7 +47732,7 @@
       "block": "02003376",
       "index": 2,
       "en": "The guy's probably watched a few legal dramas before,{E108:0008}\n{E1D5}but he's no lawyer.{E108:0010} {E12F:000A0001}Not like you and me.",
-      "ru": "Парень, поди, насмотрелся судебных сериалов,{E108:0008}\n{E1D5}но он не юрист.{E108:0010} {E12F:000A0001}Не то что мы с тобой."
+      "ru": "Этот парень, поди, насмотрелся судебных сериалов,{E108:0008}\n{E1D5}но он не юрист.{E108:0010} {E12F:000A0001}Не то что мы с тобой."
     },
     {
       "file": "sce2_c8_0b.bytes",
@@ -48068,7 +48068,7 @@
       "block": "020033A7",
       "index": 1,
       "en": "Ngeh heh heh!{E108:0018} {E1D1}Why else would I do it?{E108:0018}\n{E1D1}Why would anybody?",
-      "ru": "Нге-хе-хе!{E108:0018} {E1D1}А зачем ещё?{E108:0018}\n{E1D1}Кто бы стал иначе?"
+      "ru": "Нге-хе-хе!{E108:0018} {E1D1}А зачем ещё?{E108:0018}\n{E1D1}Кто бы на моём месте поступил иначе?"
     },
     {
       "file": "sce2_c8_0b.bytes",
@@ -48236,7 +48236,7 @@
       "block": "020033BC",
       "index": 4,
       "en": "(Sounds like he played his cards right and managed to\navoid setting foot in court.)",
-      "ru": "(Похоже, он разыграл всё верно и в зал суда\nтак и не ступил.)"
+      "ru": "(Разыграл он всё верно и в зал суда\nтак и не ступил.)"
     },
     {
       "file": "sce2_c8_0b.bytes",
@@ -48404,7 +48404,7 @@
       "block": "020033D0",
       "index": 10,
       "en": "Fifteen plus three makes...{E108:0018} {E107:0001}{E188:00300000}{E1D5}{E12F:00020006}exactly eighteen!{E108:0018}\n{E107:0002}Which means...{E108:0010} {E107:0001}{E1D2}no way!",
-      "ru": "Пятнадцать плюс три...{E108:0018} {E107:0001}{E188:00300000}{E1D5}{E12F:00020006}ровно восемнадцать!{E108:0018}\n{E107:0002}А значит...{E108:0010} {E107:0001}{E1D2}не может быть!"
+      "ru": "Пятнадцать плюс три...{E108:0018} {E107:0001}{E188:00300000}{E1D5}{E12F:00020006}ровно восемнадцать!{E108:0018}\n{E107:0002}А значит...{E108:0010} {E107:0001}{E1D2}ничего себе!"
     },
     {
       "file": "sce2_c8_0b.bytes",
@@ -49006,7 +49006,7 @@
       "block": "020034DC",
       "index": 7,
       "en": "And in a pleasing twist of fate,{E108:0008} his wrongful conviction{E108:0010}\n{E107:0001}{E283}{E12F:00000009}will be the very thing that sets him free!",
-      "ru": "И, по счастливой иронии,{E108:0008} именно этот неправый\nприговор{E108:0010} {E107:0001}{E283}{E12F:00000009}его и освободит!"
+      "ru": "И, по иронии судьбы,{E108:0008} именно этот ошибочный\nприговор{E108:0010} {E107:0001}{E283}{E12F:00000009}его и освободит!"
     },
     {
       "file": "sce2_c8_0d.bytes",
@@ -49146,7 +49146,7 @@
       "block": "0200355C",
       "index": 2,
       "en": "I...{E108:0010} I suppose so...",
-      "ru": "Я...{E108:0010} Полагаю, да..."
+      "ru": "Я...{E108:0010} Наверное, да..."
     },
     {
       "file": "sce2_c8_0e.bytes",
@@ -49237,7 +49237,7 @@
       "block": "0200355F",
       "index": 12,
       "en": "...Of course.",
-      "ru": "...Разумеется."
+      "ru": "...Конечно."
     },
     {
       "file": "sce2_c8_0e.bytes",
@@ -49545,7 +49545,7 @@
       "block": "0200356C",
       "index": 45,
       "en": "...Yes,{E108:0008} of course.",
-      "ru": "...Да,{E108:0008} разумеется."
+      "ru": "...Да,{E108:0008} конечно."
     },
     {
       "file": "sce2_c8_0e.bytes",
@@ -49769,7 +49769,7 @@
       "block": "020035F8",
       "index": 2,
       "en": "I...{E108:0008} guess I can see it...{E108:0010}\nThese things can take all kinds of shapes, after all...",
-      "ru": "Я...{E108:0008} пожалуй, вижу...{E108:0010}\nТакие вещи ведь принимают любой облик..."
+      "ru": "Я...{E108:0008} пожалуй, вижу...{E108:0010}\nСвязь ведь бывает самая разная..."
     },
     {
       "file": "sce2_c8_0f.bytes",
@@ -49832,7 +49832,7 @@
       "block": "020035FE",
       "index": 6,
       "en": "Heh heh...{E108:0010} {E107:0002}I bet they're {E1D1}beyond super sweet, then,{E108:0008}\naren't they?",
-      "ru": "Хе-хе...{E108:0010} {E107:0002}Значит, они {E1D1}слаще сладкого,{E108:0008}\nне так ли?"
+      "ru": "Хе-хе...{E108:0010} {E107:0002}Значит, они {E1D1}слаще сладкого,{E108:0008}\nправда?"
     },
     {
       "file": "sce2_c8_0f.bytes",
@@ -50007,14 +50007,14 @@
       "block": "0200365C",
       "index": 4,
       "en": "You know how Samson was {E1D1}{E041}wrongfully convicted{E040}?{E108:0010} We\nhad to pretend that he wasn't in order to nail Gusto.",
-      "ru": "Помнишь, Самсона {E1D1}{E041}осудили неправо{E040}?{E108:0010} Пришлось делать\nвид, что это не так, чтобы прижать Густо."
+      "ru": "Самсона ведь {E1D1}{E041}осудили ни за что{E040}.{E108:0010} Пришлось делать\nвид, что приговор верный, чтобы прижать Густо."
     },
     {
       "file": "sce2_c8_10.bytes",
       "block": "0200365C",
       "index": 5,
       "en": "But to use his false conviction against him,{E108:0008} even to\nsave him...",
-      "ru": "Но обратить его неправый приговор против него же,{E108:0008}\nпусть даже ради его спасения..."
+      "ru": "Но обернуть против него несправедливый приговор,{E108:0008}\nпусть даже ради его же спасения..."
     },
     {
       "file": "sce2_c8_10.bytes",
@@ -50056,7 +50056,7 @@
       "block": "0200365C",
       "index": 11,
       "en": "If the false conviction had been overturned before\ntoday,{E108:0008} {E1D1}Mr. Gusto would've gotten away scot-free?",
-      "ru": "Если бы неправый приговор отменили раньше,{E108:0008}\n{E1D1}мистер Густо вышел бы сухим из воды?"
+      "ru": "Если бы тот приговор отменили раньше,{E108:0008}\n{E1D1}мистер Густо вышел бы сухим из воды?"
     },
     {
       "file": "sce2_c8_10.bytes",
@@ -50140,7 +50140,7 @@
       "block": "02003673",
       "index": 0,
       "en": "And on that note,{E108:0008} {E1D1}it's time for me to skedaddle.",
-      "ru": "На этом{E108:0008} {E1D1}мне пора смываться."
+      "ru": "Ну всё,{E108:0008} {E1D1}я побежал."
     },
     {
       "file": "sce2_c8_10.bytes",

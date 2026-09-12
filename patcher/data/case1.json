@@ -2267,7 +2267,7 @@
       "block": "05000710",
       "index": 8,
       "en": "Yes...{E108:0010} {E107:0002}It is something of a shame...",
-      "ru": "Да...{E108:0010} {E107:0002}Некоторым образом жаль..."
+      "ru": "Да...{E108:0010} {E107:0002}Досадно, не спорю..."
     },
     {
       "file": "logic00_08.bytes",
@@ -8637,7 +8637,7 @@
       "block": "00001F6B",
       "index": 3,
       "en": "Alright...{E108:0018} {E283}Once more unto the breach!",
-      "ru": "Что ж...{E108:0018} {E283}Идём на новый приступ!"
+      "ru": "Итак...{E108:0018} {E283}Идём на новый приступ!"
     },
     {
       "file": "sce0_c0_09.bytes",
@@ -9400,14 +9400,14 @@
       "block": "000007B4",
       "index": 0,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обойти место преступления и осмотреть\nвсё, что привлечёт внимание."
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание."
     },
     {
       "file": "sce0_c0_m00_check.bytes",
       "block": "000007B5",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Больше тут, кажется, ничего не найти."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce0_c0_m00_check.bytes",
@@ -9750,7 +9750,7 @@
       "block": "000007E7",
       "index": 0,
       "en": "There's nothing of interest here.",
-      "ru": "Здесь нет ничего примечательного."
+      "ru": "Здесь нет ничего интересного."
     },
     {
       "file": "sce0_c0_m00_check.bytes",
@@ -10793,21 +10793,21 @@
       "block": "00000983",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Больше тут, кажется, ничего не найти."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce0_c0_m01_check.bytes",
       "block": "00000984",
       "index": 0,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "Надо обойти место преступления и осмотреть\nвсё, что привлечёт внимание."
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание."
     },
     {
       "file": "sce0_c0_m01_check.bytes",
       "block": "00000985",
       "index": 0,
       "en": "There's nothing of interest here.",
-      "ru": "Здесь нет ничего примечательного."
+      "ru": "Здесь нет ничего интересного."
     },
     {
       "file": "sce0_c0_m01_check.bytes",
@@ -12032,7 +12032,7 @@
       "block": "00000B09",
       "index": 14,
       "en": "Honestly!{E108:0018} {E107:0002}I leave you alone for two seconds!{E108:0018}\nBut don't worry --{E108:0010} {E107:0001}your hero's here to save the day!",
-      "ru": "Честное слово!{E108:0018} {E107:0002}На две секунды вас оставить нельзя!{E108:0018}\nНо не бойтесь —{E108:0010} {E107:0001}героиня прибыла спасать день!"
+      "ru": "Честное слово!{E108:0018} {E107:0002}На две секунды вас оставить нельзя!{E108:0018}\nНо не бойтесь —{E108:0010} {E107:0001}героиня прибыла спасать положение!"
     },
     {
       "file": "sce0_c0_m01_npc.bytes",
@@ -12746,7 +12746,7 @@
       "block": "00000B7D",
       "index": 1,
       "en": "As it should be.{E108:0010} After all, it symbolizes both the\nsanctity and the strictness of the law.",
-      "ru": "Так и должно быть.{E108:0010} Он ведь символ и святости\nзакона, и его строгости."
+      "ru": "Так и должно быть.{E108:0010} Он ведь символизирует\nи святость закона, и его строгость."
     },
     {
       "file": "sce0_c0_m01_npc.bytes",
@@ -13341,7 +13341,7 @@
       "block": "00000CE4",
       "index": 1,
       "en": "The sacred symbol of my office?{E108:0010}\nNo, Detective.{E108:0008} I do not.",
-      "ru": "Священный символ моей должности?{E108:0010}\nНет, детектив.{E108:0008} Не имею такой привычки."
+      "ru": "Священный символ моей должности?{E108:0010}\nНет, детектив.{E108:0008} Ни разу."
     },
     {
       "file": "sce0_c0_partner.bytes",
@@ -15238,7 +15238,7 @@
       "block": "0000100F",
       "index": 3,
       "en": "Alright...{E108:0018} {E283}Once more unto the breach!",
-      "ru": "Что ж...{E108:0018} {E283}Идём на новый приступ!"
+      "ru": "Итак...{E108:0018} {E283}Идём на новый приступ!"
     },
     {
       "file": "sce0_c1_03.bytes",
@@ -18360,7 +18360,7 @@
       "block": "00001467",
       "index": 21,
       "en": "Heh heh heh!{E108:0018} Why?{E108:0010} My plan this time was perfect!{E108:0010}\nAs they always are,{E108:0008} and as they always will be!",
-      "ru": "Хе-хе-хе!{E108:0018} Отчего же?{E108:0010} Мой план был безупречен!{E108:0010}\nКак всегда{E108:0008} и как будет впредь!"
+      "ru": "Хе-хе-хе!{E108:0018} Отчего же?{E108:0010} Мой план был безупречен!{E108:0010}\nКак всегда{E108:0008} и как будет дальше!"
     },
     {
       "file": "sce0_c1_06.bytes",
@@ -23148,7 +23148,7 @@
       "block": "000019DC",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Похоже, здесь больше ничего не найти."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce0_c1_m02_check.bytes",
@@ -23939,7 +23939,7 @@
       "block": "00001A51",
       "index": 0,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "Похоже, здесь больше ничего не найти."
+      "ru": "Не думаю, что здесь есть ещё что-то."
     },
     {
       "file": "sce0_c1_m02_check.bytes",
@@ -24583,7 +24583,7 @@
       "block": "00001AAE",
       "index": 2,
       "en": "Don't even think about it.",
-      "ru": "Даже не думайте."
+      "ru": "Даже не думай."
     },
     {
       "file": "sce0_c1_m02_check.bytes",
@@ -25591,7 +25591,7 @@
       "block": "00001B62",
       "index": 1,
       "en": "As it should be.{E108:0010} After all, it symbolizes both the\nsanctity and the strictness of the law.",
-      "ru": "Как и должно.{E108:0010} Он ведь символизирует и святость\nзакона, и его строгость."
+      "ru": "Так и должно быть.{E108:0010} Он ведь символизирует\nи святость закона, и его строгость."
     },
     {
       "file": "sce0_c1_partner.bytes",

@@ -1,8 +1,11 @@
 """Вставка своих картинок на место немецких — для надписей, которые хочется по-русски.
 
-Парный к `swap_localized.py`. Тот отдаёт немецким адресам английские объекты;
-этот кладёт в немецкий объект ваши пиксели и возвращает адрес на него обратно,
-так что подмена и перерисовка не мешают друг другу и порядок запуска не важен.
+Парный к `swap_localized.py`. Тот отдаёт немецким адресам английские объекты.
+Этот собирает бандл с русскими картинками заново **из нетронутого оригинала**
+(`backup/`): немецким адресам — английские объекты, как у `swap_localized.py`,
+а где есть своя картинка — её пиксели в **немецкий** объект, и адрес остаётся ему.
+Запись в бандл общая с патчером игрока (`picture_layer.write_bundle`), так что
+`make install` и игрок получают бандл, собранный одним кодом.
 
 Как пользоваться:
 
@@ -21,6 +24,13 @@
 
 `--list` показывает все имена, которые тут принимаются, с размерами оригиналов.
 
+Про сторону. Картинки на отдачу лежат лицом вверх, а бандлы хранят по-разному.
+Сторону решает `layer_localized.stored_flipped` — по языковым вариантам той же
+картинки в оригинале. До 13 сентября 2026 её решал английский сосед в живом
+бандле, а сама вставка брала объект по адресу `_ger`, который после подмены вёл
+на тот же английский: русское писалось в английские текстуры и сверялось само
+с собой. Три картинки дела 1 так и встали в игру вверх ногами.
+
 Про формат. Картинка пакуется в тот же формат, что был у оригинала: 402 из 451
 немецкой текстуры лежат в BC7, остальные в RGBA32. BC7 умеет `etcpak`, который
 и так стоит вместе с UnityPy; на текстуру 1440x1440 уходит около секунды, потери
@@ -30,45 +40,18 @@
 from __future__ import annotations
 
 import argparse
-import re
 import shutil
 import sys
 from collections import defaultdict
 from pathlib import Path
 
 import UnityPy
-from PIL import Image, ImageChops, ImageStat
-from UnityPy.enums import TextureFormat
+from PIL import Image
 
-from common import BUNDLES, HOST, WORK, game_is_running, load_json
-from swap_localized import BUILD, LANG_KEY, NEVER, register_backup
-
-RAW = int(TextureFormat.RGBA32)
-
-
-def index() -> dict[str, list[tuple[str, str, str]]]:
-    """Имя ассета без языкового хвоста -> [(бандл, адрес _ger, размер)].
-
-    Берётся из переписи `scan_localized.py`, а не обходом бандлов: их 164 на семь
-    гигабайт, и ради десятка картинок читать всё — это минуты вместо мгновения.
-
-    Одно имя бывает в нескольких бандлах: FHD и Classic — две разные картинки
-    одного и того же места, накрывать надо обе.
-    """
-    data = load_json(WORK / "localized_assets.json")
-    if not data:
-        sys.exit("нет work/localized_assets.json — сперва tools/scan_localized.py")
-
-    out: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
-    for fam in data["families"].values():
-        if fam["type"] != "Texture2D" or HOST not in fam["variants"]:
-            continue
-        if any(bad in fam["bundle"] for bad in NEVER):
-            continue
-        base = LANG_KEY.sub("", fam["base"].split("/")[-1], count=1).rsplit(".", 1)[0]
-        ger = fam["variants"][HOST]
-        out[base].append((fam["bundle"], ger["path"], f"{ger.get('w')}x{ger.get('h')}"))
-    return out
+from common import BACKUP, BUNDLES, WORK, game_is_running
+from layer_localized import index, original, stored_flipped
+from picture_layer import FLIP, write_bundle
+from swap_localized import BUILD, plan_env, register_backup
 
 
 def do_list() -> None:
@@ -79,78 +62,32 @@ def do_list() -> None:
         print(f"  {base:34} {where}")
 
 
-def flat(im: Image.Image) -> Image.Image:
-    """Серая миниатюра для сравнения: прозрачное — на средний серый, а не в чёрный."""
-    im = im.convert("RGBA")
-    bg = Image.new("RGB", im.size, (128, 128, 128))
-    bg.paste(im, mask=im.split()[3])
-    return bg.convert("L").resize((64, 64))
-
-
-def stored_flipped(env, key: str, src: Image.Image) -> bool:
-    """Хранит ли бандл эту текстуру вверх ногами — по английскому соседу.
-
-    Картинки на отдачу лежат лицом вверх, а бандлы хранят по-разному, и правило
-    «по имени бандла» не держится: `gk2_idcom` и `gk2_logickeyword` перевёрнуты,
-    а их двойники `_trial` (дело 1) — лицом вверх. Замер 12 сентября 2026; до него
-    переворота здесь не было вовсе, хотя документы его обещали, и дело 1 уцелело
-    только потому, что его бандлы лицом вверх.
-
-    Надёжно одно: русская картинка совпадает с английской везде, кроме надписи,
-    значит и класть её надо той стороной, какой она с английской совпадает.
-    Английского соседа в бандле нет (плашки локали лежат в чужом) — как есть.
-    """
-    eng_key = re.sub(r"_ger(?=\.[^./]+$)", "_eng", key)
-    if eng_key == key or eng_key not in env.container:
-        return False
-    eng = flat(env.container[eng_key].read().image)
-    mine = flat(src)
-    same = ImageStat.Stat(ImageChops.difference(mine, eng)).mean[0]
-    flipped = ImageStat.Stat(ImageChops.difference(
-        mine, eng.transpose(Image.FLIP_TOP_BOTTOM))).mean[0]
-    return flipped < same
-
-
 def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[bytes, list[str]]:
-    """Вписать картинки в немецкие текстуры бандла и вернуть им адреса."""
-    env = UnityPy.load(str(BUNDLES / bundle_name))
-    notes = []
-    redirect_back: dict[str, int] = {}
+    """Собрать бандл с картинками из нетронутого оригинала.
 
+    Из оригинала, а не из живого файла: повторная установка не наслаивается
+    на прежнюю и заодно лечит её — до 13 сентября 2026 в живых бандлах лежали
+    русские пиксели на месте английских.
+    """
+    src = original(bundle_name)
+    if src is None:
+        sys.exit(f"{bundle_name}: бандл уже менялся, а оригинала в backup/ нет — собирать не из чего.\n"
+                 f"Вернуть оригинал: Steam -> свойства игры -> Проверить целостность файлов.")
+    env = UnityPy.load(str(src))
+    notes = [] if src.parent == BACKUP else ["бэкапа нет, но бандл не менялся — собираю из живого"]
+    pictures: dict[str, Image.Image] = {}
     for key, png in jobs:
-        obj = env.container[key]
-        tex = obj.read()
-        src = Image.open(png).convert("RGBA")
-        if src.size != (tex.m_Width, tex.m_Height):
-            notes.append(f"{png.name}: {src.size[0]}x{src.size[1]} -> {tex.m_Width}x{tex.m_Height}")
-            src = src.resize((tex.m_Width, tex.m_Height), Image.LANCZOS)
-        if stored_flipped(env, key, src):
-            src = src.transpose(Image.FLIP_TOP_BOTTOM)
+        tex = env.container[key].read()
+        img = Image.open(png).convert("RGBA")
+        if img.size != (tex.m_Width, tex.m_Height):
+            notes.append(f"{png.name}: {img.size[0]}x{img.size[1]} -> {tex.m_Width}x{tex.m_Height}")
+            img = img.resize((tex.m_Width, tex.m_Height), Image.LANCZOS)
+        if stored_flipped(env, key, img):
+            img = img.transpose(FLIP)
             notes.append(f"{png.name}: бандл хранит её вверх ногами — перевернул")
-
-        want = RAW if raw else int(tex.m_TextureFormat)
-        try:
-            tex.set_image(src, target_format=want)
-        except Exception as exc:  # noqa: BLE001 — упаковщика может не оказаться, это не повод падать
-            notes.append(f"{png.name}: {TextureFormat(want).name} не упаковался ({exc}), кладу RGBA32")
-            tex.set_image(src, target_format=RAW)
-        tex.save()
-        redirect_back[key] = obj.path_id
-
-    # адрес мог быть уведён на английский вариант — вернуть его на свой объект
-    ab = next(o for o in env.objects if o.type.name == "AssetBundle")
-    tree = ab.read_typetree()
-    fixed = 0
-    for entry in tree["m_Container"]:
-        key, info = entry
-        want = redirect_back.get(key)
-        if want is not None and info["asset"]["m_PathID"] != want:
-            info["asset"]["m_PathID"] = want
-            fixed += 1
-    if fixed:
-        ab.save_typetree(tree)
-        notes.append(f"адресов возвращено с английских на свои: {fixed}")
-    return env.file.save(packer="lz4"), notes
+        pictures[key] = img
+    blob, more = write_bundle(env, plan_env(env), pictures, raw)
+    return blob, notes + more
 
 
 def main() -> None:

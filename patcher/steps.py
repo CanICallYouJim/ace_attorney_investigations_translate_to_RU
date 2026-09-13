@@ -189,12 +189,19 @@ def fonts(stage: Path) -> list[Change]:
 
 # --- графика, ролики и звук ---------------------------------------------------
 
-def graphics(stage: Path, with_gk1: bool = False) -> Iterator[Change]:
+def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = ()) -> Iterator[Change]:
     """Немецким адресам отдаются английские объекты: надписи, ролики, выкрики.
 
     Байты картинок и звука не трогаются вовсе — правится таблица «адрес -> объект»
     внутри бандла. Перерисовывать ничего не нужно: английский вариант каждой
     надписи уже лежит в игре рядом с немецким.
+
+    Исключение — надписи, у которых есть русский слой (`graphics_layers/`, снимает
+    его `layer_localized.py`). Такая картинка склеивается тут же, из английской
+    текстуры этой игры и слоя, и ложится в немецкий объект; адрес остаётся ему,
+    английская текстура не трогается. Английская картинка в игре не та, по которой
+    снят слой, — надпись остаётся английской. Решение пользователя от 13 сентября
+    2026. Бандлы, из картинок которых уменьшаются другие, идут первыми.
 
     Генератор, а не список: бандлов 33 и весят они 2,9 ГБ, держать их разом
     негде. Каждый отдаётся сразу после сборки, ставится и стирается.
@@ -203,18 +210,28 @@ def graphics(stage: Path, with_gk1: bool = False) -> Iterator[Change]:
     перезаписи. По умолчанию выключено — GK1 вне объёма перевода, её текст
     наш патч и так делает английским, а ради надписей на картинках удваивать
     время установки незачем. Решение пользователя от 12 августа 2026.
+
+    `only` — куски имён бандлов: собрать только их. Для проверки, не для игрока.
     """
     from common import BUNDLES
+    from picture_layer import Shipment
     from swap_localized import IMAGE_TABLE_BUNDLE, collect, redirect, swap_image_table
 
     wanted = CATEGORIES + ("gk1",) if with_gk1 else CATEGORIES
-    for name, pairs in sorted(collect(wanted).items()):
+    plan: dict[str, list] = {}
+    for part in only or (None,):
+        plan.update(collect(wanted, part))
+    russian = Shipment()
+    for name, pairs in sorted(plan.items(), key=lambda kv: (not russian.feeds(kv[0]), kv[0])):
         live = BUNDLES / name
         if IMAGE_TABLE_BUNDLE in name:
             # Особый бандл: английских двойников внутри нет, подменяются
             # значения в таблице картинок локали.
             blob, changed = swap_image_table()
             note = f"таблица картинок локали, записей {changed}"
+        elif russian.has(name):
+            blob, done, notes = russian.build(live, pairs)
+            note = "; ".join([f"адресов {len(pairs)}, из них с русской картинкой {done}", *notes])
         else:
             blob = redirect(live, pairs)
             note = f"адресов {len(pairs)}"

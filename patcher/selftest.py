@@ -109,8 +109,100 @@ def main() -> int:
     print()
     if bad:
         print(f"расхождений: {bad}", file=sys.stderr)
+    else:
+        print("Гарнитуры сходятся: патчер за один проход даёт то же, что два запуска.")
+    return max(1 if bad else 0, pictures())
+
+
+def pictures() -> int:
+    """Русские картинки: бандл, собранный патчером из оригинала, несёт ровно русскую картинку.
+
+    Путь тот же, что у игрока, — `Shipment.build` поверх нетронутого бандла из
+    backup/, — только в память, а не в игру. Сверяется то, что увидит игра:
+    раскодированная немецкая текстура совпадает с русской картинкой (с потерей
+    BC7), лежит той же стороной, что оригинал, адрес ведёт на неё саму вместе
+    с преднагрузкой, а английская текстура не тронута.
+    """
+    import gc
+
+    from PIL import Image, ImageChops, ImageStat
+
+    from common import BUNDLES
+    from layer_localized import RU, flat, original
+    from picture_layer import FLIP, Shipment, pixels_sha
+    from swap_localized import plan_env
+
+    shipment = Shipment()
+    print(f"\nрусские картинки в слое: {len(shipment)}")
+    if not len(shipment):
+        return 0
+    pngs = {p.stem: p for p in RU.rglob("*.png")}
+    bad = 0
+    for bundle in sorted(shipment.by_bundle, key=lambda b: (b not in shipment.feeders, b)):
+        live = next(BUNDLES.glob(f"{bundle}_assets_all_*.bundle"))
+        src = original(live.name)
+        if src is None:
+            print(f"  {bundle}: оригинала нет — сверять не с чем", file=sys.stderr)
+            bad += 1
+            continue
+        # Бандл графики весит до 350 МБ, а в памяти разворачивается вдвое-втрое:
+        # на машине с шестью гигабайтами три копии разом не помещаются. Поэтому
+        # каждая загрузка отпускается до следующей.
+        plan = plan_env(UnityPy.load(str(src)))
+        gc.collect()
+        blob, done, notes = shipment.build(src, plan)
+        gc.collect()
+        built = UnityPy.load(blob)
+        ab = next(o for o in built.objects if o.type.name == "AssetBundle").read_typetree()
+        container = dict(ab["m_Container"])
+        print(f"  {bundle}: собрано картинок {done}" + "".join(f"; {n}" for n in notes))
+        for entry in shipment.by_bundle[bundle]:
+            obj = built.container[entry["key"]]
+            got = obj.read().image.convert("RGBA")
+            want = Image.open(pngs[entry["name"]]).convert("RGBA")
+            if want.size != got.size:
+                want = want.resize(got.size, Image.LANCZOS)
+            if entry["flipped"]:
+                want = want.transpose(FLIP)
+            channels = ImageChops.difference(got, want).split()[:3]
+            mean = max(ImageStat.Stat(ch).mean[0] for ch in channels)
+            worst = ImageChops.lighter(ImageChops.lighter(channels[0], channels[1]), channels[2])
+            peak = worst.getextrema()[1]
+            rough = sum(worst.histogram()[65:])
+
+            # Сторона — по английской текстуре того же бандла: она не тронута (это
+            # проверяется ниже отпечатком), то есть лежит так же, как лежал оригинал.
+            source = built.container[entry["source"]]
+            english_image = source.read().image
+            theirs = flat(english_image)
+            mine = flat(got)
+            side = (ImageStat.Stat(ImageChops.difference(mine, theirs)).mean[0]
+                    < ImageStat.Stat(ImageChops.difference(mine, theirs.transpose(FLIP))).mean[0])
+
+            info = container[entry["key"]]
+            first = info["preloadIndex"]
+            preload = [ab["m_PreloadTable"][i]["m_PathID"] for i in range(first, first + info["preloadSize"])]
+            own = obj.path_id != source.path_id and preload == [obj.path_id]
+            english = pixels_sha(english_image) == entry["source_sha"]
+
+            # BC7 на резком красном крае роняет отдельные пиксели далеко: на плане
+            # 24 марта 66 пикселей из двух миллионов отличаются больше чем на 64,
+            # один — на 129 (замер 13 сентября 2026). Неверная или перевёрнутая
+            # картинка даёт сотни тысяч таких, поэтому меряется доля, а не пик.
+            ok = (mean < 2 and rough <= got.width * got.height // 10000
+                  and side and own and english)
+            bad += not ok
+            print(f"    {entry['name']:18} отличие от русской: среднее {mean:.2f}, пик {peak}, грубых {rough}; "
+                  f"сторона {'как оригинал' if side else 'ПЕРЕВЁРНУТА'}; "
+                  f"адрес {'свой' if own else 'ЧУЖОЙ'}; английская {'не тронута' if english else 'ИЗМЕНЕНА'}"
+                  f"{'' if ok else '  <- РАЗОШЛОСЬ'}")
+        del built, blob
+        gc.collect()
+    print()
+    if bad:
+        print(f"картинок разошлось: {bad}", file=sys.stderr)
         return 1
-    print("Гарнитуры сходятся: патчер за один проход даёт то же, что два запуска.")
+    print("Русские картинки сходятся: патчер из оригинала даёт ровно их, английские не тронуты.")
     return 0
 
 

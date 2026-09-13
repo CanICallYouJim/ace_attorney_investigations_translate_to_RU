@@ -60,6 +60,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter
 
+from picture_layer import shrink
 from relabel import remap, strip_text
 
 MAGENTA = (255, 0, 255)
@@ -184,8 +185,9 @@ def run(spec_path: Path, only: str | None) -> int:
             u = job["уменьшить"]
             big = Image.open(out_dir / f'{u["из"]}.png').convert("RGBA")
             there, here = u["якорь_там"], u["якорь_тут"]
-            patch = big.crop(tuple(there)).resize(
-                (here[2] - here[0], here[3] - here[1]), Image.LANCZOS)
+            # Ужимает тот же код, что склеивает картинку у игрока: иначе его копия
+            # разойдётся с этой на единицу в половине пикселей (13 сентября 2026).
+            patch = shrink(big, there, (here[2] - here[0], here[3] - here[1]))
             im.paste(patch, (here[0], here[1]))
 
         for glue in job.get("вклеить", []):

@@ -82,7 +82,11 @@ def plan_bundle(path) -> list[tuple[str, str]]:
     `itm01_01e_00_l.png` и так подписан «CANDY», отдельные только `_fre` и `_ger`
     («BONBON»). Английский игрок в таких местах видит именно базовый вариант.
     """
-    env = UnityPy.load(str(path))
+    return plan_env(UnityPy.load(str(path)))
+
+
+def plan_env(env) -> list[tuple[str, str]]:
+    """То же по уже открытому бандлу — чтобы не читать его с диска второй раз."""
     keys = set(env.container)
     pairs = []
     for key in sorted(keys):

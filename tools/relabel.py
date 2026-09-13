@@ -177,7 +177,12 @@ def run(spec_path: Path, only: str | None) -> int:
         if not src.exists():
             print(f"  ! нет исходника {src}")
             continue
-        im = Image.open(src).convert("RGB")
+        raw = Image.open(src)
+        # Родная альфа: у кат-инов она 254..255. Без неё картинка сохранялась
+        # с 255 везде, и сверка слоя (layer_localized.py) видела «правку»
+        # на треть кадра там, где не менялся ни один цвет. Найдено 13 сентября 2026.
+        alpha = raw.getchannel("A") if raw.mode == "RGBA" else None
+        im = raw.convert("RGB")
         fill = tuple(cfg["fill"])
         stroke = tuple(cfg["stroke"])
         font_path = FONT_DIR / f"{cfg.get('font', 'segoeuib')}.ttf"
@@ -219,6 +224,9 @@ def run(spec_path: Path, only: str | None) -> int:
                           stroke_width=sw, stroke_fill=stroke)
                 yy += hh + 6
         out = out_dir / f"{name}.png"
+        if alpha is not None:
+            im = im.convert("RGBA")
+            im.putalpha(alpha)
         im.save(out)
         print(f"  {name}: надписей {len(labels)}, кегль {size} -> {out}")
         done += 1

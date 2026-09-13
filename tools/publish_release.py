@@ -8,6 +8,7 @@ gh-pages. Иначе витрина неминуемо разойдётся с �
 
     <out>/patcher/*.py        точка входа и модули tools/, от которых она зависит
     <out>/patcher/data/       данные перевода, урезанные до нужных полей
+    <out>/patcher/data/graphics_layers/   слой русских надписей: только наши пиксели
     <out>/patcher/requirements.txt
 
 Список модулей не выписан руками, а вычисляется: разбираем импорты `aai2ru.py`
@@ -109,6 +110,35 @@ def slim_strings() -> tuple[dict, dict]:
            {"strings_total": total, "strings_done": done}
 
 
+def copy_layers(dest: Path) -> int:
+    """Слой русских надписей — в данные патчера. Устаревший слой не везём.
+
+    Готовых картинок в комплекте нет и быть не может: витрина обещает «ни одного
+    файла игры». Едет только слой — наши пиксели и рецепты, — и склеивается
+    у игрока из его же текстуры (`picture_layer.py`). Листы для показа
+    остаются дома: это кадры игры.
+    """
+    from layer_localized import stale
+    from picture_layer import FOLDER
+
+    problems = stale()
+    if problems:
+        raise SystemExit("слой русских надписей в выпуск не годится:\n  " + "\n  ".join(problems))
+    manifest = load_json(FOLDER / "manifest.json")
+    if not manifest or not manifest["pictures"]:
+        return 0
+    dest.mkdir(parents=True, exist_ok=True)
+    save_json(dest / "manifest.json", manifest)
+    for entry in manifest["pictures"]:
+        for rel in (entry.get("layer"), entry.get("mask")):
+            if rel:
+                (dest / rel).parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(FOLDER / rel, dest / rel)
+    size = sum(p.stat().st_size for p in dest.rglob("*") if p.is_file())
+    print(f"слой русских надписей: картинок {len(manifest['pictures'])}, {size / 1024:.0f} КБ")
+    return len(manifest["pictures"])
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -140,6 +170,7 @@ def main() -> int:
     strings, more = slim_strings()
     save_json(data_out / "strings.json", strings)
     stats |= more
+    stats["pictures_done"] = copy_layers(data_out / "graphics_layers")
 
     stats |= {
         "built": time.strftime("%Y-%m-%d"),
@@ -235,6 +266,10 @@ def build_exe(patcher_out: Path, out: Path) -> int:
         # .exe падает на первом же бандле: «No module named UnityPy.resources».
         "--collect-all", "UnityPy",
         "--collect-all", "fontTools",
+        # etcpak UnityPy импортирует изнутри функции, в момент упаковки BC7.
+        # Без явного имени анализатор может его пропустить, и русские картинки
+        # у игрока лягут несжатыми — вчетверо тяжелее.
+        "--hidden-import", "etcpak",
         "--paths", str(patcher_out),
         str(patcher_out / f"{ENTRY}.py"),
     ]

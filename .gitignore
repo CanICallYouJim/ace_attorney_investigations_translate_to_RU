@@ -38,6 +38,11 @@ work/graphics_ru/**/*.png
 # на вклейку (art.json) — наше, оно остаётся.
 work/graphics_ai/**/*.png
 
+# Слой русских надписей для патчера и листы для показа. Собираются заново
+# tools/layer_localized.py из work/graphics_ru и оригиналов в backup/; в ветку
+# main и в .exe слой кладёт publish_release.py. Листы — кадры игры.
+work/graphics_layers/
+
 # Кэш карты «сегмент -> говорящий» для find_translationese.py. Считается за
 # восемь секунд из бандлов игры, версионировать нечего.
 work/.speakers_cache.json

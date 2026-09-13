@@ -237,6 +237,9 @@ def run(args) -> int:
 
     if args.uninstall:
         return uninstall(game, backup)
+    if args.bundle and not args.build_only:
+        return fail("--bundle — только вместе с --build-only: частичная установка\n"
+                    "оставила бы игру пропатченной наполовину.")
 
     import steps
 
@@ -283,45 +286,48 @@ def run(args) -> int:
 
     try:
         say()
-        mark = phase("Собираю реплики...")
-        for change in steps.scripts(stage):
-            say(f"    {change.key}: {apply(change)}")
-            done += 1
-        spent["реплики"] = time.time() - mark
+        # --bundle — проверочный режим: только графика названных бандлов,
+        # текст не собирается. Разрешён лишь вместе с --build-only (см. выше).
+        if not args.bundle:
+            mark = phase("Собираю реплики...")
+            for change in steps.scripts(stage):
+                say(f"    {change.key}: {apply(change)}")
+                done += 1
+            spent["реплики"] = time.time() - mark
 
-        mark = phase("Собираю строковые таблицы...")
-        for change in steps.strings(stage):
-            say(f"    {change.key}: {apply(change)}")
-            done += 1
-        spent["таблицы"] = time.time() - mark
+            mark = phase("Собираю строковые таблицы...")
+            for change in steps.strings(stage):
+                say(f"    {change.key}: {apply(change)}")
+                done += 1
+            spent["таблицы"] = time.time() - mark
 
-        # Первая игра не переводится, но немецкий из неё убрать надо: игрок
-        # выбрал «Русский» и не должен упираться в чужой язык.
-        mark = phase("Убираю немецкий из первой игры...")
-        for change in steps.gk1_scripts(stage):
-            say(f"    {change.key}: {apply(change)}")
-            done += 1
-        spent["первая игра"] = time.time() - mark
+            # Первая игра не переводится, но немецкий из неё убрать надо: игрок
+            # выбрал «Русский» и не должен упираться в чужой язык.
+            mark = phase("Убираю немецкий из первой игры...")
+            for change in steps.gk1_scripts(stage):
+                say(f"    {change.key}: {apply(change)}")
+                done += 1
+            spent["первая игра"] = time.time() - mark
 
-        mark = phase("Правлю гарнитуры — самый долгий шаг, файл на 113 МБ...")
-        changes = steps.fonts(stage)
-        if not changes:
-            say("    менять нечего — гарнитуры уже пропатчены")
-        for change in changes:
-            say(f"    {change.note}")
-            say(f"    data.unity3d: {apply(change)}")
-            done += 1
-        spent["гарнитуры"] = time.time() - mark
+            mark = phase("Правлю гарнитуры — самый долгий шаг, файл на 113 МБ...")
+            changes = steps.fonts(stage)
+            if not changes:
+                say("    менять нечего — гарнитуры уже пропатчены")
+            for change in changes:
+                say(f"    {change.note}")
+                say(f"    data.unity3d: {apply(change)}")
+                done += 1
+            spent["гарнитуры"] = time.time() - mark
 
         if not args.no_graphics:
-            mark = phase("Меняю немецкие надписи, ролики и выкрики на английские.")
+            mark = phase("Меняю немецкие надписи, ролики и выкрики на английские, а где готово — на русские.")
             say(f"    Это {'5,2 ГБ и минут двенадцать' if args.gk1_graphics else '2,9 ГБ и минут семь'}:"
                 " файлы игры переписываются целиком.")
             if not args.backup_graphics:
                 say("    Оригиналы графики не бэкапятся — это ещё 2,9 ГБ на диске."
                     " Вернуть их\n    можно через Steam: Проверить целостность файлов."
                     " Нужен бэкап — ключ --backup-graphics.")
-            for i, change in enumerate(steps.graphics(stage, args.gk1_graphics), 1):
+            for i, change in enumerate(steps.graphics(stage, args.gk1_graphics, tuple(args.bundle or ())), 1):
                 say(f"    [{i}] {change.key}: {apply(change, args.backup_graphics)}")
                 done += 1
             spent["графика"] = time.time() - mark
@@ -392,6 +398,13 @@ def check(args) -> int:
         say(f"    плюс графика: до {total} бандлов, {size / 2**30:.1f} ГБ"
             f" (меняются те, где есть немецкие адреса)")
 
+        from picture_layer import Shipment
+
+        pictures = len(Shipment())
+        if pictures:
+            say(f"    русских надписей на картинках: {pictures} — склеиваются на месте,"
+                " из ваших английских")
+
     say()
     say("  Это была проверка, ничего не изменено.")
     return 0
@@ -413,6 +426,8 @@ def parse_args(argv=None):
     ap.add_argument("--data", help="папка с данными перевода (по умолчанию рядом)")
     ap.add_argument("--build-only", metavar="ПАПКА",
                     help="собрать всё в папку и не трогать игру — для проверки")
+    ap.add_argument("--bundle", action="append", metavar="ПОДСТРОКА",
+                    help="вместе с --build-only: собрать только графику этих бандлов — для проверки")
     ap.add_argument("--no-pause", action="store_true", help="не ждать Enter в конце")
     return ap.parse_args(argv)
 

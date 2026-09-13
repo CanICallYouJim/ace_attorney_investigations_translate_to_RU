@@ -28,7 +28,7 @@ endif
 export PYTHONIOENCODING := utf-8
 
 .DEFAULT_GOAL := help
-.PHONY: help check check-full selftest build install graphics graphics-ru restore \
+.PHONY: help check check-full selftest build install graphics graphics-ru layers restore \
         status patch patch-check uninstall release publish extract clean
 
 help:                ## показать этот список
@@ -63,6 +63,9 @@ graphics:            ## подменить немецкую графику, ро
 graphics-ru:         ## только русские картинки (их ставит и install) — игра закрыта
 	$(PY) tools/inject_localized.py --install
 
+layers:              ## снять слой русских надписей для патчера и листы для показа
+	$(PY) tools/layer_localized.py
+
 restore:             ## вернуть игру к оригиналам
 	$(PY) tools/restore.py
 
@@ -75,13 +78,13 @@ status:              ## что сейчас стоит в игре и сколь
 patch-check:         ## показать, что сделает патчер, ничего не меняя
 	$(PY) patcher/aai2ru.py --check --no-pause
 
-patch:               ## накатить патчером на свою игру — тем же путём, что у игрока
+patch: layers        ## накатить патчером на свою игру — тем же путём, что у игрока
 	$(PY) patcher/aai2ru.py --no-pause
 
 uninstall:           ## откатить патчер: вернуть оригиналы из _backup_ru
 	$(PY) patcher/aai2ru.py --uninstall --no-pause
 
-release: check       ## собрать дерево витрины и AAI2-RU.exe в dist/release
+release: check layers ## собрать дерево витрины и AAI2-RU.exe в dist/release
 	$(PY) tools/publish_release.py --exe
 
 publish:             ## перенести собранное в ветку main и отправить на GitHub

@@ -43,6 +43,10 @@ work/graphics_ai/**/*.png
 # main и в .exe слой кладёт publish_release.py. Листы — кадры игры.
 work/graphics_layers/
 
+# Маска английской надписи, подложка и листы от tools/text_mask.py — кадры игры,
+# собираются заново из оригиналов в backup/.
+work/graphics_masks/
+
 # Кэш карты «сегмент -> говорящий» для find_translationese.py. Считается за
 # восемь секунд из бандлов игры, версионировать нечего.
 work/.speakers_cache.json

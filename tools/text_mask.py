@@ -51,9 +51,26 @@
 двумя группами и не прилегает к рисунку. Это остатки букв; их число — в `stats.json`
 и оранжевым на листе.
 
-Где метод не помогает — надпись у всех языков стоит в одном месте: подписи комнат,
-вывеска, логотип. Там дыр 38–40 % маски, и подложку нужно получать иначе (замер
-14 сентября: план дела 3, табличка «Тортофеерии», афиша самурая).
+Где голоса языков врут — надпись у всех языков стоит в одном месте: подписи комнат,
+вывеска, логотип. Буквы чужих подписей совпадают друг с другом, два-три языка
+«подтверждают» их как рисунок, и в подложке остаются призраки букв (план дела 3,
+14 сентября). **Подписи на ровной заливке** (`labels.json`: рамки и цвета букв) после
+голосования чистятся по палитре — в рамке подписи, если фон вокруг букв ровная
+заливка (оттенки плотно в ±8, шум сжатия; бумага плана с текстурой сюда не попадает).
+Включается ключом `"подложка": "заливка"` в задании картинки — только там, где чистка
+проверена глазами (`label_job`):
+
+  * пиксель заливки и пиксель не на треугольнике палитры (цвет букв, обводка, фон и их
+    смеси) остаются английскими — это фон и рисунок: стены, балки, лепестки, лестница;
+  * на треугольнике, и хоть один язык показывает здесь чистую заливку, — английская
+    буква: подложка = цвет фона;
+  * на треугольнике, чистую заливку не показал никто, — буква, если её кусок не уходит
+    за рамку в нетронутый рисунок; уходит — это рисунок того же цвета.
+
+Цвет фона — самый частый среди пикселей рамки, где все языки согласны: у «Сада» это
+серое поле, хотя над лестницей рядом пол зала. Вывеска на текстуре и рисованный
+логотип так не чистятся: там дыр 15 и 67 % маски (табличка «Тортофеерии», афиша
+самурая) — подложку нужно получать иначе.
 
     tools\\text_mask.py cut00_007 cut00_010    маска, подложка, лист — в work/graphics_masks/
     tools\\text_mask.py --all                  все картинки из work/graphics_ru/*/labels.json и art.json
@@ -64,6 +81,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import sys
 import time
 from itertools import combinations
@@ -73,7 +91,7 @@ import UnityPy
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 from common import WORK, load_json
-from layer_localized import index, original, variants
+from layer_localized import index, original, recipes, variants
 from picture_layer import FLIP, leaf, short
 
 OUT = WORK / "graphics_masks"
@@ -94,6 +112,11 @@ GAP = 10        # короткий разрыв линии
 ZONE = 9        # окно зоны разбора вокруг английских чернил
 CELL = 8        # клетка оценки бумаги
 MIN_PIECE = 12  # кусок рисунка меньше этого — не рисунок; линию через букву восстановит протяжка
+FLAT_PAD = 12   # подпись на ровной заливке: запас вокруг рамки из labels.json,
+FLAT_RING = 10  # кольцо вокруг — если фона внутри рамки мало,
+FLAT_TRI = 20   # «на треугольнике палитры» — расстояние до смеси цвета букв, обводки и фона,
+FLAT_TIGHT = 8  # оттенок заливки — только шум сжатия,
+FLAT_DENSE = 0.85  # доля фона плотно у своего цвета; меньше — текстура, а не заливка
 N8 = ((1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (-1, -1), (1, -1), (-1, 1))
 HOLE, SINGLE, CONFIRMED = 1, 2, 3
 
@@ -243,7 +266,143 @@ def load_variants(name: str) -> dict[str, Image.Image]:
     return out
 
 
-def build(images: dict[str, Image.Image]) -> dict:
+def label_job(name: str) -> dict | None:
+    """Задание подписей на ровной заливке (`labels.json` дела с ключом `"подложка": "заливка"`).
+
+    Ключ ставится там, где чистка проверена глазами. Сама по себе ровность рамки не довод:
+    у планов дела 1 белая рамка подписи тоже ровная, но в ней фигурки и перегородка, а у миниатюр
+    запас в 12 пикселей — полкарточки, и 14 сентября чистка утроила там следы.
+    """
+    case = case_of(name)
+    if not case:
+        return None
+    for job in recipes(RU / case).get(name, []):
+        if job.get("подложка") == "заливка" and job.get("labels") and "fill" in job and "stroke" in job:
+            return job
+    return None
+
+
+def _dot(a, b) -> float:
+    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
+
+
+def _seg2(v, p, q) -> float:
+    d = (q[0] - p[0], q[1] - p[1], q[2] - p[2])
+    w = (v[0] - p[0], v[1] - p[1], v[2] - p[2])
+    dd = _dot(d, d)
+    t = 0.0 if dd == 0 else max(0.0, min(1.0, _dot(w, d) / dd))
+    return (w[0] - t * d[0]) ** 2 + (w[1] - t * d[1]) ** 2 + (w[2] - t * d[2]) ** 2
+
+
+def palette_distance(v, a, b, c) -> float:
+    """Расстояние от цвета до треугольника смесей трёх цветов: буквы, обводка, фон."""
+    u = (a[0] - c[0], a[1] - c[1], a[2] - c[2])
+    w = (b[0] - c[0], b[1] - c[1], b[2] - c[2])
+    r = (v[0] - c[0], v[1] - c[1], v[2] - c[2])
+    uu, ww, uw, ur, wr = _dot(u, u), _dot(w, w), _dot(u, w), _dot(u, r), _dot(w, r)
+    det = uu * ww - uw * uw
+    if det > 1e-9:
+        t = (ur * ww - wr * uw) / det
+        s = (wr * uu - ur * uw) / det
+        if t >= 0 and s >= 0 and t + s <= 1:
+            e = (r[0] - t * u[0] - s * w[0], r[1] - t * u[1] - s * w[1], r[2] - t * u[2] - s * w[2])
+            return math.sqrt(_dot(e, e))
+    return math.sqrt(min(_seg2(v, a, b), _seg2(v, b, c), _seg2(v, a, c)))
+
+
+def flatten_labels(job: dict, V: dict[str, Image.Image], C: Image.Image, T: Image.Image,
+                   hole: Image.Image, state: Image.Image, paper: Image.Image, disagree) -> dict:
+    """Подписи на ровной заливке: в рамке подписи подложка — цвет фона там, где английская буква.
+
+    Правила — в шапке модуля. `disagree` — доступ к маске «языки расходятся» с запасом.
+    Цвет фона пишется и в оценку бумаги: тёмную заливку (серое поле у «Сада») та не видит,
+    и без этого следы и проверка картинок принимали фон за тёмный предмет.
+    """
+    E = V["eng"]
+    W, H = E.size
+    others = [l for l in V if l != "eng"]
+    ep, cp, tp, hp, sp, pap = E.load(), C.load(), T.load(), hole.load(), state.load(), paper.load()
+    P = {l: V[l].load() for l in others}
+    fill, stroke = tuple(job["fill"]), tuple(job["stroke"])
+    out = {"labels": 0, "skipped": 0, "filled": 0, "kept": 0}
+    for lab in job["labels"]:
+        bx0, by0, bx1, by1 = lab["box"]
+        x0, y0 = max(0, bx0 - FLAT_PAD), max(0, by0 - FLAT_PAD)
+        x1, y1 = min(W, bx1 + FLAT_PAD), min(H, by1 + FLAT_PAD)
+
+        def inside(q, x0=x0, y0=y0, x1=x1, y1=y1) -> bool:
+            return x0 <= q[0] < x1 and y0 <= q[1] < y1
+
+        inner = [(x, y) for y in range(y0, y1) for x in range(x0, x1) if not disagree[x, y]]
+        ring = [(x, y) for y in range(max(0, y0 - FLAT_RING), min(H, y1 + FLAT_RING))
+                for x in range(max(0, x0 - FLAT_RING), min(W, x1 + FLAT_RING))
+                if not inside((x, y)) and not disagree[x, y]]
+        pool = inner if len(inner) >= 20 else ring
+        bins: dict = {}
+        for q in pool:
+            v = ep[q]
+            bins.setdefault((v[0] // 8, v[1] // 8, v[2] // 8), []).append(v)
+        if not bins:
+            out["skipped"] += 1
+            continue
+        room = median(max(bins.values(), key=len))
+        close = [ep[q] for q in pool + ring if near(ep[q], room)]
+        if len(close) < 20 or sum(1 for v in close if near(v, room, FLAT_TIGHT)) < FLAT_DENSE * len(close):
+            out["skipped"] += 1           # фон с текстурой (бумага плана) — по палитре не чистится
+            continue
+        out["labels"] += 1
+        undecided = set()
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                ev = ep[x, y]
+                if near(ev, room, FLAT_TIGHT) or palette_distance(ev, fill, stroke, room) > FLAT_TRI:
+                    cp[x, y] = ev                                   # заливка или рисунок другого цвета
+                elif any(near(P[l][x, y], room, FLAT_TIGHT) and not near(P[l][x, y], ev, 12) for l in others):
+                    cp[x, y] = room                                 # язык показал здесь чистую заливку
+                    sp[x, y] = CONFIRMED
+                    out["filled"] += 1
+                else:
+                    undecided.add((x, y))
+        seen = set()
+        for start in list(undecided):
+            if start in seen:
+                continue
+            comp, stack, touches = [], [start], False
+            seen.add(start)
+            while stack:
+                p = stack.pop()
+                comp.append(p)
+                for dx, dy in N8:
+                    q = (p[0] + dx, p[1] + dy)
+                    if not (0 <= q[0] < W and 0 <= q[1] < H):
+                        continue
+                    if q in undecided:
+                        if q not in seen:
+                            seen.add(q)
+                            stack.append(q)
+                    elif not inside(q) and not near(ep[q], room):
+                        touches = True
+            for p in comp:
+                if touches:                                         # уходит за рамку в рисунок — рисунок
+                    cp[p] = ep[p]
+                    out["kept"] += 1
+                else:
+                    cp[p] = room
+                    sp[p] = SINGLE
+                    out["filled"] += 1
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                c, e = cp[x, y], ep[x, y]
+                changed = max(abs(c[0] - e[0]), abs(c[1] - e[1]), abs(c[2] - e[2])) > LOW
+                tp[x, y] = 255 if changed else 0
+                hp[x, y] = 0
+                pap[x, y] = room
+                if not changed:
+                    sp[x, y] = 0
+    return out
+
+
+def build(images: dict[str, Image.Image], labels: dict | None = None) -> dict:
     V = {l: images[l].convert("RGB") for l in ORDER if l in images}
     E = V["eng"]
     W, H = E.size
@@ -483,6 +642,7 @@ def build(images: dict[str, Image.Image]) -> dict:
             todo.discard(p)
     for (x, y) in todo:
         cp[x, y] = pp[x, y]
+    flat = flatten_labels(labels, V, C, T, hole, state, paper, rp) if labels else None
 
     # следы: не бумага, не подтверждено двумя группами, к рисунку не прилегает
     traces = Image.new("L", E.size, 0)
@@ -535,7 +695,7 @@ def build(images: dict[str, Image.Image]) -> dict:
             "confirmed_share": round(counts[CONFIRMED] / total, 4) if total else 0,
             "hole_share": round(n_holes / total, 4) if total else 0,
             "traces": n_traces, "coincidences_rejected": coincidences,
-            "languages": langs, "dropped_as_duplicates": dropped,
+            "languages": langs, "dropped_as_duplicates": dropped, "flat_labels": flat,
         },
     }
 
@@ -584,16 +744,19 @@ def main() -> int:
     stats = load_json(stats_path, default={}) or {}
     for name in names:
         t0 = time.time()
-        res = build(load_variants(name))
+        res = build(load_variants(name), label_job(name))
         for part in ("clean", "mask", "hole", "state", "traces", "drawn", "bridged", "paper"):
             res[part].save(OUT / f"{name}_{part}.png")
         sheet(name, res).save(OUT / f"sheet_{name}.png")
         st = res["stats"]
         stats[name] = st
+        fl = st["flat_labels"]
+        flat = (f"подписей на заливке {fl['labels']} (с текстурой {fl['skipped']}), залито {fl['filled']} px, "
+                f"оставлено рисунком {fl['kept']} px; " if fl else "")
         print(f"{name}: маска {st['mask_px']} px; подтверждено {st['confirmed_share']:.1%}, "
               f"одно наблюдение {st['single'] / max(1, st['mask_px']):.1%}, дыр {st['hole_share']:.1%}, "
               f"следов {st['traces']} px, отброшено совпадений букв {st['coincidences_rejected']} px; "
-              f"{time.time() - t0:.0f} c")
+              f"{flat}{time.time() - t0:.0f} c")
     stats_path.write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
     return 0
 

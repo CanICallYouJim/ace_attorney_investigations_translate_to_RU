@@ -203,7 +203,7 @@ def masks_for(name: str) -> dict[str, Image.Image]:
     paths = {p: tm.OUT / f"{name}_{p}.png" for p in parts}
     if not all(p.exists() for p in paths.values()):
         tm.OUT.mkdir(parents=True, exist_ok=True)
-        res = tm.build(tm.load_variants(name))
+        res = tm.build(tm.load_variants(name), tm.label_job(name))
         for part in ("clean", "mask", "hole", "state", "traces", "drawn", "bridged", "paper"):
             res[part].save(tm.OUT / f"{name}_{part}.png")
     return {p: Image.open(path) for p, path in paths.items()}

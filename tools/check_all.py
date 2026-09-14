@@ -45,6 +45,7 @@ CHECKS = [
     ("full", "токенизатор: параметры не текут в текст", ["test_tokens.py"]),
     ("full", "нарезка блоков на сегменты", ["test_segments.py"]),
     ("full", "индекс локализаций", ["test_polyglot_index.py"]),
+    ("full", "проверка картинок сама ловит порчу", ["check_pictures.py", "--selftest"]),
     ("build", "собранный бандл перед установкой", ["verify_build.py"]),
 ]
 

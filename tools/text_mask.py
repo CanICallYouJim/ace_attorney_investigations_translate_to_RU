@@ -7,39 +7,53 @@
 **все** пиксели надписи, и только потом набирать.
 
 Как устроено. У локализованной картинки в игре семь вариантов: английский, немецкий,
-французский, корейский, два китайских и японский без хвоста. Рисунок у них общий
-пиксель в пиксель (медиана разницы 0), расходятся только надписи. Поэтому:
+французский, корейский, два китайских и японский без хвоста. Рисунок у них общий,
+расходятся надписи — и шум сжатия BC7 возле них. В каждом пикселе у английских
+чернил (зона — 4 пикселя вокруг) другие языки дают показания одного из классов:
+бумага, красное, серое или тёмное без оттенка, прочий цвет.
 
-  1. Подложка в пикселе — значение, которое показывают другие языки там, где у них
-     самих нет надписи. Чужие чернила отсеиваются правилами:
-       * бумага (не тёмное и не красное) — если её показывают две группы языков,
-         или одна, но цвет совпадает с местной бумагой и по яркости, и по оттенку;
-       * тёмная линия под красной английской буквой — рисунок, хватит одного языка;
-       * значение цвета английских чернил — рисунок, только если соседство 9×9
-         у двух групп совпадает: линия продолжается, а буквы разных языков
-         разбегаются сразу; красное — только если его показывают все группы
-         (стрелки, красный конь);
-       * японский и оба китайских — одна группа: у них общие иероглифы одним шрифтом.
-     Выбор — по числу подтверждающих групп; при равенстве тёмная линия под красной
-     буквой, потом бумага, потом «рисунок цвета чернил».
-  2. Маска — пиксели, где английский расходится с подложкой больше чем на 24,
-     и кромка сглаживания в четырёх пикселях вокруг, если медиана других языков
-     там — бумага.
-  3. Дыра — пиксель английских чернил, подложку под которым не показал ни один язык.
-     Короткий разрыв линии (до 10 пикселей) тянется вдоль строки или столбца, если
-     концы похожи, не красные и темнее бумаги; остальное — размыванием только от
-     надёжных соседей, иначе в дыру затекает кромка английской буквы.
+  * **Местная бумага** — самый частый цвет в клетке 8×8 среди пикселей, где все языки
+    согласны и нет чернил; клетки внутри надписей берут значение у соседей. Не медиана
+    по языкам (пометки у всех языков в одних местах — в рукописи она розовая) и не
+    среднее (в него входят серые линии и тени — бумага выходила на 20–30 темнее
+    настоящей, и белое поле таблички переставало опознаваться бумагой).
+  * **Английский сам показывает рисунок** — только серое у красной английской пометки
+    (печатный английский текст сам серый, и на зернистой ксерокопии это правило
+    оставляло его буквы): если то же значение есть у другого языка и небумажные пиксели
+    английского и этого языка в окне 9×9 совпадают (пересечение к объединению ≥ 0,7).
+    Групп «за» должно быть больше, чем групп, показывающих здесь бумагу. Так остаются
+    стены и перила, которые сжатие высветлило у языков с красной пометкой рядом.
+  * **Под английской надписью рисунок** — если его показывают хотя бы две группы, их
+    небумажные пиксели в окне совпадают и групп «за» больше, чем групп с бумагой.
+    У красной пометки серое и тёмное — одно показание, значение — медиана тёмной
+    половины: сжатие рисует там одну линию то 70, то 150. У печатного текста —
+    только одинаковые значения и простая медиана, иначе на зернистой шапке
+    проступали буквы. Под красной английской буквой тёмное принимается и от одной
+    группы, если бумагу здесь не показал никто.
+  * **Бумага** — хватает одной группы, берётся медиана показаний.
 
-Каждый пиксель маски помечен: подтверждено (две группы и больше), одно наблюдение,
-дыра. Лист — оригинал, маска с дырами, подложка.
+Японский и оба китайских — одна группа: у них общие иероглифы одним шрифтом. Группа,
+у которой один язык показал бумагу, а другой — что-то нарисованное, не голосует.
+
+Принятый рисунок проверяется целым куском: остаётся, если продолжается в нетронутый
+рисунок того же цвета за зоной надписи (красное — красным, серое — тёмным) и в куске
+не меньше 12 пикселей, если его показали все группы или если три группы показывают
+весь кусок одной формой (совпадение по рамке куска ≥ 0,8). Иначе это совпадение букв
+(цифры корейской и китайской даты, штрихи «Rook» у трёх языков в табличке): пиксели
+идут в бумагу или в дыру. Тонкую линию, перечёркнутую буквой, дыра не теряет — её
+восстанавливает протяжка короткого разрыва.
+
+Дыра — пиксель английских чернил, где ни бумаги, ни рисунка не подтвердил никто.
+Короткий разрыв линии (до 10 пикселей) тянется вдоль строки или столбца, если концы
+похожи, не красные и темнее бумаги; остальное — размыванием от решённых соседей.
+
+**След** — пиксель подложки у бывшей надписи, который не бумага, не подтверждён
+двумя группами и не прилегает к рисунку. Это остатки букв; их число — в `stats.json`
+и оранжевым на листе.
 
 Где метод не помогает — надпись у всех языков стоит в одном месте: подписи комнат,
 вывеска, логотип. Там дыр 38–40 % маски, и подложку нужно получать иначе (замер
-14 сентября: план дела 3, табличка «Тортофеерии», афиша самурая). На планах
-с рукописными пометками подтверждено 93 %, дыр 4–5 %.
-
-Правила подбирались на плане 24 марта (`cut00_007`) за десять прогонов, разбор —
-[`docs/STATE.md`](../docs/STATE.md), раздел о графике.
+14 сентября: план дела 3, табличка «Тортофеерии», афиша самурая).
 
     tools\\text_mask.py cut00_007 cut00_010    маска, подложка, лист — в work/graphics_masks/
     tools\\text_mask.py --all                  все картинки из work/graphics_ru/*/labels.json и art.json
@@ -68,12 +82,18 @@ RU = WORK / "graphics_ru"
 ORDER = ("ger", "fre", "kor", "sim", "tra", "base", "eng")   # английский последним
 GROUP = {"eng": "eng", "ger": "ger", "fre": "fre", "kor": "kor", "sim": "cjk", "tra": "cjk", "base": "cjk"}
 TOL = 24        # «то же значение» с учётом шума сжатия BC7
-LOW = 10        # кромка сглаживания
-AGREE = 0.7     # совпадение соседства 9×9 для рисунка цвета чернил
-AGREE_DARK = 0.8
-PAPER = 20      # «похоже на местную бумагу»
+LOW = 10        # изменение меньше этого в маску не идёт
+AGREE = 0.7     # совпадение небумажных пикселей двух языков в окне 9×9
+SHAPE = 0.8     # совпадение небумажных пикселей по рамке целого куска рисунка
+MIN_UNION = 10  # окно, где небумажного меньше трёх пикселей, не судит
+SKIP = 12       # английский пиксель ближе этого к бумаге не трогается
+PAPER = 20      # «похоже на местную бумагу» по яркости
+TINT = 8        # и по оттенку
+LINE = 30       # «линия рисунка» — темнее местной бумаги на столько
 GAP = 10        # короткий разрыв линии
-ZONE = 9        # окно зоны разбора вокруг английских чернил (4 пикселя в стороны)
+ZONE = 9        # окно зоны разбора вокруг английских чернил
+CELL = 8        # клетка оценки бумаги
+MIN_PIECE = 12  # кусок рисунка меньше этого — не рисунок; линию через букву восстановит протяжка
 N8 = ((1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (-1, -1), (1, -1), (-1, 1))
 HOLE, SINGLE, CONFIRMED = 1, 2, 3
 
@@ -81,6 +101,11 @@ HOLE, SINGLE, CONFIRMED = 1, 2, 3
 def maxch(im: Image.Image) -> Image.Image:
     r, g, b = im.split()
     return ImageChops.lighter(ImageChops.lighter(r, g), b)
+
+
+def minch(im: Image.Image) -> Image.Image:
+    r, g, b = im.split()
+    return ImageChops.darker(ImageChops.darker(r, g), b)
 
 
 def over(mask: Image.Image, t: int) -> Image.Image:
@@ -105,8 +130,86 @@ def lum(v) -> int:
     return (v[0] * 3 + v[1] * 6 + v[2]) // 10
 
 
+def chroma(v) -> int:
+    return max(v) - min(v)
+
+
 def paperlike(v, paper) -> bool:
-    return near(v, paper, PAPER) and max(v) - min(v) <= max(paper) - min(paper) + 8
+    return near(v, paper, PAPER) and chroma(v) <= chroma(paper) + TINT
+
+
+def kind(v, paper) -> str:
+    """Класс показания: `p` бумага, `r` красное, `n` серое или тёмное без оттенка, `c` прочий цвет."""
+    if paperlike(v, paper):
+        return "p"
+    if ink(v) == "r":
+        return "r"
+    if chroma(v) <= chroma(paper) + TINT + 16:
+        return "n"
+    return "c"
+
+
+def continues(value, outside, paper) -> bool:
+    """Нетронутый пиксель за зоной продолжает рисунок того же цвета: красное — красным, серое — тёмным."""
+    k = kind(value, paper)
+    if k == "r":
+        return ink(outside) == "r"
+    if k == "n":
+        return kind(outside, paper) == "n" and lum(outside) < lum(paper) - LINE
+    return kind(outside, paper) == k
+
+
+def median(values):
+    return tuple(sorted(v[k] for v in values)[len(values) // 2] for k in range(3))
+
+
+def pick(values, k: str):
+    """Значение рисунка по показаниям: у серого — медиана тёмной половины, сжатие только высветляет."""
+    if k == "n":
+        values = sorted(values, key=lum)[: (len(values) + 1) // 2]
+    return median(values)
+
+
+def local_paper(E: Image.Image, differ: Image.Image) -> Image.Image:
+    """Цвет бумаги под надписями — самый частый цвет согласных пикселей без чернил в клетке 8×8."""
+    W, H = E.size
+    r, g, b = E.split()
+    dark = ImageChops.invert(maxch(E)).point(lambda v: 255 if v > 125 else 0)
+    red = ImageChops.multiply(r.point(lambda v: 255 if v > 90 else 0),
+                              over(ImageChops.subtract(r, ImageChops.lighter(g, b)), 45))
+    usable = ImageChops.multiply(ImageChops.invert(differ.filter(ImageFilter.MaxFilter(5))),
+                                 ImageChops.invert(ImageChops.lighter(dark, red)))
+    up, ep = usable.load(), E.load()
+    gw, gh = (W + CELL - 1) // CELL, (H + CELL - 1) // CELL
+    known = {}
+    for cy in range(gh):
+        for cx in range(gw):
+            bins: dict[int, list] = {}
+            for y in range(cy * CELL, min(H, (cy + 1) * CELL)):
+                for x in range(cx * CELL, min(W, (cx + 1) * CELL)):
+                    if up[x, y]:
+                        v = ep[x, y]
+                        bins.setdefault(lum(v) // 6, []).append(v)
+            if sum(len(vs) for vs in bins.values()) < 12:
+                continue
+            top = max(bins, key=lambda k: len(bins[k]) + len(bins.get(k - 1, ())) + len(bins.get(k + 1, ())))
+            known[(cx, cy)] = median(bins[top] + bins.get(top - 1, []) + bins.get(top + 1, []))
+    missing = {(cx, cy) for cy in range(gh) for cx in range(gw)} - set(known)
+    while missing:
+        step = {}
+        for cx, cy in missing:
+            vals = [known[q] for q in ((cx + dx, cy + dy) for dx, dy in N8) if q in known]
+            if vals:
+                step[(cx, cy)] = median(vals)
+        if not step:
+            break
+        known.update(step)
+        missing -= step.keys()
+    grid = Image.new("RGB", (gw, gh), (230, 230, 230))
+    gp = grid.load()
+    for q, v in known.items():
+        gp[q] = v
+    return grid.resize((gw * CELL, gh * CELL), Image.BILINEAR).crop((0, 0, W, H))
 
 
 def case_of(name: str) -> str | None:
@@ -150,105 +253,195 @@ def build(images: dict[str, Image.Image]) -> dict:
             dropped.append(l)          # несёт ту же надпись, что английский, — не голосует
             del V[l]
     langs = list(V)
-    others_all = [l for l in langs if l != "eng"]
-    groups_here = {GROUP[l] for l in others_all}
+    others = [l for l in langs if l != "eng"]
+    if not others:
+        raise ValueError("других языков с отличающейся надписью нет — сравнивать не с чем")
+    groups_total = len({GROUP[l] for l in others})
 
     region = Image.new("L", E.size, 0)
-    agree = {}
     for a, b in combinations(langs, 2):
-        d = over(maxch(ImageChops.difference(V[a], V[b])), TOL)
-        region = ImageChops.lighter(region, d)
-        if GROUP[a] != GROUP[b] and "eng" not in (a, b):
-            agree[frozenset((a, b))] = ImageChops.invert(d).filter(ImageFilter.BoxBlur(4)).load()
-    region = region.filter(ImageFilter.MaxFilter(7))
-    small = (max(1, W // 4), max(1, H // 4))
-    paper = E.resize(small, Image.BILINEAR).filter(ImageFilter.MedianFilter(5)).resize((W, H), Image.BILINEAR)
-    pp, ep, rp = paper.load(), E.load(), region.load()
+        region = ImageChops.lighter(region, over(maxch(ImageChops.difference(V[a], V[b])), TOL))
+    rp = region.filter(ImageFilter.MaxFilter(7)).load()
+
+    paper = local_paper(E, region)
+    pp, ep = paper.load(), E.load()
     P = {l: V[l].load() for l in langs}
 
-    inkE = Image.new("L", E.size, 0)
-    redE = Image.new("L", E.size, 0)
-    ip, rdp = inkE.load(), redE.load()
+    paper_l = paper.convert("L")
+    paper_c = ImageChops.subtract(maxch(paper), minch(paper))
+    marked = {}
+    for l in langs:
+        darker = over(ImageChops.subtract(paper_l, V[l].convert("L")), PAPER)
+        tinted = over(ImageChops.subtract(ImageChops.subtract(maxch(V[l]), minch(V[l])), paper_c), TINT)
+        marked[l] = ImageChops.lighter(darker, tinted)
+    overlap = {}
+    for a, b in combinations(langs, 2):
+        if GROUP[a] == GROUP[b]:
+            continue
+        same = ImageChops.invert(over(maxch(ImageChops.difference(V[a], V[b])), TOL))
+        inter = ImageChops.multiply(ImageChops.multiply(marked[a], marked[b]), same)
+        union = ImageChops.lighter(marked[a], marked[b])
+        overlap[frozenset((a, b))] = (inter.filter(ImageFilter.BoxBlur(4)).load(),
+                                      union.filter(ImageFilter.BoxBlur(4)).load())
+
+    def agrees(a: str, b: str, x: int, y: int) -> bool:
+        pair = overlap.get(frozenset((a, b)))
+        return bool(pair) and pair[1][x, y] >= MIN_UNION and pair[0][x, y] >= AGREE * pair[1][x, y]
+
+    ink_e = Image.new("L", E.size, 0)
+    red_e = Image.new("L", E.size, 0)
+    ip, rdp = ink_e.load(), red_e.load()
     for y in range(H):
         for x in range(W):
             if rp[x, y]:
                 c = ink(ep[x, y])
                 if c:
                     ip[x, y] = 255
-                if c == "r":
-                    rdp[x, y] = 255
-    zone = inkE.filter(ImageFilter.MaxFilter(ZONE)).load()
-    zone_r = redE.filter(ImageFilter.MaxFilter(5)).load()
+                    if c == "r":
+                        rdp[x, y] = 255
+    zone = ink_e.filter(ImageFilter.MaxFilter(ZONE)).load()
+    zone_r = red_e.filter(ImageFilter.MaxFilter(5)).load()
+    zone_r4 = red_e.filter(ImageFilter.MaxFilter(ZONE)).load()
 
     B = E.copy()
     bp = B.load()
     state = Image.new("L", E.size, 0)
     sp = state.load()
+    drawn = {}        # принятый рисунок: пиксель -> (сколько групп, какие языки)
+    fallback = {}     # принятый рисунок: пиксель -> (бумага, групп), если бумагу тоже показывали
     for y in range(H):
         for x in range(W):
-            if not rp[x, y]:
+            if not rp[x, y] or not zone[x, y]:
                 continue
-            ev = ep[x, y]
-            ec = "r" if zone_r[x, y] else ink(ev)
-            if ec is None and not zone[x, y]:
+            ev, pv = ep[x, y], pp[x, y]
+            if near(ev, pv, SKIP) and chroma(ev) <= chroma(pv) + TINT:
                 continue
-            clusters = []
-            for l in langs:
+            ek = kind(ev, pv)
+            flat, flat_langs, shown = [], [], {}
+            for l in others:
                 v = P[l][x, y]
-                for c in clusters:
-                    if near(c[0], v):
-                        c[1].append(l)
-                        break
+                k = kind(v, pv)
+                if k == "p":
+                    flat.append(v)
+                    flat_langs.append(l)
                 else:
-                    clusters.append([v, [l]])
-            best = best_key = None
-            for rep, mem in clusters:
-                oth = [l for l in mem if l != "eng"]
-                og = {GROUP[l] for l in oth}
-                c = ink(rep)
-                if c is None:
-                    ok = len(og) >= 2 or (len(og) == 1 and paperlike(rep, pp[x, y]))
-                    tier = 1
-                elif c == "d" and ec == "r":
-                    ok = len(og) >= 1
-                    tier = 2
-                else:
-                    pairs = [agree[frozenset((a, b))][x, y] for a, b in combinations(oth, 2)
-                             if frozenset((a, b)) in agree]
-                    mean = sum(pairs) / len(pairs) if pairs else 0
-                    if c == "r":
-                        ok = og == groups_here and mean >= AGREE * 255
+                    shown.setdefault(k, []).append((l, v))
+            painted = {GROUP[l] for items in shown.values() for l, _ in items}
+            split = {GROUP[l] for l in flat_langs} & painted      # у одного бумага, у другого рисунок
+            flat_groups = {GROUP[l] for l in flat_langs} - split
+            paper_pick = median(flat) if flat else None
+
+            choice = None
+            if ek == "n" and zone_r4[x, y] and "n" in shown:   # английский сам показывает рисунок у красной пометки
+                backers = [l for l, v in shown["n"] if GROUP[l] not in split
+                           and near(v, ev) and agrees("eng", l, x, y)]
+                backing = {GROUP[l] for l in backers}
+                if len(backing) > len(flat_groups):
+                    choice = (ev, len(backing), frozenset(backers) | {"eng"})
+            if choice is None:                   # под английской надписью рисунок
+                for k, items in shown.items():
+                    if k == "n" and zone_r4[x, y]:      # у красной пометки сжатие рисует одну линию разными серыми
+                        clusters = [items]
                     else:
-                        ok = len(og) >= 2 and mean >= AGREE_DARK * 255
-                    tier = 0
-                if not ok:
-                    continue
-                key = (len(og), tier, "eng" not in mem)
-                if best_key is None or key > best_key:
-                    best, best_key = (oth, og), key
-            if best is None:
-                if ink(ev) is not None or zone_r[x, y]:
-                    sp[x, y] = HOLE
+                        clusters = []
+                        for l, v in items:
+                            for cl in clusters:
+                                if near(cl[0][1], v):
+                                    cl.append((l, v))
+                                    break
+                            else:
+                                clusters.append([(l, v)])
+                    for cl in clusters:
+                        voters = [(l, v) for l, v in cl if GROUP[l] not in split]
+                        sg = {GROUP[l] for l, _ in voters}
+                        if len(sg) >= 2:
+                            ok = len(sg) > len(flat_groups) and any(
+                                agrees(a, b, x, y) for (a, _), (b, _) in combinations(voters, 2))
+                        elif len(sg) == 1:
+                            ok = k == "n" and not flat_groups and bool(zone_r[x, y])
+                        else:
+                            ok = False
+                        if ok and (choice is None or len(sg) > choice[1]):
+                            shades = [v for _, v in voters]
+                            value = pick(shades, k) if zone_r4[x, y] else median(shades)
+                            choice = (value, len(sg), frozenset(l for l, _ in voters))
+
+            if choice is not None:
+                value, n, who = choice
+                bp[x, y] = value
+                sp[x, y] = CONFIRMED if n >= 2 else SINGLE
+                drawn[(x, y)] = (n, who)
+                if paper_pick:
+                    fallback[(x, y)] = (paper_pick, len(flat_groups))
+            elif paper_pick:
+                bp[x, y] = paper_pick
+                sp[x, y] = CONFIRMED if len(flat_groups) >= 2 else SINGLE
+            elif ink(ev):
+                sp[x, y] = HOLE
+
+    def whole_shape(comp: list, votes: dict) -> bool:
+        """Три группы показывают весь кусок одной формой — рисунок, а не совпадение букв."""
+        common = [l for l, c in votes.items() if l != "eng" and 2 * c >= len(comp)]
+        if len({GROUP[l] for l in common}) < 3:
+            return False
+        xs = [p[0] for p in comp]
+        ys = [p[1] for p in comp]
+        box = (max(0, min(xs) - 4), max(0, min(ys) - 4), min(W, max(xs) + 5), min(H, max(ys) + 5))
+        matched = set()
+        for a, b in combinations(common, 2):
+            if GROUP[a] == GROUP[b]:
                 continue
-            oth, og = best
-            vals = [P[l][x, y] for l in oth]
-            bp[x, y] = tuple(sum(v[k] for v in vals) // len(vals) for k in range(3))
-            sp[x, y] = CONFIRMED if len(og) >= 2 else SINGLE
+            ma, mb = marked[a].crop(box), marked[b].crop(box)
+            same = ImageChops.invert(over(maxch(ImageChops.difference(V[a].crop(box), V[b].crop(box))), TOL))
+            inter = ImageChops.multiply(ImageChops.multiply(ma, mb), same).histogram()[255]
+            union = ImageChops.lighter(ma, mb).histogram()[255]
+            if union and inter >= SHAPE * union:
+                matched.update((GROUP[a], GROUP[b]))
+        return len(matched) >= 3
+
+    seen, coincidences = set(), 0
+    for start in list(drawn):
+        if start in seen or start not in drawn:
+            continue
+        comp, stack, strongest, touches, votes = [], [start], 0, False, {}
+        seen.add(start)
+        while stack:
+            cx, cy = stack.pop()
+            comp.append((cx, cy))
+            n, who = drawn[(cx, cy)]
+            strongest = max(strongest, n)
+            for l in who:
+                votes[l] = votes.get(l, 0) + 1
+            for dx, dy in N8:
+                nx, ny = cx + dx, cy + dy
+                if not (0 <= nx < W and 0 <= ny < H):
+                    continue
+                q = (nx, ny)
+                if q in drawn:
+                    if q not in seen:
+                        seen.add(q)
+                        stack.append(q)
+                elif not zone[nx, ny] and continues(bp[cx, cy], ep[nx, ny], pp[nx, ny]):
+                    touches = True
+        if (touches and len(comp) >= MIN_PIECE) or strongest >= groups_total or whole_shape(comp, votes):
+            continue
+        for q in comp:
+            del drawn[q]
+            coincidences += 1
+            fb = fallback.get(q)
+            if fb:
+                bp[q] = fb[0]
+                sp[q] = CONFIRMED if fb[1] >= 2 else SINGLE
+            elif ink(ep[q]):
+                bp[q] = ep[q]
+                sp[q] = HOLE
+            else:
+                bp[q] = ep[q]
+                sp[q] = 0
 
     hole = state.point(lambda v: 255 if v == HOLE else 0)
-    core = ImageChops.lighter(over(maxch(ImageChops.difference(E, B)), TOL), hole)
-    T = core.copy()
+    T = ImageChops.lighter(over(maxch(ImageChops.difference(E, B)), LOW), hole)
     tp = T.load()
-    ring = ImageChops.subtract(core.filter(ImageFilter.MaxFilter(ZONE)), core).load()
-    for y in range(H):
-        for x in range(W):
-            if not ring[x, y]:
-                continue
-            vals = [P[l][x, y] for l in others_all]
-            med = tuple(sorted(v[k] for v in vals)[len(vals) // 2] for k in range(3))
-            if ink(med) is None and paperlike(med, pp[x, y]) and not near(ep[x, y], med, LOW):
-                bp[x, y] = med
-                tp[x, y] = 255
 
     C = Image.composite(B, E, T)
     cp, hp = C.load(), hole.load()
@@ -274,29 +467,13 @@ def build(images: dict[str, Image.Image]) -> dict:
                     break
 
     todo = {(x, y) for y in range(H) for x in range(W) if hp[x, y]} - done
-    filled = set(done)
-
-    def trusted(xx, yy):
-        if (xx, yy) in filled:
-            return cp[xx, yy]
-        if sp[xx, yy] >= SINGLE:
-            return bp[xx, yy]
-        if not zone[xx, yy]:
-            return cp[xx, yy]
-        return None
-
     for _ in range(80):
         if not todo:
             break
         step = []
         for (x, y) in todo:
-            acc = []
-            for dx, dy in N8:
-                xx, yy = x + dx, y + dy
-                if 0 <= xx < W and 0 <= yy < H and (xx, yy) not in todo:
-                    v = trusted(xx, yy)
-                    if v is not None:
-                        acc.append(v)
+            acc = [cp[x + dx, y + dy] for dx, dy in N8
+                   if 0 <= x + dx < W and 0 <= y + dy < H and (x + dx, y + dy) not in todo]
             if len(acc) >= 3:
                 step.append(((x, y), tuple(sum(a[k] for a in acc) // len(acc) for k in range(3))))
         if not step:
@@ -304,9 +481,41 @@ def build(images: dict[str, Image.Image]) -> dict:
         for p, v in step:
             cp[p] = v
             todo.discard(p)
-            filled.add(p)
     for (x, y) in todo:
         cp[x, y] = pp[x, y]
+
+    # следы: не бумага, не подтверждено двумя группами, к рисунку не прилегает
+    traces = Image.new("L", E.size, 0)
+    trp = traces.load()
+    for y in range(H):
+        for x in range(W):
+            if not tp[x, y] or (x, y) in drawn or (x, y) in done:
+                continue
+            v = cp[x, y]
+            if paperlike(v, pp[x, y]):
+                continue
+            if len({GROUP[l] for l in others if near(P[l][x, y], v)}) >= 2:
+                continue
+            beside = False
+            for dy in range(-2, 3):
+                for dx in range(-2, 3):
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < W and 0 <= ny < H and ((nx, ny) in drawn or (nx, ny) in done
+                            or (not zone[nx, ny] and lum(ep[nx, ny]) < lum(pp[nx, ny]) - LINE)):
+                        beside = True
+                        break
+                if beside:
+                    break
+            if not beside:
+                trp[x, y] = 255
+
+    drawn_map = Image.new("L", E.size, 0)
+    bridged = Image.new("L", E.size, 0)
+    dmp, brp = drawn_map.load(), bridged.load()
+    for q, (n, _) in drawn.items():
+        dmp[q] = min(255, 60 * n)          # яркость — сколько групп показали рисунок
+    for q in done:
+        brp[q] = 255
 
     counts = {HOLE: 0, SINGLE: 0, CONFIRMED: 0}
     for y in range(H):
@@ -316,13 +525,16 @@ def build(images: dict[str, Image.Image]) -> dict:
     total = T.histogram()[255]
     clean = C.convert("RGBA")
     clean.putalpha(images["eng"].getchannel("A"))
+    n_holes, n_traces = hole.histogram()[255], traces.histogram()[255]
     return {
-        "eng": E, "clean": clean, "mask": T, "hole": hole, "state": state,
+        "eng": E, "clean": clean, "mask": T, "hole": hole, "state": state, "traces": traces,
+        "drawn": drawn_map, "bridged": bridged, "paper": paper,
         "stats": {
             "mask_px": total,
-            "confirmed": counts[CONFIRMED], "single": counts[SINGLE], "holes": hole.histogram()[255],
+            "confirmed": counts[CONFIRMED], "single": counts[SINGLE], "holes": n_holes,
             "confirmed_share": round(counts[CONFIRMED] / total, 4) if total else 0,
-            "hole_share": round(hole.histogram()[255] / total, 4) if total else 0,
+            "hole_share": round(n_holes / total, 4) if total else 0,
+            "traces": n_traces, "coincidences_rejected": coincidences,
             "languages": langs, "dropped_as_duplicates": dropped,
         },
     }
@@ -334,14 +546,17 @@ def sheet(name: str, res: dict) -> Image.Image:
     ov = E.copy()
     ov.paste((255, 0, 255), mask=res["mask"])
     ov.paste((0, 200, 255), mask=res["hole"])
+    marked = C.copy()
+    marked.paste((255, 140, 0), mask=res["traces"].filter(ImageFilter.MaxFilter(3)))
     w = 960 if E.width >= 900 else E.width * 3
     s = w / E.width
     h = int(E.height * s)
     how = Image.LANCZOS if s < 1 else Image.NEAREST
     tiles = (("оригинал", E),
              ("пурпур — английская надпись; голубое — подложку не показал ни один язык", ov),
-             ("подложка без надписи", C))
-    out = Image.new("RGB", (w, 3 * (h + 24)), (30, 30, 30))
+             ("подложка без надписи", C),
+             ("оранжевое — следы букв на подложке", marked))
+    out = Image.new("RGB", (w, len(tiles) * (h + 24)), (30, 30, 30))
     dr = ImageDraw.Draw(out)
     for k, (title, im) in enumerate(tiles):
         out.paste(im.resize((w, h), how), (0, k * (h + 24) + 24))
@@ -370,13 +585,14 @@ def main() -> int:
     for name in names:
         t0 = time.time()
         res = build(load_variants(name))
-        for part in ("clean", "mask", "hole", "state"):
+        for part in ("clean", "mask", "hole", "state", "traces", "drawn", "bridged", "paper"):
             res[part].save(OUT / f"{name}_{part}.png")
         sheet(name, res).save(OUT / f"sheet_{name}.png")
         st = res["stats"]
         stats[name] = st
         print(f"{name}: маска {st['mask_px']} px; подтверждено {st['confirmed_share']:.1%}, "
-              f"одно наблюдение {st['single'] / max(1, st['mask_px']):.1%}, дыр {st['hole_share']:.1%}; "
+              f"одно наблюдение {st['single'] / max(1, st['mask_px']):.1%}, дыр {st['hole_share']:.1%}, "
+              f"следов {st['traces']} px, отброшено совпадений букв {st['coincidences_rejected']} px; "
               f"{time.time() - t0:.0f} c")
     stats_path.write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
     return 0

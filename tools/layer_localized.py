@@ -468,9 +468,17 @@ def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
               flush=True)
         env = UnityPy.load(str(src))
         pairs = dict(plan_env(env))
+        from picture_layer import sprites_by_key
+        from plates import layer_entry
+        sprites = sprites_by_key(env)
         for png, key in sorted(places[bundle_name], key=lambda it: (it[0].stem in derive_of, it[0].stem)):
             name = png.stem
             entry: dict = {"name": name, "bundle": short(bundle_name), "key": key}
+            if key in sprites:
+                # Плашка ситуации: наш набор целиком, склеивать не с чем (plates.py).
+                problems += layer_entry(folder, entry, png, file_sha(png), env, sprites[key], manifest,
+                                        PREVIEW if show else None)
+                continue
             source_key = pairs.get(key)
             if source_key is None:
                 manifest["skipped"].append({**entry, "why": "нет ни английского, ни базового варианта"})

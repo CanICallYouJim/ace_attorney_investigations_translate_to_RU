@@ -28,7 +28,7 @@ endif
 export PYTHONIOENCODING := utf-8
 
 .DEFAULT_GOAL := help
-.PHONY: help check check-full selftest build install graphics graphics-ru layers restore \
+.PHONY: help check check-full selftest build install graphics graphics-ru plates layers restore \
         status patch patch-check uninstall release publish extract clean
 
 help:                ## показать этот список
@@ -62,6 +62,9 @@ graphics:            ## подменить немецкую графику, ро
 
 graphics-ru:         ## только русские картинки (их ставит и install) — игра закрыта
 	$(PY) tools/inject_localized.py --install
+
+plates:              ## набрать русские плашки ситуации и сверить с английскими (ставит их install)
+	$(PY) tools/plates.py
 
 layers:              ## снять слой русских надписей для патчера и листы для показа
 	$(PY) tools/layer_localized.py

@@ -138,6 +138,50 @@ def pictures() -> int:
         return 0
     pngs = {p.stem: p for p in RU.rglob("*.png")}
     bad = 0
+
+    def plate_ok(built, entry) -> bool:
+        """Плашка: немецкая текстура несёт ровно набор, сетка покрывает надпись,
+        по адресу по-прежнему текстура и спрайт, строка таблицы локали — на немецкий спрайт."""
+        from picture_layer import sprites_by_key, texture_of
+        from swap_localized import swap_image_table
+
+        sprite = sprites_by_key(built).get(entry["key"])
+        if sprite is None:
+            print(f"    {entry['name']:18} спрайта нет  <- РАЗОШЛОСЬ")
+            return False
+        rd = sprite.read_typetree()["m_RD"]
+        tex = texture_of(built, sprite).read()
+        want = Image.open(pngs[entry["name"]]).convert("RGBA")
+        same = pixels_sha(tex.image) == pixels_sha(want)
+        box = want.getchannel("A").getbbox()
+        tr, h = rd["textureRect"], tex.m_Height
+        covers = (rd["m_VertexData"]["m_VertexCount"] == 4
+                  and tr["x"] <= box[0] and tr["x"] + tr["width"] >= box[2]
+                  and tr["y"] <= h - box[3] and tr["y"] + tr["height"] >= h - box[1])
+        types = {o.path_id: o.type.name for o in built.objects}
+        tree = next(o for o in built.objects if o.type.name == "AssetBundle").read_typetree()
+        kinds = sorted(types.get(info["asset"]["m_PathID"], "?") for k, info in tree["m_Container"]
+                       if k == entry["key"])
+        addresses = kinds == ["Sprite", "Texture2D"]
+        table = True
+        if entry.get("table"):
+            blob, _ = swap_image_table(shipment.table_rows(BUNDLES))
+            rows = {}
+            for obj in UnityPy.load(blob).objects:
+                if obj.type.name == "MonoBehaviour":
+                    data = obj.read_typetree()
+                    if "m_TableData" in data:
+                        rows = {r["m_Id"]: r["m_Localized"] for r in data["m_TableData"]}
+            table = rows.get(entry["table"]["m_Id"]) == entry["table"]["german"]
+        ok = same and covers and addresses and table
+        print(f"    {entry['name']:18} плашка: пиксели {'ровно набор' if same else 'ДРУГИЕ'}; "
+              f"сетка {'прямоугольник по надписи' if covers else 'НЕ ПОКРЫВАЕТ НАДПИСЬ'}; "
+              f"по адресу {'текстура и спрайт' if addresses else 'СБИТО: ' + ', '.join(kinds)}"
+              + (f"; таблица локали {'на немецкий спрайт' if table else 'ВЕДЁТ НЕ ТУДА'}"
+                 if entry.get("table") else "")
+              + ("" if ok else "  <- РАЗОШЛОСЬ"))
+        return ok
+
     for bundle in sorted(shipment.by_bundle, key=lambda b: (b not in shipment.feeders, b)):
         live = next(BUNDLES.glob(f"{bundle}_assets_all_*.bundle"))
         src = original(live.name)
@@ -157,6 +201,9 @@ def pictures() -> int:
         container = dict(ab["m_Container"])
         print(f"  {bundle}: собрано картинок {done}" + "".join(f"; {n}" for n in notes))
         for entry in shipment.by_bundle[bundle]:
+            if entry.get("kind") == "plate":
+                bad += not plate_ok(built, entry)
+                continue
             obj = built.container[entry["key"]]
             got = obj.read().image.convert("RGBA")
             want = Image.open(pngs[entry["name"]]).convert("RGBA")

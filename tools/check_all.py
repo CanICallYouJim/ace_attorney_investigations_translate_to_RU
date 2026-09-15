@@ -46,6 +46,7 @@ CHECKS = [
     ("full", "нарезка блоков на сегменты", ["test_segments.py"]),
     ("full", "индекс локализаций", ["test_polyglot_index.py"]),
     ("full", "проверка картинок сама ловит порчу", ["check_pictures.py", "--selftest"]),
+    ("full", "плашки ситуации: набор по заданию, края и обводка", ["plates.py", "--check"]),
     ("build", "собранный бандл перед установкой", ["verify_build.py"]),
 ]
 

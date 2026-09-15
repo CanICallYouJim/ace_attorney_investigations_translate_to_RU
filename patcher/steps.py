@@ -214,7 +214,7 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = ()) ->
     `only` — куски имён бандлов: собрать только их. Для проверки, не для игрока.
     """
     from common import BUNDLES
-    from picture_layer import Shipment
+    from picture_layer import Shipment, short
     from swap_localized import IMAGE_TABLE_BUNDLE, collect, redirect, swap_image_table
 
     wanted = CATEGORIES + ("gk1",) if with_gk1 else CATEGORIES
@@ -222,13 +222,23 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = ()) ->
     for part in only or (None,):
         plan.update(collect(wanted, part))
     russian = Shipment()
+    # Бандл, где подменять адреса нечего, а русское лежит, — немецкие плашки ситуации:
+    # английских двойников в нём нет, и collect() его не берёт.
+    have = {short(n) for n in plan}
+    for bundle in russian.by_bundle:
+        live = next(BUNDLES.glob(f"{bundle}_assets_all_*.bundle"), None)
+        if live is not None and bundle not in have and (not only or any(p in live.name for p in only)):
+            plan[live.name] = []
+    # Строки таблицы локали у плашек, которые лягут: игра берёт Situation_0/1 через таблицу.
+    keep = russian.table_rows(BUNDLES)
     for name, pairs in sorted(plan.items(), key=lambda kv: (not russian.feeds(kv[0]), kv[0])):
         live = BUNDLES / name
         if IMAGE_TABLE_BUNDLE in name:
             # Особый бандл: английских двойников внутри нет, подменяются
-            # значения в таблице картинок локали.
-            blob, changed = swap_image_table()
-            note = f"таблица картинок локали, записей {changed}"
+            # значения в таблице картинок локали; строки русских плашек — немецкие.
+            blob, changed = swap_image_table(keep)
+            note = f"таблица картинок локали, записей {changed}" + (
+                f", немецкими оставлены {len(keep)} — русские плашки" if keep else "")
         elif russian.has(name):
             blob, done, notes = russian.build(live, pairs)
             note = "; ".join([f"адресов {len(pairs)}, из них с русской картинкой {done}", *notes])

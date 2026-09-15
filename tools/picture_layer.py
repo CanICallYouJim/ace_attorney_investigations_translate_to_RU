@@ -6,6 +6,10 @@
 собранных уменьшением большой. Склеивается картинка на машине игрока, из его
 собственной текстуры. Решение пользователя от 13 сентября 2026, вариант (а).
 
+Плашки ситуации (`plates.py`) — исключение: их надпись наша целиком, набранная
+шрифтом на прозрачном, склеивать не с чем. Плашка едет готовой картинкой
+и ложится в немецкий спрайт вместе с новой сеткой (`write_sprite`).
+
 Здесь то, что нужно патчеру: склейка и запись в бандл. Снимает слой и сверяет
 его с оригиналом `layer_localized.py`. Запись в бандл общая с `inject_localized.py`,
 так что `make install` и игрок получают бандл, собранный одним кодом.
@@ -13,12 +17,13 @@
 Слой лежит в `graphics_layers/` рядом с данными перевода:
 
     manifest.json               что склеивать, из какой текстуры и какой стороной
-    <бандл>/<имя>.png           изменённые пиксели, обрезанные по рамке правки
+    <бандл>/<имя>.png           изменённые пиксели, обрезанные по рамке правки; у плашки — она целиком
     <бандл>/<имя>_mask.png      какие пиксели из них брать
 """
 from __future__ import annotations
 
 import hashlib
+import struct
 from pathlib import Path
 
 import UnityPy
@@ -30,6 +35,7 @@ from common import WORK, load_json
 FOLDER = WORK / "graphics_layers"
 RAW = int(TextureFormat.RGBA32)
 FLIP = Image.Transpose.FLIP_TOP_BOTTOM
+MESH_PAD = 2              # запас сетки вокруг надписи — как у тугой сетки самого Unity
 
 
 def short(bundle_name: str) -> str:
@@ -102,6 +108,78 @@ def german_object(env, entries: dict, key: str, source_key: str | None):
     return found[0]
 
 
+def sprites_by_key(env) -> dict[str, object]:
+    """Адрес контейнера -> спрайт.
+
+    У картинки-спрайта по одному адресу **две** записи — текстура и спрайт, —
+    и словарь `env.container` оставляет от них последнюю, какая попадётся.
+    """
+    ab = next(o for o in env.objects if o.type.name == "AssetBundle")
+    sprites = {o.path_id: o for o in env.objects if o.type.name == "Sprite"}
+    return {key: sprites[info["asset"]["m_PathID"]]
+            for key, info in ab.read_typetree()["m_Container"]
+            if info["asset"]["m_PathID"] in sprites}
+
+
+def texture_of(env, sprite):
+    """Объект текстуры, на которой лежит спрайт.
+
+    У спрайтов из атласа (даты ситуации) текстура в другом файле — такие сюда
+    не ходят; плашки лежат на своих текстурах в том же бандле.
+    """
+    ptr = sprite.read_typetree()["m_RD"]["texture"]
+    found = next((o for o in env.objects if o.path_id == ptr["m_PathID"]), None) if ptr["m_FileID"] == 0 else None
+    if found is None:
+        raise KeyError(f"{sprite.peek_name()}: текстура спрайта не в этом бандле (m_FileID {ptr['m_FileID']})")
+    return found
+
+
+def write_sprite(env, sprite, img: Image.Image) -> str:
+    """Плашка: пиксели — в текстуру спрайта, сетка — прямоугольник по рамке надписи.
+
+    Сетка спрайта у Unity — многоугольник по контуру немецкого слова, и русское
+    слово шире рисовалось бы обрезанным по нему. Прямоугольник покрывает рамку
+    надписи с запасом `MESH_PAD`; `textureRect` — та же рамка. UV в сетке у Unity
+    нулевые — он считает их сам из позиций и `uvTransform`, — так что пишутся
+    только позиции. Треугольники по часовой, как у оригинала.
+    """
+    tree = sprite.read_typetree()
+    rd = tree["m_RD"]
+    tex_obj = texture_of(env, sprite)
+    tex = tex_obj.read()
+    w, h = tex.m_Width, tex.m_Height
+    if img.size != (w, h):
+        raise ValueError(f"{tree['m_Name']}: картинка {img.size[0]}x{img.size[1]}, текстура {w}x{h}")
+    box = img.getchannel("A").getbbox()
+    if box is None:
+        raise ValueError(f"{tree['m_Name']}: картинка пустая")
+    tex.set_image(img, target_format=int(tex.m_TextureFormat))
+    tex.save()
+
+    x0, x1 = max(0, box[0] - MESH_PAD), min(w, box[2] + MESH_PAD)
+    top, bottom = max(0, box[1] - MESH_PAD), min(h, box[3] + MESH_PAD)
+    y0, y1 = h - bottom, h - top                  # у Unity y растёт снизу
+    ppu = tree["m_PixelsToUnits"]
+    px = tree["m_Pivot"]["x"] * tree["m_Rect"]["width"]
+    py = tree["m_Pivot"]["y"] * tree["m_Rect"]["height"]
+    corners = [(x0, y1), (x1, y1), (x1, y0), (x0, y0)]
+    positions = b"".join(struct.pack("<3f", (x - px) / ppu, (y - py) / ppu, 0.0) for x, y in corners)
+    uv_at = -(-len(positions) // 16) * 16         # поток UV выровнен на 16 байт
+    vd = rd["m_VertexData"]
+    old = vd["m_VertexCount"]
+    vd["m_VertexCount"] = len(corners)
+    vd["m_DataSize"] = positions + bytes(uv_at - len(positions) + 8 * len(corners))
+    indices = struct.pack("<6H", 0, 1, 2, 2, 3, 0)
+    rd["m_IndexBuffer"] = indices if isinstance(rd["m_IndexBuffer"], (bytes, bytearray)) else list(indices)
+    rd["m_SubMeshes"] = rd["m_SubMeshes"][:1]
+    rd["m_SubMeshes"][0].update(firstByte=0, indexCount=6, baseVertex=0, firstVertex=0, vertexCount=4)
+    rd["textureRect"] = {"x": float(x0), "y": float(y0), "width": float(x1 - x0), "height": float(y1 - y0)}
+    rd["textureRectOffset"] = {"x": float(x0), "y": float(y0)}
+    tree["m_PhysicsShape"] = [[{"x": (x - px) / ppu, "y": (y - py) / ppu} for x, y in corners]]
+    sprite.save_typetree(tree)
+    return f"{tree['m_Name']}: сетка {old} вершин -> 4, рамка x {x0}..{x1}, y {y0}..{y1} (снизу)"
+
+
 def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Image],
                  raw: bool = False) -> tuple[bytes, list[str]]:
     """Бандл целиком: немецким адресам — английские объекты, кроме адресов со своей картинкой.
@@ -115,6 +193,9 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
     по адресу `_ger`, а в подменённом бандле тот вёл на английский: русское
     писалось в английские текстуры, и в английской версии игры восемь картинок
     стали русскими.
+
+    Адрес спрайта (плашки) не трогается: у него две записи, текстура и спрайт,
+    и обе и так ведут на немецкие объекты — английских двойников в бандле нет.
     """
     ab = next(o for o in env.objects if o.type.name == "AssetBundle")
     tree = ab.read_typetree()
@@ -125,9 +206,13 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
         raise KeyError(f"в контейнере нет записей: {missing[:5]}")
 
     sources = dict(pairs)
+    sprites = sprites_by_key(env)
     notes: list[str] = []
     own: dict[str, int] = {}
     for key, img in pictures.items():
+        if key in sprites:
+            notes.append(write_sprite(env, sprites[key], img))
+            continue
         obj = german_object(env, entries, key, sources.get(key))
         tex = obj.read()
         if img.size != (tex.m_Width, tex.m_Height):
@@ -191,6 +276,39 @@ class Shipment:
         """Из картинок этого бандла уменьшаются другие — собирать его раньше."""
         return short(bundle_name) in self.feeders
 
+    @staticmethod
+    def plate_fits(env, sprites: dict, entry: dict) -> str | None:
+        """Ляжет ли плашка в этот бандл. None — ляжет, иначе — почему нет."""
+        sprite = sprites.get(entry["key"])
+        if sprite is None:
+            return "в бандле нет её спрайта"
+        found = pixels_sha(texture_of(env, sprite).read().image)
+        if found not in (entry["texture_sha"], entry["plate_sha"]):
+            return "немецкая плашка в этой игре другая"
+        return None
+
+    def table_rows(self, bundles: Path) -> dict[int, str]:
+        """Строки таблицы картинок локали, которым остаться немецкими: `m_Id` -> значение.
+
+        Только у плашек, которые лягут в живой бандл игрока: иначе таблица повела бы
+        на немецкий спрайт с немецкой надписью. Сверка — та же, что при сборке.
+        """
+        rows: dict[int, str] = {}
+        plates: dict[str, list[dict]] = {}
+        for entry in self.pictures:
+            if entry.get("kind") == "plate" and entry.get("table"):
+                plates.setdefault(entry["bundle"], []).append(entry)
+        for bundle, entries in plates.items():
+            live = next(bundles.glob(f"{bundle}_assets_all_*.bundle"), None)
+            if live is None:
+                continue
+            env = UnityPy.load(str(live))
+            sprites = sprites_by_key(env)
+            for entry in entries:
+                if self.plate_fits(env, sprites, entry) is None:
+                    rows[entry["table"]["m_Id"]] = entry["table"]["german"]
+        return rows
+
     def build(self, path: Path, pairs: list[tuple[str, str]]) -> tuple[bytes, int, list[str]]:
         """Бандл с подменой и русскими картинками. Возвращает байты, сколько картинок, заметки.
 
@@ -201,8 +319,17 @@ class Shipment:
         env = UnityPy.load(str(path))
         pictures: dict[str, Image.Image] = {}
         notes: list[str] = []
+        sprites: dict | None = None
         for entry in self.by_bundle.get(short(path.name), []):
             name = entry["name"]
+            if entry.get("kind") == "plate":
+                sprites = sprites if sprites is not None else sprites_by_key(env)
+                why = self.plate_fits(env, sprites, entry)
+                if why:
+                    notes.append(f"{name}: {why} — оставлена как есть")
+                    continue
+                pictures[entry["key"]] = Image.open(self.folder / entry["layer"]).convert("RGBA")
+                continue
             if entry["key"] not in env.container or entry["source"] not in env.container:
                 notes.append(f"{name}: в бандле нет её адреса — оставлена английской")
                 continue

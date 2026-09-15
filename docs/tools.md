@@ -506,7 +506,8 @@ PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe tools/table_keys.py --dump     #
 | `swap_localized.py` | Отдать немецким адресам английские объекты; `--install` — в игру, `--check` — что стоит |
 | `inject_localized.py` | Вставить свои PNG на место немецких — если надпись хочется по-русски; без папки берёт весь `work/graphics_ru`, так его зовёт `make install`. Собирает бандл из оригинала в `backup/`, пишет в немецкий объект |
 | `layer_localized.py` | Снять слой русских надписей для патчера (`make layers`): сверка с оригиналом — пиксели, сторона, рамки надписей — и листы для показа в `work/graphics_layers/preview/`; `--check` — ничего не писать |
-| `picture_layer.py` | Общая часть: склейка «английская текстура + слой» и запись картинки в бандл — для патчера и для `inject_localized.py` |
+| `picture_layer.py` | Общая часть: склейка «английская текстура + слой» и запись картинки в бандл — для патчера и для `inject_localized.py`; плашку-спрайт пишет `write_sprite` (текстура + сетка прямоугольником) |
+| `plates.py` | Плашки ситуации `Situation_0..6` (`make plates`): набрать русские по замеру английских — Segoe UI Bold, обводка 7 px, кайма у цветных — и сверить края, обводку и штрих; лист `work/graphics_masks/checks/plates.png`; `--check` — лежащие PNG против задания `work/graphics_ru/ui/plates.json`. Ставит их `inject_localized.py` вместе со строками `Situation_0/1` таблицы локали |
 
 Подмена пикселей не трогает: она идёт правкой таблицы «адрес → объект» внутри
 бандла (`AssetBundle.m_Container`), а для локальной таблицы картинок — заменой GUID

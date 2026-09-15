@@ -31,6 +31,13 @@
 на тот же английский: русское писалось в английские текстуры и сверялось само
 с собой. Три картинки дела 1 так и встали в игру вверх ногами.
 
+Про плашки ситуации (`Situation_0..6`, набирает `plates.py`). Это спрайты: пиксели
+идут в их текстуру, сетка спрайта становится прямоугольником по русской надписи
+(`picture_layer.write_sprite`). Сторона не голосуется — языковых вариантов в немецком
+бандле нет, а плашка набрана лицом вверх по английской, раскодированной тем же
+UnityPy. `Situation_0` и `Situation_1` игра берёт через таблицу картинок локали,
+поэтому вместе с плашками собирается и таблица: их строки — на немецкие спрайты.
+
 Про формат. Картинка пакуется в тот же формат, что был у оригинала: 402 из 451
 немецкой текстуры лежат в BC7, остальные в RGBA32. BC7 умеет `etcpak`, который
 и так стоит вместе с UnityPy; на текстуру 1440x1440 уходит около секунды, потери
@@ -50,8 +57,9 @@ from PIL import Image
 
 from common import BACKUP, BUNDLES, WORK, game_is_running
 from layer_localized import index, original, stored_flipped
-from picture_layer import FLIP, write_bundle
-from swap_localized import BUILD, plan_env, register_backup
+from picture_layer import FLIP, leaf, sprites_by_key, texture_of, write_bundle
+from plates import table_rows
+from swap_localized import BUILD, IMAGE_TABLE_BUNDLE, plan_env, register_backup, swap_image_table
 
 
 def do_list() -> None:
@@ -62,8 +70,8 @@ def do_list() -> None:
         print(f"  {base:34} {where}")
 
 
-def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[bytes, list[str]]:
-    """Собрать бандл с картинками из нетронутого оригинала.
+def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[bytes, list[str], list[str]]:
+    """Собрать бандл с картинками из нетронутого оригинала. Возвращает байты, заметки и плашки.
 
     Из оригинала, а не из живого файла: повторная установка не наслаивается
     на прежнюю и заодно лечит её — до 13 сентября 2026 в живых бандлах лежали
@@ -75,10 +83,20 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[by
                  f"Вернуть оригинал: Steam -> свойства игры -> Проверить целостность файлов.")
     env = UnityPy.load(str(src))
     notes = [] if src.parent == BACKUP else ["бэкапа нет, но бандл не менялся — собираю из живого"]
+    sprites = sprites_by_key(env)
     pictures: dict[str, Image.Image] = {}
+    plates: list[str] = []
     for key, png in jobs:
-        tex = env.container[key].read()
         img = Image.open(png).convert("RGBA")
+        if key in sprites:
+            tex = texture_of(env, sprites[key]).read()
+            if img.size != (tex.m_Width, tex.m_Height):
+                sys.exit(f"{png.name}: {img.size[0]}x{img.size[1]}, а текстура плашки "
+                         f"{tex.m_Width}x{tex.m_Height} — набрать заново: tools/plates.py")
+            pictures[key] = img
+            plates.append(leaf(key))
+            continue
+        tex = env.container[key].read()
         if img.size != (tex.m_Width, tex.m_Height):
             notes.append(f"{png.name}: {img.size[0]}x{img.size[1]} -> {tex.m_Width}x{tex.m_Height}")
             img = img.resize((tex.m_Width, tex.m_Height), Image.LANCZOS)
@@ -87,7 +105,31 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[by
             notes.append(f"{png.name}: бандл хранит её вверх ногами — перевернул")
         pictures[key] = img
     blob, more = write_bundle(env, plan_env(env), pictures, raw)
-    return blob, notes + more
+    return blob, notes + more, plates
+
+
+def plate_table(plates: list[str], install: bool) -> None:
+    """Таблица картинок локали: строки русских плашек — на немецкие спрайты, остальное английское.
+
+    `Situation_0` и `Situation_1` игра берёт через таблицу, а `swap_localized.py` увёл
+    её строки на английские спрайты: без этого шага русские «Показания» и «Доводы»
+    лежали бы в бандле, а на экране горели бы английские.
+    """
+    live = next(BUNDLES.glob(f"{IMAGE_TABLE_BUNDLE}_assets_all_*.bundle"))
+    src = original(live.name)
+    if src is None:
+        sys.exit(f"{IMAGE_TABLE_BUNDLE}: таблица менялась, а оригинала в backup/ нет — немецких строк не взять")
+    keep = table_rows(src, set(plates))
+    blob, changed = swap_image_table(keep)
+    out = BUILD / live.name
+    out.write_bytes(blob)
+    names = ", ".join(sorted(value.rsplit("[", 1)[-1].rstrip("]") for value in keep.values())) or "нет"
+    print(f"  {IMAGE_TABLE_BUNDLE:44} таблица картинок: немецкими оставлены {len(keep)} ({names}), "
+          f"изменено строк против живой: {changed}")
+    if install:
+        register_backup(live.name, live)
+        shutil.copy2(out, live)
+        print("      установлен")
 
 
 def main() -> None:
@@ -144,8 +186,10 @@ def main() -> None:
         sys.exit("GK12.exe запущен — закрой игру, файлы бандлов заблокированы.")
 
     BUILD.mkdir(parents=True, exist_ok=True)
+    plates: list[str] = []
     for bundle_name, items in sorted(jobs.items()):
-        blob, notes = patch(bundle_name, items, args.raw)
+        blob, notes, done = patch(bundle_name, items, args.raw)
+        plates += done
         out = BUILD / bundle_name
         out.write_bytes(blob)
         print(f"  {bundle_name.split('_assets_all_')[0]:44} картинок: {len(items)}; {len(blob)/1024/1024:.1f} МБ")
@@ -155,6 +199,8 @@ def main() -> None:
             register_backup(bundle_name, BUNDLES / bundle_name)
             shutil.copy2(out, BUNDLES / bundle_name)
             print("      установлен")
+    if plates:
+        plate_table(plates, args.install)
 
 
 if __name__ == "__main__":

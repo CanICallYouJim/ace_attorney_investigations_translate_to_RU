@@ -1,0 +1,177 @@
+{
+  "вариант": "A",
+  "набор": {
+    "кегль": 234.7,
+    "сжатие": 0.905,
+    "базовая линия": 318.0,
+    "стык": -59.0,
+    "слово": "Возражение",
+    "шрифт": "ariblk.ttf",
+    "наклон": 0.22,
+    "межбуквенное": -10.0,
+    "обводка": 22,
+    "разрез": 5
+  },
+  "атлас": "SousaPart_Title_Tuikyuu_ger2",
+  "бандл": "gk_common_ingameui_trial",
+  "префаб": "Assets/GK_Common/Prefabs/SousaPart/SousaPart_Title_Tuikyuu_R_ger.prefab",
+  "мазок": "SousaPart_Title_Tuikyuu_anim_1_0_R_ger",
+  "размер": [
+    1024,
+    1024
+  ],
+  "текстура_sha": "f3e5a35e0762e9f705ea3f432e6f040cfe18338e4bec3efff2ce7b724b3cb46d",
+  "куски": {
+    "SousaPart_Title_Tuikyuu_anim_1_0_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 830.0,
+        "width": 166.0,
+        "height": 194.0
+      },
+      "textureRectOffset": {
+        "x": 0.0,
+        "y": 1.2928931713104248
+      },
+      "rect": {
+        "width": 166.0,
+        "height": 200.0
+      },
+      "как есть": true,
+      "было": {
+        "x": 745.0,
+        "y": 434.29290771484375,
+        "width": 166.0,
+        "height": 193.6309814453125
+      }
+    },
+    "SousaPart_Title_Tuikyuu_Outline_L_Bottom_R_ger": {
+      "textureRect": {
+        "x": 168.0,
+        "y": 868.0,
+        "width": 717.0,
+        "height": 156.0
+      },
+      "textureRectOffset": {
+        "x": 23.0,
+        "y": 5.0
+      },
+      "rect": {
+        "width": 741.0,
+        "height": 161.0
+      }
+    },
+    "SousaPart_Title_Tuikyuu_L_Bottom_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 694.0,
+        "width": 673.0,
+        "height": 134.0
+      },
+      "textureRectOffset": {
+        "x": 45.0,
+        "y": 27.0
+      },
+      "rect": {
+        "width": 741.0,
+        "height": 161.0
+      }
+    },
+    "SousaPart_Title_Tuikyuu_Outline_R_Bottom_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 579.0,
+        "width": 797.0,
+        "height": 113.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 48.0
+      },
+      "rect": {
+        "width": 886.3656005859375,
+        "height": 161.0
+      }
+    },
+    "SousaPart_Title_Tuikyuu_Outline_L_Top_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 475.0,
+        "width": 699.0,
+        "height": 102.0
+      },
+      "textureRectOffset": {
+        "x": 41.0,
+        "y": 0.0
+      },
+      "rect": {
+        "width": 741.0,
+        "height": 161.0
+      }
+    },
+    "SousaPart_Title_Tuikyuu_R_Bottom_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 382.0,
+        "width": 753.0,
+        "height": 91.0
+      },
+      "textureRectOffset": {
+        "x": 24.0,
+        "y": 70.0
+      },
+      "rect": {
+        "width": 886.3656005859375,
+        "height": 161.0
+      }
+    },
+    "SousaPart_Title_Tuikyuu_L_Top_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 300.0,
+        "width": 655.0,
+        "height": 80.0
+      },
+      "textureRectOffset": {
+        "x": 63.0,
+        "y": 0.0
+      },
+      "rect": {
+        "width": 741.0,
+        "height": 161.0
+      }
+    },
+    "SousaPart_Title_Tuikyuu_Outline_R_Top_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 239.0,
+        "width": 796.0,
+        "height": 59.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 0.0
+      },
+      "rect": {
+        "width": 886.3656005859375,
+        "height": 161.0
+      }
+    },
+    "SousaPart_Title_Tuikyuu_R_Top_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 200.0,
+        "width": 752.0,
+        "height": 37.0
+      },
+      "textureRectOffset": {
+        "x": 24.0,
+        "y": 0.0
+      },
+      "rect": {
+        "width": 886.3656005859375,
+        "height": 161.0
+      }
+    }
+  }
+}

@@ -180,6 +180,148 @@ def write_sprite(env, sprite, img: Image.Image) -> str:
     return f"{tree['m_Name']}: сетка {old} вершин -> 4, рамка x {x0}..{x1}, y {y0}..{y1} (снизу)"
 
 
+def atlas_key(key) -> tuple:
+    """Ключ записи карты атласа — в вид, по которому её найти у спрайта."""
+    first, second = key
+    return (tuple(first.values()) if isinstance(first, dict) else tuple(first), second)
+
+
+def rect_mesh(tree: dict, rect: dict, box: dict) -> None:
+    """Сетку спрайта — прямоугольником по куску: четыре вершины, два треугольника.
+
+    Тугая сетка оригинала обходила контур немецкого слова, и русские буквы за ним
+    не рисовались бы. UV в потоке у Unity нулевые — он считает их сам из позиций
+    и `uvTransform`, так что пишутся только позиции. Треугольники по часовой,
+    как у оригинала.
+    """
+    rd = tree["m_RD"]
+    ppu = tree["m_PixelsToUnits"]
+    px, py = tree["m_Pivot"]["x"] * rect["width"], tree["m_Pivot"]["y"] * rect["height"]
+    x0, y0 = box["x"], box["y"]
+    x1, y1 = x0 + box["width"], y0 + box["height"]
+    corners = [(x0, y1), (x1, y1), (x1, y0), (x0, y0)]
+    positions = b"".join(struct.pack("<3f", (x - px) / ppu, (y - py) / ppu, 0.0) for x, y in corners)
+    uv_at = -(-len(positions) // 16) * 16         # поток UV выровнен на 16 байт
+    vd = rd["m_VertexData"]
+    vd["m_VertexCount"] = len(corners)
+    vd["m_DataSize"] = positions + bytes(uv_at - len(positions) + 8 * len(corners))
+    indices = struct.pack("<6H", 0, 1, 2, 2, 3, 0)
+    rd["m_IndexBuffer"] = indices if isinstance(rd["m_IndexBuffer"], (bytes, bytearray)) else list(indices)
+    rd["m_SubMeshes"] = rd["m_SubMeshes"][:1]
+    rd["m_SubMeshes"][0].update(firstByte=0, indexCount=6, baseVertex=0, firstVertex=0, vertexCount=4)
+    tree["m_PhysicsShape"] = [[{"x": (x - px) / ppu, "y": (y - py) / ppu} for x, y in corners]]
+
+
+def splash_atlas(env, spec: dict, layer: Image.Image, texture) -> Image.Image | None:
+    """Полный атлас заставки: наши куски плюс мазок, вырезанный из текстуры этой игры.
+
+    Пикселей Capcom мы не раздаём (правило витрины «ни одного файла игры»), поэтому
+    единственный чужой кусок в атласе — белый мазок `anim_1_0` — берётся у игрока
+    из его же немецкой текстуры и переезжает на новое место. Не та версия игры —
+    отпечаток не сойдётся, и заставка останется как была.
+    """
+    before = texture.read().image.convert("RGBA")
+    if pixels_sha(before) != spec["текстура_sha"]:
+        return None
+    keep = spec["куски"][spec["мазок"]]
+    was, now = keep["было"], keep["textureRect"]
+    piece = before.crop((round(was["x"]), round(before.height - was["y"] - was["height"]),
+                         round(was["x"] + was["width"]), round(before.height - was["y"])))
+    atlas = layer.copy()
+    atlas.paste(piece, (round(now["x"]), round(atlas.height - now["y"] - now["height"])))
+    return atlas
+
+
+def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list[str]:
+    """Заставка «Возражение»: русские куски в атлас, новые рамки восьми спрайтам.
+
+    Куски заставки лежат не на своих текстурах, а в общем атласе, и где именно —
+    сказано в **карте атласа** (`SpriteAtlas.m_RenderDataMap`), а не в самом спрайте:
+    у спрайта та же запись хранится «как было до упаковки». Русское слово крупнее
+    немецкого, поэтому атлас переупакован целиком (`tools/splash.py`), и обе записи
+    переписываются вместе — иначе игра возьмёт кусок по старой рамке.
+
+    Рамка спрайта (`m_Rect`) становится рамкой половины из префаба: у Capcom она
+    на 3 px уже, и её кусок игра растягивает, а русский ложится один к одному.
+    """
+    name = spec["атлас"]
+    obj = next((o for o in env.objects if o.type.name == "SpriteAtlas" and o.peek_name() == name), None)
+    if obj is None:
+        raise KeyError(f"в бандле нет атласа {name}")
+    tree = obj.read_typetree()
+    objs = {o.path_id: o for o in env.objects}
+    sprites = {o.peek_name(): o for o in env.objects if o.type.name == "Sprite" and o.peek_name()}
+    pieces = spec["куски"]
+
+    texture = None
+    for _, rd in tree["m_RenderDataMap"]:
+        texture = objs.get(rd["texture"]["m_PathID"], texture)
+    if texture is None:
+        raise KeyError(f"{name}: в карте атласа нет текстуры")
+    tex = texture.read()
+    if layer.size != (tex.m_Width, tex.m_Height):
+        raise ValueError(f"{name}: слой {layer.size[0]}x{layer.size[1]}, "
+                         f"текстура {tex.m_Width}x{tex.m_Height} — набрать заново: tools/splash.py")
+    atlas = splash_atlas(env, spec, layer, texture)
+    if atlas is None:
+        return [f"{name}: немецкая заставка в этой игре другая — оставлена как есть"]
+    notes: list[str] = []
+    want = RAW if raw else int(tex.m_TextureFormat)
+    try:
+        tex.set_image(atlas, target_format=want)
+    except Exception as exc:  # noqa: BLE001 — упаковщика может не оказаться, это не повод падать
+        notes.append(f"{name}: {TextureFormat(want).name} не упаковался ({exc}), кладу RGBA32")
+        tex.set_image(atlas, target_format=RAW)
+    tex.save()
+
+    by_key = {}
+    for sprite_name in pieces:
+        if sprite_name not in sprites:
+            raise KeyError(f"в бандле нет спрайта заставки {sprite_name}")
+        by_key[atlas_key(sprites[sprite_name].read_typetree()["m_RenderDataKey"])] = sprite_name
+
+    rows, done = [], 0
+    for key, rd in tree["m_RenderDataMap"]:
+        sprite_name = by_key.get(atlas_key(key))
+        item = pieces.get(sprite_name) if sprite_name else None
+        if item is None:
+            rows.append([key, rd])
+            continue
+        r, off, rect = item["textureRect"], item["textureRectOffset"], item["rect"]
+        sprite = sprites[sprite_name]
+        tr = sprite.read_typetree()
+        ppu = tr["m_PixelsToUnits"]
+        rd = dict(rd)
+        rd["textureRect"] = dict(r)
+        rd["textureRectOffset"] = dict(off)
+        rd["atlasRectOffset"] = {"x": -off["x"], "y": r["y"] - off["y"]}
+        rd["uvTransform"] = {"x": ppu, "y": r["x"] - off["x"] + rect["width"] / 2,
+                             "z": ppu, "w": r["y"] - off["y"] + rect["height"] / 2}
+        rows.append([key, rd])
+        done += 1
+        if item.get("как есть"):
+            # Кусок только переехал в атласе: рамка спрайта и его тугая сетка верны.
+            continue
+
+        # Та же запись у самого спрайта — «как было бы на своей текстуре»: кусок
+        # стоит в рамке там же, где в атласе, и рамка спрайта равна рамке половины.
+        tr["m_Rect"] = {"x": 0.0, "y": 0.0, "width": rect["width"], "height": rect["height"]}
+        tr["m_RD"]["textureRect"] = {"x": off["x"], "y": off["y"],
+                                     "width": r["width"], "height": r["height"]}
+        tr["m_RD"]["textureRectOffset"] = dict(off)
+        tr["m_RD"]["uvTransform"] = {"x": ppu, "y": rect["width"] / 2,
+                                     "z": ppu, "w": rect["height"] / 2}
+        rect_mesh(tr, rect, {"x": off["x"], "y": off["y"], "width": r["width"], "height": r["height"]})
+        sprite.save_typetree(tr)
+
+    if done != len(pieces):
+        raise KeyError(f"{name}: в карте атласа нашлось {done} кусков из {len(pieces)}")
+    tree["m_RenderDataMap"] = rows
+    obj.save_typetree(tree)
+    notes.append(f"{name}: русский атлас и {done} кусков заставки")
+    return notes
+
+
 def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Image],
                  raw: bool = False) -> tuple[bytes, list[str]]:
     """Бандл целиком: немецким адресам — английские объекты, кроме адресов со своей картинкой.
@@ -320,8 +462,19 @@ class Shipment:
         pictures: dict[str, Image.Image] = {}
         notes: list[str] = []
         sprites: dict | None = None
+        extra = 0
         for entry in self.by_bundle.get(short(path.name), []):
             name = entry["name"]
+            if entry.get("kind") == "splash":
+                spec = entry["spec"]
+                found = write_splash(env, spec, Image.open(self.folder / entry["layer"]).convert("RGBA"))
+                notes += found
+                if not any("оставлена как есть" in note for note in found):
+                    # Заставку игра берёт из немецкого префаба — его адрес подмене не отдаём.
+                    pairs = [(german, english) for german, english in pairs
+                             if german != spec["префаб"]]
+                    extra += 1
+                continue
             if entry.get("kind") == "plate":
                 sprites = sprites if sprites is not None else sprites_by_key(env)
                 why = self.plate_fits(env, sprites, entry)
@@ -347,4 +500,4 @@ class Shipment:
                 self.composites[name] = face
             pictures[entry["key"]] = face.transpose(FLIP) if entry["flipped"] else face
         blob, more = write_bundle(env, pairs, pictures)
-        return blob, len(pictures), notes + more
+        return blob, len(pictures) + extra, notes + more

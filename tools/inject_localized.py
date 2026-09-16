@@ -47,6 +47,7 @@ UnityPy. `Situation_0` и `Situation_1` игра берёт через табл�
 from __future__ import annotations
 
 import argparse
+import json
 import shutil
 import sys
 from collections import defaultdict
@@ -57,7 +58,7 @@ from PIL import Image
 
 from common import BACKUP, BUNDLES, WORK, game_is_running
 from layer_localized import index, original, stored_flipped
-from picture_layer import FLIP, leaf, sprites_by_key, texture_of, write_bundle
+from picture_layer import FLIP, leaf, sprites_by_key, texture_of, write_bundle, write_splash
 from plates import table_rows
 from swap_localized import BUILD, IMAGE_TABLE_BUNDLE, plan_env, register_backup, swap_image_table
 
@@ -70,7 +71,17 @@ def do_list() -> None:
         print(f"  {base:34} {where}")
 
 
-def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[bytes, list[str], list[str]]:
+def load_splash() -> tuple[dict, Image.Image] | None:
+    """Задание заставки «Возражение», если она набрана: куски и русский атлас."""
+    spec_path = WORK / "graphics_ru" / "ui" / "splash.json"
+    atlas_path = WORK / "graphics_ru" / "ui" / "splash_ger2.png"
+    if not (spec_path.exists() and atlas_path.exists()):
+        return None
+    return json.loads(spec_path.read_text(encoding="utf-8")), Image.open(atlas_path).convert("RGBA")
+
+
+def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool,
+          splash: tuple[dict, Image.Image] | None = None) -> tuple[bytes, list[str], list[str]]:
     """Собрать бандл с картинками из нетронутого оригинала. Возвращает байты, заметки и плашки.
 
     Из оригинала, а не из живого файла: повторная установка не наслаивается
@@ -104,7 +115,14 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool) -> tuple[by
             img = img.transpose(FLIP)
             notes.append(f"{png.name}: бандл хранит её вверх ногами — перевернул")
         pictures[key] = img
-    blob, more = write_bundle(env, plan_env(env), pictures, raw)
+    pairs = plan_env(env)
+    if splash is not None:
+        spec, atlas = splash
+        # Заставку игра берёт из немецкого префаба, и его адрес подмене не отдаётся:
+        # уведи его на английский — на экране снова встанет `Rebuttal`.
+        pairs = [(german, english) for german, english in pairs if german != spec["префаб"]]
+        notes += write_splash(env, spec, atlas, raw)
+    blob, more = write_bundle(env, pairs, pictures, raw)
     return blob, notes + more, plates
 
 
@@ -151,8 +169,11 @@ def main() -> None:
     # требование пользователя от 11 сентября 2026 — русские картинки ставятся
     # той же командой, что и текст, без отдельных флагов.
     folder = Path(args.folder) if args.folder else WORK / "graphics_ru"
-    pngs = sorted(folder.rglob("*.png"))
-    if not pngs:
+    # Атлас заставки — не картинка на текстуру, а куски с рамками: он идёт своим
+    # шагом, по заданию tools/splash.py, и в общий разбор по именам не попадает.
+    splash = load_splash()
+    pngs = [png for png in sorted(folder.rglob("*.png")) if png.name != "splash_ger2.png"]
+    if not pngs and splash is None:
         if args.folder:
             sys.exit(f"в {folder} нет PNG")
         # PNG в .gitignore: на свежем клоне их нет, и установка текста
@@ -168,6 +189,15 @@ def main() -> None:
 
     idx = index()
     jobs: dict[str, list[tuple[str, Path]]] = defaultdict(list)
+    splash_bundle = None
+    if splash is not None:
+        live = next(BUNDLES.glob(f"{splash[0]['бандл']}_assets_all_*.bundle"), None)
+        if live is None:
+            print(f"заставка набрана, а бандла {splash[0]['бандл']} в игре нет — пропускаю")
+            splash = None
+        else:
+            splash_bundle = live.name
+            jobs[splash_bundle]
     unknown = []
     for png in pngs:
         places = idx.get(png.stem)
@@ -181,6 +211,7 @@ def main() -> None:
         print("Список принимаемых имён — с ключом --list\n")
     if not jobs:
         sys.exit("нечего вставлять")
+    jobs = {name: items for name, items in jobs.items() if items or name == splash_bundle}
 
     if args.install and game_is_running():
         sys.exit("GK12.exe запущен — закрой игру, файлы бандлов заблокированы.")
@@ -188,11 +219,14 @@ def main() -> None:
     BUILD.mkdir(parents=True, exist_ok=True)
     plates: list[str] = []
     for bundle_name, items in sorted(jobs.items()):
-        blob, notes, done = patch(bundle_name, items, args.raw)
+        here = splash if bundle_name == splash_bundle else None
+        blob, notes, done = patch(bundle_name, items, args.raw, here)
         plates += done
         out = BUILD / bundle_name
         out.write_bytes(blob)
-        print(f"  {bundle_name.split('_assets_all_')[0]:44} картинок: {len(items)}; {len(blob)/1024/1024:.1f} МБ")
+        print(f"  {bundle_name.split('_assets_all_')[0]:44} картинок: {len(items)}"
+              + ("; заставка «Возражение»" if here else "")
+              + f"; {len(blob)/1024/1024:.1f} МБ")
         for note in notes:
             print(f"      {note}")
         if args.install:

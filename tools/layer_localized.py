@@ -428,7 +428,7 @@ def preview(entry: dict, face: Image.Image, result: Image.Image, full: Image.Ima
 
 def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
     """Снять слой со всех картинок work/graphics_ru в `folder`. Возвращает манифест и беды."""
-    pngs = sorted(RU.rglob("*.png"))
+    pngs = [png for png in sorted(RU.rglob("*.png")) if png.name != "splash_ger2.png"]
     manifest: dict = {"pictures": [], "skipped": []}
     problems: list[str] = []
     seen: dict[str, Path] = {}
@@ -547,7 +547,40 @@ def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
                 preview(entry, face, result, full, room, harm, note, PREVIEW / f"{name}.png")
         del env
         gc.collect()
+    problems += splash_layer(folder, manifest)
     return manifest, problems
+
+
+def splash_layer(folder: Path, manifest: dict) -> list[str]:
+    """Заставка «Возражение» в слой: наши куски атласа и задание для их рамок.
+
+    Картинкой это не снять: куски лежат в общем атласе, и переезд каждого меняет
+    не пиксели, а поля спрайта. Поэтому слой заставки — наш атлас без единого
+    пикселя Capcom (мазок `anim_1_0` патчер вырежет у игрока) плюс задание
+    `tools/splash.py`, по которому переписываются рамки.
+    """
+    spec_path, png = RU / "ui" / "splash.json", RU / "ui" / "splash_ger2.png"
+    if not (spec_path.exists() and png.exists()):
+        return []
+    spec = load_json(spec_path)
+    live = next(BUNDLES.glob(f"{spec['бандл']}_assets_all_*.bundle"), None)
+    if live is None:
+        return [f"заставка: в игре нет бандла {spec['бандл']}"]
+    src = original(live.name)
+    if src is None:
+        return [f"заставка: {spec['бандл']} менялся, а оригинала в backup/ нет"]
+    layer = Image.open(png).convert("RGBA")
+    entry = {"name": "splash_ger2", "bundle": spec["бандл"], "kind": "splash",
+             "key": spec["префаб"], "size": list(spec["размер"]), "spec": spec,
+             "png_sha": file_sha(png), "layer": f"{spec['бандл']}/splash_ger2.png"}
+    target = folder / entry["layer"]
+    target.parent.mkdir(parents=True, exist_ok=True)
+    layer.save(target)
+    manifest["pictures"].append(entry)
+    print(f"\n{spec['бандл']} — заставка «{spec['набор']['слово']}»: "
+          f"{len(spec['куски']) - 1} кусков, слой {target.stat().st_size / 1024:.0f} КБ, "
+          f"пикселей Capcom нет", flush=True)
+    return []
 
 
 def stale() -> list[str]:

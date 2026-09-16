@@ -204,6 +204,19 @@ def pictures() -> int:
             if entry.get("kind") == "plate":
                 bad += not plate_ok(built, entry)
                 continue
+            if entry.get("kind") == "splash":
+                # Заставка «Возражение»: восемь кусков в переупакованном атласе.
+                # Сверяется собранная из бандла заставка против набора, мазок Capcom
+                # и то, что немецкий префаб не уведён на английский.
+                from splash import verify_bundle
+                found, _ = verify_bundle(built)
+                for why in found:
+                    print(f"    {entry['name']:18} {why}  <- РАЗОШЛОСЬ")
+                if not found:
+                    print(f"    {entry['name']:18} заставка: сборка из кусков сходится с набором, "
+                          f"мазок цел, префаб немецкий")
+                bad += bool(found)
+                continue
             obj = built.container[entry["key"]]
             got = obj.read().image.convert("RGBA")
             want = Image.open(pngs[entry["name"]]).convert("RGBA")

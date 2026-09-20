@@ -71,31 +71,35 @@ def check(case: str | None = None, damage: dict[str, Image.Image] | None = None)
         # Адрес картинки в бандле лежит в переписи, а сам бандл — в `backup/`.
         # Одно имя бывает в нескольких бандлах (FHD и Classic); берём тот,
         # что назван в манифесте, иначе сверим не ту картинку.
-        envs: dict[str, object] = {}
+        # Полное имя бандла (с хешем) берётся из переписи по любой из его картинок.
+        # Картинка без немецкого варианта в перепись не попадает вовсе
+        # (`logic02_009_s` и ещё четыре кадра), но в бандле она есть — и эталоном
+        # быть обязана: «мы про неё не знали» — не корзина (правило №7).
+        full = next((e[0] for name, _, _ in jobs for e in index().get(name, [])
+                     if short(e[0]) == bundle), None)
+        if full is None:
+            problems.append(f"{bundle}: ни одной картинки этого бандла нет в переписи — "
+                            f"перечитать tools/scan_localized.py")
+            continue
+        src = original(full)
+        if src is None:
+            problems.append(f"{bundle}: живой бандл уже переписан нами, а в backup/ "
+                            f"его нет — эталон брать неоткуда")
+            continue
+        env = UnityPy.load(str(src))
+        by_leaf = {leaf(k): k for k in env.container}
         for name, png, man in jobs:
             hits = [e for e in index().get(name, []) if short(e[0]) == bundle]
-            if not hits:
-                problems.append(f"{name}: в переписи нет для бандла {bundle} — "
-                                f"перечитать tools/scan_localized.py")
-                continue
-            full, gerkey, _ = hits[0]
-            if full not in envs:
-                src = original(full)
-                if src is None:
-                    problems.append(f"{short(full)}: живой бандл уже переписан нами, "
-                                    f"а в backup/ его нет — эталон брать неоткуда")
-                    envs[full] = None
-                else:
-                    envs[full] = UnityPy.load(str(src))
-            env = envs[full]
-            if env is None:
-                continue
-            keys = {leaf(k).rsplit("_", 1)[-1] if leaf(k) != name else "base": k
-                    for k in variants(gerkey, env.container)}
-            key = keys.get(man.get("source_lang", "eng"))
+            lang = man.get("source_lang", "eng")
+            if hits:
+                keys = {leaf(k).rsplit("_", 1)[-1] if leaf(k) != name else "base": k
+                        for k in variants(hits[0][1], env.container)}
+                key = keys.get(lang)
+            else:
+                # Нелокализованная картинка: языкового хвоста у неё нет, имя одно.
+                key = by_leaf.get(f"{name}_{lang}") or by_leaf.get(name)
             if key is None:
-                problems.append(f"{name}: в нетронутом бандле нет варианта "
-                                f"«{man.get('source_lang', 'eng')}»")
+                problems.append(f"{name}: в нетронутом бандле {bundle} нет варианта «{lang}»")
                 continue
             was = env.container[key].read().image.convert("RGB")
             if man.get("flipped"):

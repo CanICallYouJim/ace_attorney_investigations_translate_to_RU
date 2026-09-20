@@ -29,7 +29,8 @@
     Требование 1;
   * **буква на рисунке** — ядро русской буквы на рисунке подложки. Цветной предмет (фигура,
     стрелка) и толстое тёмное (стена, дерево, фигурка — от 5 пикселей) — нельзя нигде, кроме
-    места, где лежали сами английские чернила. Тонкая линия — нельзя вне поля английской
+    места, где лежали сами английские чернила; толстое тёмное, **которое пересекала сама
+    английская надпись**, считается как тонкая линия. Тонкая линия — нельзя вне поля английской
     надписи (чернила, замкнутые на 24 пикселя, и 6 запаса): в поле английская рука тоже
     линии пересекала. Требование 2;
   * **правка за надписью** — изменённый пиксель дальше 6 от маски и дальше 3 от русских букв;
@@ -83,6 +84,7 @@ NEAR_TEXT = 6      # правка ближе этого к английской 
 NEAR_INK = 3       # и к русской букве
 THICK = 5          # тёмное толщиной от стольких пикселей — предмет (стена, дерево), а не линия
 FIELD = 24         # поле надписи: английские чернила, замкнутые на столько пикселей,
+BAND = 150         # плюс полоса строки — горизонтальное замыкание на столько (пара слов),
 MARGIN = 6         # и запас вокруг
 ZONE = 24          # надписи ближе этого — одна зона для сравнения штриха
 NO_BASE = 0.25     # дыр больше этой доли маски — подложки нет, метод масок не судит
@@ -121,6 +123,31 @@ def erode(mask: Image.Image, r: int) -> Image.Image:
 
 def count(mask: Image.Image) -> int:
     return mask.histogram()[255]
+
+
+def stretch(mask: Image.Image, r: int) -> Image.Image:
+    """Расширить маску по горизонтали на r пикселей в обе стороны; шаг удваивается."""
+    out = mask
+    done, step = 0, 1
+    while done < r:
+        step = min(step, r - done)
+        for dx in (step, -step):
+            shifted = Image.new("L", mask.size, 0)
+            shifted.paste(out, (dx, 0))
+            out = ImageChops.lighter(out, shifted)
+        done += step
+        step *= 2
+    return out
+
+
+def corridor(mask: Image.Image, r: int) -> Image.Image:
+    """Полоса строки: горизонтальное замыкание маски.
+
+    Силуэт букв полосой не считается: у английской строки хвост есть у `g` и `y`,
+    у русской — у «р» и «у», и приходятся они на разные места. Полоса же у строки
+    одна: хвост `g` в «Knight» держит её низ под всей фразой, и наш хвост «р»,
+    упавший на ту же линию плана правее, — то же самое место, а не рисунок."""
+    return ImageChops.invert(stretch(ImageChops.invert(stretch(mask, r)), r))
 
 
 def select(cand: Image.Image, test) -> Image.Image:
@@ -245,6 +272,60 @@ def english_ink(E: Image.Image, C: Image.Image, T: Image.Image, hole: Image.Imag
     return ink
 
 
+def untouchable(C: Image.Image, paper: Image.Image, eng: Image.Image, box=None) -> Image.Image:
+    """Где русской букве лежать нельзя — требование 2, «буква на рисунке».
+
+    Цветной предмет (фигура, стрелка) — нельзя нигде, кроме места самих английских чернил.
+    Толстое тёмное (стена, дерево, фигурка — от `THICK` пикселей) — тоже, **если его
+    не пересекала сама английская надпись**: предмет, через который английская рука
+    писала, разрешено пересекать и нам, но только в поле её надписи. Тонкая линия —
+    нельзя вне поля надписи: в поле английская рука линии тоже пересекала.
+
+    Уточнение про пересечённый предмет — 16 сентября 2026: «Knight to immediately escort
+    president» лежит над линией плана и пересекает её хвостом `g`; наш хвост «р» пересекал
+    ту же линию правее, и проверка звала это буквой на рисунке. Места, где русская строка
+    не задевала бы её вовсе, у этой пометки нет: сверху изгородь, снизу линия.
+
+    Одна функция на проверку и на набор (`notes.py` ищет положение строки по этой же
+    маске): иначе набор проходит свою мерку и валится на чужой.
+    """
+    cp, pp = C.load(), paper.load()
+    foot_img = grow(eng, 2)
+    foot = foot_img.load()
+    dark = tm.over(ImageChops.subtract(paper.convert("L"), C.convert("L")), tm.LINE)
+    thick_img = grow(erode(dark, THICK // 2), THICK // 2)
+    field = grow(ImageChops.lighter(erode(grow(eng, FIELD), FIELD), corridor(eng, BAND)),
+                 MARGIN).load()
+    W, H = C.size
+    x0, y0, x1, y1 = box or (0, 0, W, H)
+    here = Image.new("L", C.size, 0)
+    ImageDraw.Draw(here).rectangle((x0 - FIELD, y0 - FIELD, x1 + FIELD, y1 + FIELD), fill=255)
+    crossed = Image.new("L", C.size, 0)
+    xp = crossed.load()
+    for comp in components(ImageChops.multiply(thick_img, here)):
+        if any(foot[p] for p in comp):
+            for p in comp:
+                xp[p] = 255
+    thick = thick_img.load()
+    out = Image.new("L", C.size, 0)
+    op = out.load()
+    for y in range(max(0, y0), min(H, y1)):
+        for x in range(max(0, x0), min(W, x1)):
+            cv, pv = cp[x, y], pp[x, y]
+            k = tm.kind(cv, pv)
+            if k in ("r", "c"):
+                hit = not foot[x, y]
+            elif k != "n" or tm.lum(cv) >= tm.lum(pv) - tm.LINE:
+                hit = False
+            elif thick[x, y] and not xp[x, y]:
+                hit = not foot[x, y]
+            else:
+                hit = not field[x, y]
+            if hit:
+                op[x, y] = 255
+    return out
+
+
 def derivation(name: str, ru_path: Path) -> dict | None:
     for job in recipes(ru_path.parent).get(name, []):
         if "уменьшить" in job:
@@ -296,7 +377,15 @@ def check(name: str, ru_path: Path, report: Path = REPORT) -> dict:
 
     eng = english_ink(E, C, T, hole, paper)
     moved = differs(R, E, tm.LOW)
-    stayed = ImageChops.subtract(eng, moved)
+    # Остаток английского — только **видимый** и только там, где есть эталон (20 сентября 2026):
+    # пиксель, уже равный подложке, сняли — снимать было нечего; дыру проверка не судит, как
+    # не судит её в «испорченной подложке» (в дыре не отличить чернила от линии рисунка, и на
+    # планах дела 1 дыры — ровно те места, где чернила шли по тёмной линии); а чернила, которые
+    # от подложки отличаются меньше порога ядра, не видны и на глаз: на текстуре изгороди
+    # оценка подложки расходится с английской на 25–44 уровня — это шум оценки, а не надпись.
+    stayed = ImageChops.subtract(
+        ImageChops.multiply(ImageChops.subtract(eng, moved), differs(E, C, CORE)),
+        ImageChops.lighter(ImageChops.invert(differs(R, C, tm.TOL)), grow(hole, 1)))
     rp, cp, pp = R.load(), C.load(), paper.load()
     ink_file = ru_path.with_name(f"{ru_path.stem}_ink.png")
     estimated = not ink_file.exists()
@@ -321,21 +410,8 @@ def check(name: str, ru_path: Path, report: Path = REPORT) -> dict:
     damage = select(cand, spoiled)
 
     core = ImageChops.multiply(ink, differs(R, C, CORE))
-    foot = grow(eng, 2).load()
-    dark = tm.over(ImageChops.subtract(paper.convert("L"), C.convert("L")), tm.LINE)
-    thick = grow(erode(dark, THICK // 2), THICK // 2).load()
-    field = grow(erode(grow(eng, FIELD), FIELD), MARGIN).load()
-
-    def on(x: int, y: int) -> bool:
-        cv, pv = cp[x, y], pp[x, y]
-        k = tm.kind(cv, pv)
-        if k in ("r", "c"):
-            return not foot[x, y]
-        if k != "n" or tm.lum(cv) >= tm.lum(pv) - tm.LINE:
-            return False
-        return not foot[x, y] if thick[x, y] else not field[x, y]
-
-    on_drawing = select(core, on)
+    box = core.getbbox()
+    on_drawing = ImageChops.multiply(core, untouchable(C, paper, eng, box)) if box else core
     outside = ImageChops.subtract(differs(R, E, tm.TOL), ImageChops.lighter(zone, grow(ink, NEAR_INK)))
 
     # штрих: обе стороны — всё, что отличается от подложки больше чем на CORE. Русская буква,

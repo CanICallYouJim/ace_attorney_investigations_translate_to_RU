@@ -55,6 +55,8 @@ RU = WORK / "graphics_ru"
 PREVIEW = FOLDER / "preview"
 MAX_SHARE = 0.25          # слой больше четверти картинки — это уже рисунок
 MARGIN = 12               # запас вокруг рамки: снятие расширяет маску и затягивает края
+NOTE_ZONE = 40            # запас вокруг рамки рукописной пометки: дальше него набор
+                          # (`notes.py`, он берёт эту же величину) строку не поставит
 RING = 30                 # полоса за рамкой снятия, где ищутся недоснятые хвосты букв
 TAIL_MAX = 600            # хвост — обрывок; связный кусок крупнее — край листа или рамка
 DARK = 110                # «линия рисунка» — пиксель оригинала темнее этого
@@ -143,9 +145,11 @@ def stored_flipped(env, key: str, face_up: Image.Image) -> bool:
 def recipes(case_dir: Path) -> dict[str, list[dict]]:
     """Задания набора и вклейки по картинкам дела: рамки надписей и рецепты уменьшения."""
     out: dict[str, list[dict]] = defaultdict(list)
-    for fname in ("labels.json", "art.json"):
+    for fname in ("labels.json", "art.json", "notes.json"):
         spec = load_json(case_dir / fname, default={}) or {}
         for name, job in spec.items():
+            if not isinstance(job, dict):
+                continue            # «_» в задании — пояснение для человека, а не картинка
             if "как" in job:
                 own = {k: v for k, v in job.items() if k not in ("как", "якорь_там", "якорь_тут")}
                 job = {**remap(spec[job["как"]], job["якорь_там"], job["якорь_тут"]), **own}
@@ -176,6 +180,12 @@ def allowed(size: tuple[int, int], jobs: list[dict]) -> Image.Image | None:
             half = max(x1 - x0, label.get("max_width", 0)) // 2
             cx = (x0 + x1) // 2
             rect((cx - half, y0, cx + half, y1), MARGIN + 6 + job.get("stroke_width", 3))
+        for note in job.get("пометки", []):
+            # рукописная пометка: русская живёт в рамках английской с тем же запасом,
+            # какой держит сам набор (notes.ZONE) — больше него он строку не поставит.
+            # У мелкой копии рамки пересчитаны, и запас едет вместе с ними
+            for box in note["рамки"]:
+                rect(box, MARGIN + round(NOTE_ZONE * job.get("масштаб", 1.0)))
         if "уменьшить" in job:
             rect(job["уменьшить"]["якорь_тут"], 2)
     return mask
@@ -209,9 +219,17 @@ def near_colour(im: Image.Image, colour, tol: int) -> Image.Image:
 
 
 def strips(jobs: list[dict]) -> list[dict]:
-    """Снятия старых надписей с цветами и допусками — ровно как их зовут relabel.py и paste_art.py."""
+    """Снятия старых надписей с цветами и допусками — ровно как их зовут relabel.py и paste_art.py.
+
+    Картинку с `по_оригиналу` подсказка пропускает: там английское снято **подложкой**
+    (`prints.py`, `notes.py`), а не маской по цвету, и повтор старого снятия на оригинале
+    объявлял «испорченным рисунком» ровно то, что мы восстановили точнее его (20 сентября 2026).
+    За такие картинки отвечает `check_pictures.py`, у него эталон — подложка и оригинал.
+    """
     out = []
     for job in jobs:
+        if job.get("по_оригиналу") or job.get("пометки"):
+            continue
         for label in job.get("labels", []):
             out.append({"box": label["box"], "pad": 6, "fill": job["fill"], "stroke": job["stroke"],
                         "tol_fill": job.get("допуск", 45), "tol_stroke": job.get("допуск_обводки", 25)})
@@ -428,7 +446,10 @@ def preview(entry: dict, face: Image.Image, result: Image.Image, full: Image.Ima
 
 def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
     """Снять слой со всех картинок work/graphics_ru в `folder`. Возвращает манифест и беды."""
-    pngs = [png for png in sorted(RU.rglob("*.png")) if png.name != "splash_ger2.png"]
+    # `<имя>_ink.png` и `<имя>_print_ink.png` — маски набранных букв для проверки,
+    # а не картинки игры: в слой они не идут и в «не везём» им делать нечего
+    pngs = [png for png in sorted(RU.rglob("*.png"))
+            if png.name != "splash_ger2.png" and not png.stem.endswith("_ink")]
     manifest: dict = {"pictures": [], "skipped": []}
     problems: list[str] = []
     seen: dict[str, Path] = {}
@@ -586,7 +607,7 @@ def splash_layer(folder: Path, manifest: dict) -> list[str]:
 def stale() -> list[str]:
     """Что в собранном слое разошлось с work/graphics_ru — перед выпуском."""
     data = load_json(FOLDER / "manifest.json", default=None)
-    pngs = {p.stem: p for p in RU.rglob("*.png")}
+    pngs = {p.stem: p for p in RU.rglob("*.png") if not p.stem.endswith("_ink")}
     if data is None:
         return ["слой не собран — make layers"] if pngs else []
     out = []

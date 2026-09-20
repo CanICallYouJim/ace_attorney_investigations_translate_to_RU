@@ -28,7 +28,7 @@ endif
 export PYTHONIOENCODING := utf-8
 
 .DEFAULT_GOAL := help
-.PHONY: help check check-full selftest build install graphics graphics-ru plates splash layers restore \
+.PHONY: help check check-full selftest build install graphics graphics-ru plates splash notes layers restore \
         status patch patch-check uninstall release publish extract clean
 
 help:                ## показать этот список
@@ -68,6 +68,11 @@ plates:              ## набрать русские плашки ситуац�
 
 splash:              ## набрать заставку «Возражение» и сверить сборкой из кусков (ставит её install)
 	$(PY) tools/splash.py
+
+notes:               ## набрать планы дела 1 заново: печатное prints, пометки notes, карточка логики
+	$(PY) tools/prints.py work/graphics_ru/case1/labels.json
+	$(PY) tools/notes.py --case case1
+	$(PY) tools/paste_art.py work/graphics_ru/case1/art.json --only logic00_016_s
 
 layers:              ## снять слой русских надписей для патчера и листы для показа
 	$(PY) tools/layer_localized.py

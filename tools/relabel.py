@@ -132,7 +132,15 @@ def remap(job: dict, there, here) -> dict:
                 round(here[2] + (b[2] - there[2]) * sx),
                 round(here[3] + (b[3] - there[3]) * sy)]
 
-    out = {k: v for k, v in job.items() if k not in ("снять", "вернуть", "вклеить", "labels")}
+    out = {k: v for k, v in job.items()
+           if k not in ("снять", "вернуть", "вклеить", "labels", "пометки")}
+    out["масштаб"] = sx
+    if "пометки" in job:
+        # рукописные пометки мелкой копии: рамки те же, пересчитанные. Замеры английской
+        # руки (`черты`, `подчеркнуть`) остаются на большой картинке — тут не набирают
+        out["пометки"] = [{"рамки": [box(b) for b in note["рамки"]],
+                           **({"кроме": [box(b) for b in note["кроме"]]} if "кроме" in note else {})}
+                          for note in job["пометки"]]
     for key in ("снять", "вернуть", "вклеить"):
         if key in job:
             out[key] = [dict(it, box=box(it["box"])) for it in job[key]]
@@ -168,6 +176,10 @@ def run(spec_path: Path, only: str | None) -> int:
     done = 0
     for name, cfg in spec.items():
         if only and name != only:
+            continue
+        if cfg.get("по_оригиналу") or (spec.get(cfg.get("как"), {}).get("по_оригиналу")):
+            # картинку набирает `prints.py` — по замеру английской надписи и с подложкой
+            print(f"  {name}: пропущено, её набирает prints.py (по_оригиналу)")
             continue
         if "как" in cfg:
             own = {k: v for k, v in cfg.items()

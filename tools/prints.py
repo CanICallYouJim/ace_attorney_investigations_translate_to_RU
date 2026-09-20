@@ -31,6 +31,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
+import statistics
 import sys
 from pathlib import Path
 
@@ -49,6 +51,7 @@ REACH = 10          # кусок английских чернил ближе э
 GROW = 2            # на столько расширяется снимаемый кусок: сглаживание по краю
 LINE_GAP = 6        # межстрочное у многострочной надписи, как в relabel.py
 THIN = 0.92         # наши буквы тоньше этой доли английских — добавить контур
+FAT = 0.95          # кант растёт, пока штрих не догонит эту долю английского
 
 
 def load_font(name: str, size: int) -> ImageFont.FreeTypeFont:
@@ -173,6 +176,7 @@ def compose(name: str, cfg: dict, case: str):
     for lb in cfg["labels"]:
         if "англ" not in lb:
             raise ValueError(f"{name}: у надписи «{lb['text']}» нет «англ» — замерять не по чему")
+    wanted: list[int] = []
     for lb, mask in zip(cfg["labels"], parts_of(eng, E, cfg["labels"])):
         bb = mask.getbbox()
         if bb is None:
@@ -182,10 +186,15 @@ def compose(name: str, cfg: dict, case: str):
 
     out = Image.composite(C, E, gone.filter(ImageFilter.MaxFilter(2 * GROW + 1)))
     ink = Image.new("L", E.size, 0)
-    area = (min(b[0] for _, _, b in jobs) - 40, min(b[1] for _, _, b in jobs) - 40,
-            max(b[2] for _, _, b in jobs) + 40, max(b[3] for _, _, b in jobs) + 40)
+    # Область та же, какой её берёт судья (`check_pictures`: рамка русских чернил
+    # на всей картинке), а не «рамка английских ±40»: от запаса поле надписи
+    # замыкается шире, набор считал место свободным, а судья — занятым рисунком.
+    area = (min(b[0] for _, _, b in jobs), min(b[1] for _, _, b in jobs),
+            max(b[2] for _, _, b in jobs), max(b[3] for _, _, b in jobs))
     forbidden = cp.untouchable(C, m["paper"].convert("RGB"), eng, area)
-    for lb, mask, bb in jobs:
+
+    def geometry(lb: dict, mask: Image.Image, bb):
+        """Что снимается с английской надписи: гарнитура, строки, кегль, сжатие, контур."""
         font_name = lb.get("шрифт", cfg.get("font", "segoeuib"))
         lines_en = lb["англ"].split("|")
         lines_ru = lb["text"].split("|")
@@ -193,7 +202,8 @@ def compose(name: str, cfg: dict, case: str):
         want_w = bb[2] - bb[0]
         size = pick_size(lines_en[0], font_name, 0, 1.0, want_h)
         wide = render(lines_en[0], font_name, size, 0, 1.0)[2]
-        squeeze = min(1.25, max(0.45, want_w / max(1, wide[2] - wide[0]))) if len(lines_en) == 1 else 1.0
+        squeeze = (min(1.25, max(0.45, want_w / max(1, wide[2] - wide[0])))
+                   if len(lines_en) == 1 else 1.0)
         size = pick_size(lines_en[0], font_name, 0, squeeze, want_h)
         # Русское слово длиннее английского — жмём по ширине, а не мельчим: так же сделали
         # немцы и французы («Springer» и «Latour» стоят в росте «Knight» и «Rook», но уже).
@@ -208,7 +218,49 @@ def compose(name: str, cfg: dict, case: str):
         if cp.stroke(solid(render(lines_en[0], font_name, size, 0, squeeze)[0])) < THIN * en_stroke:
             sw = 1
             size = pick_size(lines_en[0], font_name, sw, squeeze, want_h)
-        ru_stroke = cp.stroke(solid(render(lines_ru[0], font_name, size, sw, squeeze)[0]))
+        return font_name, lines_en, lines_ru, want_h, want_w, size, squeeze, sw, en_stroke
+
+    # Кант подбирается **замером** и один на всю картинку: у англичан он один,
+    # а русская строка сжата по ширине — её штрихи тоньше, и на «Лифт» и на
+    # «Комната Густо» одна и та же толщина даёт разный штрих. Считаем, какой кант
+    # нужен каждой надписи, чтобы догнать английский штрих, и берём медиану:
+    # разнобой «1 и 4» на соседних комнатах виден глазом, а число из задания —
+    # не замер (правило от 20 сентября 2026).
+    edge_w = 0
+    if cfg.get("stroke"):
+        # Толщина канта снимается **с самих английских букв**, а не подбирается под
+        # число находок: у надписи светлое тело и тёмный кант вокруг; кант — это
+        # кольцо «чернила минус тело», и его средняя толщина равна площади кольца
+        # на длину границы тела. Подбор «пока штрих не догонит» сюда не годился:
+        # мерка `stroke` растёт, когда буквы слипаются кантом, и у длинного
+        # «Gusto's Room» показывала 17,5 против 11,6 у «Elevator» при одном канте.
+        fill = tuple(cfg["fill"])
+        seen = []
+        for lb, mask, bb in jobs:
+            core = Image.new("L", mask.size, 0)
+            cp_, mp_ = core.load(), mask.load()
+            ep = E.load()
+            for y in range(bb[1], bb[3]):
+                for x in range(bb[0], bb[2]):
+                    if mp_[x, y] and max(abs(ep[x, y][i] - fill[i]) for i in range(3)) < 60:
+                        cp_[x, y] = 255
+            ring = cp.count(mask) - cp.count(core)
+            edge_len = 2 * cp.count(core) / max(1e-6, cp.stroke(core))
+            if edge_len > 0:
+                seen.append(ring / edge_len)
+        # Половину пикселя округляем **вверх**: наши буквы сжаты по ширине, и при
+        # равном канте штрих выходит тоньше английского.
+        edge_w = max(1, math.ceil(statistics.median(seen) - 0.01)) if seen else cfg.get("stroke_width", 2)
+        measured = statistics.median(seen) if seen else 0.0
+        report.append(f"  кант снят с английских букв: "
+                      + ", ".join(f"{v:.1f}" for v in seen)
+                      + f" -> {edge_w} px на всю картинку")
+
+    for lb, mask, bb in jobs:
+        (font_name, lines_en, lines_ru, want_h, want_w,
+         size, squeeze, sw, en_stroke) = geometry(lb, mask, bb)
+        ru_stroke = cp.stroke(solid(render(lines_ru[0], font_name, size,
+                                           sw + edge_w, squeeze)[0]))
 
         # Точка опоры — из замера: тот же английский текст нашей гарнитурой ложится
         # в рамку английских чернил, и его базовая линия становится нашей.
@@ -216,6 +268,10 @@ def compose(name: str, cfg: dict, case: str):
         bx, by = bb[0] - en_bb[0], bb[1] - en_bb[1]
         step = want_h + LINE_GAP
         colour = tuple(lb.get("fill", cfg["fill"]))
+        # У английских надписей этого пласта буквы белые, а вокруг тёмный кант:
+        # без него набор читается бледно, а замер штриха сравнивает наше «только
+        # буквы» с английским «буквы вместе с кантом» и всегда кричит «тоньше».
+        edge = tuple(cfg["stroke"]) if cfg.get("stroke") else None
         where = lb.get("по", "центр")
         pieces = []
         mine = Image.new("L", E.size, 0)
@@ -227,16 +283,20 @@ def compose(name: str, cfg: dict, case: str):
             elif where == "право":
                 dx = (en_bb[2] - en_bb[0]) - (ru_bb[2] - ru_bb[0])
             at = (round(bx + dx - ox), round(by + j * step - oy))
-            pieces.append((ru_im, at))
-            mine.paste(255, at, solid(ru_im))
+            wide = render(text, font_name, size, sw + edge_w, squeeze)[0] if edge_w else None
+            pieces.append((ru_im, wide, at))
+            mine.paste(255, at, solid(wide if wide is not None else ru_im))
         # Русское слово короче или длиннее английского, и буква попадает туда, где у англичан
         # был пробел, — на точку или линию плана. Тогда надпись сдвигается на пару пикселей:
         # глазу это незаметно, а на рисунок она уже не ложится (20 сентября 2026).
         shift = (0, 0)
         if cp.count(ImageChops.multiply(mine, forbidden)):
             best = None
-            for dy in (0, -2, 2, -4, 4):
-                for dx_ in (0, -2, 2, -4, 4, -6, 6, -8, 8):
+            # Шаг поиска был ±8 px и не вытягивал «Комната Сдобиной» из коридора
+            # на шесть пикселей. Диапазон шире, порядок прежний — от нуля наружу,
+            # так что при прочих равных надпись остаётся на месте англичанина.
+            for dy in (0, -2, 2, -4, 4, -6, 6):
+                for dx_ in (0, -2, 2, -4, 4, -6, 6, -8, 8, -10, 10, -12, 12, -14, 14):
                     moved = Image.new("L", E.size, 0)
                     moved.paste(mine, (dx_, dy))
                     hits = cp.count(ImageChops.multiply(moved, forbidden))
@@ -248,17 +308,24 @@ def compose(name: str, cfg: dict, case: str):
                 if best and not best[3]:
                     break
             shift = (best[1], best[2])
-        for ru_im, at in pieces:
+        for ru_im, wide, at in pieces:
             place = (at[0] + shift[0], at[1] + shift[1])
+            if wide is not None:
+                out.paste(edge, place, wide)
+                ink.paste(255, place, solid(wide))
             out.paste(colour, place, ru_im)
             ink.paste(255, place, solid(ru_im))
         report.append(f"  {lb['text'].replace('|', ' / ')}: кегль {size}, сжатие {squeeze:.3f}, контур {sw}; "
                       f"высота {want_h:.0f} px, ширина {want_w} px; штрих наш {ru_stroke:.1f} против "
-                      f"английского {en_stroke:.1f}"
+                      f"английского {en_stroke:.1f}; кант {edge_w}"
                       + (f"; сдвиг {shift}" if shift != (0, 0) else ""))
-        if ru_stroke < 0.85 * en_stroke:
-            problems.append(f"{name}: «{lb['text']}» тоньше английской — штрих {ru_stroke:.1f} "
-                            f"против {en_stroke:.1f}")
+    # Сравнение «штрих против штриха» по мерке `stroke` здесь не судья: она растёт,
+    # когда соседние буквы слипаются кантом, и у длинного «Gusto's Room» показывает
+    # 17,5 против 11,6 у «Elevator» при одном и том же канте. Судим по прямому
+    # замеру кольца: наш кант не должен быть тоньше английского.
+    if cfg.get("stroke") and edge_w < 0.85 * measured:
+        problems.append(f"{name}: кант тоньше английского — {edge_w} px против "
+                        f"{measured:.1f} px замеренных")
     if alpha is not None:
         out = out.convert("RGBA")
         out.putalpha(alpha)

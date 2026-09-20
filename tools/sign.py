@@ -164,7 +164,9 @@ def curtain_of(im: Image.Image, cfg: dict) -> Image.Image:
         for y in range(H):
             if seen[x][y]:
                 mp[x, y] = 0
-    return m
+    # Мягкий край занавеса: пара пикселей смешанного цвета не бархат и не вывеска.
+    # Отдаём их занавесу — красить по ним нечего, а заливка иначе подтекает.
+    return m.filter(ImageFilter.MaxFilter(2 * cfg["занавес"].get("запас", 1) + 1))
 
 
 def relight(cfg: dict, case: str, name: str, en: Image.Image, where: Image.Image):
@@ -324,18 +326,56 @@ def compose(name: str, cfg: dict, case: str):
         q = shade(x, y)
         return tuple(min(255, round(v * q)) for v in board)
 
-    # Внутри следа снимается всё: за логотипом лежит ровная доска вывески, и она
-    # восстанавливается цветом доски по карте света. Ловить «чернила» порогом
-    # пробовали — тёмный кант пончика в порог не попадал и оставался на картинке.
+    def not_board(x: int, y: int, colour) -> bool:
+        """Пиксель — не доска вывески. Порог **по свету**: в тени у занавеса все
+        различия сжимаются, и постоянный порог там слепнет — именно так дуга
+        пончика (разница 4 уровня при полном свете это 11) проходила мимо
+        и проверки, и снятия."""
+        f = field(x, y)
+        t = max(2, round(cfg["поле"].get("допуск", 8) * shade(x, y)))
+        return max(abs(colour[i] - f[i]) for i in range(3)) > t
+
+    # След **дорастает по самой картинке**: посчитанный из кадра-источника, он
+    # обрывается там, где у источника надпись обесцвечена (тёмный кант пончика
+    # в насыщенность не попал), и от английского остаётся дуга. Рост идёт от следа
+    # наружу по всему, что не доска, не занавес и не крем (у крема синий выше
+    # зелёного, у доски наоборот), на ограниченное число шагов. Претензия
+    # пользователя 20 сентября 2026: «а это что за остаток пончика от оригинала?»
     tol = cfg["поле"].get("допуск", 8)
+    tp, xp = trace.load(), en.load()
+    reach = cfg.get("дорастить", 40)
+    if reach:
+        grown = trace.copy()
+        gp2, cp2 = grown.load(), curtain.load()
+        wave = [(x, y) for y in range(en.height) for x in range(en.width) if tp[x, y]]
+        limit = floor if floor is not None else en.height
+        for _ in range(reach):
+            nxt = []
+            for x, y in wave:
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    nx, ny = x + dx, y + dy
+                    if not (0 <= nx < en.width and 0 <= ny < limit) or gp2[nx, ny] or cp2[nx, ny]:
+                        continue
+                    r, g, b = xp[nx, ny]
+                    if b >= g:                       # крем: он перед вывеской, не трогаем
+                        continue
+                    if not not_board(nx, ny, (r, g, b)):
+                        continue
+                    gp2[nx, ny] = 255
+                    nxt.append((nx, ny))
+            if not nxt:
+                break
+            wave = nxt
+        report.append(f"  след дорощен по картинке: {trace.histogram()[255]} -> "
+                      f"{grown.histogram()[255]} пикс.")
+        trace = grown
+        tp = trace.load()
     eng = Image.new("L", en.size, 0)
-    ep, tp, xp = eng.load(), trace.load(), en.load()
+    ep = eng.load()
     for y in range(en.height):
         for x in range(en.width):
-            if tp[x, y]:
-                f = field(x, y)
-                if max(abs(xp[x, y][i] - f[i]) for i in range(3)) > tol:
-                    ep[x, y] = 255
+            if tp[x, y] and not_board(x, y, xp[x, y]):
+                ep[x, y] = 255
     report.append(f"  английских чернил в следе: {eng.histogram()[255]} пикс. "
                   f"из {trace.histogram()[255]}")
 
@@ -346,10 +386,10 @@ def compose(name: str, cfg: dict, case: str):
             if tp[x, y]:
                 op[x, y] = field(x, y)
 
-    # Свет — прожектор снизу по центру, тень занавеса ложится наискось: русские
-    # буквы обязаны темнеть так же, иначе у края они горят ярче оригинала.
-    shade = relight(cfg, case, name, en, ImageChops.subtract(trace, curtain))
-
+    # Свет (снят выше) ложится и на русские буквы: прожектор снизу по центру,
+    # тень занавеса наискось — у края буквы обязаны темнеть как английские.
+    # Считать карту второй раз нельзя: `field` — замыкание над ней, и пересчёт
+    # разводил заливку с проверкой (ловилось как 1979 «остатков»).
     patch = Image.new("RGBA", en.size, (0, 0, 0, 0))
     patch.paste(word, at, word)
     patch.putalpha(ImageChops.multiply(patch.getchannel("A"),
@@ -381,11 +421,40 @@ def compose(name: str, cfg: dict, case: str):
     sp = stayed.load()
     for y in range(en.height):
         for x in range(en.width):
-            if ep[x, y] and not ip[x, y]:
-                f = field(x, y)
-                if max(abs(dp[x, y][i] - f[i]) for i in range(3)) > tol:
-                    sp[x, y] = 255
-    return done, ink, eng, trace, start, stayed, report
+            if ep[x, y] and not ip[x, y] and not_board(x, y, dp[x, y]):
+                sp[x, y] = 255
+    return done, ink, eng, trace, start, stayed, curtain, not_board, report
+
+
+def strays(ru: Image.Image, curtain: Image.Image, ink: Image.Image, not_board, cfg: dict,
+           least: int = 40):
+    """Чужая краска на вывеске — **независимо от следа, по которому снимали**.
+
+    Это и есть главная проверка. Та, что смотрит внутрь следа, наследует его
+    слепое пятно: 20 сентября 2026 след обрывался на тёмном канте пончика,
+    и дуга английского осталась, а проверка честно показывала ноль.
+
+    Здесь след не участвует вовсе. Над кондитерской лентой у вывески может быть
+    ровно три вещи: доска, крем (он перед вывеской, у него синий выше зелёного)
+    и **наши** буквы. Всё остальное — чужое: связный кусок от `least` пикселей
+    попадает в находки, где бы он ни лежал.
+    """
+    floor = cfg.get("не_ниже") or ru.height
+    mine = ink.filter(ImageFilter.MaxFilter(5))
+    px, cp, mp = ru.load(), curtain.load(), mine.load()
+    odd = Image.new("L", ru.size, 0)
+    op = odd.load()
+    for y in range(floor):
+        for x in range(ru.width):
+            if cp[x, y] or mp[x, y]:
+                continue
+            r, g, b = px[x, y]
+            if b >= g:
+                continue
+            if not_board(x, y, (r, g, b)):
+                op[x, y] = 255
+    kept, found = parts(odd, least)
+    return kept, found
 
 
 def outside(base: Image.Image, ru: Image.Image, trace: Image.Image, ink: Image.Image,
@@ -436,13 +505,21 @@ def main() -> int:
     for name, cfg in spec.items():
         if not isinstance(cfg, dict) or (args.only and name != args.only):
             continue
-        out, ink, eng, trace, base, stayed, report = compose(name, cfg, args.case)
+        out, ink, eng, trace, base, stayed, curtain, not_board, report = compose(name, cfg, args.case)
         en = Image.open(EN / args.case / f"{name}.png").convert("RGB")
 
         # Две проверки, обе без подложки и без веры в рамку задания.
         beyond = outside(base, out, trace, ink)
+        odd, blobs = strays(out, curtain, ink, not_board, cfg)
         left, over = stayed.histogram()[255], beyond.histogram()[255]
-        report.append(f"  остатки английского {left} пикс., правка за следом {over} пикс.")
+        report.append(f"  остатки английского {left} пикс., правка за следом {over} пикс., "
+                      f"чужая краска на вывеске {sum(n for n, _ in blobs)} пикс. "
+                      f"в {len(blobs)} кусках")
+        if blobs:
+            problems.append(f"{name}: на вывеске осталась чужая краска — "
+                            + ", ".join(f"{n} пикс. {b}" for n, b in blobs[:4])
+                            + f" (карта: {SHEET.with_name(name + '_чужое.png')})")
+            odd.save(SHEET.parent / f"{name}_чужое.png")
         if left > cfg.get("допуск_остатков", 0):
             problems.append(f"{name}: английская надпись снята не целиком — "
                             f"{left} пикс. внутри следа остались как в оригинале "

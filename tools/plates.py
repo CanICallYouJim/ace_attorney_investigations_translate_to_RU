@@ -377,7 +377,7 @@ def main() -> int:
     if args.check and not any((UI / f"{name}.png").exists() for name in spec):
         # PNG в .gitignore: на свежем клоне плашки ещё не набраны, и сверять нечего.
         print(f"плашки не набраны ({UI}) — сверять нечего; набрать: tools/plates.py")
-        return 0
+        return 2 if args.check else 0
     english = english_plates()
     missing = [name for name in spec if name not in english]
     if missing:

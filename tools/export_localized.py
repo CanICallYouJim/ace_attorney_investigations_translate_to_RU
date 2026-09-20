@@ -21,6 +21,7 @@ import UnityPy
 from PIL import Image, ImageDraw
 
 from common import BUNDLES, WORK, load_json
+from layer_localized import original
 
 OUT = WORK / "localized"
 THUMB = 384
@@ -53,7 +54,15 @@ def export(groups: dict[str, list], langs: tuple[str, ...], full: bool) -> dict[
     for bundle_name, fams in sorted(groups.items()):
         wanted = {v["path"]: (fam, lang)
                   for fam in fams for lang, v in fam["variants"].items() if lang in langs}
-        env = UnityPy.load(str(BUNDLES / bundle_name))
+        # Эталон выгружается только из **нетронутого** бандла: живой мы сами
+        # переписываем `make install`, и после первой же установки «английская»
+        # картинка стала бы нашей русской. Ровно этим механизмом 13 сентября 2026
+        # вставка сверяла сторону текстуры сама с собой и сходилась.
+        src = original(bundle_name)
+        if src is None:
+            sys.exit(f"{short(bundle_name)}: живой бандл уже переписан нами, а в backup/ "
+                     f"его нет — эталон брать неоткуда. Вернуть оригинал: tools/restore.py")
+        env = UnityPy.load(str(src))
         dest = OUT / short(bundle_name)
         dest.mkdir(parents=True, exist_ok=True)
 

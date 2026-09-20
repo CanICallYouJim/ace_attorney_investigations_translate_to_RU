@@ -475,7 +475,7 @@ def main() -> int:
     env = open_bundle()
     if args.check and not ATLAS_PNG.exists():
         print(f"заставка не набрана ({ATLAS_PNG}) — сверять нечего; набрать: tools/splash.py")
-        return 0
+        return 2 if args.check else 0
 
     atlas, layer, spec, masks, german, info, problems = build_atlas(env)
     geo = geometry(env, HOST)

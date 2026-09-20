@@ -26,6 +26,11 @@ import time
 from pathlib import Path
 
 TOOLS = Path(__file__).resolve().parent
+# Код возврата 2 у проверки означает «сверять было нечего» — не провал, но и не
+# «OK»: молчаливый зелёный на пустом прогоне и есть тот баг, из-за которого
+# проверка печатных надписей «проходила», падая на пути к заданию
+# (разбор 20 сентября 2026).
+NOTHING = 2
 # Проверки запускаются из tools/ (см. `run`), поэтому путь к заданию — от корня,
 # а не относительный: с относительным проверка печатных надписей падала
 # FileNotFoundError и «проходила» ни разу не отработав (найдено 20 сентября 2026).
@@ -93,17 +98,20 @@ def main() -> int:
         print(f"… {what}", flush=True)
         code, out, secs = run(cmd)
         results.append((what, code, secs, out))
-        if not args.quiet and code == 0:
+        if not args.quiet and code in (0, NOTHING):
             # Последняя строка проверки — её собственный вердикт, он информативнее галочки.
             tail = [ln for ln in out.strip().splitlines() if ln.strip()]
             if tail:
                 print(f"   {tail[-1][:100]}")
 
     print(f"\n{'проверка':48} {'итог':>6} {'секунд':>8}")
-    failed = []
+    failed, skipped = [], []
     for what, code, secs, out in results:
-        print(f"{what:48} {'OK' if code == 0 else 'ПРОВАЛ':>6} {secs:8.1f}")
-        if code != 0:
+        mark = "OK" if code == 0 else ("ПУСТО" if code == NOTHING else "ПРОВАЛ")
+        print(f"{what:48} {mark:>6} {secs:8.1f}")
+        if code == NOTHING:
+            skipped.append((what, out))
+        elif code != 0:
             failed.append((what, out))
 
     if failed:

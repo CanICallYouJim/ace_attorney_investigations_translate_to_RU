@@ -329,7 +329,10 @@ def main() -> int:
     for p in problems:
         print(f"  БЕДА: {p}", file=sys.stderr)
     if not done:
+        # Сверять нечего — в режиме сверки это провал (см. sign.py).
         print(f"в {args.spec} нет картинок с «по_оригиналу» — набирать нечего")
+        if args.check:
+            return 2
     return 1 if problems else 0
 
 

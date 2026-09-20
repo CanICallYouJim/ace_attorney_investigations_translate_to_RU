@@ -498,8 +498,11 @@ def main() -> int:
 
     spec_path = RU / args.case / "sign.json"
     if not spec_path.exists():
+        # В режиме сверки «нечего сверять» — провал, а не тишина: иначе
+        # `check_all --full` зеленеет, ни разу не посмотрев на картинку.
+        # Тот же класс, что упавший по пути `prints.py --check` 20 сентября 2026.
         print(f"нет задания {spec_path} — набирать нечего")
-        return 0
+        return 2 if args.check else 0
     spec = json.loads(spec_path.read_text(encoding="utf-8"))
     problems, rows = [], []
     for name, cfg in spec.items():

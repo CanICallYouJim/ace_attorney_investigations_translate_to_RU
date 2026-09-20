@@ -38,11 +38,12 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 import check_pictures as cp
 from common import WORK
-from notes import red
+from notes import STAGE, red
 from relabel import remap
 
 RU = WORK / "graphics_ru"
 EN = WORK / "graphics_en"
+
 FONT_DIR = Path("C:/Windows/Fonts")
 REACH = 10          # кусок английских чернил ближе этого к рамке надписи — её буква
 GROW = 2            # на столько расширяется снимаемый кусок: сглаживание по краю
@@ -309,12 +310,18 @@ def main() -> int:
         for line in report:
             print(line, flush=True)
         png = RU / case / f"{name}.png"
+        stage = STAGE / f"{name}.png"
         if args.check:
-            if not png.exists() or ImageChops.difference(Image.open(png).convert("RGB"),
-                                                         out.convert("RGB")).getbbox():
-                problems.append(f"{name}: PNG не совпадает с набором по заданию — tools/prints.py")
+            # Сверять с `png` нельзя: на нём уже лежат рукописные пометки `notes.py`.
+            if not stage.exists():
+                problems.append(f"{name}: нет печатного слоя {stage} — прогнать make notes")
+            elif ImageChops.difference(Image.open(stage).convert("RGB"),
+                                       out.convert("RGB")).getbbox():
+                problems.append(f"{name}: печатный слой не совпадает с набором по заданию — tools/prints.py")
         else:
             out.save(png)
+            STAGE.mkdir(parents=True, exist_ok=True)
+            out.save(stage)
             ink.save(RU / case / f"{name}_print_ink.png")
             ink.save(RU / case / f"{name}_ink.png")
             print(f"  записано: {png}")

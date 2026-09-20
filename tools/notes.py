@@ -55,6 +55,10 @@ import check_pictures as cp
 from common import WORK
 from layer_localized import NOTE_ZONE as ZONE
 
+# Печатный слой `prints.py` отдельным файлом: поверх него ложится рукописное,
+# и картинка в graphics_ru становится итоговой. Лежит здесь, а не в prints.py,
+# потому что prints.py импортирует notes.py — обратный импорт замкнул бы круг.
+STAGE = WORK / "graphics_masks" / "prints"
 RU = WORK / "graphics_ru"
 EN = WORK / "graphics_en"
 MASKS = WORK / "graphics_masks"
@@ -292,7 +296,11 @@ def spans_of(text: str, words: str | None) -> tuple[int, int]:
 
 def survey(name: str, cfg: dict, case: str) -> dict:
     """Всё, что снимается с английской пометки: её буквы, строки, кегль, сжатие, контур."""
-    base = Image.open(RU / case / f"{name}.png")
+    # Основа — печатный слой `prints.py`, а не итоговая картинка: иначе второй прогон
+    # рисует пометки поверх собственных, края букв темнеют на 1-5 уровней и `--check`
+    # валится сразу после своей же записи (разбор 20 сентября 2026).
+    stage = STAGE / f"{name}.png"
+    base = Image.open(stage if stage.exists() else RU / case / f"{name}.png")
     E = Image.open(EN / case / f"{name}.png").convert("RGB")
     m = cp.masks_for(name)
     C, T = m["clean"].convert("RGB"), m["mask"].convert("L")

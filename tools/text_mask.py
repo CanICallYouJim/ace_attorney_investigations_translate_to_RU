@@ -112,6 +112,8 @@ GAP = 10        # короткий разрыв линии
 ZONE = 9        # окно зоны разбора вокруг английских чернил
 CELL = 8        # клетка оценки бумаги
 MIN_PIECE = 12  # кусок рисунка меньше этого — не рисунок; линию через букву восстановит протяжка
+WALLED = 60     # кусок «рисунка», приклеенный к чернилам и больше этого, — предмет, который обвела надпись
+PAPERED = 4     # и в нём кусок от стольких пикселей, где язык показал бумагу; зазор печатается в отчёте
 FLAT_PAD = 12   # подпись на ровной заливке: запас вокруг рамки из labels.json,
 FLAT_RING = 10  # кольцо вокруг — если фона внутри рамки мало,
 FLAT_TRI = 20   # «на треугольнике палитры» — расстояние до смеси цвета букв, обводки и фона,
@@ -558,15 +560,21 @@ def build(images: dict[str, Image.Image], labels: dict | None = None) -> dict:
                 matched.update((GROUP[a], GROUP[b]))
         return len(matched) >= 3
 
+    eng_ink = marked["eng"].load()      # где у англичанина его собственные чернила
+    dropped_share, kept_share = 10 ** 9, 0   # зазор у порога PAPERED
     seen, coincidences = set(), 0
     for start in list(drawn):
         if start in seen or start not in drawn:
             continue
         comp, stack, strongest, touches, votes = [], [start], 0, False, {}
+        comp_set = set()
+        glued = False         # кусок приклеен к английским чернилам того же цвета
+        spills = False        # и тот же цвет продолжается не в чернила, а в рисунок
         seen.add(start)
         while stack:
             cx, cy = stack.pop()
             comp.append((cx, cy))
+            comp_set.add((cx, cy))
             n, who = drawn[(cx, cy)]
             strongest = max(strongest, n)
             for l in who:
@@ -580,9 +588,68 @@ def build(images: dict[str, Image.Image], labels: dict | None = None) -> dict:
                     if q not in seen:
                         seen.add(q)
                         stack.append(q)
-                elif not zone[nx, ny] and continues(bp[cx, cy], ep[nx, ny], pp[nx, ny]):
-                    touches = True
-        if (touches and len(comp) >= MIN_PIECE) or strongest >= groups_total or whole_shape(comp, votes):
+                else:
+                    if not paperlike(ep[nx, ny], pp[nx, ny]) and near(ep[cx, cy], ep[nx, ny]):
+                        if eng_ink[nx, ny]:
+                            glued = True      # продолжение того же штриха англичанина
+                        else:
+                            spills = True     # тот же цвет уходит в рисунок — это не буква
+                    if not zone[nx, ny] and continues(bp[cx, cy], ep[nx, ny], pp[nx, ny]):
+                        touches = True
+        # «Все группы показали тёмное» — не довод, если кусок **сам приклеен
+        # к английским чернилам того же цвета и никуда не ведёт**. Это не деталь
+        # рисунка, а часть самой буквы: стык, внутренний угол, засечка. Голоса
+        # других языков подтверждают тут не рисунок, а каждый свою букву — в этом
+        # месте бумаги не видел никто.
+        # Так в подложке плана 24 марта жил стык английской `k` из `Rook`: 21 px,
+        # `touches=False`, приклеен к штриху `k`, голоса всех четырёх групп
+        # (у немцев `m` в `Turm`, у французов `r` в `Latour`, у корейцев черта
+        # в `로`, у китайцев в `城`). Набор перерисовал его как рисунок, и он вылез
+        # в пустоту буквы «я» — нашёл пользователь 21 сентября 2026.
+        # Два ограничителя обязательны, оба поставлены глазом по листам, а не числом.
+        # Широкая правка «нет выхода — не рисунок» съела край коридора на плане
+        # дела 3; «приклеен к чернилам» без `spills` подъедала край стены там же,
+        # где английская буква стояла к стене вплотную: тот же тёмный цвет уходил
+        # **в стену**, а не в букву. Настоящий кусок рисунка выдаёт себя тем, что
+        # его цвет продолжается за пределы чернил.
+        # И решающее: **бумага бьёт чернила**. Надпись может только закрыть
+        # подложку, осветлить её она не может. Значит, если хоть один язык
+        # показал в этом пикселе бумагу (`fallback` — он и хранит такое
+        # наблюдение), то бумага там и есть, а тёмное у прочих языков — их
+        # собственные буквы. Где бумаги не показал никто и все семь языков дают
+        # один и тот же цвет до единицы — это рисунок, и трогать его нельзя:
+        # на плане дела 3 так подъедался край стены.
+        # Наблюдение бумаги считается **куском**, а не долей: одиночный пиксель,
+        # где чей-то язык прочитал бумагу, — это край рисунка, размытый сжатием,
+        # и по нему подложку рвать нельзя (так подъедался обод вентилятора
+        # на плане 24 марта: 44 px, бумага ровно в одном). Кусок бумаги в четыре
+        # пикселя и больше — это уже просвет между чужими буквами.
+        seen_p, papered = set(), 0
+        for q in comp:
+            if q not in fallback or q in seen_p:
+                continue
+            stack, size = [q], 0
+            seen_p.add(q)
+            while stack:
+                a, b = stack.pop()
+                size += 1
+                for dx, dy in N8:
+                    r = (a + dx, b + dy)
+                    if r in fallback and r not in seen_p and r in comp_set:
+                        seen_p.add(r)
+                        stack.append(r)
+            papered = max(papered, size)
+        if not touches and glued and not spills and len(comp) <= WALLED:
+            # Зазор у порога печатается: без него «ноль находок» ничего не значит.
+            # Замер на плане 24 марта: стык английской `k` — кусок бумаги 10
+            # (обязан уйти), обод вентилятора рядом — 1 (обязан остаться).
+            if papered >= PAPERED:
+                dropped_share = min(dropped_share, papered)
+            else:
+                kept_share = max(kept_share, papered)
+        if not touches and glued and not spills and papered >= PAPERED and len(comp) <= WALLED:
+            pass                      # это часть буквы, а не рисунок
+        elif (touches and len(comp) >= MIN_PIECE) or strongest >= groups_total                 or whole_shape(comp, votes):
             continue
         for q in comp:
             del drawn[q]
@@ -695,6 +762,10 @@ def build(images: dict[str, Image.Image], labels: dict | None = None) -> dict:
             "confirmed_share": round(counts[CONFIRMED] / total, 4) if total else 0,
             "hole_share": round(n_holes / total, 4) if total else 0,
             "traces": n_traces, "coincidences_rejected": coincidences,
+            # Зазор у порога PAPERED: что лежит по обе стороны. Зазор в ноль
+            # значит, что порог уже слеп (правило №13, 20 сентября 2026).
+            "papered_dropped": dropped_share if dropped_share < 10 ** 9 else None,
+            "papered_kept": kept_share,
             "languages": langs, "dropped_as_duplicates": dropped, "flat_labels": flat,
         },
     }
@@ -727,7 +798,10 @@ def sheet(name: str, res: dict) -> Image.Image:
 def all_names() -> list[str]:
     names = set()
     for spec in list(RU.glob("*/labels.json")) + list(RU.glob("*/art.json")):
-        names.update((load_json(spec) or {}).keys())
+        # Ключ `_` в задании — пояснение для человека, а не картинка (так же
+        # его пропускает `layer_localized.recipes`). Без этого `--all` падал
+        # на первом же задании с пояснением.
+        names.update(k for k, v in (load_json(spec) or {}).items() if isinstance(v, dict))
     return sorted(names)
 
 
@@ -756,6 +830,7 @@ def main() -> int:
         print(f"{name}: маска {st['mask_px']} px; подтверждено {st['confirmed_share']:.1%}, "
               f"одно наблюдение {st['single'] / max(1, st['mask_px']):.1%}, дыр {st['hole_share']:.1%}, "
               f"следов {st['traces']} px, отброшено совпадений букв {st['coincidences_rejected']} px; "
+              f"зазор у порога бумаги {st['papered_kept']} | {st['papered_dropped']}; "
               f"{flat}{time.time() - t0:.0f} c")
     stats_path.write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
     return 0

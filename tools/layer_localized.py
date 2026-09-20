@@ -145,7 +145,7 @@ def stored_flipped(env, key: str, face_up: Image.Image) -> bool:
 def recipes(case_dir: Path) -> dict[str, list[dict]]:
     """Задания набора и вклейки по картинкам дела: рамки надписей и рецепты уменьшения."""
     out: dict[str, list[dict]] = defaultdict(list)
-    for fname in ("labels.json", "art.json", "notes.json"):
+    for fname in ("labels.json", "art.json", "notes.json", "sign.json"):
         spec = load_json(case_dir / fname, default={}) or {}
         for name, job in spec.items():
             if not isinstance(job, dict):
@@ -186,6 +186,11 @@ def allowed(size: tuple[int, int], jobs: list[dict]) -> Image.Image | None:
             # У мелкой копии рамки пересчитаны, и запас едет вместе с ними
             for box in note["рамки"]:
                 rect(box, MARGIN + round(NOTE_ZONE * job.get("масштаб", 1.0)))
+        for box in job.get("надпись", []):
+            # вывеска: рамка снята с самого набора — след английской надписи
+            # вместе с нашими буквами (tools/sign.py). Без неё слой вывески
+            # числился «правкой за рамками надписей» целиком, 106 089 пикселей.
+            rect(box, MARGIN)
         if "уменьшить" in job:
             rect(job["уменьшить"]["якорь_тут"], 2)
     return mask

@@ -21,6 +21,8 @@
 
 Python 3.11.4 в системе, локальное окружение в `.venv` (без Docker — по требованию
 пользователя). Пакеты: `UnityPy` 1.25.3, `fonttools`, `pillow`.
+С 22 сентября 2026 ещё `numpy` 2.4.6, `scipy` 1.17.1 и `opencv-python-headless` 5.0 —
+на них `tools/screen.py` (экран заставки `cut02_037`).
 
 ```bash
 cd "C:\Users\Илья\Desktop\Code\Ace Attorney Translating"

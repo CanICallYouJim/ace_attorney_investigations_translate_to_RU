@@ -57229,7 +57229,7 @@
       "index": 7,
       "mode": 2,
       "en": "That's a {E108:000C}{E107:0003}{E041}lion lily{E040}, {E108:000C}{E107:0002}if I'm not very much mistaken.{E108:0010}\nA rare member of the family Liliaceae.",
-      "ru": "Это {E108:000C}{E107:0003}{E041}львиная лилия{E040}, {E108:000C}{E107:0002}если я не слишком ошибаюсь.{E108:0010}\nРедкий вид семейства лилейных.",
+      "ru": "Это {E108:000C}{E107:0003}{E041}львиная лилия{E040}, {E108:000C}{E107:0002}если только я не ошибаюсь.{E108:0010}\nРедкий вид семейства лилейных.",
       "status": "translated"
     },
     {
@@ -61079,8 +61079,8 @@
       "index": 0,
       "mode": 2,
       "en": "I don't believe there is any more to be found here.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не думаю, что здесь есть ещё что-то.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A03|0",
@@ -61089,8 +61089,8 @@
       "index": 0,
       "mode": 2,
       "en": "I must scour the scene and inspect anything that\ncatches my attention.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нужно прочесать место преступления и осмотреть\nвсё, что привлечёт внимание.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A04|0",
@@ -61099,8 +61099,8 @@
       "index": 0,
       "mode": 2,
       "en": "There's nothing of interest here.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Здесь нет ничего интересного.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A05|0",
@@ -61449,8 +61449,8 @@
       "index": 0,
       "mode": 2,
       "en": "Could this be related to the evidence somehow?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не связано ли это как-то с уликами?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A28|0",
@@ -62499,8 +62499,8 @@
       "index": 0,
       "mode": 3,
       "en": "These planters...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эти клумбы...",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|1",
@@ -62509,8 +62509,8 @@
       "index": 1,
       "mode": 2,
       "en": "According to the case file, the yard stretched\naround {E041}three sides of the orphanage{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "По материалам дела двор шёл\n{E041}вдоль трёх сторон приюта{E040}.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|2",
@@ -62519,8 +62519,8 @@
       "index": 2,
       "mode": 2,
       "en": "And there were three {E043}planters{E040} on each side.{E106}{E198:00040013}{E100:0001}{E1AE}{E101:00000000}{E107:0002}{E284}(Yes...{E108:0020} {E107:0003}Planters arranged in a very particular pattern...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "И с каждой стороны — по три {E043}клумбы{E040}.{E106}{E198:00040013}{E100:0001}{E1AE}{E101:00000000}{E107:0002}{E284}(Да...{E108:0020} {E107:0003}И расставлены они особым порядком...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|3",
@@ -62529,8 +62529,8 @@
       "index": 3,
       "mode": 2,
       "en": "(One we've seen somewhere before...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Который мы где-то уже видели...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|4",
@@ -62539,8 +62539,8 @@
       "index": 4,
       "mode": 2,
       "en": "Shame there aren't many flowers.{E108:0010}\nBut I guess it was the middle of winter...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Жаль, цветов мало.{E108:0010}\nХотя на дворе-то середина зимы...",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|5",
@@ -62549,8 +62549,8 @@
       "index": 5,
       "mode": 2,
       "en": "Yes.{E108:0018} But look at that one --{E108:0008} it's {E041}bright yellow{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0018} А вот этот погляди --{E108:0008} {E041}ярко-жёлтый{E040}.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|6",
@@ -62559,8 +62559,8 @@
       "index": 6,
       "mode": 2,
       "en": "Weird.{E108:0010} How come there's only one?{E108:0010}\n{E1D1}Wait --{E108:0018} it looks like somebody dropped it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Странно.{E108:0010} Почему он такой один?{E108:0010}\n{E1D1}Погодите --{E108:0018} похоже, его обронили.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|7",
@@ -62569,8 +62569,8 @@
       "index": 7,
       "mode": 2,
       "en": "That's a {E108:000C}{E107:0003}{E041}lion lily{E040}, {E108:000C}{E107:0002}if I'm not very much mistaken.{E108:0010}\nA rare member of the family Liliaceae.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это {E108:000C}{E107:0003}{E041}львиная лилия{E040}, {E108:000C}{E107:0002}если только я не ошибаюсь.{E108:0010}\nРедкий вид семейства лилейных.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|8",
@@ -62579,8 +62579,8 @@
       "index": 8,
       "mode": 2,
       "en": "A {E041}lion lily{E040}, you say?",
-      "ru": "",
-      "status": "pending"
+      "ru": "{E041}Львиная лилия{E040}, говоришь?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|9",
@@ -62589,8 +62589,8 @@
       "index": 9,
       "mode": 2,
       "en": "Wait.{E108:0008} Didn't Judge Gavèlle give President Wang\nsome lion lilies?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стоп.{E108:0008} Судья Молотова ведь дарила президенту\nльвиные лилии?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|10",
@@ -62599,8 +62599,8 @@
       "index": 10,
       "mode": 2,
       "en": "(What is the same flower doing here?{E108:0018} {E107:0004}{E1D1}This can't\nbe a coincidence...{E108:0010} {E107:0002}can it?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Откуда здесь тот же цветок?{E108:0018} {E107:0004}{E1D1}Совпадением\nэто быть не может...{E108:0010} {E107:0002}или может?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|11",
@@ -62609,8 +62609,8 @@
       "index": 11,
       "mode": 2,
       "en": "I believe this particular cultivar is from Asia.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Насколько мне известно, сорт этот азиатский.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|12",
@@ -62619,8 +62619,8 @@
       "index": 12,
       "mode": 2,
       "en": "Where it's said to symbolize {E108:000C}{E107:0004}{E188:00300000}{E1D5}{E041}the bond between\nparent and child{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Там он, говорят, означает {E108:000C}{E107:0004}{E188:00300000}{E1D5}{E041}связь родителя\nи ребёнка{E040}.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|13",
@@ -62629,8 +62629,8 @@
       "index": 13,
       "mode": 2,
       "en": "I wasn't aware you were so knowledgeable\nwhen it came to flowers, Franziska.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не знал, что ты так разбираешься\nв цветах, Франциска.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002A92|14",
@@ -62639,8 +62639,8 @@
       "index": 14,
       "mode": 2,
       "en": "Hah.{E108:0010} What I just told you is common knowledge.{E108:0010}\nPerhaps you just need to read a little more.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ха.{E108:0010} То, что я сказала, знает каждый.{E108:0010}\nТебе бы читать побольше.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AA2|0",
@@ -62649,8 +62649,8 @@
       "index": 0,
       "mode": 3,
       "en": "There are burn marks on this pillar here.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На этом столбе следы огня.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AA2|1",
@@ -62659,8 +62659,8 @@
       "index": 1,
       "mode": 2,
       "en": "The report says there was a fire sometime\non the evening of the incident.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В отчёте сказано: вечером в день\nпроисшествия тут был пожар.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AA2|2",
@@ -62669,8 +62669,8 @@
       "index": 2,
       "mode": 2,
       "en": "A fire?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пожар?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AA2|3",
@@ -62679,8 +62679,8 @@
       "index": 3,
       "mode": 3,
       "en": "Let's see...{E108:0018} Where was it again...?{E108:0018} {E107:0001}{E280}Ah!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так...{E108:0018} Где же это было...?{E108:0018} {E107:0001}{E280}А!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AA2|4",
@@ -62689,8 +62689,8 @@
       "index": 4,
       "mode": 2,
       "en": "Yeah.{E108:0010} {E1D1}One of the orphans set a fire with some\nkerosene.{E108:0010} Some sort of prank, probably...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага.{E108:0010} {E1D1}Кто-то из детей поджёг двор\nкеросином.{E108:0010} Наверное, из озорства...",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AA2|5",
@@ -62699,8 +62699,8 @@
       "index": 5,
       "mode": 3,
       "en": "They sound like a lively bunch.{E108:0010} Possibly too lively...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Бойкая, видно, компания.{E108:0010} Пожалуй, слишком...",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AA2|6",
@@ -62709,8 +62709,8 @@
       "index": 6,
       "mode": 2,
       "en": "It seems their antics spoiled our chances of finding\nany footprints near the entrance of the building.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Из-за их шалостей у входа в здание\nникаких следов уже не найти.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AA2|7",
@@ -62719,8 +62719,8 @@
       "index": 7,
       "mode": 3,
       "en": "Fire data jotted down\nin my Organizer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Пожар» записаны\nв органайзер.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AAA|0",
@@ -62729,8 +62729,8 @@
       "index": 0,
       "mode": 3,
       "en": "Hey...{E108:0010} {E107:0001}{E1D1}this arch --{E108:0018} we've seen it somewhere\nbefore, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Слушайте...{E108:0010} {E107:0001}{E1D1}эта арка --{E108:0018} мы же её где-то\nуже видели?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AAA|1",
@@ -62739,8 +62739,8 @@
       "index": 1,
       "mode": 2,
       "en": "Indeed we have.{E108:0010} It's the same one that stands over\nthe entrance of the Bigg Building today.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Видели.{E108:0010} Та самая, что и сегодня стоит\nнад входом в здание Бигг.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AAA|2",
@@ -62749,8 +62749,8 @@
       "index": 2,
       "mode": 2,
       "en": "But this is {E108:000C}{E107:0001}{E1D1}supposed to be how things looked twelve\nyears ago!{E108:0018} {E107:0002}Was it there the whole time?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но тут же {E108:000C}{E107:0001}{E1D1}всё как двенадцать лет\nназад!{E108:0018} {E107:0002}Она что, всё это время стояла?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AAA|3",
@@ -62759,8 +62759,8 @@
       "index": 3,
       "mode": 2,
       "en": "It seems the architects worked the old archway into\nthe structure of the new building.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Похоже, архитекторы вписали старую арку\nв новое здание.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AAA|4",
@@ -62769,8 +62769,8 @@
       "index": 4,
       "mode": 3,
       "en": "The future is simply the past reheated!{E108:0018}\n{E107:0001}{E1D1}I think I heard that somewhere!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Будущее — это хорошо разогретое прошлое!{E108:0018}\n{E107:0001}{E1D1}Я где-то такое слышала!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AAA|5",
@@ -62779,8 +62779,8 @@
       "index": 5,
       "mode": 2,
       "en": "(And for once, {E108:0010}it seems you might have\nremembered it correctly...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(И на этот раз, {E108:0010}кажется, ты ничего\nне переврала...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AAA|6",
@@ -62789,8 +62789,8 @@
       "index": 6,
       "mode": 3,
       "en": "But twelve years is a long time to reheat something\nfor...{E108:0018} {E107:0002}{E156:0002001A00000000}If it was your lunch, {E108:0018}{E107:0003}{E1D1}it'd be ruined!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Правда, двенадцать лет разогревать --\nперебор...{E108:0018} {E107:0002}{E156:0002001A00000000}Обед бы точно {E108:0018}{E107:0003}{E1D1}испортился!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB1|0",
@@ -62799,8 +62799,8 @@
       "index": 0,
       "mode": 2,
       "en": "An igloo shaped like a bear.{E108:0010} The perfect balance\nof cuteness and scariness!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Иглу в виде медведя.{E108:0010} Идеальная смесь\nмилоты и жути!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB1|1",
@@ -62809,8 +62809,8 @@
       "index": 1,
       "mode": 2,
       "en": "I guess you could call it...{E108:000C} {E107:0001}{E280}a bigloo!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Одним словом...{E108:000C} {E107:0001}{E280}берлоглу!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB1|2",
@@ -62819,8 +62819,8 @@
       "index": 2,
       "mode": 2,
       "en": "Hmm.{E108:0010} It is quite large.{E108:0010} You could probably fit\nas many as three people inside it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хм.{E108:0010} Немаленькое.{E108:0010} Человека три, пожалуй,\nвнутрь поместятся.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB1|3",
@@ -62829,8 +62829,8 @@
       "index": 3,
       "mode": 2,
       "en": "Yeah!{E108:0010} {E1D1}And they could live in there for three\nwhole years!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага!{E108:0010} {E1D1}И прожить там могли бы целых\nтри года!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB1|4",
@@ -62839,8 +62839,8 @@
       "index": 4,
       "mode": 2,
       "en": "Three years?{E108:0020} And what about the summer?{E108:0010} {E107:0003}Wouldn't \nthe bigl--{E108:0018} {E107:0002}ahem-- igloo melt?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Три года?{E108:0020} А летом?{E108:0010} {E107:0003}Разве берло--{E108:0018} {E107:0002}кхм-- иглу\nне растает?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB1|5",
@@ -62849,8 +62849,8 @@
       "index": 5,
       "mode": 1,
       "en": "Again, again!{E108:0018} Say it again, Mr. Edgeworth!{E108:0010} Please!{E108:0018}\n{E1D1}One more time!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё, ещё!{E108:0018} Скажите ещё раз, мистер Эджворт!{E108:0010} Ну!{E108:0018}\n{E1D1}Ещё разочек!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB1|6",
@@ -62859,8 +62859,8 @@
       "index": 6,
       "mode": 3,
       "en": "Wouldn't the igloo melt?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Разве иглу не растает?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB1|7",
@@ -62869,8 +62869,8 @@
       "index": 7,
       "mode": 2,
       "en": "Gah...{E108:0010} You're no fun!",
-      "ru": "",
-      "status": "pending"
+      "ru": "У-у...{E108:0010} Скучный вы!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|0",
@@ -62879,8 +62879,8 @@
       "index": 0,
       "mode": 2,
       "en": "A tortoise and a hare.{E108:0010} Inspired by the children's\nstory, no doubt.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Черепаха и заяц.{E108:0010} Не иначе как по детской\nсказке.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|1",
@@ -62889,8 +62889,8 @@
       "index": 1,
       "mode": 2,
       "en": "The tortoise races the speedy hare --{E108:0008} and wins.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Черепаха бежит наперегонки с быстрым зайцем --{E108:0008}\nи побеждает.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|2",
@@ -62899,8 +62899,8 @@
       "index": 2,
       "mode": 3,
       "en": "Alright, {E108:0018}{E107:0001}{E188:00300000}{E1D5}time for a Kay Faraday pop-up pop quiz!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так, {E108:0018}{E107:0001}{E188:00300000}{E1D5}внезапная викторина от Кей Фарадей!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|3",
@@ -62909,8 +62909,8 @@
       "index": 3,
       "mode": 2,
       "en": "Why did the hare lose the race?{E108:0018}\n{E107:0001}I'll give you three options.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Почему заяц проиграл?{E108:0018}\n{E107:0001}Даю три варианта.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|4",
@@ -62919,8 +62919,8 @@
       "index": 4,
       "mode": 2,
       "en": "(I don't need three options, Kay.{E108:0018} {E107:0003}He lost because\nhe stopped to rest and fell asleep.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Мне не нужны три варианта, Кей.{E108:0018} {E107:0003}Он проиграл,\nпотому что прилёг отдохнуть и уснул.)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|5",
@@ -62929,8 +62929,8 @@
       "index": 5,
       "mode": 2,
       "en": "Number One:{E108:0010} The hare's favorite running shoes\nwere stolen by the Yatagarasu.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Первый:{E108:0010} любимые беговые тапки зайца\nукрал Ятагарасу.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|6",
@@ -62939,8 +62939,8 @@
       "index": 6,
       "mode": 2,
       "en": "Number Two:{E108:0010} The tortoise trained with the\nYatagarasu, and got so fast that he won.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Второй:{E108:0010} черепаха тренировалась с Ятагарасу,\nразогналась и победила.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|7",
@@ -62949,8 +62949,8 @@
       "index": 7,
       "mode": 2,
       "en": "Number Three:{E108:0010} {E107:0001}{E188:00300000}{E1D5}The real winner was the Yatagarasu,{E108:000C}\n{E107:0002}who plotted a surprise secret victory!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Третий:{E108:0010} {E107:0001}{E188:00300000}{E1D5}на самом деле победил Ятагарасу,{E108:000C}\n{E107:0002}который всё подстроил и выиграл втайне!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|8",
@@ -62959,8 +62959,8 @@
       "index": 8,
       "mode": 3,
       "en": "(Those are my only three options?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(И это все три варианта?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|9",
@@ -62969,8 +62969,8 @@
       "index": 9,
       "mode": 2,
       "en": "Too hard?{E108:0018} Alright, I'll give you a hint:{E108:0018} {E156:0002001800000000}{E107:0001}{E282}The option\nyou're looking for starts with a \"thr\"!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Трудно?{E108:0018} Ладно, подсказка:{E108:0018} {E156:0002001800000000}{E107:0001}{E282}нужный вариант\nначинается на «тре»!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AB9|10",
@@ -62979,8 +62979,8 @@
       "index": 10,
       "mode": 3,
       "en": "(Well, {E108:000C}{E1D1}that definitely narrows it down...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Ну, {E108:000C}{E1D1}выбор и впрямь сузился...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AC4|0",
@@ -63089,8 +63089,8 @@
       "index": 0,
       "mode": 2,
       "en": "These footprints stop by the body.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эти следы обрываются у тела.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ACE|1",
@@ -63099,8 +63099,8 @@
       "index": 1,
       "mode": 2,
       "en": "I guess that means they belong to Mr. Aldown, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, они Олдауна, да?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ACE|2",
@@ -63109,8 +63109,8 @@
       "index": 2,
       "mode": 2,
       "en": "His feet were pretty big.{E108:0010} What's that --{E108:0008} about a{E108:000C}\n{E1D1}{E041}size twelve{E040}?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нога у него была немаленькая.{E108:0010} Это что --{E108:0008} где-то{E108:000C}\n{E1D1}{E041}сорок пятый{E040}?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ACE|3",
@@ -63119,8 +63119,8 @@
       "index": 3,
       "mode": 2,
       "en": "According to the file, they were the same size\nas his shoes.{E108:0010} It's a match!",
-      "ru": "",
-      "status": "pending"
+      "ru": "По делу — тот же размер, что и у обуви.{E108:0010}\nСовпадает!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|0",
@@ -63129,8 +63129,8 @@
       "index": 0,
       "mode": 3,
       "en": "Can we really be sure that these are{E108:0018}\n{E107:0002}{E284}Mr. Aldown's footprints?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А точно ли это{E108:0018}\n{E107:0002}{E284}следы Олдауна?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|1",
@@ -63139,8 +63139,8 @@
       "index": 1,
       "mode": 3,
       "en": "Well, they're the same size --{E108:0008} a {E041}twelve{E040} --{E108:0008} which is\npretty big.{E108:0018} And the prints match his shoes.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, размер тот же --{E108:0008} {E041}сорок пятый{E040} --{E108:0008} и он\nнемаленький.{E108:0018} И с обувью следы сходятся.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|2",
@@ -63149,8 +63149,8 @@
       "index": 2,
       "mode": 2,
       "en": "They also go straight to the middle of the planters,\nwhere his body was found.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И ведут прямо к середине между клумбами,\nгде нашли тело.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|3",
@@ -63159,8 +63159,8 @@
       "index": 3,
       "mode": 2,
       "en": "But as we've established, when he was attacked,\nhe fell and grabbed the button from the snowman.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но мы уже выяснили: когда на него напали,\nон упал и сорвал пуговицу со снеговика.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|4",
@@ -63169,8 +63169,8 @@
       "index": 4,
       "mode": 2,
       "en": "Well, being a Great Thief, I know a few contortionist\ntricks, but that would be way beyond even me!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я, как-никак, Великий вор, и в гибкости\nкое-что смыслю, но такое и мне не под силу!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|5",
@@ -63179,8 +63179,8 @@
       "index": 5,
       "mode": 2,
       "en": "Some Average Joe stretching his arms that far?{E108:0010}\n{E1D1}Basically impossible.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А обычному человеку так дотянуться?{E108:0010}\n{E1D1}Да ни в жизнь.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|6",
@@ -63189,8 +63189,8 @@
       "index": 6,
       "mode": 2,
       "en": "(I think we can be reasonably certain {E108:0018}{E107:0003}that the prints\nwere made by the shoes the victim was wearing.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Можно считать доказанным, {E108:0018}{E107:0003}что следы оставила\nобувь, которая была на жертве.)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|7",
@@ -63199,8 +63199,8 @@
       "index": 7,
       "mode": 2,
       "en": "(...But can we be certain that they were actually the\nvictim's shoes?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(...Вот только его ли это\nбыла обувь?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AD2|8",
@@ -63209,8 +63209,8 @@
       "index": 8,
       "mode": 2,
       "en": "(Perhaps we should take another look at them...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Пожалуй, стоит взглянуть на неё ещё раз...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ADB|0",
@@ -63219,8 +63219,8 @@
       "index": 0,
       "mode": 2,
       "en": "It's a porch swing with an elephant's face on it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Качели со слоновьей мордой.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ADB|1",
@@ -63229,8 +63229,8 @@
       "index": 1,
       "mode": 2,
       "en": "And behind it is what appears to be a motor.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А сзади, похоже, мотор.",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ADB|2",
@@ -63239,8 +63239,8 @@
       "index": 2,
       "mode": 2,
       "en": "You know what every dedicated swing fiend\nalways wonders, don't you?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Знаете, о чём мечтает всякий,\nкто всерьёз качается на качелях?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ADB|3",
@@ -63249,8 +63249,8 @@
       "index": 3,
       "mode": 3,
       "en": "If they can swing all the way over the top and\nback again!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Прокрутиться через верх — и обратно!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ADB|4",
@@ -63259,8 +63259,8 @@
       "index": 4,
       "mode": 2,
       "en": "Maybe a motorized swing could finally make{E108:000C}\n{E107:0001}{E280}that dream come true!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И с мотором эта мечта, может, наконец{E108:000C}\n{E107:0001}{E280}сбудется!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ADB|5",
@@ -63269,8 +63269,8 @@
       "index": 5,
       "mode": 2,
       "en": "Wouldn't that be a little dangerous?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не опасно ли это?",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ADB|6",
@@ -63279,8 +63279,8 @@
       "index": 6,
       "mode": 2,
       "en": "And what dream isn't, huh?{E108:0018} {E107:0001}{E282}Nothing ventured,\nnothing gained!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А какая мечта не опасна?{E108:0018} {E107:0001}{E282}Риск --\nдело благородное!",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002ADB|7",
@@ -63289,8 +63289,8 @@
       "index": 7,
       "mode": 3,
       "en": "(True, but...{E108:0010} {E107:0002}hardly applicable in this case.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Верно, но...{E108:0010} {E107:0002}к этому случаю никак не относится.)",
+      "status": "translated"
     },
     {
       "id": "sce4_c2_m15_01_check.bytes|04002AE3|0",

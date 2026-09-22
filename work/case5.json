@@ -81209,7 +81209,7 @@
       "index": 16,
       "mode": 1,
       "en": "You bet I can!",
-      "ru": "Ещё как поставлю!",
+      "ru": "А то как же!",
       "status": "translated"
     },
     {
@@ -81299,8 +81299,8 @@
       "index": 0,
       "mode": 2,
       "en": "Huh?{E108:0020} {E107:0003}{E1D1}That's weird...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0020} {E107:0003}{E1D1}Эвон как чудно...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|1",
@@ -81309,8 +81309,8 @@
       "index": 1,
       "mode": 2,
       "en": "Is something wrong, Ms. Lloyd?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что-то не так, мисс Ллойд?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|2",
@@ -81319,8 +81319,8 @@
       "index": 2,
       "mode": 3,
       "en": "I'll say...{E108:0010} Seems we maybe, uh...{E108:0018} {E107:0001}{E12F:00100006}{E189:00540000}{E283}didn't quite\ncatch the next part on tape...{E108:0010} Ahem.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да уж...{E108:0010} Похоже, мы, стал-быть...{E108:0018} {E107:0001}{E12F:00100006}{E189:00540000}{E283}дальше-то\nмаленько не записали...{E108:0010} Кхм.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|3",
@@ -81329,8 +81329,8 @@
       "index": 3,
       "mode": 1,
       "en": "Whaaat!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что-о-о!?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|4",
@@ -81339,8 +81339,8 @@
       "index": 4,
       "mode": 1,
       "en": "Why!?{E108:0020} {E1D1}How could it not be on there!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Почему!?{E108:0020} {E1D1}Как это там ничего нет!?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|5",
@@ -81349,8 +81349,8 @@
       "index": 5,
       "mode": 7,
       "en": ".........{E108:0018}{E107:0004}{E20F}Keh heh heh heh.{E108:0020}\n{E107:0001}{E12F:00270001}{E280}{E210}Eeeheeheeheeheeheeheeheeee!",
-      "ru": "",
-      "status": "pending"
+      "ru": ".........{E108:0018}{E107:0004}{E20F}Кхех-хех-хех-хех.{E108:0020}\n{E107:0001}{E12F:00270001}{E280}{E210}И-хи-хи-хи-хи-хи-хи-и-и!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|6",
@@ -81359,8 +81359,8 @@
       "index": 6,
       "mode": 2,
       "en": "Aww, poor babies.{E108:0010} You think I'd leave myself\nwide open like that?{E108:0010} Well, think again!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах, бедняжки.{E108:0010} Думали, я так просто\nподставлюсь?{E108:0010} А вот и нет!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|7",
@@ -81369,8 +81369,8 @@
       "index": 7,
       "mode": 2,
       "en": "There's something a little special about that\nbug, you see.",
-      "ru": "",
-      "status": "pending"
+      "ru": "С этим жучком, видите ли, есть одна\nхитрость.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|8",
@@ -81379,8 +81379,8 @@
       "index": 8,
       "mode": 2,
       "en": "It can be turned on and off remotely.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Его можно включать и выключать издалека.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|9",
@@ -81389,8 +81389,8 @@
       "index": 9,
       "mode": 1,
       "en": "Whaaat!?{E108:0020} I never knew they make those!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чего-о!?{E108:0020} А что, такие бывают!?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|10",
@@ -81399,8 +81399,8 @@
       "index": 10,
       "mode": 2,
       "en": "Remote control bugs?{E108:0018} {E107:0003}Sure, they exist, but...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Жучки с пультом?{E108:0018} {E107:0003}Бывают, конечно, но...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|11",
@@ -81409,8 +81409,8 @@
       "index": 11,
       "mode": 2,
       "en": "So you switched it off to avoid being recorded?",
-      "ru": "",
-      "status": "pending"
+      "ru": "И вы его выключили, чтобы не попасть на запись?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|12",
@@ -81419,8 +81419,8 @@
       "index": 12,
       "mode": 1,
       "en": "Bingo!",
-      "ru": "",
-      "status": "pending"
+      "ru": "В точку!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|13",
@@ -81429,8 +81429,8 @@
       "index": 13,
       "mode": 1,
       "en": "But how!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но как!?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|14",
@@ -81439,8 +81439,8 @@
       "index": 14,
       "mode": 2,
       "en": "You would have {E1D1}had to know you were being\nrecorded in the first place...!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Для этого надо было {E1D1}знать, что идёт\nзапись...!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|15",
@@ -81449,8 +81449,8 @@
       "index": 15,
       "mode": 2,
       "en": "And I did!{E108:0010} Of course I did!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А я и знал!{E108:0010} Ещё как знал!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|16",
@@ -81459,8 +81459,8 @@
       "index": 16,
       "mode": 2,
       "en": "It was so obvious that someone was eavesdropping.{E108:0010}\nAnd that's because...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что меня подслушивают, было очевидно.{E108:0010}\nА всё потому...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|17",
@@ -81469,8 +81469,8 @@
       "index": 17,
       "mode": 3,
       "en": "...Ms. Lloyd, {E108:0010}{E107:0002}was it?{E108:0018} You knew about the kid\nprosecutor's kidnapping without any prompting.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Мисс Ллойд, {E108:0010}{E107:0002}верно?{E108:0018} Вы про похищение\nзнали без всяких подсказок.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|18",
@@ -81479,8 +81479,8 @@
       "index": 18,
       "mode": 3,
       "en": "(No...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Не может быть...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|19",
@@ -81489,8 +81489,8 @@
       "index": 19,
       "mode": 1,
       "en": "You heard that whole conversation!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы слышали весь тот разговор!?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|20",
@@ -81499,8 +81499,8 @@
       "index": 20,
       "mode": 1,
       "en": "I did indeed, old pal!{E108:0020} {E107:0003}{E12F:00270002}But I must say, {E108:0020}{E107:0002}{E12F:00270001}{E1D1}I thought you\nwould've figured it all out much sooner!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё как, дружище!{E108:0020} {E107:0003}{E12F:00270002}Хотя, признаться, {E108:0020}{E107:0002}{E12F:00270001}{E1D1}я думал,\nвы догадаетесь куда раньше!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|21",
@@ -81509,8 +81509,8 @@
       "index": 21,
       "mode": 1,
       "en": "Aren't you supposed to be a genius prosecutor?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы же вроде гениальный прокурор?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|22",
@@ -81519,8 +81519,8 @@
       "index": 22,
       "mode": 2,
       "en": "Nngrk!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ннгрх!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|23",
@@ -81529,8 +81529,8 @@
       "index": 23,
       "mode": 2,
       "en": "Now, {E108:0018}where were we again?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так, {E108:0018}на чём мы остановились?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|24",
@@ -81539,8 +81539,8 @@
       "index": 24,
       "mode": 2,
       "en": "Oh, yeah.{E108:0020} At the part where if you couldn't prove\nincitement, it was game over.{E108:0010} Ah, well!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах да.{E108:0020} На том, что без доказанного\nподстрекательства вам конец.{E108:0010} Что поделать!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|25",
@@ -81549,8 +81549,8 @@
       "index": 25,
       "mode": 2,
       "en": "Gnrk...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Гнрх...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|26",
@@ -81559,8 +81559,8 @@
       "index": 26,
       "mode": 3,
       "en": "Aww, shucks.{E108:0018} {E107:0002}So my tape ain't gonna be o' no use\nto nobody after all?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну надо ж.{E108:0018} {E107:0002}Стал-быть, запись моя никому\nи не сгодится?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|27",
@@ -81569,8 +81569,8 @@
       "index": 27,
       "mode": 3,
       "en": "C'mon...{E108:0018} I musta recorded {E108:0018}{E1D1}somethin' you can use...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да ну...{E108:0018} Уж чего-нибудь {E108:0018}{E1D1}да записалось поди...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|28",
@@ -81579,8 +81579,8 @@
       "index": 28,
       "mode": 3,
       "en": "(If only that were true...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Если бы это было так...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|29",
@@ -81589,8 +81589,8 @@
       "index": 29,
       "mode": 2,
       "en": "Hey, Kaymeister.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эй, Кеймейстер.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|30",
@@ -81599,8 +81599,8 @@
       "index": 30,
       "mode": 3,
       "en": "Uh, {E108:000C}{E107:0001}{E280}yeah?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э, {E108:000C}{E107:0001}{E280}да?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|31",
@@ -81609,8 +81609,8 @@
       "index": 31,
       "mode": 2,
       "en": "The old bugaroo --{E108:0008} it was hidden in your pin that\nwhole time, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Жучок-то этот --{E108:0008} он же всё это время\nу тебя в значке сидел, так?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|32",
@@ -81619,8 +81619,8 @@
       "index": 32,
       "mode": 2,
       "en": "That shake anything loose from the old brain tree?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну как, не звякнуло чего на чердаке?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|33",
@@ -81629,8 +81629,8 @@
       "index": 33,
       "mode": 2,
       "en": "I don't know!{E108:0010} Give me a sec to think!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не знаю!{E108:0010} Дай подумать секунду!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|34",
@@ -81639,8 +81639,8 @@
       "index": 34,
       "mode": 1,
       "en": "You're the only one who's been directly in\ncontact with him before!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты единственная, кто уже имел с ним\nдело напрямую!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|35",
@@ -81649,8 +81649,8 @@
       "index": 35,
       "mode": 3,
       "en": "So sad.{E108:0010} Relying on flawed evidence.{E108:0010}\nDesperately trying to make it stick...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как грустно.{E108:0010} Опираться на негодные улики.{E108:0010}\nОтчаянно тянуть их за уши...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|36",
@@ -81659,8 +81659,8 @@
       "index": 36,
       "mode": 2,
       "en": "Well, that's quite enough of that for now.{E108:0018}\n{E1D1}Next topic, please!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну, на этом, пожалуй, довольно.{E108:0018}\n{E1D1}Следующая тема, будьте добры!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|37",
@@ -81669,8 +81669,8 @@
       "index": 37,
       "mode": 3,
       "en": "(Huh?{E108:0018} He's trying to steer us away from our\ncurrent line of inquiry...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Хм?{E108:0018} Он пытается увести нас\nот этой линии расспросов...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|38",
@@ -81679,8 +81679,8 @@
       "index": 38,
       "mode": 1,
       "en": "You're the only one who's been directly in\ncontact with him before!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты единственная, кто уже имел с ним\nдело напрямую!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|39",
@@ -81689,8 +81689,8 @@
       "index": 39,
       "mode": 3,
       "en": "(Kay had a one-to-one encounter with him\nonly recently...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Кей ведь совсем недавно оставалась\nс ним один на один...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|40",
@@ -81699,8 +81699,8 @@
       "index": 40,
       "mode": 2,
       "en": "(What if the sound from that point in time\nHAD been recorded...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А если звук с того самого времени\nвсё-таки записался...?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|41",
@@ -81709,8 +81709,8 @@
       "index": 41,
       "mode": 1,
       "en": "Ms. Lloyd!{E108:0020} {E107:0002}How long were you recording the intercepts\nfrom the bug for?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Ллойд!{E108:0020} {E107:0002}Сколько времени вы писали\nперехват с жучка?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|42",
@@ -81719,8 +81719,8 @@
       "index": 42,
       "mode": 3,
       "en": "Uh...{E108:0010} Started about...{E108:0008} let's see now...{E108:0008} {E1D1}two nights back?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э...{E108:0010} Начала эдак...{E108:0008} дай-то вспомню...{E108:0008}\n{E1D1}позавчера в ночь?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|04003682|43",
@@ -81729,8 +81729,8 @@
       "index": 43,
       "mode": 3,
       "en": "(In which case...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(В таком случае...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036AE|0",
@@ -81739,8 +81739,8 @@
       "index": 0,
       "mode": 2,
       "en": "(During which time frame would we be likely to find\nMr. Saint's voice on that tape?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(В каком же промежутке на этой записи\nмог остаться голос мистера Святова?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036AF|0",
@@ -81749,8 +81749,8 @@
       "index": 0,
       "mode": 1,
       "en": "Ms. Lloyd!{E108:0020} {E107:0002}{E12F:00000008}Quickly,{E108:0008} play us any tape you have\nfrom last night!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Ллойд!{E108:0020} {E107:0002}{E12F:00000008}Скорее,{E108:0008} поставьте запись\nза вчерашнюю ночь!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036AF|1",
@@ -81759,8 +81759,8 @@
       "index": 1,
       "mode": 2,
       "en": "Last night, you say?{E108:0018} Well, uh...{E108:0008} sure, I guess...",
-      "ru": "",
-      "status": "pending"
+      "ru": "За вчерашнюю, стал-быть?{E108:0018} Ну, эдак...{E108:0008} можно...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036AF|2",
@@ -81769,8 +81769,8 @@
       "index": 2,
       "mode": 2,
       "en": "I believe our culprit's voice should be\nthere somewhere!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Голос преступника должен быть\nгде-то там!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036AF|3",
@@ -81779,8 +81779,8 @@
       "index": 3,
       "mode": 1,
       "en": "Uh...{E108:0018} Milester?{E108:0020}\n{E107:0002}Weren't Kay and the bug with YOU last night?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э...{E108:0018} Майлзыч?{E108:0020}\n{E107:0002}Кей с жучком вчера ночью у ТЕБЯ же были?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036AF|4",
@@ -81789,8 +81789,8 @@
       "index": 4,
       "mode": 1,
       "en": "Are you trying to tell us you're the culprit!?{E108:0018}\n{E107:0002}You're tying my brain in knots here, big guy!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты нам что, в преступники набиваешься!?{E108:0018}\n{E107:0002}У меня от тебя мозги узлом, здоровяк!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036AF|5",
@@ -81799,8 +81799,8 @@
       "index": 5,
       "mode": 1,
       "en": "Ngyak!{E108:0018}\n{E107:0003}(No.{E108:0010} I got that wrong...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нгяк!{E108:0018}\n{E107:0003}(Нет.{E108:0010} Тут я ошибся...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B5|0",
@@ -81809,8 +81809,8 @@
       "index": 0,
       "mode": 2,
       "en": "Aww, man.{E108:0010} {E1D1}So my tape was no use after all?{E108:0010}\nDangit...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах ты ж.{E108:0010} {E1D1}Стал-быть, запись моя ни к чему?{E108:0010}\nВот досада...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B5|1",
@@ -81819,8 +81819,8 @@
       "index": 1,
       "mode": 2,
       "en": "(Kay was kidnapped by our culprit...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Кей похитил тот самый преступник...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B5|2",
@@ -81829,8 +81829,8 @@
       "index": 2,
       "mode": 2,
       "en": "(The bug might have recorded his voice then...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Жучок мог тогда записать его голос...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B5|3",
@@ -81839,8 +81839,8 @@
       "index": 3,
       "mode": 2,
       "en": "(Which means {E108:000C}{E107:0001}{E1D1}it might still be on that tape!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А значит, {E108:000C}{E107:0001}{E1D1}он может быть на этой записи!)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B9|0",
@@ -81849,8 +81849,8 @@
       "index": 0,
       "mode": 1,
       "en": "Ms. Lloyd!{E108:0020} {E107:0002}{E12F:00000008}Quickly,{E108:0008} play us any tape you have\nfrom this morning!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Ллойд!{E108:0020} {E107:0002}{E12F:00000008}Скорее,{E108:0008} поставьте запись\nза сегодняшнее утро!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B9|1",
@@ -81859,8 +81859,8 @@
       "index": 1,
       "mode": 2,
       "en": "This morning, you say?{E108:0018} Well, uh...{E108:0008} sure, I guess...",
-      "ru": "",
-      "status": "pending"
+      "ru": "За нынешнее утро, стал-быть?{E108:0018} Ну, эдак...{E108:0008} можно...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B9|2",
@@ -81869,8 +81869,8 @@
       "index": 2,
       "mode": 2,
       "en": "Wait --{E108:0008} didn't you have my pin this morning,\nMr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стойте --{E108:0008} утром же значок был у вас,\nмистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B9|3",
@@ -81879,8 +81879,8 @@
       "index": 3,
       "mode": 3,
       "en": "And weren't you in that detention cell?",
-      "ru": "",
-      "status": "pending"
+      "ru": "И вы же сидели в той камере?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B9|4",
@@ -81889,8 +81889,8 @@
       "index": 4,
       "mode": 2,
       "en": "Wouldn't that mean the only voice that could\nbe on there is yours?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Выходит, на записи может быть\nтолько ваш голос?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036B9|5",
@@ -81899,8 +81899,8 @@
       "index": 5,
       "mode": 1,
       "en": "Ack!{E108:0018}\n{E107:0003}(How could I have forgotten that!?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ах!{E108:0018}\n{E107:0003}(И как я мог про это забыть!?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|0",
@@ -81909,8 +81909,8 @@
       "index": 0,
       "mode": 2,
       "en": "(Mr. Saint abducted Kay and took her up to the\nroof of the Bigg Building {E108:0018}{E107:0003}two nights ago.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Мистер Святов похитил Кей и поднял её\nна крышу здания Бигг {E108:0018}{E107:0003}позавчера ночью.)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|1",
@@ -81919,8 +81919,8 @@
       "index": 1,
       "mode": 2,
       "en": "(What if there was a recording from around\nthat time...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(А если на то самое время\nесть запись...?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|2",
@@ -81929,8 +81929,8 @@
       "index": 2,
       "mode": 1,
       "en": "Ms. Lloyd!{E108:0020} Quickly,{E108:0008} play us any tape you have\nfrom the night before last!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Ллойд!{E108:0020} Скорее,{E108:0008} поставьте запись\nза позавчерашнюю ночь!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|3",
@@ -81939,8 +81939,8 @@
       "index": 3,
       "mode": 2,
       "en": "Huh?{E108:0020} {E107:0003}{E12F:00100001}Oh, uh...{E108:0010} {E107:0001}{E1D1}sure thing!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0020} {E107:0003}{E12F:00100001}А, ну...{E108:0010} {E107:0001}{E1D1}сей момент!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|5",
@@ -81949,8 +81949,8 @@
       "index": 5,
       "mode": 1,
       "en": "Th-That's...{E108:0020} the sound of the balloon!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-это же...{E108:0020} звук шара!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|6",
@@ -81959,8 +81959,8 @@
       "index": 6,
       "mode": 2,
       "en": "Indeed it is.{E108:0010} At around that time, I imagine Mr. Saint\nwould have been transporting you in it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он самый.{E108:0010} Примерно тогда мистер Святов\nи вёз тебя на нём.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|7",
@@ -81969,8 +81969,8 @@
       "index": 7,
       "mode": 2,
       "en": "Which means he can't have been too far \naway from you --{E108:0008} or the bug.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А значит, он был недалеко от тебя --{E108:0008}\nи от жучка.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|9",
@@ -81979,8 +81979,8 @@
       "index": 9,
       "mode": 2,
       "en": "(Is there anything else on the recording, I wonder?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Нет ли на записи чего-нибудь ещё?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|11",
@@ -81989,8 +81989,8 @@
       "index": 11,
       "mode": 1,
       "en": "...BANG!...{E108:0030}\n{E107:0002}{E188:00D60000}{E1D2}Kachang!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...БАХ!...{E108:0030}\n{E107:0002}{E188:00D60000}{E1D2}Дзи-инь!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|12",
@@ -81999,8 +81999,8 @@
       "index": 12,
       "mode": 1,
       "en": "Wait --{E108:0020} {E107:0001}{E1D1}that noise!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стойте --{E108:0020} {E107:0001}{E1D1}этот звук!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|13",
@@ -82009,8 +82009,8 @@
       "index": 13,
       "mode": 3,
       "en": "That was a {E108:000C}{E107:0001}{E280}gunshot!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это был {E108:000C}{E107:0001}{E280}выстрел!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|15",
@@ -82019,8 +82019,8 @@
       "index": 15,
       "mode": 4,
       "en": "Dzzz...{E108:0010} {E107:0002}{E1D1}{E189:00540000}Bzzt!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Дзззз...{E108:0010} {E107:0002}{E1D1}{E189:00540000}Бзык!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|16",
@@ -82029,8 +82029,8 @@
       "index": 16,
       "mode": 2,
       "en": "Heh.{E108:0010} You turned the bug off then, too, it seems.{E108:0018}\n{E107:0003}Unluckily for you, {E108:0010}{E107:0002}{E12F:0000000B}you were a little late in doing so.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе.{E108:0010} Похоже, и тогда вы выключили жучок.{E108:0018}\n{E107:0003}Да только {E108:0010}{E107:0002}{E12F:0000000B}на вашу беду опоздали вы самую малость.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|17",
@@ -82039,8 +82039,8 @@
       "index": 17,
       "mode": 1,
       "en": "There's no escaping it now.{E108:0018} {E107:0002}That gunshot ties{E108:000C}\n{E107:0001}{E283}you directly to the case!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Теперь не отвертеться.{E108:0018} {E107:0002}Этот выстрел{E108:000C}\n{E107:0001}{E283}связывает вас с делом напрямую!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|18",
@@ -82049,8 +82049,8 @@
       "index": 18,
       "mode": 2,
       "en": "Huh?{E108:0018} What are you talking about?{E108:0018} {E1D1}Nobody\never even mentioned a gun.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0018} О чём это вы?{E108:0018} {E1D1}Про пистолет\nвообще речи не было.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|19",
@@ -82059,8 +82059,8 @@
       "index": 19,
       "mode": 3,
       "en": "(He's wrong.{E108:0018} {E107:0002}Somebody involved with this case\ndischarged a firearm.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Ошибается.{E108:0018} {E107:0002}Кто-то причастный к этому делу\nстрелял из оружия.)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036BF|20",
@@ -82069,8 +82069,8 @@
       "index": 20,
       "mode": 2,
       "en": "(I just need to remember who it was, and present\nthe piece of evidence that proves it!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Осталось вспомнить кто и предъявить улику,\nкоторая это доказывает!)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|0",
@@ -82079,8 +82079,8 @@
       "index": 0,
       "mode": 2,
       "en": "Which piece of evidence shows that a gun was\nused in an incident related to this case?{E040}{E106}{E163:00010000}{E100:0001}{E164:00C90008}{E100:0000}{E12F:00000008}{E101:00000000}{E107:0002}Here.{E108:0010} What do you make of this?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Какая улика показывает, что в связанном\nс делом происшествии стреляли?{E040}{E106}{E163:00010000}{E100:0001}{E164:00C90008}{E100:0000}{E12F:00000008}{E101:00000000}{E107:0002}Вот.{E108:0010} Что скажете?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|1",
@@ -82089,8 +82089,8 @@
       "index": 1,
       "mode": 2,
       "en": "You want me to tell you it somehow proves that\nthere was a gun involved in this case?",
-      "ru": "",
-      "status": "pending"
+      "ru": "И я должен сказать, что это как-то доказывает\nстрельбу в этом деле?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|2",
@@ -82099,8 +82099,8 @@
       "index": 2,
       "mode": 3,
       "en": "...Are you trying to tell me {E108:000C}{E107:0002}{E1D1}it doesn't?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Хотите сказать, {E108:000C}{E107:0002}{E1D1}что не доказывает?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|3",
@@ -82109,8 +82109,8 @@
       "index": 3,
       "mode": 1,
       "en": "Eeeheeheeheehee!{E108:0020}\n{E20F}That's EXACTLY what I'm trying to tell you!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И-хи-хи-хи-хи!{E108:0020}\n{E20F}ИМЕННО это я и хочу сказать!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|4",
@@ -82119,8 +82119,8 @@
       "index": 4,
       "mode": 3,
       "en": "Ngh...{E108:0010} {E1D2}Hmph.{E108:0018}\n{E107:0002}(I guess this isn't the right piece of evidence...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нгх...{E108:0010} {E1D2}Хм.{E108:0018}\n{E107:0002}(Видимо, улика не та...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|5",
@@ -82129,8 +82129,8 @@
       "index": 5,
       "mode": 1,
       "en": "C'mon, Milester!{E108:0018} This isn't like you!{E108:0018}\nYou need to focus up here!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну же, Майлзыч!{E108:0018} Это на тебя не похоже!{E108:0018}\nСоберись давай!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|6",
@@ -82139,8 +82139,8 @@
       "index": 6,
       "mode": 2,
       "en": "...Forgive me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Прошу прощения.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|7",
@@ -82149,8 +82149,8 @@
       "index": 7,
       "mode": 2,
       "en": "Was the person who fired the gun the same\nperson that kidnapped me, do you think?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А стрелял, по-вашему, тот же, кто\nменя похитил?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|8",
@@ -82159,8 +82159,8 @@
       "index": 8,
       "mode": 3,
       "en": "It's a possibility...{E108:0018} {E107:0002}{E1D1}but not a certainty, by any means.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Возможно...{E108:0018} {E107:0002}{E1D1}но далеко не наверняка.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|9",
@@ -82169,8 +82169,8 @@
       "index": 9,
       "mode": 2,
       "en": "We need to find a piece of evidence tying\nsomebody involved in this case to a firearm.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нужна улика, которая связывает кого-то\nиз причастных с оружием.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|10",
@@ -82179,8 +82179,8 @@
       "index": 10,
       "mode": 2,
       "en": "Let's look everything over one more time...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Давайте пройдёмся по всему ещё раз...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|11",
@@ -82189,8 +82189,8 @@
       "index": 11,
       "mode": 2,
       "en": "What're you whispering about, gang?{E108:0010}\n{E1D1}How the gun has nothing to do with this, maybe?",
-      "ru": "",
-      "status": "pending"
+      "ru": "О чём шепчетесь, компания?{E108:0010}\n{E1D1}Не о том ли, что пистолет тут ни при чём?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036D4|12",
@@ -82199,8 +82199,8 @@
       "index": 12,
       "mode": 2,
       "en": "The gunshot captured on that tape has everything\nto do with this!{E108:0010} And I'm going to prove it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Выстрел на этой записи имеет к делу самое\nпрямое отношение!{E108:0010} И я это докажу!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|0",
@@ -82209,8 +82209,8 @@
       "index": 0,
       "mode": 3,
       "en": "It's written right here in the president's autopsy report.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот что написано во вскрытии президента.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|1",
@@ -82219,8 +82219,8 @@
       "index": 1,
       "mode": 2,
       "en": "Traces of gunshot residue were detected\non his hand.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На его руке обнаружены следы пороха.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|2",
@@ -82229,8 +82229,8 @@
       "index": 2,
       "mode": 2,
       "en": "...Urk!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Урк!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|3",
@@ -82239,8 +82239,8 @@
       "index": 3,
       "mode": 2,
       "en": "And where was Kay when the gunshot was recorded?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А где была Кей, когда записался выстрел?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|4",
@@ -82249,8 +82249,8 @@
       "index": 4,
       "mode": 2,
       "en": "That's right --{E108:0010} she was in the balloon, being taken\nby you to the top of the Bigg Building.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно --{E108:0010} в шаре, на котором вы везли её\nна верх здания Бигг.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|5",
@@ -82259,8 +82259,8 @@
       "index": 5,
       "mode": 2,
       "en": "However, the roof wasn't as deserted as you\nneeded it to be.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот только крыша оказалась не такой\nбезлюдной, как вам было нужно.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|6",
@@ -82269,8 +82269,8 @@
       "index": 6,
       "mode": 3,
       "en": "Yes. I was there with the president...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да. Я была там с президентом...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|7",
@@ -82279,8 +82279,8 @@
       "index": 7,
       "mode": 2,
       "en": "Wait --{E108:0010} not long after we started talking...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Постойте --{E108:0010} вскоре после начала разговора...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|8",
@@ -82289,8 +82289,8 @@
       "index": 8,
       "mode": 2,
       "en": "...he noticed something, and told me to leave!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...он что-то заметил и велел мне уйти!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|9",
@@ -82299,8 +82299,8 @@
       "index": 9,
       "mode": 2,
       "en": "And if a gunshot rang out shortly after that?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А если вскоре после этого грянул выстрел?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|10",
@@ -82309,8 +82309,8 @@
       "index": 10,
       "mode": 2,
       "en": "Don't tell me {E1D1}you didn't hear it yourself, Mr. Saint?{E108:0010}\nNot when it sounds crystal clear in this recording.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Неужто вы {E1D1}его не слышали, мистер Святов?{E108:0010}\nНа записи он слышен яснее ясного.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|12",
@@ -82319,8 +82319,8 @@
       "index": 12,
       "mode": 2,
       "en": "You're just going to pretend to ignore me?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так и будете делать вид, что не слышите?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|13",
@@ -82329,8 +82329,8 @@
       "index": 13,
       "mode": 2,
       "en": "What else do you expect me to do when you\nkeep spouting your weird theories?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А что мне ещё делать, пока вы сыплете\nсвоими диковинными теориями?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|14",
@@ -82339,8 +82339,8 @@
       "index": 14,
       "mode": 2,
       "en": "We didn't just hear a gunshot on that tape.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На записи слышен не только выстрел.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|15",
@@ -82349,8 +82349,8 @@
       "index": 15,
       "mode": 1,
       "en": "...BANG!...{E108:0030}\n{E107:0002}{E188:00D60000}{E1D2}Kachang!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...БАХ!...{E108:0030}\n{E107:0002}{E188:00D60000}{E1D2}Дзи-инь!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|16",
@@ -82359,8 +82359,8 @@
       "index": 16,
       "mode": 2,
       "en": "If you listen carefully, {E108:000C}{E107:0001}{E1D1}you can hear that the\nbullet hit something, too.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вслушайся -- {E108:000C}{E107:0001}{E1D1}слышно, как пуля\nво что-то попала.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036E2|17",
@@ -82369,8 +82369,8 @@
       "index": 17,
       "mode": 2,
       "en": "(Could the president have been aiming at Mr. Saint?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Неужели президент целился в мистера Святова?)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036F4|0",
@@ -82379,8 +82379,8 @@
       "index": 0,
       "mode": 2,
       "en": "What would the bullet have struck...?{E040}{E106}{E163:00010000}{E100:0001}{E164:00F2000A}{E125:00020006}{E112:0002}{E100:0000}{E101:00020002}{E107:0001}{E280}Really!?{E108:0020} You think that's what it hit?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Во что же попала пуля...?{E040}{E106}{E163:00010000}{E100:0001}{E164:00F2000A}{E125:00020006}{E112:0002}{E100:0000}{E101:00020002}{E107:0001}{E280}Серьёзно!?{E108:0020} Вы думаете, попала в это?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036F4|1",
@@ -82389,8 +82389,8 @@
       "index": 1,
       "mode": 1,
       "en": "Eeeheeheeheehee!{E108:0020}\n{E20F}{E1D1}I'm pretty surprised to hear that myself!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И-хи-хи-хи-хи!{E108:0020}\n{E20F}{E1D1}Я и сам такого не ожидал услышать!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036F4|2",
@@ -82399,8 +82399,8 @@
       "index": 2,
       "mode": 2,
       "en": "Hate to break it to you, Mr. Prosecutor, {E108:0010}but I think\nyou're being mocked right now.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не хочу тебя огорчать, господин прокурор, {E108:0010}но над\nтобой сейчас смеются.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036F4|3",
@@ -82409,8 +82409,8 @@
       "index": 3,
       "mode": 3,
       "en": "Not that I blame him this time.{E108:0018} {E107:0002}{E12F:00070004}{E188:002F0000}{E1D5}I don't see it, either.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хотя в этот раз я его не виню.{E108:0018} {E107:0002}{E12F:00070004}{E188:002F0000}{E1D5}Я тоже не вижу связи.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036F4|4",
@@ -82419,8 +82419,8 @@
       "index": 4,
       "mode": 1,
       "en": "Oof!{E108:0018}\n{E107:0003}(Nobody agrees with me on this...!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Уф!{E108:0018}\n{E107:0003}(Никто со мной не согласен...!)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036F4|5",
@@ -82429,8 +82429,8 @@
       "index": 5,
       "mode": 2,
       "en": "C'mon, you know the answer.{E108:0010}\nYou have to.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да брось, ты же знаешь ответ.{E108:0010}\nНе можешь не знать.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036F4|6",
@@ -82439,8 +82439,8 @@
       "index": 6,
       "mode": 2,
       "en": "If you think about who the president must have\nbeen aiming at,{E108:000C}{E1D1} it's obvious.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Подумай, в кого целился президент,{E108:000C}{E1D1}\nи всё станет очевидно.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036F4|7",
@@ -82449,8 +82449,8 @@
       "index": 7,
       "mode": 2,
       "en": "You're right.{E108:0010} And that points to only one possible\npiece of evidence.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты прав.{E108:0010} А это оставляет лишь одну\nвозможную улику.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036FD|0",
@@ -82459,8 +82459,8 @@
       "index": 0,
       "mode": 2,
       "en": "I think the president was firing at the balloon.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Думаю, президент стрелял по шару.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036FD|1",
@@ -82469,8 +82469,8 @@
       "index": 1,
       "mode": 3,
       "en": "And if he was, what we heard on that tape could{E108:0018}\n{E107:0002}{E12F:00000004}{E188:00300000}{E1D5}have been the bullet hitting the basket.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А если так, то на записи мы слышали,{E108:0018}\n{E107:0002}{E12F:00000004}{E188:00300000}{E1D5}как пуля ударила в корзину.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_05.bytes|040036FD|2",
@@ -82479,8 +82479,8 @@
       "index": 2,
       "mode": 1,
       "en": "Let's take a look and see, shall we?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну что, поглядим?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_06.bytes|04003702|0",

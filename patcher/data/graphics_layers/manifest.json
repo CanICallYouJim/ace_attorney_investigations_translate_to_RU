@@ -1,0 +1,738 @@
+{
+  "pictures": [
+    {
+      "name": "cut00_002",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_002_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_002_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "c9955d84ca6db4ab4a08f71ddc552dc94fc1eda59d79ea3582288b54041389dc",
+      "png_sha": "54ec55b9a5ed20c1d8fea7451010013e5597812965eaced097e48017b57154b7",
+      "box": [
+        995,
+        628,
+        1875,
+        1041
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_002.png",
+      "mask": "gk2_upcutlocal_trial/cut00_002_mask.png",
+      "changed": 293589,
+      "outside": 0,
+      "tails": 692,
+      "erased": 79
+    },
+    {
+      "name": "cut00_003",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_003_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_003_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "4554b5b59f5528b937386290301121733b20ccc10df141f5b28152f6b812fd5c",
+      "png_sha": "2f39cf89ad7245f40b3d6719897b36cf25295412bb92f3dc456946b8e5c07b1c",
+      "box": [
+        277,
+        67,
+        1632,
+        394
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_003.png",
+      "mask": "gk2_upcutlocal_trial/cut00_003_mask.png",
+      "changed": 134644,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut00_005",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_005_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_005_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "6501ed63b191ea5ec23002cd0e746c7421f2413fe1fa26a7e93a3dee4b469369",
+      "png_sha": "e76993dcb2a725a09d4a1c780a8a528659d26ae5d3f395b99af8c6e7881eb387",
+      "box": [
+        18,
+        133,
+        1577,
+        879
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_005.png",
+      "mask": "gk2_upcutlocal_trial/cut00_005_mask.png",
+      "changed": 184180,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut00_007",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_007_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_007_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "06be9993a76aeb2784b2202d2ca8bde7bdac0135452d768259ac162dbecd8236",
+      "png_sha": "222f7fcb1c5acfdd6861aa6c1bb6b7e39f25893e69f5482503aa5f1a183a6c33",
+      "box": [
+        278,
+        109,
+        1645,
+        1014
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_007.png",
+      "mask": "gk2_upcutlocal_trial/cut00_007_mask.png",
+      "changed": 160042,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut00_010",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_010_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_010_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "e51f369c60c945da03fde780ae37c94ffb21ecd5d8b584d03275f382872970b1",
+      "png_sha": "f01f9a21feda64916d1de2b674e1e70320d4b44aed7875fa2af84cd504ce4f97",
+      "box": [
+        270,
+        109,
+        1647,
+        883
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_010.png",
+      "mask": "gk2_upcutlocal_trial/cut00_010_mask.png",
+      "changed": 104925,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut00_02b",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_02b_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_02b_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "c901d1313657003f32de0094fb1b7a0572928abe2d0aaa03edc71cdab0588479",
+      "png_sha": "fc69f14d1be58986b5dbd28d63664f2011969fecc039056a87f6dba5ab66aa94",
+      "box": [
+        739,
+        203,
+        987,
+        314
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_02b.png",
+      "mask": "gk2_upcutlocal_trial/cut00_02b_mask.png",
+      "changed": 3096,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cutobj00_004",
+      "bundle": "gk2_cutobjlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj00_004_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj00_004_eng.png",
+      "size": [
+        1440,
+        2880
+      ],
+      "flipped": true,
+      "source_sha": "5b8bf94b3b405c1f7891bffe8db5da1f2ef4be46fe2e716048507bd1791e9924",
+      "png_sha": "f27a184070da14d8c34c286e608a9d22060ee0ea1b10a9fbf2e5f04c16f79b63",
+      "box": [
+        296,
+        23,
+        488,
+        89
+      ],
+      "layer": "gk2_cutobjlocal_trial/cutobj00_004.png",
+      "mask": "gk2_cutobjlocal_trial/cutobj00_004_mask.png",
+      "changed": 3096,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm00_002_00_l",
+      "bundle": "gk2_idcom_trial",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_002_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_002_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "64ca0d68d66e97cbe039ec222011ea1a1506defe2e9245d2da86c8da5c41168d",
+      "png_sha": "fe9dcd91ffbd401e6365657c32f9f573dff0ed076d79648d6c8f47fb8a083b1a",
+      "box": [
+        5,
+        45,
+        297,
+        116
+      ],
+      "layer": "gk2_idcom_trial/itm00_002_00_l.png",
+      "mask": "gk2_idcom_trial/itm00_002_00_l_mask.png",
+      "changed": 12957,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm00_004_01_l",
+      "bundle": "gk2_idcom_trial",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_004_01_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_004_01_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "ead5828c571725259de42cd8771493cf504d9d06cee7ae0380b009477a91bc17",
+      "png_sha": "e7afaa0725deb680f4024a3ff5b6122d101bf4ecdfc2854024d5cbc99ed9d168",
+      "box": [
+        104,
+        80,
+        159,
+        107
+      ],
+      "layer": "gk2_idcom_trial/itm00_004_01_l.png",
+      "mask": "gk2_idcom_trial/itm00_004_01_l_mask.png",
+      "changed": 312,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm00_006_00_l",
+      "bundle": "gk2_idcom_trial",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_006_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_006_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "a86eeca58a152664487cc94769c86b28940664e1afb8dd1a0525c1c932fb45e0",
+      "png_sha": "93e9c12a28d05bc1a1591ee74da0458aeef354c75cdcb1fc893d7983f1ceb1d5",
+      "box": [
+        18,
+        59,
+        283,
+        242
+      ],
+      "layer": "gk2_idcom_trial/itm00_006_00_l.png",
+      "mask": "gk2_idcom_trial/itm00_006_00_l_mask.png",
+      "changed": 9339,
+      "outside": 0,
+      "tails": 0,
+      "erased": 0
+    },
+    {
+      "name": "itm00_013_00_l",
+      "bundle": "gk2_idcom_trial",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_013_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_013_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "8c1c1964ad9dce4018255c53338360f65e1f3fd8b5bc7f69932668f22008b051",
+      "png_sha": "31c4ea1cbb1fd49ba862527d4ec3a53fa4ada9792ce7a58271302e80184533bb",
+      "box": [
+        19,
+        65,
+        283,
+        219
+      ],
+      "layer": "gk2_idcom_trial/itm00_013_00_l.png",
+      "mask": "gk2_idcom_trial/itm00_013_00_l_mask.png",
+      "changed": 6093,
+      "outside": 0,
+      "tails": 0,
+      "erased": 0
+    },
+    {
+      "name": "logic00_013_s",
+      "bundle": "gk2_logickeyword_trial",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic00_013_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic00_013_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "a5fa8c7745e1d496210b50915f031034fa5ae2b2298674666447a784f92cc628",
+      "png_sha": "cc36f3190399a56e84d16ad52d29de1385fa4291c9fb431101a278910249426b",
+      "box": [
+        14,
+        36,
+        90,
+        90
+      ],
+      "layer": "gk2_logickeyword_trial/logic00_013_s.png",
+      "mask": "gk2_logickeyword_trial/logic00_013_s_mask.png",
+      "changed": 614,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "logic00_016_s",
+      "bundle": "gk2_logickeyword_trial",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic00_016_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic00_016_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "84f27d8e26b41cea3dec5af170ba462001f2518baf508cbc77884b8d65c9bd33",
+      "png_sha": "84e127e5586102759e5813e32a72724a1b6166e21b27b997f5dcbdf26560c5d7",
+      "derive": {
+        "из": "cut00_007",
+        "там": [
+          252,
+          46,
+          1661,
+          1034
+        ],
+        "тут": [
+          8,
+          31,
+          149,
+          128
+        ]
+      },
+      "changed": 0,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut02_003",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_003_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_003_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "4b477d29d6d39bc22b79bad72e8c0dddca2194407671fdca2aa1dd627dd33dab",
+      "png_sha": "f748571f0858bda453ecd705981b5e02f95e466583e72c57fb9835d34b47483e",
+      "box": [
+        321,
+        265,
+        1556,
+        1036
+      ],
+      "layer": "gk2_upcutlocal/cut02_003.png",
+      "mask": "gk2_upcutlocal/cut02_003_mask.png",
+      "changed": 84832,
+      "outside": 7955,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut02_004",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_004_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_004_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "e92baba18d394fdfaba8d90f7835332dd4286bd2939a61e9681fb317cd7ce3ae",
+      "png_sha": "1667de7765373e34ce69ff9f2e529ccd58156665fa1cfef2c21c7f506dc58bf1",
+      "box": [
+        334,
+        265,
+        1586,
+        1037
+      ],
+      "layer": "gk2_upcutlocal/cut02_004.png",
+      "mask": "gk2_upcutlocal/cut02_004_mask.png",
+      "changed": 79314,
+      "outside": 40,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut02_032",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_032_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_032_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "e139df92a7db13854ef5f77a55483ea2231b81237a126fc58260517e9b03f1a9",
+      "png_sha": "1f05e9079b8d288d5ae8f1672241787ec749425db1e69eeca7c93e303f9e9c7b",
+      "box": [
+        539,
+        0,
+        1392,
+        308
+      ],
+      "layer": "gk2_upcutlocal/cut02_032.png",
+      "mask": "gk2_upcutlocal/cut02_032_mask.png",
+      "changed": 238802,
+      "outside": 0,
+      "tails": 7,
+      "erased": 0
+    },
+    {
+      "name": "cut02_037",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_037_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_037_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "eb99eb02e7fd7ab361cde9620773d93196fd9cb7a0bdafc96a3fc51938bd0066",
+      "png_sha": "1ceec51efe4231826bdf769e31dbb20a16d1b06b59841e6244ea4c22c58d7d5e",
+      "box": [
+        283,
+        159,
+        1634,
+        922
+      ],
+      "layer": "gk2_upcutlocal/cut02_037.png",
+      "mask": "gk2_upcutlocal/cut02_037_mask.png",
+      "changed": 1029491,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "Situation_0",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_ger/Situation_0_ger.png",
+      "kind": "plate",
+      "size": [
+        695,
+        118
+      ],
+      "png_sha": "cf5e2d42ed70b0d8e6a37c04274b3b2684e71c100dcf9837df26b1b4bcf5dd48",
+      "texture_sha": "58ef93bf1cd2aaf11c0ae27135c27474790174e3744e667fc8b5732c7a3d0eb6",
+      "plate_sha": "7e334a3c11a507af1c384f578294a71db9612c9b86cbeff23d0b9cb7e53619c0",
+      "layer": "localization-assets-german(de)/Situation_0.png",
+      "table": {
+        "m_Id": 1079588888813568,
+        "german": "88ef04f0b6348b54ea60dbf801c88a78[Situation_0_ger]"
+      }
+    },
+    {
+      "name": "Situation_1",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_ger/Situation_1_ger.png",
+      "kind": "plate",
+      "size": [
+        695,
+        118
+      ],
+      "png_sha": "8d30113841ebf609dea498ee301d5b3573ea9186c31a50d36f763de27ac857bb",
+      "texture_sha": "3479d2f07bb7dddb2efe64b155c9fc4961ea299ccaf60772188f15da2af16a24",
+      "plate_sha": "05d2827ded6759e34b17f20eef0eecda387697e818a4e0caf9c6aa7bb670e4c9",
+      "layer": "localization-assets-german(de)/Situation_1.png",
+      "table": {
+        "m_Id": 1079660925984768,
+        "german": "e1e8e45c924114349b17135cd91c38e3[Situation_1_ger]"
+      }
+    },
+    {
+      "name": "Situation_2",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_ger/Situation_2_ger.png",
+      "kind": "plate",
+      "size": [
+        695,
+        118
+      ],
+      "png_sha": "f28db7abc34bff26a696e8196dc6f42cbe196cdfb58063c4afdb17c83ea7e234",
+      "texture_sha": "ff8b84bc6018f5432a8354811391bbfc63a6556dc07091fd610c0d707f78d9f1",
+      "plate_sha": "50dbb67b340ce117012d14b11f8f6d7a52dd5b719a2f42b0739a0e7cca2bf105",
+      "layer": "localization-assets-german(de)/Situation_2.png"
+    },
+    {
+      "name": "Situation_3",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_ger/Situation_3_ger.png",
+      "kind": "plate",
+      "size": [
+        695,
+        118
+      ],
+      "png_sha": "7f39fb6529fcead7135b3c6ab11287ebfd71a74d334f30294cb1c5ab275ec878",
+      "texture_sha": "77dbad86218e140b45e52778858d398cd86e441626eeb777dcaddd42d7fc73e3",
+      "plate_sha": "413e398f4fe7c423ff74948dc33a53e765e2269775045d28da8f324fc02bf809",
+      "layer": "localization-assets-german(de)/Situation_3.png"
+    },
+    {
+      "name": "Situation_4",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_ger/Situation_4_ger.png",
+      "kind": "plate",
+      "size": [
+        695,
+        118
+      ],
+      "png_sha": "fa2884bd986be1b816bdb36533e7ab0aee5b7ab75b08940f3d29e9c030500a51",
+      "texture_sha": "66ef5c45db3b0a25a13ed031c37e6b2218504cfa43de219165981a30759bfcf7",
+      "plate_sha": "56006e59d098c0e25eb59ac9e0d1156704793e5aaef63c9bfc81085ec43c0c36",
+      "layer": "localization-assets-german(de)/Situation_4.png"
+    },
+    {
+      "name": "Situation_5",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_ger/Situation_5_ger.png",
+      "kind": "plate",
+      "size": [
+        695,
+        118
+      ],
+      "png_sha": "30027bbf21e17508741b852ae86a77c434c96a5de9979bbce478d3ab5ed2c7e6",
+      "texture_sha": "e908d3e183b0dc0cb41e66f4952166e5bd6647fc19566a9452ea028a01424af4",
+      "plate_sha": "40da4f45e8102525748db051e2fd00cc4e594985ed5aac88580a6fd87a6c2a6b",
+      "layer": "localization-assets-german(de)/Situation_5.png"
+    },
+    {
+      "name": "Situation_6",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_ger/Situation_6_ger.png",
+      "kind": "plate",
+      "size": [
+        695,
+        118
+      ],
+      "png_sha": "8aed9d1da7e804ac3fdeabf03bf0d86cb122ab4608813c446a1da34857c7f491",
+      "texture_sha": "6f20b12577698c8ec256c851df95a28f2d4725b48860d2583c18f617405fec14",
+      "plate_sha": "c58fdfa376435fc3a1dc0d77d5e014eee2368bf0c7ad71b5802fb859997ffbc7",
+      "layer": "localization-assets-german(de)/Situation_6.png"
+    },
+    {
+      "name": "splash_ger2",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "splash",
+      "key": "Assets/GK_Common/Prefabs/SousaPart/SousaPart_Title_Tuikyuu_R_ger.prefab",
+      "size": [
+        1024,
+        1024
+      ],
+      "spec": {
+        "вариант": "A",
+        "набор": {
+          "кегль": 234.7,
+          "сжатие": 0.905,
+          "базовая линия": 318.0,
+          "стык": -59.0,
+          "слово": "Возражение",
+          "шрифт": "ariblk.ttf",
+          "наклон": 0.22,
+          "межбуквенное": -10.0,
+          "обводка": 22,
+          "разрез": 5
+        },
+        "атлас": "SousaPart_Title_Tuikyuu_ger2",
+        "бандл": "gk_common_ingameui_trial",
+        "префаб": "Assets/GK_Common/Prefabs/SousaPart/SousaPart_Title_Tuikyuu_R_ger.prefab",
+        "мазок": "SousaPart_Title_Tuikyuu_anim_1_0_R_ger",
+        "размер": [
+          1024,
+          1024
+        ],
+        "текстура_sha": "f3e5a35e0762e9f705ea3f432e6f040cfe18338e4bec3efff2ce7b724b3cb46d",
+        "куски": {
+          "SousaPart_Title_Tuikyuu_anim_1_0_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 830.0,
+              "width": 166.0,
+              "height": 194.0
+            },
+            "textureRectOffset": {
+              "x": 0.0,
+              "y": 1.2928931713104248
+            },
+            "rect": {
+              "width": 166.0,
+              "height": 200.0
+            },
+            "как есть": true,
+            "было": {
+              "x": 745.0,
+              "y": 434.29290771484375,
+              "width": 166.0,
+              "height": 193.6309814453125
+            }
+          },
+          "SousaPart_Title_Tuikyuu_Outline_L_Bottom_R_ger": {
+            "textureRect": {
+              "x": 168.0,
+              "y": 868.0,
+              "width": 717.0,
+              "height": 156.0
+            },
+            "textureRectOffset": {
+              "x": 23.0,
+              "y": 5.0
+            },
+            "rect": {
+              "width": 741.0,
+              "height": 161.0
+            }
+          },
+          "SousaPart_Title_Tuikyuu_L_Bottom_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 694.0,
+              "width": 673.0,
+              "height": 134.0
+            },
+            "textureRectOffset": {
+              "x": 45.0,
+              "y": 27.0
+            },
+            "rect": {
+              "width": 741.0,
+              "height": 161.0
+            }
+          },
+          "SousaPart_Title_Tuikyuu_Outline_R_Bottom_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 579.0,
+              "width": 797.0,
+              "height": 113.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 48.0
+            },
+            "rect": {
+              "width": 886.3656005859375,
+              "height": 161.0
+            }
+          },
+          "SousaPart_Title_Tuikyuu_Outline_L_Top_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 475.0,
+              "width": 699.0,
+              "height": 102.0
+            },
+            "textureRectOffset": {
+              "x": 41.0,
+              "y": 0.0
+            },
+            "rect": {
+              "width": 741.0,
+              "height": 161.0
+            }
+          },
+          "SousaPart_Title_Tuikyuu_R_Bottom_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 382.0,
+              "width": 753.0,
+              "height": 91.0
+            },
+            "textureRectOffset": {
+              "x": 24.0,
+              "y": 70.0
+            },
+            "rect": {
+              "width": 886.3656005859375,
+              "height": 161.0
+            }
+          },
+          "SousaPart_Title_Tuikyuu_L_Top_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 300.0,
+              "width": 655.0,
+              "height": 80.0
+            },
+            "textureRectOffset": {
+              "x": 63.0,
+              "y": 0.0
+            },
+            "rect": {
+              "width": 741.0,
+              "height": 161.0
+            }
+          },
+          "SousaPart_Title_Tuikyuu_Outline_R_Top_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 239.0,
+              "width": 796.0,
+              "height": 59.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 0.0
+            },
+            "rect": {
+              "width": 886.3656005859375,
+              "height": 161.0
+            }
+          },
+          "SousaPart_Title_Tuikyuu_R_Top_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 200.0,
+              "width": 752.0,
+              "height": 37.0
+            },
+            "textureRectOffset": {
+              "x": 24.0,
+              "y": 0.0
+            },
+            "rect": {
+              "width": 886.3656005859375,
+              "height": 161.0
+            }
+          }
+        }
+      },
+      "png_sha": "f1b63230f8050dc0c246f7eb85143c3d7232c067e0a5ddcb02158d860d8ffd5c",
+      "layer": "gk_common_ingameui_trial/splash_ger2.png"
+    }
+  ],
+  "skipped": [
+    {
+      "name": "logic02_009_s",
+      "why": "у картинки нет немецкого варианта: в слоте русского игра её не показывает, класть некуда"
+    }
+  ],
+  "built": "2026-09-24 00:43"
+}

@@ -82,7 +82,11 @@ def plan_bundle(path) -> list[tuple[str, str]]:
     `itm01_01e_00_l.png` и так подписан «CANDY», отдельные только `_fre` и `_ger`
     («BONBON»). Английский игрок в таких местах видит именно базовый вариант.
     """
-    env = UnityPy.load(str(path))
+    return plan_env(UnityPy.load(str(path)))
+
+
+def plan_env(env) -> list[tuple[str, str]]:
+    """То же по уже открытому бандлу — чтобы не читать его с диска второй раз."""
     keys = set(env.container)
     pairs = []
     for key in sorted(keys):
@@ -116,8 +120,14 @@ def redirect(path, pairs: list[tuple[str, str]]) -> bytes:
     return env.file.save(packer="lz4")
 
 
-def swap_image_table() -> tuple[bytes, int]:
-    """Значения `Image Table_de` заменить английскими из `Image Table_en`."""
+def swap_image_table(keep: dict[int, str] | None = None) -> tuple[bytes, int]:
+    """Значения `Image Table_de` заменить английскими из `Image Table_en`.
+
+    `keep` — строки, которым остаться немецкими (`m_Id` -> немецкое значение): у русских
+    плашек `Situation_0/1` пиксели лежат в немецком спрайте, и таблица обязана вести
+    на него (`plates.table_rows`, `picture_layer.Shipment.table_rows`).
+    """
+    keep = keep or {}
     def read_table(logical_bundle: str):
         env = UnityPy.load(str(logical_bundle))
         for obj in env.objects:
@@ -136,7 +146,7 @@ def swap_image_table() -> tuple[bytes, int]:
     env, obj, de_tree = read_table(de_path)
     changed = 0
     for row in de_tree["m_TableData"]:
-        new = english.get(row["m_Id"])
+        new = keep.get(row["m_Id"]) or english.get(row["m_Id"])
         if new is None:
             raise KeyError(f"в английской таблице нет записи {row['m_Id']}")
         if row["m_Localized"] != new:
@@ -204,8 +214,13 @@ def do_build(work: dict[str, list], install: bool) -> int:
         live = BUNDLES / name
         short = name.split("_assets_all_")[0]
         if IMAGE_TABLE_BUNDLE in name:
-            blob, changed = swap_image_table()
-            note = f"таблица картинок, записей заменено: {changed}"
+            # Русские плашки, уже стоящие в игре, берутся через эту таблицу: их строки
+            # остаются немецкими, иначе подмена снова показала бы английские.
+            from plates import installed_rows
+            keep = installed_rows()
+            blob, changed = swap_image_table(keep)
+            note = f"таблица картинок, записей заменено: {changed}" + (
+                f", немецкими оставлены {len(keep)} — русские плашки" if keep else "")
         else:
             blob = redirect(live, pairs)
             note = f"адресов перенаправлено: {len(pairs)}"

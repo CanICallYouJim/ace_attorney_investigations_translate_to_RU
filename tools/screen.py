@@ -25,7 +25,13 @@
     и местами кант закрыт её нотой и венчиком. Буквы (красный контур и всё внутри,
     пончик) берутся у нейросети, кант и ореол строятся заново;
   * **нота английская, на родном месте.** Перенос её туда, где её рисует нейросеть,
-    закрывал бабочку Самсона (проба №12, 22 сентября).
+    закрывал бабочку Самсона (проба №12, 22 сентября);
+  * **полоса над логотипом** («Samson & Judy's» -> «Самсона и 𝄞 Джуди», ступень `strip`):
+    буквы семи языков одного цвета, поэтому надпись языка выделяется по цвету тела
+    буквы, а не по согласию языков; кант доски под полосой режется дугой (медиана семи
+    языков по столбцам); подложка — самая большая согласная группа языков; от нейросети
+    берётся только форма текста, цвет плоский английский, точки-блики рисуются заново,
+    текст идёт по дуге канта кадра. Разбор трёх заходов — docs/STATE.md, 22 сентября.
 
 Задание — `work/graphics_ru/<дело>/screen.json`. Проверки (правило №13 — ни одна
 не пользуется следом, который вычислила работа, кроме «правки за следом»):
@@ -34,7 +40,11 @@
      языков (то есть чисто английская надпись), а у нас остался как был;
   2. **правка за следом** — изменённое против английского вне следа и наших букв;
   3. **чужая краска** — цвет материала логотипа (розовая заливка, кант, контур)
-     в зоне логотипа вне наших букв, переднего плана и ноты.
+     в зоне логотипа вне наших букв, переднего плана и ноты;
+  4. **лишняя буква** на полосе — тело буквы (плотный буквенный цвет) вне наших букв,
+     которого не показывают четыре языка из шести;
+  5. **подложка невесть откуда** на полосе — изменённый нами пиксель вне наших букв,
+     которого не показывает ни один другой язык (кроме мест, где буквы у всех шести).
 
     tools\\screen.py                 набрать, записать PNG, маску букв и лист
     tools\\screen.py --check         ничего не писать, пересобрать и сверить с лежащим PNG
@@ -243,8 +253,25 @@ def grow(m: np.ndarray, img: np.ndarray, fill_steps: int = 40, jump: int = 4,
 # ---------------------------------------------------------------- логотип
 
 
+def creamlike(a: np.ndarray) -> np.ndarray:
+    """Крем торта под полосой: светлое без оттенка."""
+    lum = 0.299 * a[..., 0] + 0.587 * a[..., 1] + 0.114 * a[..., 2]
+    return (lum > 210) & ((a.max(-1) - a.min(-1)) < 30)
+
+
+def whitecream(a: np.ndarray) -> np.ndarray:
+    """Белый крем полосы, по которому пишут буквы: (254, 254, 254) с шумом сжатия.
+    Для заливки дыр под буквами «светлое без оттенка» шире нужного: в среднее попадала
+    кремово-жёлтая заливка кулака, и дыра внутри «С» выходила на 10–13 уровней темнее
+    крема (22 сентября 2026)."""
+    lum = 0.299 * a[..., 0] + 0.587 * a[..., 1] + 0.114 * a[..., 2]
+    return (lum > 245) & ((a.max(-1) - a.min(-1)) < 10)
+
+
 def substrate(F: Frame, foot: np.ndarray, front: np.ndarray, masks: list[np.ndarray],
-              report: list[str]) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+              report: list[str], flat=boardlike, flat_name: str = "доска",
+              base: np.ndarray | None = None, tol: int = 10, exclude=logolike,
+              smooth: bool = True, vote: str = "all") -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     """Подложка под следом из других языков.
 
     Кандидат — язык, у которого здесь нет своей надписи и значение не похоже на
@@ -253,10 +280,28 @@ def substrate(F: Frame, foot: np.ndarray, front: np.ndarray, masks: list[np.ndar
     тёмные тени на доске (в среднем на 6 уровней темнее, местами на 25), и одиночный
     японский кандидат приносил их призраками. Разнобой двух — дыра, а не среднее
     двух разных вещей.
+
+    `exclude` — чем кандидат не бывает (у логотипа — его материалом). У полосы его нет:
+    кремовые завитки над ней по цвету проходят тест «розовая заливка логотипа», и все
+    языки, показывавшие завитки, выпадали из кандидатов — дыру над английским ключом
+    заливало гладким кремом (белый мазок, 22 сентября 2026). `smooth` — класть ли ровный
+    материал гладким полем и поверх согласия языков: у доски логотипа это снимает шум
+    сжатия, а у полосы стирало узор завитков.
+
+    `vote` — как понимать согласие: "all" — все кандидаты в допуске друг от друга (логотип);
+    "group" — самая большая группа кандидатов, согласных между собой, от двух (полоса).
+    На линии канта под английским ключом немцы и оба китайских показывают кант, а у
+    французов там жёлтый край их логотипа: «все согласны» не выходило, и подложка брала
+    французское значение — жёлтый штрих по канту (22 сентября 2026).
     """
     ENf = F.EN.astype(np.float32)
     known = ~foot & ~front
-    cand = np.stack([~masks[i - 1] & ~logolike(F.S[i]) & foot for i in range(1, F.N)])
+    # синее кандидатом не бывает: доска, кант доски и крем синими не бывают, а ноты
+    # у каждого языка свои и на своих местах
+    def bluish(a):
+        return ((a[..., 2] - a[..., 0]) > 20) & ((a.max(-1) - a.min(-1)) > 25)
+    cand = np.stack([~masks[i - 1] & ~bluish(F.S[i]) & foot
+                     & (~exclude(F.S[i]) if exclude is not None else True) for i in range(1, F.N)])
     vals = F.S[1:].astype(np.float32)
     cnt = cand.sum(0)
     v = vals.copy()
@@ -265,33 +310,54 @@ def substrate(F: Frame, foot: np.ndarray, front: np.ndarray, masks: list[np.ndar
         __import__("warnings").simplefilter("ignore")
         med = np.nanmedian(v, axis=0)
         spread = np.nan_to_num(np.nanmax(v, axis=0) - np.nanmin(v, axis=0)).max(-1)
-    consensus = (cnt >= 2) & (spread <= 10)
-    sub = ENf.copy()
+    consensus = (cnt >= 2) & (spread <= tol)
+    sub = (ENf if base is None else base).copy()
+    if vote == "group":
+        # согласие по группе: у каждого кандидата — сколько кандидатов с ним в допуске
+        n = F.N - 1
+        agree = np.zeros((n, n) + foot.shape, bool)
+        for a in range(n):
+            for b in range(n):
+                agree[a, b] = cand[a] & cand[b] & (np.abs(vals[a] - vals[b]).max(-1) <= tol)
+        support = agree.sum(1)                                   # (n, H, W)
+        top = support.argmax(0)
+        best_n = np.take_along_axis(support, top[None], 0)[0]
+        members = np.take_along_axis(agree, top[None, None], 0)[0]  # (n, H, W)
+        gv = vals.copy()
+        gv[~members] = np.nan
+        with np.errstate(all="ignore"), __import__("warnings").catch_warnings():
+            __import__("warnings").simplefilter("ignore")
+            gmed = np.nanmedian(gv, axis=0)
+        consensus = foot & (best_n >= 2)
+        med = gmed
     sub[consensus] = med[consensus]
     ref, _ = normconv(sub, (known | consensus).astype(np.float32), (3, 6, 12, 24, 48, 96),
                       foot & ~consensus)
     dist = np.abs(vals - ref[None]).max(-1)
     dist[~cand] = np.inf
     best, bestd = dist.argmin(0), dist.min(0)
-    pick = ~consensus & foot & (bestd <= 10)
+    pick = ~consensus & foot & (bestd <= tol)
     py, px = np.nonzero(pick)
     sub[py, px] = vals[best[py, px], py, px]
     hole = foot & ~consensus & ~pick
     report.append(f"  подложка из языков: согласие {int(consensus.sum())}, один близкий к фону "
                   f"{int(pick.sum())}, дыр {int(hole.sum())} из {int(foot.sum())}")
 
-    # доска ровная — кладётся гладким полем по её настоящим пикселям рядом;
-    # подложка языков несёт их шум сжатия и тени
-    kb = (known & boardlike(F.EN)).astype(np.float32)
+    # ровный материал (доска у логотипа, крем у полосы) кладётся гладким полем по его
+    # настоящим пикселям рядом; подложка языков несёт их шум сжатия и тени
+    kb = (known & flat(F.EN)).astype(np.float32)
     board, _ = normconv(ENf, kb, (4, 8, 16, 32, 64, 128), foot)
-    smooth = foot & ~hole & boardlike(sub) & (np.abs(sub - board).max(-1) <= 14)
+    if smooth:
+        smooth = foot & ~hole & flat(sub) & (np.abs(sub - board).max(-1) <= 14)
+    else:
+        smooth = np.zeros_like(foot)
     sub[smooth] = board[smooth]
     kn = (known | consensus | pick).astype(np.float32)
-    frac = ndi.gaussian_filter(kn * boardlike(sub), 8) / np.maximum(ndi.gaussian_filter(kn, 8), 1e-6)
+    frac = ndi.gaussian_filter(kn * flat(sub), 8) / np.maximum(ndi.gaussian_filter(kn, 8), 1e-6)
     hole_board = hole & (frac >= 0.6)
     sub[hole_board] = board[hole_board]
     hole_rest = hole & ~hole_board
-    report.append(f"  доска гладким полем: {int(smooth.sum())} + дыр на доске {int(hole_board.sum())}; "
+    report.append(f"  {flat_name} гладким полем: {int(smooth.sum())} + дыр на ней {int(hole_board.sum())}; "
                   f"прочих дыр {int(hole_rest.sum())}")
     return sub, hole_rest, known
 
@@ -404,9 +470,12 @@ def logo(F: Frame, cfg: dict, front: np.ndarray, spec_dir: Path, report: list[st
     foot = ((core | grow(core, F.EN, fill_steps=0)) | note) & ~front
     report.append(f"  английский логотип: ядро {int(core.sum())}, след {int(foot.sum())}, "
                   f"нота {int(note.sum())}, передний план {int(front.sum())}")
+    # маски других языков — по всему окну: немецкая нота лежит на канте доски выше зоны
+    # логотипа, её кусок внутри зоны выходил меньше порога, и голубое уезжало в подложку
+    whole = np.ones((F.H, F.W), bool)
     masks = []
     for i in range(1, F.N):
-        ink, blue = own_parts(F, i, zone, L["низ"], piece, sat)
+        ink, blue = own_parts(F, i, whole, L["низ"], piece, sat)
         masks.append(grow(ndi.binary_fill_holes(ink | blue), F.S[i]))
     sub, hole_rest, known = substrate(F, foot, front, masks, report)
 
@@ -463,14 +532,271 @@ def logo(F: Frame, cfg: dict, front: np.ndarray, spec_dir: Path, report: list[st
     return out, ink, foot, note
 
 
+# ---------------------------------------------------------------- полоса
+
+
+def match_with(F: Frame, tol: int) -> np.ndarray:
+    """Сколько других языков совпало с каждым — со своим допуском. У полосы допуск 24:
+    в тёмном фоне над тортом языки расходятся шумом сжатия на 9–20 уровней (местами
+    до 83), и при допуске 10 фон считался своей надписью каждого языка — его заливало
+    кремом (22 сентября). Буквы от крема отличаются на ~100, их такой допуск не смажет."""
+    m = np.zeros((F.N, F.H, F.W), np.int8)
+    for i in range(F.N):
+        for j in range(F.N):
+            if i != j:
+                m[i] += np.abs(F.S[i] - F.S[j]).max(-1) <= tol
+    return m
+
+
+def kant_rows(S: np.ndarray, lo: int, K: dict) -> np.ndarray:
+    """Верх канта доски под полосой по столбцам: первая строка ниже `lo`, где тёмная линия
+    без оттенка (две строки подряд), а под ней через `полоса_ниже` px — коричневая полоса
+    канта. У буквы тоже бывает тёмный край, но коричневой полосы под ним нет. S — стопка
+    картинок (N, H, W, 3) или одна; ответ (N, W), -1 — в столбце не нашлось."""
+    S = S[None] if S.ndim == 3 else S
+    f = S.astype(np.float32)
+    L = 0.299 * f[..., 0] + 0.587 * f[..., 1] + 0.114 * f[..., 2]
+    line = (L < K["линия_темнее"]) & ((S.max(-1) - S.min(-1)) < K["оттенок_до"])
+    line &= np.roll(line, -1, axis=1)
+    l0, l1, rb0, rb1 = K["полоса"]
+    rb = f[..., 0] - f[..., 2]
+    band = (L > l0) & (L < l1) & (rb >= rb0) & (rb <= rb1)
+    below = np.zeros_like(band)
+    d0, d1 = K["полоса_ниже"]
+    for d in range(d0, d1 + 1):
+        below |= np.roll(band, -d, axis=1)
+    hit = line & below
+    hit[:, :max(0, lo)] = False
+    return np.where(hit.any(1), hit.argmax(1), -1)
+
+
+def arc(rows: np.ndarray, x0: int, x1: int, smooth: int) -> np.ndarray:
+    """Столбцы -> гладкая дуга: медиана по картинкам без «не нашлось», медианный фильтр
+    вдоль x (у одиночного рисунка нейросети он убирает хвост ключа, лежащий на канте),
+    вне [x0, x1) и в пропусках — ближайшее/интерполяция."""
+    t = rows.astype(np.float32)
+    t[t < 0] = np.nan
+    t[:, :max(0, x0)] = np.nan
+    t[:, x1:] = np.nan
+    with np.errstate(all="ignore"), __import__("warnings").catch_warnings():
+        __import__("warnings").simplefilter("ignore")
+        col = np.nanmedian(t, axis=0)
+    xs = np.arange(col.size)
+    ok = ~np.isnan(col)
+    col = np.interp(xs, xs[ok], col[ok])
+    return ndi.median_filter(col, size=smooth, mode="nearest")
+
+
+def on_letter_line(a: np.ndarray, P: dict) -> tuple[np.ndarray, np.ndarray]:
+    """Цвет пикселя против отрезка «цвет букв полосы — крем»: доля крема t (0 — сама
+    буква, 1 — крем) и расстояние до отрезка. Полутон края буквы лежит на отрезке."""
+    a = a.astype(np.float32)
+    C = np.asarray(P["цвет_букв"], np.float32)
+    d = np.asarray(P["цвет_крема"], np.float32) - C
+    t = np.clip(((a - C) * d).sum(-1) / (d * d).sum(), 0, 1)
+    dist = np.sqrt(((a - C - t[..., None] * d) ** 2).sum(-1))
+    return t, dist
+
+
+def letter_body(a: np.ndarray, P: dict) -> np.ndarray:
+    """Тело буквы полосы: плотный буквенный цвет. Буквы всех семи языков одного цвета
+    (164, 149, 147), а в фоне полосы такого нет: завитки крема лежат у отрезка
+    «буква — крем», но ближе к крему (t ≈ 0,7), кант доски режется дугой."""
+    t, dist = on_letter_line(a, P)
+    return (t <= P["тело"][0]) & (dist <= P["тело"][1])
+
+
+def text_mask(F: Frame, i: int, P: dict, zone: np.ndarray, frame=None, rim: int | None = None) -> np.ndarray:
+    """Своя надпись языка i на полосе — по цвету, а не по согласию языков: тело буквы,
+    не общее шести-семи языкам (кулаки, завитки), куски от `кусок_от`, с точками-бликами,
+    плюс кайма полутонов. Согласие языков здесь врёт: у китайских вариантов текст
+    один, «Samson» стоит у троих, и в местах, где буквы четырёх-пяти языков легли
+    друг на друга, пиксель считался «общим рисунком» — полутон чужой буквы уезжал
+    в подложку крапиной (22 сентября 2026). Общее всем языкам (кулаки, волосы Джуди)
+    отсеивается кусками: кусок тела буквы — надпись, если в нём есть хоть один пиксель,
+    не общий шести языкам. Попиксельный отсев не годится: у середины английской `S`
+    штрихи всех семи языков легли в одну точку, она считалась «общим рисунком», и в
+    подложку уезжал серый штрих. С `frame` — только куски с центром в рамке."""
+    body = letter_body(F.S[i], P) & zone
+    lab, n = ndi.label(body)
+    if not n:
+        return body
+    idx = range(1, n + 1)
+    sizes = ndi.sum(body, lab, idx)
+    own = ndi.sum(body & ~(F.match_strip[i] >= 5), lab, idx)
+    ok = [k for k in range(n) if sizes[k] >= P["кусок_от"] and own[k] > 0]
+    if frame is not None:
+        ys, xs = ndi.mean(F.yy, lab, idx), ndi.mean(F.xx, lab, idx)
+        fx0, fy0, fx1, fy1 = F.box(frame)
+        ok = [k for k in ok if fx0 <= xs[k] <= fx1 and fy0 <= ys[k] <= fy1]
+    body = np.isin(lab, [k + 1 for k in ok])
+    holes = ndi.binary_fill_holes(body) & ~body
+    hl, hn = ndi.label(holes)
+    hs = ndi.sum(holes, hl, range(1, hn + 1)) if hn else []
+    body |= np.isin(hl, [k + 1 for k in range(hn) if hs[k] <= P["точка_до"]])
+    return ndi.binary_dilation(body, structure=disk(P["кайма"] if rim is None else rim))
+
+
+def strip_kant(F: Frame, P: dict) -> np.ndarray:
+    """Дуга канта в кадре: y верха канта в каждом столбце окна (координаты окна).
+    Медиана семи языков — вставки на канте у каждого свои, у медианы их нет."""
+    K = P["кант"]
+    rows = kant_rows(F.S, K["искать_с"] - F.win[1], K)
+    x0, x1 = K["дуга_x"]
+    return arc(rows, x0 - F.win[0], x1 - F.win[0], K["сгладить"])
+
+
+def ai_text(P: dict, spec_dir: Path, report: list[str]):
+    """Форма текста полосы у нейросети — альфа, а не цвет. Буквы и ключ у неё шоколадные
+    с тёмным контуром и бликом, у англичан на экране — плоские `(164, 149, 147)` с белыми
+    точками. Перенос цвета по парам (первый заход) давал бурые буквы с синеватой каймой:
+    края между шоколадом и белым пары не держат. Поэтому берётся только покрытие:
+    чистая маска букв, сглаженная по краю; белые точки рисуются заново по образцу
+    английских (`warp_text`). Толщина штриха
+    после масштаба у нейросети та же, что у англичан (медиана 6 px против 6, замер
+    22 сентября). Кусок ниже дуги канта нейросети отрезается: хвост ключа лежит на канте."""
+    art = np.asarray(Image.open((spec_dir / P["арт"]).resolve()).convert("RGB"), np.int16)
+    ax0, ay0, ax1, ay1 = P["рамка_в_арте"]
+    crop = art[ay0:ay1, ax0:ax1]
+    f = crop.astype(np.float32)
+    L = 0.299 * f[..., 0] + 0.587 * f[..., 1] + 0.114 * f[..., 2]
+    K = P["кант_в_арте"]
+    kant = arc(kant_rows(crop, K["искать_с"] - ay0, K), 0, crop.shape[1], K["сгладить"])
+    yy, xx = np.indices(L.shape)
+    above = yy < kant[xx]
+    dark = (L < P["темнее_в_арте"]) & above
+    lab, n = ndi.label(dark)
+    sizes = ndi.sum(dark, lab, range(1, n + 1)) if n else []
+    text = np.isin(lab, [k + 1 for k in range(n) if sizes[k] >= P["кусок_в_арте"]])
+    holes = ndi.binary_fill_holes(text) & ~text
+    hl, hn = ndi.label(holes)
+    hs = ndi.sum(holes, hl, range(1, hn + 1)) if hn else []
+    dots = [k for k in range(hn) if hs[k] <= P["точка_в_арте"]]
+    region = text | np.isin(hl, [k + 1 for k in dots])
+    region = ndi.binary_dilation(region, structure=disk(2)) & above
+    # форма — покрытие по яркости между чернилами и белым; точки залиты (их рисует
+    # warp_text по образцу английских). Волоски шума нейросети по краю срезаются:
+    # покрытие живёт только в пикселе от тела буквы, очищенного размыканием. Сравнивали
+    # 22 сентября рядом в масштабе игры: поле расстояний со сглаживанием контура (и
+    # размытая маска) толстили буквы и закрывали просветы, а сырое покрытие ближе всех
+    # к рисунку нейросети — ему недоставало только чистого края
+    white, ink = P["белое_в_арте"], P["чернила_в_арте"]
+    filled_dots = np.isin(hl, [k + 1 for k in dots])
+    alpha = np.clip((white - L) / (white - ink), 0, 1) * region
+    alpha[filled_dots] = 1
+    solid = ((L < (white + ink) / 2) & region) | filled_dots
+    body = ndi.binary_opening(solid, structure=disk(1))
+    alpha *= ndi.binary_dilation(body, structure=disk(1))
+    alpha[~above] = 0
+    # точки-блики: центры светлых дыр внутри букв (в координатах рисунка)
+    centres = []
+    if dots:
+        cy = ndi.mean(yy, hl, [k + 1 for k in dots])
+        cx = ndi.mean(xx, hl, [k + 1 for k in dots])
+        centres = [(x + ax0, y + ay0) for x, y in zip(cx, cy)]
+    report.append(f"  текст полосы нейросети: кусков {len(np.unique(lab[text])) - 1}, "
+                  f"площадь {int(solid.sum())} пикс., точек {len(centres)}; дуга канта нейросети "
+                  f"{kant.min() + ay0:.0f}–{kant.max() + ay0:.0f}")
+    return alpha.astype(np.float32), kant + ay0, centres
+
+
+def warp_text(F: Frame, P: dict, alpha_ai: np.ndarray, kant_ai: np.ndarray, kt: np.ndarray,
+              centres=()):
+    """Текст нейросети -> окно кадра. По x — линейно: рамка текста у нейросети ложится
+    в рамку места (сжатие по ширине, чтобы влезть между кулаками). По y — от канта:
+    расстояние до канта своей доски у нейросети умножается на масштаб по высоте и
+    откладывается от канта кадра. Дуга канта у нейросети положе (стрелка 22 px на ±210
+    против 37 у кадра), и текст, поставленный прямоугольником, не шёл бы по дуге, как
+    английский, а хвост ключа уходил бы в кант на 3–6 px.
+
+    Точки-блики переносятся центрами и рисуются заново по образцу английских: белый
+    круг радиусом `точка_px` и кольцо чуть темнее буквы. После уменьшения точки нейросети
+    (3–4 px) выходили серыми пятнышками, а у англичан они белые (замер 22 сентября:
+    ядро 3 px на 247–255, кольцо на 8–17 уровней темнее тела). Возвращает альфу,
+    маску колец и масштабы."""
+    ax0, ay0 = P["рамка_в_арте"][:2]
+    tx0, ty0, tx1, ty1 = P["текст_в_арте"]
+    mx0, my0, mx1, my1 = P["место"]
+    kx = (mx1 - mx0) / (tx1 - tx0)
+    ky = (my1 - my0) / (ty1 - ty0)
+    xs = (F.xx + F.win[0]).astype(np.float32)
+    ys = (F.yy + F.win[1]).astype(np.float32)
+    xa = tx0 + (xs - mx0) / kx
+    ka = np.interp(xa, np.arange(kant_ai.size) + ax0, kant_ai)
+    ko = kt[F.xx] + F.win[1]
+    ya = ka + (ys - ko) / ky
+    a = cv2.remap(alpha_ai, (xa - ax0).astype(np.float32), (ya - ay0).astype(np.float32),
+                  cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=0)
+    a = np.clip(a, 0, 1)
+    ring = np.zeros(a.shape, np.float32)
+    r0, r1 = P["точка_px"], P["точка_px"] + P["кольцо_px"]
+    for cx, cy in centres:
+        # центр точки -> кадр той же формулой, что и весь текст
+        xo = mx0 + (cx - tx0) * kx
+        col = int(np.clip(round(xo) - F.win[0], 0, F.W - 1))
+        yo = kt[col] + F.win[1] + (cy - np.interp(cx, np.arange(kant_ai.size) + ax0, kant_ai)) * ky
+        d = np.hypot(xs - xo, ys - yo)
+        hole = np.clip(r0 + 0.5 - d, 0, 1)
+        a = a * (1 - hole)
+        ring = np.maximum(ring, np.clip(r1 + 0.5 - d, 0, 1) * (1 - hole))
+    return a, ring, kx, ky
+
+
+def strip(F: Frame, cfg: dict, base: np.ndarray, spec_dir: Path, report: list[str]):
+    """Полоса «Samson & Judy's» -> «Самсона и 𝄞 Джуди» (как у нейросети, решение
+    пользователя 22 сентября 2026). Возвращает картинку окна, наши буквы и след."""
+    P = cfg["полоса"]
+    tol = P.get("допуск", 24)
+    kt = strip_kant(F, P)
+    F.strip_kant = kt
+    # выше канта: кант доски — не надпись ни у кого
+    above = F.yy < kt[F.xx]
+    zone = F.zone(P["зона"]) & above
+    F.match_strip = match_with(F, tol)
+    # след шире каймы чужих надписей: полутон английского ключа лежит на линии канта
+    # до 5 px от тела (тень нижней петли у x≈1000, 22 сентября), а подложку под следом
+    # всё равно показывают другие языки
+    own_en = text_mask(F, 0, P, zone, P["рамка_своих"], rim=P["кайма_следа"])
+    # на пару строк в линию канта: хвост английского ключа сливается с ней
+    foot = own_en & (F.yy < kt[F.xx] + P["в_кант"])
+    report.append(f"  дуга канта: верх {kt.min() + F.win[1]:.0f}, края "
+                  f"{kt[F.box(P['рамка_текста'])[0]] + F.win[1]:.0f} / "
+                  f"{kt[F.box(P['рамка_текста'])[2]] + F.win[1]:.0f}")
+    report.append(f"  английская полоса: след {int(foot.sum())}")
+    masks = [text_mask(F, i, P, zone) for i in range(1, F.N)]
+    no_front = np.zeros_like(foot)
+    # допуск согласия языков тот же, что у своей надписи полосы: в тёмном фоне
+    # над тортом языки расходятся шумом сжатия сильнее 10
+    sub, hole_rest, known = substrate(F, foot, no_front, masks, report, flat=whitecream,
+                                      flat_name="крем", base=base, tol=tol, exclude=None, smooth=False,
+                                      vote="group")
+    alpha_ai, kant_ai, centres = ai_text(P, spec_dir, report)
+    alpha, ring, kx, ky = warp_text(F, P, alpha_ai, kant_ai, kt, centres)
+    report.append(f"  текст по месту: масштаб {kx:.3f} x {ky:.3f} (сжатие {kx / ky:.3f}), от канта")
+    under = ndi.binary_erosion(alpha > 0.999, structure=disk(2))
+    need = hole_rest & ~under
+    base8 = np.clip(sub, 0, 255).astype(np.uint8)
+    rest = cv2.cvtColor(cv2.inpaint(cv2.cvtColor(base8, cv2.COLOR_RGB2BGR),
+                                    hole_rest.astype(np.uint8) * 255, 4, cv2.INPAINT_TELEA),
+                        cv2.COLOR_BGR2RGB).astype(np.float32)
+    filled = sub.copy()
+    filled[need] = rest[need]
+    colour = np.array(P["цвет_букв"], np.float32)[None, None] - P["кольцо_темнее"] * ring[..., None]
+    out = filled * (1 - alpha[..., None]) + colour * alpha[..., None]
+    ink = alpha > 0.5
+    ys, xs = np.nonzero(ink)
+    report.append(f"  наших букв на полосе {int(ink.sum())} ({xs.min() + F.win[0]}–{xs.max() + F.win[0]} x "
+                  f"{ys.min() + F.win[1]}–{ys.max() + F.win[1]}); прочих дыр вне букв {int(need.sum())}")
+    return out, ink, foot
+
+
 # ---------------------------------------------------------------- проверки
 
 
 def english_only(F: Frame, tol: int) -> np.ndarray:
     """Чисто английское: пиксель, где английский не совпал ни с одним из шести языков.
     Считается по языкам, без следа и масок работы."""
-    return F.match[0] == 0 if tol == F.__dict__.get("_tol") else \
-        np.all(np.stack([np.abs(F.S[0] - F.S[i]).max(-1) > tol for i in range(1, F.N)]), 0)
+    return np.all(np.stack([np.abs(F.S[0] - F.S[i]).max(-1) > tol for i in range(1, F.N)]), 0)
 
 
 def checks(F: Frame, cfg: dict, out: np.ndarray, ink: np.ndarray, allowed: np.ndarray,
@@ -489,6 +815,10 @@ def checks(F: Frame, cfg: dict, out: np.ndarray, ink: np.ndarray, allowed: np.nd
     board_med = np.median(ENf[bl], axis=0) if bl.any() else np.array([132, 129, 136], np.float32)
     board_en = boardlike(ENf) & (np.abs(ENf - board_med).max(-1) <= cfg.get("допуск_доски", 16))
     left = only & same & ~mine & ~keep & judged & ~board_en
+    if "полоса" in cfg:
+        # белые точки-блики английских букв на белом креме полосы глазом не видны:
+        # светлое без оттенка в зоне полосы остатком не считается
+        left &= ~(F.zone(cfg["полоса"]["зона"]) & creamlike(ENf))
     # 2. правка за следом: изменено против английского вне разрешённого
     moved = (~same) & ~ndi.binary_dilation(allowed | ink, structure=disk(2))
     # 3. чужая краска: цвет материала логотипа в зоне логотипа вне наших букв.
@@ -507,10 +837,45 @@ def checks(F: Frame, cfg: dict, out: np.ndarray, ink: np.ndarray, allowed: np.nd
     ours = ndi.binary_dilation(ink, structure=disk(3)) | front | keep
     strong = logolike(oc) & ~pinkfill(oc)
     paint = lz & ~ours & ((strong & (shown < 5)) | (pinkfill(oc) & (shown < 2)))
+    checks_list = [("остатки", left, "остатки английского"),
+                   ("за_следом", moved, "правка за следом"),
+                   ("краска", paint, "чужая краска цвета логотипа")]
+    if "полоса" in cfg:
+        P = cfg["полоса"]
+        sz = F.zone(P["зона"])
+        tol = P.get("допуск", 24)
+        shown6 = np.zeros(same.shape, np.int8)
+        for i in range(1, F.N):
+            shown6 += np.abs(out - F.S[i]).max(-1) <= tol
+        ours2 = ndi.binary_dilation(ink, structure=disk(2))
+        ours3 = ndi.binary_dilation(ink, structure=disk(3))
+        # 4. лишняя буква: тело буквы (плотный буквенный цвет, мерка суда строже мерки набора:
+        # коричневая полоса канта доски лежит у того же отрезка «буква — крем» при t ≈ 0,23)
+        # вне наших букв. Кант и прочий рисунок показывают почти все языки, поэтому пиксель,
+        # который показывают четыре языка из шести, судом не считается. Ловит остаток
+        # английского (и «Samson», который у немцев и французов стоит там же и поэтому
+        # находке 1 не виден) и полутон чужой буквы в подложке — крапины первого захода.
+        # Две прежние мерки пробовали и отвергли 22 сентября: «четыре языка из семи — фон»
+        # (у китайских вариантов текст один, «Samson» у троих — буквы четырёх-пяти языков
+        # то и дело лежат в одном месте) и «тёмное против медианы шести» (под нотами немцев
+        # и корейцев и буквой французов медиана шести — не кант, и нетронутый английский кант
+        # шёл в находки).
+        body = letter_body(oc, dict(P, тело=P["тело_суд"]))
+        stray = sz & body & (shown6 < 4) & ~ours2
+        checks_list.append(("буква", stray, "лишняя буква на полосе"))
+        # 5. невесть откуда: изменённый нами пиксель вне наших букв, которого не показывает
+        # ни один другой язык. Подложка берётся у языков, так что у честной подложки источник
+        # есть всегда; кроме дыр, где свои буквы у всех шести, — там кладётся крем, и суд
+        # это место пропускает (у всех шести тело или полутон буквы). Ловит выдуманную
+        # подложку любого цвета: белую кляксу на канте, мазок по завиткам — их 22 сентября
+        # не видела ни одна проверка.
+        t_all, d_all = on_letter_line(F.S[1:], P)
+        all_letters = np.all((t_all <= P["полутон"][0]) & (d_all <= P["полутон"][1]), 0)
+        changed = np.abs(out - ENf).max(-1) > 6
+        nowhere = sz & changed & (shown6 == 0) & ~all_letters & ~ours3
+        checks_list.append(("невесть", nowhere, "подложка невесть откуда"))
     found, lines = {}, []
-    for key, m, what in (("остатки", left, "остатки английского"),
-                         ("за_следом", moved, "правка за следом"),
-                         ("краска", paint, "чужая краска цвета логотипа")):
+    for key, m, what in checks_list:
         lab, n = ndi.label(m)
         sizes = ndi.sum(m, lab, range(1, n + 1)) if n else []
         big = [k + 1 for k in range(n) if sizes[k] >= least]
@@ -538,6 +903,13 @@ def compose(name: str, cfg: dict, case: str, variants=None):
     front = front_of(F, cfg)
     out, ink, foot, note = logo(F, cfg, front, spec_dir, report)
     allowed = foot.copy()
+    parts = {"логотип": ink.copy()}
+    if "полоса" in cfg:
+        out, ink_s, foot_s = strip(F, cfg, out, spec_dir, report)
+        parts["полоса"] = ink_s
+        ink = ink | ink_s
+        allowed |= foot_s
+    F.parts = parts
     return F, out, ink, allowed, note, front, report
 
 
@@ -589,9 +961,10 @@ def run_one(name: str, cfg: dict, case: str, mode: str, variants=None) -> tuple[
     F, out, ink, allowed, note, front, report = compose(name, cfg, case, variants)
     found, lines = checks(F, cfg, out, ink, allowed, note, front)
     report += lines
-    problems = [f"{name}: {what}" for what, m in (("остатки английского", found["остатки"]),
-                                                   ("правка за следом", found["за_следом"]),
-                                                   ("чужая краска", found["краска"])) if m.any()]
+    names_ru = {"остатки": "остатки английского", "за_следом": "правка за следом",
+                "краска": "чужая краска", "буква": "лишняя буква на полосе",
+                "невесть": "подложка невесть откуда"}
+    problems = [f"{name}: {names_ru[k]}" for k, m in found.items() if m.any()]
     full = to_full(F, out)
     png = RU / case / f"{name}.png"
     if mode == "check":
@@ -626,7 +999,9 @@ def selftest(name: str, cfg: dict, case: str) -> int:
         return 1
     ENf = F.EN.astype(np.float32)
     only = english_only(F, cfg.get("допуск_языков", 24)) & F.zone(cfg["судить"])
-    ys, xs = np.nonzero(only & ~ndi.binary_dilation(ink, structure=disk(6)))
+    # сеять на английскую надпись (материал логотипа), а не на английский фон:
+    # фон проверка остатков сознательно не судит
+    ys, xs = np.nonzero(only & logolike(ENf) & ~ndi.binary_dilation(ink, structure=disk(6)))
     if not len(ys):
         print("  самопроверка: не нашлось чисто английского вне наших букв — посеять нечего")
         return 1
@@ -663,6 +1038,44 @@ def selftest(name: str, cfg: dict, case: str) -> int:
     print(f"  порча «пятно канта на доске у ({zx + F.win[0]}, {zy + F.win[1]})»: "
           f"{'поймана' if ok3 else 'НЕ ПОЙМАНА'}")
     bad += not ok3
+    if "полоса" in cfg:
+        # кусок английской полосы на место: английские буквы там, где наших нет
+        # (буквы ищутся по языкам, как их видит картинка, а не по следу работы)
+        P = cfg["полоса"]
+        above = F.yy < F.strip_kant[F.xx]
+        en_strip = letter_body(F.EN, P) & F.zone(P["зона"]) & above & ~(F.match_strip[0] >= 4)
+        mine_s = ndi.binary_dilation(F.parts.get("полоса", np.zeros_like(ink)), structure=disk(4))
+        ys, xs = np.nonzero(ndi.binary_erosion(en_strip, iterations=1) & ~mine_s)
+        if not len(ys):
+            print("  самопроверка: английских букв полосы вне наших не нашлось — посеять нечего")
+            return 1
+        k = len(ys) // 2
+        sy, sx = int(ys[k]), int(xs[k])
+        spoiled = out.copy()
+        spoiled[sy - 8:sy + 8, sx - 8:sx + 8] = ENf[sy - 8:sy + 8, sx - 8:sx + 8]
+        found, _ = checks(F, cfg, spoiled, ink, allowed, note, front)
+        ok4 = found["остатки"].any() or found["буква"].any()
+        print(f"  порча «вернули кусок английской полосы у ({sx + F.win[0]}, {sy + F.win[1]})»: "
+              f"{'поймана' if ok4 else 'НЕ ПОЙМАНА'}")
+        bad += not ok4
+        # белая клякса на канте доски — порча первого захода (22 сентября), которую не
+        # видела ни одна проверка. Место — кант, где его показывают все семь языков
+        sz = F.zone(P["зона"])
+        allkant = sz & (F.match_strip[0] >= 6) & (F.EN.astype(np.float32).mean(-1) < 150) & \
+            ~ndi.binary_dilation(ink, structure=disk(10))
+        ys, xs = np.nonzero(ndi.binary_erosion(allkant, structure=disk(3)))
+        if not len(ys):
+            print("  самопроверка: канта, общего всем языкам, в зоне полосы не нашлось — посеять нечего")
+            return 1
+        k = len(ys) // 2
+        by, bx = int(ys[k]), int(xs[k])
+        spoiled = out.copy()
+        spoiled[by - 5:by + 5, bx - 5:bx + 5] = (250, 250, 250)
+        found, _ = checks(F, cfg, spoiled, ink, allowed, note, front)
+        ok5 = found["невесть"].any()
+        print(f"  порча «белая клякса на канте у ({bx + F.win[0]}, {by + F.win[1]})»: "
+              f"{'поймана' if ok5 else 'НЕ ПОЙМАНА'}")
+        bad += not ok5
     return 1 if bad else 0
 
 

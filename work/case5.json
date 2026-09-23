@@ -739,8 +739,8 @@
       "index": 0,
       "mode": 2,
       "en": "The combination lock on the gate leading to the\nplaza was intact when Ms. Nichols arrived.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кодовый замок на воротах к площадке был цел,\nкогда мисс Копейкина пришла.",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|1",
@@ -749,8 +749,8 @@
       "index": 1,
       "mode": 2,
       "en": "But the lock on the gate leading out to the side\nof the Bigg Building had been cut.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А вот замок на воротах со стороны здания Бигг\nбыл перекушен.",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|2",
@@ -759,8 +759,8 @@
       "index": 2,
       "mode": 2,
       "en": "What does this tell us?",
-      "ru": "",
-      "status": "pending"
+      "ru": "О чём это нам говорит?",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|3",
@@ -769,8 +769,8 @@
       "index": 3,
       "mode": 3,
       "en": "Hee hee!{E108:0018} {E107:0001}Easy!{E108:0018} {E107:0002}That the killer used the side gate!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хи-хи!{E108:0018} {E107:0001}Легко!{E108:0018} {E107:0002}Убийца шёл через боковые ворота!",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|4",
@@ -779,8 +779,8 @@
       "index": 4,
       "mode": 2,
       "en": "Precisely.{E108:0018} {E12F:00000004}{E188:00300000}{E1D5}And it tells us something else important, too.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно.{E108:0018} {E12F:00000004}{E188:00300000}{E1D5}И ещё об одном, не менее важном.",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|5",
@@ -789,8 +789,8 @@
       "index": 5,
       "mode": 2,
       "en": "Namely that our culprit didn't know the number\nfor the combination lock.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А именно: кода от замка наш преступник\nне знал.",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|6",
@@ -799,8 +799,8 @@
       "index": 6,
       "mode": 2,
       "en": "You're right!{E108:0018} It would have been way easier to\ncome in that way if they did!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И правда!{E108:0018} Знал бы -- прошёл бы там,\nэто куда проще!",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|7",
@@ -809,8 +809,8 @@
       "index": 7,
       "mode": 2,
       "en": "But instead, they chose the classic thief's route:{E108:0008}\nthe lesser-known side entrance.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А он выбрал воровскую классику:{E108:0008}\nнеприметный боковой вход.",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|8",
@@ -819,8 +819,8 @@
       "index": 8,
       "mode": 2,
       "en": "This is no run-of-the-mill criminal, {E108:0008}{E107:0001}{E1D1}Mr. Edgeworth!{E108:0018}\n{E280}We need to keep our wits about us!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это не рядовой преступник, {E108:0008}{E107:0001}{E1D1}мистер Эджворт!{E108:0018}\n{E280}Нам надо держать ухо востро!",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|9",
@@ -829,8 +829,8 @@
       "index": 9,
       "mode": 2,
       "en": "(I'm not sure we should be excited by that fact, {E108:0008}{E107:0003}Kay...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Не уверен, что этому стоит радоваться, {E108:0008}{E107:0003}Кей...)",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|10",
@@ -839,8 +839,8 @@
       "index": 10,
       "mode": 2,
       "en": "Anyway, we know that everybody working on the\nmovie knew the combination.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так или иначе, код знали все, кто работал\nна съёмках.",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|11",
@@ -849,8 +849,8 @@
       "index": 11,
       "mode": 2,
       "en": "Which makes it likely that our culprit wasn't a\nmember of the cast or crew.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А значит, преступник, скорее всего,\nне из съёмочной группы.",
+      "status": "translated"
     },
     {
       "id": "logic04_00.bytes|05001690|12",
@@ -859,8 +859,8 @@
       "index": 12,
       "mode": 3,
       "en": "Movie Set Locks data jotted down\nin my Organizer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Замки съёмочной площадки»\nзаписаны в органайзер.",
+      "status": "translated"
     },
     {
       "id": "logic04_01.bytes|05001710|0",
@@ -869,8 +869,8 @@
       "index": 0,
       "mode": 3,
       "en": "Both the dent in the fence {E108:0018}and the broken horn...",
-      "ru": "",
-      "status": "pending"
+      "ru": "И вмятина на ограде, {E108:0018}и сломанный рог...",
+      "status": "translated"
     },
     {
       "id": "logic04_01.bytes|05001710|1",
@@ -879,8 +879,8 @@
       "index": 1,
       "mode": 2,
       "en": "...weren't there yesterday, according to our witness.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...по словам свидетельницы, вчера их тут не было.",
+      "status": "translated"
     },
     {
       "id": "logic04_01.bytes|05001710|2",
@@ -889,8 +889,8 @@
       "index": 2,
       "mode": 2,
       "en": "Which leads me to wonder...",
-      "ru": "",
-      "status": "pending"
+      "ru": "И это наводит на мысль...",
+      "status": "translated"
     },
     {
       "id": "logic04_01.bytes|05001710|3",
@@ -899,8 +899,8 @@
       "index": 3,
       "mode": 2,
       "en": "Wait --{E108:0018} you think that giant Taurusaurus\nhead could've...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стойте --{E108:0018} вы думаете, огромная голова\nБыкозавра могла...",
+      "status": "translated"
     },
     {
       "id": "logic04_01.bytes|05001710|4",
@@ -909,8 +909,8 @@
       "index": 4,
       "mode": 2,
       "en": "I do.{E108:0010} I think it could well have {E043}rolled off of the trailer\nroof{E040} and landed in the lot below.{E106}{E198:00040006}{E100:0001}{E1AE}{E12D:00051032}{E101:00000000}{E107:0002}It seems more than possible.{E108:0018}{E12F:00000001}\n{E107:0003}(And it also means...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Именно.{E108:0010} Вполне могла {E043}скатиться с крыши\nвагончика{E040} и упасть на пустырь.{E106}{E198:00040006}{E100:0001}{E1AE}{E12D:00051032}{E101:00000000}{E107:0002}Более чем возможно.{E108:0018}{E12F:00000001}\n{E107:0003}(А значит, и ещё кое-что...)",
+      "status": "translated"
     },
     {
       "id": "logic04_02.bytes|05001790|0",
@@ -919,8 +919,8 @@
       "index": 0,
       "mode": 3,
       "en": "There's no sign of a murder weapon anywhere.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Орудия убийства нигде не видно.",
+      "status": "translated"
     },
     {
       "id": "logic04_02.bytes|05001790|1",
@@ -929,8 +929,8 @@
       "index": 1,
       "mode": 1,
       "en": "Oh yeah!{E108:0018} There isn't!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И верно!{E108:0018} Нету!",
+      "status": "translated"
     },
     {
       "id": "logic04_02.bytes|05001790|2",
@@ -939,8 +939,8 @@
       "index": 2,
       "mode": 3,
       "en": "Now, this is still only a possibility...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пока это лишь предположение...",
+      "status": "translated"
     },
     {
       "id": "logic04_02.bytes|05001790|3",
@@ -949,8 +949,8 @@
       "index": 3,
       "mode": 2,
       "en": "...but if the Taurusaurus head somehow fell\nfrom the roof up there...",
-      "ru": "",
-      "status": "pending"
+      "ru": "...но если голова Быкозавра как-то упала\nвот с той крыши...",
+      "status": "translated"
     },
     {
       "id": "logic04_02.bytes|05001790|4",
@@ -959,8 +959,8 @@
       "index": 4,
       "mode": 2,
       "en": "Yeah!{E108:0018} {E107:0001}That could kill somebody for sure!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ага!{E108:0018} {E107:0001}Такой и убить можно, ещё как!",
+      "status": "translated"
     },
     {
       "id": "logic04_02.bytes|05001790|5",
@@ -969,8 +969,8 @@
       "index": 5,
       "mode": 2,
       "en": "Ms. Nichols --{E108:0010} would you mind if we took a look\nup on the roof of the trailer?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Копейкина, {E108:0010}вы не против, если мы\nзаглянем на крышу вагончика?",
+      "status": "translated"
     },
     {
       "id": "logic04_02.bytes|05001790|6",
@@ -979,8 +979,8 @@
       "index": 6,
       "mode": 2,
       "en": "You wanna go up there?{E108:0018} {E107:0001}{E1D1}Sure, I don't see why not!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Наверх хотите?{E108:0018} {E107:0001}{E1D1}Да конечно, отчего же нет!",
+      "status": "translated"
     },
     {
       "id": "logic04_02.bytes|05001790|7",
@@ -989,8 +989,8 @@
       "index": 7,
       "mode": 2,
       "en": "Knock yourselves out!{E108:0018} ...Oh, but don't do that\nliterally --{E108:0008} the steps can be kinda slippy!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Милости просим!{E108:0018} ...Только поосторожнее --{E108:0008}\nступеньки там скользковатые!",
+      "status": "translated"
     },
     {
       "id": "logic04_03.bytes|05001810|0",
@@ -999,8 +999,8 @@
       "index": 0,
       "mode": 2,
       "en": "So we've learned a little something about\nthe kidnappers.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Итак, о похитителях мы кое-что узнали.",
+      "status": "translated"
     },
     {
       "id": "logic04_03.bytes|05001810|1",
@@ -1009,8 +1009,8 @@
       "index": 1,
       "mode": 2,
       "en": "Ms. Lloyd saw two men taking Shaun away.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мисс Ллойд видела, как двое мужчин уводили\nАктёркина.",
+      "status": "translated"
     },
     {
       "id": "logic04_03.bytes|05001810|2",
@@ -1019,8 +1019,8 @@
       "index": 2,
       "mode": 2,
       "en": "And the taxi driver remembers giving two\nsimilar-looking men a ride.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А таксист помнит, что подвозил двоих\nпохожих мужчин.",
+      "status": "translated"
     },
     {
       "id": "logic04_03.bytes|05001810|3",
@@ -1029,8 +1029,8 @@
       "index": 3,
       "mode": 1,
       "en": "They must be the same people, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это же наверняка одни и те же!",
+      "status": "translated"
     },
     {
       "id": "logic04_03.bytes|05001810|4",
@@ -1039,8 +1039,8 @@
       "index": 4,
       "mode": 2,
       "en": "I'd say it's a distinct possibility, yes.{E108:0010}\n{E107:0002}But there's one thing that doesn't make sense.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Скажу так: вполне возможно.{E108:0010}\n{E107:0002}Но одно тут не складывается.",
+      "status": "translated"
     },
     {
       "id": "logic04_03.bytes|05001810|5",
@@ -1049,8 +1049,8 @@
       "index": 5,
       "mode": 2,
       "en": "The taxi driver said specifically that the two\nmen {E043}didn't have a child with them{E040}.{E106}{E198:0004000B}{E100:0001}{E1AE}{E12D:00051034}{E111:000200020003000000000002}{E122:000000010002}{E112:0002}{E112:0000}{E100:0000}{E101:00020002}{E107:0003}Oh yeah...{E108:0010} {E107:0002}{E1D1}That is weird...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Таксист прямо сказал, что {E043}ребёнка с теми\nдвумя не было{E040}.{E106}{E198:0004000B}{E100:0001}{E1AE}{E12D:00051034}{E111:000200020003000000000002}{E122:000000010002}{E112:0002}{E112:0000}{E100:0000}{E101:00020002}{E107:0003}И правда...{E108:0010} {E107:0002}{E1D1}Странно как-то...",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|0",
@@ -1059,8 +1059,8 @@
       "index": 0,
       "mode": 2,
       "en": "Could it be the kidnappers who stole the case?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А не похитители ли и унесли ящик?",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|1",
@@ -1069,8 +1069,8 @@
       "index": 1,
       "mode": 2,
       "en": "Wait!{E108:0020} {E107:0003}You mean...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стойте!{E108:0020} {E107:0003}Вы хотите сказать...",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|2",
@@ -1079,8 +1079,8 @@
       "index": 2,
       "mode": 2,
       "en": "Yes.{E108:0010} What if they put Shaun inside it?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} А если они посадили в него Актёркина?",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|3",
@@ -1089,8 +1089,8 @@
       "index": 3,
       "mode": 2,
       "en": "He's little enough that he'd fit, I guess.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он маленький, поместился бы, пожалуй.",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|4",
@@ -1099,8 +1099,8 @@
       "index": 4,
       "mode": 3,
       "en": "So the reason the taxi driver didn't see him...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тогда таксист его не видел потому...",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|5",
@@ -1109,8 +1109,8 @@
       "index": 5,
       "mode": 2,
       "en": "...Might be that he was loaded into the trunk\nas \"baggage\".",
-      "ru": "",
-      "status": "pending"
+      "ru": "...что его, возможно, погрузили в багажник\nкак «поклажу».",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|6",
@@ -1119,8 +1119,8 @@
       "index": 6,
       "mode": 2,
       "en": "But why did they need to hide him?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но зачем его вообще прятать?",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|7",
@@ -1129,8 +1129,8 @@
       "index": 7,
       "mode": 2,
       "en": "I imagine they might not have planned to originally.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Думаю, сперва они этого и не собирались.",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|8",
@@ -1139,8 +1139,8 @@
       "index": 8,
       "mode": 2,
       "en": "But they didn't count on there being a police\npresence here in the plaza.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но не ждали, что на площадке окажется\nполиция.",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|9",
@@ -1149,8 +1149,8 @@
       "index": 9,
       "mode": 2,
       "en": "Right.{E108:0010} That makes sense!{E108:0018} {E107:0003}They didn't want the \nofficer on duty to see them going off with Shaun...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Точно.{E108:0010} Вот и сходится!{E108:0018} {E107:0003}Им не хотелось, чтобы \nдежурный увидел, как они уходят с Актёркиным...",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|10",
@@ -1159,8 +1159,8 @@
       "index": 10,
       "mode": 2,
       "en": "...So they took a rather drastic measure.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Вот и пришлось пойти на крайность.",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|11",
@@ -1169,8 +1169,8 @@
       "index": 11,
       "mode": 2,
       "en": "That must be it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так и было, не иначе!",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|05001890|12",
@@ -1179,8 +1179,8 @@
       "index": 12,
       "mode": 2,
       "en": "Alright!{E108:0010} Let's go see what the taxi driver can tell us!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит так!{E108:0010} Пойдём послушаем таксиста!",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|0",
@@ -1189,8 +1189,8 @@
       "index": 0,
       "mode": 2,
       "en": "The two men you told us about --{E108:0008} did they have\nany baggage with them?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Те двое, о которых вы говорили, --{E108:0008} с ними\nбыла какая-нибудь поклажа?",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|1",
@@ -1199,8 +1199,8 @@
       "index": 1,
       "mode": 2,
       "en": "Boy, did they!{E108:0010} A giant case!{E108:0010} Wasn't easy\ngetting that thing in the trunk, I tell ya!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё какая!{E108:0010} Ящик огромный!{E108:0010} Я вам скажу,\nнелегко было его в багажник впихнуть!",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|2",
@@ -1209,8 +1209,8 @@
       "index": 2,
       "mode": 1,
       "en": "That settles it!{E108:0018} They MUST have been\nthe kidnappers!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Всё сходится!{E108:0018} Это и БЫЛИ похитители!",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|3",
@@ -1219,8 +1219,8 @@
       "index": 3,
       "mode": 2,
       "en": "Where did you take these two men, if you don't\nmind me asking?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А куда вы этих двоих отвезли,\nесли позволите спросить?",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|4",
@@ -1229,8 +1229,8 @@
       "index": 4,
       "mode": 2,
       "en": "Look, I can see this is important.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Слушайте, я же вижу -- дело важное.",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|5",
@@ -1239,8 +1239,8 @@
       "index": 5,
       "mode": 2,
       "en": "How about I give you a ride there?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Давайте я вас туда и подброшу?",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|6",
@@ -1249,8 +1249,8 @@
       "index": 6,
       "mode": 2,
       "en": "That's a great idea!{E108:0018} {E107:0001}{E1D1}Come on, Mr. Edgeworth!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот это дело!{E108:0018} {E107:0001}{E1D1}Идёмте, мистер Эджворт!",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|7",
@@ -1259,8 +1259,8 @@
       "index": 7,
       "mode": 2,
       "en": "Alright.{E108:0010} Thank you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хорошо.{E108:0010} Благодарю вас.",
+      "status": "translated"
     },
     {
       "id": "logic04_04.bytes|0500189D|8",
@@ -1269,8 +1269,8 @@
       "index": 8,
       "mode": 1,
       "en": "Heh!{E108:0010} My pleasure, folks!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе!{E108:0010} Да с радостью, ребята!",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001910|0",
@@ -1279,8 +1279,8 @@
       "index": 0,
       "mode": 2,
       "en": "Mr. Saint.{E108:0010} You mentioned {E041}fireworks{E040} before.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Святов.{E108:0010} Вы упоминали {E041}фейерверк{E040}.",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001910|1",
@@ -1289,8 +1289,8 @@
       "index": 1,
       "mode": 2,
       "en": "Huh?{E108:0020} Fireworks?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А?{E108:0020} Фейерверк?",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001910|2",
@@ -1299,8 +1299,8 @@
       "index": 2,
       "mode": 2,
       "en": "Yes.{E108:0010} At the event at the coliseum.{E108:0010} Were they\nsetting them off even during daylight hours?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} На празднике в колизее.{E108:0010} Его запускали\nи днём тоже?",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001910|3",
@@ -1309,8 +1309,8 @@
       "index": 3,
       "mode": 2,
       "en": "Oh, yeah!{E108:0018} A bunch went off while we were there!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А, ну да!{E108:0018} Пока мы там были, не раз бабахнуло!",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001910|4",
@@ -1319,8 +1319,8 @@
       "index": 4,
       "mode": 2,
       "en": "What are you thinking, Mr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "О чём вы думаете, мистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001910|5",
@@ -1329,8 +1329,8 @@
       "index": 5,
       "mode": 3,
       "en": "The loud {E041}bang{E040} we heard...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Тот громкий {E041}хлопок{E040}, что мы слышали...",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001910|6",
@@ -1339,8 +1339,8 @@
       "index": 6,
       "mode": 2,
       "en": "What if that was a firework?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А если это был фейерверк?",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001910|7",
@@ -1349,8 +1349,8 @@
       "index": 7,
       "mode": 2,
       "en": "Huh!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой!",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001918|0",
@@ -1359,8 +1359,8 @@
       "index": 0,
       "mode": 2,
       "en": "Don't think for one second you'll get away with this!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И не думайте, что вам это сойдёт с рук!",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001918|1",
@@ -1369,8 +1369,8 @@
       "index": 1,
       "mode": 2,
       "en": "Oh, don't worry.{E108:0018} {E1D1}I'm counting on you at least trying\nto track me down!{E108:0010} That'll be half the fun!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О, не волнуйтесь.{E108:0018} {E1D1}Я и рассчитываю, что вы хотя бы\nпопробуете меня выследить!{E108:0010} В этом-то и веселье!",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001918|2",
@@ -1379,8 +1379,8 @@
       "index": 2,
       "mode": 3,
       "en": "Heh...{E108:0010} {E188:00300000}{E1D5}Not that I rate your chances of bringing\nme to justice particularly highly.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе...{E108:0010} {E188:00300000}{E1D5}Хотя шансы ваши отдать меня под суд\nя оцениваю невысоко.",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|05001918|3",
@@ -1389,8 +1389,8 @@
       "index": 3,
       "mode": 2,
       "en": "BANG!",
-      "ru": "",
-      "status": "pending"
+      "ru": "БАБАХ!",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|0500191C|0",
@@ -1399,8 +1399,8 @@
       "index": 0,
       "mode": 2,
       "en": "For the bang to be clearly audible over the \ntelephone, it must have been pretty loud.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Если хлопок было отчётливо слышно \nв телефоне, он был весьма громким.",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|0500191C|1",
@@ -1409,8 +1409,8 @@
       "index": 1,
       "mode": 2,
       "en": "Which means fireworks, which means the coliseum!{E108:0010}\nSo {E043}the kidnapper was near there{E040}, right?{E106}{E198:0004000E}{E100:0001}{E1AE}{E12D:0005103B}{E12F:00020002}{E100:0000}{E101:00020002}{E107:0003}But...{E108:0008} how near?{E108:0018} {E107:0002}{E1D1}If the fireworks were that loud,\nyou could probably hear them from pretty far away...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Значит, фейерверк -- значит, колизей!{E108:0010}\nВыходит, {E043}похититель был рядом{E040}, да?{E106}{E198:0004000E}{E100:0001}{E1AE}{E12D:0005103B}{E12F:00020002}{E100:0000}{E101:00020002}{E107:0003}Но...{E108:0008} насколько рядом?{E108:0018} {E107:0002}{E1D1}Такой громкий фейерверк,\nнаверное, и издалека слышно...",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|0500191C|2",
@@ -1419,8 +1419,8 @@
       "index": 2,
       "mode": 2,
       "en": "Yes.{E108:0010} The area we'd need to search would be too\nbroad to even consider doing it ourselves.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} Область поисков вышла бы слишком велика,\nчтобы обойти её самим.",
+      "status": "translated"
     },
     {
       "id": "logic04_05.bytes|0500191C|3",
@@ -1429,8 +1429,8 @@
       "index": 3,
       "mode": 3,
       "en": "(But if the police were to lend a hand...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Вот если бы полиция подставила плечо...)",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|0",
@@ -1439,8 +1439,8 @@
       "index": 0,
       "mode": 2,
       "en": "Only two vehicles came through here this morning:{E108:0008}\nThe taxi and a blue truck.",
-      "ru": "",
-      "status": "pending"
+      "ru": "За утро через площадку прошли лишь две машины:{E108:0008}\nтакси и синий грузовик.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|1",
@@ -1449,8 +1449,8 @@
       "index": 1,
       "mode": 2,
       "en": "And Eustace was {E1D1}taken away in the taxi.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А Юстаса {E1D1}увезли на такси.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|2",
@@ -1459,8 +1459,8 @@
       "index": 2,
       "mode": 2,
       "en": "Right.{E108:0010} While it seems that Shaun was likely\nabducted from the garbage disposal area.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно.{E108:0010} Актёркина же, похоже, схватили\nу места сбора мусора.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|3",
@@ -1469,8 +1469,8 @@
       "index": 3,
       "mode": 2,
       "en": "And if the garbage was collected at 11 AM...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А если мусор увозили в одиннадцать утра...",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|4",
@@ -1479,8 +1479,8 @@
       "index": 4,
       "mode": 7,
       "en": "...{E108:0018}{E12F:00010007}{E280}{E107:0001}Oh!{E108:0020} I get it!{E108:0018} Now we know what kind of truck\nit was!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...{E108:0018}{E12F:00010007}{E280}{E107:0001}О!{E108:0020} Понял!{E108:0018} Теперь ясно, что это был\nза грузовик!",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|5",
@@ -1489,8 +1489,8 @@
       "index": 5,
       "mode": 3,
       "en": "Indeed.{E108:0018} {E107:0002}It must have been {E108:000C}{E188:00300000}{E1D5}the garbage truck.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Именно.{E108:0018} {E107:0002}Это был {E108:000C}{E188:00300000}{E1D5}мусоровоз.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|6",
@@ -1499,8 +1499,8 @@
       "index": 6,
       "mode": 2,
       "en": "But the police officer who told us about it didn't\ndescribe it as such.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но полицейский, который нам о нём рассказал,\nтак его не назвал.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|7",
@@ -1509,8 +1509,8 @@
       "index": 7,
       "mode": 2,
       "en": "He only mentioned the fact that {E108:0008}{E1D1}it was blue.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он сказал только, что {E108:0008}{E1D1}тот был синий.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|8",
@@ -1519,8 +1519,8 @@
       "index": 8,
       "mode": 1,
       "en": "Heh!{E108:0020} {E107:0002}Some cop he was!{E108:0010} How did he not even notice\nit was one of those cool trash-squishing machines!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ха!{E108:0020} {E107:0002}Ну и полицейский!{E108:0010} Как он мог не заметить,\nчто это одна из тех клёвых машин с прессом!?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|9",
@@ -1529,8 +1529,8 @@
       "index": 9,
       "mode": 2,
       "en": "Because it wasn't.{E108:0010} Today isn't a regular garbage\nday.{E108:0010} It's the day they collect larger items.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А её и не было.{E108:0010} Сегодня возят не обычный мусор.{E108:0010}\nСегодня забирают крупные вещи.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|10",
@@ -1539,8 +1539,8 @@
       "index": 10,
       "mode": 2,
       "en": "For which they wouldn't use a specialized garbage\ntruck.{E108:0010} {E1D5}Just a regular truck like any other.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А для них особую машину не гоняют.{E108:0010}\n{E1D5}Обычный грузовик, как любой другой.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|11",
@@ -1549,8 +1549,8 @@
       "index": 11,
       "mode": 3,
       "en": "...But it was a garbage truck nonetheless.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...И всё же это был мусоровоз.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|12",
@@ -1559,8 +1559,8 @@
       "index": 12,
       "mode": 2,
       "en": "And where do garbage trucks go?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А куда едут мусоровозы?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|13",
@@ -1569,8 +1569,8 @@
       "index": 13,
       "mode": 3,
       "en": "Uhh...{E108:0018} {E107:0001}{E12F:00010007}{E280}to the dump, right?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Э-э...{E108:0018} {E107:0001}{E12F:00010007}{E280}на свалку, что ли?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|14",
@@ -1579,8 +1579,8 @@
       "index": 14,
       "mode": 2,
       "en": "Wait a second!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Погодите-ка!",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|15",
@@ -1589,8 +1589,8 @@
       "index": 15,
       "mode": 2,
       "en": "So you're saying the kidnapper disguised\nthemselves as a trash collector?",
-      "ru": "",
-      "status": "pending"
+      "ru": "То есть похититель переоделся\nмусорщиком?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|16",
@@ -1599,8 +1599,8 @@
       "index": 16,
       "mode": 2,
       "en": "But then, the truck would probably have been fake,\ntoo, right?{E108:0010} {E1D1}So maybe it didn't go to the dump.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но тогда и грузовик, наверное, был поддельный?{E108:0010}\n{E1D1}Так что, может, он и не на свалку поехал.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|17",
@@ -1609,8 +1609,8 @@
       "index": 17,
       "mode": 3,
       "en": "...No.{E108:0018} {E107:0002}I'm reasonably sure the garbage truck was real.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Нет.{E108:0018} {E107:0002}Я почти уверен, что мусоровоз был настоящий.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|18",
@@ -1619,8 +1619,8 @@
       "index": 18,
       "mode": 2,
       "en": "Yeah?{E108:0020} {E1D1}How do you figure that?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да?{E108:0020} {E1D1}А с чего вы это взяли?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|05001990|19",
@@ -1629,8 +1629,8 @@
       "index": 19,
       "mode": 2,
       "en": "Another look at the garbage disposal area\nshould tell us.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это станет ясно, если ещё раз взглянуть\nна место сбора мусора.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A4|0",
@@ -1639,8 +1639,8 @@
       "index": 0,
       "mode": 2,
       "en": "What tells us that the garbage truck must have\nbeen real?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что говорит нам, что мусоровоз был\nнастоящий?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A5|0",
@@ -1649,8 +1649,8 @@
       "index": 0,
       "mode": 2,
       "en": "Wait, wait, wait --{E108:0018} you're saying there's something\nimportant there?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так-так-так --{E108:0018} по-вашему, там есть что-то\nважное?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A5|1",
@@ -1659,8 +1659,8 @@
       "index": 1,
       "mode": 2,
       "en": "Yes.{E108:0010} Proof that the garbage truck was real.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} Доказательство, что мусоровоз был настоящий.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A5|2",
@@ -1669,8 +1669,8 @@
       "index": 2,
       "mode": 2,
       "en": "You don't agree?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А ты не согласна?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A5|3",
@@ -1679,8 +1679,8 @@
       "index": 3,
       "mode": 1,
       "en": "Nope!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не-а!",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A5|4",
@@ -1689,8 +1689,8 @@
       "index": 4,
       "mode": 2,
       "en": "Gah!{E108:0018}\n(Did I get it wrong?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "Гах!{E108:0018}\n(Неужели я ошибся?)",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A5|5",
@@ -1699,8 +1699,8 @@
       "index": 5,
       "mode": 2,
       "en": "(If the truck wasn't real, the driver wouldn't have\nbeen able to collect the garbage.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Будь грузовик поддельным, водитель не смог бы\nзабрать мусор.)",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A5|6",
@@ -1709,8 +1709,8 @@
       "index": 6,
       "mode": 2,
       "en": "(Wasn't there something here that proved that...?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Разве здесь не было чего-то, что это доказывает...?)",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019A5|7",
@@ -1719,8 +1719,8 @@
       "index": 7,
       "mode": 2,
       "en": "I don't get it, Mr. Edgeworth!{E108:0018} How do you know\nthe garbage truck was real!?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не понимаю, мистер Эджворт!{E108:0018} Откуда вы знаете,\nчто мусоровоз был настоящий!?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019AD|0",
@@ -1729,8 +1729,8 @@
       "index": 0,
       "mode": 2,
       "en": "The garbage disposal area is kept locked.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Место сбора мусора держат под замком.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019AD|1",
@@ -1739,8 +1739,8 @@
       "index": 1,
       "mode": 2,
       "en": "Oh, yeah!{E108:0020} {E1D1}So only a real garbage collector in a real\ngarbage truck could have opened it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "И правда!{E108:0020} {E1D1}Открыть его мог только настоящий\nмусорщик на настоящем мусоровозе!",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019AD|2",
@@ -1749,8 +1749,8 @@
       "index": 2,
       "mode": 2,
       "en": "Precisely.{E108:0010} The garbage truck can't have been\na fake.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Именно.{E108:0010} Подделкой мусоровоз быть не мог.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019B0|0",
@@ -1759,8 +1759,8 @@
       "index": 0,
       "mode": 2,
       "en": "Perhaps whoever abducted Shaun put him in a large\ncardboard box that they'd prepared for the job.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Возможно, тот, кто увёз Актёркина, посадил его\nв большую картонную коробку, заранее готовую.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019B0|1",
@@ -1769,8 +1769,8 @@
       "index": 1,
       "mode": 2,
       "en": "Now, mix that in amongst all the other oversized\nitems...",
-      "ru": "",
-      "status": "pending"
+      "ru": "А теперь поставь её среди прочих крупных\nвещей...",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019B0|2",
@@ -1779,8 +1779,8 @@
       "index": 2,
       "mode": 1,
       "en": "And the garbage collector would've taken it away, no\nquestions asked!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...и мусорщики увезут её, ни о чём\nне спросив!",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019B0|3",
@@ -1789,8 +1789,8 @@
       "index": 3,
       "mode": 3,
       "en": "Exactly.{E108:0018} {E107:0002}Allowing the kidnapper to await the truck's\narrival at the garbage processing facility.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно.{E108:0018} {E107:0002}А похитителю оставалось ждать грузовик\nна мусорном заводе.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019B0|4",
@@ -1799,8 +1799,8 @@
       "index": 4,
       "mode": 2,
       "en": "They could then claim to have thrown the box away\nby mistake,{E108:0008} and collect it without incident.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Там он мог сказать, что выбросил коробку\nпо ошибке,{E108:0008} и спокойно её забрать.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019B0|5",
@@ -1809,8 +1809,8 @@
       "index": 5,
       "mode": 3,
       "en": "Alright,{E108:0018} so where do they take the garbage after\nit leaves here?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ладно,{E108:0018} а куда мусор везут отсюда?",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019B0|6",
@@ -1819,8 +1819,8 @@
       "index": 6,
       "mode": 4,
       "en": "Let's see...{E108:0020} {E107:0002}{E188:00300000}{E1D5}Looks like we have two possibilities.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так-так...{E108:0020} {E107:0002}{E188:00300000}{E1D5}Похоже, есть два варианта.",
+      "status": "translated"
     },
     {
       "id": "logic04_06.bytes|050019B0|7",
@@ -1829,8 +1829,8 @@
       "index": 7,
       "mode": 3,
       "en": "(But which of the {E043}garbage processing facilities{E042}\nwas Shaun taken to...?){E106}{E198:00040010}{E100:0001}{E1AE}{E12D:0005103A}{E100:0000}{E101:00000000}{E107:0002}(Have we found anything that might serve\nas a clue?)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Но на какой из {E043}мусорных заводов{E042}\nувезли Актёркина...?){E106}{E198:00040010}{E100:0001}{E1AE}{E12D:0005103A}{E100:0000}{E101:00000000}{E107:0002}(Нет ли у нас чего-нибудь, что могло бы\nподсказать?)",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A10|0",
@@ -1839,8 +1839,8 @@
       "index": 0,
       "mode": 2,
       "en": "So, based on the loud bang we heard on\nthe phone call...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Итак, по громкому хлопку в телефонном\nразговоре...",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A10|1",
@@ -1849,8 +1849,8 @@
       "index": 1,
       "mode": 2,
       "en": "...we know that the kidnapper was somewhere \nin the vicinity of Sunshine Coliseum.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...мы знаем, что похититель был где-то \nпоблизости от Солнечного колизея.",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A10|2",
@@ -1859,8 +1859,8 @@
       "index": 2,
       "mode": 2,
       "en": "And one of the garbage facilities is right by there, too!",
-      "ru": "",
-      "status": "pending"
+      "ru": "А один из мусорных заводов как раз там же!",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A10|3",
@@ -1869,8 +1869,8 @@
       "index": 3,
       "mode": 2,
       "en": "I think it's likely that's where Shaun was taken.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Думаю, туда Актёркина и увезли.",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A10|4",
@@ -1879,8 +1879,8 @@
       "index": 4,
       "mode": 3,
       "en": "Which means...{E108:0018} {E107:0002}{E188:00300000}{E1D5}the kidnapper must be holding him\nsomewhere near there.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А значит...{E108:0018} {E107:0002}{E188:00300000}{E1D5}держат его где-то рядом\nс тем заводом.",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|0",
@@ -1889,8 +1889,8 @@
       "index": 0,
       "mode": 2,
       "en": "Detective Gumshoe.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Детектив Гамшу.",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|1",
@@ -1899,8 +1899,8 @@
       "index": 1,
       "mode": 1,
       "en": "Yessir!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Здесь!",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|2",
@@ -1909,8 +1909,8 @@
       "index": 2,
       "mode": 2,
       "en": "Could I ask you and your men to search the area\naround the garbage facility?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Могу я попросить тебя и твоих людей прочесать\nокрестности завода?",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|3",
@@ -1919,8 +1919,8 @@
       "index": 3,
       "mode": 2,
       "en": "...It's not like you to ask, sir.{E108:0010} {E107:0003}Feels a little...{E108:000C} {E107:0002}flat, if I'm\nbeing totally honest.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Не в вашем это духе -- просить, сэр.{E108:0010}\n{E107:0003}Как-то...{E108:000C} {E107:0002}пусто выходит, если честно.",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|4",
@@ -1929,8 +1929,8 @@
       "index": 4,
       "mode": 3,
       "en": "...Why don't you gimme a good, old-fashioned\norder, huh?{E108:0010} Like you used to?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Вы бы мне лучше по старинке приказали,\nа?{E108:0010} Как раньше?",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|5",
@@ -1939,8 +1939,8 @@
       "index": 5,
       "mode": 2,
       "en": "You don't mind?{E108:0020} Even though I'm not a\nprosecutor anymore?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ты не против?{E108:0020} Хотя я уже и не прокурор?",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|6",
@@ -1949,8 +1949,8 @@
       "index": 6,
       "mode": 2,
       "en": "I thought I told you already!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так я же вам уже говорил!",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|7",
@@ -1959,8 +1959,8 @@
       "index": 7,
       "mode": 2,
       "en": "A detective investigates for himself,{E108:0008} not just for\nprosecutors!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Детектив ведёт следствие для себя,{E108:0008} а не только\nдля прокуроров!",
+      "status": "translated"
     },
     {
       "id": "logic04_07.bytes|05001A15|8",
@@ -1969,8 +1969,8 @@
       "index": 8,
       "mode": 3,
       "en": "...Thank you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Спасибо тебе.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A90|0",
@@ -1979,8 +1979,8 @@
       "index": 0,
       "mode": 2,
       "en": "So that's what our monstrous \"hoof prints\"\nreally were...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так вот чем были наши чудовищные\n«следы копыт»...",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A90|1",
@@ -1989,8 +1989,8 @@
       "index": 1,
       "mode": 2,
       "en": "Wait, what?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стойте, что?",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A90|2",
@@ -1999,8 +1999,8 @@
       "index": 2,
       "mode": 2,
       "en": "Recall the arrangement of the prints.{E108:0010}\nNow compare it to that of the planters.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Припомни, как стояли следы.{E108:0010}\nА теперь сравни с клумбами.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A90|3",
@@ -2009,8 +2009,8 @@
       "index": 3,
       "mode": 1,
       "en": "Whoa!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ой!",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A90|4",
@@ -2019,8 +2019,8 @@
       "index": 4,
       "mode": 2,
       "en": "That's right.{E108:0010} {E107:0001}{E283}I believe the footprints are located\nexactly where our planters once stood.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Верно.{E108:0010} {E107:0001}{E283}Думаю, следы лежат ровно там, где\nкогда-то стояли наши клумбы.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A90|5",
@@ -2029,8 +2029,8 @@
       "index": 5,
       "mode": 2,
       "en": "So Chairman Winner was...{E108:000C} {E107:0003}digging around the \nfront of them?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так председатель Победин...{E108:000C} {E107:0003}копал прямо \nперед ними?",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A90|6",
@@ -2039,8 +2039,8 @@
       "index": 6,
       "mode": 3,
       "en": "He was.{E108:0018} {E107:0002}{E12F:0000000B}And why might he have been doing that?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Копал.{E108:0018} {E107:0002}{E12F:0000000B}А зачем бы ему это делать?",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A90|7",
@@ -2049,8 +2049,8 @@
       "index": 7,
       "mode": 2,
       "en": "We have a piece of evidence in our possession \nthat answers exactly that question.",
-      "ru": "",
-      "status": "pending"
+      "ru": "У нас на руках есть улика, которая \nотвечает ровно на этот вопрос.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|0",
@@ -2059,8 +2059,8 @@
       "index": 0,
       "mode": 2,
       "en": "Which piece of evidence shows why Chairman Winner\nmight have been digging in front of the planters?{E040}{E106}{E163:00010000}{E100:0001}{E164:00D50003}{E100:0000}{E12F:00000009}{E101:00000000}{E107:0001}{E188:00340000}{E1DA}THIS tells us why he was digging those holes!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Какая улика показывает, зачем председатель\nПобедин копал перед клумбами?{E040}{E106}{E163:00010000}{E100:0001}{E164:00D50003}{E100:0000}{E12F:00000009}{E101:00000000}{E107:0001}{E188:00340000}{E1DA}ВОТ зачем он копал те ямы!",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|1",
@@ -2069,8 +2069,8 @@
       "index": 1,
       "mode": 2,
       "en": "Ooh, interesting!{E108:0010} Well?{E108:0018}\nAre you going to explain?",
-      "ru": "",
-      "status": "pending"
+      "ru": "О, любопытно!{E108:0010} Ну?{E108:0018}\nОбъясните?",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|2",
@@ -2079,8 +2079,8 @@
       "index": 2,
       "mode": 3,
       "en": "Heh...{E108:0018}\n{E107:0002}{E12F:0000000B}You don't see it?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе...{E108:0018}\n{E107:0002}{E12F:0000000B}Не видишь?",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|3",
@@ -2089,8 +2089,8 @@
       "index": 3,
       "mode": 2,
       "en": "No siree!{E108:0010} I don't see it at all!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Никак нет!{E108:0010} Совсем не вижу!",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|4",
@@ -2099,8 +2099,8 @@
       "index": 4,
       "mode": 2,
       "en": "As one might expect --{E108:0018} {E12F:00000004}{E188:00300000}{E1D5}because I don't see it either!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чего и следовало ждать --{E108:0018} {E12F:00000004}{E188:00300000}{E1D5}я тоже не вижу!",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|5",
@@ -2109,8 +2109,8 @@
       "index": 5,
       "mode": 1,
       "en": "Ugh!{E108:0018} Can you PLEASE take this seriously?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух!{E108:0018} Можно ПОЖАЛУЙСТА посерьёзнее?",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|6",
@@ -2119,8 +2119,8 @@
       "index": 6,
       "mode": 2,
       "en": "...Fine.{E108:0018}\n{E107:0003}(That wasn't the piece of evidence we needed.)",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Хорошо.{E108:0018}\n{E107:0003}(Улика оказалась не та.)",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|7",
@@ -2129,8 +2129,8 @@
       "index": 7,
       "mode": 1,
       "en": "Look over everything again!{E108:0018} Maybe there's\nsomething written down somewhere!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Просмотрите всё ещё раз!{E108:0018} Может, где-то\nчто-то написано!",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001A98|8",
@@ -2139,8 +2139,8 @@
       "index": 8,
       "mode": 3,
       "en": "I will.{E108:0010} {E107:0002}There's something here that tells us what\nthe ex-chairman was up to, I'm sure of it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Просмотрю.{E108:0010} {E107:0002}Здесь непременно есть улика, что скажет,\nчем был занят бывший председатель.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|0",
@@ -2149,8 +2149,8 @@
       "index": 0,
       "mode": 3,
       "en": "Recall, if you will, the report that Warden Laguarde\nsent to Chairman Winner.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Припомни, будь добра, тот отчёт, что начальница\nЛястраж послала председателю Победину.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|1",
@@ -2159,8 +2159,8 @@
       "index": 1,
       "mode": 2,
       "en": "In it, she mentioned something that had been{E108:000C}\n{E107:0003}{E188:00300000}{E1D5}\"laid to rest\" {E041}in front of a planter{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В нём сказано, что нечто «положено на покой»{E108:000C}\n{E107:0003}{E188:00300000}{E1D5}{E041}перед клумбой{E040}.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|2",
@@ -2169,8 +2169,8 @@
       "index": 2,
       "mode": 2,
       "en": "You think she was telling him where to dig?",
-      "ru": "",
-      "status": "pending"
+      "ru": "По-вашему, она указывала ему, где копать?",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|3",
@@ -2179,8 +2179,8 @@
       "index": 3,
       "mode": 2,
       "en": "Wait --{E108:0008} {E284}but why three holes?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стойте --{E108:0008} {E284}а почему тогда три ямы?",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|4",
@@ -2189,8 +2189,8 @@
       "index": 4,
       "mode": 2,
       "en": "Because the report didn't specify which of the planters\nshe meant.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Потому что в отчёте не сказано, какая именно\nклумба.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|5",
@@ -2199,8 +2199,8 @@
       "index": 5,
       "mode": 2,
       "en": "I get it.{E108:0018} So he wasn't sure which one it was.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Поняла.{E108:0018} То есть он не знал, которая из них.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|6",
@@ -2209,8 +2209,8 @@
       "index": 6,
       "mode": 2,
       "en": "Which meant he had to try and dig up all three.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И пришлось перекопать все три.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|7",
@@ -2219,8 +2219,8 @@
       "index": 7,
       "mode": 2,
       "en": "I imagine so, yes.{E108:0018} Poor Chairman Winner.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Надо думать, да.{E108:0018} Бедный председатель Победин.",
+      "status": "translated"
     },
     {
       "id": "logic04_08.bytes|05001AA2|8",
@@ -2229,8 +2229,8 @@
       "index": 8,
       "mode": 2,
       "en": "But why go to all that trouble?{E108:0010} {E043}What was he\nlooking for{E040}?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но зачем ему столько мучиться?{E108:0010} {E043}Что он\nискал{E040}?",
+      "status": "translated"
     },
     {
       "id": "logic04_09.bytes|05001B10|0",
@@ -2239,8 +2239,8 @@
       "index": 0,
       "mode": 2,
       "en": "It seems quite likely that the {E043}missing brick{E040} was the\none used in the murder, wouldn't you say?{E106}{E198:00040016}{E100:0001}{E1AE}{E111:000200000003000100010002}{E122:000000010002}{E112:0002}{E112:0000}{E100:0000}{E101:00020002}{E107:0002}{E285}Oh, yeah!{E108:0018} Now that you mention it, they're the\nexact same shape and size!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Похоже, {E043}недостающий кирпич{E040} и есть тот,\nкоторым убили. Не находишь?{E106}{E198:00040016}{E100:0001}{E1AE}{E111:000200000003000100010002}{E122:000000010002}{E112:0002}{E112:0000}{E100:0000}{E101:00020002}{E107:0002}{E285}И правда!{E108:0018} Теперь-то видно: и форма,\nи размер в точности те же!",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|0",
@@ -2249,8 +2249,8 @@
       "index": 0,
       "mode": 2,
       "en": "I think we have to conclude that the murder\nactually happened over by the snowman.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Приходится заключить, что убийство случилось\nвсё-таки у снеговика.",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|1",
@@ -2259,8 +2259,8 @@
       "index": 1,
       "mode": 3,
       "en": "Right.{E108:0010} The button came from there, {E108:000C}and the\nbrick, too.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Точно.{E108:0010} Пуговица оттуда, {E108:000C}и кирпич\nтоже.",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|2",
@@ -2269,8 +2269,8 @@
       "index": 2,
       "mode": 3,
       "en": "Indeed.{E108:0018} {E107:0002}{E12F:00000008}And what's more, if the murderer took the\nbrick from right by the snowman...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так и есть.{E108:0018} {E107:0002}{E12F:00000008}Больше того: если убийца взял кирпич\nпрямо у снеговика...",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|3",
@@ -2279,8 +2279,8 @@
       "index": 3,
       "mode": 2,
       "en": "...and then tried to sneak up on the victim all the \nway over by the planters...",
-      "ru": "",
-      "status": "pending"
+      "ru": "...а потом стал подкрадываться к жертве \nна другом конце, у клумб...",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|4",
@@ -2289,8 +2289,8 @@
       "index": 4,
       "mode": 1,
       "en": "Mr. Aldown would have seen them right away!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Олдаун увидел бы его сразу же!",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|5",
@@ -2299,8 +2299,8 @@
       "index": 5,
       "mode": 2,
       "en": "Exactly.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Именно.",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|6",
@@ -2309,8 +2309,8 @@
       "index": 6,
       "mode": 2,
       "en": "I think we need to update the simulation, {E108:0010}Kay.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Думаю, надо поправить реконструкцию, {E108:0010}Кей.",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|7",
@@ -2319,8 +2319,8 @@
       "index": 7,
       "mode": 2,
       "en": "Mr. Aldown wasn't standing by the planters.{E108:0010}\nHe was next to the snowman.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Олдаун стоял не у клумб.{E108:0010}\nОн был рядом со снеговиком.",
+      "status": "translated"
     },
     {
       "id": "logic04_10.bytes|05001B90|8",
@@ -2329,8 +2329,8 @@
       "index": 8,
       "mode": 1,
       "en": "Gotcha!{E108:0018} Alright, here goes...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ясно!{E108:0018} Так, поехали...",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|0",
@@ -2339,8 +2339,8 @@
       "index": 0,
       "mode": 3,
       "en": "If Chairman Winner was involved in\nPresident Wang's abduction...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Если председатель Победин был причастен\nк похищению президента Вана...",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|1",
@@ -2349,8 +2349,8 @@
       "index": 1,
       "mode": 2,
       "en": "...then it seems likely that whatever he dug up\nyesterday had something to do with the kidnapping.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...то и вырытое им вчера, скорее всего,\nсвязано с похищением.",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|2",
@@ -2359,8 +2359,8 @@
       "index": 2,
       "mode": 1,
       "en": "Oh, I get it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "О, поняла!",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|3",
@@ -2369,8 +2369,8 @@
       "index": 3,
       "mode": 2,
       "en": "Y-You do?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Т-Ты поняла?",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|4",
@@ -2379,8 +2379,8 @@
       "index": 4,
       "mode": 1,
       "en": "You bet I do!{E108:0018} {E1D1}We're talking treasure, right?{E108:000C} Loot!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ещё как!{E108:0018} {E1D1}Речь о сокровище, верно?{E108:000C} О добыче!",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|5",
@@ -2389,8 +2389,8 @@
       "index": 5,
       "mode": 2,
       "en": "He must have been {E108:000C}{E285}digging up the {E041}ransom money{E040}!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он ведь {E108:000C}{E285}выкапывал {E041}выкуп{E040}!",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|6",
@@ -2399,8 +2399,8 @@
       "index": 6,
       "mode": 3,
       "en": "The {E041}ransom money{E040}?{E108:0010} One hundred million dollars\nis an awful lot of cash...",
-      "ru": "",
-      "status": "pending"
+      "ru": "{E041}Выкуп{E040}?{E108:0010} Сто миллионов долларов --\nэто прорва наличных...",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|7",
@@ -2409,8 +2409,8 @@
       "index": 7,
       "mode": 2,
       "en": "Burying it would have been a good way to keep it\nhidden until the heat died down.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Зарыть их -- неплохой способ спрятать,\nпока не уляжется шум.",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|8",
@@ -2419,8 +2419,8 @@
       "index": 8,
       "mode": 2,
       "en": "It certainly seems like a possibility.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Что ж, вполне возможно.",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|9",
@@ -2429,8 +2429,8 @@
       "index": 9,
       "mode": 1,
       "en": "Hee hee!{E108:0010} Glad you agree!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хи-хи!{E108:0010} Рада, что вы согласны!",
+      "status": "translated"
     },
     {
       "id": "logic04_11.bytes|05001C10|10",
@@ -2439,8 +2439,8 @@
       "index": 10,
       "mode": 3,
       "en": "Monster Footprints data updated\nin my Organizer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Данные «Следы монстра»\nобновлены в органайзере.",
+      "status": "translated"
     },
     {
       "id": "sce4_c0_01.bytes|04000080|0",
@@ -24449,7 +24449,7 @@
       "index": 55,
       "mode": 2,
       "en": "Oh, don't worry.{E108:0010} {E1D1}I'm counting on you at least trying\nto track me down!{E108:0018} {E1D1}That'll be half the fun!",
-      "ru": "О, не волнуйтесь.{E108:0010} {E1D1}Я как раз рассчитываю, что вы\nпопробуете меня найти!{E108:0018} {E1D1}В этом-то и половина веселья!",
+      "ru": "О, не волнуйтесь.{E108:0010} {E1D1}Я и рассчитываю, что вы хотя бы\nпопробуете меня выследить!{E108:0018} {E1D1}В этом-то и веселье!",
       "status": "translated"
     },
     {
@@ -25699,7 +25699,7 @@
       "index": 30,
       "mode": 2,
       "en": "Oh, don't worry.{E108:0018} {E1D1}I'm counting on you at least trying\nto track me down!{E108:0010} That'll be half the fun!",
-      "ru": "О, не волнуйтесь.{E108:0018} {E1D1}Я как раз рассчитываю, что вы\nпопробуете меня найти!{E108:0010} В этом-то и половина веселья!",
+      "ru": "О, не волнуйтесь.{E108:0018} {E1D1}Я и рассчитываю, что вы хотя бы\nпопробуете меня выследить!{E108:0010} В этом-то и веселье!",
       "status": "translated"
     },
     {
@@ -25709,7 +25709,7 @@
       "index": 31,
       "mode": 3,
       "en": "Heh...{E108:0010} {E188:00300000}{E1D5}Not that I rate your chances of bringing\nme to justice particularly highly.",
-      "ru": "Хе...{E108:0010} {E188:00300000}{E1D5}Хотя на ваши шансы отдать меня\nпод суд я ставлю не особенно высоко.",
+      "ru": "Хе...{E108:0010} {E188:00300000}{E1D5}Хотя шансы ваши отдать меня под суд\nя оцениваю невысоко.",
       "status": "translated"
     },
     {
@@ -30059,7 +30059,7 @@
       "index": 0,
       "mode": 2,
       "en": "Oh, don't worry.{E108:0018} {E1D1}I'm counting on you at least trying\nto track me down!{E108:0010} That'll be half the fun!",
-      "ru": "О, не волнуйтесь.{E108:0018} {E1D1}Рассчитываю, что вы хотя бы\nпопробуете меня выследить!{E108:0010} Это половина веселья!",
+      "ru": "О, не волнуйтесь.{E108:0018} {E1D1}Я и рассчитываю, что вы хотя бы\nпопробуете меня выследить!{E108:0010} В этом-то и веселье!",
       "status": "translated"
     },
     {
@@ -30069,7 +30069,7 @@
       "index": 1,
       "mode": 3,
       "en": "Heh...{E108:0010} {E188:00300000}{E1D5}Not that I rate your chances of bringing\nme to justice particularly highly.",
-      "ru": "Хе-хе...{E108:0010} {E188:00300000}{E1D5}Хотя шансы ваши отдать меня под суд\nя оцениваю невысоко.",
+      "ru": "Хе...{E108:0010} {E188:00300000}{E1D5}Хотя шансы ваши отдать меня под суд\nя оцениваю невысоко.",
       "status": "translated"
     },
     {

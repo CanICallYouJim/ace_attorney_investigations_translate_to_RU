@@ -37,6 +37,7 @@ work/graphics_ru/**/*.png
 # Приходят от пользователя, кладутся в work/graphics_ai/<дело>/, задание
 # на вклейку (art.json) — наше, оно остаётся.
 work/graphics_ai/**/*.png
+work/graphics_ai/**/*.webp
 
 # Слой русских надписей для патчера и листы для показа. Собираются заново
 # tools/layer_localized.py из work/graphics_ru и оригиналов в backup/; в ветку

@@ -145,7 +145,7 @@ def stored_flipped(env, key: str, face_up: Image.Image) -> bool:
 def recipes(case_dir: Path) -> dict[str, list[dict]]:
     """Задания набора и вклейки по картинкам дела: рамки надписей и рецепты уменьшения."""
     out: dict[str, list[dict]] = defaultdict(list)
-    for fname in ("labels.json", "art.json", "notes.json", "sign.json"):
+    for fname in ("labels.json", "art.json", "notes.json", "sign.json", "plate.json"):
         spec = load_json(case_dir / fname, default={}) or {}
         for name, job in spec.items():
             if not isinstance(job, dict):

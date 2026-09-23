@@ -54,6 +54,11 @@ from swap_localized import LANG_KEY, NEVER, plan_env
 RU = WORK / "graphics_ru"
 PREVIEW = FOLDER / "preview"
 MAX_SHARE = 0.25          # слой больше четверти картинки — это уже рисунок
+# Адресные исключения из MAX_SHARE — только решением пользователя, с причиной.
+# cut02_037: экран заставки целиком перерисован нейросетью по рисунку пользователя
+# (вся зона — плашка, фон под логотипом не показывает ни один язык); в слое нет
+# пикселей Capcom, есть их перерисовка. Разрешено пользователем 23 сентября 2026.
+SHARE_ALLOWED = {"cut02_037": 0.55}
 MARGIN = 12               # запас вокруг рамки: снятие расширяет маску и затягивает края
 NOTE_ZONE = 40            # запас вокруг рамки рукописной пометки: дальше него набор
                           # (`notes.py`, он берёт эту же величину) строку не поставит
@@ -560,7 +565,7 @@ def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
                 problems.append(f"{name}: склейка не сходится с русской картинкой (RGB {rgb_off}, альфа {alpha_off})")
                 drop_layer(folder, entry)
                 continue
-            if share > MAX_SHARE:
+            if share > SHARE_ALLOWED.get(name, MAX_SHARE):
                 manifest["skipped"].append({**entry, "why": f"слой — {share:.0%} картинки: это рисунок, а не надпись"})
                 drop_layer(folder, entry)
                 continue

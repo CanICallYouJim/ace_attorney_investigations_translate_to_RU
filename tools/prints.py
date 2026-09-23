@@ -184,7 +184,9 @@ def compose(name: str, cfg: dict, case: str):
         gone = ImageChops.lighter(gone, mask)
         jobs.append((lb, mask, bb))
 
-    out = Image.composite(C, E, gone.filter(ImageFilter.MaxFilter(2 * GROW + 1)))
+    # «снять_шире» — светлая кайма английских букв бывает шире GROW (cut02_004, «Garden»)
+    grow = cfg.get("снять_шире", GROW)
+    out = Image.composite(C, E, gone.filter(ImageFilter.MaxFilter(2 * grow + 1)))
     ink = Image.new("L", E.size, 0)
     # Область та же, какой её берёт судья (`check_pictures`: рамка русских чернил
     # на всей картинке), а не «рамка английских ±40»: от запаса поле надписи
@@ -215,7 +217,13 @@ def compose(name: str, cfg: dict, case: str):
         size = pick_size(lines_en[0], font_name, 0, squeeze, want_h)
         en_stroke = cp.stroke(mask)
         sw = 0
-        if cp.stroke(solid(render(lines_en[0], font_name, size, 0, squeeze)[0])) < THIN * en_stroke:
+        # «контур» в задании — задать руками: замер штриха рассчитан на светлые буквы
+        # с тёмным кантом и на обратной палитре (тёмные буквы, светлая кайма, cut02_004)
+        # ошибается вдвое. Судит глаз по листу (курс 23 сентября 2026).
+        if "контур" in cfg:
+            sw = cfg["контур"]
+            size = pick_size(lines_en[0], font_name, sw, squeeze, want_h)
+        elif cp.stroke(solid(render(lines_en[0], font_name, size, 0, squeeze)[0])) < THIN * en_stroke:
             sw = 1
             size = pick_size(lines_en[0], font_name, sw, squeeze, want_h)
         return font_name, lines_en, lines_ru, want_h, want_w, size, squeeze, sw, en_stroke
@@ -255,6 +263,8 @@ def compose(name: str, cfg: dict, case: str):
         # Половину пикселя округляем **вверх**: наши буквы сжаты по ширине, и при
         # равном канте штрих выходит тоньше английского.
         edge_w = max(1, math.ceil(statistics.median(seen) - 0.01)) if seen else cfg.get("stroke_width", 2)
+        if "кант" in cfg:
+            edge_w = cfg["кант"]      # задан руками — см. «контур» выше
         measured = statistics.median(seen) if seen else 0.0
         report.append(f"  кант снят с английских букв: "
                       + ", ".join(f"{v:.1f}" for v in seen)

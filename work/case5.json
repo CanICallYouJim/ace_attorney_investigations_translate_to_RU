@@ -90269,8 +90269,8 @@
       "index": 0,
       "mode": 3,
       "en": "Welcome back into the fold, {E108:0018}{E107:0004}{E12F:00080001}Prosecutor Edgeworth.",
-      "ru": "",
-      "status": "pending"
+      "ru": "С возвращением, {E108:0018}{E107:0004}{E12F:00080001}господин прокурор Эджворт.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|1",
@@ -90279,8 +90279,8 @@
       "index": 1,
       "mode": 3,
       "en": "Thank you, Judge Gavèlle.{E108:0010}\n{E107:0002}I owe you more than I can say.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Благодарю вас, судья Молотова.{E108:0010}\n{E107:0002}Я вам обязан больше, чем могу выразить.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|2",
@@ -90289,8 +90289,8 @@
       "index": 2,
       "mode": 4,
       "en": "You do?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мне?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|3",
@@ -90299,8 +90299,8 @@
       "index": 3,
       "mode": 2,
       "en": "You strove to right the wrongs of the Committee{E108:0008}\n{E107:0003}from the inside.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы пытались изменить то, что прогнило{E108:0008}\n{E107:0003}в Комитете, -- изнутри.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|4",
@@ -90309,8 +90309,8 @@
       "index": 4,
       "mode": 3,
       "en": "That must have been a {E108:0008}{E1D5}lonely battle indeed.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Должно быть, это была {E108:0008}{E1D5}очень одинокая борьба.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|5",
@@ -90319,8 +90319,8 @@
       "index": 5,
       "mode": 3,
       "en": "Not at all.{E108:0010} {E107:0002}{E12F:00080001}I was {E108:0010}{E188:002F0000}{E1D5}never truly alone.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вовсе нет.{E108:0010} {E107:0002}{E12F:00080001}Я {E108:0010}{E188:002F0000}{E1D5}никогда не была одна по-настоящему.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|6",
@@ -90329,8 +90329,8 @@
       "index": 6,
       "mode": 2,
       "en": "That's right!{E108:0010} You had the {E108:000C}{E1D5}{E041}Goddess of Justice{E040}\non your side!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну да!{E108:0010} На вашей стороне была {E108:000C}{E1D5}{E041}Богиня\nправосудия{E040}!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|7",
@@ -90339,8 +90339,8 @@
       "index": 7,
       "mode": 2,
       "en": "Thank you {E108:0008}{E1D5}{E107:0003}for teaching me that it's possible to{E108:0018}\n{E107:0002}fight in such a way.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Спасибо {E108:0008}{E1D5}{E107:0003}вам: вы показали мне, что можно{E108:0018}\n{E107:0002}бороться и так.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|8",
@@ -90349,8 +90349,8 @@
       "index": 8,
       "mode": 3,
       "en": "The contradictions within the Committee are like\nthose within the legal system itself...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Противоречия внутри Комитета -- те же, что\nи во всём правосудии...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|9",
@@ -90359,8 +90359,8 @@
       "index": 9,
       "mode": 2,
       "en": "If we aren't able to overcome them, {E108:0008}{E1D5}the real\n{E041}truth{E040} will forever evade us.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не справимся с ними -- {E108:0008}{E1D5}настоящая\n{E041}правда{E040} так и будет от нас уходить.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|10",
@@ -90369,8 +90369,8 @@
       "index": 10,
       "mode": 2,
       "en": "I have you to thank for teaching me that.{E108:0010}\nAnd for setting me on this path.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Этому научили меня вы.{E108:0010}\nИ на этот путь вывели тоже вы.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|11",
@@ -90379,8 +90379,8 @@
       "index": 11,
       "mode": 3,
       "en": "I hereby swear to confront {E041}the contradictions\nthat afflict the law{E040}, and to overcome them.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И я клянусь выйти против {E041}противоречий,\nчто разъедают закон{E040}, -- и одолеть их.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|12",
@@ -90389,8 +90389,8 @@
       "index": 12,
       "mode": 2,
       "en": "And I thank you for your commitment to that cause.{E108:0010}\n{E107:0003}As does the almighty {E041}Goddess{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А я благодарю вас за такую решимость.{E108:0010}\n{E107:0003}И всемогущая {E041}Богиня{E040} -- тоже.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|13",
@@ -90399,8 +90399,8 @@
       "index": 13,
       "mode": 3,
       "en": "I truly believe that such efforts are necessary in\norder {E108:0008}{E107:0002}for the {E041}law{E040} to grow and improve.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я верю: без таких усилий {E041}закону{E040} не вырасти{E108:0008}\n{E107:0002}и не стать лучше.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|14",
@@ -90409,8 +90409,8 @@
       "index": 14,
       "mode": 2,
       "en": "I will look forward to seeing you in the courtroom\nagain soon.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Буду ждать новой встречи с вами\nв зале суда.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|15",
@@ -90419,8 +90419,8 @@
       "index": 15,
       "mode": 4,
       "en": "As will I.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И я тоже.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|16",
@@ -90429,8 +90429,8 @@
       "index": 16,
       "mode": 2,
       "en": "You did not see the best of me {E108:0008}{E107:0003}when last I oversaw\na trial.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В прошлый раз я вела процесс {E108:0008}{E107:0003}не лучшим\nобразом.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|17",
@@ -90439,8 +90439,8 @@
       "index": 17,
       "mode": 2,
       "en": "The next time will be different.{E108:0010} I will show you what\nit means to serve justice with true impartiality.",
-      "ru": "",
-      "status": "pending"
+      "ru": "В следующий будет иначе.{E108:0010} Я покажу вам, что значит\nслужить правосудию и вправду беспристрастно.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|18",
@@ -90449,8 +90449,8 @@
       "index": 18,
       "mode": 3,
       "en": "Judge Gavèlle...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Судья Молотова...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|19",
@@ -90459,8 +90459,8 @@
       "index": 19,
       "mode": 3,
       "en": "I don't mean to call your motivation into question...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не мне судить о том, к чему вы стремитесь...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|20",
@@ -90469,8 +90469,8 @@
       "index": 20,
       "mode": 4,
       "en": "Yes, Mr. Edgeworth?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да, мистер Эджворт?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|21",
@@ -90479,8 +90479,8 @@
       "index": 21,
       "mode": 3,
       "en": "But...{E108:0008} to my mind, {E108:000C}the {E041}ideal judge{E040} is\nnot wholly impartial.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но...{E108:0008} на мой взгляд, {E108:000C}{E041}идеальный судья{E040}\nне вполне беспристрастен.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|22",
@@ -90489,8 +90489,8 @@
       "index": 22,
       "mode": 2,
       "en": "The ideal judge is...{E108:0010} {E188:00300000}{E1D5}human.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Идеальный судья...{E108:0010} {E188:00300000}{E1D5}человечен.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|23",
@@ -90499,8 +90499,8 @@
       "index": 23,
       "mode": 3,
       "en": "Even in the courtroom, {E108:000C}they laugh, {E108:000C}they cry,{E108:000C}\nthey rage, {E108:000C}they smile...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Даже в зале суда {E108:000C}он смеётся, {E108:000C}плачет,{E108:000C}\nгневается, {E108:000C}улыбается...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|24",
@@ -90509,8 +90509,8 @@
       "index": 24,
       "mode": 2,
       "en": "And then, when all is said and done, {E108:0008}{E1D5}they pass\ndown a judgment based in that very humanity.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А в конце всё равно {E108:0008}{E1D5}выносит приговор,\nи держится он на той же человечности.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|26",
@@ -90519,8 +90519,8 @@
       "index": 26,
       "mode": 4,
       "en": "I'm not sure exactly how to put this...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не знаю, как это выразить точнее...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|27",
@@ -90529,8 +90529,8 @@
       "index": 27,
       "mode": 2,
       "en": "...but \"perfection\" isn't always the loftiest of ideals.{E108:0010}\nAnd it's certainly not the only thing to strive for.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...но «совершенство» -- не всегда высший идеал.{E108:0010}\nИ уж точно не единственное, к чему стоит идти.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|28",
@@ -90539,8 +90539,8 @@
       "index": 28,
       "mode": 3,
       "en": "Forgive me.{E108:0010} {E107:0004}This is my opinion.{E108:0010} Nothing more.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Простите.{E108:0010} {E107:0004}Это лишь моё мнение.{E108:0010} Не более.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|29",
@@ -90549,8 +90549,8 @@
       "index": 29,
       "mode": 3,
       "en": "You are right, of course.{E108:0010} There are other ways.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы, конечно, правы.{E108:0010} Есть и другие пути.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|30",
@@ -90559,8 +90559,8 @@
       "index": 30,
       "mode": 3,
       "en": "...I thank you for sharing your insights.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Спасибо, что поделились этим со мной.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|31",
@@ -90569,8 +90569,8 @@
       "index": 31,
       "mode": 3,
       "en": "...Mr. Edgeworth.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Мистер Эджворт.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|32",
@@ -90579,8 +90579,8 @@
       "index": 32,
       "mode": 2,
       "en": "There is another reason I was never truly alone\nduring my long struggle against Chairman Winner.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И была ещё причина, почему в долгой борьбе\nс председателем Побединым я не была одна.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|33",
@@ -90589,8 +90589,8 @@
       "index": 33,
       "mode": 3,
       "en": "Someone else was with me --{E108:0008} someone other\nthan the {E041}Goddess{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Рядом со мной был ещё кто-то --{E108:0008} не только\n{E041}Богиня{E040}.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|34",
@@ -90599,8 +90599,8 @@
       "index": 34,
       "mode": 2,
       "en": "Of course!{E108:0018} Shaun!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ну конечно!{E108:0018} Ваня!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|35",
@@ -90609,8 +90609,8 @@
       "index": 35,
       "mode": 3,
       "en": "This clipping gave me more courage than words\ncan express.{E108:0010} Simply having it near gave me hope.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Эта вырезка давала мне столько мужества,\nсколько не выразить.{E108:0010} Носила с собой -- и верила.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|36",
@@ -90619,8 +90619,8 @@
       "index": 36,
       "mode": 3,
       "en": "No matter how hard things get.{E108:0010}\n{E107:0004}No matter how formidable one's opponent.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как бы тяжело ни было.{E108:0010}\n{E107:0004}Каким бы сильным ни был противник.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|37",
@@ -90629,8 +90629,8 @@
       "index": 37,
       "mode": 3,
       "en": "When we feel that we are not alone, we can keep\ngoing, no matter how hard the road ahead.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пока чувствуешь, что не один, идти можно\nпо любой дороге, как бы трудна она ни была.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|38",
@@ -90639,8 +90639,8 @@
       "index": 38,
       "mode": 2,
       "en": "Mistakes have been made.{E108:0010} But we must fix them.{E108:0020}\n{E107:0003}{E1D1}For Shaun's sake more than anyone's.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ошибки были.{E108:0010} И их надо исправить.{E108:0020}\n{E107:0003}{E1D1}Ради Вани -- прежде всего.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|39",
@@ -90649,8 +90649,8 @@
       "index": 39,
       "mode": 3,
       "en": "(Like the mistakes made in the incident in which\nhis father died...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Как те ошибки в деле, где погиб\nего отец...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|40",
@@ -90659,8 +90659,8 @@
       "index": 40,
       "mode": 3,
       "en": "So you see...{E108:0008} {E1D5}there is something more important\neven to me than the words of the {E041}Goddess{E040}.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Видите...{E108:0008} {E1D5}есть то, что даже мне дороже\nслов {E041}Богини{E040}.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|41",
@@ -90669,8 +90669,8 @@
       "index": 41,
       "mode": 2,
       "en": "Hah hah.{E108:0010} {E107:0003}{E188:002F0000}{E1D1}Though it may anger {E041}her{E040} to hear me{E108:0010}\n{E107:0002}say such things...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе-хе.{E108:0010} {E107:0003}{E188:002F0000}{E1D1}Хотя {E041}её{E040} такие слова{E108:0010}\n{E107:0002}могут и разгневать...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|42",
@@ -90679,8 +90679,8 @@
       "index": 42,
       "mode": 3,
       "en": "Heh.{E108:0010} So that was your secret weapon all along --{E108:0008}\n{E1D5}the strength of your bond with your son...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Хе.{E108:0010} Так вот в чём было ваше тайное оружие --{E108:0008}\n{E1D5}в силе связи с сыном...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|43",
@@ -90689,8 +90689,8 @@
       "index": 43,
       "mode": 3,
       "en": "Perhaps you are right.{E108:0010} Perhaps I should not strive for\nan unachievable perfection.{E108:0008} {E107:0004}But I must grow.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Быть может, вы правы.{E108:0010} Быть может, недостижимого\nсовершенства искать и не надо.{E108:0008} {E107:0004}Но расти я должна.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|44",
@@ -90699,8 +90699,8 @@
       "index": 44,
       "mode": 3,
       "en": "As a servant of the law {E108:0008}{E107:0004}and as a mother.{E108:0020}\n{E107:0003}{E12F:00080001}...That I believe above all else.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И как служительница закона, {E108:0008}{E107:0004}и как мать.{E108:0020}\n{E107:0003}{E12F:00080001}...В это я верю больше всего.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|45",
@@ -90709,8 +90709,8 @@
       "index": 45,
       "mode": 2,
       "en": "I see.{E108:0010} It seems that we both {E108:0008}{E107:0003}have plenty still\nto learn.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Понятно.{E108:0010} Похоже, обоим нам {E108:0008}{E107:0003}ещё многому\nучиться.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|46",
@@ -90719,8 +90719,8 @@
       "index": 46,
       "mode": 2,
       "en": "Indeed.{E108:0010} {E107:0003}{E1D1}We are neither of us perfect yet.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да.{E108:0010} {E107:0003}{E1D1}Мы оба ещё далеко не совершенны.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|47",
@@ -90729,8 +90729,8 @@
       "index": 47,
       "mode": 3,
       "en": "Let us continue along our chosen paths.{E108:0010} And continue\nto grow as we tread them.{E108:0010} {E107:0004}Until we meet again.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Пойдём же каждый своей дорогой.{E108:0010} И будем расти,\nпока идём.{E108:0010} {E107:0004}До новой встречи.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|48",
@@ -90739,8 +90739,8 @@
       "index": 48,
       "mode": 3,
       "en": "I will look forward to that day.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Жду этого дня.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|49",
@@ -90749,8 +90749,8 @@
       "index": 49,
       "mode": 3,
       "en": "May the {E041}Goddess{E040} watch over you as you embark{E108:0010}\n{E107:0002}{E1D5}{E1D1}upon the next step of your journey!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да хранит вас {E041}Богиня{E040} на новом пути,{E108:0010}\n{E107:0002}{E1D5}{E1D1}на который вы вступаете!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0b.bytes|04003B02|50",
@@ -90759,8 +90759,8 @@
       "index": 50,
       "mode": 2,
       "en": "I lost the title of {E041}prosecutor{E040}.{E108:0010}\nBut now {E108:0008}{E1D5}I have regained it.{E108:0019}{E104}{E101:00000000}{E107:0002}And in so doing, I have seen a new way forward.{E108:0010}\nA new path for {E041}justice{E040}.{E108:0019}{E104}{E101:00000000}{E107:0002}And I am determined to follow that path until\nit finally leads me to {E188:00200000}{E1D5}the {E041}truth{E040}.{E108:0019}{E104}{E101:00000000}{E107:0002}No matter how hard it might be.{E108:0010}\nNo matter what obstacles might arise.{E108:0019}{E104}{E101:00000000}{E107:0002}{E1D5}Woe betide anybody who stands in my way!{E108:0019}{E104}{E101:00000000}{E107:0002}For whoever they may be, whatever they might say,\nI will lift up my voice and shout...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Звание {E041}прокурора{E040} я потерял.{E108:0010}\nНо теперь {E108:0008}{E1D5}вернул его.{E108:0019}{E104}{E101:00000000}{E107:0002}И тем самым увидел новую дорогу.{E108:0010}\nНовую дорогу к {E041}правосудию{E040}.{E108:0019}{E104}{E101:00000000}{E107:0002}И я твёрдо намерен идти по ней, пока она\nне выведет меня к {E188:00200000}{E1D5}{E041}правде{E040}.{E108:0019}{E104}{E101:00000000}{E107:0002}Как бы трудна она ни была.{E108:0010}\nКакие бы препятствия ни встали.{E108:0019}{E104}{E101:00000000}{E107:0002}{E1D5}И горе тому, кто станет у меня на пути!{E108:0019}{E104}{E101:00000000}{E107:0002}Кто бы он ни был и что бы ни говорил,\nя возвышу голос и крикну...",
+      "status": "translated"
     },
     {
       "id": "sce4_c5_00.bytes|04003B82|0",

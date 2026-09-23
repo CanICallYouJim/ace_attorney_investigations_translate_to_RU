@@ -323,7 +323,9 @@ def compose(name: str, cfg: dict, case: str):
                     break
             shift = (best[1], best[2])
         for ru_im, wide, at in pieces:
-            place = (at[0] + shift[0], at[1] + shift[1])
+            # «сдвиг» надписи — поправка глазом по листу (cut02_004: «В» заходила на стену)
+            nudge = lb.get("сдвиг", (0, 0))
+            place = (at[0] + shift[0] + nudge[0], at[1] + shift[1] + nudge[1])
             if wide is not None:
                 out.paste(edge, place, wide)
                 ink.paste(255, place, solid(wide))

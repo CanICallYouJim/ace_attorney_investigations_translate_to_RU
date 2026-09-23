@@ -88589,8 +88589,8 @@
       "index": 0,
       "mode": 3,
       "en": "It seems the game is up at last.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Похоже, игра наконец окончена.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|1",
@@ -88599,8 +88599,8 @@
       "index": 1,
       "mode": 1,
       "en": "De Killer!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Де Киллер!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|2",
@@ -88609,8 +88609,8 @@
       "index": 2,
       "mode": 2,
       "en": "Mr. Edgeworth.{E108:0010}\nMay I be the first to congratulate you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мистер Эджворт.{E108:0010}\nПозвольте мне первым вас поздравить.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|3",
@@ -88619,8 +88619,8 @@
       "index": 3,
       "mode": 3,
       "en": "You have unmasked {E041}the person behind this{E040}\nentire sorry affair.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы сорвали маску с {E041}кукловода{E040},\nстоявшего за всем этим скверным делом.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|4",
@@ -88629,8 +88629,8 @@
       "index": 4,
       "mode": 3,
       "en": "Now {E108:0010}{E107:0003}{E1D1}I am free to...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Теперь {E108:0010}{E107:0003}{E1D1}я могу спокойно...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|5",
@@ -88639,8 +88639,8 @@
       "index": 5,
       "mode": 1,
       "en": "No!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нет!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|6",
@@ -88649,8 +88649,8 @@
       "index": 6,
       "mode": 3,
       "en": "Guns are so clumsy, {E108:0010}don't you find?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Огнестрельное так неуклюже, {E108:0010}не находите?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|7",
@@ -88659,8 +88659,8 @@
       "index": 7,
       "mode": 3,
       "en": "I...{E108:0018} {E1D1}I don't have a gun...",
-      "ru": "",
-      "status": "pending"
+      "ru": "У-У меня...{E108:0018} {E1D1}У меня нет оружия...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|8",
@@ -88669,8 +88669,8 @@
       "index": 8,
       "mode": 2,
       "en": "Please.{E108:0018} {E107:0003}Not only are you carrying one, you were\njust about to draw it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Помилуйте.{E108:0018} {E107:0003}Оно при вас, и вы как раз\nсобирались его достать.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|9",
@@ -88679,8 +88679,8 @@
       "index": 9,
       "mode": 2,
       "en": "(He must have stolen it from the president after\nmurdering him...!)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Должно быть, забрал у президента,\nкогда убил его...!)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|10",
@@ -88689,8 +88689,8 @@
       "index": 10,
       "mode": 2,
       "en": "This gentleman betrayed a bond of trust.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Этот господин предал наше с ним доверие.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|11",
@@ -88699,8 +88699,8 @@
       "index": 11,
       "mode": 2,
       "en": "He knew the so-called president was an impostor,{E108:0008}\n{E188:00310000}{E1D1}and yet he employed me to kill him nonetheless.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Он знал, что «президент» -- подставной,{E108:0008}\n{E188:00310000}{E1D1}и всё же поручил мне его убить.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|12",
@@ -88709,8 +88709,8 @@
       "index": 12,
       "mode": 2,
       "en": "There is nothing more dangerous for an assassin than\nto be lied to about the nature of one's target.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Для убийцы нет ничего опаснее, чем ложь\nо том, кто перед ним цель.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|13",
@@ -88719,8 +88719,8 @@
       "index": 13,
       "mode": 2,
       "en": "If one does not know what cards one's opponent is\nholding, {E108:0008}{E188:002F0000}{E1D1}one can be very unpleasantly surprised.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не зная, что у противника на руках,{E108:0008}\n{E188:002F0000}{E1D1}можно очень неприятно удивиться.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|14",
@@ -88729,8 +88729,8 @@
       "index": 14,
       "mode": 2,
       "en": "Mggggrrgh!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мгггрргх!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|15",
@@ -88739,8 +88739,8 @@
       "index": 15,
       "mode": 3,
       "en": "But that was {E108:000C}not your true crime.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но подлинная ваша вина {E108:000C}не в этом.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|16",
@@ -88749,8 +88749,8 @@
       "index": 16,
       "mode": 2,
       "en": "No.{E108:0010} {E285}Thinking you could deceive me,{E108:0010} manipulate me...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Нет.{E108:0010} {E285}Вы решили, что можете меня обмануть,{E108:0010}\nиспользовать...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|17",
@@ -88759,8 +88759,8 @@
       "index": 17,
       "mode": 3,
       "en": "That is the crime for which you are about to pay...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вот за это вам и придётся заплатить...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|18",
@@ -88769,8 +88769,8 @@
       "index": 18,
       "mode": 1,
       "en": "NO!",
-      "ru": "",
-      "status": "pending"
+      "ru": "НЕТ!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|19",
@@ -88779,8 +88779,8 @@
       "index": 19,
       "mode": 3,
       "en": "Y-You...!",
-      "ru": "",
-      "status": "pending"
+      "ru": "В-Вы...!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|20",
@@ -88789,8 +88789,8 @@
       "index": 20,
       "mode": 3,
       "en": "It's been a while, {E108:0010}de Killer.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Давно же не виделись, {E108:0010}де Киллер.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|21",
@@ -88799,8 +88799,8 @@
       "index": 21,
       "mode": 2,
       "en": "Step aside, Kanis.{E108:0010} That man is {E108:0008}{E188:00310000}{E1D1}my target.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Посторонитесь, Канис.{E108:0010} Этот человек -- {E108:0008}{E188:00310000}{E1D1}моя цель.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|22",
@@ -88809,8 +88809,8 @@
       "index": 22,
       "mode": 3,
       "en": "I would politely ask that you call off this\nparticular job.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я бы учтиво просил вас отказаться\nименно от этого заказа.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|23",
@@ -88819,8 +88819,8 @@
       "index": 23,
       "mode": 3,
       "en": "He'll pay for his crimes.{E108:0010} {E1D5}But in prison, not at\nthe end of your blade.",
-      "ru": "",
-      "status": "pending"
+      "ru": "За своё он ответит.{E108:0010} {E1D5}Но в тюрьме, а не на\nконце вашего клинка.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|26",
@@ -88829,8 +88829,8 @@
       "index": 26,
       "mode": 3,
       "en": "And if I refuse?",
-      "ru": "",
-      "status": "pending"
+      "ru": "А если я откажусь?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|27",
@@ -88839,8 +88839,8 @@
       "index": 27,
       "mode": 2,
       "en": "Let us just say that I might not take the loss of the{E108:0010}\n{E188:00730000}{E1D1}one life that I ever saved too well.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Скажем так: единственную жизнь, что я спас,{E108:0010}\n{E188:00730000}{E1D1}я так просто отнять не дам.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|28",
@@ -88849,8 +88849,8 @@
       "index": 28,
       "mode": 2,
       "en": "You?{E108:0010} {E188:002F0000}{E1D5}Save a life?{E108:0018}\n{E107:0003}Bodhidharma Kanis --{E108:0008} {E283}the Blind Butcher himself?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Вы?{E108:0010} {E188:002F0000}{E1D5}Спасли жизнь?{E108:0018}\n{E107:0003}Бодхидхарма Канис --{E108:0008} {E283}сам Слепой Мясник?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|29",
@@ -88859,8 +88859,8 @@
       "index": 29,
       "mode": 1,
       "en": "Keh heh heh!{E108:0018} {E107:0003}Preposterous, I know.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кхех-хех-хех!{E108:0018} {E107:0003}Смехотворно, право.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|30",
@@ -88869,8 +88869,8 @@
       "index": 30,
       "mode": 2,
       "en": "But yes.{E108:0010} I, who have taken so many lives, once{E108:0010}\n{E107:0001}{E188:00300000}{E1D5}chose to preserve one.{E108:0018} That of an innocent young pup.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И всё же.{E108:0010} Я, отнявший столько жизней, однажды{E108:0010}\n{E107:0001}{E188:00300000}{E1D5}одну сберёг.{E108:0018} Жизнь невинного щенка.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|31",
@@ -88879,8 +88879,8 @@
       "index": 31,
       "mode": 3,
       "en": "And he, in his turn, saved mine.{E108:0010}\n{E107:0002}Something of a bond formed between us.",
-      "ru": "",
-      "status": "pending"
+      "ru": "А он, в свой черёд, сберёг мою.{E108:0010}\n{E107:0002}Так между нами и возникла связь.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|32",
@@ -88889,8 +88889,8 @@
       "index": 32,
       "mode": 1,
       "en": "Laugh all you like.{E108:0018} {E107:0002}I know I would.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Смейтесь сколько угодно.{E108:0018} {E107:0002}Я бы смеялся.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|33",
@@ -88899,8 +88899,8 @@
       "index": 33,
       "mode": 3,
       "en": "But...{E108:0014} {E107:0002}{E188:00730000}{E1D1} I would respectfully request that you\nspare him.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но...{E108:0014} {E107:0002}{E188:00730000}{E1D1}я почтительно прошу вас его\nпощадить.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|34",
@@ -88909,8 +88909,8 @@
       "index": 34,
       "mode": 3,
       "en": "As one professional to another...{E108:0018}\n{E107:0002}I ask that you let this particular target live.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Как собрат по ремеслу...{E108:0018}\n{E107:0002}прошу: оставьте эту цель в живых.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|36",
@@ -88919,8 +88919,8 @@
       "index": 36,
       "mode": 3,
       "en": "...Very well.{E108:0010}\nThe boy must mean a lot to you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Что ж, хорошо.{E108:0010}\nМальчик, видно, вам очень дорог.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|37",
@@ -88929,8 +88929,8 @@
       "index": 37,
       "mode": 3,
       "en": "Thank you.{E108:0010} {E1D1}I am in your debt.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Благодарю.{E108:0010} {E1D1}Я перед вами в долгу.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|38",
@@ -88939,8 +88939,8 @@
       "index": 38,
       "mode": 2,
       "en": "...You need not thank me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Благодарности не нужно.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|39",
@@ -88949,8 +88949,8 @@
       "index": 39,
       "mode": 3,
       "en": "I simply see little point in the two of us killing\none another.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Просто я не вижу выгоды в том, чтобы нам\nс вами убивать друг друга.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|40",
@@ -88959,8 +88959,8 @@
       "index": 40,
       "mode": 2,
       "en": "Now, then.{E108:0010} I bid you all good day.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На этом{E108:0010} позвольте откланяться. Всего доброго.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|41",
@@ -88969,8 +88969,8 @@
       "index": 41,
       "mode": 1,
       "en": "No!{E108:0020} Get back here!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Чёрт!{E108:0020} Стоять!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|42",
@@ -88979,8 +88979,8 @@
       "index": 42,
       "mode": 3,
       "en": "You have my thanks, {E108:0010}Mr. Edgeworth.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Спасибо вам, {E108:0010}мистер Эджворт.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|43",
@@ -88989,8 +88989,8 @@
       "index": 43,
       "mode": 2,
       "en": "This young pup needed to be shown the error\nof his ways.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Этому щенку надо было указать,\nгде он сбился с пути.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|44",
@@ -88999,8 +88999,8 @@
       "index": 44,
       "mode": 2,
       "en": "And you have done just that.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Это вы и сделали.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|45",
@@ -89009,8 +89009,8 @@
       "index": 45,
       "mode": 7,
       "en": ".........{E108:0010}{E107:0003}Alright,{E108:0010} I suppose we'd better be getting back.{E108:0010}\nOur iron-clad enclosure awaits.",
-      "ru": "",
-      "status": "pending"
+      "ru": ".........{E108:0010}{E107:0003}Что ж,{E108:0010} пожалуй, нам пора возвращаться.{E108:0010}\nОбитель за железной решёткой ждёт.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|46",
@@ -89019,8 +89019,8 @@
       "index": 46,
       "mode": 2,
       "en": "Doesn't it, {E108:000C}{E107:0003}Helmut?{E108:0018} {E12F:00120009}{E107:0004}{E1D1}Yesss.{E108:0010} {E107:0003}{E1D1}Yes it doesss.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ждёт ведь, {E108:000C}{E107:0003}Аид?{E108:0018} {E12F:00120009}{E107:0004}{E1D1}Да-а-а.{E108:0010} {E107:0003}{E1D1}Ждё-о-от.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|47",
@@ -89029,8 +89029,8 @@
       "index": 47,
       "mode": 7,
       "en": ".........{E108:0020}{E107:0003}Oh.{E108:0010} Hello.",
-      "ru": "",
-      "status": "pending"
+      "ru": ".........{E108:0020}{E107:0003}О.{E108:0010} Здравствуй.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|48",
@@ -89039,8 +89039,8 @@
       "index": 48,
       "mode": 3,
       "en": "...You...{E108:0010} {E1D1}{E1D5}killed my dad, didn't you, {E108:0018}old man?",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Вы...{E108:0010} {E1D1}{E1D5}вы убили моего отца, да, {E108:0018}старик?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|49",
@@ -89049,8 +89049,8 @@
       "index": 49,
       "mode": 4,
       "en": "...I will not lie.{E108:0010} I did.{E108:0018} {E107:0003}My victims deserve to be\nremembered, at the very least.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Не стану лгать.{E108:0010} Убил.{E108:0018} {E107:0003}Своих мертвецов я\nпомню -- меньшего они не заслужили.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|50",
@@ -89059,8 +89059,8 @@
       "index": 50,
       "mode": 3,
       "en": "Keh heh heh.{E108:0018} {E107:0003}{E188:002F0000}{E1D5}Ah, but I sense a great hatred for me\nfrom you, horned pup.{E108:0018} {E107:0004}In that case...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кхех-хех-хех.{E108:0018} {E107:0003}{E188:002F0000}{E1D5}А, чую: ты меня крепко\nненавидишь, рогатый щенок.{E108:0018} {E107:0004}В таком случае...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|51",
@@ -89069,8 +89069,8 @@
       "index": 51,
       "mode": 7,
       "en": "............{E107:0002}{E1D2}Urk!",
-      "ru": "",
-      "status": "pending"
+      "ru": "............{E107:0002}{E1D2}Угх!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|52",
@@ -89079,8 +89079,8 @@
       "index": 52,
       "mode": 3,
       "en": "Sh-Shaun!{E108:0010} {E107:0001}{E280}No!",
-      "ru": "",
-      "status": "pending"
+      "ru": "В-Ваня!{E108:0010} {E107:0001}{E280}Нет!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|53",
@@ -89089,8 +89089,8 @@
       "index": 53,
       "mode": 3,
       "en": "You must not falter, little one.{E108:0018} Here.{E108:0010}\nYou may use my knife.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Не робей, дитя.{E108:0018} Вот.{E108:0010}\nВозьми мой нож.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|54",
@@ -89099,8 +89099,8 @@
       "index": 54,
       "mode": 3,
       "en": "Take it...{E108:0018} {E107:0002}{E12F:0012000A}{E283}and cut my throat!{E108:0030}{E12F:00120002}\n{E107:0003}One sure slice is all it takes!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Бери...{E108:0018} {E107:0002}{E12F:0012000A}{E283}и перережь мне горло!{E108:0030}{E12F:00120002}\n{E107:0003}Хватит одного верного взмаха!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|55",
@@ -89109,8 +89109,8 @@
       "index": 55,
       "mode": 3,
       "en": "I was growing rather tired of carving my little\nstatues anyway.{E108:0018} {E1D1}Keh heh heh.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Мне и без того наскучило резать\nстатуэтки.{E108:0018} {E1D1}Кхех-хех-хех.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|56",
@@ -89119,8 +89119,8 @@
       "index": 56,
       "mode": 7,
       "en": "............{E108:0018}{E107:0004}I want revenge.{E108:0010} {E107:0003}I want it so badly.",
-      "ru": "",
-      "status": "pending"
+      "ru": "............{E108:0018}{E107:0004}Хочу отомстить.{E108:0010} {E107:0003}Очень хочу.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|57",
@@ -89129,8 +89129,8 @@
       "index": 57,
       "mode": 1,
       "en": "Sh-Shaun!{E108:0018} Don't do it!",
-      "ru": "",
-      "status": "pending"
+      "ru": "В-Ваня!{E108:0018} Не надо!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|58",
@@ -89139,8 +89139,8 @@
       "index": 58,
       "mode": 3,
       "en": "P-Please, {E108:000C}{E1D1}{E107:0004}Shaun!{E108:0018} {E107:0002}{E1D2}I beg of you!",
-      "ru": "",
-      "status": "pending"
+      "ru": "П-Прошу, {E108:000C}{E1D1}{E107:0004}Ваня!{E108:0018} {E107:0002}{E1D2}Умоляю тебя!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|59",
@@ -89149,8 +89149,8 @@
       "index": 59,
       "mode": 3,
       "en": "...At least,{E108:0010} {E107:0002}I did until just now.{E108:0010} I would have done\nanything to make you pay.{E108:0010} No matter how long it took.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Хотел{E108:0010} {E107:0002}до этой самой минуты.{E108:0010} Я бы на всё пошёл,\nчтоб вы заплатили.{E108:0010} Сколько бы это ни заняло.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|60",
@@ -89159,8 +89159,8 @@
       "index": 60,
       "mode": 3,
       "en": "Oh, but you should make those who have wronged\nyou pay.{E108:0018} It'll make you feel so good.{E108:0010} {E107:0004}{E1D1}Trust me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "О, а надо бы! Пусть платят все, кто тебя\nобидел.{E108:0018} Такое облегчение!{E108:0010} {E107:0004}{E1D1}Уж поверь.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|61",
@@ -89169,8 +89169,8 @@
       "index": 61,
       "mode": 3,
       "en": "...All the pain, all the suffering, it all goes away.{E108:0010}\nIt drowns it all out.{E108:0008} {E1D1}Numbs it.",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Вся боль, все муки -- как рукой снимает.{E108:0010}\nВсё глохнет.{E108:0008} {E1D1}Немеет.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|62",
@@ -89179,8 +89179,8 @@
       "index": 62,
       "mode": 3,
       "en": "Maybe it does.{E177:003E0001}{E108:0016} {E107:0002}And listening to you, I thought maybe\nthat's what I wanted...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Может, и так.{E177:003E0001}{E108:0016} {E107:0002}Слушал вас -- и подумал, что,\nможет, этого и хочу...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|63",
@@ -89189,8 +89189,8 @@
       "index": 63,
       "mode": 2,
       "en": "...Shaun!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Актёркин!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|64",
@@ -89199,8 +89199,8 @@
       "index": 64,
       "mode": 2,
       "en": "But it's not just about me.{E108:0010} Say I get my revenge --{E108:0008}\n{E107:0003}{E188:002F0000}{E1D1}how does that help anybody else?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но дело не только во мне.{E108:0010} Ну отомщу я --{E108:0008}\n{E107:0003}{E188:002F0000}{E1D1}а другим-то от этого что?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|65",
@@ -89209,8 +89209,8 @@
       "index": 65,
       "mode": 2,
       "en": "If I become a murderer, my mom suffers ten times\nmore than I ever would.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стану убийцей -- маме будет в десять раз\nхуже, чем мне.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|66",
@@ -89219,8 +89219,8 @@
       "index": 66,
       "mode": 3,
       "en": "And so would all the people I work with.{E108:0010}\nThey're counting on me.{E108:0008} And they worry about me.",
-      "ru": "",
-      "status": "pending"
+      "ru": "И всем, с кем я работаю, тоже.{E108:0010}\nОни на меня надеются.{E108:0008} И волнуются за меня.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|67",
@@ -89229,8 +89229,8 @@
       "index": 67,
       "mode": 3,
       "en": "Keh heh heh.{E108:0018} {E107:0004}Thoughtful words indeed, {E108:0018}{E107:0002}little one.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Кхех-хех-хех.{E108:0018} {E107:0004}А ведь верно сказано, {E108:0018}{E107:0002}дитя.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|68",
@@ -89239,8 +89239,8 @@
       "index": 68,
       "mode": 2,
       "en": "Yeah?{E108:0010} Well I get it now.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Да?{E108:0010} Ну а я вот понял.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|69",
@@ -89249,8 +89249,8 @@
       "index": 69,
       "mode": 3,
       "en": "I won't ever forgive you.{E108:0018} {E107:0002}But I shouldn't be the\none who gets to punish you.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Я вас никогда не прощу.{E108:0018} {E107:0002}Но наказывать вас --\nне моё дело.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|70",
@@ -89259,8 +89259,8 @@
       "index": 70,
       "mode": 2,
       "en": "That's what these guys are for.{E108:0020}\n{E107:0003}{E12F:00190003}My mom.{E108:0018} {E107:0002}The prosecutor.{E108:0018} People like that.",
-      "ru": "",
-      "status": "pending"
+      "ru": "На то они и есть.{E108:0020}\n{E107:0003}{E12F:00190003}Мама.{E108:0018} {E107:0002}Прокурор вот.{E108:0018} Такие, как они.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|71",
@@ -89269,8 +89269,8 @@
       "index": 71,
       "mode": 3,
       "en": "...Shaun!",
-      "ru": "",
-      "status": "pending"
+      "ru": "...Ваня!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|72",
@@ -89279,8 +89279,8 @@
       "index": 72,
       "mode": 3,
       "en": "Wow...{E108:0010} You may be young, Shaun, {E108:0018}{E107:0001}{E280}but you're\nway wiser than I'll ever be!",
-      "ru": "",
-      "status": "pending"
+      "ru": "Ух ты...{E108:0010} Ты хоть и мелкий, Ваня, {E108:0018}{E107:0001}{E280}а мудрее меня\nв сто раз!",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|73",
@@ -89289,8 +89289,8 @@
       "index": 73,
       "mode": 2,
       "en": "(You could at least consider trying to better\nyourself, Kay...)",
-      "ru": "",
-      "status": "pending"
+      "ru": "(Тебе бы, Кей, тоже не мешало\nнад собой поработать...)",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|74",
@@ -89299,8 +89299,8 @@
       "index": 74,
       "mode": 4,
       "en": "Very well.{E108:0020} {E107:0003}{E12F:00120000}Then I suppose we'll be on our way.{E108:0018}\n{E107:0004}With me, young pup.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Стало быть, так.{E108:0020} {E107:0003}{E12F:00120000}Тогда и нам пора.{E108:0018}\n{E107:0004}Идём, щенок.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|75",
@@ -89309,8 +89309,8 @@
       "index": 75,
       "mode": 3,
       "en": "O-On our way?{E108:0010} To where?",
-      "ru": "",
-      "status": "pending"
+      "ru": "П-Пора?{E108:0010} Куда?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|76",
@@ -89319,8 +89319,8 @@
       "index": 76,
       "mode": 3,
       "en": "Where else?{E108:0010} To the prison.{E108:0018}\n{E107:0002}Our home.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Куда же ещё?{E108:0010} В тюрьму.{E108:0018}\n{E107:0002}В наш дом.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|77",
@@ -89329,8 +89329,8 @@
       "index": 77,
       "mode": 3,
       "en": "Our...{E108:0008} home...?",
-      "ru": "",
-      "status": "pending"
+      "ru": "Наш...{E108:0008} дом...?",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|78",
@@ -89339,8 +89339,8 @@
       "index": 78,
       "mode": 3,
       "en": "And with that, {E108:0010}the case came to an end.{E108:0010} A case\nthat had dragged so many people into its orbit...",
-      "ru": "",
-      "status": "pending"
+      "ru": "Так {E108:0010}и завершилось это дело.{E108:0010} Дело, которое\nзатянуло в себя столько людей...",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_09.bytes|04003A02|79",
@@ -89349,8 +89349,8 @@
       "index": 79,
       "mode": 3,
       "en": "But as for me --{E108:0008} there was one last thing I had to do.",
-      "ru": "",
-      "status": "pending"
+      "ru": "Но мне{E108:0008} оставалось сделать ещё одно, последнее.",
+      "status": "translated"
     },
     {
       "id": "sce4_c4_0a.bytes|04003A82|0",

@@ -80,7 +80,7 @@ def fit(im: Image.Image, width: int) -> Image.Image:
     return im.resize((width, max(1, round(im.height * k))), Image.LANCZOS)
 
 
-def build(name: str, tol: int, pad: int, zoom: float) -> Path:
+def build(name: str, tol: int, pad: int, zoom: float, base: Path | None = None) -> Path:
     en_path, ru_path = find(EN, name), find(RU, name)
     if not en_path or not ru_path:
         sys.exit(f"нет пары для {name}: эталон {en_path}, результат {ru_path}")
@@ -88,34 +88,37 @@ def build(name: str, tol: int, pad: int, zoom: float) -> Path:
     ru = Image.open(ru_path).convert("RGB")
     if en.size != ru.size:
         sys.exit(f"размеры разные: {en.size} против {ru.size}")
-    mask = changed_mask(en, ru, tol)
+    ref = Image.open(base).convert("RGB") if base else en
+    mask = changed_mask(ref, ru, tol)
     n = sum(1 for v in mask.tobytes() if v)
     if n == 0:
-        sys.exit(f"{name}: результат совпадает с оригиналом — показывать нечего")
+        sys.exit(f"{name}: результат совпадает с {'показанной' if base else 'оригиналом'} — показывать нечего")
 
-    diff = Image.blend(en, Image.new("RGB", en.size, (255, 255, 255)), 0.6)
+    diff = Image.blend(ref, Image.new("RGB", en.size, (255, 255, 255)), 0.6)
     diff.paste((220, 0, 0), mask=mask)
-    top = [fit(im, PANEL) for im in (en, ru, diff)]
+    top = [fit(im, PANEL) for im in ((en, ref, ru, diff) if base else (en, ru, diff))]
 
     rows = []
     for box in zones(mask, pad):
-        a, b = en.crop(box), ru.crop(box)
+        a, b = ref.crop(box), ru.crop(box)
         k = min(zoom, (ZONE_W / 2 - 10) / a.width)
         size = (max(1, round(a.width * k)), max(1, round(a.height * k)))
         rows.append((box, a.resize(size, Image.NEAREST), b.resize(size, Image.NEAREST)))
 
     f, fs = font(28), font(20)
-    W = max(PANEL * 3 + 40, ZONE_W)
+    W = max(PANEL * len(top) + 40, ZONE_W)
     H = 60 + top[0].height + 40 + sum(r[1].height + 50 for r in rows)
     sheet = Image.new("RGB", (W, H), (40, 40, 40))
     d = ImageDraw.Draw(sheet)
-    d.text((10, 10), f"{name}: оригинал | результат | где менялось (> {tol} уровней, {n} пикс.)",
+    head = ("оригинал | показанная | новая | где новая отличается от показанной" if base
+            else "оригинал | результат | где менялось")
+    d.text((10, 10), f"{name}: {head} (> {tol} уровней, {n} пикс.)",
            fill="white", font=f)
     for i, im in enumerate(top):
         sheet.paste(im, (10 + i * (PANEL + 10), 60))
     y = 60 + top[0].height + 40
     for box, a, b in rows:
-        d.text((10, y), f"зона {box}  ×{a.width / (box[2] - box[0]):.1f}   слева оригинал, справа результат",
+        d.text((10, y), f"зона {box}  ×{a.width / (box[2] - box[0]):.1f}   слева {'показанная' if base else 'оригинал'}, справа {'новая' if base else 'результат'}",
                fill="white", font=fs)
         y += 30
         sheet.paste(a, (10, y))
@@ -134,9 +137,10 @@ def main() -> int:
     ap.add_argument("--tol", type=int, default=24, help="порог «изменён», уровней (по умолчанию 24)")
     ap.add_argument("--pad", type=int, default=16, help="запас вокруг зоны правки, px")
     ap.add_argument("--zoom", type=float, default=2.0, help="увеличение зон, не больше влезающего")
+    ap.add_argument("--base", type=Path, help="последняя показанная версия: карта «показанная → новая»")
     args = ap.parse_args()
     for name in args.names:
-        build(name, args.tol, args.pad, args.zoom)
+        build(name, args.tol, args.pad, args.zoom, args.base)
     return 0
 
 

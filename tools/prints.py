@@ -438,6 +438,10 @@ def compose(name: str, cfg: dict, case: str):
                 dx = ((en_bb[2] - en_bb[0]) - (ru_bb[2] - ru_bb[0])) / 2
             elif where == "право":
                 dx = (en_bb[2] - en_bb[0]) - (ru_bb[2] - ru_bb[0])
+            # «ось» — середина надписи на этом x: «Лифт» по середине прямоугольника,
+            # «Вход» и «Сад» по оси лестницы (`cut02_010`), а не по английским буквам
+            if "ось" in lb:
+                dx = lb["ось"] - bx - (ru_bb[0] + ru_bb[2]) / 2
             at = (round(bx + dx - ox), round(by + j * step - oy))
             wide = render(text, font_name, size, sw + edge_w, squeeze)[0] if edge_w else None
             pieces.append((ru_im, wide, at))
@@ -464,7 +468,9 @@ def compose(name: str, cfg: dict, case: str):
                           f"наклон {a}°; высота {want_h:.0f} px, ширина {want_w} px")
             edge_w = edge_w_all
             continue
-        if cp.count(ImageChops.multiply(mine, forbidden)):
+        # «обход»: false — не отодвигать надпись от рисунка: «Garden» у англичан лежит
+        # прямо на линии перил, и обход уводил «Сад» на 14 px в сторону (`cut02_010`)
+        if lb.get("обход", True) and cp.count(ImageChops.multiply(mine, forbidden)):
             best = None
             # Шаг поиска был ±8 px и не вытягивал «Комната Сдобиной» из коридора
             # на шесть пикселей. Диапазон шире, порядок прежний — от нуля наружу,

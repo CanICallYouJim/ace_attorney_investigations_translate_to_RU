@@ -285,6 +285,26 @@ def compose(name: str, cfg: dict, case: str):
             raise ValueError(f"{name}: у надписи «{lb['text']}» нет «англ» — замерять не по чему")
     wanted: list[int] = []
     for lb, mask in zip(cfg["labels"], parts_of(eng, E, cfg["labels"])):
+        # «чернила» у надписи — список цветов английских букв и каймы: буквы — пиксели
+        # этих цветов (±48) в рамке. Где у других языков те же буквы на том же месте
+        # («T» в кружках `cutobj02_003`), карта `text_mask` считает их рисунком.
+        # «чернила_ярче» — буквы светлее порога в рамке (светлые надписи на тёмной
+        # табличке `cut02_005`: у немцев свои буквы на том же месте)
+        if lb.get("чернила_ярче"):
+            import numpy as np
+            A = np.asarray(E.convert("L")).astype(int)
+            x0, y0, x1, y1 = lb["box"]
+            hit = np.zeros(A.shape, bool)
+            hit[y0:y1, x0:x1] = A[y0:y1, x0:x1] > lb["чернила_ярче"]
+            mask = Image.fromarray((hit * 255).astype("uint8"))
+        if lb.get("чернила"):
+            import numpy as np
+            A = np.asarray(E).astype(int)
+            x0, y0, x1, y1 = lb["box"]
+            hit = np.zeros(A.shape[:2], bool)
+            for c in lb["чернила"]:
+                hit[y0:y1, x0:x1] |= np.abs(A[y0:y1, x0:x1] - np.array(c)).max(2) <= 48
+            mask = Image.fromarray((hit * 255).astype("uint8"))
         bb = mask.getbbox()
         if bb is None:
             raise ValueError(f"{name}: у надписи «{lb['text']}» английских чернил в рамке не нашлось")
@@ -427,7 +447,9 @@ def compose(name: str, cfg: dict, case: str):
         # У английских надписей этого пласта буквы белые, а вокруг тёмный кант:
         # без него набор читается бледно, а замер штриха сравнивает наше «только
         # буквы» с английским «буквы вместе с кантом» и всегда кричит «тоньше».
-        edge = tuple(cfg["stroke"]) if wants_edge else None
+        # «stroke» у надписи — свой цвет каймы (накладки плана `cutobj02_004`: жёлтая
+        # кайма у бурых букв и белая у сиреневых на одной картинке)
+        edge = tuple(lb.get("stroke", cfg["stroke"])) if wants_edge else None
         where = lb.get("по", "центр")
         pieces = []
         mine = Image.new("L", E.size, 0)

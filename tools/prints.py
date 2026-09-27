@@ -273,6 +273,15 @@ def compose(name: str, cfg: dict, case: str):
     raw = Image.open(EN / case / f"{name}.png")
     alpha = raw.getchannel("A") if raw.mode == "RGBA" else None
     E = raw.convert("RGB")
+    # «основа» — куски картинки другого языка, поверх которых идёт набор: [{"язык", "рамка"}].
+    # Решение пользователя 27 сентября 2026: единицы (кг вместо фунтов) — готовым куском
+    # у языка, где они уже стоят (записка «-10 kg» на `cut01_00c`).
+    if cfg.get("основа"):
+        import text_mask as tm
+        V = tm.load_variants(name)
+        for part in cfg["основа"]:
+            r = tuple(part["рамка"])
+            E.paste(V[part["язык"]].convert("RGB").crop(r), r[:2])
     m = cp.masks_for(name)
     C = m["clean"].convert("RGB")
     eng = cp.english_ink(E, C, m["mask"].convert("L"), m["hole"].convert("L"), m["paper"].convert("RGB"))

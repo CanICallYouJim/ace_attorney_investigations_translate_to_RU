@@ -180,6 +180,17 @@ def small_copy(name, job, case, folder):
     raw = Image.open(EN / case / f"{name}.png")
     out = raw.convert("RGBA")
     big = Image.open(folder / f"{job['копия']}.png").convert("RGBA")
+    # «куски» — [[рамка в большой], [рамка в мелкой]]: мелкая нарисована не ровным
+    # уменьшением, а своей раскладкой (улика `itm01_01d` — тот же щиток с рубильниками,
+    # таблички на других местах). Каждая табличка переносится своей рамкой.
+    if "куски" in job:
+        for src, dst in job["куски"]:
+            w, h = dst[2] - dst[0], dst[3] - dst[1]
+            piece = big.crop(tuple(src)).resize((w, h), Image.LANCZOS)
+            out.paste(piece, (dst[0], dst[1]))
+        if raw.mode != "RGBA":
+            out = out.convert(raw.mode)
+        return out, [f"копия {job['копия']}: кусков {len(job['куски'])}"]
     k = job["k"]
     small = big.resize((round(big.width * k), round(big.height * k)), Image.LANCZOS)
     for x0, y0, x1, y1 in job["зоны"]:

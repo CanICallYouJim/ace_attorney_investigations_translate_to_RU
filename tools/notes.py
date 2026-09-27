@@ -84,6 +84,12 @@ def red(v) -> bool:
     return v[0] > 90 and v[0] - max(v[1], v[2]) > 45
 
 
+def dark(v) -> bool:
+    """Карандаш или чёрная ручка: тёмное без оттенка (записка на шахматной диаграмме
+    `cut01_027`, 27 сентября 2026 — задание с ключом `"рука": "тёмная"`)."""
+    return max(v) < 150 and max(v) - min(v) < 40
+
+
 def fit(points):
     """Прямая через точки строки: сдвиг и наклон."""
     n = len(points)
@@ -320,6 +326,7 @@ def survey(name: str, cfg: dict, case: str) -> dict:
         for box in note.get("кроме", []):
             od.rectangle(tuple(box), fill=0)
     op = owner.load()
+    red = dark if cfg.get("рука") == "тёмная" else globals()["red"]
     pieces: list[list] = [[] for _ in cfg["пометки"]]
     stray = []
     for comp in cp.components(eng):

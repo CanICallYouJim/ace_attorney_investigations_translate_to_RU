@@ -163,8 +163,10 @@ def parts_of(eng: Image.Image, E: Image.Image, labels: list, reach: int = REACH)
     for comp in cp.components(eng):
         if 2 * sum(1 for p in comp if red(ep[p])) >= len(comp):
             continue                       # красное — рука, её набирает notes.py
-        votes = [sum(1 for x, y in comp if x0 <= x < x1 and y0 <= y < y1)
-                 for x0, y0, x1, y1 in boxes]
+        votes = []
+        for lb, (x0, y0, x1, y1) in zip(labels, boxes):
+            pts = [straight(lb, x, y) for x, y in comp] if lb.get("наклон") and "центр" in lb else comp
+            votes.append(sum(1 for x, y in pts if x0 <= x < x1 and y0 <= y < y1))
         # ничья — той рамке, чья середина ближе к куску по высоте, потом по ширине (точка над «i» в «Eddie»
         # лежит и в рамке «Senior Partner» строкой выше, `itm01_017`)
         cx = sum(x for x, _ in comp) / len(comp)
@@ -268,9 +270,23 @@ def dark_zone(E: Image.Image, box, thr: int, grow: int) -> Image.Image:
 
 
 def centre(lb: dict) -> tuple[float, float]:
-    """Точка, вокруг которой поворачивается надпись с «наклоном», — середина её рамки."""
+    """Точка, вокруг которой поворачивается надпись с «наклоном», — «центр» из задания
+    или середина её рамки. У надписи с «наклоном» рамка задана в выпрямленных
+    координатах (повёрнутой на −наклон вокруг этой точки): наклонные строки подряд
+    в прямых рамках перекрываются (`cut01_027`, записка под 10°)."""
+    if "центр" in lb:
+        return tuple(lb["центр"])
     x0, y0, x1, y1 = lb["box"]
     return ((x0 + x1) / 2, (y0 + y1) / 2)
+
+
+def straight(lb: dict, x: float, y: float) -> tuple[float, float]:
+    """Точка картинки в выпрямленных координатах надписи — так же, как `Image.rotate(-наклон)`."""
+    import math
+    a = math.radians(-lb.get("наклон", 0))
+    cx, cy = centre(lb)
+    dx, dy = x - cx, y - cy
+    return (cx + dx * math.cos(a) + dy * math.sin(a), cy - dx * math.sin(a) + dy * math.cos(a))
 
 
 def compose(name: str, cfg: dict, case: str):
@@ -365,6 +381,28 @@ def compose(name: str, cfg: dict, case: str):
                 import numpy as np
                 out = Image.fromarray(cv2.inpaint(np.asarray(out.convert("RGB")),
                                                   np.asarray(dark), 5, cv2.INPAINT_TELEA))
+    # «заплатки» у надписи: [dx, dy] — где её буквы с каймой сидели, взять пиксели
+    # оригинала со сдвигом (соседняя пустая клетка той же сетки, `cut01_027`: кайма
+    # фигур перекрывала линии доски, и подложки там не показал ни один язык).
+    # Красное (пометка кружком) не трогается.
+    for (lb, mask, bb) in jobs:
+        if lb.get("заплатка"):
+            import numpy as np
+            dx, dy = lb["заплатка"]
+            own = mask
+            if lb.get("наклон"):
+                own = mask.rotate(lb["наклон"], resample=Image.NEAREST, center=centre(lb))
+            zone_p = np.asarray(own.filter(ImageFilter.MaxFilter(2 * lb.get("заплатка_шире", 6) + 1))) > 0
+            O = np.asarray(out.convert("RGB")).copy()
+            S = np.asarray(E).astype(int)
+            ys, xs = np.nonzero(zone_p)
+            ok = (ys + dy >= 0) & (ys + dy < O.shape[0]) & (xs + dx >= 0) & (xs + dx < O.shape[1])
+            ys, xs = ys[ok], xs[ok]
+            src = S[ys + dy, xs + dx]
+            here = S[ys, xs]
+            keep = (here[:, 0] > 150) & (here[:, 1] < 110)       # красный кружок
+            O[ys[~keep], xs[~keep]] = src[~keep]
+            out = Image.fromarray(O)
     if "чужие_ореолы" in cfg:
         out = lone_values(name, out, zone, m["paper"], cfg["чужие_ореолы"], cfg.get("кайма_чужих", 6))
     ink = Image.new("L", E.size, 0)
@@ -382,6 +420,11 @@ def compose(name: str, cfg: dict, case: str):
         lines_ru = lb["text"].split("|")
         want_h = (bb[3] - bb[1] - LINE_GAP * (len(lines_en) - 1)) / len(lines_en)
         want_w = bb[2] - bb[0]
+        # «вычесть» у надписи (px) — английские чернила включают обводку и белую кайму
+        # вокруг буквы (фигуры на шахматной диаграмме `cut01_027`); сама буква меньше
+        if lb.get("вычесть"):
+            want_h -= 2 * lb["вычесть"]
+            want_w -= 2 * lb["вычесть"]
         size = pick_size(lines_en[0], font_name, 0, 1.0, want_h)
         wide = render(lines_en[0], font_name, size, 0, 1.0)[2]
         squeeze = (min(1.25, max(0.45, want_w / max(1, wide[2] - wide[0])))

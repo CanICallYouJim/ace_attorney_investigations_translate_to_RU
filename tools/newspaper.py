@@ -191,11 +191,52 @@ def small_copy(name, job, case, folder):
         if raw.mode != "RGBA":
             out = out.convert(raw.mode)
         return out, [f"копия {job['копия']}: кусков {len(job['куски'])}"]
+    # «найти» — [рамки в большой]: каждая рамка ищется в мелкой сама (английская большая,
+    # уменьшенная ×k, против английской мелкой, cv2.matchTemplate), и туда ложатся только
+    # пиксели, где русская большая отличается от английской (с запасом 2 px). Мелкая
+    # нарисована своей раскладкой: улика `itm01_00b` повёрнута иначе, чем `cut01_027`,
+    # и общий сдвиг давал двойные линии доски (27 сентября 2026).
+    if "найти" in job:
+        import cv2
+        from scipy.ndimage import binary_dilation
+        k = job["k"]
+        en_big = Image.open(EN / case / f"{job['копия']}.png").convert("RGB")
+        small_en = np.asarray(raw.convert("RGB")).astype(np.float32)
+        O = np.asarray(out).copy()
+        report = []
+        for x0, y0, x1, y1 in job["найти"]:
+            w, h = round((x1 - x0) * k), round((y1 - y0) * k)
+            e = np.asarray(en_big.crop((x0, y0, x1, y1)).resize((w, h), Image.LANCZOS)).astype(np.float32)
+            r = np.asarray(big.convert("RGB").crop((x0, y0, x1, y1)).resize((w, h), Image.LANCZOS))
+            # поиск — в «окне» вокруг места по общему «сдвигу»: одинаковые буквы
+            # (две ладьи, три пешки) иначе находят друг друга
+            ox, oy = job.get("сдвиг", (0, 0))
+            win = job.get("окно", 16)
+            ex, ey = round(x0 * k) + ox, round(y0 * k) + oy
+            sx0, sy0 = max(0, ex - win), max(0, ey - win)
+            area = small_en[sy0:ey + h + win, sx0:ex + w + win]
+            res = cv2.matchTemplate(area, e, cv2.TM_CCOEFF_NORMED)
+            _, score, _, (px, py) = cv2.minMaxLoc(res)
+            px, py = px + sx0, py + sy0
+            diff = np.abs(np.asarray(big.convert("RGB").crop((x0, y0, x1, y1))).astype(int)
+                          - np.asarray(en_big.crop((x0, y0, x1, y1))).astype(int)).max(2) > 24
+            m = np.asarray(Image.fromarray((diff * 255).astype("uint8")).resize((w, h), Image.BILINEAR)) > 20
+            m = binary_dilation(m, iterations=2)
+            sub = O[py:py + h, px:px + w]
+            sub[m, :3] = r[m]
+            report.append(f"рамка {x0},{y0}: совпадение {score:.2f} в ({px},{py})")
+        res_im = Image.fromarray(O)
+        if raw.mode != "RGBA":
+            res_im = res_im.convert(raw.mode)
+        return res_im, report
     k = job["k"]
+    # «сдвиг» — мелкая лежит не от угла большой (улика `itm01_00b` — шахматная диаграмма
+    # `cut01_027`, уменьшенная ×0,208 и сдвинутая, замер cv2.matchTemplate 0,84)
+    ox, oy = job.get("сдвиг", (0, 0))
     small = big.resize((round(big.width * k), round(big.height * k)), Image.LANCZOS)
     for x0, y0, x1, y1 in job["зоны"]:
         box = (round(x0 * k), round(y0 * k), round(x1 * k), round(y1 * k))
-        out.paste(small.crop(box), box[:2])
+        out.paste(small.crop(box), (box[0] + ox, box[1] + oy))
     if raw.mode != "RGBA":
         out = out.convert(raw.mode)
     return out, [f"копия {job['копия']} ×{k}: зон {len(job['зоны'])}"]

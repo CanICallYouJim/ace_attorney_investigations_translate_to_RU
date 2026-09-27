@@ -332,8 +332,22 @@ def compose(name: str, cfg: dict, case: str):
             A = np.asarray(E).astype(int)
             x0, y0, x1, y1 = lb["box"]
             hit = np.zeros(A.shape[:2], bool)
-            for c in lb["чернила"]:
-                hit[y0:y1, x0:x1] |= np.abs(A[y0:y1, x0:x1] - np.array(c)).max(2) <= 48
+            if lb.get("наклон") and "центр" in lb:
+                # рамка задана в выпрямленных координатах — берём пиксели, чья
+                # выпрямленная точка лежит в рамке (перчатка `itm01_002`, 45°)
+                cx, cy = centre(lb)
+                rad = int(((x1 - x0) ** 2 + (y1 - y0) ** 2) ** 0.5 / 2) + 2
+                gy, gx = np.mgrid[max(0, int(cy) - rad):int(cy) + rad, max(0, int(cx) - rad):int(cx) + rad]
+                a = math.radians(-lb["наклон"])
+                sx = cx + (gx - cx) * math.cos(a) + (gy - cy) * math.sin(a)
+                sy = cy - (gx - cx) * math.sin(a) + (gy - cy) * math.cos(a)
+                inside = (sx >= x0) & (sx < x1) & (sy >= y0) & (sy < y1)
+                gx, gy = gx[inside], gy[inside]
+                for c in lb["чернила"]:
+                    hit[gy, gx] |= np.abs(A[gy, gx] - np.array(c)).max(1) <= 48
+            else:
+                for c in lb["чернила"]:
+                    hit[y0:y1, x0:x1] |= np.abs(A[y0:y1, x0:x1] - np.array(c)).max(2) <= 48
             mask = Image.fromarray((hit * 255).astype("uint8"))
         bb = mask.getbbox()
         if bb is None:

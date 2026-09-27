@@ -41,8 +41,12 @@ EN = ROOT / "work" / "graphics_en"
 FD = "C:/Windows/Fonts/"
 
 
-def column_clean(E, g, box, t=22):
-    """Снять тёмные буквы: у каждого столбца свой цвет бумаги, заливка — прямой по высоте."""
+def column_clean(E, g, box, t=22, flat=False):
+    """Снять тёмные буквы: у каждого столбца свой цвет бумаги, заливка — прямой по высоте.
+
+    `flat` — заливка столбца одним цветом (медиана чистой бумаги): этикетка флакона
+    `itm02_026` — цилиндр, цвет зависит только от столбца, а чистой бумаги над буквами
+    два-три ряда, и прямая по ним уводит цвет (27 сентября 2026)."""
     x0, y0, x1, y1 = box
     sub = g[y0:y1, x0:x1]
     S = E[y0:y1, x0:x1].astype(float)
@@ -53,6 +57,9 @@ def column_clean(E, g, box, t=22):
     fill = np.full(S.shape, np.nan)
     for x in range(x1 - x0):
         ok = paper[:, x]
+        if flat and ok.sum() >= 2:
+            fill[:, x, :] = np.median(S[ok, x], axis=0)
+            continue
         if ok.sum() < 6:
             continue          # чистой бумаги в столбце нет — цвет возьмёт у соседей ниже
         for c in range(3):
@@ -155,13 +162,32 @@ def build(name, job, case):
         if lb.get("угол"):
             glow_corner(E, name, lb["угол"])
         else:
-            column_clean(E, g, lb["box"])
+            column_clean(E, g, lb["box"], flat=lb.get("flat", False))
     out = Image.fromarray(E)
     report = [place(out, lb, bb) for lb, bb in zip(job["labels"], bbs)]
     if alpha is not None:
         out = out.convert("RGBA")
         out.putalpha(alpha)
     return out, report
+
+
+def small_copy(name, job, case, folder):
+    """Мелкая копия картинки: в зонах надписей — уменьшенная русская большая, вне их — оригинал.
+
+    `копия` — имя большой (набирается раньше, в том же задании), `k` — масштаб,
+    `зоны` — рамки в координатах большой. Так сделана `logic02_023_s` — это
+    `itm02_026_00_l`, уменьшенная ровно в 158/300 (27 сентября 2026)."""
+    raw = Image.open(EN / case / f"{name}.png")
+    out = raw.convert("RGBA")
+    big = Image.open(folder / f"{job['копия']}.png").convert("RGBA")
+    k = job["k"]
+    small = big.resize((round(big.width * k), round(big.height * k)), Image.LANCZOS)
+    for x0, y0, x1, y1 in job["зоны"]:
+        box = (round(x0 * k), round(y0 * k), round(x1 * k), round(y1 * k))
+        out.paste(small.crop(box), box[:2])
+    if raw.mode != "RGBA":
+        out = out.convert(raw.mode)
+    return out, [f"копия {job['копия']} ×{k}: зон {len(job['зоны'])}"]
 
 
 def main() -> int:
@@ -174,7 +200,10 @@ def main() -> int:
     for name, job in spec.items():
         if name.startswith("_") or (args.only and name != args.only):
             continue
-        out, report = build(name, job, case)
+        if "копия" in job:
+            out, report = small_copy(name, job, case, args.spec.parent)
+        else:
+            out, report = build(name, job, case)
         out.save(args.spec.parent / f"{name}.png")
         print(name)
         for r in report:

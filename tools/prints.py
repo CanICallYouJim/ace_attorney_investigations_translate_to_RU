@@ -161,6 +161,54 @@ def parts_of(eng: Image.Image, E: Image.Image, labels: list, reach: int = REACH)
     return out
 
 
+def lone_values(name: str, out: Image.Image, zone: Image.Image, paper: Image.Image, t: int) -> Image.Image:
+    """Подложка без чужих кайм: значение, которое показал один язык, — не бумага.
+
+    Ключ задания `чужие_ореолы` (27 сентября 2026, план `cut02_010`): у всех языков
+    вокруг букв белая кайма светлее бумаги плана, и правило `text_mask` «бумага бьёт
+    чернила» брало её за бумагу — под русской надписью оставались белые облачка
+    чужих слов. Здесь в зоне снятия пиксель, который подтверждают меньше двух языков
+    (в пределах `t`), заменяется медианой языков, показавших бумагу, иначе — бумагой."""
+    import numpy as np
+    import text_mask as tm
+    V = tm.load_variants(name)
+    cube = np.stack([np.asarray(V[k].convert("RGB")).astype(int) for k in V if k != "eng"])
+    O = np.asarray(out.convert("RGB")).astype(int)
+    P = np.asarray(paper.convert("RGB")).astype(int)
+    Z = np.asarray(zone.convert("L")) > 0
+    agree = (np.abs(cube - O[None]).max(3) <= t).sum(0)
+    papery = np.abs(cube - P[None]).max(3) <= t
+    bad = Z & (agree < 2)
+    R = O.copy()
+    for y, x in zip(*np.nonzero(bad)):
+        ok = papery[:, y, x]
+        R[y, x] = np.median(cube[ok, y, x], axis=0) if ok.any() else P[y, x]
+    res = Image.fromarray(R.astype("uint8"))
+    return res.convert(out.mode) if out.mode != "RGB" else res
+
+
+def rub_dark(out: Image.Image, E: Image.Image, box, thr: int, grow: int) -> Image.Image:
+    """Ключ надписи `снять_тёмное`: тёмные пиксели оригинала в рамке затереть соседями.
+
+    Для кусков английских букв, которые `text_mask` счёл рисунком, потому что у другого
+    языка на том же месте те же буквы («en» в `Garden` и `Garten`, `cut02_010`)."""
+    import cv2
+    import numpy as np
+    g = np.asarray(E.convert("L"))
+    D = np.zeros(g.shape, np.uint8)
+    x0, y0, x1, y1 = box
+    D[y0:y1, x0:x1] = (g[y0:y1, x0:x1] < thr) * 255
+    D = cv2.dilate(D, np.ones((2 * grow + 1, 2 * grow + 1), np.uint8))
+    O = np.asarray(out.convert("RGB"))
+    return Image.fromarray(cv2.inpaint(O, D, 5, cv2.INPAINT_TELEA))
+
+
+def centre(lb: dict) -> tuple[float, float]:
+    """Точка, вокруг которой поворачивается надпись с «наклоном», — середина её рамки."""
+    x0, y0, x1, y1 = lb["box"]
+    return ((x0 + x1) / 2, (y0 + y1) / 2)
+
+
 def compose(name: str, cfg: dict, case: str):
     """Картинка с русскими печатными надписями, маска букв и отчёт."""
     raw = Image.open(EN / case / f"{name}.png")
@@ -182,11 +230,23 @@ def compose(name: str, cfg: dict, case: str):
         if bb is None:
             raise ValueError(f"{name}: у надписи «{lb['text']}» английских чернил в рамке не нашлось")
         gone = ImageChops.lighter(gone, mask)
+        # «наклон» (градусы, против часовой) — строка на карточке в перспективе
+        # (`itm02_024`, 27 сентября 2026): замер идёт по выпрямленным английским
+        # буквам, русская строка набирается прямо и поворачивается обратно.
+        if lb.get("наклон"):
+            mask = mask.rotate(-lb["наклон"], resample=Image.NEAREST, center=centre(lb))
+            bb = mask.getbbox()
         jobs.append((lb, mask, bb))
 
     # «снять_шире» — светлая кайма английских букв бывает шире GROW (cut02_004, «Garden»)
     grow = cfg.get("снять_шире", GROW)
     out = Image.composite(C, E, gone.filter(ImageFilter.MaxFilter(2 * grow + 1)))
+    if "чужие_ореолы" in cfg:
+        out = lone_values(name, out, gone.filter(ImageFilter.MaxFilter(2 * grow + 1)),
+                          m["paper"], cfg["чужие_ореолы"])
+    for lb in cfg["labels"]:
+        if "снять_тёмное" in lb:
+            out = rub_dark(out, E, lb["box"], lb["снять_тёмное"], grow)
     ink = Image.new("L", E.size, 0)
     # Область та же, какой её берёт судья (`check_pictures`: рамка русских чернил
     # на всей картинке), а не «рамка английских ±40»: от запаса поле надписи
@@ -304,6 +364,23 @@ def compose(name: str, cfg: dict, case: str):
         # был пробел, — на точку или линию плана. Тогда надпись сдвигается на пару пикселей:
         # глазу это незаметно, а на рисунок она уже не ложится (20 сентября 2026).
         shift = (0, 0)
+        if lb.get("наклон"):
+            a, c = lb["наклон"], centre(lb)
+            body, rim = Image.new("L", E.size, 0), Image.new("L", E.size, 0)
+            for ru_im, wide, at in pieces:
+                body.paste(255, at, ru_im)
+                if wide is not None:
+                    rim.paste(255, at, wide)
+            body = body.rotate(a, resample=Image.BICUBIC, center=c)
+            if edge_w:
+                rim = rim.rotate(a, resample=Image.BICUBIC, center=c)
+                out.paste(edge, (0, 0), rim)
+                ink.paste(255, (0, 0), solid(rim))
+            out.paste(colour, (0, 0), body)
+            ink.paste(255, (0, 0), solid(body))
+            report.append(f"  {lb['text'].replace('|', ' / ')}: кегль {size}, сжатие {squeeze:.3f}, "
+                          f"наклон {a}°; высота {want_h:.0f} px, ширина {want_w} px")
+            continue
         if cp.count(ImageChops.multiply(mine, forbidden)):
             best = None
             # Шаг поиска был ±8 px и не вытягивал «Комната Сдобиной» из коридора

@@ -165,7 +165,12 @@ def parts_of(eng: Image.Image, E: Image.Image, labels: list, reach: int = REACH)
             continue                       # красное — рука, её набирает notes.py
         votes = [sum(1 for x, y in comp if x0 <= x < x1 and y0 <= y < y1)
                  for x0, y0, x1, y1 in boxes]
-        best = max(range(len(votes)), key=lambda k: votes[k])
+        # ничья — той рамке, чья середина ближе к куску по высоте, потом по ширине (точка над «i» в «Eddie»
+        # лежит и в рамке «Senior Partner» строкой выше, `itm01_017`)
+        cx = sum(x for x, _ in comp) / len(comp)
+        cy = sum(y for _, y in comp) / len(comp)
+        best = max(range(len(votes)), key=lambda k: (votes[k], -abs((boxes[k][1] + boxes[k][3]) / 2 - cy),
+                                                     -abs((boxes[k][0] + boxes[k][2]) / 2 - cx)))
         if 2 * votes[best] <= len(comp):
             continue                   # кусок больше снаружи рамки, чем внутри, — не эта надпись
         for p in comp:
@@ -322,6 +327,12 @@ def compose(name: str, cfg: dict, case: str):
         # (`itm02_024`, 27 сентября 2026): замер идёт по выпрямленным английским
         # буквам, русская строка набирается прямо и поворачивается обратно.
         if lb.get("наклон"):
+            # одиночные пиксели шума растягивают рамку выпрямленной строки вдвое
+            # (визитка `itm01_017`: пиксель у края рамки — высота 24 вместо 11)
+            for comp in cp.components(mask):
+                if len(comp) < 4:
+                    for p in comp:
+                        mask.putpixel(p, 0)
             mask = mask.rotate(-lb["наклон"], resample=Image.NEAREST, center=centre(lb))
             bb = mask.getbbox()
         jobs.append((lb, mask, bb))

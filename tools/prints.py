@@ -58,8 +58,20 @@ def load_font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONT_DIR / f"{name}.ttf"), size)
 
 
-def render(text: str, font_name: str, size: int, sw: int, squeeze: float):
-    """Строка маской, точка опоры в ней (левый край базовой линии) и рамка чернил от опоры."""
+def render(text: str, font_name: str, size: int, sw: float, squeeze: float):
+    """Строка маской, точка опоры в ней (левый край базовой линии) и рамка чернил от опоры.
+
+    Дробный `sw` (контур надписи, 27 сентября 2026: визитка `itm02_024` — 0 тонко, 1 жирно)
+    набирается вчетверо крупнее с контуром `4·sw` и уменьшается."""
+    if sw != int(sw):
+        im, (ox, oy), _ = render(text, font_name, size * 4, round(sw * 4), squeeze)
+        im = im.resize((max(1, round(im.width / 4)), max(1, round(im.height / 4))), Image.LANCZOS)
+        ox, oy = ox / 4, oy / 4
+        # рамка — без бледной каймы сглаживания от уменьшения: с ней буквы «выше»
+        # на 2 px сверху и снизу, и подбор кегля мельчил вдвое
+        bb = im.point(lambda v: 255 if v > 64 else 0).getbbox()
+        return im, (ox, oy), (bb[0] - ox, bb[1] - oy, bb[2] - ox, bb[3] - oy)
+    sw = int(sw)
     font = load_font(font_name, size)
     pad = size * 2
     im = Image.new("L", (int(font.getlength(text)) + 4 * pad, 4 * size), 0)
@@ -162,45 +174,69 @@ def parts_of(eng: Image.Image, E: Image.Image, labels: list, reach: int = REACH)
 
 
 def lone_values(name: str, out: Image.Image, zone: Image.Image, paper: Image.Image, t: int) -> Image.Image:
-    """Подложка без чужих кайм: значение, которое показал один язык, — не бумага.
+    """Подложка без чужих кайм: значение, которое показала одна группа языков, — не бумага.
 
     Ключ задания `чужие_ореолы` (27 сентября 2026, план `cut02_010`): у всех языков
     вокруг букв белая кайма светлее бумаги плана, и правило `text_mask` «бумага бьёт
     чернила» брало её за бумагу — под русской надписью оставались белые облачка
-    чужих слов. Здесь в зоне снятия пиксель, который подтверждают меньше двух языков
+    чужих слов. Здесь в зоне снятия пиксель, который подтверждают меньше двух групп
     (в пределах `t`), заменяется медианой языков, показавших бумагу, иначе — бумагой."""
     import numpy as np
     import text_mask as tm
     V = tm.load_variants(name)
     cube = np.stack([np.asarray(V[k].convert("RGB")).astype(int) for k in V if k != "eng"])
     O = np.asarray(out.convert("RGB")).astype(int)
-    P = np.asarray(paper.convert("RGB")).astype(int)
     Z = np.asarray(zone.convert("L")) > 0
-    agree = (np.abs(cube - O[None]).max(3) <= t).sum(0)
-    papery = np.abs(cube - P[None]).max(3) <= t
-    bad = Z & (agree < 2)
+    # Бумага — средняя светлая окрестность вне зоны снятия, а не карта `text_mask`:
+    # в белых окошках плана та записала бумагой белую кайму (247, 254, 254 против
+    # настоящих 220, 240, 250), и кайма проходила за бумагу.
+    from scipy.ndimage import uniform_filter
+    w = (~Z & (O.mean(2) > 150)).astype(float)
+    den = uniform_filter(w, 41)
+    P = np.asarray(paper.convert("RGB")).astype(int).copy()
+    for c in range(3):
+        num = uniform_filter(O[..., c] * w, 41)
+        P[..., c] = np.where(den > 0.05, num / np.maximum(den, 1e-6), P[..., c])
+    # Считаются группы, а не языки: у обоих китайских и японского одни иероглифы
+    # одним шрифтом, и их буквы «подтверждали» друг друга (точки на `cut02_010`).
+    langs = [k for k in V if k != "eng"]
+    # Чернила и каймы бесцветны. Где местная бумага цветная (голубой узор под
+    # `Garden`), бесцветное — всегда чужая буква; где бесцветная — если далеко от неё.
+    colour_p = (P.max(2) - P.min(2)) >= 25
+
+    def foreign_of(X):
+        grey = (X.max(-1) - X.min(-1)) < 25
+        return grey & (colour_p | (np.abs(X.mean(-1) - P.mean(2)) > 2 * t))
+    near = np.abs(cube - O[None]).max(3) <= t
+    agree = np.zeros(O.shape[:2], int)
+    for g in {tm.GROUP[k] for k in langs}:
+        agree += near[[i for i, k in enumerate(langs) if tm.GROUP[k] == g]].any(0)
+    # Буквы и каймы, общие у двух групп («A» у немецкого AZ и французского ASC
+    # на месте EL), голосованием не ловятся — их ловит бесцветность.
+    clean = ~np.stack([foreign_of(c) for c in cube])
+    bad = Z & ((agree < 2) | foreign_of(O))
     R = O.copy()
     for y, x in zip(*np.nonzero(bad)):
-        ok = papery[:, y, x]
+        ok = clean[:, y, x]
         R[y, x] = np.median(cube[ok, y, x], axis=0) if ok.any() else P[y, x]
     res = Image.fromarray(R.astype("uint8"))
     return res.convert(out.mode) if out.mode != "RGB" else res
 
 
-def rub_dark(out: Image.Image, E: Image.Image, box, thr: int, grow: int) -> Image.Image:
-    """Ключ надписи `снять_тёмное`: тёмные пиксели оригинала в рамке затереть соседями.
+def dark_zone(E: Image.Image, box, thr: int, grow: int) -> Image.Image:
+    """Ключ надписи `снять_тёмное`: тёмные пиксели оригинала в рамке — тоже снимать.
 
     Для кусков английских букв, которые `text_mask` счёл рисунком, потому что у другого
-    языка на том же месте те же буквы («en» в `Garden` и `Garten`, `cut02_010`)."""
+    языка на том же месте те же буквы («en» в `Garden` и `Garten`, `cut02_010`). Зона
+    уходит в чистку `чужие_ореолы` (значение — у языков, показавших здесь фон), а без
+    неё — в `cv2.inpaint`: он размазывает узор, поэтому только запасной путь."""
     import cv2
     import numpy as np
     g = np.asarray(E.convert("L"))
     D = np.zeros(g.shape, np.uint8)
     x0, y0, x1, y1 = box
     D[y0:y1, x0:x1] = (g[y0:y1, x0:x1] < thr) * 255
-    D = cv2.dilate(D, np.ones((2 * grow + 1, 2 * grow + 1), np.uint8))
-    O = np.asarray(out.convert("RGB"))
-    return Image.fromarray(cv2.inpaint(O, D, 5, cv2.INPAINT_TELEA))
+    return Image.fromarray(cv2.dilate(D, np.ones((2 * grow + 1, 2 * grow + 1), np.uint8)))
 
 
 def centre(lb: dict) -> tuple[float, float]:
@@ -241,12 +277,18 @@ def compose(name: str, cfg: dict, case: str):
     # «снять_шире» — светлая кайма английских букв бывает шире GROW (cut02_004, «Garden»)
     grow = cfg.get("снять_шире", GROW)
     out = Image.composite(C, E, gone.filter(ImageFilter.MaxFilter(2 * grow + 1)))
-    if "чужие_ореолы" in cfg:
-        out = lone_values(name, out, gone.filter(ImageFilter.MaxFilter(2 * grow + 1)),
-                          m["paper"], cfg["чужие_ореолы"])
+    zone = gone.filter(ImageFilter.MaxFilter(2 * grow + 1))
     for lb in cfg["labels"]:
         if "снять_тёмное" in lb:
-            out = rub_dark(out, E, lb["box"], lb["снять_тёмное"], grow)
+            dark = dark_zone(E, lb["box"], lb["снять_тёмное"], grow)
+            zone = ImageChops.lighter(zone, dark)
+            if "чужие_ореолы" not in cfg:
+                import cv2
+                import numpy as np
+                out = Image.fromarray(cv2.inpaint(np.asarray(out.convert("RGB")),
+                                                  np.asarray(dark), 5, cv2.INPAINT_TELEA))
+    if "чужие_ореолы" in cfg:
+        out = lone_values(name, out, zone, m["paper"], cfg["чужие_ореолы"])
     ink = Image.new("L", E.size, 0)
     # Область та же, какой её берёт судья (`check_pictures`: рамка русских чернил
     # на всей картинке), а не «рамка английских ±40»: от запаса поле надписи
@@ -280,8 +322,8 @@ def compose(name: str, cfg: dict, case: str):
         # «контур» в задании — задать руками: замер штриха рассчитан на светлые буквы
         # с тёмным кантом и на обратной палитре (тёмные буквы, светлая кайма, cut02_004)
         # ошибается вдвое. Судит глаз по листу (курс 23 сентября 2026).
-        if "контур" in cfg:
-            sw = cfg["контур"]
+        if "контур" in lb or "контур" in cfg:
+            sw = lb.get("контур", cfg.get("контур"))
             size = pick_size(lines_en[0], font_name, sw, squeeze, want_h)
         elif cp.stroke(solid(render(lines_en[0], font_name, size, 0, squeeze)[0])) < THIN * en_stroke:
             sw = 1

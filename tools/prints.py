@@ -173,7 +173,8 @@ def parts_of(eng: Image.Image, E: Image.Image, labels: list, reach: int = REACH)
     return out
 
 
-def lone_values(name: str, out: Image.Image, zone: Image.Image, paper: Image.Image, t: int) -> Image.Image:
+def lone_values(name: str, out: Image.Image, zone: Image.Image, paper: Image.Image, t: int,
+                rim: int = 6) -> Image.Image:
     """Подложка без чужих кайм: значение, которое показала одна группа языков, — не бумага.
 
     Ключ задания `чужие_ореолы` (27 сентября 2026, план `cut02_010`): у всех языков
@@ -214,8 +215,30 @@ def lone_values(name: str, out: Image.Image, zone: Image.Image, paper: Image.Ima
     # Буквы и каймы, общие у двух групп («A» у немецкого AZ и французского ASC
     # на месте EL), голосованием не ловятся — их ловит бесцветность.
     clean = ~np.stack([foreign_of(c) for c in cube])
-    bad = Z & ((agree < 2) | foreign_of(O))
+    # Первый ход — по буквам (27 сентября 2026): буквы у всех языков чёрные, а кайма
+    # вокруг не шире `rim` px (ключ `кайма_чужих`). Фон в точке показывают языки,
+    # чьи буквы с каймой её не покрывают. Правило «бесцветное далеко от бумаги» ниже
+    # рвало светлые дуги рисунка под подписями, поэтому оно — только там, где буквы
+    # с каймой есть у всех.
+    from scipy.ndimage import binary_dilation
     R = O.copy()
+    ys, xs = np.nonzero(Z)
+    if len(ys):
+        y0, y1 = max(0, ys.min() - rim), ys.max() + rim + 1
+        x0, x1 = max(0, xs.min() - rim), xs.max() + rim + 1
+        sub = cube[:, y0:y1, x0:x1]
+        # буквы — чёрное, и белая кайма заметно светлее местной бумаги (в белых
+        # окошках кайма бывает дальше `rim` от чёрного, а бумага там голубоватая)
+        grey = (sub.max(-1) - sub.min(-1)) < 30
+        lift = sub.mean(-1) - P[y0:y1, x0:x1].mean(-1)[None]
+        ink = grey & ((sub.mean(-1) < 110) | (lift > 2 * t))
+        free = np.zeros(cube.shape[:3], bool)
+        free[:, y0:y1, x0:x1] = np.stack([~binary_dilation(i, iterations=rim) for i in ink])
+        seen = Z & free.any(0)
+        for y, x in zip(*np.nonzero(seen)):
+            R[y, x] = np.median(cube[free[:, y, x], y, x], axis=0)
+        Z = Z & ~seen
+    bad = Z & ((agree < 2) | foreign_of(O))
     for y, x in zip(*np.nonzero(bad)):
         ok = clean[:, y, x]
         R[y, x] = np.median(cube[ok, y, x], axis=0) if ok.any() else P[y, x]
@@ -278,6 +301,21 @@ def compose(name: str, cfg: dict, case: str):
     grow = cfg.get("снять_шире", GROW)
     out = Image.composite(C, E, gone.filter(ImageFilter.MaxFilter(2 * grow + 1)))
     zone = gone.filter(ImageFilter.MaxFilter(2 * grow + 1))
+    # «затереть» у надписи (радиус, px): её английские буквы с ореолом затираются
+    # соседями (`cv2.inpaint`), а не подложкой — шапка плана `cut02_010`: заголовок
+    # во всю ширину есть у всех семи языков, неба под ним не показывает никто.
+    for (lb, mask, bb) in jobs:
+        if lb.get("затереть"):
+            import cv2
+            import numpy as np
+            r = lb["затереть"]
+            own = mask
+            if lb.get("наклон"):
+                own = mask.rotate(lb["наклон"], resample=Image.NEAREST, center=centre(lb))
+            hole = own.filter(ImageFilter.MaxFilter(2 * r + 1))
+            out = Image.fromarray(cv2.inpaint(np.asarray(out.convert("RGB")),
+                                              np.asarray(hole), 9, cv2.INPAINT_TELEA))
+            zone = ImageChops.subtract(zone, hole)
     for lb in cfg["labels"]:
         if "снять_тёмное" in lb:
             dark = dark_zone(E, lb["box"], lb["снять_тёмное"], grow)
@@ -288,7 +326,7 @@ def compose(name: str, cfg: dict, case: str):
                 out = Image.fromarray(cv2.inpaint(np.asarray(out.convert("RGB")),
                                                   np.asarray(dark), 5, cv2.INPAINT_TELEA))
     if "чужие_ореолы" in cfg:
-        out = lone_values(name, out, zone, m["paper"], cfg["чужие_ореолы"])
+        out = lone_values(name, out, zone, m["paper"], cfg["чужие_ореолы"], cfg.get("кайма_чужих", 6))
     ink = Image.new("L", E.size, 0)
     # Область та же, какой её берёт судья (`check_pictures`: рамка русских чернил
     # на всей картинке), а не «рамка английских ±40»: от запаса поле надписи
@@ -375,6 +413,8 @@ def compose(name: str, cfg: dict, case: str):
     for lb, mask, bb in jobs:
         (font_name, lines_en, lines_ru, want_h, want_w,
          size, squeeze, sw, en_stroke) = geometry(lb, mask, bb)
+        # «кант» у надписи — свой: шапка плана `cut02_010` без канта, но с ореолом
+        edge_w_all, edge_w = edge_w, lb.get("кант", edge_w)
         ru_stroke = cp.stroke(solid(render(lines_ru[0], font_name, size,
                                            sw + edge_w, squeeze)[0]))
 
@@ -422,6 +462,7 @@ def compose(name: str, cfg: dict, case: str):
             ink.paste(255, (0, 0), solid(body))
             report.append(f"  {lb['text'].replace('|', ' / ')}: кегль {size}, сжатие {squeeze:.3f}, "
                           f"наклон {a}°; высота {want_h:.0f} px, ширина {want_w} px")
+            edge_w = edge_w_all
             continue
         if cp.count(ImageChops.multiply(mine, forbidden)):
             best = None
@@ -445,6 +486,14 @@ def compose(name: str, cfg: dict, case: str):
             # «сдвиг» надписи — поправка глазом по листу (cut02_004: «В» заходила на стену)
             nudge = lb.get("сдвиг", (0, 0))
             place = (at[0] + shift[0] + nudge[0], at[1] + shift[1] + nudge[1])
+            # «ореол» у надписи — мягкое свечение под буквами: {"цвет", "радиус", "сила"}
+            glow = lb.get("ореол")
+            if glow:
+                r = glow["радиус"]
+                halo = ru_im.filter(ImageFilter.MaxFilter(2 * (r // 2) + 1)).filter(
+                    ImageFilter.GaussianBlur(r / 2)).point(
+                    lambda v, k=glow.get("сила", 1.0): min(255, int(v * k)))
+                out.paste(tuple(glow["цвет"]), place, halo)
             if wide is not None:
                 out.paste(edge, place, wide)
                 ink.paste(255, place, solid(wide))
@@ -454,6 +503,7 @@ def compose(name: str, cfg: dict, case: str):
                       f"высота {want_h:.0f} px, ширина {want_w} px; штрих наш {ru_stroke:.1f} против "
                       f"английского {en_stroke:.1f}; кант {edge_w}"
                       + (f"; сдвиг {shift}" if shift != (0, 0) else ""))
+        edge_w = edge_w_all
     # Сравнение «штрих против штриха» по мерке `stroke` здесь не судья: она растёт,
     # когда соседние буквы слипаются кантом, и у длинного «Gusto's Room» показывает
     # 17,5 против 11,6 у «Elevator» при одном и том же канте. Судим по прямому

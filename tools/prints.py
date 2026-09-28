@@ -629,6 +629,10 @@ def compose(name: str, cfg: dict, case: str):
         # в рамку английских чернил, и его базовая линия становится нашей.
         _, _, en_bb = render(lines_en[0], font_name, size, sw, squeeze)
         bx, by = bb[0] - en_bb[0], bb[1] - en_bb[1]
+        # «вычесть» мельчит букву внутри английской рамки — и сверху тоже: без этого
+        # строка прижималась к верху рамки («Осеннее крыло», `cutobj02_004`)
+        if lb.get("вычесть"):
+            bx, by = bx + lb["вычесть"], by + lb["вычесть"]
         step = want_h + LINE_GAP
         colour = tuple(lb.get("fill", cfg["fill"]))
         # У английских надписей этого пласта буквы белые, а вокруг тёмный кант:
@@ -643,15 +647,25 @@ def compose(name: str, cfg: dict, case: str):
         for j, text in enumerate(lines_ru):
             ru_im, (ox, oy), ru_bb = render(text, font_name, size, sw, squeeze)
             dx = 0.0
+            # Центр и правый край — по **настоящим** английским чернилам `bb`, а не по
+            # английской строке нашей гарнитурой `en_bb`: та сжимается вместе с русской
+            # (длинное слово жмётся по ширине) и остаётся прижатой к левому краю —
+            # середина уезжала влево тем дальше, чем сильнее сжатие («Комната Морозова»
+            # при 0,52, кружки плана; замечание пользователя 28 сентября 2026).
             if where == "центр":
-                dx = ((en_bb[2] - en_bb[0]) - (ru_bb[2] - ru_bb[0])) / 2
+                dx = (bb[0] + bb[2]) / 2 - bx - (ru_bb[0] + ru_bb[2]) / 2
             elif where == "право":
-                dx = (en_bb[2] - en_bb[0]) - (ru_bb[2] - ru_bb[0])
+                dx = bb[2] - bx - ru_bb[2]
             # «ось» — середина надписи на этом x: «Лифт» по середине прямоугольника,
             # «Вход» и «Сад» по оси лестницы (`cut02_010`), а не по английским буквам
             if "ось" in lb:
                 dx = lb["ось"] - bx - (ru_bb[0] + ru_bb[2]) / 2
-            at = (round(bx + dx - ox), round(by + j * step - oy))
+            # «ось_y» — середина чернил строки на этом y (однострочные надписи): буква
+            # в кружке по центру круга вместе с выносными элементами («Д», `cutobj02_003`)
+            dy = 0.0
+            if "ось_y" in lb and len(lines_ru) == 1:
+                dy = lb["ось_y"] - by - (ru_bb[1] + ru_bb[3]) / 2
+            at = (round(bx + dx - ox), round(by + j * step + dy - oy))
             wide = render(text, font_name, size, sw + edge_w, squeeze)[0] if edge_w else None
             pieces.append((ru_im, wide, at))
             mine.paste(255, at, solid(wide if wide is not None else ru_im))

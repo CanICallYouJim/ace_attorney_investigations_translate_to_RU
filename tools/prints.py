@@ -796,6 +796,18 @@ def compose(name: str, cfg: dict, case: str):
                     ImageFilter.GaussianBlur(r / 2)).point(
                     lambda v, k=glow.get("сила", 1.0): min(255, int(v * k)))
                 out.paste(tuple(glow["цвет"]), place, halo)
+            # «тень» у надписи — {"сдвиг": [dx, dy], "цвет"}: сплошное выдавливание контура
+            # букв в сторону сдвига, как у газетного заголовка `cut04_005` (белые буквы,
+            # чёрная обводка и чёрная тень вправо-вниз; 29 сентября 2026)
+            drop = lb.get("тень")
+            if drop:
+                body = wide if wide is not None else ru_im
+                dx_, dy_ = drop["сдвиг"]
+                steps = max(abs(dx_), abs(dy_), 1)
+                for s_ in range(1, steps + 1):
+                    at_s = (place[0] + round(dx_ * s_ / steps), place[1] + round(dy_ * s_ / steps))
+                    out.paste(tuple(drop.get("цвет", edge or (0, 0, 0))), at_s, body)
+                    ink.paste(255, at_s, solid(body))
             if wide is not None:
                 out.paste(edge, place, wide)
                 ink.paste(255, place, solid(wide))

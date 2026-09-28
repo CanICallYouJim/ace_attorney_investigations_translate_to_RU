@@ -490,8 +490,32 @@ def compose(name: str, cfg: dict, case: str):
             if lb.get("наклон"):
                 own = mask.rotate(lb["наклон"], resample=Image.NEAREST, center=centre(lb))
             hole = own.filter(ImageFilter.MaxFilter(2 * r + 1))
-            out = Image.fromarray(cv2.inpaint(np.asarray(out.convert("RGB")),
-                                              np.asarray(hole), 9, cv2.INPAINT_TELEA))
+            if lb.get("залить"):
+                # «залить»: true — дыра заливается одним цветом фона вокруг надписи
+                # (медиана кольца), а не размывкой соседей: у облаков `cutobj02_004`
+                # размывка тянула светлую кромку, и по бокам слова вставали белёсые
+                # пятна (пользователь 28 сентября 2026: «сделай просто розовым»)
+                # Каждая точка дыры берёт цвет ближайшей точки снаружи, и всё, что
+                # близко к цвету фона, становится ровно им: светлая кромка внутри
+                # облака уходит в розовое, а сиреневая кайма за краем облака
+                # (английская «A» доходила до края) остаётся сиреневой.
+                from scipy import ndimage
+                O = np.asarray(out.convert("RGB")).copy()
+                H = np.asarray(hole) > 0
+                ring = np.asarray(hole.filter(ImageFilter.MaxFilter(9))) > 0
+                ring &= ~H
+                base = np.median(O[ring], axis=0)
+                # сосед ищется по столбцу — над и под строкой: сбоку от «A» у края облака
+                # лежит сиреневая кайма, и ближайший боковой сосед выгрызал край
+                _, (iy, ix) = ndimage.distance_transform_edt(H, sampling=(1, 50), return_indices=True)
+                near = O[iy, ix].astype(float)
+                close = np.abs(near - base).max(2) <= 45
+                fill = np.where(close[..., None], base, near)
+                O[H] = fill[H].astype(O.dtype)
+                out = Image.fromarray(O)
+            else:
+                out = Image.fromarray(cv2.inpaint(np.asarray(out.convert("RGB")),
+                                                  np.asarray(hole), 9, cv2.INPAINT_TELEA))
             zone = ImageChops.subtract(zone, hole)
     for lb in cfg["labels"]:
         if "снять_тёмное" in lb:

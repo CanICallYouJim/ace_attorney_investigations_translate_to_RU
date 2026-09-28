@@ -517,6 +517,21 @@ def compose(name: str, cfg: dict, case: str):
                 out = Image.fromarray(cv2.inpaint(np.asarray(out.convert("RGB")),
                                                   np.asarray(hole), 9, cv2.INPAINT_TELEA))
             zone = ImageChops.subtract(zone, hole)
+    # «фон_язык» у надписи — {"язык", "радиус", "кроме": [рамки]}: снятое место английских
+    # букв берётся пикселями того языка, чья надпись короче, — рисунок под английскими
+    # буквами у него открыт; в рамках «кроме» (его собственные знаки) остаётся затирание.
+    # Крыша павильона `cut03_006`: у японцев «展望台» только посередине, а затирание
+    # размывало линии крыши (пользователь 28 сентября 2026: «скопируй с оригинала»).
+    for (lb, mask, bb) in jobs:
+        spec = lb.get("фон_язык")
+        if spec:
+            import text_mask as tm
+            src = tm.load_variants(name)[spec["язык"]].convert("RGB")
+            r = spec.get("радиус", 6)
+            take = mask.filter(ImageFilter.MaxFilter(2 * r + 1))
+            for rect in spec.get("кроме", []):
+                take.paste(0, tuple(rect))
+            out = Image.composite(src, out.convert("RGB"), take)
     for lb in cfg["labels"]:
         if "снять_тёмное" in lb:
             dark = dark_zone(E, lb["box"], lb["снять_тёмное"], grow)

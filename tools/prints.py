@@ -388,6 +388,17 @@ def compose(name: str, cfg: dict, case: str):
         for part in cfg["основа"]:
             r = tuple(part["рамка"])
             E.paste(V[part["язык"]].convert("RGB").crop(r), r[:2])
+    # Без надписей — только «основа»: штамп времени `cut01_013` целиком у французов
+    # (28 сентября 2026); маска букв — рамки кусков, набирать нечего.
+    if not cfg["labels"]:
+        ink = Image.new("L", E.size, 0)
+        for part in cfg.get("основа", []):
+            ink.paste(255, tuple(part["рамка"]))
+        out = E
+        if alpha is not None:
+            out = out.convert("RGBA")
+            out.putalpha(alpha)
+        return out, ink, ["  только основа: " + ", ".join(p["язык"] for p in cfg.get("основа", []))], []
     m = cp.masks_for(name)
     C = m["clean"].convert("RGB")
     eng = cp.english_ink(E, C, m["mask"].convert("L"), m["hole"].convert("L"), m["paper"].convert("RGB"))

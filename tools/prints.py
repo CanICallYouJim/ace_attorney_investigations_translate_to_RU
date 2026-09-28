@@ -55,7 +55,7 @@ FAT = 0.95          # кант растёт, пока штрих не догон
 
 
 def load_font(name: str, size: int) -> ImageFont.FreeTypeFont:
-    return ImageFont.truetype(str(FONT_DIR / f"{name.split('@')[0]}.ttf"), size)
+    return ImageFont.truetype(str(FONT_DIR / f"{name.split('@')[0].split('^')[0]}.ttf"), size)
 
 
 def render(text: str, font_name: str, size: int, sw: float, squeeze: float):
@@ -71,6 +71,19 @@ def render(text: str, font_name: str, size: int, sw: float, squeeze: float):
         im, (ox, oy), _ = render(text, base, max(4, round(size / k)), sw, squeeze)
         im = im.point(lambda v: 255 if v > 110 else 0).resize((im.width * k, im.height * k), Image.NEAREST)
         ox, oy = ox * k, oy * k
+        bb = im.getbbox()
+        return im, (ox, oy), (bb[0] - ox, bb[1] - oy, bb[2] - ox, bb[3] - oy)
+    # «гарнитура^N» — курсив на N° сильнее, чем у самой гарнитуры: сдвиг по x
+    # пропорционально высоте над базовой линией, базовая линия на месте (журнал
+    # `cut04_017`: у английских букв наклон ~18°, у Century Gothic курсива ~10°;
+    # 29 сентября 2026)
+    if "^" in font_name:
+        base, deg = font_name.split("^")
+        im, (ox, oy), _ = render(text, base, size, sw, squeeze)
+        t = math.tan(math.radians(float(deg)))
+        extra = math.ceil(t * oy) + 2
+        im = im.transform((im.width + extra, im.height), Image.AFFINE,
+                          (1, t, -t * oy, 0, 1, 0), resample=Image.BICUBIC)
         bb = im.getbbox()
         return im, (ox, oy), (bb[0] - ox, bb[1] - oy, bb[2] - ox, bb[3] - oy)
     if sw != int(sw):
@@ -601,6 +614,21 @@ def compose(name: str, cfg: dict, case: str):
             if mine[2] - mine[0] > room:
                 squeeze = max(0.4, squeeze * room / (mine[2] - mine[0]))
         size = pick_size(lines_en[0], font_name, 0, squeeze, want_h)
+        # «кегль» и «сжатие» у надписи — руками. Замер по английской букве даёт «А» и «Ко»
+        # в соседних кружках разный кегль, а пользователь просит один на все кружки
+        # (`cutobj01_015`); растяжка по ширине английской строки раздувает короткую русскую
+        # (журнал `cut04_017`, 1,22; табличка `cut04_011`, 1,24). 29 сентября 2026.
+        # Одно «сжатие» — кегль по высоте, как обычно; один «кегль» — сжатие по месту
+        if "сжатие" in lb and "кегль" not in lb:
+            squeeze = lb["сжатие"]
+            size = pick_size(lines_en[0], font_name, 0, squeeze, want_h)
+        if "кегль" in lb:
+            size = lb["кегль"]
+            squeeze = lb.get("сжатие", 1.0)
+            for text in lines_ru:
+                mine = render(text, font_name, size, 0, squeeze)[2]
+                if "сжатие" not in lb and mine[2] - mine[0] > room:
+                    squeeze = max(0.4, squeeze * room / (mine[2] - mine[0]))
         en_stroke = cp.stroke(mask)
         sw = 0
         # «контур» в задании — задать руками: замер штриха рассчитан на светлые буквы
@@ -608,10 +636,12 @@ def compose(name: str, cfg: dict, case: str):
         # ошибается вдвое. Судит глаз по листу (курс 23 сентября 2026).
         if "контур" in lb or "контур" in cfg:
             sw = lb.get("контур", cfg.get("контур"))
-            size = pick_size(lines_en[0], font_name, sw, squeeze, want_h)
+            if "кегль" not in lb:
+                size = pick_size(lines_en[0], font_name, sw, squeeze, want_h)
         elif cp.stroke(solid(render(lines_en[0], font_name, size, 0, squeeze)[0])) < THIN * en_stroke:
             sw = 1
-            size = pick_size(lines_en[0], font_name, sw, squeeze, want_h)
+            if "кегль" not in lb:
+                size = pick_size(lines_en[0], font_name, sw, squeeze, want_h)
         return font_name, lines_en, lines_ru, want_h, want_w, size, squeeze, sw, en_stroke
 
     # Кант подбирается **замером** и один на всю картинку: у англичан он один,

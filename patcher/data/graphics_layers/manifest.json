@@ -151,6 +151,106 @@
       "erased": null
     },
     {
+      "name": "cutObj01_004",
+      "bundle": "gk2_cutobjlocal",
+      "key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutObj01_004_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutObj01_004_eng.png",
+      "size": [
+        1440,
+        2880
+      ],
+      "flipped": true,
+      "source_sha": "f7bb52912edbc729f2976f148003fe2d7c64dd9b984b7757d09bcff08b85d709",
+      "png_sha": "0157013119aa68a500cb849110732527b661287a9f296dd78802cfd0c7b29876",
+      "box": [
+        22,
+        43,
+        352,
+        113
+      ],
+      "layer": "gk2_cutobjlocal/cutObj01_004.png",
+      "mask": "gk2_cutobjlocal/cutObj01_004_mask.png",
+      "changed": 7319,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cutObj01_008",
+      "bundle": "gk2_cutobjlocal",
+      "key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutObj01_008_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutObj01_008_eng.png",
+      "size": [
+        1440,
+        2880
+      ],
+      "flipped": true,
+      "source_sha": "9ed526aa01897b571bcdcae6d92c0c1124222b8b4f51493e0bed2a5594dfb73c",
+      "png_sha": "216910cad2b2e4d8985530264cffa540c77aea856661ac518f8362dcf84457c2",
+      "box": [
+        234,
+        17,
+        1417,
+        279
+      ],
+      "layer": "gk2_cutobjlocal/cutObj01_008.png",
+      "mask": "gk2_cutobjlocal/cutObj01_008_mask.png",
+      "changed": 13182,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cutobj02_003",
+      "bundle": "gk2_cutobjlocal",
+      "key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj02_003_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj02_003_eng.png",
+      "size": [
+        1440,
+        2880
+      ],
+      "flipped": true,
+      "source_sha": "6cc7a17ef1818b5068bef626bf9c4f3eb7c1324f34ef70c4be83142603048ea8",
+      "png_sha": "1bb8bdd946063a4ad61921b9df85cefcec2ba52ad3d3477ed420b5bb80acab4f",
+      "box": [
+        67,
+        21,
+        806,
+        993
+      ],
+      "layer": "gk2_cutobjlocal/cutobj02_003.png",
+      "mask": "gk2_cutobjlocal/cutobj02_003_mask.png",
+      "changed": 41891,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cutobj02_004",
+      "bundle": "gk2_cutobjlocal",
+      "key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj02_004_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj02_004_eng.png",
+      "size": [
+        1440,
+        2880
+      ],
+      "flipped": true,
+      "source_sha": "7ae13d34ab59c2192897964fe5340d9c420c0e7c44a126d7a0acbcc86efb131e",
+      "png_sha": "65a4d9b232865c861e63b36932bd695ae838fbc491277e34f352f117d9908b14",
+      "box": [
+        21,
+        47,
+        1429,
+        1044
+      ],
+      "layer": "gk2_cutobjlocal/cutobj02_004.png",
+      "mask": "gk2_cutobjlocal/cutobj02_004_mask.png",
+      "changed": 60105,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cutobj00_004",
       "bundle": "gk2_cutobjlocal_trial",
       "key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj00_004_ger.png",
@@ -176,6 +276,106 @@
       "erased": null
     },
     {
+      "name": "itm01_01d_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_01d_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_01d_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "849a7ee3758fdc915e1910384c400e4d7a2b06d0d0064cd7f565c14836974fec",
+      "png_sha": "b2060dd25cfeff8542d22fe5f9a7bfe69b1e0d9ffbbd83d365e6625edeaf7e47",
+      "box": [
+        26,
+        0,
+        300,
+        276
+      ],
+      "layer": "gk2_idcom/itm01_01d_00_l.png",
+      "mask": "gk2_idcom/itm01_01d_00_l_mask.png",
+      "changed": 6014,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm02_024_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_024_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_024_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "6b8dfdf51301d8f81fceef921e2aae1ddba1121321b58a2ca1444129b9110cc4",
+      "png_sha": "1ee0eb0ca6cc4485945e3c2770d84854e429c7179757bf66435805332645232f",
+      "box": [
+        33,
+        92,
+        228,
+        176
+      ],
+      "layer": "gk2_idcom/itm02_024_00_l.png",
+      "mask": "gk2_idcom/itm02_024_00_l_mask.png",
+      "changed": 4859,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm02_026_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_026_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_026_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "706513b018132c1a7308cc514e22eb15c8aa5f41697e4f03f4aa0dd9e2aad3a7",
+      "png_sha": "1ab09c65b1907fbe4b264f6a2143e1103186d3561c68fd14d6b5bef073ece105",
+      "box": [
+        106,
+        148,
+        196,
+        205
+      ],
+      "layer": "gk2_idcom/itm02_026_00_l.png",
+      "mask": "gk2_idcom/itm02_026_00_l_mask.png",
+      "changed": 2794,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm02_027_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_027_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_027_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "b5ae9a0ece9c759539d53397cab94bb7963706fb0096d05dc2facc2ff1d456c6",
+      "png_sha": "d7b6444de9fe74aec30701f2491f9e7102e9e784309d9a7f93f24a9643037113",
+      "box": [
+        105,
+        148,
+        196,
+        205
+      ],
+      "layer": "gk2_idcom/itm02_027_00_l.png",
+      "mask": "gk2_idcom/itm02_027_00_l_mask.png",
+      "changed": 2688,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "itm00_002_00_l",
       "bundle": "gk2_idcom_trial",
       "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_002_00_l_ger.png",
@@ -186,16 +386,16 @@
       ],
       "flipped": true,
       "source_sha": "64ca0d68d66e97cbe039ec222011ea1a1506defe2e9245d2da86c8da5c41168d",
-      "png_sha": "fe9dcd91ffbd401e6365657c32f9f573dff0ed076d79648d6c8f47fb8a083b1a",
+      "png_sha": "939e0740af38836ea2fd78823a7d5f0d3a184c333cacac8f270e12ca9913e48f",
       "box": [
         5,
         45,
         297,
-        116
+        119
       ],
       "layer": "gk2_idcom_trial/itm00_002_00_l.png",
       "mask": "gk2_idcom_trial/itm00_002_00_l_mask.png",
-      "changed": 12957,
+      "changed": 12976,
       "outside": null,
       "tails": null,
       "erased": null
@@ -276,6 +476,31 @@
       "erased": 0
     },
     {
+      "name": "logic02_023_s",
+      "bundle": "gk2_logickeyword",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic02_023_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic02_023_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "7f7a03d755a2578ec05b4dc49d72dc7f3b493fd2745db417bc831e6892691c46",
+      "png_sha": "2ac872d0584c4365b82ba1c15dcb3674c591c75bc29725625d9503326cd5985c",
+      "box": [
+        55,
+        77,
+        104,
+        111
+      ],
+      "layer": "gk2_logickeyword/logic02_023_s.png",
+      "mask": "gk2_logickeyword/logic02_023_s_mask.png",
+      "changed": 1249,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "logic00_013_s",
       "bundle": "gk2_logickeyword_trial",
       "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic00_013_s_ger.png",
@@ -333,6 +558,31 @@
       "erased": null
     },
     {
+      "name": "cut01_01b",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_01b_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_01b_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "cd0bf6172c7c0bbe667dadbf59cd7b2180c06dce8988d8249081d88c1ef8ca12",
+      "png_sha": "57a3e0d0cdf96b40bee10367e9cb6254c343b750ed0b242d4db37136ab91c50b",
+      "box": [
+        341,
+        30,
+        1730,
+        810
+      ],
+      "layer": "gk2_upcutlocal/cut01_01b.png",
+      "mask": "gk2_upcutlocal/cut01_01b_mask.png",
+      "changed": 42598,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut02_003",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_003_ger.png",
@@ -379,6 +629,81 @@
       "mask": "gk2_upcutlocal/cut02_004_mask.png",
       "changed": 79314,
       "outside": 40,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut02_005",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_005_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_005_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "51fb88eea1409d52ac01227f4548b4df4bad5f90502c59f8352498258905f47e",
+      "png_sha": "6511dde464ef62b7065b2d58ac1076d59df99f00c87cecf63b45d15472cbc930",
+      "box": [
+        529,
+        688,
+        1313,
+        1065
+      ],
+      "layer": "gk2_upcutlocal/cut02_005.png",
+      "mask": "gk2_upcutlocal/cut02_005_mask.png",
+      "changed": 11824,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut02_006",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_006_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_006_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "f8654e14cc3c0bc5c50f0f6ad23cd9689f49ad42be7f0094400378d05346fd7e",
+      "png_sha": "e8dc83ecd76d6582863ba3c7d6f533ccaf24bd1e964745c6488404c6ac347660",
+      "box": [
+        529,
+        332,
+        1396,
+        1065
+      ],
+      "layer": "gk2_upcutlocal/cut02_006.png",
+      "mask": "gk2_upcutlocal/cut02_006_mask.png",
+      "changed": 12592,
+      "outside": 768,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut02_010",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_010_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_010_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "63f960c7beffddedd0e916d14730286e5dfb07bde4e27c38e5d22a63ae82b678",
+      "png_sha": "af9f9205bfa03cd6e57f6270decb56d227557c1da597d1e8a8b4a56d31db7ca9",
+      "box": [
+        0,
+        26,
+        1920,
+        1080
+      ],
+      "layer": "gk2_upcutlocal/cut02_010.png",
+      "mask": "gk2_upcutlocal/cut02_010_mask.png",
+      "changed": 228985,
+      "outside": 1868,
       "tails": null,
       "erased": null
     },
@@ -734,5 +1059,5 @@
       "why": "у картинки нет немецкого варианта: в слоте русского игра её не показывает, класть некуда"
     }
   ],
-  "built": "2026-09-24 00:43"
+  "built": "2026-09-28 17:57"
 }

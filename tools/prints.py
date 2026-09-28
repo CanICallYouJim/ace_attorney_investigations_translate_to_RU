@@ -450,6 +450,10 @@ def compose(name: str, cfg: dict, case: str):
         if lb.get("чернила"):
             import numpy as np
             A = np.asarray(E).astype(int)
+            # «чернила_допуск» — вместо 48: бледная стёртая буква на бумаге (169–220 против
+            # бумаги 226–240, шахматная записка `cut04_035`, 29 сентября 2026) с допуском 48
+            # захватывала бумагу целиком
+            tol = lb.get("чернила_допуск", 48)
             x0, y0, x1, y1 = lb["box"]
             hit = np.zeros(A.shape[:2], bool)
             if lb.get("наклон") and "центр" in lb:
@@ -464,10 +468,10 @@ def compose(name: str, cfg: dict, case: str):
                 inside = (sx >= x0) & (sx < x1) & (sy >= y0) & (sy < y1)
                 gx, gy = gx[inside], gy[inside]
                 for c in lb["чернила"]:
-                    hit[gy, gx] |= np.abs(A[gy, gx] - np.array(c)).max(1) <= 48
+                    hit[gy, gx] |= np.abs(A[gy, gx] - np.array(c)).max(1) <= tol
             else:
                 for c in lb["чернила"]:
-                    hit[y0:y1, x0:x1] |= np.abs(A[y0:y1, x0:x1] - np.array(c)).max(2) <= 48
+                    hit[y0:y1, x0:x1] |= np.abs(A[y0:y1, x0:x1] - np.array(c)).max(2) <= tol
             mask = Image.fromarray((hit * 255).astype("uint8"))
         bb = mask.getbbox()
         if bb is None:

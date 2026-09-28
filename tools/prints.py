@@ -55,7 +55,7 @@ FAT = 0.95          # кант растёт, пока штрих не догон
 
 
 def load_font(name: str, size: int) -> ImageFont.FreeTypeFont:
-    return ImageFont.truetype(str(FONT_DIR / f"{name}.ttf"), size)
+    return ImageFont.truetype(str(FONT_DIR / f"{name.split('@')[0]}.ttf"), size)
 
 
 def render(text: str, font_name: str, size: int, sw: float, squeeze: float):
@@ -63,6 +63,16 @@ def render(text: str, font_name: str, size: int, sw: float, squeeze: float):
 
     Дробный `sw` (контур надписи, 27 сентября 2026: визитка `itm02_024` — 0 тонко, 1 жирно)
     набирается вчетверо крупнее с контуром `4·sw` и уменьшается."""
+    # «гарнитура@k» — растровый шрифт: набор в k раз мельче и увеличение без сглаживания
+    # (термобилет `cut03_001`: точечная печать, ступеньки видны; 27 сентября 2026)
+    if "@" in font_name:
+        base, k = font_name.split("@")
+        k = int(k)
+        im, (ox, oy), _ = render(text, base, max(4, round(size / k)), sw, squeeze)
+        im = im.point(lambda v: 255 if v > 110 else 0).resize((im.width * k, im.height * k), Image.NEAREST)
+        ox, oy = ox * k, oy * k
+        bb = im.getbbox()
+        return im, (ox, oy), (bb[0] - ox, bb[1] - oy, bb[2] - ox, bb[3] - oy)
     if sw != int(sw):
         im, (ox, oy), _ = render(text, font_name, size * 4, round(sw * 4), squeeze)
         im = im.resize((max(1, round(im.width / 4)), max(1, round(im.height / 4))), Image.LANCZOS)
@@ -289,6 +299,81 @@ def straight(lb: dict, x: float, y: float) -> tuple[float, float]:
     return (cx + dx * math.cos(a) + dy * math.sin(a), cy - dx * math.sin(a) + dy * math.cos(a))
 
 
+def row_layout(E: Image.Image, out: Image.Image, ink: Image.Image, row: dict, report: list):
+    """Ключ «ряд»: строка подсказок «значок + слово» (кнопки под видео, `cut01_03e/03f/040`).
+
+    Русские слова длиннее английских вдвое, и в промежутки между значками не входят —
+    строка раскладывается заново от правого края: слово, «между», значок, «шаг», дальше
+    влево. Фон под английской строкой — тот же ряд, сдвинутый на целое число клеток
+    сетки («фон», px; сетка повторяется, замер 27 сентября 2026: сдвиг 697 даёт отличие
+    не больше 11 уровней). Значок — пиксели, отличные от фона, перед началом слова.
+    Задание: {"полоса": [y0, y1], "снять": [x0, x1], "фон": dx, "право": x, "шаг", "между",
+    "шрифт", "кегль", "цвет", "база": y, "элементы": [{"слово_с": x, "text": "…"}]}."""
+    import numpy as np
+    y0, y1 = row["полоса"]
+    sx0, sx1 = row["снять"]
+    A = np.asarray(E).astype(int)
+    # «фон»: число — сдвиг влево на столько px; или список [x0, x1, dx, dy] — для колонок
+    # x0..x1 брать пиксели со сдвигом (dx влево, dy вверх). У `cut01_040` строка шире,
+    # и сдвиг влево на 10 клеток попадал на «Play»; справа от кадра — клетка выше.
+    segs = row["фон"] if isinstance(row["фон"], list) else [[sx0, sx1, row["фон"], 0]]
+    bg = A[y0:y1, sx0:sx1].copy()
+    for a, b, ddx, ddy in segs:
+        a, b = max(a, sx0), min(b, sx1)
+        bg[:, a - sx0:b - sx0] = A[y0 - ddy:y1 - ddy, a - ddx:b - ddx]
+    diff = np.abs(A[y0:y1, sx0:sx1] - bg).max(2) > 30
+    icons = []
+    for it in row["элементы"]:
+        xs = it["слово_с"] - sx0
+        cols = diff[:, max(0, xs - 48):xs - 1].any(0)
+        # значок — последний связный кусок перед словом (промежуток ≤ 2 px)
+        idx = np.nonzero(cols)[0]
+        if len(idx) == 0 or idx[-1] < cols.size - 10:
+            icons.append(None)
+            continue
+        right = idx[-1]
+        left = right
+        while left - 1 >= 0 and (cols[left - 1] or (left - 2 >= 0 and cols[left - 2])):
+            left -= 1
+        x_a = max(0, xs - 48) + left
+        x_b = max(0, xs - 48) + right + 1
+        m = diff[:, x_a:x_b]
+        icons.append((x_a + sx0, x_b + sx0, A[y0:y1, x_a + sx0:x_b + sx0].copy(), m))
+    O = np.asarray(out.convert("RGB")).copy()
+    O[y0:y1, sx0:sx1] = bg
+    I = np.asarray(ink).copy()
+    I[y0:y1, sx0:sx1] = 0
+    font = load_font(row["шрифт"], row["кегль"])
+    canvas = Image.fromarray(O.astype("uint8"))
+    ink_im = Image.fromarray(I)
+    d = ImageDraw.Draw(canvas)
+    di = ImageDraw.Draw(ink_im)
+    x = row["право"]
+    colour = tuple(row.get("цвет", (250, 250, 250)))
+    placed = []
+    for it, icon in reversed(list(zip(row["элементы"], icons))):
+        w = font.getlength(it["text"])
+        x_text = x - w
+        d.text((x_text, row["база"]), it["text"], font=font, fill=colour, anchor="ls")
+        di.text((x_text, row["база"]), it["text"], font=font, fill=255, anchor="ls")
+        x = x_text - row.get("между", 4)
+        if icon is not None:
+            a, b, pix, m = icon
+            iw = b - a
+            nx = round(x - iw)
+            sub = np.asarray(canvas).copy()
+            region = sub[y0:y1, nx:nx + iw]
+            region[m] = pix[m]
+            sub[y0:y1, nx:nx + iw] = region
+            canvas = Image.fromarray(sub)
+            d = ImageDraw.Draw(canvas)
+            x = nx
+        placed.append(f"{it['text']} с {x_text:.0f}")
+        x -= row.get("шаг", 28)
+    report.append("  ряд: " + "; ".join(reversed(placed)) + f"; левый край {x:.0f}")
+    return canvas, ink_im
+
+
 def compose(name: str, cfg: dict, case: str):
     """Картинка с русскими печатными надписями, маска букв и отчёт."""
     raw = Image.open(EN / case / f"{name}.png")
@@ -423,9 +508,12 @@ def compose(name: str, cfg: dict, case: str):
     # Область та же, какой её берёт судья (`check_pictures`: рамка русских чернил
     # на всей картинке), а не «рамка английских ±40»: от запаса поле надписи
     # замыкается шире, набор считал место свободным, а судья — занятым рисунком.
-    area = (min(b[0] for _, _, b in jobs), min(b[1] for _, _, b in jobs),
-            max(b[2] for _, _, b in jobs), max(b[3] for _, _, b in jobs))
-    forbidden = cp.untouchable(C, m["paper"].convert("RGB"), eng, area)
+    if jobs:
+        area = (min(b[0] for _, _, b in jobs), min(b[1] for _, _, b in jobs),
+                max(b[2] for _, _, b in jobs), max(b[3] for _, _, b in jobs))
+        forbidden = cp.untouchable(C, m["paper"].convert("RGB"), eng, area)
+    else:
+        forbidden = Image.new("L", E.size, 0)
 
     def geometry(lb: dict, mask: Image.Image, bb):
         """Что снимается с английской надписи: гарнитура, строки, кегль, сжатие, контур."""
@@ -616,6 +704,8 @@ def compose(name: str, cfg: dict, case: str):
     if wants_edge and edge_w < 0.85 * measured:
         problems.append(f"{name}: кант тоньше английского — {edge_w} px против "
                         f"{measured:.1f} px замеренных")
+    if cfg.get("ряд"):
+        out, ink = row_layout(E, out, ink, cfg["ряд"], report)
     if alpha is not None:
         out = out.convert("RGBA")
         out.putalpha(alpha)

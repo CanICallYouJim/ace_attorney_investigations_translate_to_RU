@@ -423,6 +423,17 @@ def compose(name: str, cfg: dict, case: str):
             hit = np.zeros(A.shape, bool)
             hit[y0:y1, x0:x1] = A[y0:y1, x0:x1] > lb["чернила_ярче"]
             mask = Image.fromarray((hit * 255).astype("uint8"))
+        # «чернила_канал» — [канал, порог]: буквы — пиксели, у которых этот канал выше порога.
+        # Полупрозрачные сезоны `cut02_011` светлее фона только по красному (≈50 против
+        # 17–26), а по яркости не отделяются от голубого градиента внизу (28 сентября 2026)
+        if lb.get("чернила_канал"):
+            import numpy as np
+            ch, thr = lb["чернила_канал"]
+            A = np.asarray(E).astype(int)
+            x0, y0, x1, y1 = lb["box"]
+            hit = np.zeros(A.shape[:2], bool)
+            hit[y0:y1, x0:x1] = A[y0:y1, x0:x1, ch] > thr
+            mask = Image.fromarray((hit * 255).astype("uint8"))
         if lb.get("чернила"):
             import numpy as np
             A = np.asarray(E).astype(int)
@@ -686,7 +697,7 @@ def compose(name: str, cfg: dict, case: str):
                 if best and not best[3]:
                     break
             shift = (best[1], best[2])
-        for ru_im, wide, at in pieces:
+        for j, (ru_im, wide, at) in enumerate(pieces):
             # «сдвиг» надписи — поправка глазом по листу (cut02_004: «В» заходила на стену)
             nudge = lb.get("сдвиг", (0, 0))
             place = (at[0] + shift[0] + nudge[0], at[1] + shift[1] + nudge[1])
@@ -702,6 +713,18 @@ def compose(name: str, cfg: dict, case: str):
                 out.paste(edge, place, wide)
                 ink.paste(255, place, solid(wide))
             out.paste(colour, place, ru_im)
+            # «выделение» — слово строки своим цветом: {"слово", "цвет"} (шапка таблицы
+            # сезонов `cut02_011`: «temperature» зелёным среди белого, 28 сентября 2026)
+            mark = lb.get("выделение")
+            if mark and mark["слово"] in lines_ru[j]:
+                pre = lines_ru[j][:lines_ru[j].index(mark["слово"])]
+                font = load_font(font_name, size)
+                ox = render(lines_ru[j], font_name, size, sw, squeeze)[1][0]
+                x0 = round(ox + font.getlength(pre) * squeeze)
+                x1 = round(ox + font.getlength(pre + mark["слово"]) * squeeze)
+                part = Image.new("L", ru_im.size, 0)
+                part.paste(ru_im.crop((x0, 0, x1, ru_im.height)), (x0, 0))
+                out.paste(tuple(mark["цвет"]), place, part)
             ink.paste(255, place, solid(ru_im))
         report.append(f"  {lb['text'].replace('|', ' / ')}: кегль {size}, сжатие {squeeze:.3f}, контур {sw}; "
                       f"высота {want_h:.0f} px, ширина {want_w} px; штрих наш {ru_stroke:.1f} против "

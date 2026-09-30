@@ -179,7 +179,51 @@ def small_copy(name, job, case, folder):
     `itm02_026_00_l`, уменьшенная ровно в 158/300 (27 сентября 2026)."""
     raw = Image.open(EN / case / f"{name}.png")
     out = raw.convert("RGBA")
-    big = Image.open(folder / f"{job['копия']}.png").convert("RGBA")
+    big_path = folder / f"{job['копия']}.png"
+    if not big_path.exists():
+        # большая ещё не принята и лежит в `drafts/hold/` — берём её оттуда
+        held = sorted((ROOT / "work" / "graphics_masks" / "drafts" / "hold").rglob(f"{job['копия']}.png"))
+        big_path = held[0] if held else big_path
+    big = Image.open(big_path).convert("RGBA")
+    # «перспектива» — [рамка в большой]: мелкая — та же вещь под углом (билет-улика
+    # `itm03_004` — билет `cut03_001` в перспективе, 30 сентября 2026). Гомография
+    # «большая → мелкая» считается по точкам SIFT между английскими вариантами, по ней
+    # в мелкую ложатся только пиксели, где русская большая отличается от английской.
+    if "перспектива" in job:
+        import cv2
+        from scipy.ndimage import binary_dilation
+        x0, y0, x1, y1 = job["перспектива"]
+        en_big = np.asarray(Image.open(EN / case / f"{job['копия']}.png").convert("RGB").crop((x0, y0, x1, y1)))
+        ru_big = np.asarray(big.convert("RGB").crop((x0, y0, x1, y1)))
+        small_en = np.asarray(raw.convert("RGB"))
+        sift = cv2.SIFT_create()
+        g1 = cv2.cvtColor(en_big, cv2.COLOR_RGB2GRAY)
+        g2 = cv2.cvtColor(small_en, cv2.COLOR_RGB2GRAY)
+        # большая уменьшается до размера мелкой, иначе SIFT не сводит масштабы
+        k = job.get("k", g2.shape[1] / g1.shape[1])
+        g1s = cv2.resize(g1, None, fx=k, fy=k, interpolation=cv2.INTER_AREA)
+        k1, d1 = sift.detectAndCompute(g1s, None)
+        k2, d2 = sift.detectAndCompute(g2, None)
+        pairs = cv2.BFMatcher().knnMatch(d1, d2, k=2)
+        good = [m for m, n in pairs if m.distance < 0.75 * n.distance]
+        src = np.float32([k1[m.queryIdx].pt for m in good])
+        dst = np.float32([k2[m.trainIdx].pt for m in good])
+        H, inl = cv2.findHomography(src, dst, cv2.RANSAC, 2.0)
+        size = (small_en.shape[1], small_en.shape[0])
+        # переносится уже уменьшенная ×k большая — без уменьшения точечная печать
+        # при линейной выборке рябит
+        ru_s = cv2.resize(ru_big, (g1s.shape[1], g1s.shape[0]), interpolation=cv2.INTER_AREA)
+        warped = cv2.warpPerspective(ru_s, H, size, flags=cv2.INTER_LINEAR)
+        diff = (np.abs(ru_big.astype(int) - en_big.astype(int)).max(2) > 24).astype(np.float32)
+        diff = cv2.resize(diff, (g1s.shape[1], g1s.shape[0]), interpolation=cv2.INTER_AREA)
+        m = cv2.warpPerspective(diff, H, size, flags=cv2.INTER_LINEAR) > 0.08
+        m = binary_dilation(m, iterations=job.get("запас", 1))
+        O = np.asarray(out).copy()
+        O[m, :3] = warped[m]
+        res_im = Image.fromarray(O)
+        if raw.mode != "RGBA":
+            res_im = res_im.convert(raw.mode)
+        return res_im, [f"перспектива {job['копия']}: точек {len(good)}, опорных {int(inl.sum())}, пикс. {int(m.sum())}"]
     # «куски» — [[рамка в большой], [рамка в мелкой]]: мелкая нарисована не ровным
     # уменьшением, а своей раскладкой (улика `itm01_01d` — тот же щиток с рубильниками,
     # таблички на других местах). Каждая табличка переносится своей рамкой.

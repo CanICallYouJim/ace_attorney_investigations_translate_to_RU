@@ -533,7 +533,8 @@ def compose(name: str, cfg: dict, case: str):
                 # выпрямленная точка лежит в рамке (перчатка `itm01_002`, 45°)
                 cx, cy = centre(lb)
                 rad = int(((x1 - x0) ** 2 + (y1 - y0) ** 2) ** 0.5 / 2) + 2
-                gy, gx = np.mgrid[max(0, int(cy) - rad):int(cy) + rad, max(0, int(cx) - rad):int(cx) + rad]
+                gy, gx = np.mgrid[max(0, int(cy) - rad):min(A.shape[0], int(cy) + rad),
+                                  max(0, int(cx) - rad):min(A.shape[1], int(cx) + rad)]
                 a = math.radians(-lb["наклон"])
                 sx = cx + (gx - cx) * math.cos(a) + (gy - cy) * math.sin(a)
                 sy = cy - (gx - cx) * math.sin(a) + (gy - cy) * math.cos(a)

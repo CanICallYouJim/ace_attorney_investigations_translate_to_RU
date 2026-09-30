@@ -401,10 +401,63 @@ def compose(name: str, cfg: dict, case: str):
         for part in cfg["основа"]:
             r = tuple(part["рамка"])
             E.paste(V[part["язык"]].convert("RGB").crop(r), r[:2])
+    # «с_картинки» — накладка поверх нашей же картинки: [{"картинка", "сдвиг", "рамка"}].
+    # Кусок накладки лежит в игре ровно на карте, и буквы обязаны совпасть с ней до пикселя —
+    # поэтому не набираются заново, а переносятся с готовой русской картинки (карта города
+    # `cut04_03e` → подсветка `cutObj04_010`, 30 сентября 2026). Где правка карты задела
+    # накладку: буквы и кайма (тёмное и почти белое внутри `<картинка>_ink.png`) — как на
+    # русской карте; фон под снятыми английскими буквами — тоже с русской карты, но
+    # перекрашенный так, как накладка перекрашивает карту (серое здание → оранжевое):
+    # таблица цветов «карта → накладка» собирается по английским парам вне букв. Английские
+    # буквы закрывали край подсвеченного здания, и где он кончается, знает только карта.
+    moved = Image.new("L", E.size, 0)
+    for part in cfg.get("с_картинки", []):
+        import cv2
+        import numpy as np
+        src = part["картинка"]
+        import text_mask as tm
+        src_case = tm.case_of(src)
+        ru_path = EN.parent / "graphics_ru" / src_case / f"{src}.png"
+        if not ru_path.exists():
+            held = sorted((EN.parent / "graphics_masks" / "drafts" / "hold").rglob(f"{src}.png"))
+            ru_path = held[0] if held else ru_path
+        Mr = np.array(Image.open(ru_path).convert("RGB")).astype(int)
+        Me = np.array(Image.open(EN / src_case / f"{src}.png").convert("RGB")).astype(int)
+        Mi = np.array(Image.open(EN.parent / "graphics_ru" / src_case / f"{src}_ink.png").convert("L")) > 0
+        sx, sy = part["сдвиг"]
+        x0, y0, x1, y1 = part["рамка"]
+        O = np.array(E).astype(int)
+        o = O[y0:y1, x0:x1]
+        r, e, i = (a[y0 + sy:y1 + sy, x0 + sx:x1 + sx] for a in (Mr, Me, Mi))
+        changed = np.abs(r - e).max(-1) > 12
+        from scipy import ndimage
+        text_e = ndimage.binary_dilation((e.max(-1) < 90) | (e.min(-1) > 235), iterations=4)
+        pairs = (np.abs(o - e).max(-1) >= 10) & ~text_e
+        table = {}
+        for k_, v_ in zip(map(tuple, e[pairs] // 6), o[pairs]):
+            table.setdefault(k_, []).append(v_)
+        table = {k_: np.mean(v_, 0) for k_, v_ in table.items() if len(v_) >= 100}
+        keys = np.array(list(table)) if table else np.zeros((0, 3))
+        vals = np.array(list(table.values())) if table else np.zeros((0, 3))
+        letter = i & ((r.max(-1) < 90) | (r.min(-1) > 235))
+        o = o.copy()
+        for y_, x_ in zip(*np.nonzero(changed)):
+            px = r[y_, x_]
+            if not letter[y_, x_] and len(keys):
+                dist = np.abs(keys - px // 6).max(-1)
+                j_ = dist.argmin()
+                if dist[j_] <= part.get("допуск_цвета", 1):
+                    px = vals[j_]
+            o[y_, x_] = px
+        O[y0:y1, x0:x1] = o
+        E = Image.fromarray(O.astype(np.uint8))
+        m_ = np.zeros(O.shape[:2], np.uint8)
+        m_[y0:y1, x0:x1] = changed * 255
+        moved = ImageChops.lighter(moved, Image.fromarray(m_))
     # Без надписей — только «основа»: штамп времени `cut01_013` целиком у французов
     # (28 сентября 2026); маска букв — рамки кусков, набирать нечего.
     if not cfg["labels"]:
-        ink = Image.new("L", E.size, 0)
+        ink = moved.copy()
         for part in cfg.get("основа", []):
             ink.paste(255, tuple(part["рамка"]))
         out = E

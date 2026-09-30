@@ -508,6 +508,20 @@ def compose(name: str, cfg: dict, case: str, labels: list):
     gone = gone.filter(ImageFilter.MaxFilter(7))
     alpha = sv["base"].getchannel("A") if sv["base"].mode == "RGBA" else None
     out = Image.composite(sv["C"], sv["base"].convert("RGB"), gone)
+    # «стереть» у пометки — [рамки]: обрывки английских букв, которые подложка приняла
+    # за рисунок (на том же месте буква немцев или французов — шахматная записка
+    # `cut04_035`, 30 сентября 2026). В рамке тёмные пиксели карандаша заменяются бумагой.
+    for note in cfg["пометки"]:
+        for x0, y0, x1, y1 in note.get("стереть", []):
+            E, P = sv["E"].load(), sv["paper"].load()
+            wipe = Image.new("L", sv["canvas"], 0)
+            wp = wipe.load()
+            for y in range(y0, y1):
+                for x in range(x0, x1):
+                    if max(E[x, y]) < max(P[x, y]) - 30:
+                        wp[x, y] = 255
+            wipe = wipe.filter(ImageFilter.MaxFilter(3))
+            out = Image.composite(sv["paper"], out, wipe)
 
     forbidden = forbidden_of(sv, cfg, labels)
     occupied = Image.new("L", sv["canvas"], 0)

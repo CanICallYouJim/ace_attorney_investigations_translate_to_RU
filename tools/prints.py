@@ -311,6 +311,26 @@ def clip_to(lb: dict, E: Image.Image, out: Image.Image, ink: Image.Image, pre) -
     return Image.composite(out, pre[0], keep), Image.composite(ink, pre[1], keep)
 
 
+def arch(im: Image.Image, at: tuple, size: tuple, pts: list, top: float, base: float) -> Image.Image:
+    """Маска строки на весь кадр, где верх каждого столбца опущен или поднят до кривой
+    `pts` ([[x, y], …], между точками — прямые), а базовая линия `base` на месте:
+    строка сверху от `top` до `base` растягивается в столбце на высоту `base − y(x)`."""
+    import numpy as np
+    from scipy import ndimage
+    full = Image.new("L", size, 0)
+    full.paste(im, at)
+    A = np.asarray(full).astype(float)
+    h, w = A.shape
+    xs = np.arange(w)
+    px, py = zip(*sorted(pts))
+    want = np.interp(xs, px, py)
+    Y, X = np.mgrid[0:h, 0:w].astype(float)
+    k = (base - top) / np.maximum(1.0, base - want)
+    src = np.where(Y <= base, base - (base - Y) * k[None, :], Y)
+    B = ndimage.map_coordinates(A, [src, X], order=1, mode="constant", cval=0)
+    return Image.fromarray(np.clip(B, 0, 255).astype("uint8"))
+
+
 def centre(lb: dict) -> tuple[float, float]:
     """Точка, вокруг которой поворачивается надпись с «наклоном», — «центр» из задания
     или середина её рамки. У надписи с «наклоном» рамка задана в выпрямленных
@@ -830,6 +850,16 @@ def compose(name: str, cfg: dict, case: str):
                 dy = lb["ось_y"] - by - (ru_bb[1] + ru_bb[3]) / 2
             at = (round(bx + dx - ox), round(by + j * step + dy - oy))
             wide = render(text, font_name, size, sw + edge_w, squeeze)[0] if edge_w else None
+            # «верх_по» — [[x, y], …]: верх строки идёт по этой кривой, базовая линия прямая;
+            # каждый столбец букв растягивается от базовой линии до кривой. Плакат `cut01_00c`:
+            # «CHAMPION» заполняет полосу под круглой аркой — крайние буквы 86–90 px, средние
+            # 54 (пользователь 30 сентября 2026: «изогни, как в английском»)
+            if lb.get("верх_по"):
+                top = at[1] + oy + ru_bb[1]
+                base = at[1] + oy + ru_bb[3]
+                ru_im = arch(ru_im, at, E.size, lb["верх_по"], top, base)
+                wide = arch(wide, at, E.size, lb["верх_по"], top, base) if wide is not None else None
+                at = (0, 0)
             pieces.append((ru_im, wide, at))
             mine.paste(255, at, solid(wide if wide is not None else ru_im))
         # Русское слово короче или длиннее английского, и буква попадает туда, где у англичан

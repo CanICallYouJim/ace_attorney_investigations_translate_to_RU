@@ -293,17 +293,21 @@ def dark_zone(E: Image.Image, box, thr: int, grow: int) -> Image.Image:
 
 
 def clip_to(lb: dict, E: Image.Image, out: Image.Image, ink: Image.Image, pre) -> tuple:
-    """«только_по» у надписи — {"цвета": [[r, g, b], …], "допуск"}: русские буквы ложатся
+    """«только_по» у надписи — {"цвета": [[r, g, b], …], "допуск", "кроме"}: русские буквы ложатся
     только на пиксели оригинала этих цветов (фон и буквы корпуса), а что лежит поверх
     надписи — кассета на мониторе «Шпиончика» `itm01_00d`, 30 сентября 2026, — остаётся
     оригиналом: английская строка там обрезана тем же предметом."""
     import numpy as np
     spec = lb["только_по"]
     A = np.asarray(E).astype(int)
-    ok = np.zeros(A.shape[:2], bool)
-    for c in spec["цвета"]:
+    ok = np.zeros(A.shape[:2], bool) if spec.get("цвета") else np.ones(A.shape[:2], bool)
+    for c in spec.get("цвета", []):
         ok |= np.abs(A - np.array(c)).max(-1) <= spec.get("допуск", 30)
     keep = Image.fromarray((ok * 255).astype("uint8"))
+    # «кроме» — многоугольник [[x, y], …], куда буквам нельзя: предмет того же цвета,
+    # что бумага под надписью (белый конверт поверх белого письма `itm03_003`)
+    if spec.get("кроме"):
+        ImageDraw.Draw(keep).polygon([tuple(p) for p in spec["кроме"]], fill=0)
     return Image.composite(out, pre[0], keep), Image.composite(ink, pre[1], keep)
 
 

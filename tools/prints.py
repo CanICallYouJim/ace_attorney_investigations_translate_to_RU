@@ -594,10 +594,26 @@ def compose(name: str, cfg: dict, case: str):
                 H = np.asarray(hole) > 0
                 ring = np.asarray(hole.filter(ImageFilter.MaxFilter(9))) > 0
                 ring &= ~H
+                # «залить_в» — [x0, y0, x1, y1]: дыра заливается и сосед ищется только
+                # внутри рамки, снаружи остаётся оригинал. Плакат `cut01_00c`: «CHAMPION»
+                # стоит вплотную к нижнему краю плаката, и сосед по столбцу снизу — стена
+                # (30 сентября 2026). Многоугольник [[x, y], …] вместо рамки — когда на край
+                # заходит предмет: угол коробки на переднем плане у того же плаката
+                if lb.get("залить_в"):
+                    area = lb["залить_в"]
+                    if not isinstance(area[0], list):
+                        fx0, fy0, fx1, fy1 = area
+                        area = [[fx0, fy0], [fx1, fy0], [fx1, fy1], [fx0, fy1]]
+                    poly = Image.new("L", out.size, 0)
+                    ImageDraw.Draw(poly).polygon([tuple(p) for p in area], fill=255)
+                    inside = np.asarray(poly) > 0
+                    H = H & inside
+                    ring &= inside
                 base = np.median(O[ring], axis=0)
                 # сосед ищется по столбцу — над и под строкой: сбоку от «A» у края облака
                 # лежит сиреневая кайма, и ближайший боковой сосед выгрызал край
-                _, (iy, ix) = ndimage.distance_transform_edt(H, sampling=(1, 50), return_indices=True)
+                search = H | ~inside if lb.get("залить_в") else H
+                _, (iy, ix) = ndimage.distance_transform_edt(search, sampling=(1, 50), return_indices=True)
                 near = O[iy, ix].astype(float)
                 close = np.abs(near - base).max(2) <= 45
                 fill = np.where(close[..., None], base, near)

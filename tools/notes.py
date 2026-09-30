@@ -524,6 +524,15 @@ def compose(name: str, cfg: dict, case: str, labels: list):
             out = Image.composite(sv["paper"], out, wipe)
 
     forbidden = forbidden_of(sv, cfg, labels)
+    # «оригинал» у пометки — [рамки]: кусок английской строки остаётся как есть,
+    # пикселями оригинала, и русским буквам туда нельзя (координаты «g6?» в записке
+    # `cut01_027`: пользователь 28 сентября 2026 — «вырезать из оригинала и вставить
+    # как есть»). Русская строка уходит от рамки перебором сдвигов `place`.
+    keep = [box for note in cfg["пометки"] for box in note.get("оригинал", [])]
+    if keep:
+        d = ImageDraw.Draw(forbidden)
+        for x0, y0, x1, y1 in keep:
+            d.rectangle((x0 - 6, y0 - 6, x1 + 6, y1 + 6), fill=255)
     occupied = Image.new("L", sv["canvas"], 0)
     ink = Image.new("L", sv["canvas"], 0)
     for i, note in enumerate(cfg["пометки"]):
@@ -577,6 +586,12 @@ def compose(name: str, cfg: dict, case: str, labels: list):
     paint = Image.merge("RGB", [noise.point(lambda v, c=c: max(0, min(255, c + (v - 128) // 6)))
                                 for c in cfg["чернила"]])
     out = Image.composite(paint, out, ink.point(lambda v: v * 245 // 255))
+    base = sv["base"].convert("RGB")
+    for box in keep:
+        out.paste(base.crop(tuple(box)), tuple(box[:2]))
+        ink.paste(0, tuple(box))
+    if keep:
+        report.append(f"  из оригинала оставлено рамок: {len(keep)} — " + ", ".join(map(str, keep)))
     if alpha is not None:
         out = out.convert("RGBA")
         out.putalpha(alpha)

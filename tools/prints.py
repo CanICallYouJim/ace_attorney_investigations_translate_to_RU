@@ -439,7 +439,24 @@ def compose(name: str, cfg: dict, case: str):
         V = tm.load_variants(name)
         for part in cfg["основа"]:
             r = tuple(part["рамка"])
-            E.paste(V[part["язык"]].convert("RGB").crop(r), r[:2])
+            piece = V[part["язык"]].convert("RGB").crop(r)
+            # «свой_цвет» — {"цвет", "допуск"}: пиксели этого цвета у любого из двух языков
+            # остаются английскими. Видео `cut01_03e`: у французов синяя линия прицела
+            # на 4 px правее, и кусок основы с временем приносил её ступенькой (30 сентября 2026)
+            if part.get("свой_цвет"):
+                import numpy as np
+                # «цвета» — несколько оттенков (сердцевина линии и края сглаживания) с узким
+                # допуском: широкий допуск от одного синего цеплял серый шум кадра и края цифр
+                cs = part["свой_цвет"].get("цвета") or [part["свой_цвет"]["цвет"]]
+                tol = part["свой_цвет"].get("допуск", 40)
+                P = np.asarray(piece).astype(int)
+                O = np.asarray(E.crop(r)).astype(int)
+                mine = np.zeros(P.shape[:2], bool)
+                for c in cs:
+                    mine |= (np.abs(P - np.array(c)).max(2) <= tol) | (np.abs(O - np.array(c)).max(2) <= tol)
+                P[mine] = O[mine]
+                piece = Image.fromarray(P.astype("uint8"))
+            E.paste(piece, r[:2])
     # «с_картинки» — накладка поверх нашей же картинки: [{"картинка", "сдвиг", "рамка"}].
     # Кусок накладки лежит в игре ровно на карте, и буквы обязаны совпасть с ней до пикселя —
     # поэтому не набираются заново, а переносятся с готовой русской картинки (карта города
@@ -637,6 +654,13 @@ def compose(name: str, cfg: dict, case: str):
                 near = O[iy, ix].astype(float)
                 close = np.abs(near - base).max(2) <= 45
                 fill = np.where(close[..., None], base, near)
+                # «залить»: "столбец" — только сосед по столбцу, без выравнивания в цвет фона:
+                # на плане тюрьмы комнаты с переливом слева направо, и выравнивание дало бы
+                # ровную заплатку, а стены и контуры камер вертикальные — сосед сверху или
+                # снизу продолжает их сквозь снятую надпись (`cut01_008`: `cv2.inpaint`
+                # размывал край комнаты под заголовком и контуры камер, 30 сентября 2026)
+                if lb["залить"] == "столбец":
+                    fill = near
                 O[H] = fill[H].astype(O.dtype)
                 out = Image.fromarray(O)
             else:
@@ -667,6 +691,37 @@ def compose(name: str, cfg: dict, case: str):
                 import numpy as np
                 out = Image.fromarray(cv2.inpaint(np.asarray(out.convert("RGB")),
                                                   np.asarray(dark), 5, cv2.INPAINT_TELEA))
+    # «значок» у надписи — {"рамка": [x0, y0, x1, y1], "между": px}: значок перед словом
+    # (кнопка X на плашке «Examine» видео `cut01_03e`) снимается с места — фон по столбцу
+    # между строками над и под рамкой — и ставится заново перед русским словом; по «ось»
+    # центрируется вся группа «значок + слово», как у англичан (пользователь 30 сентября
+    # 2026: «X левее вместе с «Осмотреть», чтобы по центру было»)
+    icons = {}
+    for (lb, mask, bb) in jobs:
+        if lb.get("значок"):
+            import numpy as np
+            x0, y0, x1, y1 = lb["значок"]["рамка"]
+            S = np.asarray(E).astype(float)
+            # «фон» — число: та же картинка со сдвигом на столько px по x (плашка в клетку —
+            # сдвиг на период клетки даёт те же клетки без значка); или имя картинки-донора,
+            # у которой на месте значка чистый фон
+            if isinstance(lb["значок"].get("фон"), (int, float)):
+                sh = int(lb["значок"]["фон"])
+                bg = S[y0:y1, x0 + sh:x1 + sh]
+            elif lb["значок"].get("фон"):
+                D = np.asarray(Image.open(EN / case / f"{lb['значок']['фон']}.png").convert("RGB")).astype(float)
+                bg = D[y0:y1, x0:x1]
+            else:
+                top, bot = S[y0 - 2, x0:x1], S[y1 + 1, x0:x1]
+                t = ((np.arange(y0, y1) - (y0 - 2)) / (y1 + 3 - y0))[:, None, None]
+                bg = top[None] * (1 - t) + bot[None] * t
+            pix = S[y0:y1, x0:x1]
+            sign = np.abs(pix - bg).max(2) > 40
+            sign = np.asarray(Image.fromarray((sign * 255).astype("uint8")).filter(ImageFilter.MaxFilter(3))) > 0
+            O = np.asarray(out.convert("RGB")).astype(float).copy()
+            O[y0:y1, x0:x1][sign] = bg[sign]
+            out = Image.fromarray(O.clip(0, 255).astype("uint8"))
+            icons[id(lb)] = (pix, sign, x0, y0, x1 - x0)
     # «заплатки» у надписи: [dx, dy] — где её буквы с каймой сидели, взять пиксели
     # оригинала со сдвигом (соседняя пустая клетка той же сетки, `cut01_027`: кайма
     # фигур перекрывала линии доски, и подложки там не показал ни один язык).
@@ -817,6 +872,16 @@ def compose(name: str, cfg: dict, case: str):
         if lb.get("вычесть"):
             bx, by = bx + lb["вычесть"], by + lb["вычесть"]
         step = want_h + LINE_GAP
+        # «шаг_строк» (px) — у многострочной надписи, набранной мельче английской: шаг
+        # английских строк при малом кегле разводил «Кабинет / начальницы» на пол-строки
+        # (`cut01_008`, 30 сентября 2026); с ним же «ось_y» ставит середину всего блока
+        block_dy = 0.0
+        if lb.get("шаг_строк"):
+            step = lb["шаг_строк"]
+            if "ось_y" in lb and len(lines_ru) > 1:
+                first = render(lines_ru[0], font_name, size, sw, squeeze)[2]
+                last = render(lines_ru[-1], font_name, size, sw, squeeze)[2]
+                block_dy = lb["ось_y"] - by - (first[1] + (len(lines_ru) - 1) * step + last[3]) / 2
         colour = tuple(lb.get("fill", cfg["fill"]))
         # У английских надписей этого пласта буквы белые, а вокруг тёмный кант:
         # без него набор читается бледно, а замер штриха сравнивает наше «только
@@ -843,9 +908,12 @@ def compose(name: str, cfg: dict, case: str):
             # «Вход» и «Сад» по оси лестницы (`cut02_010`), а не по английским буквам
             if "ось" in lb:
                 dx = lb["ось"] - bx - (ru_bb[0] + ru_bb[2]) / 2
+                if lb.get("значок"):
+                    iw = lb["значок"]["рамка"][2] - lb["значок"]["рамка"][0]
+                    dx += (iw + lb["значок"].get("между", 6)) / 2
             # «ось_y» — середина чернил строки на этом y (однострочные надписи): буква
             # в кружке по центру круга вместе с выносными элементами («Д», `cutobj02_003`)
-            dy = 0.0
+            dy = block_dy
             if "ось_y" in lb and len(lines_ru) == 1:
                 dy = lb["ось_y"] - by - (ru_bb[1] + ru_bb[3]) / 2
             at = (round(bx + dx - ox), round(by + j * step + dy - oy))
@@ -947,6 +1015,15 @@ def compose(name: str, cfg: dict, case: str):
                 part.paste(ru_im.crop((x0, 0, x1, ru_im.height)), (x0, 0))
                 out.paste(tuple(mark["цвет"]), place, part)
             ink.paste(255, place, solid(ru_im))
+            if id(lb) in icons and j == 0:
+                import numpy as np
+                pix, sign, ix0, iy0, iw = icons[id(lb)]
+                left = place[0] + ru_im.getbbox()[0]
+                nx = round(left - lb["значок"].get("между", 6) - iw)
+                O = np.asarray(out.convert("RGB")).copy()
+                O[iy0:iy0 + sign.shape[0], nx:nx + iw][sign] = pix[sign].astype(O.dtype)
+                out = Image.fromarray(O)
+                report.append(f"  значок: с x {ix0} на x {nx}")
         report.append(f"  {lb['text'].replace('|', ' / ')}: кегль {size}, сжатие {squeeze:.3f}, контур {sw}; "
                       f"высота {want_h:.0f} px, ширина {want_w} px; штрих наш {ru_stroke:.1f} против "
                       f"английского {en_stroke:.1f}; кант {edge_w}"

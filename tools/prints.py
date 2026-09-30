@@ -292,6 +292,21 @@ def dark_zone(E: Image.Image, box, thr: int, grow: int) -> Image.Image:
     return Image.fromarray(cv2.dilate(D, np.ones((2 * grow + 1, 2 * grow + 1), np.uint8)))
 
 
+def clip_to(lb: dict, E: Image.Image, out: Image.Image, ink: Image.Image, pre) -> tuple:
+    """«только_по» у надписи — {"цвета": [[r, g, b], …], "допуск"}: русские буквы ложатся
+    только на пиксели оригинала этих цветов (фон и буквы корпуса), а что лежит поверх
+    надписи — кассета на мониторе «Шпиончика» `itm01_00d`, 30 сентября 2026, — остаётся
+    оригиналом: английская строка там обрезана тем же предметом."""
+    import numpy as np
+    spec = lb["только_по"]
+    A = np.asarray(E).astype(int)
+    ok = np.zeros(A.shape[:2], bool)
+    for c in spec["цвета"]:
+        ok |= np.abs(A - np.array(c)).max(-1) <= spec.get("допуск", 30)
+    keep = Image.fromarray((ok * 255).astype("uint8"))
+    return Image.composite(out, pre[0], keep), Image.composite(ink, pre[1], keep)
+
+
 def centre(lb: dict) -> tuple[float, float]:
     """Точка, вокруг которой поворачивается надпись с «наклоном», — «центр» из задания
     или середина её рамки. У надписи с «наклоном» рамка задана в выпрямленных
@@ -746,6 +761,7 @@ def compose(name: str, cfg: dict, case: str):
     for lb, mask, bb in jobs:
         (font_name, lines_en, lines_ru, want_h, want_w,
          size, squeeze, sw, en_stroke) = geometry(lb, mask, bb)
+        pre = (out.copy(), ink.copy()) if lb.get("только_по") else None
         # «кант» у надписи — свой: шапка плана `cut02_010` без канта, но с ореолом
         edge_w_all, edge_w = edge_w, lb.get("кант", edge_w)
         ru_stroke = cp.stroke(solid(render(lines_ru[0], font_name, size,
@@ -815,6 +831,8 @@ def compose(name: str, cfg: dict, case: str):
             ink.paste(255, (0, 0), solid(body))
             report.append(f"  {lb['text'].replace('|', ' / ')}: кегль {size}, сжатие {squeeze:.3f}, "
                           f"наклон {a}°; высота {want_h:.0f} px, ширина {want_w} px")
+            if pre:
+                out, ink = clip_to(lb, E, out, ink, pre)
             edge_w = edge_w_all
             continue
         # «обход»: false — не отодвигать надпись от рисунка: «Garden» у англичан лежит
@@ -882,6 +900,8 @@ def compose(name: str, cfg: dict, case: str):
                       f"высота {want_h:.0f} px, ширина {want_w} px; штрих наш {ru_stroke:.1f} против "
                       f"английского {en_stroke:.1f}; кант {edge_w}"
                       + (f"; сдвиг {shift}" if shift != (0, 0) else ""))
+        if pre:
+            out, ink = clip_to(lb, E, out, ink, pre)
         edge_w = edge_w_all
     # Сравнение «штрих против штриха» по мерке `stroke` здесь не судья: она растёт,
     # когда соседние буквы слипаются кантом, и у длинного «Gusto's Room» показывает

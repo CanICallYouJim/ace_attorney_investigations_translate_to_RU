@@ -209,6 +209,11 @@ def small_copy(name, job, case, folder):
         src = np.float32([k1[m.queryIdx].pt for m in good])
         dst = np.float32([k2[m.trainIdx].pt for m in good])
         H, inl = cv2.findHomography(src, dst, cv2.RANSAC, 2.0)
+        # «тождество» — мелкая тот же кадр, что большая (×k): совмещение без поиска.
+        # На затемнённом кадре `cut02_031` SIFT находил мусор и клал ленту наискось.
+        if job.get("тождество"):
+            H = np.array([[1.0, 0, x0 * k], [0, 1.0, y0 * k], [0, 0, 1]])
+            inl = np.ones(1)
         size = (small_en.shape[1], small_en.shape[0])
         # переносится уже уменьшенная ×k большая — без уменьшения точечная печать
         # при линейной выборке рябит
@@ -218,6 +223,21 @@ def small_copy(name, job, case, folder):
         diff = cv2.resize(diff, (g1s.shape[1], g1s.shape[0]), interpolation=cv2.INTER_AREA)
         m = cv2.warpPerspective(diff, H, size, flags=cv2.INTER_LINEAR) > 0.08
         m = binary_dilation(m, iterations=job.get("запас", 1))
+        # «свет» — мелкая освещена иначе (затемнённый кадр сцены `cut02_031` против
+        # `cut02_032`): русская умножается на отношение «мелкая / большая» по каналам,
+        # медиана по английским пикселям зоны. «видно» — допуск: пиксель переносится,
+        # только если английская мелкая там та же, что английская большая (при этом
+        # свете), — людей и предметы перед вывеской `cut02_001` русская не перекрывает.
+        if job.get("свет") or job.get("видно"):
+            en_s = cv2.resize(en_big, (g1s.shape[1], g1s.shape[0]), interpolation=cv2.INTER_AREA)
+            w_en = cv2.warpPerspective(en_s, H, size, flags=cv2.INTER_LINEAR).astype(float)
+            gain = np.ones(3)
+            if job.get("свет"):
+                ok = m & (w_en.min(2) > 20)
+                gain = np.median(small_en[ok].astype(float) / w_en[ok], axis=0)
+                warped = np.clip(warped.astype(float) * gain, 0, 255).astype(np.uint8)
+            if job.get("видно"):
+                m &= np.abs(small_en.astype(float) - w_en * gain).max(2) <= job["видно"]
         O = np.asarray(out).copy()
         O[m, :3] = warped[m]
         res_im = Image.fromarray(O)

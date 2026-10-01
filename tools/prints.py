@@ -532,6 +532,7 @@ def compose(name: str, cfg: dict, case: str):
         if "англ" not in lb:
             raise ValueError(f"{name}: у надписи «{lb['text']}» нет «англ» — замерять не по чему")
     wanted: list[int] = []
+    keep_lines = Image.new("L", E.size, 0)
     for lb, mask in zip(cfg["labels"], parts_of(eng, E, cfg["labels"])):
         # «чернила» у надписи — список цветов английских букв и каймы: буквы — пиксели
         # этих цветов (±48) в рамке. Где у других языков те же буквы на том же месте
@@ -591,6 +592,33 @@ def compose(name: str, cfg: dict, case: str):
                 for c in lb["чернила"]:
                     hit[y0:y1, x0:x1] |= np.abs(A[y0:y1, x0:x1] - np.array(c)).max(2) <= tol
             mask = Image.fromarray((hit * 255).astype("uint8"))
+        # «линии» у надписи — {"длина": px}: тёмные пробеги вдоль строки (в выпрямленных
+        # координатах) не короче «длины» — линейки газеты, а не буквы; их не снимать,
+        # а после затирки вернуть из оригинала. Газеты `cut00_01e`: рамки строк задевали
+        # двойные линейки, и снятие рвало их (1 октября 2026)
+        if lb.get("линии"):
+            import numpy as np
+            from scipy import ndimage
+            c_ = centre(lb)
+            D = np.asarray(E.convert("L").rotate(-lb.get("наклон", 0), resample=Image.BICUBIC,
+                                                center=c_, fillcolor=255)) < 120
+            L_ = lb["линии"]["длина"]
+            # строки ±2 разом: линия под лёгким углом (газета выгнута) не рвётся на пробеги
+            D3 = D.copy()
+            for s_ in (1, -1, 2, -2):
+                D3 |= np.roll(D, s_, 0)
+            run = ndimage.uniform_filter1d(D3.astype(float), L_, axis=1) > 0.97
+            run = ndimage.maximum_filter1d(run, L_, axis=1) & D
+            # только у своей строки: рамка с запасом, остальной кадр не трогается
+            near = np.zeros_like(run)
+            bx0, by0, bx1, by1 = lb["box"]
+            near[max(0, by0 - 20):by1 + 20, max(0, bx0 - 20):bx1 + 20] = True
+            run &= near
+            line = Image.fromarray((run * 255).astype("uint8")).rotate(
+                lb.get("наклон", 0), resample=Image.NEAREST, center=c_)
+            line = line.filter(ImageFilter.MaxFilter(3))
+            keep_lines = ImageChops.lighter(keep_lines, line)
+            mask = ImageChops.subtract(mask, line)
         bb = mask.getbbox()
         if bb is None:
             raise ValueError(f"{name}: у надписи «{lb['text']}» английских чернил в рамке не нашлось")
@@ -762,7 +790,12 @@ def compose(name: str, cfg: dict, case: str):
     # хвосты букв за краем рамки снимаются так же (газеты `cut00_01e`, 1 октября 2026).
     # «вернуть» у картинки — [области]: там остаётся оригинал, если снятие задело соседний
     # рисунок (текст статьи рядом с заголовком газеты). Обе правки — до набора.
-    if cfg.get("стереть") or cfg.get("вернуть"):
+    # «залатать» у картинки — [{"где", "сдвиг": [dx, dy]}]: область берётся из оригинала
+    # со сдвигом — с чистого куска того же рисунка (полоса и обводка конверта вдоль
+    # своей прямой на письме `itm03_003`: английские буквы лежали на полосе, а `стереть`
+    # снял бы и саму полосу — она темнее бумаги и тоньше окна; 1 октября 2026).
+    # Применяется после «стереть», до «вернуть».
+    if cfg.get("стереть") or cfg.get("вернуть") or cfg.get("залатать") or keep_lines.getbbox():
         import numpy as np
         from scipy import ndimage
 
@@ -789,6 +822,14 @@ def compose(name: str, cfg: dict, case: str):
             hit = ndimage.binary_dilation(hit, iterations=part.get("шире", 1)) & where
             O[where] = S[where]
             O[hit] = bg[hit].round().astype(O.dtype)
+        # линейки (ключ надписи «линии») — до заплат: заплата кладётся поверх линейки
+        kl = np.asarray(keep_lines) > 0
+        O[kl] = S[kl]
+        for part in cfg.get("залатать", []):
+            ys, xs = np.nonzero(region(part["где"]))
+            dx, dy = part["сдвиг"]
+            ok = (ys + dy >= 0) & (ys + dy < S.shape[0]) & (xs + dx >= 0) & (xs + dx < S.shape[1])
+            O[ys[ok], xs[ok]] = S[ys[ok] + dy, xs[ok] + dx]
         for area in cfg.get("вернуть", []):
             where = region(area)
             O[where] = S[where]
@@ -963,6 +1004,13 @@ def compose(name: str, cfg: dict, case: str):
             # «ось_y» — середина чернил строки на этом y (однострочные надписи): буква
             # в кружке по центру круга вместе с выносными элементами («Д», `cutobj02_003`)
             dy = block_dy
+            # «база» — y базовой линии первой строки (у надписи с «наклоном» — в выпрямленных
+            # координатах), замеренный по английским буквам. Без неё строка ставится по верху
+            # английских чернил в рамке, а в рамку плотно стоящих заголовков попадают хвосты
+            # соседней строки сверху: «Махинации компании раскрыты!» на газете `cut00_01e`
+            # уехала на строку вверх из-за «g» и «y» в «Yatagarasu» (1 октября 2026)
+            if "база" in lb:
+                dy = lb["база"] - by
             if "ось_y" in lb and len(lines_ru) == 1:
                 dy = lb["ось_y"] - by - (ru_bb[1] + ru_bb[3]) / 2
             at = (round(bx + dx - ox), round(by + j * step + dy - oy))
@@ -1055,11 +1103,12 @@ def compose(name: str, cfg: dict, case: str):
             # сезонов `cut02_011`: «temperature» зелёным среди белого, 28 сентября 2026)
             mark = lb.get("выделение")
             if mark and mark["слово"] in lines_ru[j]:
-                pre = lines_ru[j][:lines_ru[j].index(mark["слово"])]
+                # не `pre`: под этим именем лежит копия кадра для «только_по»
+                head = lines_ru[j][:lines_ru[j].index(mark["слово"])]
                 font = load_font(font_name, size)
                 ox = render(lines_ru[j], font_name, size, sw, squeeze)[1][0]
-                x0 = round(ox + font.getlength(pre) * squeeze)
-                x1 = round(ox + font.getlength(pre + mark["слово"]) * squeeze)
+                x0 = round(ox + font.getlength(head) * squeeze)
+                x1 = round(ox + font.getlength(head + mark["слово"]) * squeeze)
                 part = Image.new("L", ru_im.size, 0)
                 part.paste(ru_im.crop((x0, 0, x1, ru_im.height)), (x0, 0))
                 out.paste(tuple(mark["цвет"]), place, part)

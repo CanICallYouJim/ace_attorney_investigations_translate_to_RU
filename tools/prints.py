@@ -752,6 +752,47 @@ def compose(name: str, cfg: dict, case: str):
             keep = (here[:, 0] > 150) & (here[:, 1] < 110)       # красный кружок
             O[ys[~keep], xs[~keep]] = src[~keep]
             out = Image.fromarray(O)
+    # «стереть» у картинки — [{"где", "буквы", "окно", "порог", "шире"}]: в области (рамка
+    # [x0, y0, x1, y1] или многоугольник [[x, y], …]) кадр собирается заново из оригинала,
+    # и всё тоньше «окна» и светлее (буквы "светлые") или темнее ("тёмные") фона больше чем
+    # на «порог» уровней заменяется фоном. Фон — серое замыкание оригинала (для тёмных букв
+    # максимум, потом минимум окном; для светлых наоборот): штрихи тоньше окна пропадают,
+    # мазки и перелив фона остаются. Полупрозрачные края английских букв в допуск «чернил»
+    # не попадают, а `cv2.inpaint` размазывал их белёсыми пятнами (табличка `cut02_008`);
+    # хвосты букв за краем рамки снимаются так же (газеты `cut00_01e`, 1 октября 2026).
+    # «вернуть» у картинки — [области]: там остаётся оригинал, если снятие задело соседний
+    # рисунок (текст статьи рядом с заголовком газеты). Обе правки — до набора.
+    if cfg.get("стереть") or cfg.get("вернуть"):
+        import numpy as np
+        from scipy import ndimage
+
+        def region(area):
+            if not isinstance(area[0], list):
+                x0, y0, x1, y1 = area
+                area = [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+            poly = Image.new("L", E.size, 0)
+            ImageDraw.Draw(poly).polygon([tuple(p) for p in area], fill=255)
+            return np.asarray(poly) > 0
+
+        O = np.asarray(out.convert("RGB")).copy()
+        S = np.asarray(E).astype(int)
+        for part in cfg.get("стереть", []):
+            where = region(part["где"])
+            w = part.get("окно", 9)
+            dark = part.get("буквы", "тёмные") == "тёмные"
+            first, then = (ndimage.maximum_filter, ndimage.minimum_filter) if dark else \
+                          (ndimage.minimum_filter, ndimage.maximum_filter)
+            bg = np.stack([then(first(S[..., c], size=w), size=w) for c in range(3)], -1)
+            bg = ndimage.uniform_filter(bg.astype(float), size=(3, 3, 1))
+            gap = (bg.mean(-1) - S.mean(-1)) if dark else (S.mean(-1) - bg.mean(-1))
+            hit = gap > part.get("порог", 14)
+            hit = ndimage.binary_dilation(hit, iterations=part.get("шире", 1)) & where
+            O[where] = S[where]
+            O[hit] = bg[hit].round().astype(O.dtype)
+        for area in cfg.get("вернуть", []):
+            where = region(area)
+            O[where] = S[where]
+        out = Image.fromarray(O)
     if "чужие_ореолы" in cfg:
         out = lone_values(name, out, zone, m["paper"], cfg["чужие_ореолы"], cfg.get("кайма_чужих", 6))
     ink = Image.new("L", E.size, 0)

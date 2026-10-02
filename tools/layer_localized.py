@@ -177,8 +177,18 @@ def allowed(size: tuple[int, int], jobs: list[dict]) -> Image.Image | None:
             rect(cut["box"], MARGIN + cut.get("pad", 6))
         for glue in job.get("вклеить", []):
             rect(glue["box"], MARGIN)
-        for back in job.get("вернуть", []):
-            rect(back["box"], MARGIN)
+        # «вернуть» у вклейки — [{"box"}]; у `prints.py` (с 1 октября 2026) «вернуть»,
+        # «стереть» и «залатать» — области рамкой [x0, y0, x1, y1] или многоугольником
+        # [[x, y], …]: это законные места правки, а не «за рамками надписей»
+        areas = list(job.get("вернуть", []))
+        areas += [part["где"] for part in job.get("стереть", []) + job.get("залатать", [])]
+        for area in areas:
+            if isinstance(area, dict):
+                area = area["box"]
+            if area and isinstance(area[0], (list, tuple)):
+                xs, ys = [p[0] for p in area], [p[1] for p in area]
+                area = (min(xs), min(ys), max(xs), max(ys))
+            rect(area, MARGIN)
         for label in job.get("labels", []):
             # набранная строка центрируется по рамке и может быть шире её — до max_width
             x0, y0, x1, y1 = label["box"]

@@ -1033,14 +1033,22 @@ def compose(name: str, cfg: dict, case: str):
         shift = (0, 0)
         if lb.get("наклон"):
             a, c = lb["наклон"], centre(lb)
-            body, rim = Image.new("L", E.size, 0), Image.new("L", E.size, 0)
+            # Холст с запасом по краям, обрезка — после поворота: выпрямленная строка
+            # у края кадра теряла выносной элемент ещё до поворота — хвост «р»
+            # в «Великий вор» срезало по линии, параллельной строке (база 1078 при
+            # высоте 1080, газета `cut00_01e`, замечание пользователя 2 октября 2026)
+            P = 400
+            big = (E.size[0] + 2 * P, E.size[1] + 2 * P)
+            body, rim = Image.new("L", big, 0), Image.new("L", big, 0)
             for ru_im, wide, at in pieces:
-                body.paste(255, at, ru_im)
+                body.paste(255, (at[0] + P, at[1] + P), ru_im)
                 if wide is not None:
-                    rim.paste(255, at, wide)
-            body = body.rotate(a, resample=Image.BICUBIC, center=c)
+                    rim.paste(255, (at[0] + P, at[1] + P), wide)
+            cP = (c[0] + P, c[1] + P)
+            unpad = (P, P, P + E.size[0], P + E.size[1])
+            body = body.rotate(a, resample=Image.BICUBIC, center=cP).crop(unpad)
             if edge_w:
-                rim = rim.rotate(a, resample=Image.BICUBIC, center=c)
+                rim = rim.rotate(a, resample=Image.BICUBIC, center=cP).crop(unpad)
                 out.paste(edge, (0, 0), rim)
                 ink.paste(255, (0, 0), solid(rim))
             out.paste(colour, (0, 0), body)

@@ -185,36 +185,65 @@ def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
     grey.alpha_composite(base)
     orig = np.array(grey.convert("RGB").crop((x0, y0, x1, y1))).astype(np.float32)
     art = Image.open((spec_dir / glue["art"]).resolve()).convert("RGB")
-    ai = np.array(art.resize((w, h), Image.LANCZOS)).astype(np.float32)
+    # Пропорции рисунка не трогать: генератор не рисует вытянутее 3:1 и
+    # вырезку 4:1 рисует во всю ширину и добивает полями по высоте
+    # (транспарант cut02_02d, 8 октября 2026). Масштаб — по большему,
+    # поля срезаются по центру, остальное — совмещение по точкам.
+    k = max(w / art.width, h / art.height)
+    fitted = art.resize((max(1, round(art.width * k)), max(1, round(art.height * k))), Image.LANCZOS)
+    canvas = Image.new("RGB", (w, h), (128, 128, 128))
+    canvas.paste(fitted, ((w - fitted.width) // 2, (h - fitted.height) // 2))
+    ai = np.array(canvas).astype(np.float32)
 
     zone = _zone_mask((w, h), glue["зона"])
-    keep_out = cv2.dilate(zone.astype(np.uint8), np.ones((31, 31), np.uint8)) == 0
+    # прозрачное оригинала не в счёт: его не видно, а край предмета задаёт альфа
+    seen = np.array(base.getchannel("A").crop((x0, y0, x1, y1))) > 0
+    keep_out = (cv2.dilate(zone.astype(np.uint8), np.ones((31, 31), np.uint8)) == 0) & seen
     report = {"точек": 0, "масштаб": 1.0, "сдвиг": (0.0, 0.0)}
 
     g_o = cv2.cvtColor(orig.astype(np.uint8), cv2.COLOR_RGB2GRAY)
     g_a = cv2.cvtColor(ai.astype(np.uint8), cv2.COLOR_RGB2GRAY)
     sift = cv2.SIFT_create(4000)
-    ko, do = sift.detectAndCompute(g_o, keep_out.astype(np.uint8) * 255)
-    ka, da = sift.detectAndCompute(g_a, keep_out.astype(np.uint8) * 255)
-    if do is not None and da is not None and len(ko) > 8 and len(ka) > 8:
+
+    def match(where):
+        ko, do = sift.detectAndCompute(g_o, where)
+        ka, da = sift.detectAndCompute(g_a, where)
+        if do is None or da is None or len(ko) <= 8 or len(ka) <= 8:
+            return None, 0
         pairs = cv2.BFMatcher().knnMatch(da, do, k=2)
         good = [p[0] for p in pairs if len(p) == 2 and p[0].distance < 0.75 * p[1].distance]
-        if len(good) >= 8:
-            src = np.float32([ka[m.queryIdx].pt for m in good])
-            dst = np.float32([ko[m.trainIdx].pt for m in good])
+        if len(good) < 8:
+            return None, 0
+        src = np.float32([ka[m.queryIdx].pt for m in good])
+        dst = np.float32([ko[m.trainIdx].pt for m in good])
+        if glue.get("совмещение") == "перспектива":
+            # плоский лист, который нейросеть повернула иначе (афиша-улика)
+            M, inl = cv2.findHomography(src, dst, cv2.RANSAC, 3.0)
+        else:
             M, inl = cv2.estimateAffinePartial2D(src, dst, method=cv2.RANSAC,
                                                  ransacReprojThreshold=3.0)
-            if M is not None:
-                ai = cv2.warpAffine(ai, M, (w, h), flags=cv2.INTER_LANCZOS4,
-                                    borderMode=cv2.BORDER_REFLECT)
-                report.update(точек=int(inl.sum()),
-                              масштаб=round(float(np.hypot(M[0, 0], M[1, 0])), 4),
-                              сдвиг=(round(float(M[0, 2]), 1), round(float(M[1, 2]), 1)))
+        return M, (int(inl.sum()) if M is not None else 0)
 
+    M, n = match(keep_out.astype(np.uint8) * 255)
+    if n < 12:
+        # зона заняла почти всю вырезку — точки по всей: буквы изменены,
+        # но рисунок вокруг (люди, здание) тот же, RANSAC отбросит буквы
+        M2, n2 = match(None)
+        if n2 > n:
+            M, n = M2, n2
+            report["точки_по_всей"] = True
+    if M is not None:
+        warp = cv2.warpPerspective if M.shape[0] == 3 else cv2.warpAffine
+        ai = warp(ai, M, (w, h), flags=cv2.INTER_LANCZOS4, borderMode=cv2.BORDER_REFLECT)
+        report.update(точек=n,
+                      масштаб=round(float(np.hypot(M[0, 0], M[1, 0])), 4),
+                      сдвиг=(round(float(M[0, 2]), 1), round(float(M[1, 2]), 1)))
+
+    # неизменённые места; нет их — вся вырезка (буквы — малая доля)
+    sel = keep_out if keep_out.sum() > 5000 else seen
     if glue.get("свет", True):
         # цвет по неизменённым местам; концы распределения отброшены — там
         # тени и блики, которые нейросеть рисует по-своему
-        sel = keep_out
         for c in range(3):
             a_, o_ = ai[..., c][sel], orig[..., c][sel]
             if a_.size > 1000 and a_.std() > 1:
@@ -223,9 +252,10 @@ def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
                 k, b = np.polyfit(a_[ok], o_[ok], 1)
                 ai[..., c] = ai[..., c] * k + b
     ai = np.clip(ai, 0, 255)
-    report["остаток_вне_зоны"] = round(float(np.median(np.abs(ai - orig).max(axis=2)[keep_out])), 1)
+    resid = np.abs(ai - orig).max(axis=2)
+    report["остаток_вне_зоны"] = round(float(np.median(resid[sel])), 1)
 
-    mask = zone.copy()
+    mask = zone & seen
     if "кроме" in glue:
         mask &= ~_zone_mask((w, h), glue["кроме"])
     if "по_разнице" in glue:

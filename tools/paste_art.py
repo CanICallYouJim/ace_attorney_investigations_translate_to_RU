@@ -45,6 +45,19 @@
 `key_tol` (допуск, 90), `despill` (по умолчанию да), `shrink` (сжать альфу,
 2 пикселя), `opacity`.
 
+Ключ `плашка` (8 октября 2026) — класс «без фона», курс 23 сентября: нейросеть
+перерисовала **всю вырезку вместе с фоном** (`codex_image.py`), сюда идёт её
+рисунок целиком. Совмещение по точкам вне зоны, подгонка цвета, вклейка
+только в зону с мягким краем внутрь — подробно в `plate()`:
+
+    "плашка": [{"art": "../../graphics_ai/case2/cut01_009_codex_1.png",
+                "вырезка": [250, 0, 1920, 720],
+                "зона": [[90, 60, 1670, 660]],
+                "кроме": [], "по_разнице": 40, "запас": 8, "край": 6}]
+
+`вырезка` — та же рамка, что `--box` у `codex_image.py`; `зона` и `кроме` —
+в координатах вырезки, рамки и многоугольники.
+
     python tools/paste_art.py work/graphics_ru/case1/art.json
     python tools/paste_art.py work/graphics_ru/case1/art.json --only cut00_002
 
@@ -131,6 +144,111 @@ def keep_only(im: Image.Image, colour, tol_in: int = 45, tol_out: int = 110,
     return out.crop(box) if box else out
 
 
+def _zone_mask(size, zones) -> "np.ndarray":
+    """Маска зон: рамки [x0, y0, x1, y1] и многоугольники [[x, y], …] в координатах вырезки."""
+    import numpy as np
+    m = Image.new("L", size, 0)
+    d = ImageDraw.Draw(m)
+    for z in zones:
+        if isinstance(z[0], (int, float)):
+            d.rectangle(tuple(z), fill=255)
+        else:
+            d.polygon([tuple(p) for p in z], fill=255)
+    return np.array(m) > 0
+
+
+def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
+    """Плашка нейросети: вся зона надписи вместе с фоном (курс 23 сентября 2026).
+
+    Нейросеть получила вырезку оригинала (`вырезка` — где она лежит в кадре)
+    и вернула её же с русской надписью, но перерисованной целиком: размер
+    другой, сдвиг на несколько пикселей, свет чуть иной. Поэтому:
+
+    1. рисунок приводится к размеру вырезки и **совмещается** с оригиналом
+       по точкам SIFT вне зоны надписи (подобие: масштаб, сдвиг, поворот);
+    2. **цвет** подгоняется по тем же неизменённым местам — по каналу
+       `оригинал ≈ a·нейросеть + b`;
+    3. в кадр идёт только `зона` (рамки и многоугольники в координатах
+       вырезки) минус `кроме`; с `по_разнице` — лишь там, где рисунок
+       отличается от оригинала больше порога (буквы), с запасом `запас` px;
+       край мягкий на `край` px **внутрь** зоны — снаружи оригинал до пикселя.
+
+    Возвращает замеры для отчёта: сколько точек, масштаб, остаток вне зоны.
+    """
+    import cv2
+    import numpy as np
+
+    x0, y0, x1, y1 = glue["вырезка"]
+    w, h = x1 - x0, y1 - y0
+    # прозрачное — на сером, как вырезку видела нейросеть (codex_image.py)
+    grey = Image.new("RGBA", base.size, (128, 128, 128, 255))
+    grey.alpha_composite(base)
+    orig = np.array(grey.convert("RGB").crop((x0, y0, x1, y1))).astype(np.float32)
+    art = Image.open((spec_dir / glue["art"]).resolve()).convert("RGB")
+    ai = np.array(art.resize((w, h), Image.LANCZOS)).astype(np.float32)
+
+    zone = _zone_mask((w, h), glue["зона"])
+    keep_out = cv2.dilate(zone.astype(np.uint8), np.ones((31, 31), np.uint8)) == 0
+    report = {"точек": 0, "масштаб": 1.0, "сдвиг": (0.0, 0.0)}
+
+    g_o = cv2.cvtColor(orig.astype(np.uint8), cv2.COLOR_RGB2GRAY)
+    g_a = cv2.cvtColor(ai.astype(np.uint8), cv2.COLOR_RGB2GRAY)
+    sift = cv2.SIFT_create(4000)
+    ko, do = sift.detectAndCompute(g_o, keep_out.astype(np.uint8) * 255)
+    ka, da = sift.detectAndCompute(g_a, keep_out.astype(np.uint8) * 255)
+    if do is not None and da is not None and len(ko) > 8 and len(ka) > 8:
+        pairs = cv2.BFMatcher().knnMatch(da, do, k=2)
+        good = [p[0] for p in pairs if len(p) == 2 and p[0].distance < 0.75 * p[1].distance]
+        if len(good) >= 8:
+            src = np.float32([ka[m.queryIdx].pt for m in good])
+            dst = np.float32([ko[m.trainIdx].pt for m in good])
+            M, inl = cv2.estimateAffinePartial2D(src, dst, method=cv2.RANSAC,
+                                                 ransacReprojThreshold=3.0)
+            if M is not None:
+                ai = cv2.warpAffine(ai, M, (w, h), flags=cv2.INTER_LANCZOS4,
+                                    borderMode=cv2.BORDER_REFLECT)
+                report.update(точек=int(inl.sum()),
+                              масштаб=round(float(np.hypot(M[0, 0], M[1, 0])), 4),
+                              сдвиг=(round(float(M[0, 2]), 1), round(float(M[1, 2]), 1)))
+
+    if glue.get("свет", True):
+        # цвет по неизменённым местам; концы распределения отброшены — там
+        # тени и блики, которые нейросеть рисует по-своему
+        sel = keep_out
+        for c in range(3):
+            a_, o_ = ai[..., c][sel], orig[..., c][sel]
+            if a_.size > 1000 and a_.std() > 1:
+                lo, hi = np.percentile(a_, [1, 99])
+                ok = (a_ > lo) & (a_ < hi)
+                k, b = np.polyfit(a_[ok], o_[ok], 1)
+                ai[..., c] = ai[..., c] * k + b
+    ai = np.clip(ai, 0, 255)
+    report["остаток_вне_зоны"] = round(float(np.median(np.abs(ai - orig).max(axis=2)[keep_out])), 1)
+
+    mask = zone.copy()
+    if "кроме" in glue:
+        mask &= ~_zone_mask((w, h), glue["кроме"])
+    if "по_разнице" in glue:
+        diff = np.abs(ai - orig).max(axis=2) > glue["по_разнице"]
+        diff = cv2.morphologyEx(diff.astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+        r = glue.get("запас", 6)
+        diff = cv2.dilate(diff, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2 * r + 1, 2 * r + 1)))
+        mask &= diff > 0
+    edge = max(1, glue.get("край", 6))
+    dist = cv2.distanceTransform(mask.astype(np.uint8), cv2.DIST_L2, 5)
+    alpha = np.clip(dist / edge, 0, 1)[..., None]
+    out = orig * (1 - alpha) + ai * alpha
+    patch = Image.fromarray(np.round(out).astype(np.uint8), "RGB")
+    where = Image.fromarray(((alpha[..., 0] > 0) * 255).astype(np.uint8), "L")
+    flat = base.convert("RGB")
+    flat.paste(patch, (x0, y0), where)     # вне зоны — оригинал до пикселя
+    a = base.getchannel("A")
+    base.paste(flat)
+    base.putalpha(a)
+    report["зона_px"] = int((alpha > 0).sum())
+    return report
+
+
 def fit(art: Image.Image, box) -> tuple[Image.Image, tuple[int, int]]:
     """Вписать арт в рамку, сохранив пропорции. Возвращает картинку и левый верх."""
     x0, y0, x1, y1 = box
@@ -189,6 +307,11 @@ def run(spec_path: Path, only: str | None) -> int:
             # разойдётся с этой на единицу в половине пикселей (13 сентября 2026).
             patch = shrink(big, there, (here[2] - here[0], here[3] - here[1]))
             im.paste(patch, (here[0], here[1]))
+
+        for glue in job.get("плашка", []):
+            r = plate(im, glue, spec_path.parent)
+            print(f"  {name}: плашка {glue['art']} — точек {r['точек']}, масштаб {r['масштаб']}, "
+                  f"сдвиг {r['сдвиг']}, остаток вне зоны {r['остаток_вне_зоны']}, зона {r['зона_px']} px")
 
         for glue in job.get("вклеить", []):
             art_path = (spec_path.parent / glue["art"]).resolve()

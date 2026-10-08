@@ -224,10 +224,12 @@ def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
                                                  ransacReprojThreshold=3.0)
         return M, (int(inl.sum()) if M is not None else 0)
 
+    cv2.setRNGSeed(0)          # RANSAC случайный: одна и та же вклейка — один результат
     M, n = match(keep_out.astype(np.uint8) * 255)
-    if n < 12:
+    if n < 50:
         # зона заняла почти всю вырезку — точки по всей: буквы изменены,
         # но рисунок вокруг (люди, здание) тот же, RANSAC отбросит буквы
+        cv2.setRNGSeed(0)
         M2, n2 = match(None)
         if n2 > n:
             M, n = M2, n2
@@ -260,7 +262,10 @@ def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
         mask &= ~_zone_mask((w, h), glue["кроме"])
     if "по_разнице" in glue:
         diff = np.abs(ai - orig).max(axis=2) > glue["по_разнице"]
-        diff = cv2.morphologyEx(diff.astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+        # шум — только крошечные пятна; «открытие» 3×3 стирало тонкие штрихи
+        # мелкого текста целиком, и английская строка оставалась (cut03_021)
+        n, lab, stats, _ = cv2.connectedComponentsWithStats(diff.astype(np.uint8), connectivity=8)
+        diff = np.isin(lab, np.nonzero(stats[:, cv2.CC_STAT_AREA] >= 6)[0][1:]).astype(np.uint8)
         r = glue.get("запас", 6)
         diff = cv2.dilate(diff, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2 * r + 1, 2 * r + 1)))
         mask &= diff > 0

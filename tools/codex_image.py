@@ -33,6 +33,14 @@
 
     python tools/codex_image.py --queue work/graphics_ai/codex.json --jobs 3
     python tools/codex_image.py --queue work/graphics_ai/codex.json --only cut01_009
+
+Образец и основа (9 октября 2026, правило №13 «одно изображение в разных кадрах»).
+`образец` — список картинок-эталонов, которые прикладываются к заданию вслед
+за вырезкой: принятая русская улика, по которой нейросеть ставит ту же вывеску
+в другом кадре. Элемент — путь от корня проекта или `{"файл", "box"}`; в CLI —
+`--ref <файл> [--ref …]`. `основа` — что редактировать вместо английского
+оригинала: наш черновик, когда исправить надо одну букву (цирк `cut01_009`:
+«Б» → «Е» вышло только так). Первой всегда идёт вырезка — её и правят.
 """
 from __future__ import annotations
 
@@ -66,13 +74,44 @@ def make_input(src: Path, box, dest: Path) -> Path:
     return out
 
 
-def run(crop: Path, prompt: str, dest: Path, timeout: int = 1200) -> int:
+REF_NOTE = (
+    "The FIRST attached image is the one to edit; output only its edited version. "
+    "The other attached images are REFERENCES described in the task below (usually the "
+    "approved Russian version of the same object — copy its lettering exactly); "
+    "do not output them.\n\n"
+)
+
+
+def make_refs(refs, dest: Path) -> list[Path]:
+    """Образцы рядом с рисунком: `<куда>_образец<N>.png` (вырезка `box`, если задана)."""
+    from PIL import Image
+    out = []
+    for n, ref in enumerate(refs or [], 1):
+        spec = ref if isinstance(ref, dict) else {"файл": ref}
+        im = Image.open(spec["файл"]).convert("RGBA")
+        grey = Image.new("RGBA", im.size, (128, 128, 128, 255))
+        grey.alpha_composite(im)
+        im = grey.convert("RGB")
+        if spec.get("box"):
+            im = im.crop(tuple(spec["box"]))
+        k = 1024 / max(im.size)
+        if k > 1:
+            im = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
+        path = dest.with_name(f"{dest.stem}_образец{n}.png")
+        im.save(path)
+        out.append(path)
+    return out
+
+
+def run(crop: Path, prompt: str, dest: Path, timeout: int = 1200, refs=None) -> int:
     dest.parent.mkdir(parents=True, exist_ok=True)
     log = dest.with_suffix(".log")
+    images = ["-i", str(crop.resolve())]
+    for r in refs or []:
+        images += ["-i", str(Path(r).resolve())]
     proc = subprocess.run(
-        ["codex", "exec", "--skip-git-repo-check", "-s", "read-only",
-         "-i", str(crop.resolve()), "-"],
-        input=(HEADER + prompt).encode("utf-8"),
+        ["codex", "exec", "--skip-git-repo-check", "-s", "read-only", *images, "-"],
+        input=(HEADER + (REF_NOTE if refs else "") + prompt).encode("utf-8"),
         stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
         timeout=timeout, shell=(sys.platform == "win32"),
     )
@@ -88,7 +127,7 @@ def run(crop: Path, prompt: str, dest: Path, timeout: int = 1200) -> int:
         print(f"  Codex не оставил рисунка (сессия {m.group(1)}), см. {log}")
         return 1
     shutil.copyfile(pics[-1], dest)
-    print(f"  {dest}  ← {pics[-1].name} (сессия {m.group(1)}, рисунков {len(pics)})")
+    print(f"  {dest} <- {pics[-1].name} (сессия {m.group(1)}, рисунков {len(pics)})")
     return 0
 
 
@@ -106,10 +145,12 @@ def queue(path: Path, only: list[str] | None, jobs: int) -> int:
         while (folder / f"{name}_codex_{n}.png").exists() or (folder / f"{name}_codex_{n}.log").exists():
             n += 1
         dest = folder / f"{name}_codex_{n}.png"
-        src = Path("work/graphics_en") / job["дело"] / f"{job.get('картинка', name)}.png"
+        src = Path(job["основа"]) if job.get("основа") else \
+            Path("work/graphics_en") / job["дело"] / f"{job.get('картинка', name)}.png"
         folder.mkdir(parents=True, exist_ok=True)
         crop = make_input(src, job.get("box"), dest)
-        todo.append((crop, job["задание"].rstrip() + "\n\n" + tail, dest))
+        refs = make_refs(job.get("образец"), dest)
+        todo.append((crop, job["задание"].rstrip() + "\n\n" + tail, dest, 1200, refs))
     with ThreadPoolExecutor(max(1, jobs)) as ex:
         codes = list(ex.map(lambda t: run(*t), todo))
     print(f"рисунков: {codes.count(0)} из {len(codes)}")
@@ -126,11 +167,13 @@ def main() -> int:
     ap.add_argument("--jobs", type=int, default=2, help="сколько Codex разом")
     ap.add_argument("--box", type=int, nargs=4, help="вырезка x0 y0 x1 y1")
     ap.add_argument("--timeout", type=int, default=1200)
+    ap.add_argument("--ref", type=Path, action="append", help="образец (эталон) — приложить вслед за вырезкой")
     a = ap.parse_args()
     if a.queue:
         return queue(a.queue, a.only, a.jobs)
     crop = make_input(a.picture, a.box, a.dest)
-    return run(crop, a.prompt.read_text(encoding="utf-8"), a.dest, a.timeout)
+    refs = make_refs([str(r) for r in a.ref or []], a.dest)
+    return run(crop, a.prompt.read_text(encoding="utf-8"), a.dest, a.timeout, refs)
 
 
 if __name__ == "__main__":

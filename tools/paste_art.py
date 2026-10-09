@@ -458,6 +458,17 @@ def run(spec_path: Path, only: str | None) -> int:
                     if max(abs(q[i] - col[i]) for i in range(3)) <= tol:
                         dp[x, y] = (*q, 255)
 
+        for dab in job.get("закрасить", []):
+            # Просвет в пиксель-два между буквами, который нейросеть дважды не развела
+            # (ножка «д» и дужка «й» на книге `itm02_023`, 9 октября 2026): рамка
+            # заливается цветом фона, взятым с пикселя-образца рядом («цвет_из»).
+            x0, y0, x1, y1 = dab["box"]
+            sample = im.getpixel(tuple(dab["цвет_из"]))
+            dp = im.load()
+            for y in range(y0, y1):
+                for x in range(x0, x1):
+                    dp[x, y] = sample
+
         dest = out_dir / f"{name}.png"
         im.save(dest)
         print(f"  {name}: {im.size[0]}x{im.size[1]} -> {dest}")

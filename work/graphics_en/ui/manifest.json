@@ -404,5 +404,113 @@
       ],
       "flipped": false
     }
+  },
+  "efc_BigFont00": {
+    "bundle": "gk2_idlocal_trial",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "efc_BigFont01": {
+    "bundle": "gk2_idlocal_trial",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "efc_BigFont02": {
+    "bundle": "gk2_idlocal_trial",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "efc_BigFont03": {
+    "bundle": "gk2_idlocal_trial",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "efc_BigFont04": {
+    "bundle": "gk2_idlocal_trial",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "efc_BigFont05": {
+    "bundle": "gk2_idlocal_trial",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
   }
 }

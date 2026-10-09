@@ -257,7 +257,12 @@ def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
     resid = np.abs(ai - orig).max(axis=2)
     report["остаток_вне_зоны"] = round(float(np.median(resid[sel])), 1)
 
-    mask = zone & seen
+    # «альфа_по_фону» — {цвет, от, до}: у картинки своя прозрачность, и русская надпись
+    # выходит за её контур (выкрики `efc_BigFont*`: буквы вылезают за звезду иначе, чем
+    # английские). Нейросеть видела прозрачное серым — по отличию от серого строится
+    # новая альфа зоны; без ключа прозрачное оригинала остаётся как было.
+    by_bg = glue.get("альфа_по_фону")
+    mask = zone if by_bg else zone & seen
     if "кроме" in glue:
         mask &= ~_zone_mask((w, h), glue["кроме"])
     if "по_разнице" in glue:
@@ -278,6 +283,14 @@ def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
     flat = base.convert("RGB")
     flat.paste(patch, (x0, y0), where)     # вне зоны — оригинал до пикселя
     a = base.getchannel("A")
+    if by_bg:
+        lo, hi = by_bg.get("от", 16), by_bg.get("до", 48)
+        far = np.abs(ai - np.array(by_bg.get("цвет", [128, 128, 128]), np.float32)).max(axis=2)
+        new_a = np.clip((far - lo) / max(1, hi - lo), 0, 1) * 255
+        old_a = np.array(a.crop((x0, y0, x1, y1))).astype(np.float32)
+        mixed = old_a * (1 - alpha[..., 0]) + new_a * alpha[..., 0]
+        a = a.copy()
+        a.paste(Image.fromarray(np.round(mixed).astype(np.uint8), "L"), (x0, y0))
     base.paste(flat)
     base.putalpha(a)
     report["зона_px"] = int((alpha > 0).sum())

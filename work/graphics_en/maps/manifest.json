@@ -1,0 +1,145 @@
+{
+  "map00": {
+    "bundle": "gk2_mapbg_trial",
+    "flipped": false,
+    "size": [
+      2880,
+      1620
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "tra"
+    ]
+  },
+  "map01": {
+    "bundle": "gk2_mapbg_trial",
+    "flipped": false,
+    "size": [
+      2880,
+      1260
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map04": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      3600,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map08_00": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      2160,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map08_01": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      2160,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map12": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      2745,
+      1170
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "mapObj04_00_256": {
+    "bundle": "gk2_mapobj",
+    "flipped": true,
+    "size": [
+      1440,
+      1495
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "mapObj12_00_256": {
+    "bundle": "gk2_mapobj",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  }
+}

@@ -388,5 +388,62 @@
     ],
     "source_lang": "eng",
     "base": true
+  },
+  "Sousa_TextCutBG_R_03": {
+    "bundle": "gk_common_ingameui_trial",
+    "flipped": false,
+    "size": [
+      1920,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": false,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "jpn",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "Sousa_TextCutBG_R_04": {
+    "bundle": "gk_common_ingameui_trial",
+    "flipped": false,
+    "size": [
+      1920,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": false,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "jpn",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "Sousa_TextCutBG_R_05": {
+    "bundle": "gk_common_ingameui_trial",
+    "flipped": false,
+    "size": [
+      1920,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": false,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "jpn",
+      "kor",
+      "sim",
+      "tra"
+    ]
   }
 }

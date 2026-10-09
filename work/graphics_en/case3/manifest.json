@@ -348,5 +348,42 @@
     ],
     "source_lang": "eng",
     "base": true
+  },
+  "Sousa_TextCutBG_R_07": {
+    "bundle": "gk_common_ingameui",
+    "flipped": false,
+    "size": [
+      1920,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": false,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "jpn",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "opObj02_032_256": {
+    "bundle": "gk2_openinglocal",
+    "flipped": true,
+    "size": [
+      2880,
+      2880
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
   }
 }

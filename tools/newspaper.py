@@ -199,6 +199,11 @@ def small_copy(name, job, case, folder):
         sift = cv2.SIFT_create()
         g1 = cv2.cvtColor(en_big, cv2.COLOR_RGB2GRAY)
         g2 = cv2.cvtColor(small_en, cv2.COLOR_RGB2GRAY)
+        # «контраст» — мелкая затемнена (фон чтения улики `Sousa_TextCutBG_*`, яркость
+        # до 60 из 255): SIFT на ней не находит ни одной точки, обе картинки
+        # выравниваются гистограммой только для поиска точек
+        if job.get("контраст"):
+            g1, g2 = cv2.equalizeHist(g1), cv2.equalizeHist(g2)
         # большая уменьшается до размера мелкой, иначе SIFT не сводит масштабы
         k = job.get("k", g2.shape[1] / g1.shape[1])
         g1s = cv2.resize(g1, None, fx=k, fy=k, interpolation=cv2.INTER_AREA)

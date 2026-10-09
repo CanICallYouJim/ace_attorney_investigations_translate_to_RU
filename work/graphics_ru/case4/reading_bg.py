@@ -42,7 +42,7 @@ FONTS = Path("C:/Windows/Fonts")
 SS = 4                 # набор и выборка в ×4, потом усреднение
 INK = 0.62             # краска — темнее этой доли бумаги
 SMOOTH = 20            # сглаживание кривой низа строки, px вдоль строки
-GHOST = 0.9            # край английских букв — темнее подложки на 10 % и больше
+GHOST = 0.95           # край английских букв — темнее подложки на 5 % и больше (с 10 % оставались крапины)
 SLOPE = 0.15           # ровный — и перепад опоры меньше этого, уровней на пиксель
 FLAT = 0.8             # ровный рисунок: разброс опоры в окне σ 3 px меньше этого, уровней
 LANGS = ("eng", "ger", "fre", "jpn", "kor", "sim", "tra")
@@ -155,12 +155,12 @@ class Line:
         self.ink = s_ink > 0.5
         near = None
         if blocked is not None:
-            # срезан тот столбец, где низ краски упирается в карточку (1–8 px под ним — карточка:
-            # у кромки краску отрезает запас 2 px и порог);
+            # срезан тот столбец, где низ краски упирается в карточку (1–5 px под ним — карточка:
+            # у кромки краску отрезает запас 2 px и порог; целые буквы над кромкой — в 6–8 px от неё);
             # столбцы, где полоса строки лишь касается карточки, низ строки честно показывают
             s_b, _ = strip(blocked.astype(float), c, self.n, h + 4)
             has, _, bot = columns(self.ink)
-            rows = np.clip(bot[None, :] + 4 + np.arange(1, 9)[:, None], 0, s_b.shape[0] - 1)
+            rows = np.clip(bot[None, :] + 4 + np.arange(1, 6)[:, None], 0, s_b.shape[0] - 1)
             near = has & (np.take_along_axis(s_b, rows, 0).max(0) > 0.5)
         got = measure(self.ink, h, blocked=near, straight=cfg.get("прямая", False))
         if got is None:
@@ -357,14 +357,16 @@ def build(name, english=False):
     # буквы — темнее медианы языков (у обводки карточки медиана тоже темна: край обводки у языков
     # чуть разный, и от самого светлого по нему шёл пунктир)
     med_v = np.median(stack.max(-1), 0)
-    outline = med_v < 0.5 * paper_of(med_v)
+    # обводка — тёмная у всех семи языков (самый светлый тоже тёмен); по медиане туда попадало
+    # имя на карточке — у немцев и французов «Rosie Ringer» там же
+    outline = ref < 0.5 * paper_of(ref)
     lab_o, _ = label(outline)
     outline &= np.bincount(lab_o.ravel())[lab_o] > 500
     # где буквы большинства языков в одной точке, медиана тоже темна — там мерка по самому
     # светлому, но не у обводки
     core = light & ((v_eng / np.maximum(med_v, 1e-3) < INK)
                     | (eng_ink & ~binary_dilation(outline, iterations=3)))
-    zone = binary_dilation(light & (norm < GHOST) & binary_dilation(core, iterations=3), iterations=2)
+    zone = binary_dilation(light & (norm < GHOST) & binary_dilation(core, iterations=5), iterations=3)
     # Заливка — среднее по языкам, у которых в этой точке чистая бумага: у каждого языка его буквы
     # (темнее самого светлого на 2 уровня) с запасом 2 px — размытый край буквы тоже не бумага.
     # Рисунок (тень и обводка карточки, корешок) у всех языков один и попадает как есть; среднее
@@ -388,6 +390,9 @@ def build(name, english=False):
     # обводка — длинный кусок; мелкое тёмное пятно у всех языков — их буквы в одной точке
     lab, _ = label(dark)
     dark &= np.bincount(lab.ravel())[lab] > 500
+    # и переход от обводки к тени и бумаге (4 px вокруг длинных тёмных кусков): заливка «по чистым
+    # языкам» там светлее рисунка на 4–5 уровней — выщерблина на кромке
+    dark |= binary_dilation(outline, iterations=4)
     fill[dark] = np.median(stack, 0)[dark]
     count = np.where(dark, 7, count)
     # буквы всех семи языков в одной точке: опора и там темна — пятно темнее медианы окрестности
@@ -429,6 +434,27 @@ def build(name, english=False):
         size40 = (cols.max() - cols.min() + 1) / SS
         measured.setdefault(ln.cfg.get("группа", "письмо"), []).append(40.0 * (ln.u_end - ln.u_start) / size40)
     group = {g: float(np.median(v)) for g, v in measured.items()}
+
+    # Низ строки по столбцам смещён: у круглых букв боковые столбцы кончаются выше строки — оценка
+    # выше настоящей на несколько px (R_03: «worry» стоит на 405–410, оценка — 402). Смещение
+    # меряется на себе: английский текст гарнитурой оригинала ставится на оценку и меряется тем же
+    # способом; разница «намерено − поставлено» — смещение оценки, оно вычитается.
+    for ln in lines:
+        lc = ln.cfg
+        if "как_строка" in lc:
+            continue
+        size_g = group[lc.get("группа", "письмо")]
+        a_en = place(ln, lc["англ_целиком"], en_font, size_g, 1.0, en_stroke, ln.u_start, shape,
+                     spec.get("размытие", 0.8))
+        s_a, _ = strip(a_en, ln.c, ln.n, lc["полувысота"])
+        got = measure(1 - s_a * (1 - ln.ink_ratio) < INK, lc["полувысота"], straight=lc.get("прямая", False))
+        if not got:
+            continue
+        us = np.linspace(max(got[1][0], ln.u_meas[0]), min(got[1][1], ln.u_meas[1]), 30)
+        bias = float(np.median(got[0](us) - ln.base_v(us)))
+        old_v = ln.base_v
+        ln.base_v = lambda x, f=old_v, b=bias: f(x) - b
+        print(f"{lc['англ']!r}: смещение оценки низа {bias:+.1f} px")
 
     # строка почти вся под карточкой (`как_строка`): форма — соседней, а высота — по видимым
     # кусочкам: английский текст гарнитурой оригинала, сдвинутый на dy, должен лечь на них

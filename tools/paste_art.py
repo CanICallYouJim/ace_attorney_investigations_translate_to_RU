@@ -283,16 +283,30 @@ def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
     flat = base.convert("RGB")
     flat.paste(patch, (x0, y0), where)     # вне зоны — оригинал до пикселя
     a = base.getchannel("A")
+    before = np.array(base.convert("RGB"))
     if by_bg:
         lo, hi = by_bg.get("от", 16), by_bg.get("до", 48)
         far = np.abs(ai - np.array(by_bg.get("цвет", [128, 128, 128]), np.float32)).max(axis=2)
         new_a = np.clip((far - lo) / max(1, hi - lo), 0, 1) * 255
+        if by_bg.get("закрыть"):
+            # проколы в 1 px по чёрному контуру и на стыке букв с белым: генератор местами
+            # рисует контур тоном, близким к серому фону (выкрики, 9 октября 2026: 1350–1900
+            # проколов на файл против 49 у оригинала) — морфологическое замыкание 3×3
+            new_a = np.maximum(new_a, cv2.morphologyEx(new_a.astype(np.float32), cv2.MORPH_CLOSE,
+                                                       np.ones((3, 3), np.uint8)))
         old_a = np.array(a.crop((x0, y0, x1, y1))).astype(np.float32)
         mixed = old_a * (1 - alpha[..., 0]) + new_a * alpha[..., 0]
         a = a.copy()
         a.paste(Image.fromarray(np.round(mixed).astype(np.uint8), "L"), (x0, y0))
     base.paste(flat)
     base.putalpha(a)
+    if by_bg and by_bg.get("прозрачное") == "оригинал":
+        # под прозрачным у нейросети серый фон вырезки; при сглаживании текстуры он даёт
+        # серую бахрому — цвет полностью прозрачных пикселей берётся у оригинала
+        arr = np.array(base)
+        clear = arr[..., 3] == 0
+        arr[clear, :3] = before[clear]
+        base.paste(Image.fromarray(arr, "RGBA"))
     report["зона_px"] = int((alpha > 0).sum())
     return report
 

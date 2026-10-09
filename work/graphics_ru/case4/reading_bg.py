@@ -529,6 +529,10 @@ def build(name, english=False):
             stem = stem_width(ours, mid - mm[2] * 0.8, mid - mm[2] * 0.2)
         report.append(f"{lc['англ']!r}: кегль {size:.1f}, строчные {ln.xh:.1f} px, штрих {ln.stem:.1f} (наш {stem:.1f}), "
                       f"краска {r:.2f}, начало u {u0:.0f} (англ {ln.u_start:.0f}–{ln.u_end:.0f}), длина {width:.0f}")
+    # `вернуть` — рамки, где кадр — оригинал до пикселя (правка задела рисунок вне надписей:
+    # R_03 — светлая черта на внутренней тени правого края карточки, 10 октября 2026)
+    for x0, y0, x1, y1 in spec.get("вернуть", []):
+        out[y0:y1, x0:x1] = E[y0:y1, x0:x1]
     res = np.clip(np.round(out), 0, 255).astype(np.uint8)
     img = Image.fromarray(res).convert("RGBA")
     img.putalpha(eng_rgba.getchannel("A"))

@@ -43,6 +43,7 @@ SS = 4                 # набор и выборка в ×4, потом уср�
 INK = 0.62             # краска — темнее этой доли бумаги
 SMOOTH = 20            # сглаживание кривой низа строки, px вдоль строки
 GHOST = 0.9            # край английских букв — темнее подложки на 10 % и больше
+SLOPE = 0.15           # ровный — и перепад опоры меньше этого, уровней на пиксель
 FLAT = 0.8             # ровный рисунок: разброс опоры в окне σ 3 px меньше этого, уровней
 LANGS = ("eng", "ger", "fre", "jpn", "kor", "sim", "tra")
 
@@ -84,14 +85,16 @@ def columns(ink):
     return has, top, bot
 
 
-def measure(ink, h, win=24, step=4):
+def measure(ink, h, win=24, step=4, blocked=None, straight=False):
     """Низ строки по окнам (медиана нижних краёв столбцов — хвосты «y», «g» в меньшинстве),
     сглаженный сплайном, и высота строчных — медиана высоты столбцов над низом по всей строке
     (строчных в строке больше половины, заглавные и выносные её не сдвигают)."""
     has, top, bot = columns(ink)
+    # столбцы у кромки карточки: буквы там срезаны снизу, их «низ» — кромка, а не строка
+    meas = has & ~blocked if blocked is not None else has
     us, vs = [], []
     for u0 in range(0, ink.shape[1] - win + 1, step):
-        sel = has[u0:u0 + win]
+        sel = meas[u0:u0 + win]
         if sel.sum() < win * 0.4:
             continue
         us.append(u0 + win / 2)
@@ -105,11 +108,15 @@ def measure(ink, h, win=24, step=4):
     # гладкая кривая: буквы ставятся перпендикулярно ей, и на мелкой волне их складывает —
     # радиус изгиба обязан быть много больше высоты букв; прогиб к корешку (~100 px) остаётся
     grid = np.arange(us.min(), us.max() + 1)
-    smooth = gaussian_filter1d(np.interp(grid, us, vs), SMOOTH, mode="nearest")
+    if straight:
+        # карточка плоская: низ строки — прямая (излом грубой средней линии гнал буквы вверх-вниз)
+        smooth = np.polyval(np.polyfit(us, vs, 1), grid)
+    else:
+        smooth = gaussian_filter1d(np.interp(grid, us, vs), SMOOTH, mode="nearest")
 
     def spl(x, grid=grid, smooth=smooth):
         return np.interp(x, grid, smooth)
-    cols = np.nonzero(has)[0]
+    cols = np.nonzero(meas)[0]
     xh = float(np.median(spl(np.clip(cols, us.min(), us.max())) - (top[cols] - 0.5 - h)))
     return spl, (us.min(), us.max()), xh, top, bot
 
@@ -136,7 +143,7 @@ def x_height(font_path, ch):
 
 
 class Line:
-    def __init__(self, cfg, v_norm, own_ink):
+    def __init__(self, cfg, v_norm, own_ink, blocked=None):
         self.cfg = cfg
         t, c = dense(cfg["центр"], 1.0)
         c[:, 0] = gaussian_filter(c[:, 0], 3, mode="nearest")
@@ -146,7 +153,16 @@ class Line:
         h = cfg["полувысота"]
         s_ink, self.v = strip(own_ink.astype(float), c, self.n, h)
         self.ink = s_ink > 0.5
-        got = measure(self.ink, h)
+        near = None
+        if blocked is not None:
+            # срезан тот столбец, где низ краски упирается в карточку (1–8 px под ним — карточка:
+            # у кромки краску отрезает запас 2 px и порог);
+            # столбцы, где полоса строки лишь касается карточки, низ строки честно показывают
+            s_b, _ = strip(blocked.astype(float), c, self.n, h + 4)
+            has, _, bot = columns(self.ink)
+            rows = np.clip(bot[None, :] + 4 + np.arange(1, 9)[:, None], 0, s_b.shape[0] - 1)
+            near = has & (np.take_along_axis(s_b, rows, 0).max(0) > 0.5)
+        got = measure(self.ink, h, blocked=near, straight=cfg.get("прямая", False))
         if got is None:
             sys.exit(f"{cfg['англ']}: краски в полосе почти нет — проверь «центр»")
         self.base_v, self.u_meas, self.xh, top, bot = got
@@ -164,9 +180,9 @@ class Line:
         u = np.arange(u_lo, u_hi + step, step)
         uc = np.clip(u, a, b)
         v = self.base_v(uc)
-        # продолжение прямой: наклон по крайним 60 px замера (производная сплайна на краю скачет)
-        ka = np.polyfit(np.linspace(a, min(b, a + 60), 7), self.base_v(np.linspace(a, min(b, a + 60), 7)), 1)[0]
-        kb = np.polyfit(np.linspace(max(a, b - 60), b, 7), self.base_v(np.linspace(max(a, b - 60), b, 7)), 1)[0]
+        # продолжение прямой: наклон по крайним 150 px замера (производная сплайна на краю скачет)
+        ka = np.polyfit(np.linspace(a, min(b, a + 150), 11), self.base_v(np.linspace(a, min(b, a + 150), 11)), 1)[0]
+        kb = np.polyfit(np.linspace(max(a, b - 150), b, 11), self.base_v(np.linspace(max(a, b - 150), b, 11)), 1)[0]
         v = np.where(u < a, v + (u - a) * ka, v)
         v = np.where(u > b, v + (u - b) * kb, v)
         # точки средней линии и нормали — с продолжением прямой
@@ -185,11 +201,16 @@ def parallel(la, lb, own_ink, cfg):
     import copy
     ln = copy.copy(lb)
     ln.cfg = cfg
-    um = (lb.u_meas[0] + lb.u_meas[1]) / 2
-    pb = lb.baseline(um, um)[0]
-    ua = float(la.t[np.abs(la.c[:, 0] - pb[0]).argmin()])
-    pa = la.baseline(ua, ua)[0]
-    ln.c = lb.c + np.array([0.0, pb[1] - pa[1]])
+    # шаг строк — медиана по всей длине, где обе строки замерены (в одной точке под карточкой
+    # кривая интерполирована, и шаг выходил вдвое больше)
+    steps = []
+    for u in np.linspace(lb.u_meas[0], lb.u_meas[1], 40):
+        pb = lb.baseline(u, u)[0]
+        k = np.abs(la.c[:, 0] - pb[0]).argmin()
+        ua = float(la.t[k])
+        if la.u_meas[0] <= ua <= la.u_meas[1] and abs(la.c[k, 0] - pb[0]) < 2:
+            steps.append(pb[1] - la.baseline(ua, ua)[0][1])
+    ln.c = lb.c + np.array([0.0, float(np.median(steps))])
     ys, xs = np.nonzero(own_ink)
     if len(xs):
         _, k = cKDTree(ln.c).query(np.stack([xs, ys], 1))
@@ -304,11 +325,23 @@ def build(name, english=False):
     lines = []
     owns = []
     for i, lc in enumerate(lines_cfg):
-        own = owner == i
+        # своя краска — только в полосе строки (ближайшая средняя линия по всему кадру
+        # собирала чужое: края страниц, пятно)
+        t_, c_ = dense(lc["центр"], 1.0)
+        d_, n_ = normals(c_)
+        ext = np.concatenate([c_[:1] - np.arange(30, 0, -1)[:, None] * d_[:1], c_,
+                              c_[-1:] + np.arange(1, 31)[:, None] * d_[-1:]])
+        nn = np.concatenate([np.repeat(n_[:1], 30, 0), n_, np.repeat(n_[-1:], 30, 0)])
+        hh = lc["полувысота"] + 6
+        band = np.zeros(shape, np.uint8)
+        cv2.fillPoly(band, [np.concatenate([ext - hh * nn, (ext + hh * nn)[::-1]]).round().astype(np.int32)], 1)
+        own = (owner == i) & band.astype(bool)
         if not lc.get("на_заслоне"):
-            own &= ~binary_dilation(card, iterations=2)
+            # у строки почти целиком под карточкой видимое — у самой кромки, его не отрезать
+            own &= ~(card if "как_строка" in lc else binary_dilation(card, iterations=2))
         owns.append(own)
-        lines.append(None if "как_строка" in lc else Line(lc, norm, own))
+        blocked = None if lc.get("на_заслоне") else card
+        lines.append(None if "как_строка" in lc else Line(lc, norm, own, blocked))
     # строка почти вся под карточкой (видны крохи — низ не замерить): кривая соседней строки,
     # сдвинутая на шаг строк [a, b] — «как b, ниже на расстояние от a до b»
     for i, lc in enumerate(lines_cfg):
@@ -321,7 +354,16 @@ def build(name, english=False):
     # растёт только от настоящих букв (краска): край обводки карточки у языков чуть разный, и по
     # отношению он тоже «темнее» — без привязки к буквам по обводке шёл пунктир
     light = ref > 0.3 * np.percentile(ref, 99.5)
-    core = light & eng_ink
+    # буквы — темнее медианы языков (у обводки карточки медиана тоже темна: край обводки у языков
+    # чуть разный, и от самого светлого по нему шёл пунктир)
+    med_v = np.median(stack.max(-1), 0)
+    outline = med_v < 0.5 * paper_of(med_v)
+    lab_o, _ = label(outline)
+    outline &= np.bincount(lab_o.ravel())[lab_o] > 500
+    # где буквы большинства языков в одной точке, медиана тоже темна — там мерка по самому
+    # светлому, но не у обводки
+    core = light & ((v_eng / np.maximum(med_v, 1e-3) < INK)
+                    | (eng_ink & ~binary_dilation(outline, iterations=3)))
     zone = binary_dilation(light & (norm < GHOST) & binary_dilation(core, iterations=3), iterations=2)
     # Заливка — среднее по языкам, у которых в этой точке чистая бумага: у каждого языка его буквы
     # (темнее самого светлого на 2 уровня) с запасом 2 px — размытый край буквы тоже не бумага.
@@ -360,6 +402,8 @@ def build(name, english=False):
     # (обводка, кромка пятна, тень карточки) — по языкам, иначе край размажется
     mean = gaussian_filter(ref, 3)
     flat = np.sqrt(np.maximum(gaussian_filter(ref ** 2, 3) - mean ** 2, 0)) < FLAT
+    # и без градиента: в тени корешка затягивание рвало тень светлым пятном
+    flat &= np.hypot(*np.gradient(gaussian_filter(ref, 3))) < SLOPE
     flat = ~binary_dilation(~flat, iterations=3)
     count = np.where(zone & flat & ~dark, 0, count)
     hole = (zone | spots) & (count == 0)
@@ -385,6 +429,28 @@ def build(name, english=False):
         size40 = (cols.max() - cols.min() + 1) / SS
         measured.setdefault(ln.cfg.get("группа", "письмо"), []).append(40.0 * (ln.u_end - ln.u_start) / size40)
     group = {g: float(np.median(v)) for g, v in measured.items()}
+
+    # строка почти вся под карточкой (`как_строка`): форма — соседней, а высота — по видимым
+    # кусочкам: английский текст гарнитурой оригинала, сдвинутый на dy, должен лечь на них
+    for i, ln in enumerate(lines):
+        lc = ln.cfg
+        if "как_строка" not in lc:
+            continue
+        size_g = group[lc.get("группа", "письмо")]
+        best = None
+        c0 = ln.c.copy()
+        for dy in np.arange(-20, 20.5, 1.0):
+            ln.c = c0 + np.array([0.0, dy])
+            a_en = place(ln, lc["англ_целиком"], en_font, size_g, 1.0, en_stroke, ln.u_start, shape, 0) * ~card
+            ours = a_en > 0.5
+            inter = (ours & owns[i]).sum()
+            score = inter / max(1, (ours | owns[i]).sum())
+            if best is None or score > best[0]:
+                best = (score, dy)
+        if best[0] < 0.2 or abs(best[1]) >= 20:
+            sys.exit(f"{lc['англ']!r}: видимые кусочки не сошлись (совпадение {best[0]:.2f}, сдвиг {best[1]:+.0f})")
+        ln.c = c0 + np.array([0.0, best[1]])
+        print(f"{lc['англ']!r}: по видимым кусочкам сдвиг {best[1]:+.0f} px, совпадение {best[0]:.2f}")
 
     out = base.copy()
     report = [f"кегль англичан по группам: " + ", ".join(f"{g} {v:.1f} ({len(measured[g])} строк)"
@@ -415,6 +481,17 @@ def build(name, english=False):
         alpha = place(ln, text, font, size, comp, stroke, u0, shape, blur)
         if not lc.get("на_заслоне"):
             alpha *= ~card
+            # огрызок буквы у кромки (верх «п» читался дефисом, кусок «и» — точкой на фаске):
+            # видимый кусок ниже `огрызок` px по высоте — убрать
+            stub = lc.get("огрызок", spec.get("огрызок", 0))
+            if stub:
+                lab_a, n_a = label(alpha > 0.2)
+                edge_near = binary_dilation(card, iterations=3)
+                for k in range(1, n_a + 1):
+                    piece = lab_a == k
+                    ys_k = np.nonzero(piece.any(1))[0]
+                    if (piece & edge_near).any() and ys_k.max() - ys_k.min() + 1 < stub:
+                        alpha[binary_dilation(piece, iterations=2)] = 0
         r = ln.ink_ratio
         out *= (1 - alpha * (1 - r))[..., None]
         s_a, _ = strip(alpha, ln.c, ln.n, lc["полувысота"])

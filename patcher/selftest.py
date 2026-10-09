@@ -153,6 +153,15 @@ def pictures() -> int:
         tex = texture_of(built, sprite).read()
         want = Image.open(pngs[entry["name"]]).convert("RGBA")
         same = pixels_sha(tex.image) == pixels_sha(want)
+        lossy = ""
+        if not same and tex.m_TextureFormat not in (4, 5):        # не RGBA32/ARGB32 — сжатый формат
+            # фон чтения (`Sousa_TextCutBG_*`) лежит в сжатой текстуре кадра: ровно набор там не бывает,
+            # сверка — потерями сжатия, как у картинок (грубых больше 64 уровней — не больше 0,01 %)
+            import numpy as np
+            d = np.abs(np.asarray(tex.image.convert("RGBA"), np.int16) - np.asarray(want, np.int16)).max(-1)
+            same = (d > 64).mean() <= 0.0001
+            lossy = f" (сжатие: до {int(d.max())} уровней, грубых {int((d > 64).sum())})"
+
         box = want.getchannel("A").getbbox()
         tr, h = rd["textureRect"], tex.m_Height
         covers = (rd["m_VertexData"]["m_VertexCount"] == 4
@@ -174,7 +183,7 @@ def pictures() -> int:
                         rows = {r["m_Id"]: r["m_Localized"] for r in data["m_TableData"]}
             table = rows.get(entry["table"]["m_Id"]) == entry["table"]["german"]
         ok = same and covers and addresses and table
-        print(f"    {entry['name']:18} плашка: пиксели {'ровно набор' if same else 'ДРУГИЕ'}; "
+        print(f"    {entry['name']:18} плашка: пиксели {'ровно набор' if same else 'ДРУГИЕ'}{lossy}; "
               f"сетка {'прямоугольник по надписи' if covers else 'НЕ ПОКРЫВАЕТ НАДПИСЬ'}; "
               f"по адресу {'текстура и спрайт' if addresses else 'СБИТО: ' + ', '.join(kinds)}"
               + (f"; таблица локали {'на немецкий спрайт' if table else 'ВЕДЁТ НЕ ТУДА'}"
@@ -209,7 +218,10 @@ def pictures() -> int:
                 # Сверяется собранная из бандла заставка против набора, мазок Capcom
                 # и то, что немецкий префаб не уведён на английский.
                 from splash import verify_bundle
-                found, _ = verify_bundle(built)
+                from picture_layer import leaf
+                others = {leaf(e["key"]).rsplit(".", 1)[0] for e in shipment.by_bundle[bundle]
+                          if e.get("kind") != "splash"}
+                found, _ = verify_bundle(built, others)
                 for why in found:
                     print(f"    {entry['name']:18} {why}  <- РАЗОШЛОСЬ")
                 if not found:

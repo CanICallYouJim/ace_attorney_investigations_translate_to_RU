@@ -56,7 +56,7 @@ def graphics_recipe(bundle_short: str, russian, keep: dict) -> str:
     import hashlib
     import json
 
-    from swap_localized import IMAGE_TABLE_BUNDLE
+    from swap_localized import IMAGE_TABLE_BUNDLE, OTHER_SOURCE
 
     own = sorted(russian.by_bundle.get(bundle_short, []), key=lambda e: e["name"])
     names = {e["derive"]["из"] for e in own if e.get("derive")}
@@ -64,6 +64,10 @@ def graphics_recipe(bundle_short: str, russian, keep: dict) -> str:
     data = {"v": GRAPHICS_VERSION, "own": own, "sources": sources}
     if IMAGE_TABLE_BUNDLE in bundle_short:
         data["table"] = sorted(keep.items())
+    if "gk2_movie" in bundle_short:
+        # ролики берут французский вариант (OTHER_SOURCE) — его смена пересобирает
+        # только этот бандл, а не всю графику, как подъём GRAPHICS_VERSION
+        data["other_source"] = sorted(OTHER_SOURCE.items())
     return hashlib.sha256(json.dumps(data, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 

@@ -38,10 +38,12 @@ BC7 теряет немного, поэтому «другая» — это бо
 from __future__ import annotations
 
 import argparse
+import gc
 import shutil
 import sys
 from collections import defaultdict
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 import UnityPy
@@ -154,6 +156,11 @@ def main() -> int:
                 state["pictures"][name] = png_sha[name]
         if bundle_name not in todo:
             state["bundles"][bundle_name] = live_sha[bundle_name]    # всё в нём сверено и стоит
+        # Бандл в 370 МБ раскрывается в памяти в 1,1 ГБ, и два таких (живой и оригинал)
+        # нельзя держать до следующего: машина в 6 ГБ падала на MemoryError
+        # (3–6 октября 2026, `gk2_upcutlocal`). Отпускать сразу.
+        live = orig = tex = None     # и текстура: она держит весь бандл
+        gc.collect()
 
     if checked:
         print(f"сверено с живыми текстурами: {checked}")
@@ -197,6 +204,8 @@ def main() -> int:
                 if flipped:
                     notes.append(f"{name}: бандл хранит её вверх ногами — перевернул")
                 pictures[key] = as_stored(files[name], tex, flipped)
+            orig = None             # оригинал нужен был только для стороны — отпустить до упаковки
+            gc.collect()
             # Пары — только для своих адресов: по ним `german_object` найдёт немецкий
             # объект, даже если адрес картинки ещё уведён на английский. Остальные
             # адреса живого бандла уже подменены прежней установкой — их не трогать.
@@ -205,29 +214,44 @@ def main() -> int:
             written = [(n, k) for n, k in todo[bundle_name] if k in pictures]
         out = BUILD / bundle_name
         out.write_bytes(blob)
+        size = len(blob)
+        blob = env = orig = tex = obj = None
+        gc.collect()
 
-        # Сверка механики по записанному, до копирования в игру
+        # Сверка механики по записанному, до копирования в игру. Записанный бандл
+        # и оригинал читаются по очереди, а не вместе: из записанного берутся только
+        # нужные текстуры (память, см. выше).
         env = UnityPy.load(str(out))
-        orig = UnityPy.load(str(original(bundle_name)))
         entries = entries_of(env)
         pairs = dict(plan_env(env))
         bad = []
+        got = {}                # имя -> (немецкая текстура, её картинка, английская байтами)
         for name, key in written:
             obj = german_object(env, entries, key, pairs.get(key))
             if entries[key]["asset"]["m_PathID"] != obj.path_id:
                 bad.append(f"{name}: адрес _ger ведёт не на немецкий объект")
-            face = Image.open(files[name]).convert("RGBA")
             tex = obj.read()
+            eng = pairs.get(key)
+            eng_bytes = (np.asarray(env.container[eng].read().image).tobytes()
+                         if eng and eng in env.container else None)
+            got[name] = (SimpleNamespace(m_Width=tex.m_Width, m_Height=tex.m_Height), tex.image, eng_bytes)
+        env = tex = obj = None
+        gc.collect()
+        orig = UnityPy.load(str(original(bundle_name)))
+        for name, key in written:
+            tex, image, eng_bytes = got[name]
+            face = Image.open(files[name]).convert("RGBA")
             want = as_stored(files[name], tex, stored_flipped(orig, key, face))
-            if differs(want, tex.image) > MOVED:
+            if differs(want, image) > MOVED:
                 bad.append(f"{name}: в немецкой текстуре не та картинка")
             eng = pairs.get(key)
-            if eng and eng in orig.container:
-                if np.asarray(env.container[eng].read().image).tobytes() != \
-                        np.asarray(orig.container[eng].read().image).tobytes():
+            if eng_bytes is not None and eng in orig.container:
+                if eng_bytes != np.asarray(orig.container[eng].read().image).tobytes():
                     bad.append(f"{name}: английская текстура изменилась против backup/")
+        orig = got = None
+        gc.collect()
         short = bundle_name.split('_assets_all_')[0]
-        print(f"  {short:44} записано картинок: {len(written)}; {len(blob)/1024/1024:.1f} МБ")
+        print(f"  {short:44} записано картинок: {len(written)}; {size/1024/1024:.1f} МБ")
         for note in notes:
             print(f"      {note}")
         if bad:

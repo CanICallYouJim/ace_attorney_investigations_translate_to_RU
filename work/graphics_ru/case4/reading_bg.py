@@ -275,8 +275,11 @@ def render_strip(text, font_path, size, comp, stroke):
     return a, 4 * SS * comp, 4 * SS + asc, font
 
 
-def place(line, text, font_path, size, comp, stroke, u0, shape, blur):
-    """Альфа строки в кадре: набор вдоль кривой низа, начало текста в u0 (длина по средней линии)."""
+def place(line, text, font_path, size, comp, stroke, u0, shape, blur, box=False):
+    """Альфа строки в кадре: набор вдоль кривой низа, начало текста в u0 (длина по средней линии).
+
+    `box=True` — вернуть ещё рамку набора (y0, y1) и признак, что её срезал край кадра:
+    по ним `shifted()` сдвигает готовую альфу вместо повторного набора."""
     a, col0, row0, font = render_strip(text, font_path, size, comp, stroke)
     length = (a.shape[1] - col0) / SS
     b = line.baseline(u0 - 20, u0 + length + 20)
@@ -287,13 +290,15 @@ def place(line, text, font_path, size, comp, stroke, u0, shape, blur):
     nrm = np.stack([-d[:, 1], d[:, 0]], 1)
     tree = cKDTree(b)
     pad = a.shape[0] / SS + 4
-    x0, y0 = np.floor(b.min(0) - pad).astype(int)
-    x1, y1 = np.ceil(b.max(0) + pad).astype(int)
-    x0, y0 = max(x0, 0), max(y0, 0)
-    x1, y1 = min(x1, shape[1]), min(y1, shape[0])
+    rx0, ry0 = np.floor(b.min(0) - pad).astype(int)
+    rx1, ry1 = np.ceil(b.max(0) + pad).astype(int)
+    x0, y0 = max(rx0, 0), max(ry0, 0)
+    x1, y1 = min(rx1, shape[1]), min(ry1, shape[0])
     gy, gx = np.mgrid[y0 * SS:y1 * SS, x0 * SS:x1 * SS]
     q = np.stack([(gx + 0.5) / SS - 0.5, (gy + 0.5) / SS - 0.5], -1).reshape(-1, 2)
-    _, i = tree.query(q)
+    # ближайшая точка кривой для каждого субпикселя — 90 % времени сборки; во все потоки
+    # (ответ тот же: ближайший сосед не зависит от числа потоков — проверено побитово, 10 октября 2026)
+    _, i = tree.query(q, workers=-1)
     rel = q - b[i]
     along = arc[i] + (rel * d[i]).sum(1)
     across = (rel * nrm[i]).sum(1)
@@ -304,6 +309,23 @@ def place(line, text, font_path, size, comp, stroke, u0, shape, blur):
     out[y0:y1, x0:x1] = vals.reshape(y1 - y0, SS, x1 - x0, SS).mean((1, 3))
     if blur:
         out = gaussian_filter(out, blur)
+    if box:
+        return out, (y0, y1), (rx0, ry0, rx1, ry1) != (x0, y0, x1, y1)
+    return out
+
+
+def shifted(alpha, rows, dy, shape):
+    """Та же альфа, сдвинутая на целое dy по вертикали, — вместо повторного набора.
+
+    Набор по средней линии, сдвинутой на целое число пикселей вниз, — та же картинка на dy ниже:
+    кривая, нормали и сетка субпикселей едут вместе (замер 10 октября 2026: 40 сдвигов R_04,
+    0 отличающихся пикселей). Не годится, когда рамку набора срезает край кадра, — тогда None,
+    и строка набирается заново."""
+    y0, y1 = rows
+    if y0 + dy < 0 or y1 + dy > shape[0]:
+        return None
+    out = np.zeros(shape)
+    out[y0 + dy:y1 + dy] = alpha[y0:y1]
     return out
 
 
@@ -508,9 +530,16 @@ def build(name, english=False):
         size_g = group[lc.get("группа", "письмо")]
         best = None
         c0 = ln.c.copy()
+        # набор один раз, на несдвинутой средней линии; остальные 40 положений — сдвигом готовой
+        # альфы (до правки 10 октября 2026 каждое положение набиралось заново: 41 набор × ~10 с)
+        a0, rows0, cut0 = place(ln, lc["англ_целиком"], en_font, size_g, 1.0, en_stroke, ln.u_start, shape, 0,
+                                box=True)
         for dy in np.arange(-20, 20.5, 1.0):
             ln.c = c0 + np.array([0.0, dy])
-            a_en = place(ln, lc["англ_целиком"], en_font, size_g, 1.0, en_stroke, ln.u_start, shape, 0) * ~card
+            a_en = None if cut0 else shifted(a0, rows0, int(dy), shape)
+            if a_en is None:
+                a_en = place(ln, lc["англ_целиком"], en_font, size_g, 1.0, en_stroke, ln.u_start, shape, 0)
+            a_en = a_en * ~card
             ours = a_en > 0.5
             inter = (ours & owns[i]).sum()
             score = inter / max(1, (ours | owns[i]).sum())

@@ -7,7 +7,14 @@ Capcom. Отдаётся слой: пиксели, которыми русска
 что склейка даст ровно русскую картинку.
 
     tools\\layer_localized.py            снять слой в work/graphics_layers, листы — в preview/
+    tools\\layer_localized.py --all      то же, но с нуля, не опираясь на прошлый манифест
     tools\\layer_localized.py --check    ничего не писать: собрать во временной папке и сверить
+
+Сборка инкрементальная (10 октября 2026): картинка, у которой не изменились ни русская PNG
+(`png_sha`), ни английская текстура оригинала (`source_sha`), ни рецепт уменьшения, берётся
+из прошлого манифеста вместе со слоем и листом — склейка детерминирована, и пересобирать её
+незачем. До этого каждый запуск сносил слой и пересобирал все 110 картинок (2–3 минуты на одну
+изменённую). `--check` по-прежнему собирает всё с нуля — это независимое доказательство.
 
 Правило №13 (пользователь, 13 сентября 2026): картинку показывать только после
 машинной сверки. Сверяется всё с **нетронутым оригиналом** из `backup/`, а не
@@ -47,7 +54,7 @@ import UnityPy
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageStat
 
 from common import BACKUP, BUNDLES, HOST, WORK, load_json, save_json
-from picture_layer import FLIP, FOLDER, compose, leaf, pixels_sha, short
+from picture_layer import FLIP, FOLDER, compose, leaf, pixels_sha, short, texture_of
 from relabel import remap, strip_text
 from swap_localized import LANG_KEY, NEVER, plan_env
 
@@ -464,8 +471,12 @@ def preview(entry: dict, face: Image.Image, result: Image.Image, full: Image.Ima
     sheet.save(path, optimize=True)
 
 
-def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
-    """Снять слой со всех картинок work/graphics_ru в `folder`. Возвращает манифест и беды."""
+def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, list[str]]:
+    """Снять слой со всех картинок work/graphics_ru в `folder`. Возвращает манифест и беды.
+
+    `prev` — прошлый манифест той же папки: картинки, у которых совпали `png_sha`, `source_sha`
+    (для плашек — `texture_sha`), адрес и рецепт уменьшения, а слой и маска лежат на месте,
+    в манифест переносятся как есть, без склейки, сверки и листа."""
     # `<имя>_ink.png` и `<имя>_print_ink.png` — маски набранных букв для проверки,
     # а не картинки игры: в слой они не идут и в «не везём» им делать нечего
     pngs = [png for png in sorted(RU.rglob("*.png"))
@@ -487,6 +498,10 @@ def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
                  for spec in jobs.values() for name, js in spec.items()
                  for job in js if "уменьшить" in job}
     feeding = {d["из"] for d in derive_of.values()}
+    known = {e["name"]: e for e in (prev or {}).get("pictures", []) if e.get("kind") != "splash"}
+
+    def intact(old: dict) -> bool:
+        return all((folder / old[k]).exists() for k in ("layer", "mask") if k in old)
 
     places: dict[str, list[tuple[Path, str]]] = defaultdict(list)
     for png in pngs:
@@ -515,9 +530,17 @@ def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
         for png, key in sorted(places[bundle_name], key=lambda it: (it[0].stem in derive_of, it[0].stem)):
             name = png.stem
             entry: dict = {"name": name, "bundle": short(bundle_name), "key": key}
+            png_sha = file_sha(png)
+            old = known.get(name)
             if key in sprites:
                 # Плашка ситуации: наш набор целиком, склеивать не с чем (plates.py).
-                problems += layer_entry(folder, entry, png, file_sha(png), env, sprites[key], manifest,
+                if (old is not None and old.get("kind") == "plate" and old.get("png_sha") == png_sha
+                        and old.get("key") == key and old.get("bundle") == entry["bundle"] and intact(old)
+                        and old.get("texture_sha") == pixels_sha(texture_of(env, sprites[key]).read().image)):
+                    manifest["pictures"].append(dict(old))
+                    print(f"  {name:18} плашка без изменений — слой с прошлой сборки", flush=True)
+                    continue
+                problems += layer_entry(folder, entry, png, png_sha, env, sprites[key], manifest,
                                         PREVIEW if show else None)
                 continue
             source_key = pairs.get(key)
@@ -533,17 +556,29 @@ def build(folder: Path, show: bool) -> tuple[dict, list[str]]:
             if source.size != size:
                 manifest["skipped"].append({**entry, "why": f"английская текстура {source.size}, немецкая {size}"})
                 continue
+            source_sha = pixels_sha(source)
+            if name in derive_of and derive_of[name]["из"] not in composites:
+                problems.append(f"{name}: уменьшается из «{derive_of[name]['из']}», а та не собралась")
+                continue
+            if (old is not None and "kind" not in old and old.get("png_sha") == png_sha
+                    and old.get("source_sha") == source_sha and old.get("key") == key
+                    and old.get("bundle") == entry["bundle"] and old.get("source") == source_key
+                    and old.get("derive") == derive_of.get(name) and intact(old)):
+                # ни картинка, ни оригинал, ни рецепт не менялись — склейка дала бы то же самое
+                entry = dict(old)
+                manifest["pictures"].append(entry)
+                if name in feeding:
+                    composites[name] = compose(entry, source, composites, folder)
+                print(f"  {name:18} без изменений — слой с прошлой сборки", flush=True)
+                continue
             try:
                 flipped = stored_flipped(env, key, picture)
             except ValueError as exc:
                 problems.append(str(exc))
                 continue
             entry.update(source=source_key, size=list(size), flipped=flipped,
-                         source_sha=pixels_sha(source), png_sha=file_sha(png))
+                         source_sha=source_sha, png_sha=png_sha)
             if name in derive_of:
-                if derive_of[name]["из"] not in composites:
-                    problems.append(f"{name}: уменьшается из «{derive_of[name]['из']}», а та не собралась")
-                    continue
                 entry["derive"] = derive_of[name]
 
             base = compose(entry, source, composites, folder)
@@ -624,6 +659,20 @@ def splash_layer(folder: Path, manifest: dict) -> list[str]:
     return []
 
 
+def sweep(folder: Path, manifest: dict) -> None:
+    """Инкрементальная сборка слой не сносит — убрать слои, маски и листы картинок, которых в манифесте нет."""
+    keep = {(folder / e[k]).resolve() for e in manifest["pictures"] for k in ("layer", "mask") if k in e}
+    names = {e["name"] for e in manifest["pictures"]}
+    for path in folder.rglob("*"):
+        if not path.is_file() or path.name == "manifest.json":
+            continue
+        if path.parent.name == "preview":
+            if path.stem not in names:
+                path.unlink()
+        elif path.resolve() not in keep:
+            path.unlink()
+
+
 def stale() -> list[str]:
     """Что в собранном слое разошлось с work/graphics_ru — перед выпуском."""
     data = load_json(FOLDER / "manifest.json", default=None)
@@ -661,6 +710,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--check", action="store_true",
                     help="ничего не писать: собрать во временной папке, сверить и сказать, не устарел ли слой")
+    ap.add_argument("--all", action="store_true",
+                    help="собрать слой с нуля, не опираясь на прошлый манифест")
     args = ap.parse_args()
 
     if args.check:
@@ -668,9 +719,15 @@ def main() -> int:
             manifest, problems = build(Path(tmp), show=False)
         problems += stale()
     else:
-        shutil.rmtree(FOLDER, ignore_errors=True)
-        FOLDER.mkdir(parents=True)
-        manifest, problems = build(FOLDER, show=True)
+        prev = None if args.all else load_json(FOLDER / "manifest.json", default=None)
+        if prev is None:
+            shutil.rmtree(FOLDER, ignore_errors=True)
+            FOLDER.mkdir(parents=True)
+        manifest, problems = build(FOLDER, show=True, prev=prev)
+        if prev is not None:
+            sweep(FOLDER, manifest)
+            reused = sum(1 for e in manifest["pictures"] if e in prev["pictures"])
+            print(f"\nбез изменений с прошлой сборки: {reused} из {len(manifest['pictures'])}")
         manifest["built"] = time.strftime("%Y-%m-%d %H:%M")
         save_json(FOLDER / "manifest.json", manifest)
     report(manifest, problems, wrote=not args.check)

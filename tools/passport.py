@@ -164,9 +164,19 @@ def colours(cfg: dict, lb: dict) -> dict:
     has_rim = bool(stroke) and rim_w not in (0, None) and cfg.get("stroke_width", 2) != 0
     en_body = list(ink[0]) if ink else list(fill)
     en_rim = list(ink[1]) if len(ink) > 1 else (list(stroke) if has_rim else None)
+    # «чернила» назвали одну краску, и это краска каймы, а не букв: у «Viewing Platform»
+    # на разрезах (cut03_006/027/028, cut04_03a/046) снятие идёт по белой кайме — тёмные
+    # буквы там цвета линий крыши, — и по той же белой сверка меряла английскую: «буквы»
+    # 9 px штриха и 52 px роста против 5 и 42 у русской. Английские буквы тогда — той же
+    # краской, что русские («fill»), и только внутри своей каймы (см. `run`)
+    rim_only = (len(ink) == 1 and en_rim is not None
+                and max(abs(a - b) for a, b in zip(en_body, en_rim)) <= 10
+                and max(abs(a - b) for a, b in zip(fill, en_body)) > TOL["цвет"])
+    if rim_only:
+        en_body = list(fill)
     return {"en_body": en_body, "en_rim": en_rim, "ru_body": list(fill),
             "ru_rim": list(stroke) if has_rim else None, "rim_w": int(math.ceil(rim_w or 0)) if has_rim else 0,
-            "tol": int(lb.get("чернила_допуск", TOL["цвет"]))}
+            "tol": int(lb.get("чернила_допуск", TOL["цвет"])), "по_кайме": rim_only}
 
 
 def letters_case(s: str) -> str:
@@ -359,7 +369,7 @@ def baseline(bottoms: np.ndarray, href: float) -> float:
 
 
 def measure(body: np.ndarray, rim: np.ndarray, cov: np.ndarray | None, cov_rim: np.ndarray | None,
-            n_lines: int, text: str = "") -> tuple[dict | None, np.ndarray]:
+            n_lines: int, text: str = "", base_frac: float | None = None) -> tuple[dict | None, np.ndarray]:
     """Геометрия надписи по маскам в выпрямленных координатах и маска того, что сочтено
     буквами.
 
@@ -368,7 +378,8 @@ def measure(body: np.ndarray, rim: np.ndarray, cov: np.ndarray | None, cov_rim: 
     и у «Тюрьмы» шли в «буквы» и сдвигали край, базу и высоты (1 октября 2026).
     Прописные — по первым буквам слов, которые в тексте с прописной (верх самой
     высокой буквы у «Office» — выносная «f», а она выше прописных); строчные — только
-    у текста со строчными."""
+    у текста со строчными. `base_frac` — доля роста строки над базой по гарнитуре
+    (`baseline_frac`), нужна, когда на базе сидит меньше двух букв."""
     src = body if body.sum() >= 12 else (body | rim)
     lab, comps = components(src)
     if not comps:
@@ -406,6 +417,14 @@ def measure(body: np.ndarray, rim: np.ndarray, cov: np.ndarray | None, cov_rim: 
             href = float(np.median([st[3] for st, _ in big]))
             base = baseline(bottoms, href)
             tol = max(1.5, 0.06 * href)
+            # одиночная буква: людного низа нет, и у «Д» базой становился низ её засечек —
+            # прописная 65 px вместо 53 («B» → «Д», cutObj04_045). Когда гарнитура известна,
+            # место базы в росте буквы берётся из неё самой. Только для одной буквы одним
+            # куском: у строки замеренный рост не обязан совпадать с ростом по гарнитуре
+            # (контурные «Камеры» на cut01_008 — хвост «р» в маску не попал)
+            if base_frac is not None and len(big) == 1:
+                st0 = big[0][0]
+                base = st0[1] + base_frac * st0[3] - 1
             upright = [(st, c) for st, c in big if st[1] + st[3] - 1 <= base + max(2, 0.15 * href)]
             top = min(st[1] for st, _ in upright) if upright else min(st[1] for st, _ in big)
             r.update({"база": int(round(base)), "верх": int(top)})
@@ -416,7 +435,10 @@ def measure(body: np.ndarray, rim: np.ndarray, cov: np.ndarray | None, cov_rim: 
                     r["строчные"] = int(round(statistics.median(short)))
             # слова — по промежуткам шире 0,45 высоты буквы (между буквами у кириллицы
             # бывает 0,3: «Тюрьма» рвалась надвое); прописная с хвостом («Д») — тоже прописная
-            words = [w_ for w_ in text.replace("|", " ").split() if any(ch.isalpha() for ch in w_)]
+            # цифры — тоже слова: у даты «April 4» / «4 апреля» (cut03_026, cut03_00a) «4» стояла
+            # своей группой, в список слов не попадала, и прописные не считались вовсе —
+            # сравнение уходило в строчные, а их доля у гарнитур разная
+            words = [w_ for w_ in text.replace("|", " ").split() if any(ch.isalnum() for ch in w_)]
             order = sorted(big, key=lambda sc: sc[0][0])
             groups, cur = [], []
             for st, c in order:
@@ -429,11 +451,19 @@ def measure(body: np.ndarray, rim: np.ndarray, cov: np.ndarray | None, cov_rim: 
             if words and len(groups) == len(words):
                 caps = []
                 for wd, grp in zip(words, groups):
-                    first = next((ch for ch in wd if ch.isalpha()), "")
-                    if wd.isupper():
+                    first = next((ch for ch in wd if ch.isalnum()), "")
+                    if wd.isupper() or all(ch.isdigit() for ch in wd if ch.isalnum()):
+                        # слово из прописных или цифр — все его буквы (цифры ростом с прописные)
                         caps += [base - st[1] + 1 for st, _ in grp]
                     elif first.isupper():
-                        caps.append(base - grp[0][0][1] + 1)
+                        # первая буква слова с прописной — первый кусок ростом не ниже 0,8 самого
+                        # высокого в слове (выносная «l» выше прописной на 3–5 %), а не просто
+                        # первый слева: «Восход» начинался с ёлочки (два куска, верх на 0,63 роста
+                        # прописной — выше строчных), и «прописная» выходила 20 вместо 33 px
+                        # («Sunrise Hall», cut04_03e/010)
+                        hmax = max(base - st[1] + 1 for st, _ in grp)
+                        tall = [st for st, _ in grp if base - st[1] + 1 >= 0.8 * hmax]
+                        caps.append(base - tall[0][1] + 1)
                 if caps:
                     r["прописные"] = int(round(statistics.median(caps)))
             # угол — по буквам, сидящим на базе; наклон медианой попарных наклонов
@@ -531,18 +561,38 @@ def block(img: np.ndarray, valid: np.ndarray, text: np.ndarray, g: dict, line_h:
     return out
 
 
-def natural_width(text: str, font_name: str | None, height: float) -> float | None:
-    """Ширина строки гарнитурой задания без сжатия при той же высоте букв."""
-    if not font_name or not text:
+def font_path(font_name: str | None) -> Path | None:
+    """Файл гарнитуры задания (`seguisb`, `arial@…`, `GOTHIC^12`) в папке шрифтов Windows."""
+    if not font_name:
         return None
     base = font_name.split("@")[0].split("^")[0]
-    path = next((FONT_DIR / f"{base}{e}" for e in (".ttf", ".TTF", ".otf") if (FONT_DIR / f"{base}{e}").exists()), None)
-    if path is None:
+    return next((FONT_DIR / f"{base}{e}" for e in (".ttf", ".TTF", ".otf") if (FONT_DIR / f"{base}{e}").exists()), None)
+
+
+def natural_width(text: str, font_name: str | None, height: float) -> float | None:
+    """Ширина строки гарнитурой задания без сжатия при той же высоте букв."""
+    path = font_path(font_name)
+    if path is None or not text:
         return None
     f = ImageFont.truetype(str(path), 200)
     bb = f.getbbox(text)
     h = bb[3] - bb[1]
     return (bb[2] - bb[0]) * height / h if h > 0 else None
+
+
+def baseline_frac(text: str, font_name: str | None) -> float | None:
+    """Где в росте строки лежит база по самой гарнитуре: доля роста над базой (0…1).
+    None — гарнитура неизвестна или строка ниже базы не опускается (хвостов меньше 3 %
+    роста): тогда база ищется, как всегда, по людному низу букв."""
+    path = font_path(font_name)
+    if path is None or not text.strip():
+        return None
+    f = ImageFont.truetype(str(path), 200)
+    bb = f.getbbox(text.replace("|", " "), anchor="ls")
+    h = bb[3] - bb[1]
+    if h <= 0 or bb[3] < 0.03 * h:
+        return None
+    return -bb[1] / h
 
 
 # ---------------------------------------------------------------- сверка
@@ -916,7 +966,18 @@ def run(name: str, case: str | None, ru_path: Path | None, ink_path: Path | None
             report.append({"англ": lb["англ"], "пропуск": "основа"})
             continue
         # ---- английская
-        eb, er = text_masks(E, col["en_body"], col["en_rim"], col["rim_w"], col["tol"])
+        if col["по_кайме"]:
+            # задание назвало только кайму («Viewing Platform», «Clothes Box»): английские
+            # буквы — краска «fill» внутри того, что кайма замыкает; линии крыши той же
+            # краски снаружи каймы в буквы не идут
+            rim0 = pick(strip_lines(near(E, col["en_rim"], col["tol"]), line_h), labels, i, 4, line_h)
+            flood = rim0.astype(np.uint8) * 255
+            cv2.floodFill(flood, np.zeros((flood.shape[0] + 2, flood.shape[1] + 2), np.uint8), (0, 0), 255)
+            inner = (flood == 0) & poly_mask(E.shape, lb, 4)
+            eb = near(E, col["en_body"], col["tol"]) & inner
+            er = rim0 & grow(eb, col["rim_w"] + 2) & ~eb
+        else:
+            eb, er = text_masks(E, col["en_body"], col["en_rim"], col["rim_w"], col["tol"])
         eb = pick(strip_lines(eb, line_h), labels, i, 4, line_h)
         outline_only = False
         if eb.sum() < 30 and col["en_rim"] is not None:
@@ -995,11 +1056,16 @@ def run(name: str, case: str | None, ru_path: Path | None, ink_path: Path | None
         rsb, rsr = rot_mask(rb, lb), rot_mask(rr, lb)
         if lb.get("наклон"):
             rsb = strip_lines(rsb, line_h)
+        # база одиночной буквы — по гарнитуре набора (у английской гарнитура неизвестна,
+        # и её база — по людному низу, как прежде)
+        ru_text = lb.get("text", "")
+        frac_ru = (baseline_frac(ru_text, lb.get("шрифт", cfg.get("font")))
+                   if n_lines == 1 and sum(ch.isalnum() for ch in ru_text) == 1 else None)
         if outline_only:
-            ru, ru_keep = measure(rsb | rsr, np.zeros_like(rsb), None, None, n_lines, lb.get("text", ""))
+            ru, ru_keep = measure(rsb | rsr, np.zeros_like(rsb), None, None, n_lines, lb.get("text", ""), frac_ru)
         else:
             ru, ru_keep = measure(rsb, rsr, rot_cov(rc, lb), rot_cov(rcr, lb) if rcr is not None else None,
-                                  n_lines, lb.get("text", ""))
+                                  n_lines, lb.get("text", ""), frac_ru)
         rsb, rsr = rsb & ru_keep, rsr & ru_keep
         ru_text_all |= rot_mask(ru_keep, lb, back=True)
         decl = dict(decl_all.get(lb["англ"], {}))
@@ -1042,6 +1108,13 @@ def run(name: str, case: str | None, ru_path: Path | None, ink_path: Path | None
         if ink is not None:
             core_en = cv2.erode(eb.astype(np.uint8), np.ones((3, 3), np.uint8)) > 0
             same = near(R, col["en_body"], col["tol"])
+            ink_zone = grow(ink, 2)
+            if col["по_кайме"]:
+                # буквы цвета рисунка: остаток английской буквы — тёмное с собственной белой
+                # каймой рядом, а не балка крыши в просвете между русскими словами (49 px
+                # на cut03_006); под русской каймой остатка не видно
+                same &= grow(near(R, col["en_rim"], col["tol"]), col["rim_w"] + 1)
+                ink_zone = grow(ink, col["rim_w"] + 2)
             zone = poly_mask(E.shape, lb, 0.35 * line_h)
             lab_, comps_ = components(same, 1)
             outside = np.zeros(same.shape, bool)
@@ -1049,7 +1122,7 @@ def run(name: str, case: str | None, ru_path: Path | None, ink_path: Path | None
                 piece = lab_ == k_
                 if (piece & ~zone).any():
                     outside |= piece            # тянется за рамку надписи — рисунок, не буква
-            left = clean(core_en & same & ~outside & ~grow(ink, 2), 6)
+            left = clean(core_en & same & ~outside & ~ink_zone, 6)
             n_left = int(left.sum())
             vs.append(("остатки", OK if n_left <= TOL["остатки_px"] else BAD, f"остатки английских букв {n_left} px"))
         bad += [s for _, s, _ in vs].count(BAD)

@@ -325,7 +325,10 @@ def layer_entry(folder: Path, entry: dict, png: Path, png_sha: str, env, sprite,
     picture = Image.open(png).convert("RGBA")
     if picture.size != size:
         return [f"{name}: плашка {picture.size[0]}x{picture.size[1]}, текстура {size[0]}x{size[1]} — tools/plates.py"]
-    found = edge_problems(picture)
+    # Края проверяются только у плашек ситуации: это надпись на прозрачном. Фон чтения
+    # улики (`Sousa_TextCutBG_*`, 9 октября 2026) — тоже спрайт, но кадр целиком, и в края
+    # он упирается по построению.
+    found = edge_problems(picture) if name.startswith("Situation_") else []
     if found:
         return [f"{name}: {p}" for p in found]
     before = texture.image.convert("RGBA")

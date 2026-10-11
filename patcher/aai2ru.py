@@ -9,6 +9,7 @@
     aai2ru.exe --check             только показать, что будет сделано
     aai2ru.exe --uninstall         вернуть оригиналы
     aai2ru.exe --no-graphics       только текст, немецкие надписи оставить
+    aai2ru.exe --full              графику собрать всю заново, не пропуская уже стоящую
     aai2ru.exe --game-path "D:\\..."  если игру не удалось найти самому
 
 Оригиналы сохраняются в папку `_backup_ru` внутри игры — до первой записи.
@@ -321,15 +322,37 @@ def run(args) -> int:
 
         if not args.no_graphics:
             mark = phase("Меняю немецкие надписи, ролики и выкрики на английские, а где готово — на русские.")
-            say(f"    Это {'5,2 ГБ и минут двенадцать' if args.gk1_graphics else '2,9 ГБ и минут семь'}:"
-                " файлы игры переписываются целиком.")
+            # Повторная установка (новая версия перевода) пропускает бандлы, которые
+            # уже стоят и в которых ничего не поменялось: отпечаток рецепта и отметка
+            # файла те же, что после прошлой записи (`steps.graphics`). `--full` —
+            # прежнее поведение, всё заново: запасной путь, если пропуск ошибётся.
+            # Просьба пользователя от 2 октября 2026.
+            fresh = args.full or args.build_only or not manifest.get("graphics")
+            installed = manifest.setdefault("graphics", {})
+            if fresh:
+                say(f"    Это {'5,2 ГБ и минут двенадцать' if args.gk1_graphics else '2,9 ГБ и минут семь'}:"
+                    " файлы игры переписываются целиком.")
+            else:
+                say("    Бандлы, которые уже стоят и не менялись, пропускаю — переписываю только\n"
+                    "    новые и изменённые. Собрать всё заново — ключ --full.")
             if not args.backup_graphics:
                 say("    Оригиналы графики не бэкапятся — это ещё 2,9 ГБ на диске."
                     " Вернуть их\n    можно через Steam: Проверить целостность файлов."
                     " Нужен бэкап — ключ --backup-graphics.")
-            for i, change in enumerate(steps.graphics(stage, args.gk1_graphics, tuple(args.bundle or ())), 1):
+            skipped = 0
+            record = None if (args.full or args.build_only) else installed
+            for i, change in enumerate(steps.graphics(stage, args.gk1_graphics, tuple(args.bundle or ()),
+                                                      record), 1):
+                if change.staged is None:
+                    skipped += 1
+                    continue
                 say(f"    [{i}] {change.key}: {apply(change, args.backup_graphics)}")
+                if not args.build_only:
+                    installed[change.target.name] = {"recipe": change.recipe,
+                                                     "stamp": steps.stamp(change.target)}
                 done += 1
+            if skipped:
+                say(f"    уже стояли и не менялись, пропущено бандлов: {skipped}")
             spent["графика"] = time.time() - mark
     finally:
         if not args.build_only:
@@ -422,6 +445,8 @@ def parse_args(argv=None):
                     help="бэкапить и графику тоже (+2,9 ГБ на диске)")
     ap.add_argument("--gk1-graphics", action="store_true",
                     help="заодно поправить надписи на картинках первой игры (+2,3 ГБ, +5 минут)")
+    ap.add_argument("--full", action="store_true",
+                    help="графику собрать всю заново, не пропуская бандлы, которые уже стоят")
     ap.add_argument("--game-path", help="папка игры, если найти её не удалось")
     ap.add_argument("--data", help="папка с данными перевода (по умолчанию рядом)")
     ap.add_argument("--build-only", metavar="ПАПКА",

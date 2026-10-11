@@ -22,8 +22,9 @@ class Change:
     """Один файл игры, который надо заменить."""
     key: str          # логическое имя: script_ger, font_data.unity3d, asset_gk2_movie
     target: Path      # где он лежит в игре
-    staged: Path      # где лежит собранная замена
+    staged: Path | None   # где лежит собранная замена; None — бандл уже стоит, не собирался
     note: str         # строка для человека
+    recipe: str = ""  # отпечаток того, из чего собран (у графики) — см. `graphics_recipe`
 
 
 # Категории графики, которые ставятся. Ровно те, что стоят и проверены в игре
@@ -32,6 +33,42 @@ class Change:
 # сидит внутри graphics, потому что режим ретро-графики включается в настройках
 # и надписи там свои.
 CATEGORIES = ("ui", "graphics", "movie", "audio")
+
+# Версия сборки графики. Поднять, когда код меняет то, что ложится в бандл
+# (подмена адресов, склейка, упаковка): у игроков, поставивших прежний патч,
+# каждый бандл тогда соберётся заново, а не будет пропущен как «уже стоит».
+GRAPHICS_VERSION = "2026-10-02"
+
+
+def stamp(path: Path) -> list[int]:
+    """Отметка файла игры: размер и время записи. Steam, обновивший или вернувший
+    бандл, меняет обе; читать 2,9 ГБ ради хэша на каждом запуске незачем."""
+    st = path.stat()
+    return [st.st_size, st.st_mtime_ns]
+
+
+def graphics_recipe(bundle_short: str, russian, keep: dict) -> str:
+    """Отпечаток того, из чего собирается бандл: версия кода, его русские картинки
+    (с хэшами слоя и английской основы) и картинки, из которых его уменьшаются.
+
+    Пары подмены адресов в отпечаток не входят — они берутся из самой игры,
+    и её перемену ловит `stamp`."""
+    import hashlib
+    import json
+
+    from swap_localized import IMAGE_TABLE_BUNDLE, OTHER_SOURCE
+
+    own = sorted(russian.by_bundle.get(bundle_short, []), key=lambda e: e["name"])
+    names = {e["derive"]["из"] for e in own if e.get("derive")}
+    sources = sorted((e for e in russian.pictures if e["name"] in names), key=lambda e: e["name"])
+    data = {"v": GRAPHICS_VERSION, "own": own, "sources": sources}
+    if IMAGE_TABLE_BUNDLE in bundle_short:
+        data["table"] = sorted(keep.items())
+    if "gk2_movie" in bundle_short:
+        # ролики берут французский вариант (OTHER_SOURCE) — его смена пересобирает
+        # только этот бандл, а не всю графику, как подъём GRAPHICS_VERSION
+        data["other_source"] = sorted(OTHER_SOURCE.items())
+    return hashlib.sha256(json.dumps(data, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
 # --- реплики ------------------------------------------------------------------
@@ -189,7 +226,8 @@ def fonts(stage: Path) -> list[Change]:
 
 # --- графика, ролики и звук ---------------------------------------------------
 
-def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = ()) -> Iterator[Change]:
+def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
+             done: dict | None = None) -> Iterator[Change]:
     """Немецким адресам отдаются английские объекты: надписи, ролики, выкрики.
 
     Байты картинок и звука не трогаются вовсе — правится таблица «адрес -> объект»
@@ -206,6 +244,15 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = ()) ->
     Генератор, а не список: бандлов 33 и весят они 2,9 ГБ, держать их разом
     негде. Каждый отдаётся сразу после сборки, ставится и стирается.
 
+    `done` — записи прошлых установок из манифеста бэкапа: имя бандла ->
+    {"recipe", "stamp"}. Бандл, у которого отпечаток рецепта (`graphics_recipe`)
+    и отметка файла (`stamp`) те же, что после прошлой записи, не читается
+    и не собирается: отдаётся `Change` с `staged=None`. Так повторная установка
+    (новая версия перевода с парой новых картинок) переписывает только бандлы,
+    где что-то поменялось, а не все 2,9 ГБ — просьба пользователя от 2 октября
+    2026. Бандл, которому менять нечего, записывается в `done` сам, с `empty`.
+    `done=None` — собрать всё заново, как до 2 октября (`aai2ru.exe --full`).
+
     `with_gk1` добавляет графику первой игры: ещё 213 адресов и 2,3 ГБ
     перезаписи. По умолчанию выключено — GK1 вне объёма перевода, её текст
     наш патч и так делает английским, а ради надписей на картинках удваивать
@@ -215,36 +262,71 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = ()) ->
     """
     from common import BUNDLES
     from picture_layer import Shipment, short
-    from swap_localized import IMAGE_TABLE_BUNDLE, collect, redirect, swap_image_table
+    from swap_localized import (IMAGE_TABLE_BUNDLE, NEVER, category_of, plan_bundle,
+                                redirect, swap_image_table)
 
     wanted = CATEGORIES + ("gk1",) if with_gk1 else CATEGORIES
-    plan: dict[str, list] = {}
-    for part in only or (None,):
-        plan.update(collect(wanted, part))
     russian = Shipment()
-    # Бандл, где подменять адреса нечего, а русское лежит, — немецкие плашки ситуации:
-    # английских двойников в нём нет, и collect() его не берёт.
-    have = {short(n) for n in plan}
-    for bundle in russian.by_bundle:
-        live = next(BUNDLES.glob(f"{bundle}_assets_all_*.bundle"), None)
-        if live is not None and bundle not in have and (not only or any(p in live.name for p in only)):
-            plan[live.name] = []
     # Строки таблицы локали у плашек, которые лягут: игра берёт Situation_0/1 через таблицу.
     keep = russian.table_rows(BUNDLES)
-    for name, pairs in sorted(plan.items(), key=lambda kv: (not russian.feeds(kv[0]), kv[0])):
+    # Те же бандлы, что брал `collect()`, но пока без чтения: категория по имени файла.
+    # Плюс бандлы с русским, где подменять адреса нечего (немецкие плашки ситуации).
+    names = []
+    for path in sorted(BUNDLES.glob("*.bundle")):
+        if any(bad in path.name for bad in NEVER):
+            continue
+        if only and not any(p in path.name for p in only):
+            continue
+        if category_of(path.name) in wanted or russian.has(path.name):
+            names.append(path.name)
+    recipes = {name: graphics_recipe(short(name), russian, keep) for name in names}
+
+    skip: set[str] = set()
+    if done is not None:
+        for name in names:
+            rec = done.get(name)
+            if rec and rec.get("recipe") == recipes[name] and rec.get("stamp") == stamp(BUNDLES / name):
+                skip.add(name)
+        # Пересобираемому бандлу нужны картинки, из которых уменьшаются его мелкие
+        # копии: их бандл собирается тоже, иначе копия осталась бы английской.
+        home = {e["name"]: e["bundle"] for e in russian.pictures}
+        changed = True
+        while changed:
+            changed = False
+            for name in names:
+                if name in skip:
+                    continue
+                for entry in russian.by_bundle.get(short(name), []):
+                    src = (entry.get("derive") or {}).get("из")
+                    for other in [n for n in skip if short(n) == home.get(src)]:
+                        skip.discard(other)
+                        changed = True
+
+    for name in sorted(names, key=lambda n: (not russian.feeds(n), n)):
         live = BUNDLES / name
+        key = f"asset_{name.split('_assets_all_')[0]}"
+        if name in skip:
+            if not done[name].get("empty"):
+                yield Change(key, live, None, "уже стоит, не менялся", recipes[name])
+            continue
         if IMAGE_TABLE_BUNDLE in name:
             # Особый бандл: английских двойников внутри нет, подменяются
             # значения в таблице картинок локали; строки русских плашек — немецкие.
             blob, changed = swap_image_table(keep)
             note = f"таблица картинок локали, записей {changed}" + (
                 f", немецкими оставлены {len(keep)} — русские плашки" if keep else "")
-        elif russian.has(name):
-            blob, done, notes = russian.build(live, pairs)
-            note = "; ".join([f"адресов {len(pairs)}, из них с русской картинкой {done}", *notes])
         else:
-            blob = redirect(live, pairs)
-            note = f"адресов {len(pairs)}"
+            pairs = plan_bundle(live)
+            if not pairs and not russian.has(name):
+                if done is not None:
+                    done[name] = {"recipe": recipes[name], "stamp": stamp(live), "empty": True}
+                continue
+            if russian.has(name):
+                blob, count, notes = russian.build(live, pairs)
+                note = "; ".join([f"адресов {len(pairs)}, из них с русской картинкой {count}", *notes])
+            else:
+                blob = redirect(live, pairs)
+                note = f"адресов {len(pairs)}"
         staged = stage / name
         staged.write_bytes(blob)
-        yield Change(f"asset_{name.split('_assets_all_')[0]}", live, staged, note)
+        yield Change(key, live, staged, note, recipes[name])

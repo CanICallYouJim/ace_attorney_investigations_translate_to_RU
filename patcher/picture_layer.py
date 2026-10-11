@@ -336,8 +336,10 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
     писалось в английские текстуры, и в английской версии игры восемь картинок
     стали русскими.
 
-    Адрес спрайта (плашки) не трогается: у него две записи, текстура и спрайт,
-    и обе и так ведут на немецкие объекты — английских двойников в бандле нет.
+    Адрес спрайта со своей картинкой не трогается: у него две записи, текстура и спрайт,
+    и обе ведут на немецкие объекты. У плашек ситуации английских двойников нет вовсе,
+    а у фона чтения улики (`Sousa_TextCutBG_*`, 9 октября 2026) есть — и подмена уводила
+    обе записи на английский спрайт: русская текстура лежала, а игра показывала английскую.
     """
     ab = next(o for o in env.objects if o.type.name == "AssetBundle")
     tree = ab.read_typetree()
@@ -351,9 +353,11 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
     sprites = sprites_by_key(env)
     notes: list[str] = []
     own: dict[str, int] = {}
+    kept: set[str] = set()
     for key, img in pictures.items():
         if key in sprites:
             notes.append(write_sprite(env, sprites[key], img))
+            kept.add(key)
             continue
         obj = german_object(env, entries, key, sources.get(key))
         tex = obj.read()
@@ -384,7 +388,7 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
                     info["preloadIndex"], info["preloadSize"] = preload[own[key]], 1
                 else:
                     notes.append(f"{leaf(key)}: объекта нет в таблице преднагрузки, диапазон прежний")
-        elif key in sources:
+        elif key in sources and key not in kept:
             src = entries[sources[key]]
             info = {**src, "asset": dict(src["asset"])}
         container.append([key, info])

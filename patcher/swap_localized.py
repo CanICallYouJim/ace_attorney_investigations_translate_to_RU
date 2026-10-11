@@ -67,6 +67,14 @@ DEFAULT_CATEGORIES = ("ui", "graphics", "movie")
 IMAGE_TABLE_BUNDLE = "localization-asset-tables-german(de)"
 
 
+# Адреса, где русскому годится не английский вариант, а другой язык: лист базового
+# адреса (без языкового хвоста) -> язык. Ролики камеры `mgm_0_00/03`: у французов метка
+# времени уже в нашем виде «27/3 6:42:19» — как на принятых кадрах той же записи
+# `cut01_03e/03f/040` (решение пользователя 9 октября 2026); вне метки французский ролик
+# равен английскому до пикселя (сверка каждого 10-го кадра). Пикселей не везём — только адрес.
+OTHER_SOURCE = {"mgm_0_00.mods.bytes": "fre", "mgm_0_03.mods.bytes": "fre"}
+
+
 def category_of(name: str) -> str | None:
     for cat, marks in CATEGORIES.items():
         if any(m in name for m in marks):
@@ -93,8 +101,9 @@ def plan_env(env) -> list[tuple[str, str]]:
         m = LANG_KEY.search(key)
         if not m or m.group(1).lower() != HOST:
             continue
-        english = key[: m.start()] + f"_{SOURCE}" + key[m.end():]
         base = key[: m.start()] + key[m.end():]
+        lang = OTHER_SOURCE.get(base.rsplit("/", 1)[-1], SOURCE)
+        english = key[: m.start()] + f"_{lang}" + key[m.end():]
         source = english if english in keys else base if base in keys else None
         if source:
             pairs.append((key, source))

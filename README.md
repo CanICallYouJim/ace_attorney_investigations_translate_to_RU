@@ -149,6 +149,7 @@ Kaspersky и pip, порча UTF-8 через PowerShell, блокировка �
 | [`docs/names.md`](docs/names.md) | Имени нет в глоссарии | Разобран новый каламбур |
 | [`docs/voices.md`](docs/voices.md) | Перед итерацией перевода | Уточнён регистр речи |
 | [`docs/decisions.md`](docs/decisions.md) | Перед итерацией перевода | Пользователь выбрал вариант |
+| [`docs/archive/`](docs/archive/) | Нужна история: закрытые разделы `STATE.md` и записи `decisions.md` старше 1 сентября 2026 | Только переносом из `STATE.md` / `decisions.md` — текст не меняется |
 | [`docs/limits.md`](docs/limits.md) | Текст не влезает | Перезамерены лимиты |
 | [`docs/font-atlas.md`](docs/font-atlas.md) | Проблемы с отрисовкой букв | Новая находка по шрифтам |
 | [`docs/localized-assets.md`](docs/localized-assets.md) | Немецкая надпись на картинке, в ролике, на модели | Новая находка по графике |

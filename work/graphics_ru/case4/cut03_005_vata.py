@@ -6,7 +6,7 @@ E=np.asarray(Image.open('work/graphics_en/case4/cut03_005.png').convert('RGB')).
 R=np.asarray(Image.open('work/graphics_masks/drafts/hold/case4/cut03_005.png').convert('RGB')).astype(float)
 x0,y0,x1,y1=1690,0,1890,1000
 e=E[y0:y1,x0:x1]; r=R[y0:y1,x0:x1]; h,w=e.shape[:2]
-POLY=np.array([[1690,0],[1905,0],[1852,993],[1690,976]])-np.array([x0,y0])
+POLY=np.array([[1690,-20],[1906,-20],[1852,993],[1690,976]])-np.array([x0,y0])
 def banner_of(a):
     m=np.zeros(a.shape[:2],np.uint8); cv2.fillPoly(m,[POLY.astype(np.int32)],1); return m.astype(bool)
 def ink(a):
@@ -38,7 +38,11 @@ M=np.array([[K,0,BX-x0-K*(AX-x0)],[0,K,BY-y0-K*(AY-y0)]],np.float32)
 aw=cv2.warpAffine(a.astype(np.float32),M,(w,h),flags=cv2.INTER_LINEAR)
 # последняя «а» в «вата»: у черновика её не было в кадре — копия второй сверху буквы («а») над «т»
 labw,nw=nd.label(aw>0.5); objs=[(sl[0].start,i+1,sl) for i,sl in enumerate(nd.find_objects(labw)) if (labw[sl]==i+1).sum()>800]
-objs.sort(); top_t=objs[0][0]; a_i,a_sl=objs[1][1],objs[1][2]
+objs.sort()
+hs=[sl[0].stop-sl[0].start for _,_,sl in objs]; med=float(np.median(hs))
+if hs[0]<0.75*med:                               # обрывок буквы, срезанный краем черновика, — убрать
+    aw[labw==objs[0][1]]=0; objs=objs[1:]
+top_t=objs[0][0]; a_i,a_sl=objs[1][1],objs[1][2]
 am=nd.binary_dilation(labw==a_i,iterations=2)*aw
 ha=a_sl[0].stop-a_sl[0].start; dy=int(top_t-ha+1-a_sl[0].start); dx=int(sys.argv[7]) if len(sys.argv)>7 else 3
 sh=np.zeros_like(aw); ys,xs=np.nonzero(am)

@@ -84,6 +84,7 @@ FONT = Path("C:/Windows/Fonts/segoeui.ttf")
 SPLASHES = (
     ("splash", "splash.json", "splash_ger2.png"),       # «Возражение», tools/splash.py
     ("titles", "titles.json", "titles_StEd_ger.png"),   # «Начало / Расследование завершено», tools/titles.py
+    ("titles_chess", "titles_chess.json", "titles_chess_ger.png"),  # «Ментальные шахматы», tools/titles_chess.py
 )
 SPLASH_PNGS = {png for _, _, png in SPLASHES}
 

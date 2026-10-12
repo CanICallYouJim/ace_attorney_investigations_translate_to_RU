@@ -212,37 +212,132 @@ def rect_mesh(tree: dict, rect: dict, box: dict) -> None:
     tree["m_PhysicsShape"] = [[{"x": (x - px) / ppu, "y": (y - py) / ppu} for x, y in corners]]
 
 
+def splash_prefabs(spec: dict) -> list[str]:
+    """Адреса немецких префабов заставки: их подмене не отдают, иначе на экране — английская.
+
+    У «Возражения» префаб один (`префаб`), у заставок расследования два (`префабы`)."""
+    return list(spec.get("префабы") or [spec["префаб"]])
+
+
 def splash_atlas(env, spec: dict, layer: Image.Image, texture) -> Image.Image | None:
     """Полный атлас заставки: наши куски плюс мазок, вырезанный из текстуры этой игры.
 
     Пикселей Capcom мы не раздаём (правило витрины «ни одного файла игры»), поэтому
     единственный чужой кусок в атласе — белый мазок `anim_1_0` — берётся у игрока
     из его же немецкой текстуры и переезжает на новое место. Не та версия игры —
-    отпечаток не сойдётся, и заставка останется как была.
+    отпечаток не сойдётся, и заставка останется как была. У заставок расследования
+    (`titles.py`) мазка нет: атлас целиком наш.
     """
     before = texture.read().image.convert("RGBA")
     if pixels_sha(before) != spec["текстура_sha"]:
         return None
-    keep = spec["куски"][spec["мазок"]]
-    was, now = keep["было"], keep["textureRect"]
-    piece = before.crop((round(was["x"]), round(before.height - was["y"] - was["height"]),
-                         round(was["x"] + was["width"]), round(before.height - was["y"])))
+    return full_atlas(spec, layer, before)
+
+
+def full_atlas(spec: dict, layer: Image.Image, before: Image.Image, placed: bool = False) -> Image.Image:
+    """Слой плюс мазок Capcom, взятый из `before`: из прежнего места, а у уже поставленной
+    заставки (`placed`) — из нового, куда его перенесла прошлая установка."""
     atlas = layer.copy()
-    atlas.paste(piece, (round(now["x"]), round(atlas.height - now["y"] - now["height"])))
+    keep_name = spec.get("мазок")
+    if keep_name:
+        keep = spec["куски"][keep_name]
+        was, now = (keep["textureRect"] if placed else keep["было"]), keep["textureRect"]
+        piece = before.crop((round(was["x"]), round(before.height - was["y"] - was["height"]),
+                             round(was["x"] + was["width"]), round(before.height - was["y"])))
+        atlas.paste(piece, (round(now["x"]), round(atlas.height - now["y"] - now["height"])))
     return atlas
 
 
+def same_value(a, b, tol: float = 1e-3) -> bool:
+    """Значения полей typetree: числа — с допуском, словари и списки — поэлементно."""
+    if isinstance(a, dict) and isinstance(b, dict):
+        return a.keys() == b.keys() and all(same_value(a[k], b[k], tol) for k in a)
+    if isinstance(a, (list, tuple)) and isinstance(b, (list, tuple)):
+        return len(a) == len(b) and all(same_value(x, y, tol) for x, y in zip(a, b))
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return abs(a - b) <= tol
+    return a == b
+
+
+def edits_state(env, edits: list[dict]) -> str:
+    """Где стоят правки префабов заставки: «было» (немецкий оригинал), «стало» (наша
+    установка) или чем это ни то ни другое. Отпечаток — сами исходные значения полей:
+    префаб чужой версии игры не совпадёт, и писать в него вслепую нельзя."""
+    if not edits:
+        return "было"
+    objs = {o.path_id: o for o in env.objects}
+    seen = set()
+    for edit in edits:
+        obj = objs.get(edit["объект"])
+        if obj is None or obj.type.name != edit["тип"]:
+            return f"нет объекта {edit['узел']}"
+        tree = obj.read_typetree()
+        for state in ("было", "стало"):
+            if all(field in tree and same_value(tree[field], value) for field, value in edit[state].items()):
+                seen.add(state)
+                break
+        else:
+            return f"{edit['узел']}: поля не те"
+    return seen.pop() if len(seen) == 1 else "правки стоят наполовину"
+
+
+def splash_placed(env, spec: dict, layer: Image.Image, texture, tree: dict, sprites: dict) -> bool:
+    """Заставка уже поставлена прошлой установкой: атлас — наш (с потерями сжатия: грубых
+    пикселей, больше 64 уровней, не больше 0,01 %, как в selftest), рамки кусков в карте
+    атласа — из задания, правки префабов — «стало». Повторная установка тогда ничего не пишет,
+    но немецкие префабы по-прежнему не отдаёт подмене."""
+    import numpy as np
+
+    before = texture.read().image.convert("RGBA")
+    if before.size != layer.size:
+        return False
+    want = full_atlas(spec, layer, before, placed=True)
+    shade = Image.new("RGBA", before.size, (40, 40, 48, 255))
+    a = np.asarray(Image.alpha_composite(shade, before).convert("RGB"), np.int16)
+    b = np.asarray(Image.alpha_composite(shade, want).convert("RGB"), np.int16)
+    if (np.abs(a - b).max(-1) > 64).mean() > 0.0001:
+        return False
+    rects = {atlas_key(key): rd["textureRect"] for key, rd in tree["m_RenderDataMap"]}
+    for sprite_name, item in spec["куски"].items():
+        sprite = sprites.get(sprite_name)
+        if sprite is None:
+            return False
+        got = rects.get(atlas_key(sprite.read_typetree()["m_RenderDataKey"]))
+        if got is None or not same_value(got, item["textureRect"]):
+            return False
+    edits = spec.get("правки", [])
+    return not edits or edits_state(env, edits) == "стало"
+
+
+def write_edits(env, edits: list[dict]) -> int:
+    """Правки префабов заставки: каждому объекту — поля «стало». Сверка «было» — до вызова."""
+    objs = {o.path_id: o for o in env.objects}
+    for edit in edits:
+        obj = objs[edit["объект"]]
+        tree = obj.read_typetree()
+        for field, value in edit["стало"].items():
+            tree[field] = value
+        obj.save_typetree(tree)
+    return len(edits)
+
+
 def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list[str]:
-    """Заставка «Возражение»: русские куски в атлас, новые рамки восьми спрайтам.
+    """Заставка-конструктор: русские куски в атлас, новые рамки спрайтам, правки префабов.
 
     Куски заставки лежат не на своих текстурах, а в общем атласе, и где именно —
     сказано в **карте атласа** (`SpriteAtlas.m_RenderDataMap`), а не в самом спрайте:
     у спрайта та же запись хранится «как было до упаковки». Русское слово крупнее
-    немецкого, поэтому атлас переупакован целиком (`tools/splash.py`), и обе записи
-    переписываются вместе — иначе игра возьмёт кусок по старой рамке.
+    немецкого, поэтому атлас переупакован целиком (`tools/splash.py`, `tools/titles.py`),
+    и обе записи переписываются вместе — иначе игра возьмёт кусок по старой рамке.
 
-    Рамка спрайта (`m_Rect`) становится рамкой половины из префаба: у Capcom она
+    Рамка спрайта (`m_Rect`) становится рамкой куска на экране: у Capcom она бывает
     на 3 px уже, и её кусок игра растягивает, а русский ложится один к одному.
+
+    У заставок расследования (`titles.py`) ещё и `правки` — поля объектов немецких
+    префабов (`RectTransform` слотов, `m_Sprite` у Image): русские строки шире, и куски
+    стоят на экране иначе. Пишутся, только если и атлас, и все исходные поля — немецкий
+    оригинал этой игры; иначе заставка остаётся как есть. Уже поставленная прошлой
+    установкой — не переписывается («уже стоит»), а её префабы по-прежнему немецкие.
     """
     name = spec["атлас"]
     obj = next((o for o in env.objects if o.type.name == "SpriteAtlas" and o.peek_name() == name), None)
@@ -261,10 +356,16 @@ def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list
     tex = texture.read()
     if layer.size != (tex.m_Width, tex.m_Height):
         raise ValueError(f"{name}: слой {layer.size[0]}x{layer.size[1]}, "
-                         f"текстура {tex.m_Width}x{tex.m_Height} — набрать заново: tools/splash.py")
+                         f"текстура {tex.m_Width}x{tex.m_Height} — набрать заново по заданию")
     atlas = splash_atlas(env, spec, layer, texture)
     if atlas is None:
+        if splash_placed(env, spec, layer, texture, tree, sprites):
+            return [f"{name}: русская заставка уже стоит — не трогаю"]
         return [f"{name}: немецкая заставка в этой игре другая — оставлена как есть"]
+    edits = spec.get("правки", [])
+    state = edits_state(env, edits)
+    if state != "было":
+        return [f"{name}: префаб заставки в этой игре другой ({state}) — оставлена как есть"]
     notes: list[str] = []
     want = RAW if raw else int(tex.m_TextureFormat)
     try:
@@ -304,7 +405,7 @@ def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list
             continue
 
         # Та же запись у самого спрайта — «как было бы на своей текстуре»: кусок
-        # стоит в рамке там же, где в атласе, и рамка спрайта равна рамке половины.
+        # стоит в рамке там же, где в атласе, и рамка спрайта равна рамке куска на экране.
         tr["m_Rect"] = {"x": 0.0, "y": 0.0, "width": rect["width"], "height": rect["height"]}
         tr["m_RD"]["textureRect"] = {"x": off["x"], "y": off["y"],
                                      "width": r["width"], "height": r["height"]}
@@ -319,7 +420,20 @@ def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list
     tree["m_RenderDataMap"] = rows
     obj.save_typetree(tree)
     notes.append(f"{name}: русский атлас и {done} кусков заставки")
+    if edits:
+        notes.append(f"{name}: правок префабов {write_edits(env, edits)}")
     return notes
+
+
+def splash_objects(env, spec: dict) -> set:
+    """Что заставка вправе менять в бандле: имена её спрайтов и атласа, path_id его текстуры
+    и объектов с правками. Нужно сверкам соседних картинок того же бандла."""
+    out: set = set(spec["куски"]) | {spec["атлас"]}
+    obj = next((o for o in env.objects if o.type.name == "SpriteAtlas" and o.peek_name() == spec["атлас"]), None)
+    if obj is not None:
+        out |= {rd["texture"]["m_PathID"] for _, rd in obj.read_typetree()["m_RenderDataMap"]}
+    out |= {edit["объект"] for edit in spec.get("правки", [])}
+    return out
 
 
 def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Image],
@@ -490,8 +604,10 @@ class Shipment:
                 notes += found
                 if not any("оставлена как есть" in note for note in found):
                     # Заставку игра берёт из немецкого префаба — его адрес подмене не отдаём.
-                    pairs = [(german, english) for german, english in pairs
-                             if german != spec["префаб"]]
+                    # Уже поставленную прошлой установкой — тоже: иначе повторная установка
+                    # увела бы адрес на английский, и на экране встала бы английская.
+                    keep = set(splash_prefabs(spec))
+                    pairs = [(german, english) for german, english in pairs if german not in keep]
                     extra += 1
                 continue
             if entry.get("kind") == "plate":

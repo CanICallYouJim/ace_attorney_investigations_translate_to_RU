@@ -1,0 +1,516 @@
+{
+  "набор": {
+    "шрифт": "seguibl.ttf",
+    "кегль": 197,
+    "сжатие": 0.874,
+    "наклон": 0.16,
+    "утончение": -2.5,
+    "обводка": 17,
+    "цвет": [
+      152,
+      0,
+      56
+    ],
+    "немецкий штрих": 31.0,
+    "строки": {
+      "Start 1": {
+        "текст": "Начало",
+        "куски": [
+          "Начало"
+        ],
+        "база": 249.0,
+        "немецкая база": 249.0,
+        "центр": 959.5,
+        "ширина": 651,
+        "штрих": 31.0
+      },
+      "Start 2": {
+        "текст": "расследования",
+        "куски": [
+          "рассле",
+          "дования"
+        ],
+        "база": 473.0,
+        "немецкая база": 473.0,
+        "центр": 959.5,
+        "ширина": 1346,
+        "штрих": 31.0
+      },
+      "End 1": {
+        "текст": "Расследование",
+        "куски": [
+          "Рассле",
+          "дование"
+        ],
+        "база": 249.0,
+        "немецкая база": 249.0,
+        "центр": 959.0,
+        "ширина": 1327,
+        "штрих": 31.0
+      },
+      "End 2": {
+        "текст": "завершено",
+        "куски": [
+          "завершено"
+        ],
+        "база": 473.0,
+        "немецкая база": 473.0,
+        "центр": 959.0,
+        "ширина": 959,
+        "штрих": 31.0
+      }
+    },
+    "слово": "Начало расследования / Расследование завершено",
+    "раскладка": {
+      "Start L/Char_01": "Начало — спрайт Start_01",
+      "Start R/Char_02": "рассле — спрайт Start_02",
+      "Start R/Char_03": "дования — спрайт Start_03",
+      "End L/Char_00": "Рассле — спрайт Start_00",
+      "End L/Char_01": "дование — спрайт End_03",
+      "End R/Char_02": "завершено — спрайт End_02"
+    },
+    "скрыты": [
+      "Start L/Char_00",
+      "End R/Char_03"
+    ]
+  },
+  "атлас": "SousaPart_Title_StEd_ger",
+  "бандл": "gk_common_ingameui_trial",
+  "префабы": [
+    "Assets/GK_Common/Prefabs/SousaPart/SousaPart_Title_Start_R_ger.prefab",
+    "Assets/GK_Common/Prefabs/SousaPart/SousaPart_Title_End_R_ger.prefab"
+  ],
+  "размер": [
+    1024,
+    2048
+  ],
+  "текстура_sha": "a7faf7faa5491ad1abc4bd0f8265620c44c1f524bb348e141f2fc5b2f581f6df",
+  "куски": {
+    "SousaPart_Title_End_02_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 882.0,
+        "width": 959.0,
+        "height": 140.0
+      },
+      "textureRectOffset": {
+        "x": 17.0,
+        "y": 34.0
+      },
+      "rect": {
+        "width": 992.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_End_02_W_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1874.0,
+        "width": 988.0,
+        "height": 174.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 17.0
+      },
+      "rect": {
+        "width": 992.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_End_03_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 202.0,
+        "width": 750.0,
+        "height": 131.0
+      },
+      "textureRectOffset": {
+        "x": 17.0,
+        "y": 42.0
+      },
+      "rect": {
+        "width": 784.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_End_03_W_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1024.0,
+        "width": 780.0,
+        "height": 165.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 25.0
+      },
+      "rect": {
+        "width": 784.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_Start_00_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 468.0,
+        "width": 583.0,
+        "height": 134.0
+      },
+      "textureRectOffset": {
+        "x": 16.0,
+        "y": 76.0
+      },
+      "rect": {
+        "width": 615.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_Start_00_W_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1358.0,
+        "width": 611.0,
+        "height": 168.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 59.0
+      },
+      "rect": {
+        "width": 615.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_Start_01_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 604.0,
+        "width": 651.0,
+        "height": 134.0
+      },
+      "textureRectOffset": {
+        "x": 16.0,
+        "y": 74.0
+      },
+      "rect": {
+        "width": 683.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_Start_01_W_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1528.0,
+        "width": 679.0,
+        "height": 168.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 57.0
+      },
+      "rect": {
+        "width": 683.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_Start_02_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 740.0,
+        "width": 589.0,
+        "height": 140.0
+      },
+      "textureRectOffset": {
+        "x": 17.0,
+        "y": 34.0
+      },
+      "rect": {
+        "width": 623.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_Start_02_W_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1698.0,
+        "width": 619.0,
+        "height": 174.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 17.0
+      },
+      "rect": {
+        "width": 623.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_Start_03_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 335.0,
+        "width": 763.0,
+        "height": 131.0
+      },
+      "textureRectOffset": {
+        "x": 16.0,
+        "y": 43.0
+      },
+      "rect": {
+        "width": 795.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_Start_03_W_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1191.0,
+        "width": 791.0,
+        "height": 165.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 26.0
+      },
+      "rect": {
+        "width": 795.0,
+        "height": 280.0
+      }
+    }
+  },
+  "правки": [
+    {
+      "префаб": "SousaPart_Title_Start_R_ger",
+      "узел": "root/Title/L/Char_01_W",
+      "тип": "RectTransform",
+      "объект": 994597700618465295,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 260.0,
+          "y": 352.0
+        },
+        "m_SizeDelta": {
+          "x": 412.0,
+          "y": 280.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -0.5,
+          "y": 352.0
+        },
+        "m_SizeDelta": {
+          "x": 683.0,
+          "y": 280.0
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_Start_R_ger",
+      "узел": "root/Title/R/Char_02_W",
+      "тип": "RectTransform",
+      "объект": -7742229431604695025,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -138.0,
+          "y": 127.0
+        },
+        "m_SizeDelta": {
+          "x": 382.0,
+          "y": 280.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -378.5,
+          "y": 127.0
+        },
+        "m_SizeDelta": {
+          "x": 623.0,
+          "y": 280.0
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_Start_R_ger",
+      "узел": "root/Title/R/Char_03_W",
+      "тип": "RectTransform",
+      "объект": -7029956183785361393,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 176.0,
+          "y": 127.0
+        },
+        "m_SizeDelta": {
+          "x": 304.0,
+          "y": 280.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 291.5,
+          "y": 127.0
+        },
+        "m_SizeDelta": {
+          "x": 795.0,
+          "y": 280.0
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_End_R_ger",
+      "узел": "root/Title/L/Char_00_W",
+      "тип": "RectTransform",
+      "объект": 3289789288484955191,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -188.0,
+          "y": 352.0
+        },
+        "m_SizeDelta": {
+          "x": 560.0,
+          "y": 280.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -373.5,
+          "y": 352.0
+        },
+        "m_SizeDelta": {
+          "x": 615.0,
+          "y": 280.0
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_End_R_ger",
+      "узел": "root/Title/L/Char_01_W",
+      "тип": "RectTransform",
+      "объект": 1812346994223670327,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 260.0,
+          "y": 352.0
+        },
+        "m_SizeDelta": {
+          "x": 412.0,
+          "y": 280.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 287.0,
+          "y": 352.0
+        },
+        "m_SizeDelta": {
+          "x": 784.0,
+          "y": 280.0
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_End_R_ger",
+      "узел": "root/Title/L/Char_01_W",
+      "тип": "MonoBehaviour",
+      "объект": 6629678019111806007,
+      "было": {
+        "m_Sprite": {
+          "m_FileID": 0,
+          "m_PathID": 7187722955588082847
+        }
+      },
+      "стало": {
+        "m_Sprite": {
+          "m_FileID": 0,
+          "m_PathID": -7196614305272421472
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_End_R_ger",
+      "узел": "root/Title/L/Char_01_W/Char_01",
+      "тип": "MonoBehaviour",
+      "объект": 4878092809719899191,
+      "было": {
+        "m_Sprite": {
+          "m_FileID": 0,
+          "m_PathID": 5720006222197932643
+        }
+      },
+      "стало": {
+        "m_Sprite": {
+          "m_FileID": 0,
+          "m_PathID": -8851030878698524498
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_End_R_ger",
+      "узел": "root/Title/R/Char_02_W",
+      "тип": "RectTransform",
+      "объект": 4207015704087553079,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -288.0,
+          "y": 127.0
+        },
+        "m_SizeDelta": {
+          "x": 754.0,
+          "y": 280.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -1.0,
+          "y": 127.0
+        },
+        "m_SizeDelta": {
+          "x": 992.0,
+          "y": 280.0
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_Start_R_ger",
+      "узел": "root/Title/L/Char_00_W",
+      "тип": "RectTransform",
+      "объект": -7875517333666746353,
+      "было": {
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "стало": {
+        "m_LocalScale": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        }
+      }
+    },
+    {
+      "префаб": "SousaPart_Title_End_R_ger",
+      "узел": "root/Title/R/Char_03_W",
+      "тип": "RectTransform",
+      "объект": -1374719260760415177,
+      "было": {
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      },
+      "стало": {
+        "m_LocalScale": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        }
+      }
+    }
+  ]
+}

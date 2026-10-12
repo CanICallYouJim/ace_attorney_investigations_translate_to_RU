@@ -213,5 +213,59 @@
       "sim",
       "tra"
     ]
+  },
+  "map0b": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      2340,
+      1260
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map11_00": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      3060,
+      1620
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map11_01": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      3060,
+      1620
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
   }
 }

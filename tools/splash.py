@@ -571,8 +571,11 @@ def from_bundle(env) -> Image.Image:
 
 
 def verify_built(path: Path) -> tuple[list[str], Image.Image]:
-    """То же, что `verify_bundle`, но для бандла, лежащего файлом."""
-    return verify_bundle(UnityPy.load(str(path)))
+    """То же, что `verify_bundle`, но для бандла, лежащего файлом. Законные правки других
+    наших картинок того же бандла (фон чтения, заставки расследования) — не «лишнее»."""
+    from layer_localized import bundle_neighbours
+
+    return verify_bundle(UnityPy.load(str(path)), bundle_neighbours(BUNDLE, "splash"))
 
 
 def verify_bundle(built, others: set[str] = frozenset()) -> tuple[list[str], Image.Image]:
@@ -585,7 +588,8 @@ def verify_bundle(built, others: set[str] = frozenset()) -> tuple[list[str], Ima
     больше 64 уровней) не больше 0,01 %, как в `selftest.py`.
 
     `others` — имена объектов других наших картинок в том же бандле (фон чтения
-    `Sousa_TextCutBG_R_05_ger`, 10 октября 2026): их правка законна, свою сверку
+    `Sousa_TextCutBG_R_05_ger`, 10 октября 2026) и path_id безымянных (префабы заставок
+    расследования, `titles.py`, 12 октября 2026): их правка законна, свою сверку
     они проходят сами.
     """
     orig = open_bundle()
@@ -631,10 +635,11 @@ def verify_bundle(built, others: set[str] = frozenset()) -> tuple[list[str], Ima
         return out
 
     before, after = stamps(orig), stamps(built)
-    changed = [before[k] for k in before if k in after and before[k][2] != after[k][2]]
+    changed = [(k, *before[k]) for k in before if k in after and before[k][2] != after[k][2]]
     allowed = {sprite_name(side, part, outline) for side, part, outline in PARTS}
-    stray = [f"{kind} {name}" for kind, name, _ in changed
-             if name not in allowed and name not in others and kind not in ("AssetBundle", "SpriteAtlas")
+    stray = [f"{kind} {name or pid}" for pid, kind, name, _ in changed
+             if name not in allowed and name not in others and pid not in others
+             and kind not in ("AssetBundle", "SpriteAtlas")
              and not (kind == "Texture2D" and ATLAS in name)]
     print(f"в бандле изменилось объектов: {len(changed)} из {len(before)}"
           + (f"; лишние: {', '.join(stray)}" if stray else "; лишнего не тронуто"))

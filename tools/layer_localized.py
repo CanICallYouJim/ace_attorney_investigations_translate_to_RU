@@ -77,6 +77,47 @@ EDGE = 40                 # «деталь рисунка» — резкая г�
 LANGS = ("eng", "ger", "fre", "jpn", "kor", "sim", "tra")
 FONT = Path("C:/Windows/Fonts/segoeui.ttf")
 
+# Заставки-конструкторы: куски в атласе по заданию, а не картинка на текстуру. Каждая —
+# свой инструмент набора и сверки (модуль), задание и наш атлас в work/graphics_ru/ui.
+# В общий разбор картинок по именам их PNG не попадают; в слой и в бандл они идут
+# своим шагом (`splash_layer`, `inject_localized.load_splashes`, `picture_layer.write_splash`).
+SPLASHES = (
+    ("splash", "splash.json", "splash_ger2.png"),       # «Возражение», tools/splash.py
+    ("titles", "titles.json", "titles_StEd_ger.png"),   # «Начало / Расследование завершено», tools/titles.py
+)
+SPLASH_PNGS = {png for _, _, png in SPLASHES}
+
+
+def splash_jobs() -> list[tuple[str, dict, Path]]:
+    """Набранные заставки: (модуль сверки, задание, PNG атласа). Не набранная — пропускается."""
+    out = []
+    for module, spec_name, png_name in SPLASHES:
+        spec_path, png = RU / "ui" / spec_name, RU / "ui" / png_name
+        if spec_path.exists() and png.exists():
+            out.append((module, load_json(spec_path), png))
+    return out
+
+
+def bundle_neighbours(bundle_short: str, me: str) -> set:
+    """Что в бандле вправе менять наши картинки, кроме заставки `me`: имена объектов
+    картинок и плашек, а у других заставок — их спрайты, атлас и объекты с правками.
+    Нужно сверке одной заставки по собранному бандлу: чужая законная правка — не «лишнее»."""
+    from picture_layer import splash_objects
+
+    out: set = set()
+    for module, spec, _ in splash_jobs():
+        if module != me and spec["бандл"] == bundle_short:
+            live = next(BUNDLES.glob(f"{bundle_short}_assets_all_*.bundle"), None)
+            src = original(live.name) if live else None
+            if src is not None:
+                out |= splash_objects(UnityPy.load(str(src)), spec)
+    ours = {png.stem for png in RU.rglob("*.png")}
+    for name, places in index().items():
+        for bundle_name, key, _ in places:
+            if short(bundle_name) == bundle_short and name in ours:
+                out.add(leaf(key))
+    return out
+
 
 def index() -> dict[str, list[tuple[str, str, str]]]:
     """Имя ассета без языкового хвоста -> [(бандл, адрес _ger, размер)].
@@ -480,7 +521,7 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
     # `<имя>_ink.png` и `<имя>_print_ink.png` — маски набранных букв для проверки,
     # а не картинки игры: в слой они не идут и в «не везём» им делать нечего
     pngs = [png for png in sorted(RU.rglob("*.png"))
-            if png.name != "splash_ger2.png" and not png.stem.endswith("_ink")]
+            if png.name not in SPLASH_PNGS and not png.stem.endswith("_ink")]
     manifest: dict = {"pictures": [], "skipped": []}
     problems: list[str] = []
     seen: dict[str, Path] = {}
@@ -628,35 +669,39 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
 
 
 def splash_layer(folder: Path, manifest: dict) -> list[str]:
-    """Заставка «Возражение» в слой: наши куски атласа и задание для их рамок.
+    """Заставки-конструкторы в слой: наши куски атласа и задание для их рамок.
 
     Картинкой это не снять: куски лежат в общем атласе, и переезд каждого меняет
-    не пиксели, а поля спрайта. Поэтому слой заставки — наш атлас без единого
-    пикселя Capcom (мазок `anim_1_0` патчер вырежет у игрока) плюс задание
-    `tools/splash.py`, по которому переписываются рамки.
+    не пиксели, а поля спрайта, а у заставок расследования — ещё и поля немецких
+    префабов. Поэтому слой заставки — наш атлас без единого пикселя Capcom (мазок
+    `anim_1_0` «Возражения» патчер вырежет у игрока) плюс задание `tools/splash.py`
+    или `tools/titles.py`, по которому переписываются рамки и префабы.
     """
-    spec_path, png = RU / "ui" / "splash.json", RU / "ui" / "splash_ger2.png"
-    if not (spec_path.exists() and png.exists()):
-        return []
-    spec = load_json(spec_path)
-    live = next(BUNDLES.glob(f"{spec['бандл']}_assets_all_*.bundle"), None)
-    if live is None:
-        return [f"заставка: в игре нет бандла {spec['бандл']}"]
-    src = original(live.name)
-    if src is None:
-        return [f"заставка: {spec['бандл']} менялся, а оригинала в backup/ нет"]
-    layer = Image.open(png).convert("RGBA")
-    entry = {"name": "splash_ger2", "bundle": spec["бандл"], "kind": "splash",
-             "key": spec["префаб"], "size": list(spec["размер"]), "spec": spec,
-             "png_sha": file_sha(png), "layer": f"{spec['бандл']}/splash_ger2.png"}
-    target = folder / entry["layer"]
-    target.parent.mkdir(parents=True, exist_ok=True)
-    layer.save(target)
-    manifest["pictures"].append(entry)
-    print(f"\n{spec['бандл']} — заставка «{spec['набор']['слово']}»: "
-          f"{len(spec['куски']) - 1} кусков, слой {target.stat().st_size / 1024:.0f} КБ, "
-          f"пикселей Capcom нет", flush=True)
-    return []
+    problems: list[str] = []
+    for module, spec, png in splash_jobs():
+        live = next(BUNDLES.glob(f"{spec['бандл']}_assets_all_*.bundle"), None)
+        if live is None:
+            problems.append(f"заставка {png.stem}: в игре нет бандла {spec['бандл']}")
+            continue
+        if original(live.name) is None:
+            problems.append(f"заставка {png.stem}: {spec['бандл']} менялся, а оригинала в backup/ нет")
+            continue
+        layer = Image.open(png).convert("RGBA")
+        entry = {"name": png.stem, "bundle": spec["бандл"], "kind": "splash",
+                 "key": spec.get("префаб") or spec["префабы"][0], "size": list(spec["размер"]), "spec": spec,
+                 "png_sha": file_sha(png), "layer": f"{spec['бандл']}/{png.name}"}
+        if module != "splash":
+            entry["check"] = module          # чем сверять в selftest; у «Возражения» — splash.py
+        target = folder / entry["layer"]
+        target.parent.mkdir(parents=True, exist_ok=True)
+        layer.save(target)
+        manifest["pictures"].append(entry)
+        pieces = len(spec["куски"]) - (1 if spec.get("мазок") else 0)
+        edits = len(spec.get("правки", []))
+        print("\n" + f"{spec['бандл']} — заставка «{spec['набор']['слово']}»: "
+              f"{pieces} кусков" + (f", правок префабов {edits}" if edits else "")
+              + f", слой {target.stat().st_size / 1024:.0f} КБ, пикселей Capcom нет", flush=True)
+    return problems
 
 
 def sweep(folder: Path, manifest: dict) -> None:

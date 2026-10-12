@@ -214,19 +214,26 @@ def pictures() -> int:
                 bad += not plate_ok(built, entry)
                 continue
             if entry.get("kind") == "splash":
-                # Заставка «Возражение»: восемь кусков в переупакованном атласе.
-                # Сверяется собранная из бандла заставка против набора, мазок Capcom
-                # и то, что немецкий префаб не уведён на английский.
-                from splash import verify_bundle
-                from picture_layer import leaf
+                # Заставки-конструкторы: «Возражение» (`splash.py`) — восемь кусков
+                # в переупакованном атласе, мазок Capcom; «Начало / Расследование завершено»
+                # (`titles.py`) — шесть кусков и правки немецких префабов. Сверяются кадры,
+                # собранные из бандла, против набора и то, что немецкие префабы не уведены
+                # на английские. Законные правки соседей по бандлу — не «лишнее».
+                import importlib
+
+                from picture_layer import leaf, splash_objects
+                check = importlib.import_module(entry.get("check", "splash"))
                 others = {leaf(e["key"]).rsplit(".", 1)[0] for e in shipment.by_bundle[bundle]
                           if e.get("kind") != "splash"}
-                found, _ = verify_bundle(built, others)
+                for e in shipment.by_bundle[bundle]:
+                    if e.get("kind") == "splash" and e is not entry:
+                        others |= splash_objects(built, e["spec"])
+                found, _ = check.verify_bundle(built, others)
                 for why in found:
                     print(f"    {entry['name']:18} {why}  <- РАЗОШЛОСЬ")
                 if not found:
                     print(f"    {entry['name']:18} заставка: сборка из кусков сходится с набором, "
-                          f"мазок цел, префаб немецкий")
+                          f"префабы немецкие, лишнего не тронуто")
                 bad += bool(found)
                 continue
             obj = built.container[entry["key"]]

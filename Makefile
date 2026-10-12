@@ -28,7 +28,7 @@ endif
 export PYTHONIOENCODING := utf-8
 
 .DEFAULT_GOAL := help
-.PHONY: help check check-full selftest build install graphics graphics-ru graphics-new plates splash notes layers restore \
+.PHONY: help check check-full selftest build install graphics graphics-ru graphics-new plates splash titles notes layers restore \
         status patch patch-check uninstall release publish extract clean
 
 help:                ## показать этот список
@@ -71,6 +71,9 @@ plates:              ## набрать русские плашки ситуац�
 
 splash:              ## набрать заставку «Возражение» и сверить сборкой из кусков (ставит её install)
 	$(PY) tools/splash.py
+
+titles:              ## набрать заставки «Начало / Расследование завершено», сверить сборкой из бандла (ставит их install)
+	$(PY) tools/titles.py
 
 notes:               ## набрать планы дела 1 заново: печатное prints, пометки notes, карточка логики
 	$(PY) tools/prints.py work/graphics_ru/case1/labels.json

@@ -121,6 +121,8 @@ UNCHECKABLE = {
     **{f"Situation_{i}": "плашка ситуации: спрайт в атласе — проверяет tools/plates.py --check"
        for i in range(7)},
     "splash_ger2": "атлас заставки «Возражение»: куски с рамками — проверяет tools/splash.py --check",
+    "titles_StEd_ger": "атлас заставок «Начало / Расследование завершено»: куски с рамками и правки "
+                       "префабов — проверяет tools/titles.py --check",
 }
 
 

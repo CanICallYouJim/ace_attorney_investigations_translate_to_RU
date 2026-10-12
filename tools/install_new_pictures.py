@@ -29,8 +29,10 @@ BC7 теряет немного, поэтому «другая» — это бо
 Механика сверяется после записи, как у полной установки: русские пиксели —
 в **немецком** объекте (раскодировано из записанного бандла и сравнено с PNG),
 английская текстура той же картинки равна оригиналу из `backup/` до бита.
-Плашки ситуации и заставка «Возражение» сюда не ходят — у них своя таблица
-и свой атлас: изменились — `make graphics-ru`.
+Плашки ситуации и заставки-конструкторы («Возражение», «Начало / Расследование
+завершено») сюда не ходят — у них своя таблица и свой атлас: изменились —
+`make graphics-ru`. Бандл, который собирается здесь целиком из `backup/`, получает
+и свои заставки — иначе они встали бы английскими.
 
 Слой патчера (`make layers`) отдельно: этот инструмент ставит картинки только
 в свою игру.
@@ -50,7 +52,7 @@ import UnityPy
 from PIL import Image
 
 from common import BACKUP, BUNDLES, WORK, game_is_running, load_json, save_json, sha256
-from inject_localized import patch
+from inject_localized import load_splashes, patch
 from layer_localized import index, original, stored_flipped
 from picture_layer import FLIP, german_object, sprites_by_key, write_bundle
 from swap_localized import BUILD, MANIFEST, plan_env, register_backup
@@ -184,7 +186,10 @@ def main() -> int:
     problems: list[str] = []
     for bundle_name in sorted(set(todo) | set(whole)):
         if bundle_name in whole:
-            blob, notes, _ = patch(bundle_name, [(k, files[n]) for n, k in by_bundle[bundle_name]], args.raw)
+            # Целиком из backup/ — значит, и заставки-конструкторы этого бандла заново:
+            # иначе «Возражение» и заставки расследования встали бы английскими.
+            blob, notes, _ = patch(bundle_name, [(k, files[n]) for n, k in by_bundle[bundle_name]], args.raw,
+                                   load_splashes(bundle_name.split("_assets_all_")[0]))
             written = by_bundle[bundle_name]
         else:
             env = UnityPy.load(str(BUNDLES / bundle_name))

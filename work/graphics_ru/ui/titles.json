@@ -66,12 +66,12 @@
       "Start R/Char_02": "рассле — спрайт Start_02",
       "Start R/Char_03": "дования — спрайт Start_03",
       "End L/Char_00": "Рассле — спрайт Start_00",
-      "End L/Char_01": "дование — спрайт End_03",
-      "End R/Char_02": "завершено — спрайт End_02"
+      "End L/Char_01": "дование — спрайт End_02",
+      "End R/Char_03": "завершено — спрайт End_03"
     },
     "скрыты": [
       "Start L/Char_00",
-      "End R/Char_03"
+      "End R/Char_02"
     ]
   },
   "атлас": "SousaPart_Title_StEd_ger",
@@ -89,38 +89,6 @@
     "SousaPart_Title_End_02_R_ger": {
       "textureRect": {
         "x": 0.0,
-        "y": 882.0,
-        "width": 959.0,
-        "height": 140.0
-      },
-      "textureRectOffset": {
-        "x": 17.0,
-        "y": 34.0
-      },
-      "rect": {
-        "width": 992.0,
-        "height": 280.0
-      }
-    },
-    "SousaPart_Title_End_02_W_R_ger": {
-      "textureRect": {
-        "x": 0.0,
-        "y": 1874.0,
-        "width": 988.0,
-        "height": 174.0
-      },
-      "textureRectOffset": {
-        "x": 2.0,
-        "y": 17.0
-      },
-      "rect": {
-        "width": 992.0,
-        "height": 280.0
-      }
-    },
-    "SousaPart_Title_End_03_R_ger": {
-      "textureRect": {
-        "x": 0.0,
         "y": 202.0,
         "width": 750.0,
         "height": 131.0
@@ -134,7 +102,7 @@
         "height": 280.0
       }
     },
-    "SousaPart_Title_End_03_W_R_ger": {
+    "SousaPart_Title_End_02_W_R_ger": {
       "textureRect": {
         "x": 0.0,
         "y": 1024.0,
@@ -147,6 +115,38 @@
       },
       "rect": {
         "width": 784.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_End_03_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 882.0,
+        "width": 959.0,
+        "height": 140.0
+      },
+      "textureRectOffset": {
+        "x": 17.0,
+        "y": 34.0
+      },
+      "rect": {
+        "width": 992.0,
+        "height": 280.0
+      }
+    },
+    "SousaPart_Title_End_03_W_R_ger": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1874.0,
+        "width": 988.0,
+        "height": 174.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 17.0
+      },
+      "rect": {
+        "width": 992.0,
         "height": 280.0
       }
     },
@@ -424,7 +424,7 @@
       "стало": {
         "m_Sprite": {
           "m_FileID": 0,
-          "m_PathID": -7196614305272421472
+          "m_PathID": 7327328255315860654
         }
       }
     },
@@ -442,22 +442,22 @@
       "стало": {
         "m_Sprite": {
           "m_FileID": 0,
-          "m_PathID": -8851030878698524498
+          "m_PathID": -3905676893244651524
         }
       }
     },
     {
       "префаб": "SousaPart_Title_End_R_ger",
-      "узел": "root/Title/R/Char_02_W",
+      "узел": "root/Title/R/Char_03_W",
       "тип": "RectTransform",
-      "объект": 4207015704087553079,
+      "объект": -1374719260760415177,
       "было": {
         "m_AnchoredPosition": {
-          "x": -288.0,
+          "x": 351.0,
           "y": 127.0
         },
         "m_SizeDelta": {
-          "x": 754.0,
+          "x": 590.0,
           "y": 280.0
         }
       },
@@ -494,9 +494,9 @@
     },
     {
       "префаб": "SousaPart_Title_End_R_ger",
-      "узел": "root/Title/R/Char_03_W",
+      "узел": "root/Title/R/Char_02_W",
       "тип": "RectTransform",
-      "объект": -1374719260760415177,
+      "объект": 4207015704087553079,
       "было": {
         "m_LocalScale": {
           "x": 1.0,

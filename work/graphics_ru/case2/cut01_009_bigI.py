@@ -1,8 +1,9 @@
 import sys, numpy as np, cv2
 from PIL import Image
 from scipy import ndimage as nd
-S=sys.argv[1]; SX=float(sys.argv[2])  # финал 13 октября: 1.5 522 742; BOT=int(sys.argv[3]); CX=float(sys.argv[4])
-p3=np.asarray(Image.open('work/graphics_masks/drafts/cut01_009_p3.png').convert('RGB')).astype(float)
+S=sys.argv[1]; SX=float(sys.argv[2]); BOT=int(sys.argv[3]); CX=float(sys.argv[4])  # финал 13 октября: 1.5 522 742, BASE=…_p3r.png (с ножкой «Р»)
+import os
+p3=np.asarray(Image.open(os.environ.get('BASE','work/graphics_masks/drafts/cut01_009_p3.png')).convert('RGB')).astype(float)
 p4=np.asarray(Image.open('work/graphics_masks/drafts/cut01_009_p4.png').convert('RGB')).astype(float)
 x0,y0,x1,y1=668,432,786,560
 g=p4[y0:y1,x0:x1]; bgc=np.median(p3[440:560,700:780].reshape(-1,3),0)

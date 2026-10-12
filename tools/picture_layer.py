@@ -321,6 +321,24 @@ def write_edits(env, edits: list[dict]) -> int:
     return len(edits)
 
 
+def atlas_sprites(env, tree: dict, name: str = "") -> dict:
+    """Спрайты этого атласа по имени: те, чья запись есть в его карте.
+
+    Имена спрайтов бывают одинаковыми у разных языков (`LogicChess_Title_R_00` лежит
+    в атласах eng, fre, ger…, 12 октября 2026): поиск по имени во всём бандле взял бы
+    чужой. Внутри одного атласа имя обязано быть единственным."""
+    keys = {atlas_key(k) for k, _ in tree["m_RenderDataMap"]}
+    out: dict = {}
+    for o in env.objects:
+        if o.type.name != "Sprite" or not o.peek_name():
+            continue
+        if atlas_key(o.read_typetree()["m_RenderDataKey"]) in keys:
+            if o.peek_name() in out:
+                raise KeyError(f"{name}: в атласе два спрайта {o.peek_name()}")
+            out[o.peek_name()] = o
+    return out
+
+
 def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list[str]:
     """Заставка-конструктор: русские куски в атлас, новые рамки спрайтам, правки префабов.
 
@@ -345,7 +363,7 @@ def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list
         raise KeyError(f"в бандле нет атласа {name}")
     tree = obj.read_typetree()
     objs = {o.path_id: o for o in env.objects}
-    sprites = {o.peek_name(): o for o in env.objects if o.type.name == "Sprite" and o.peek_name()}
+    sprites = atlas_sprites(env, tree, name)
     pieces = spec["куски"]
 
     texture = None
@@ -426,12 +444,17 @@ def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list
 
 
 def splash_objects(env, spec: dict) -> set:
-    """Что заставка вправе менять в бандле: имена её спрайтов и атласа, path_id его текстуры
-    и объектов с правками. Нужно сверкам соседних картинок того же бандла."""
-    out: set = set(spec["куски"]) | {spec["атлас"]}
+    """Что заставка вправе менять в бандле: имя атласа, path_id его самого, его текстуры,
+    его спрайтов (по карте атласа, не по имени — имена у языков бывают общими) и объектов
+    с правками. Нужно сверкам соседних картинок того же бандла."""
+    out: set = {spec["атлас"]}
     obj = next((o for o in env.objects if o.type.name == "SpriteAtlas" and o.peek_name() == spec["атлас"]), None)
     if obj is not None:
-        out |= {rd["texture"]["m_PathID"] for _, rd in obj.read_typetree()["m_RenderDataMap"]}
+        tree = obj.read_typetree()
+        out |= {rd["texture"]["m_PathID"] for _, rd in tree["m_RenderDataMap"]}
+        sprites = atlas_sprites(env, tree, spec["атлас"])
+        out |= {sprites[n].path_id for n in spec["куски"] if n in sprites}
+        out.add(obj.path_id)
     out |= {edit["объект"] for edit in spec.get("правки", [])}
     return out
 

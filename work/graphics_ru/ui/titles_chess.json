@@ -1,0 +1,2884 @@
+{
+  "набор": {
+    "шрифт": "seguibl.ttf",
+    "кегль": 176,
+    "кегль верха": 146,
+    "сжатие": 1.013,
+    "наклон": 0.175,
+    "утончение": -3.0,
+    "немецкий штрих": 29.0,
+    "ореол": [
+      [
+        1.0,
+        85.0
+      ],
+      [
+        1.5,
+        69.0
+      ],
+      [
+        2.0,
+        60.0
+      ],
+      [
+        3.0,
+        48.0
+      ],
+      [
+        3.5,
+        39.0
+      ],
+      [
+        4.0,
+        35.0
+      ],
+      [
+        4.5,
+        30.0
+      ],
+      [
+        5.0,
+        26.0
+      ],
+      [
+        5.5,
+        20.0
+      ],
+      [
+        6.0,
+        17.0
+      ],
+      [
+        6.5,
+        14.0
+      ],
+      [
+        7.0,
+        10.0
+      ],
+      [
+        7.5,
+        7.0
+      ],
+      [
+        8.0,
+        6.0
+      ],
+      [
+        8.5,
+        4.0
+      ],
+      [
+        9.0,
+        3.0
+      ],
+      [
+        9.5,
+        2.0
+      ],
+      [
+        10.0,
+        1.0
+      ],
+      [
+        10.5,
+        1.0
+      ],
+      [
+        11.0,
+        0.0
+      ],
+      [
+        11.5,
+        0.0
+      ],
+      [
+        12.0,
+        0.0
+      ]
+    ],
+    "цвет ореола": [
+      66,
+      125,
+      255
+    ],
+    "кайма": 18.1,
+    "синий": [
+      1,
+      50,
+      222
+    ],
+    "строки": {
+      "верх": {
+        "текст": "Ментальные шахматы",
+        "база": 547.0,
+        "немецкая база": 547.0,
+        "центр": 959.5,
+        "немецкий центр": 960.0,
+        "ширина": 1713,
+        "с каймой и ореолом": [
+          74,
+          1845
+        ],
+        "штрих": 24.0
+      },
+      "Start": {
+        "текст": "Начали!",
+        "база": 777.0,
+        "немецкая база": 777.0,
+        "центр": 962.5,
+        "немецкий центр": 962.5,
+        "ширина": 739,
+        "с каймой и ореолом": [
+          564,
+          1361
+        ],
+        "штрих": 30.0
+      },
+      "Success": {
+        "текст": "Шах и мат",
+        "база": 779.0,
+        "немецкая база": 779.0,
+        "центр": 957.5,
+        "немецкий центр": 957.5,
+        "ширина": 933,
+        "с каймой и ореолом": [
+          462,
+          1453
+        ],
+        "штрих": 30.0
+      }
+    },
+    "слово": "Ментальные шахматы / Начали! / Шах и мат",
+    "раскладка": {
+      "top st0": "М — спрайты LogicChess_Title_R_00, LogicChess_Title_R_00_W",
+      "top st1": "ен — спрайты LogicChess_Title_R_01, LogicChess_Title_R_01_W",
+      "top 02": "т — спрайты LogicChess_Title_R_02, LogicChess_Title_R_02_W",
+      "top 03": "ал — спрайты LogicChess_Title_R_03, LogicChess_Title_R_03_W",
+      "top 04": "ь — спрайты LogicChess_Title_R_04, LogicChess_Title_R_04_W",
+      "top 05": "ны — спрайты LogicChess_Title_R_05, LogicChess_Title_R_05_W",
+      "top 06": "е — спрайты LogicChess_Title_R_06, LogicChess_Title_R_06_W",
+      "top 07": "ш — спрайты LogicChess_Title_R_07, LogicChess_Title_R_07_W",
+      "top 08": "ах — спрайты LogicChess_Title_R_08, LogicChess_Title_R_08_W",
+      "top 09": "м — спрайты LogicChess_Title_R_09, LogicChess_Title_R_09_W",
+      "top ed0": "ат — спрайты LogicChess_Title_R_10, LogicChess_Title_R_10_W",
+      "top ed1": "ы — спрайты LogicChess_Title_R_11, LogicChess_Title_R_11_W",
+      "Start d0": "Нача — спрайты LogicChess_Title_R_12, LogicChess_Title_R_12_W",
+      "Start d1": "ли! — спрайты LogicChess_Title_R_13, LogicChess_Title_R_13_W",
+      "Success d0": "Шах и — спрайты LogicChess_Title_R_14, LogicChess_Title_R_14_W",
+      "Success d1": "мат — спрайты LogicChess_Title_R_15, LogicChess_Title_R_15_W"
+    }
+  },
+  "атлас": "LogicChess_Title_ger",
+  "бандл": "gk2_logicchess_trial",
+  "префабы": [
+    "Assets/GK_Common/Prefabs/LogicChess/LogicChess_Title_Start_R_ger.prefab",
+    "Assets/GK_Common/Prefabs/LogicChess/LogicChess_Title_Success_R_ger.prefab",
+    "Assets/GK_Common/Prefabs/LogicChess/LogicChess_Title_ger.prefab"
+  ],
+  "размер": [
+    1024,
+    2048
+  ],
+  "текстура_sha": "7f41ea8f6592187fabf1db5850814f6e14d4e547c344ce713ba519a558aae8e2",
+  "куски": {
+    "LogicChess_Title_R_00": {
+      "textureRect": {
+        "x": 382.0,
+        "y": 1252.0,
+        "width": 172.0,
+        "height": 132.0
+      },
+      "textureRectOffset": {
+        "x": 11.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 194.0,
+        "height": 154.0
+      }
+    },
+    "LogicChess_Title_R_00_W": {
+      "textureRect": {
+        "x": 798.0,
+        "y": 1391.0,
+        "width": 190.0,
+        "height": 150.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 194.0,
+        "height": 154.0
+      }
+    },
+    "LogicChess_Title_R_01": {
+      "textureRect": {
+        "x": 393.0,
+        "y": 885.0,
+        "width": 187.0,
+        "height": 107.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 191.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_01_W": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1117.0,
+        "width": 187.0,
+        "height": 125.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 191.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_02": {
+      "textureRect": {
+        "x": 798.0,
+        "y": 780.0,
+        "width": 82.0,
+        "height": 103.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 88.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_02_W": {
+      "textureRect": {
+        "x": 822.0,
+        "y": 994.0,
+        "width": 84.0,
+        "height": 121.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 88.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_03": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 885.0,
+        "width": 200.0,
+        "height": 107.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 204.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_03_W": {
+      "textureRect": {
+        "x": 556.0,
+        "y": 1259.0,
+        "width": 200.0,
+        "height": 125.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 204.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_04": {
+      "textureRect": {
+        "x": 701.0,
+        "y": 780.0,
+        "width": 95.0,
+        "height": 103.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 99.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_04_W": {
+      "textureRect": {
+        "x": 725.0,
+        "y": 994.0,
+        "width": 95.0,
+        "height": 121.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 99.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_05": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 780.0,
+        "width": 245.0,
+        "height": 103.0
+      },
+      "textureRectOffset": {
+        "x": 4.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 253.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_05_W": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 994.0,
+        "width": 249.0,
+        "height": 121.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 253.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_06": {
+      "textureRect": {
+        "x": 753.0,
+        "y": 885.0,
+        "width": 99.0,
+        "height": 107.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 112.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_06_W": {
+      "textureRect": {
+        "x": 360.0,
+        "y": 1117.0,
+        "width": 108.0,
+        "height": 125.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 112.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_07": {
+      "textureRect": {
+        "x": 405.0,
+        "y": 780.0,
+        "width": 155.0,
+        "height": 103.0
+      },
+      "textureRectOffset": {
+        "x": 11.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 169.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_07_W": {
+      "textureRect": {
+        "x": 251.0,
+        "y": 994.0,
+        "width": 165.0,
+        "height": 121.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 169.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_08": {
+      "textureRect": {
+        "x": 202.0,
+        "y": 885.0,
+        "width": 189.0,
+        "height": 107.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 193.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_08_W": {
+      "textureRect": {
+        "x": 758.0,
+        "y": 1259.0,
+        "width": 189.0,
+        "height": 125.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 193.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_09": {
+      "textureRect": {
+        "x": 562.0,
+        "y": 780.0,
+        "width": 137.0,
+        "height": 103.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 142.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_09_W": {
+      "textureRect": {
+        "x": 585.0,
+        "y": 994.0,
+        "width": 138.0,
+        "height": 121.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 142.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_10": {
+      "textureRect": {
+        "x": 582.0,
+        "y": 885.0,
+        "width": 169.0,
+        "height": 107.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 173.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_10_W": {
+      "textureRect": {
+        "x": 189.0,
+        "y": 1117.0,
+        "width": 169.0,
+        "height": 125.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 173.0,
+        "height": 129.0
+      }
+    },
+    "LogicChess_Title_R_11": {
+      "textureRect": {
+        "x": 247.0,
+        "y": 780.0,
+        "width": 156.0,
+        "height": 103.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 169.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_11_W": {
+      "textureRect": {
+        "x": 418.0,
+        "y": 994.0,
+        "width": 165.0,
+        "height": 121.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 169.0,
+        "height": 125.0
+      }
+    },
+    "LogicChess_Title_R_12": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1386.0,
+        "width": 470.0,
+        "height": 155.0
+      },
+      "textureRectOffset": {
+        "x": 11.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 487.0,
+        "height": 177.0
+      }
+    },
+    "LogicChess_Title_R_12_W": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1700.0,
+        "width": 483.0,
+        "height": 173.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 487.0,
+        "height": 177.0
+      }
+    },
+    "LogicChess_Title_R_13": {
+      "textureRect": {
+        "x": 472.0,
+        "y": 1386.0,
+        "width": 324.0,
+        "height": 155.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 337.0,
+        "height": 177.0
+      }
+    },
+    "LogicChess_Title_R_13_W": {
+      "textureRect": {
+        "x": 485.0,
+        "y": 1700.0,
+        "width": 333.0,
+        "height": 173.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 337.0,
+        "height": 177.0
+      }
+    },
+    "LogicChess_Title_R_14": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1543.0,
+        "width": 583.0,
+        "height": 155.0
+      },
+      "textureRectOffset": {
+        "x": 11.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 605.0,
+        "height": 177.0
+      }
+    },
+    "LogicChess_Title_R_14_W": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1875.0,
+        "width": 601.0,
+        "height": 173.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 605.0,
+        "height": 177.0
+      }
+    },
+    "LogicChess_Title_R_15": {
+      "textureRect": {
+        "x": 470.0,
+        "y": 1120.0,
+        "width": 362.0,
+        "height": 122.0
+      },
+      "textureRectOffset": {
+        "x": 11.0,
+        "y": 11.0
+      },
+      "rect": {
+        "width": 384.0,
+        "height": 144.0
+      }
+    },
+    "LogicChess_Title_R_15_W": {
+      "textureRect": {
+        "x": 0.0,
+        "y": 1244.0,
+        "width": 380.0,
+        "height": 140.0
+      },
+      "textureRectOffset": {
+        "x": 2.0,
+        "y": 2.0
+      },
+      "rect": {
+        "width": 384.0,
+        "height": 144.0
+      }
+    }
+  },
+  "правки": [
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/pos_L0/offsetY_1st/Char_st0_W",
+      "тип": "RectTransform",
+      "объект": -762406697922425419,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -521.0,
+          "y": 6.0
+        },
+        "m_SizeDelta": {
+          "x": 205.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -789.0,
+          "y": -10.0
+        },
+        "m_SizeDelta": {
+          "x": 194.0,
+          "y": 154.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/pos_L0/offsetY_1st/Char_st0",
+      "тип": "RectTransform",
+      "объект": -1396339054449685067,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -521.0,
+          "y": 6.0
+        },
+        "m_SizeDelta": {
+          "x": 205.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -789.0,
+          "y": -10.0
+        },
+        "m_SizeDelta": {
+          "x": 194.0,
+          "y": 154.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/pos_L1/offsetY_2nd/Char_st1_W",
+      "тип": "RectTransform",
+      "объект": 924867588544564661,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -395.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 148.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -629.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 191.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/pos_L1/offsetY_2nd/Char_st1",
+      "тип": "RectTransform",
+      "объект": -556355994514780747,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -395.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 148.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -629.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 191.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/pos_L0/offsetY_2nd/Char_02_W",
+      "тип": "RectTransform",
+      "объект": 5663131289142529461,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -290.0,
+          "y": -12.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 150.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -500.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 88.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/pos_L0/offsetY_2nd/Char_02",
+      "тип": "RectTransform",
+      "объект": -8505257892812452427,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -290.0,
+          "y": -12.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 150.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -500.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 88.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_03_W",
+      "тип": "RectTransform",
+      "объект": -330851806272975435,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -193.0,
+          "y": -0.0
+        },
+        "m_SizeDelta": {
+          "x": 116.0703125,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -384.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 204.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/C/Char_03",
+      "тип": "RectTransform",
+      "объект": 58924693058784693,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -193.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 116.0703125,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -384.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 204.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_04_W",
+      "тип": "RectTransform",
+      "объект": -6067928274053984843,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -113.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -248.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 99.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/C/Char_04",
+      "тип": "RectTransform",
+      "объект": 5495939338593471925,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -113.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -248.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 99.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_05_W",
+      "тип": "RectTransform",
+      "объект": -9153998390736810571,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -32.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 107.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -88.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 253.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/C/Char_05",
+      "тип": "RectTransform",
+      "объект": 8303011404561943989,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -32.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 107.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -88.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 253.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_06_W",
+      "тип": "RectTransform",
+      "объект": 2541290327237299637,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 38.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 73.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 112.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/C/Char_06",
+      "тип": "RectTransform",
+      "объект": -3324185418877268555,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 38.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.25,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 73.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 112.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_07_W",
+      "тип": "RectTransform",
+      "объект": -8176280149816668747,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 136.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 207.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/C/Char_07",
+      "тип": "RectTransform",
+      "объект": 8362641003040116149,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 136.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 207.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_08_W",
+      "тип": "RectTransform",
+      "объект": -7424691909326565963,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 236.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 369.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 193.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/C/Char_08",
+      "тип": "RectTransform",
+      "объект": -2781569237715087947,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 236.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 369.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 193.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/pos_R1/offsetY_2nd/Char_09_W",
+      "тип": "RectTransform",
+      "объект": 7269226355465227701,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 342.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 517.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 142.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/pos_R1/offsetY_2nd/Char_09",
+      "тип": "RectTransform",
+      "объект": -5579131033910211147,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 342.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 517.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 142.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/pos_R0/offsetY_2nd/Char_ed0_W",
+      "тип": "RectTransform",
+      "объект": -707611296038679115,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 445.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 654.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 173.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/pos_R0/offsetY_2nd/Char_ed0",
+      "тип": "RectTransform",
+      "объект": -8146419024489378379,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 445.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 654.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 173.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/pos_R1/offsetY_1st/Char_ed1_W",
+      "тип": "RectTransform",
+      "объект": 4970390569337720245,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 544.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 800.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/pos_R1/offsetY_1st/Char_ed1",
+      "тип": "RectTransform",
+      "объект": 3846983628856987061,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 544.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 800.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_L_W/Char_d0_W",
+      "тип": "RectTransform",
+      "объект": -1182771137376055883,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -120.0,
+          "y": 5.300000190734863
+        },
+        "m_SizeDelta": {
+          "x": 238.0,
+          "y": 192.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -152.5,
+          "y": -2.5
+        },
+        "m_SizeDelta": {
+          "x": 487.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_L/Char_d0",
+      "тип": "RectTransform",
+      "объект": 2440642734342180277,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -120.0,
+          "y": 5.3000030517578125
+        },
+        "m_SizeDelta": {
+          "x": 238.0,
+          "y": 192.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -152.5,
+          "y": -2.5
+        },
+        "m_SizeDelta": {
+          "x": 487.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_R_W/Char_d1_W",
+      "тип": "RectTransform",
+      "объект": 8793155955779472821,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 95.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 298.0,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 232.5,
+          "y": -2.5
+        },
+        "m_SizeDelta": {
+          "x": 337.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Start_R_ger",
+      "узел": "root/LogicChess_Title/pos_R/Char_d1",
+      "тип": "RectTransform",
+      "объект": -827652204343882315,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 95.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 298.0,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 232.5,
+          "y": -2.5
+        },
+        "m_SizeDelta": {
+          "x": 337.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/pos_L0/offsetY_1st/Char_st0_W",
+      "тип": "RectTransform",
+      "объект": 2105584010135218867,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -521.0,
+          "y": 6.0
+        },
+        "m_SizeDelta": {
+          "x": 205.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -789.0,
+          "y": -10.0
+        },
+        "m_SizeDelta": {
+          "x": 194.0,
+          "y": 154.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/pos_L0/offsetY_1st/Char_st0",
+      "тип": "RectTransform",
+      "объект": 449320690282932915,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -521.0,
+          "y": 6.0
+        },
+        "m_SizeDelta": {
+          "x": 205.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -789.0,
+          "y": -10.0
+        },
+        "m_SizeDelta": {
+          "x": 194.0,
+          "y": 154.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/pos_L1/offsetY_2nd/Char_st1_W",
+      "тип": "RectTransform",
+      "объект": -2397978351397164365,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -395.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 148.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -629.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 191.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/pos_L1/offsetY_2nd/Char_st1",
+      "тип": "RectTransform",
+      "объект": 2492335415806470835,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -395.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 148.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -629.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 191.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/pos_L0/offsetY_2nd/Char_02_W",
+      "тип": "RectTransform",
+      "объект": -8257019429928621389,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -290.0,
+          "y": -12.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 150.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -500.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 88.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/pos_L0/offsetY_2nd/Char_02",
+      "тип": "RectTransform",
+      "объект": -4794896526197577037,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -290.0,
+          "y": -12.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 150.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -500.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 88.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_03_W",
+      "тип": "RectTransform",
+      "объект": 4561269445907655347,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -193.0,
+          "y": -0.0
+        },
+        "m_SizeDelta": {
+          "x": 116.0703125,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -384.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 204.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/C/Char_03",
+      "тип": "RectTransform",
+      "объект": -6053561345257297229,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -193.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 116.0703125,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -384.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 204.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_04_W",
+      "тип": "RectTransform",
+      "объект": -8285465016263497037,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -113.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -248.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 99.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/C/Char_04",
+      "тип": "RectTransform",
+      "объект": -4963780718021301581,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -113.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -248.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 99.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_05_W",
+      "тип": "RectTransform",
+      "объект": 958100548898138803,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -32.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 107.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -88.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 253.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/C/Char_05",
+      "тип": "RectTransform",
+      "объект": -1425094327464809805,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -32.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 107.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -88.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 253.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_06_W",
+      "тип": "RectTransform",
+      "объект": 1360319040919775923,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 38.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 73.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 112.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/C/Char_06",
+      "тип": "RectTransform",
+      "объект": 714177230644587187,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 38.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.25,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 73.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 112.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_07_W",
+      "тип": "RectTransform",
+      "объект": 8003291950335077043,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 136.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 207.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/C/Char_07",
+      "тип": "RectTransform",
+      "объект": 7397156944418450099,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 136.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 207.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_08_W",
+      "тип": "RectTransform",
+      "объект": -2745862102612170061,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 236.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 369.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 193.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/C/Char_08",
+      "тип": "RectTransform",
+      "объект": -7356308916537447757,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 236.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 369.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 193.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/pos_R1/offsetY_2nd/Char_09_W",
+      "тип": "RectTransform",
+      "объект": -1284892039753815373,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 342.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 517.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 142.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/pos_R1/offsetY_2nd/Char_09",
+      "тип": "RectTransform",
+      "объект": 2810944440613284531,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 342.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 517.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 142.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset_W/pos_R0/offsetY_2nd/Char_ed0_W",
+      "тип": "RectTransform",
+      "объект": 921792582736161459,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 445.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 654.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 173.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_0/offset/pos_R0/offsetY_2nd/Char_ed0",
+      "тип": "RectTransform",
+      "объект": 2192548910412606131,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 445.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 654.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 173.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset_W/pos_R1/offsetY_1st/Char_ed1_W",
+      "тип": "RectTransform",
+      "объект": -7534839232859002189,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 544.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 800.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_1/offset/pos_R1/offsetY_1st/Char_ed1",
+      "тип": "RectTransform",
+      "объект": 421753208483293875,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 544.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 800.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_L_W/Char_d0_W",
+      "тип": "RectTransform",
+      "объект": 1434395532078295731,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -204.0,
+          "y": 4.0
+        },
+        "m_SizeDelta": {
+          "x": 677.0,
+          "y": 192.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -195.5,
+          "y": -3.5
+        },
+        "m_SizeDelta": {
+          "x": 605.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_L/Char_d0",
+      "тип": "RectTransform",
+      "объект": 1138976088118864563,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -204.0,
+          "y": 4.0
+        },
+        "m_SizeDelta": {
+          "x": 660.0,
+          "y": 173.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -195.5,
+          "y": -3.5
+        },
+        "m_SizeDelta": {
+          "x": 605.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_R_W/Char_d1_W",
+      "тип": "RectTransform",
+      "объект": -4352146370199082317,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 315.0,
+          "y": -1.0
+        },
+        "m_SizeDelta": {
+          "x": 446.0,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 301.0,
+          "y": -20.0
+        },
+        "m_SizeDelta": {
+          "x": 384.0,
+          "y": 144.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_Success_R_ger",
+      "узел": "root/LogicChess_Title/pos_R/Char_d1",
+      "тип": "RectTransform",
+      "объект": -3982249985616762189,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 315.0,
+          "y": -1.0
+        },
+        "m_SizeDelta": {
+          "x": 429.0,
+          "y": 160.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 301.0,
+          "y": -20.0
+        },
+        "m_SizeDelta": {
+          "x": 384.0,
+          "y": 144.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset_W/pos_L0/offsetY_1st/Char_st0_W",
+      "тип": "RectTransform",
+      "объект": 1668242007483271397,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -521.0,
+          "y": 6.0
+        },
+        "m_SizeDelta": {
+          "x": 205.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -789.0,
+          "y": -10.0
+        },
+        "m_SizeDelta": {
+          "x": 194.0,
+          "y": 154.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset/pos_L0/offsetY_1st/Char_st0",
+      "тип": "RectTransform",
+      "объект": -590696456586934043,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -521.0,
+          "y": 6.0
+        },
+        "m_SizeDelta": {
+          "x": 205.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -789.0,
+          "y": -10.0
+        },
+        "m_SizeDelta": {
+          "x": 194.0,
+          "y": 154.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset_W/pos_L1/offsetY_2nd/Char_st1_W",
+      "тип": "RectTransform",
+      "объект": 9025590051500968165,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -395.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 148.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -629.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 191.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset/pos_L1/offsetY_2nd/Char_st1",
+      "тип": "RectTransform",
+      "объект": 8550440326348916965,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -395.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 148.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -629.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 191.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset_W/pos_L0/offsetY_2nd/Char_02_W",
+      "тип": "RectTransform",
+      "объект": 1636230294579300581,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -290.0,
+          "y": -12.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 150.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -500.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 88.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset/pos_L0/offsetY_2nd/Char_02",
+      "тип": "RectTransform",
+      "объект": -1587063844696831771,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -290.0,
+          "y": -12.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 150.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -500.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 88.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset_W/C/Char_03_W",
+      "тип": "RectTransform",
+      "объект": 7133090306003814629,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -193.0,
+          "y": -0.0
+        },
+        "m_SizeDelta": {
+          "x": 116.0703125,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -384.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 204.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset/C/Char_03",
+      "тип": "RectTransform",
+      "объект": 2141850283663476965,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -193.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 116.0703125,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -384.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 204.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset_W/C/Char_04_W",
+      "тип": "RectTransform",
+      "объект": 4209783923799476453,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -113.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -248.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 99.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset/C/Char_04",
+      "тип": "RectTransform",
+      "объект": -3439824655851927323,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -113.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -248.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 99.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset_W/C/Char_05_W",
+      "тип": "RectTransform",
+      "объект": -4805283201080506139,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -32.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 107.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -88.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 253.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset/C/Char_05",
+      "тип": "RectTransform",
+      "объект": 6341688411783350501,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -32.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 107.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -88.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 253.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset_W/C/Char_06_W",
+      "тип": "RectTransform",
+      "объект": -6810272130781755163,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 38.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 73.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 112.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset/C/Char_06",
+      "тип": "RectTransform",
+      "объект": 3462207087936784613,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 38.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.25,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 73.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 112.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset_W/C/Char_07_W",
+      "тип": "RectTransform",
+      "объект": 4031775900935375077,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 136.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 207.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset/C/Char_07",
+      "тип": "RectTransform",
+      "объект": 2053157361552967909,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 136.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 207.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset_W/C/Char_08_W",
+      "тип": "RectTransform",
+      "объект": -8951958810644789019,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 236.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 369.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 193.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset/C/Char_08",
+      "тип": "RectTransform",
+      "объект": 1553664228351592677,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 236.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 369.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 193.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset_W/pos_R1/offsetY_2nd/Char_09_W",
+      "тип": "RectTransform",
+      "объект": 7182245933881018597,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 342.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 517.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 142.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset/pos_R1/offsetY_2nd/Char_09",
+      "тип": "RectTransform",
+      "объект": 7181276624934389989,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 342.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 150.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 517.0,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 142.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset_W/pos_R0/offsetY_2nd/Char_ed0_W",
+      "тип": "RectTransform",
+      "объект": -7375171865451509531,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 445.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 654.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 173.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_0/offset/pos_R0/offsetY_2nd/Char_ed0",
+      "тип": "RectTransform",
+      "объект": -5003057927110145819,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 445.0,
+          "y": -13.0
+        },
+        "m_SizeDelta": {
+          "x": 147.0,
+          "y": 152.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 654.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 173.0,
+          "y": 129.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset_W/pos_R1/offsetY_1st/Char_ed1_W",
+      "тип": "RectTransform",
+      "объект": 5324390765778553061,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 544.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 800.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_1/offset/pos_R1/offsetY_1st/Char_ed1",
+      "тип": "RectTransform",
+      "объект": -2308632553173759771,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 544.0,
+          "y": 5.0
+        },
+        "m_SizeDelta": {
+          "x": 155.0,
+          "y": 185.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 800.5,
+          "y": -24.5
+        },
+        "m_SizeDelta": {
+          "x": 169.0,
+          "y": 125.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_L_W/Char_d0_W",
+      "тип": "RectTransform",
+      "объект": -5943749157386270491,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -120.0,
+          "y": 5.300000190734863
+        },
+        "m_SizeDelta": {
+          "x": 238.0,
+          "y": 192.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -152.5,
+          "y": -2.5
+        },
+        "m_SizeDelta": {
+          "x": 487.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_L/Char_d0",
+      "тип": "RectTransform",
+      "объект": 5985295142015912165,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": -120.0,
+          "y": 5.3000030517578125
+        },
+        "m_SizeDelta": {
+          "x": 238.0,
+          "y": 192.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": -152.5,
+          "y": -2.5
+        },
+        "m_SizeDelta": {
+          "x": 487.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_R_W/Char_d1_W",
+      "тип": "RectTransform",
+      "объект": 2073314726397921509,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 95.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 298.0,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 232.5,
+          "y": -2.5
+        },
+        "m_SizeDelta": {
+          "x": 337.0,
+          "y": 177.0
+        }
+      }
+    },
+    {
+      "префаб": "LogicChess_Title_ger",
+      "узел": "pos_R/Char_d1",
+      "тип": "RectTransform",
+      "объект": 5098845680168061157,
+      "было": {
+        "m_AnchoredPosition": {
+          "x": 95.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 298.0,
+          "y": 179.0
+        }
+      },
+      "стало": {
+        "m_AnchoredPosition": {
+          "x": 232.5,
+          "y": -2.5
+        },
+        "m_SizeDelta": {
+          "x": 337.0,
+          "y": 177.0
+        }
+      }
+    }
+  ]
+}

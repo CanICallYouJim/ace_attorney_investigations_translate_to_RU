@@ -41,8 +41,14 @@ idx = ((ang + np.pi) / (2 * np.pi) * NT).astype(int) % NT
 ball = dist <= rad[idx]
 obj = head | ball
 ow = (a > 250) & (en[..., :3].min(-1) < 200)
-sil = obj | (nd.binary_dilation(obj, iterations=14) & ~ow)   # кайма — только светлое: чужие куски (буква, край торта) не везём
-sil |= dist <= rad[idx] + 11                     # кайма шарика — круг целиком (под ней в оригинале край торта)
+sil = obj | (nd.binary_dilation(obj, iterations=11) & ~ow)   # кайма 10–12 px; шире — цепляет белую обводку «p» и край торта   # кайма — только светлое: чужие куски (буква, край торта) не везём
+found = rad < 36                                 # лучи, упёршиеся в кайму (не в ручку)
+RB = rad[idx] + 10.5
+bring = found[idx] & (dist > rad[idx]) & (dist <= RB + 1) & ~nd.binary_dilation(head, iterations=2)
+# кайма шарика — ровное белое кольцо (в оригинале низ каймы срезан краем торта, у нас торта там нет)
+en[bring, :3] = 255.
+en[bring, 3] = np.clip(RB[bring] + 0.5 - dist[bring], 0, 1) * 255.
+sil |= bring | ball
 sil &= a > 0
 
 M = cv2.getRotationMatrix2D((cx, cy), ANG, 1.0); M[0, 2] += DX; M[1, 2] += DY
@@ -86,10 +92,15 @@ keep = nd.binary_fill_holes(keep)
 keep[:, :LX0 - X0] = False
 white = (ru[..., :3].min(-1) >= 200) | (ra_ < 250)
 ring = nd.binary_dilation(keep, iterations=int(sys.argv[5]) if len(sys.argv) > 5 else 7) & white & ~keep
-ring &= (out[..., :3].min(-1) >= 200) | (out[..., 3] < 250)   # кайма буквы — только там, где и под ней светлое
+lum = ru[..., :3].mean(-1)
+light = ((lum >= 170) | ((rr > 190) & (rg > 140) & (rb < 170))) & ~((rb > rr + 20) & (rb > rg))  # белое/жёлтое, не синее
+ring = nd.binary_dilation(keep, iterations=7) & light & ~keep & (ra_ > 0)
+ballw = cv2.warpAffine((ball | bring).astype(np.uint8), M, (w, h), flags=cv2.INTER_NEAREST) > 0
+ring &= ~ballw                                    # кайма буквы не ложится на шарик
 front = keep | ring
 ballw = cv2.warpAffine((ball | (nd.binary_dilation(ball, iterations=11) & ~nd.binary_dilation(head, iterations=11) & (a > 0))).astype(np.uint8), M, (w, h), flags=cv2.INTER_NEAREST) > 0
-fa = front[..., None].astype(np.float32)
+fa = np.clip(nd.gaussian_filter(front.astype(np.float32), 0.6), 0, 1)
+fa = np.where(front, np.maximum(fa, 0.5), fa)[..., None] * (ru[..., 3:4] > 0)   # мягкий край буквы
 out2 = out * (1 - fa) + ru * fa
 full = ru_full.copy(); full[Y0:Y1, X0:X1] = out2
 Image.fromarray(np.clip(full + 0.5, 0, 255).astype(np.uint8), 'RGBA').save(OUT)
@@ -104,7 +115,7 @@ print('буква спереди', int(front.sum()))
 zone = nd.binary_dilation(silw, iterations=25) & ~silw
 ys, xs = np.mgrid[:h, :w]; ys = ys + Y0; xs = xs + X0
 lite = out2[..., :3].min(-1) >= 170
-rem = zone & (out2[..., 3] > 0) & ~front & (((ys < 372) & (xs > 1282) & lite) | ((ys > 725) & (xs > 1265) & lite) | ((ys > 740) & (xs > 1265)) | (xs > 1335))
+rem = zone & (out2[..., 3] > 0) & ~front & (((ys < 372) & (xs > 1282) & (lite | (out2[..., 3] < 128))) | ((ys > 725) & (xs > 1265) & lite) | ((ys > 740) & (xs > 1265)) | (xs > 1335))
 out2[rem, 3] = 0
 full = ru_full.copy(); full[Y0:Y1, X0:X1] = out2
 Image.fromarray(np.clip(full + 0.5, 0, 255).astype(np.uint8), 'RGBA').save(OUT)
@@ -121,3 +132,29 @@ out2[holes, 3] = 255
 full = ru_full.copy(); full[Y0:Y1, X0:X1] = out2
 Image.fromarray(np.clip(full + 0.5, 0, 255).astype(np.uint8), 'RGBA').save(OUT)
 print('дыр залито', int(holes.sum()), 'цвет', brown)
+patch = np.zeros((h, w), bool); patch[700 - Y0:752 - Y0, 1232 - X0:1262 - X0] = True
+bad = patch & ~ballw & ((out2[..., 3] < 250) | (out2[..., :3].min(-1) >= 200))
+bad = nd.binary_dilation(bad, iterations=1) & patch & ~ballw
+rgb = np.clip(out2[..., :3] + 0.5, 0, 255).astype(np.uint8)
+fixed = cv2.inpaint(np.ascontiguousarray(rgb[..., ::-1]), bad.astype(np.uint8), 4, cv2.INPAINT_TELEA)[..., ::-1]
+out2[bad, :3] = fixed[bad]; out2[bad, 3] = 255
+full = ru_full.copy(); full[Y0:Y1, X0:X1] = out2
+Image.fromarray(np.clip(full + 0.5, 0, 255).astype(np.uint8), 'RGBA').save(OUT)
+print('у шарика дорисовано', int(bad.sum()))
+# шип белого в шоколаде слева у головки: белое дальше 11 px от венчика — дорисовать по соседям
+objw = cv2.warpAffine(obj.astype(np.uint8), M, (w, h), flags=cv2.INTER_NEAREST) > 0
+far = nd.distance_transform_edt(~objw) > 11
+box = np.zeros((h, w), bool); box[400 - Y0:445 - Y0, 1245 - X0:1285 - X0] = True
+navyw = (out2[..., 2] > out2[..., 0] + 30) & (out2[..., 3] > 200)
+lead = np.full((h, w), False)
+for yy_ in range(400 - Y0, 445 - Y0):            # кайма слева от синего контура — не шире 9 px, как выше и ниже
+    xs_ = np.where(navyw[yy_, 1245 - X0:1290 - X0])[0]
+    if len(xs_): lead[yy_, 1245 - X0:1245 - X0 + xs_[0] - 9] = True
+spike = box & lead & ~front & (out2[..., :3].min(-1) >= 190) & (out2[..., 3] > 200)
+spike = nd.binary_dilation(spike, iterations=1) & box & lead & ~front
+rgb = np.clip(out2[..., :3] + 0.5, 0, 255).astype(np.uint8)
+fixed = cv2.inpaint(np.ascontiguousarray(rgb[..., ::-1]), spike.astype(np.uint8), 4, cv2.INPAINT_TELEA)[..., ::-1]
+out2[spike, :3] = fixed[spike]
+full = ru_full.copy(); full[Y0:Y1, X0:X1] = out2
+Image.fromarray(np.clip(full + 0.5, 0, 255).astype(np.uint8), 'RGBA').save(OUT)
+print('шип', int(spike.sum()))

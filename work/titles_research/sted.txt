@@ -1,0 +1,48 @@
+##### SousaPart_Title_Start_R_ger [6512458455132057615]
+SousaPart_Title_Start_R_ger  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || MB SimpleUI 
+  root  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || Animator | MB GKAnimator 
+    Title  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || CanvasGroup
+      L  pos(0,0) size(1920x1080)
+        Char_00_W [off]  pos(-188,352) size(560x280)  || IMG[SousaPart_Title_Start_00_W_R_ger rect 560x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,631 560x195] off(0,55)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_00  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || IMG[SousaPart_Title_Start_00_R_ger rect 558x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,993 530x160] off(14,73)] type0 pa0 col(1.00,1.00,1.00,0.00)
+        Char_01_W [off]  pos(260,352) size(412x280)  || IMG[SousaPart_Title_Start_01_W_R_ger rect 412x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[591,434 410x230] off(2,19)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_01  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || IMG[SousaPart_Title_Start_01_R_ger rect 412x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,1157 384x196] off(14,36)] type0 pa0 col(1.00,1.00,1.00,0.00)
+      R  pos(0,0) size(1920x1080)
+        Char_02_W [off]  pos(-138,127) size(382x280)  || IMG[SousaPart_Title_Start_02_W_R_ger rect 382x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,1357 382x185] off(0,55)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_02  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || IMG[SousaPart_Title_Start_02_R_ger rect 380x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,1546 352x150] off(14,73)] type0 pa0 col(1.00,1.00,1.00,0.00)
+        Char_03_W [off]  pos(176,127) size(304x280)  || IMG[SousaPart_Title_Start_03_W_R_ger rect 304x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[388,1157 301x185] off(3,55)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_03  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || IMG[SousaPart_Title_Start_03_R_ger rect 304x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[386,1357 275x150] off(15,73)] type0 pa0 col(1.00,1.00,1.00,0.00)
+##### SousaPart_Title_End_R_ger [6112514536691262519]
+SousaPart_Title_End_R_ger  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || MB SimpleUI 
+  root  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || Animator | MB GKAnimator 
+    Title  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || CanvasGroup
+      L  pos(0,0) size(1920x1080)
+        Char_00_W [off]  pos(-188,352) size(560x280)  || IMG[SousaPart_Title_Start_00_W_R_ger rect 560x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,631 560x195] off(0,55)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_00  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || IMG[SousaPart_Title_Start_00_R_ger rect 558x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,993 530x160] off(14,73)] type0 pa0 col(1.00,1.00,1.00,0.00)
+        Char_01_W [off]  pos(260,352) size(412x280)  || IMG[SousaPart_Title_Start_01_W_R_ger rect 412x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[591,434 410x230] off(2,19)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_01  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || IMG[SousaPart_Title_Start_01_R_ger rect 412x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,1157 384x196] off(14,36)] type0 pa0 col(1.00,1.00,1.00,0.00)
+      R  pos(0,0) size(1920x1080)
+        Char_02_W [off]  pos(-288,127) size(754x280)  || IMG[SousaPart_Title_End_02_W_R_ger rect 754x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,0 754x230] off(0,19)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_02  pos(0,0) size(0x-0) anch(0.0,0.0-1.0,1.0)  || IMG[SousaPart_Title_End_02_R_ger rect 754x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,234 723x196] off(15,36)] type0 pa0 col(1.00,1.00,1.00,0.00)
+        Char_03_W [off]  pos(351,127) size(590x280)  || IMG[SousaPart_Title_End_03_W_R_ger rect 590x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,434 587x193] off(3,56)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_03  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || IMG[SousaPart_Title_End_03_R_ger rect 590x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_ger tex[0,830 560x159] off(15,73)] type0 pa0 col(1.00,1.00,1.00,0.00)
+##### SousaPart_Title_Start_R [-6806706224325328039]
+SousaPart_Title_Start_R  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || MB SimpleUI 
+  root  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || Animator | MB GKAnimator 
+    Title  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || CanvasGroup
+      L  pos(0,0) size(1920x1080)
+      R  pos(0,0) size(1920x1080)
+##### SousaPart_Title_Start_R_eng [-740337254607904675]
+SousaPart_Title_Start_R_eng  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || MB SimpleUI 
+  root  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || Animator | MB GKAnimator 
+    Title  pos(0,0) size(0x0) anch(0.0,0.0-1.0,1.0)  || CanvasGroup
+      L  pos(0,0) size(1920x1080)
+        Char_00_W [off]  pos(-7,352) size(580x280)  || IMG[SousaPart_Title_Start_00_W_R_eng rect 580x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_eng tex[0,235 580x231] off(0,19)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_00  pos(0,0) size(580x280)  || IMG[SousaPart_Title_Start_00_R_eng rect 580x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_eng tex[0,1112 550x197] off(15,36)] type0 pa0 col(1.00,1.00,1.00,0.00)
+      R  pos(0,0) size(1920x1080)
+        Char_01_W [off]  pos(-390,127) size(558x280)  || IMG[SousaPart_Title_Start_01_W_R_eng rect 558x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_eng tex[0,1313 558x193] off(0,56)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_01  pos(0,0) size(558x280)  || IMG[SousaPart_Title_Start_01_R_eng rect 558x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_eng tex[0,1882 527x159] off(16,73)] type0 pa0 col(1.00,1.00,1.00,0.00)
+        Char_02_W [off]  pos(71,127) size(401x280)  || IMG[SousaPart_Title_Start_02_W_R_eng rect 401x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_eng tex[584,235 401x231] off(0,19)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_02  pos(0,0) size(401x280)  || IMG[SousaPart_Title_Start_02_R_eng rect 401x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_eng tex[540,470 369x197] off(16,36)] type0 pa0 col(1.00,1.00,1.00,0.00)
+        Char_03_W [off]  pos(459,127) size(410x280)  || IMG[SousaPart_Title_Start_03_W_R_eng rect 410x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_eng tex[554,1112 410x195] off(0,55)] type0 pa0 col(1.00,1.00,1.00,1.00)
+          Char_03  pos(0,0) size(410x280)  || IMG[SousaPart_Title_Start_03_R_eng rect 410x280 piv(0.50,0.50) atlas SousaPart_Title_StEd_eng tex[541,1708 379x160] off(16,73)] type0 pa0 col(1.00,1.00,1.00,0.00)

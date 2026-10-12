@@ -1,7 +1,7 @@
 import sys, numpy as np, cv2
 from PIL import Image
 from scipy import ndimage as nd
-S=sys.argv[1]; SX=float(sys.argv[2]); BOT=int(sys.argv[3]); CX=float(sys.argv[4])
+S=sys.argv[1]; SX=float(sys.argv[2])  # финал 13 октября: 1.5 522 742; BOT=int(sys.argv[3]); CX=float(sys.argv[4])
 p3=np.asarray(Image.open('work/graphics_masks/drafts/cut01_009_p3.png').convert('RGB')).astype(float)
 p4=np.asarray(Image.open('work/graphics_masks/drafts/cut01_009_p4.png').convert('RGB')).astype(float)
 x0,y0,x1,y1=668,432,786,560

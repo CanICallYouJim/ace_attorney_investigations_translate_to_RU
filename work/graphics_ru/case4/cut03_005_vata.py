@@ -36,6 +36,14 @@ a=np.clip((bgr.mean(-1)-r.mean(-1))/np.maximum(bgr.mean(-1)-inkc.mean(),1),0,1)*
 # масштаб K вокруг (AX,AY) черновика -> в (BX,BY)
 M=np.array([[K,0,BX-x0-K*(AX-x0)],[0,K,BY-y0-K*(AY-y0)]],np.float32)
 aw=cv2.warpAffine(a.astype(np.float32),M,(w,h),flags=cv2.INTER_LINEAR)
+# последняя «а» в «вата»: у черновика её не было в кадре — копия второй сверху буквы («а») над «т»
+labw,nw=nd.label(aw>0.5); objs=[(sl[0].start,i+1,sl) for i,sl in enumerate(nd.find_objects(labw)) if (labw[sl]==i+1).sum()>800]
+objs.sort(); top_t=objs[0][0]; a_i,a_sl=objs[1][1],objs[1][2]
+am=nd.binary_dilation(labw==a_i,iterations=2)*aw
+ha=a_sl[0].stop-a_sl[0].start; dy=int(top_t-ha+1-a_sl[0].start); dx=int(sys.argv[7]) if len(sys.argv)>7 else 3
+sh=np.zeros_like(aw); ys,xs=np.nonzero(am)
+ok=(ys+dy>=0)&(ys+dy<h)&(xs+dx<w); sh[ys[ok]+dy,xs[ok]+dx]=am[ys[ok],xs[ok]]
+aw=np.maximum(aw,sh)
 aw*=nd.binary_erosion(banner_of(r),iterations=2)
 rain=np.clip(bg-nd.gaussian_filter(bg,(5,5,0)),0,None)*0.8   # дождь поверх букв, как в оригинале
 out=bg*(1-aw[...,None])+(inkc+rain)*aw[...,None]

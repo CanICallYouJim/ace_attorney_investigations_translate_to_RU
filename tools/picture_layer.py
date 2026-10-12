@@ -422,16 +422,31 @@ class Shipment:
         """Из картинок этого бандла уменьшаются другие — собирать его раньше."""
         return short(bundle_name) in self.feeders
 
-    @staticmethod
-    def plate_fits(env, sprites: dict, entry: dict) -> str | None:
-        """Ляжет ли плашка в этот бандл. None — ляжет, иначе — почему нет."""
+    def plate_fits(self, env, sprites: dict, entry: dict) -> str | None:
+        """Ляжет ли плашка в этот бандл. None — ляжет, иначе — почему нет.
+
+        Ляжет поверх немецкой оригинальной или поверх уже поставленной нашей. Сжатая
+        текстура (экраны запуска `hikarikabin`, `original` — BC, 12 октября 2026) хранит
+        нашу плашку с потерями, и отпечаток пикселей с PNG не сходится: тогда сверка
+        по пикселям — грубых (больше 64 уровней) не больше 0,01 %, как в selftest.
+        Без этого повторная установка увела бы строку таблицы локали на английский спрайт.
+        """
         sprite = sprites.get(entry["key"])
         if sprite is None:
             return "в бандле нет её спрайта"
-        found = pixels_sha(texture_of(env, sprite).read().image)
-        if found not in (entry["texture_sha"], entry["plate_sha"]):
-            return "немецкая плашка в этой игре другая"
-        return None
+        image = texture_of(env, sprite).read().image
+        found = pixels_sha(image)
+        if found in (entry["texture_sha"], entry["plate_sha"]):
+            return None
+        layer = self.folder / entry["layer"]
+        if layer.exists():
+            import numpy as np
+            want = Image.open(layer).convert("RGBA")
+            if want.size == image.size:
+                d = np.abs(np.asarray(image.convert("RGBA"), np.int16) - np.asarray(want, np.int16)).max(-1)
+                if (d > 64).mean() <= 0.0001:
+                    return None
+        return "немецкая плашка в этой игре другая"
 
     def table_rows(self, bundles: Path) -> dict[int, str]:
         """Строки таблицы картинок локали, которым остаться немецкими: `m_Id` -> значение.

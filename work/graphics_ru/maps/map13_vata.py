@@ -8,7 +8,7 @@ EN=np.asarray(Image.open('work/graphics_en/maps/map13.png').convert('RGB')).asty
 OUT=E.copy(); H,W=E.shape[:2]
 word=np.load('work/graphics_ru/maps/_data/word_vata_d.npy')[::-1,::-1]          # 180°: читается сверху вниз
 BANNERS={
- 'L':dict(poly=[[0,212],[74,280],[74,648],[0,590]], thick=(0,34,280,575), script=(40,66,280,480), pic=(20,64,520,620)),
+ 'L':dict(poly=[[0,212],[74,280],[74,648],[0,590]], thick=(0,34,280,575), мин_x=4, script=(40,66,280,480), pic=(20,64,520,620)),
  'R':dict(poly=[[2808,276],[2880,232],[2880,600],[2808,646]], thick=(2815,2856,290,584), script=(2856,2880,250,460), pic=(2832,2880,500,615)),
 }
 def put(arr,oy,ox):
@@ -38,6 +38,7 @@ for nm,c in BANNERS.items():
     x0,x1,y0,y1=c['thick']; ys_,xs_=np.where(zone(c['thick'])&P&(L<100)); k=(ys_.max()-ys_.min())/word.shape[0]; w=cv2.resize(word.astype(np.float32),(max(1,int(word.shape[1]*k)),int(word.shape[0]*k)),interpolation=cv2.INTER_AREA)
     ys,xs=np.where(zone(c['thick'])&P&(L<100)); cx=(xs.min()+xs.max())/2; cy=(ys.min()+ys.max())/2
     oy=int(round(cy-w.shape[0]/2)); ox=int(round(cx-w.shape[1]/2))
+    ox=max(ox, c.get('мин_x', ox))   # левый баннер: строка целиком на флаге (замечание 13 октября)
     a=put(w,oy,ox)*P
     OUT=OUT*(1-a[...,None])+col_t*a[...,None]
     # «Рваное облачко»

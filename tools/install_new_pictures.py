@@ -150,6 +150,12 @@ def main() -> int:
                 entries = entries_of(live)
                 pairs = dict(plan_env(live))
             tex = german_object(live, entries, key, pairs.get(key)).read()
+            if not hasattr(tex, "m_Width"):
+                # Спрайт (фоны чтения): сверять его этот скрипт не умеет и не ставит —
+                # ставить по имени или полной сборкой. Раньше здесь падала вся установка
+                # (14 октября 2026, `Sousa_TextCutBG_R_03`).
+                print(f"  {name}: спрайт — пропущен, ставить полной сборкой")
+                continue
             img = as_stored(files[name], tex, stored_flipped(orig, key, Image.open(files[name]).convert("RGBA")))
             checked += 1
             if differs(img, tex.image) > MOVED:

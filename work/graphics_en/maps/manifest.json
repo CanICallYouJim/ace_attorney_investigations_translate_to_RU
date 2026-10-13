@@ -429,5 +429,77 @@
       "sim",
       "tra"
     ]
+  },
+  "map09_00": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      3600,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map09_01": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      3600,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map09_02": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      3600,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
+  },
+  "map09_03": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      3600,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
   }
 }

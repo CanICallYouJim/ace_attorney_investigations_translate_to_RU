@@ -15,13 +15,15 @@
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFilter
 from scipy.spatial import cKDTree
 
 ROOT = Path(__file__).resolve().parents[3]
 EN = ROOT / "work" / "graphics_en" / "maps"
 RU = ROOT / "work" / "graphics_ru" / "maps"
 ZONES = {"табличка": (270, 500, 450, 760), "дверь": (1390, 260, 1545, 340)}   # x0, y0, x1, y1
+# Контур щита: прямоугольник зоны захватывал сетку вокруг него.
+SIGN = [(299, 584), (420, 524), (420, 654), (299, 728)]
 
 
 def rgb(path: Path) -> np.ndarray:
@@ -41,6 +43,28 @@ def colour_map(nat: np.ndarray, green: np.ndarray, step: int = 8):
     return lambda q: means[tree.query(q)[1]]
 
 
+def door_ink(img: Image.Image) -> Image.Image:
+    """Плотность букв двери по принятой маске, цвет — тёмные чернила английской голограммы."""
+    ink = Image.open(RU / ".." / "case2" / "cut01_01f_ink.png").convert("L")
+    ink = ink.resize((3600, 1350), Image.Resampling.LANCZOS)
+    mask = Image.new("L", img.size)
+    mask.paste(ink, (0, 90))
+    box = (1428, 285, 1510, 318)
+    m = mask.crop(box)
+    # Четверть пикселя к штриху; полутоновые края не теряют плотность при перекраске.
+    m = m.resize((m.width * 4, m.height * 4), Image.Resampling.LANCZOS)
+    m = m.filter(ImageFilter.MaxFilter(3)).resize((82, 33), Image.Resampling.LANCZOS)
+    alpha = (np.asarray(m).astype(float) / 255) ** 0.75
+    old = np.asarray(img.crop(box)).copy()
+    rgb = old[:, :, :3].astype(float)
+    dark = np.array([0, 63, 27])
+    rgb = rgb * (1 - alpha[:, :, None]) + dark * alpha[:, :, None]
+    old[:, :, :3] = np.round(rgb).astype(np.uint8)
+    out = img.copy()
+    out.paste(Image.fromarray(old), box[:2])
+    return out
+
+
 def main() -> None:
     nat_en, nat_ru = rgb(EN / "map09_00.png"), rgb(RU / "map09_00.png")
     for name in ("map09_02", "map09_03"):
@@ -53,12 +77,17 @@ def main() -> None:
             to_green = colour_map(a, b)
             ru, en = nat_ru[y0:y1, x0:x1], nat_en[y0:y1, x0:x1]
             moved = np.abs(ru - en).max(2) > 8
+            if zone == "табличка":
+                mask = Image.new("L", (x1 - x0, y1 - y0))
+                ImageDraw.Draw(mask).polygon([(x - x0, y - y0) for x, y in SIGN], fill=255)
+                moved &= np.asarray(mask) > 0
             add = to_green(ru[moved]) - to_green(en[moved])
             patch = out[y0:y1, x0:x1]
             patch[moved] = np.clip(green[y0:y1, x0:x1][moved] + add, 0, 255)
             print(f"  {name} {zone}: пикселей {int(moved.sum())}")
         img = Image.fromarray(np.round(out).astype(np.uint8), "RGB").convert("RGBA")
         img.putalpha(src.getchannel("A"))
+        img = door_ink(img)
         img.save(RU / f"{name}.png")
         print(f"  {name} -> {RU / (name + '.png')}")
 

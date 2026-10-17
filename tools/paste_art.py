@@ -469,6 +469,8 @@ def run(spec_path: Path, only: str | None) -> int:
                 for x in range(x0, x1):
                     dp[x, y] = sample
 
+        if job.get("сохранить_альфу"):
+            im.putalpha(alpha)
         dest = out_dir / f"{name}.png"
         im.save(dest)
         print(f"  {name}: {im.size[0]}x{im.size[1]} -> {dest}")

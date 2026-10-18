@@ -1,0 +1,9 @@
+Use case: text-localization. Edit target: the single attached 300x340 game screenshot crop, showing a filming permit on a construction fence. Replace ALL English words on the white permit with the exact Russian below. Return the same screenshot crop, not a redesigned poster. Preserve its precise position, size, perspective, blue table ruling and borders, off-white paper texture, shadows and fence; keep the black foreground studio lamp exactly in place, occluding exactly the same top right area. Do not move, enlarge, shrink or straighten the permit. No changes outside text inside cells.
+Header in red, ONE line: «Разрешение на съёмку» (Р-а-з-р-е-ш-е-н-и-е н-а с-ъ-ё-м-к-у), same actual letter height/stroke as original Filming Permit, condensed sans serif, no outline, no extra line.
+Five table rows: left labels in blue, right values dark grey. Keep all rows, column separator and line geometry exactly:
+1. Production Co. → «Кинокомпания»; Global Studios → «Глобал студиос» (Г-л-о-б-а-л с-т-у-д-и-о-с).
+2. Filming Dates → «Даты съёмки»; right stays exactly «xx/xx - xx/xx».
+3. Insurance No. → «№ страховки»; right stays exactly «23-145-06-8403».
+4. Permit Type → «Тип разрешения»; right stays exactly «40».
+5. Set Size → «Площадь»; right becomes «xx м²» with Cyrillic м and superscript 2.
+No quotation marks printed. Every label and value stays on ONE line in its original cell, similar letter height, stroke density and spacing to English, naturally narrow sans serif. All English must be completely removed without ghosts, but keep every blue grid line and the foreground lamp untouched. Do not invent text behind the lamp or shift the board away from it. No spelling changes, no added words, no watermark.

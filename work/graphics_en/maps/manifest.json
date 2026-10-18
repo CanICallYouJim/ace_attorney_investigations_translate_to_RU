@@ -502,6 +502,16 @@
       "tra"
     ]
   },
+  "map09_00_cm": {
+    "bundle": "gk2_mapbgclassic",
+    "flipped": false,
+    "size": [
+      3600,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true
+  },
   "map09_01_cm": {
     "bundle": "gk2_mapbgclassic",
     "flipped": false,

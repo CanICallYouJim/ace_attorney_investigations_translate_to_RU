@@ -5,7 +5,7 @@
 жили в игре месяц, и каждая была бы видна тому, кто прогнал `audit_text.py`.
 Инструмент нужен ровно затем, чтобы прогон стоил одну команду, а не семь.
 
-    python tools/check_all.py           # быстро: только work/*.json, секунды
+    python tools/check_all.py           # данные перевода и короткие тесты инструментов
     python tools/check_all.py --full    # + разбор всех бандлов игры, минуты
     python tools/check_all.py --build   # + собранный бандл (после build.py)
     python tools/check_all.py --all     # всё сразу
@@ -51,6 +51,7 @@ CHECKS = [
     ("fast", "принятые решения применены везде", ["check_decisions.py"]),
     ("fast", "повторы напарника и служебные реплики одинаковы", ["check_repeats.py"]),
     ("fast", "улику и человека реплика зовёт как таблица", ["check_terms.py"]),
+    ("fast", "поиск игры вне Steam и приоритет явного пути", ["test_locate.py"]),
     ("full", "формат .bytes: round-trip по всем бандлам", ["test_tps.py"]),
     ("full", "токенизатор: параметры не текут в текст", ["test_tokens.py"]),
     ("full", "нарезка блоков на сегменты", ["test_segments.py"]),

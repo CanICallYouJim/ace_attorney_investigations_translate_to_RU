@@ -126,6 +126,56 @@
       "erased": null
     },
     {
+      "name": "cut00_00b",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_00b_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_00b_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "e03548ddc1969b6f951dbb4410a291e0cc31f2b27a63b9debc314ad78ff3268e",
+      "png_sha": "2c6fc5e8d1d3c7246862e92ff5f94c8bebdd80b01d439a9db4043928e97d1bd9",
+      "box": [
+        860,
+        0,
+        1890,
+        1011
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_00b.png",
+      "mask": "gk2_upcutlocal_trial/cut00_00b_mask.png",
+      "changed": 160723,
+      "outside": 160723,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut00_00c",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_00c_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_00c_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "5fa042adbefc4be417357e0cf0aaf6a905e6b61d97f245b45dc26730e23e3690",
+      "png_sha": "a1f988bb48e13848b5d7b2850a3b7039a6b0abb68d96308b17cb2a7ec8ad4394",
+      "box": [
+        860,
+        0,
+        1890,
+        1011
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_00c.png",
+      "mask": "gk2_upcutlocal_trial/cut00_00c_mask.png",
+      "changed": 160723,
+      "outside": 160723,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut00_010",
       "bundle": "gk2_upcutlocal_trial",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_010_ger.png",
@@ -247,6 +297,31 @@
       "mask": "gk2_cutobjlocal/cutObj01_008_mask.png",
       "changed": 13182,
       "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cutObj04_010",
+      "bundle": "gk2_cutobjlocal",
+      "key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutObj04_010_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutObj04_010_eng.png",
+      "size": [
+        1440,
+        2880
+      ],
+      "flipped": true,
+      "source_sha": "f58c772a24bc66c7b50458ab3b2765e8275a2cc8fc1c59b6490c25220fb7fab0",
+      "png_sha": "6c49a0e7fa3629f1383666ccd4dd929e8ad5bbebd7fb6117c66eb028d8255275",
+      "box": [
+        45,
+        45,
+        1058,
+        358
+      ],
+      "layer": "gk2_cutobjlocal/cutObj04_010.png",
+      "mask": "gk2_cutobjlocal/cutObj04_010_mask.png",
+      "changed": 49638,
+      "outside": 49638,
       "tails": null,
       "erased": null
     },
@@ -601,6 +676,31 @@
       "erased": null
     },
     {
+      "name": "itm01_032_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_032_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_032_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "f9777cbba7d2eed473b36f95547e6bd10555ad78a758b624de5e3df4b0872b3b",
+      "png_sha": "cb146a546dc1331e3fbe476ab3be2b375fcd5b0cda9bf1ecff9754736c0c7abe",
+      "box": [
+        31,
+        21,
+        262,
+        287
+      ],
+      "layer": "gk2_idcom/itm01_032_00_l.png",
+      "mask": "gk2_idcom/itm01_032_00_l_mask.png",
+      "changed": 14673,
+      "outside": 14673,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "itm02_00f_00_l",
       "bundle": "gk2_idcom",
       "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_00f_00_l_ger.png",
@@ -647,6 +747,31 @@
       "mask": "gk2_idcom/itm02_01c_00_l_mask.png",
       "changed": 3915,
       "outside": 3915,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm02_023_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_023_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_023_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "923f8409320190ca3ca66077a0be158870340f76c75b165038fcc7d0e4406632",
+      "png_sha": "1993c12c3d63e1d64d2b3272d64ba6709c529907fd56f2215f9f2fc243a91c9b",
+      "box": [
+        39,
+        18,
+        213,
+        115
+      ],
+      "layer": "gk2_idcom/itm02_023_00_l.png",
+      "mask": "gk2_idcom/itm02_023_00_l_mask.png",
+      "changed": 12392,
+      "outside": 12392,
       "tails": null,
       "erased": null
     },
@@ -951,6 +1076,106 @@
       "erased": null
     },
     {
+      "name": "itm03_01b_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm03_01b_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm03_01b_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "9ac30da4bd6cc824d6958deff3a22d69a99369c51d4cb97309401441c472aa02",
+      "png_sha": "c643ccaaf562d55f14e0e80da8c39cc54c39b9ba8f263804f12752ba224c1e2f",
+      "box": [
+        96,
+        85,
+        227,
+        211
+      ],
+      "layer": "gk2_idcom/itm03_01b_00_l.png",
+      "mask": "gk2_idcom/itm03_01b_00_l_mask.png",
+      "changed": 3528,
+      "outside": 247,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm04_004_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm04_004_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm04_004_00_l_eng.png",
+      "size": [
+        256,
+        256
+      ],
+      "flipped": true,
+      "source_sha": "fa41c25359e8d2317b7c710344a837cba6c57774a461bdf3e89da8c0c7addf7f",
+      "png_sha": "df9a9a65d9481ccd760f2dd4658dbac604e7241c11040f17f55bd60fd199bbd9",
+      "box": [
+        22,
+        44,
+        239,
+        207
+      ],
+      "layer": "gk2_idcom/itm04_004_00_l.png",
+      "mask": "gk2_idcom/itm04_004_00_l_mask.png",
+      "changed": 14951,
+      "outside": 14951,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm04_01e_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm04_01e_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm04_01e_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "7128eaaef3b6d61aaa24abe77b75f78342fbc6f5f00824ea1ae860b5093fd9e0",
+      "png_sha": "95ee020d0d30fb963c74ce11d7ca58006aa564b640220631ee1cd2fadfe5dc66",
+      "box": [
+        110,
+        68,
+        244,
+        145
+      ],
+      "layer": "gk2_idcom/itm04_01e_00_l.png",
+      "mask": "gk2_idcom/itm04_01e_00_l_mask.png",
+      "changed": 1573,
+      "outside": 376,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm04_026_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm04_026_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm04_026_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "25bb5eedf7f5b694ca80e9679288192da064a147c8a076b4d431c3e87aed1092",
+      "png_sha": "d076bc28a33525fa48ad4b365316b7e02e45867befcd8c2f03ee7ad1324973b4",
+      "box": [
+        105,
+        170,
+        189,
+        220
+      ],
+      "layer": "gk2_idcom/itm04_026_00_l.png",
+      "mask": "gk2_idcom/itm04_026_00_l_mask.png",
+      "changed": 2222,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "itm00_002_00_l",
       "bundle": "gk2_idcom_trial",
       "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_002_00_l_ger.png",
@@ -1151,6 +1376,56 @@
       "erased": null
     },
     {
+      "name": "logic04_00d_s",
+      "bundle": "gk2_logickeyword",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic04_00d_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic04_00d_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "c61e9ce4d9589af3665050e12c8b868ef347e1e1dbe0ef26647b572391b165de",
+      "png_sha": "d2806b315f43658b840e889dddf4ecb8dd64b96c72acde225d5b5df0c8ab9ffb",
+      "box": [
+        4,
+        91,
+        71,
+        118
+      ],
+      "layer": "gk2_logickeyword/logic04_00d_s.png",
+      "mask": "gk2_logickeyword/logic04_00d_s_mask.png",
+      "changed": 379,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "logic04_00e_s",
+      "bundle": "gk2_logickeyword",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic04_00e_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic04_00e_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "99bf115bfe21a9c2192ae72814864474073d3516a4b5cd1fe5252defae4b812b",
+      "png_sha": "42be0b28ca56825b74dfd378cb9b42964f3fd99c44b89c0fe5a84451ed6f3c01",
+      "box": [
+        4,
+        92,
+        42,
+        118
+      ],
+      "layer": "gk2_logickeyword/logic04_00e_s.png",
+      "mask": "gk2_logickeyword/logic04_00e_s_mask.png",
+      "changed": 72,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "logic04_00f_s",
       "bundle": "gk2_logickeyword",
       "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic04_00f_s_ger.png",
@@ -1233,6 +1508,481 @@
       "erased": null
     },
     {
+      "name": "map03",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map03_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map03_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "18c70a3514c281eb171455ecc4be6ca4a83d6914d61a4481db2163047cb95fbe",
+      "png_sha": "ed6e071ca8d4d6de8e22ae120905ac3aec17e741a0b293785daae3d144a9fd4f",
+      "box": [
+        1578,
+        407,
+        1659,
+        477
+      ],
+      "layer": "gk2_mapbg/map03.png",
+      "mask": "gk2_mapbg/map03_mask.png",
+      "changed": 2680,
+      "outside": 2680,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map04",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map04_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map04_eng.png",
+      "size": [
+        3600,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "93ac18237cfac7b7975cad5ef15ed2171b03cb1d22af91dec4d7a0b02947ed3b",
+      "png_sha": "4bfc564e08dfd437123932f3e83867daae2d703ac4096ad33cdc25b54dddfdf6",
+      "box": [
+        833,
+        72,
+        2956,
+        560
+      ],
+      "layer": "gk2_mapbg/map04.png",
+      "mask": "gk2_mapbg/map04_mask.png",
+      "changed": 25982,
+      "outside": 25982,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map08_00",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map08_00_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map08_00_eng.png",
+      "size": [
+        2160,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "2aac6ba6f0dd6e526369c590f6be91e01c6d6d114e0d6055865fe928721ae428",
+      "png_sha": "bf2fef75d2432ee55195a9d2fa18329bb2d252e13493b5dbe4271ed588c1ba18",
+      "box": [
+        1785,
+        490,
+        1911,
+        576
+      ],
+      "layer": "gk2_mapbg/map08_00.png",
+      "mask": "gk2_mapbg/map08_00_mask.png",
+      "changed": 6202,
+      "outside": 6202,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map08_01",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map08_01_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map08_01_eng.png",
+      "size": [
+        2160,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "5924eadbf549a4c55ce8a9c88636386c6fe612ea95df8775483147d8bbffc0e7",
+      "png_sha": "d27dc48e62e19b338eda714745e77bd96c1550dbdf4bfd21c846d88930c9334d",
+      "box": [
+        1792,
+        497,
+        1903,
+        545
+      ],
+      "layer": "gk2_mapbg/map08_01.png",
+      "mask": "gk2_mapbg/map08_01_mask.png",
+      "changed": 4317,
+      "outside": 4317,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map09_01",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map09_01_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map09_01_eng.png",
+      "size": [
+        3600,
+        1440
+      ],
+      "flipped": false,
+      "source_sha": "dc99c71dbf5cfc036de766284aae053f9d375a1cde08c42a0fb101199e613af5",
+      "png_sha": "1582ee602213fc236f5da32b5a8fbe5f36ba0de2dc4168af447c3ec10083dee5",
+      "box": [
+        285,
+        288,
+        1517,
+        717
+      ],
+      "layer": "gk2_mapbg/map09_01.png",
+      "mask": "gk2_mapbg/map09_01_mask.png",
+      "changed": 12582,
+      "outside": 12582,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map09_02",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map09_02_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map09_02_eng.png",
+      "size": [
+        3600,
+        1440
+      ],
+      "flipped": false,
+      "source_sha": "d2bd11087079aa19243904147f7d5a27b10c73cbd1c36bffce59460d0496c6e0",
+      "png_sha": "770a03c65fdc146f82701daa37895f118c5da32b867e5d7ac10dc73c3af440e2",
+      "box": [
+        313,
+        289,
+        1515,
+        701
+      ],
+      "layer": "gk2_mapbg/map09_02.png",
+      "mask": "gk2_mapbg/map09_02_mask.png",
+      "changed": 7663,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map09_03",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map09_03_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map09_03_eng.png",
+      "size": [
+        3600,
+        1440
+      ],
+      "flipped": false,
+      "source_sha": "d2f24f87e6cafd302eb8f934f7c03a00a6d7791ee2552eeee0f6f4c7d395da74",
+      "png_sha": "f872381bfdd0b0328228215f00c5b46b9b5aa9c169b73665d8abac5d2a8053e7",
+      "box": [
+        313,
+        289,
+        2779,
+        800
+      ],
+      "layer": "gk2_mapbg/map09_03.png",
+      "mask": "gk2_mapbg/map09_03_mask.png",
+      "changed": 173909,
+      "outside": 173909,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map0b",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map0b_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map0b_eng.png",
+      "size": [
+        2340,
+        1260
+      ],
+      "flipped": false,
+      "source_sha": "79acbd89823cd2e170eeb732159d88e5035fc31fdfa77a28a9931a9ccf88f29c",
+      "png_sha": "ffbca27a913b9788cc9dc2c3a58a6c248948b2969e935dbb78245009244c299a",
+      "box": [
+        152,
+        817,
+        2176,
+        966
+      ],
+      "layer": "gk2_mapbg/map0b.png",
+      "mask": "gk2_mapbg/map0b_mask.png",
+      "changed": 22736,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map11_00",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map11_00_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map11_00_eng.png",
+      "size": [
+        3060,
+        1620
+      ],
+      "flipped": false,
+      "source_sha": "138ecbfa5a20a51bcf713f5e7922e0b8bcbd151939565369249f63f62a9628df",
+      "png_sha": "c62779d6412f49812d446aab9b5113e1680f0c8bce46f7747b724eabd0309e71",
+      "box": [
+        2270,
+        600,
+        2701,
+        966
+      ],
+      "layer": "gk2_mapbg/map11_00.png",
+      "mask": "gk2_mapbg/map11_00_mask.png",
+      "changed": 63382,
+      "outside": 63382,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map11_01",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map11_01_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map11_01_eng.png",
+      "size": [
+        3060,
+        1620
+      ],
+      "flipped": false,
+      "source_sha": "db35f7aa02cac788b8fe6178a5077df2d191f18edacaf8e037ef5f3127ab3cf6",
+      "png_sha": "47b16227632750162ad90279b1bc5217296a8558b8fbd72f687de20eeb5ad16c",
+      "box": [
+        2276,
+        600,
+        2701,
+        966
+      ],
+      "layer": "gk2_mapbg/map11_01.png",
+      "mask": "gk2_mapbg/map11_01_mask.png",
+      "changed": 50845,
+      "outside": 50845,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map12",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map12_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map12_eng.png",
+      "size": [
+        2745,
+        1170
+      ],
+      "flipped": false,
+      "source_sha": "6f448098a4896a6fb2338833a6aac1f6e1715ca19c2d685a5d13ec6e4e14ef34",
+      "png_sha": "5a62f8fc52eeb45277664acb7202d0f506190d42f43a3040cc1be4094b28d43e",
+      "box": [
+        809,
+        71,
+        2490,
+        740
+      ],
+      "layer": "gk2_mapbg/map12.png",
+      "mask": "gk2_mapbg/map12_mask.png",
+      "changed": 12782,
+      "outside": 12782,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map13",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map13_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map13_eng.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "flipped": false,
+      "source_sha": "9d4f6a65f46af234d29741e645eab356e42834bee74cb6ff7f1d3a3a1a2e4d7d",
+      "png_sha": "caa08a817ebd83116fb35573e98f5540b49d2a1796eb0645de893a7d47d20a3f",
+      "box": [
+        0,
+        104,
+        2880,
+        583
+      ],
+      "layer": "gk2_mapbg/map13.png",
+      "mask": "gk2_mapbg/map13_mask.png",
+      "changed": 45385,
+      "outside": 45385,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map00",
+      "bundle": "gk2_mapbg_trial",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map00_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map00_eng.png",
+      "size": [
+        2880,
+        1620
+      ],
+      "flipped": false,
+      "source_sha": "cd83a43b899d452a1b1c5c6dc0f428d8ac408cdd20327c84fa905ddbcbe85f68",
+      "png_sha": "42f96039eafe78d855967c961ca169a6279f2f9375187c7899cd75cb20fbbc1b",
+      "box": [
+        386,
+        1437,
+        538,
+        1512
+      ],
+      "layer": "gk2_mapbg_trial/map00.png",
+      "mask": "gk2_mapbg_trial/map00_mask.png",
+      "changed": 2689,
+      "outside": 2689,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map01",
+      "bundle": "gk2_mapbg_trial",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map01_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map01_eng.png",
+      "size": [
+        2880,
+        1260
+      ],
+      "flipped": false,
+      "source_sha": "0f422b910f28f3790fc5d339dca06503d3e4cb791b735a748fe58e3a93040bc7",
+      "png_sha": "99c195fb53e1a3ab5d6d5454339fa596481c4849b208af3ea9836c414228ac4b",
+      "box": [
+        389,
+        270,
+        2880,
+        1260
+      ],
+      "layer": "gk2_mapbg_trial/map01.png",
+      "mask": "gk2_mapbg_trial/map01_mask.png",
+      "changed": 54965,
+      "outside": 54965,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj04_00_256",
+      "bundle": "gk2_mapobj",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj04_00_256_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj04_00_256_eng.png",
+      "size": [
+        1440,
+        1495
+      ],
+      "flipped": true,
+      "source_sha": "8ef4cc535b6fd52f0db81f6a5f448e38c75fd61ba6d85c9b2d0931e03e4d0117",
+      "png_sha": "8dfbcff096685d869d5a6c7be107d37e355667cd5206071895973bbcf1ada2c5",
+      "box": [
+        277,
+        470,
+        359,
+        543
+      ],
+      "layer": "gk2_mapobj/mapObj04_00_256.png",
+      "mask": "gk2_mapobj/mapObj04_00_256_mask.png",
+      "changed": 4180,
+      "outside": 4180,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj0e_00_256",
+      "bundle": "gk2_mapobj",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj0e_00_256_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj0e_00_256_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "45f7b7e1f9ee3696693b61df7d7f59398d378d088fe5be31a47c23262063f630",
+      "png_sha": "71a418191664358fd13c905db4d4dd0b5cf77b5d7f55f21d09cbd74f4b112715",
+      "box": [
+        427,
+        516,
+        443,
+        524
+      ],
+      "layer": "gk2_mapobj/mapObj0e_00_256.png",
+      "mask": "gk2_mapobj/mapObj0e_00_256_mask.png",
+      "changed": 102,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj0e_01_256",
+      "bundle": "gk2_mapobj",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj0e_01_256_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj0e_01_256_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "e76cf7ca45d77ca197c98abadc725e381de648cdda04da8523de9fec833011e2",
+      "png_sha": "c0050ef3eaa351b86098ed31ad20f11de8c352a51755d063680b2aa1b8ab7330",
+      "box": [
+        427,
+        516,
+        443,
+        524
+      ],
+      "layer": "gk2_mapobj/mapObj0e_01_256.png",
+      "mask": "gk2_mapobj/mapObj0e_01_256_mask.png",
+      "changed": 102,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj12_00_256",
+      "bundle": "gk2_mapobj",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj12_00_256_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj12_00_256_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "69ce3b846197975efba336b54a4f608a4fe2324ea8c751b9c59d6c4d5624593a",
+      "png_sha": "a8149e5513189ca0e40c1829f91d20a8a85004dafe47973761a3450eef562ade",
+      "box": [
+        975,
+        450,
+        1057,
+        553
+      ],
+      "layer": "gk2_mapobj/mapObj12_00_256.png",
+      "mask": "gk2_mapobj/mapObj12_00_256_mask.png",
+      "changed": 4064,
+      "outside": 4064,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut01_013",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut01_013_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut01_013_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "2469ff739a022649301c2dc85d060d9114db7a513803d1929173b5f7b95081e3",
+      "png_sha": "e6e55ee6a15e689b2e5bdccba85e60a998d79c39d3f1d1cdd7011b62db59a067",
+      "box": [
+        264,
+        884,
+        1012,
+        952
+      ],
+      "layer": "gk2_upcut/cut01_013.png",
+      "mask": "gk2_upcut/cut01_013_mask.png",
+      "changed": 21786,
+      "outside": 21786,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut02_008",
       "bundle": "gk2_upcut",
       "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut02_008_ger.png",
@@ -1254,6 +2004,81 @@
       "mask": "gk2_upcut/cut02_008_mask.png",
       "changed": 17342,
       "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut02_012",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut02_012_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut02_012_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "1d8b625f54e91431f1ebfba685960f2cb893464cb8342133f0e1871e54fbb8fd",
+      "png_sha": "15bb754c2a32a3101f64e4e1f11faa18defc201bf4deba8111d72f2ce10e23eb",
+      "box": [
+        296,
+        410,
+        510,
+        640
+      ],
+      "layer": "gk2_upcut/cut02_012.png",
+      "mask": "gk2_upcut/cut02_012_mask.png",
+      "changed": 19926,
+      "outside": 19926,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut03_008",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut03_008_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut03_008_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "6c765f3d74426f7ec515b562e32eac3a95ad1ac96f70d749e938e97e7f333b5b",
+      "png_sha": "ee8034185b92d8263e73674e639e4747309bdcd52a9c327ba95b02b6ec3c6f8e",
+      "box": [
+        995,
+        205,
+        1321,
+        701
+      ],
+      "layer": "gk2_upcut/cut03_008.png",
+      "mask": "gk2_upcut/cut03_008_mask.png",
+      "changed": 28271,
+      "outside": 25928,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut04_009",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_009_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_009_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "7babfa4664cb3e7a93f0e401b552d1a91c9f5fde2e0ec760c3f6c02cf80a3d74",
+      "png_sha": "269147f6fc5b853cc2ee3256a240583b816c56553dbb3513cb93ff370ef4b956",
+      "box": [
+        1108,
+        980,
+        1720,
+        1052
+      ],
+      "layer": "gk2_upcut/cut04_009.png",
+      "mask": "gk2_upcut/cut04_009_mask.png",
+      "changed": 13686,
+      "outside": 13686,
       "tails": null,
       "erased": null
     },
@@ -1304,6 +2129,206 @@
       "mask": "gk2_upcut/cut04_015_mask.png",
       "changed": 27180,
       "outside": 6279,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut04_01e",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_01e_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_01e_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "644d5a68f353f72764af6cf35b4fa750e90f458d23b57b235724c9a78e361d87",
+      "png_sha": "ee967793ea6334177adfd77c862d46a4c4c93b0199893ba4b3c3762dac7129b6",
+      "box": [
+        392,
+        591,
+        1375,
+        1021
+      ],
+      "layer": "gk2_upcut/cut04_01e.png",
+      "mask": "gk2_upcut/cut04_01e_mask.png",
+      "changed": 27693,
+      "outside": 27693,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut04_02b",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_02b_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_02b_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "104a80e2454f2df019a8dfd4cc64ef56bf28a8baaa77accb62fcf5278cdc4837",
+      "png_sha": "91a79146db8dc315c16528cd98971cb1fb78e4b42439fd302873ab52ba71dd72",
+      "box": [
+        796,
+        329,
+        1125,
+        407
+      ],
+      "layer": "gk2_upcut/cut04_02b.png",
+      "mask": "gk2_upcut/cut04_02b_mask.png",
+      "changed": 15471,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapVS04_0",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS04_0_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS04_0_eng.png",
+      "size": [
+        2340,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "6d0cd996d2cbb8a7fb69d5e525c73118f2c416e5009bcec3ef388f4303b01a58",
+      "png_sha": "a133d9d1d2b7b2fa8d82ea9f94bb6aa5cb4128455d13286c6d20cbf6155f64b4",
+      "box": [
+        645,
+        0,
+        1320,
+        124
+      ],
+      "layer": "gk2_upcut/mapVS04_0.png",
+      "mask": "gk2_upcut/mapVS04_0_mask.png",
+      "changed": 51422,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapVS04_1",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS04_1_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS04_1_eng.png",
+      "size": [
+        2340,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "7472b77ea41adbccbb2d42cf36bc36a1fe2bbd761709ea38f57e0939107b5e33",
+      "png_sha": "11e0c10593109d45aad5c28e3b9ad11b80bc58fe50d61eb494bf9fbc04569b4e",
+      "box": [
+        1967,
+        840,
+        2105,
+        910
+      ],
+      "layer": "gk2_upcut/mapVS04_1.png",
+      "mask": "gk2_upcut/mapVS04_1_mask.png",
+      "changed": 6000,
+      "outside": 6000,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapVS08_1",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS08_1_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS08_1_eng.png",
+      "size": [
+        2340,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "593cc542ad5187f70a204d2919bf31d04b87b8d80b0a8ff876b9b4e6e4f078a1",
+      "png_sha": "52f27a49183a1202793a84707b7eea74072f891caeabeec95f0021a1e49fe925",
+      "box": [
+        2185,
+        480,
+        2340,
+        586
+      ],
+      "layer": "gk2_upcut/mapVS08_1.png",
+      "mask": "gk2_upcut/mapVS08_1_mask.png",
+      "changed": 16371,
+      "outside": 16371,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapVS09_0",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS09_0_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS09_0_eng.png",
+      "size": [
+        2340,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "3bc457d9590f785fb2f68496e02a53e3add4e171e2eec4b6225d7c8df9b26a23",
+      "png_sha": "9be794b833513fccdd74c6b370c3bbd68f69d21c0efb56a3a2b551a85e606b83",
+      "box": [
+        323,
+        536,
+        1895,
+        743
+      ],
+      "layer": "gk2_upcut/mapVS09_0.png",
+      "mask": "gk2_upcut/mapVS09_0_mask.png",
+      "changed": 19926,
+      "outside": 19926,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapVS0d_1",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS0d_1_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS0d_1_eng.png",
+      "size": [
+        2340,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "74f0683de86fc1ba402b42dc0ff5e3e2651ce74d882d80144692e6812a0e0538",
+      "png_sha": "291a7cdfa071d971028e5fe266202b2a5254f7eebac52920d116d315fa66772c",
+      "box": [
+        378,
+        538,
+        1514,
+        1080
+      ],
+      "layer": "gk2_upcut/mapVS0d_1.png",
+      "mask": "gk2_upcut/mapVS0d_1_mask.png",
+      "changed": 29492,
+      "outside": 29492,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapVS11_1",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS11_1_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS11_1_eng.png",
+      "size": [
+        2340,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "897ee791f94fd5abbf495fce96119c05dd5f054786a2cb8091a761d30449501a",
+      "png_sha": "f1dcef1fa4d59d140bdacc34c33a470e7298688310ae29e258f180fbf6370fc8",
+      "box": [
+        1378,
+        151,
+        2230,
+        986
+      ],
+      "layer": "gk2_upcut/mapVS11_1.png",
+      "mask": "gk2_upcut/mapVS11_1_mask.png",
+      "changed": 117321,
+      "outside": 117321,
       "tails": null,
       "erased": null
     },
@@ -1408,6 +2433,31 @@
       "erased": null
     },
     {
+      "name": "cut01_00a",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_00a_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_00a_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "430ab319863136987fc0d07321ac60502ec8b338b3473ef98a1b17c45fdaef94",
+      "png_sha": "6c7adb78db3942fd121549e112e80aa65d15f3a20186fe6d041037c015918d78",
+      "box": [
+        1100,
+        19,
+        1195,
+        66
+      ],
+      "layer": "gk2_upcutlocal/cut01_00a.png",
+      "mask": "gk2_upcutlocal/cut01_00a_mask.png",
+      "changed": 2773,
+      "outside": 2773,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut01_00c",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_00c_ger.png",
@@ -1504,6 +2554,31 @@
       "mask": "gk2_upcutlocal/cut01_01b_mask.png",
       "changed": 42598,
       "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut01_01f",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_01f_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_01f_eng.png",
+      "size": [
+        2880,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "c4609fb2152de41ee44c1a595d55616a0183a33d3eb0e33c2f80915a4ece2faf",
+      "png_sha": "38d0cb7b9f50c398801a4e60e8cdfcf7f6cc527b093215b6ba67cb21d6fe4838",
+      "box": [
+        247,
+        160,
+        1212,
+        492
+      ],
+      "layer": "gk2_upcutlocal/cut01_01f.png",
+      "mask": "gk2_upcutlocal/cut01_01f_mask.png",
+      "changed": 7576,
+      "outside": 6688,
       "tails": null,
       "erased": null
     },
@@ -2133,6 +3208,31 @@
       "erased": null
     },
     {
+      "name": "cut02_02d",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_02d_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_02d_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "1c6d70bdc9c121bdffcd3d60d698210f8c73c12f6c89d5ac92e04778c9d7f9ce",
+      "png_sha": "5e60a87b4280a2d79bad2fcce7b354a09d9a12b2bab3214bed6a012a28140130",
+      "box": [
+        880,
+        107,
+        1648,
+        298
+      ],
+      "layer": "gk2_upcutlocal/cut02_02d.png",
+      "mask": "gk2_upcutlocal/cut02_02d_mask.png",
+      "changed": 48287,
+      "outside": 48287,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut02_031",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_031_ger.png",
@@ -2233,6 +3333,56 @@
       "erased": null
     },
     {
+      "name": "cut03_004",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_004_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_004_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "24fde3e57523e4d0b11236900b28643381d73d5720f587cab4beae33a07f9aab",
+      "png_sha": "078c5e6356f26552702f4eccdc89b2e94d5c900009f5b4bf47b08b74e37ae583",
+      "box": [
+        502,
+        451,
+        1434,
+        504
+      ],
+      "layer": "gk2_upcutlocal/cut03_004.png",
+      "mask": "gk2_upcutlocal/cut03_004_mask.png",
+      "changed": 10532,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut03_005",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_005_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_005_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "fd974d063c187ec72a9690114cbd72225bc9e0bf8953a44aeb436d404082dedd",
+      "png_sha": "aed2548d5b752363253bb59646975d00798d454e20c467b95bd69db8e4c1aca1",
+      "box": [
+        680,
+        0,
+        1920,
+        1077
+      ],
+      "layer": "gk2_upcutlocal/cut03_005.png",
+      "mask": "gk2_upcutlocal/cut03_005_mask.png",
+      "changed": 272215,
+      "outside": 272215,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut03_006",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_006_ger.png",
@@ -2283,6 +3433,56 @@
       "erased": null
     },
     {
+      "name": "cut03_00e",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_00e_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_00e_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "2b909d754b32f902ba3e2bd6e759ee801e9bd97386fb7824ff5087d0202f44f9",
+      "png_sha": "d60d700264017ea57796f20b3f5d2ebd6b3e3edc2741d8d991924072b42dff14",
+      "box": [
+        26,
+        205,
+        1243,
+        253
+      ],
+      "layer": "gk2_upcutlocal/cut03_00e.png",
+      "mask": "gk2_upcutlocal/cut03_00e_mask.png",
+      "changed": 41517,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut03_017",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_017_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_017_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "da78b45d551665e92f608e653197e823269a5bdec710639d24b7634f4ec27132",
+      "png_sha": "bdbb043530c02298ce412392671c21b6c7a062f96be5f542a2732ca529df1ebf",
+      "box": [
+        692,
+        740,
+        1449,
+        1030
+      ],
+      "layer": "gk2_upcutlocal/cut03_017.png",
+      "mask": "gk2_upcutlocal/cut03_017_mask.png",
+      "changed": 75682,
+      "outside": 75682,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut03_018",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_018_ger.png",
@@ -2308,6 +3508,31 @@
       "erased": null
     },
     {
+      "name": "cut03_020",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_020_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_020_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "bcbc8e137b36b73dd7ebdb03d55606e4eff2a56cf33bb02bd6a309fcd140f31b",
+      "png_sha": "792f81f100d03fa87e4384d241361dc0098cb5415d778246073c43a8474c2ece",
+      "box": [
+        1445,
+        260,
+        1856,
+        713
+      ],
+      "layer": "gk2_upcutlocal/cut03_020.png",
+      "mask": "gk2_upcutlocal/cut03_020_mask.png",
+      "changed": 23310,
+      "outside": 23310,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut03_021",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_021_ger.png",
@@ -2329,6 +3554,31 @@
       "mask": "gk2_upcutlocal/cut03_021_mask.png",
       "changed": 20700,
       "outside": 20700,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut03_024",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_024_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut03_024_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "f3e8c9a64e83700211ef1ae7a7d61c4d68991605bf8d3e58abfd5290f2556e36",
+      "png_sha": "010102682edb04aa134e106d6cde7e50ab58ae6b11f06b8bd544b498ad007e6e",
+      "box": [
+        722,
+        206,
+        1504,
+        415
+      ],
+      "layer": "gk2_upcutlocal/cut03_024.png",
+      "mask": "gk2_upcutlocal/cut03_024_mask.png",
+      "changed": 30496,
+      "outside": 0,
       "tails": null,
       "erased": null
     },
@@ -2408,6 +3658,81 @@
       "erased": null
     },
     {
+      "name": "cut04_004",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_004_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_004_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "bc6b40002c9f747259e9d6023f55e0389a93774e0c9639cd5f5d8df77b5d9d9b",
+      "png_sha": "2d39fdf05bebbaddec17203e060286480ef5d3ee54f6ef5ccebe2e55881b435d",
+      "box": [
+        37,
+        0,
+        1920,
+        1080
+      ],
+      "layer": "gk2_upcutlocal/cut04_004.png",
+      "mask": "gk2_upcutlocal/cut04_004_mask.png",
+      "changed": 493904,
+      "outside": 493904,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut04_005",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_005_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_005_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "ec23ccecab191dc36c4beccfdb58119be4417016134848d5327282ecb1162295",
+      "png_sha": "270bb6039ee524e2246899ca63776084ac34f71e698989ed4fb41842680b26df",
+      "box": [
+        264,
+        20,
+        1630,
+        303
+      ],
+      "layer": "gk2_upcutlocal/cut04_005.png",
+      "mask": "gk2_upcutlocal/cut04_005_mask.png",
+      "changed": 262669,
+      "outside": 11864,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut04_010",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_010_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_010_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "0d9f2ba43a63b9b19b9067207746edf69c3136164250a44800edbd295d12af24",
+      "png_sha": "ba281221e18b14404ad9b7d8c6d1ec39aca6e2d39a0d24838aea98304b2ccfce",
+      "box": [
+        268,
+        4,
+        1671,
+        1031
+      ],
+      "layer": "gk2_upcutlocal/cut04_010.png",
+      "mask": "gk2_upcutlocal/cut04_010_mask.png",
+      "changed": 141403,
+      "outside": 1901,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut04_017",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_017_ger.png",
@@ -2433,6 +3758,31 @@
       "erased": null
     },
     {
+      "name": "cut04_032",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_032_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_032_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "f03321159d509ddb69f46a3fc32c0143000b81700b4d80f878e3eebb09e82245",
+      "png_sha": "77a851a251f24f740f9d5965348cf803af5ddca81c6f23e5f27d80f137385fbf",
+      "box": [
+        521,
+        36,
+        1441,
+        1080
+      ],
+      "layer": "gk2_upcutlocal/cut04_032.png",
+      "mask": "gk2_upcutlocal/cut04_032_mask.png",
+      "changed": 221897,
+      "outside": 221897,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut04_03a",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_03a_ger.png",
@@ -2454,6 +3804,31 @@
       "mask": "gk2_upcutlocal/cut04_03a_mask.png",
       "changed": 99991,
       "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut04_03e",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_03e_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_03e_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "c4f99e76fd2fb1cc656d651f7d76d17852afbb60db18a44a91ba107a9d3582d6",
+      "png_sha": "34653baff9fdddf5bcd8e7f96b3030778f8a2de218833dc97e2120268ff31f49",
+      "box": [
+        268,
+        4,
+        1671,
+        1031
+      ],
+      "layer": "gk2_upcutlocal/cut04_03e.png",
+      "mask": "gk2_upcutlocal/cut04_03e_mask.png",
+      "changed": 154967,
+      "outside": 2517,
       "tails": null,
       "erased": null
     },
@@ -2523,6 +3898,150 @@
       "texture_sha": "aad74f87f026a8ee000bfb4f3d610b152da7f8141c2dce87d4b7e9710c2bfe08",
       "plate_sha": "330d0052a732a76fdd4c0a26cd50be7414ee940bd8a94dea76bdbd281d77f183",
       "layer": "gk_common_ingameui_trial/Sousa_TextCutBG_R_05.png"
+    },
+    {
+      "name": "Date_0_0",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_Date/Situation_Date_ger/Date_0_0_ger.png",
+      "kind": "plate",
+      "size": [
+        439,
+        72
+      ],
+      "png_sha": "d71543ae3a2497e8513b59e3ea642d1e1a53e586eb28cac72658cfc60e413dc9",
+      "texture_sha": "54021dcded1a3d8058004c99b4cdece1e59d24ee507c9c5d7dd1897c53847b9b",
+      "plate_sha": "8e0b2df7d0b45c34790726485a71a819ab63ab8f3736978b0eaacd1c0213d62f",
+      "layer": "localization-assets-german(de)/Date_0_0.png",
+      "table": {
+        "m_Id": 1078490320904192,
+        "german": "2ebce9fb3bb532848b1407b2d8223fe8[Date_0_0_ger]"
+      }
+    },
+    {
+      "name": "Date_0_1",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_Date/Situation_Date_ger/Date_0_1_ger.png",
+      "kind": "plate",
+      "size": [
+        439,
+        72
+      ],
+      "png_sha": "0b84287e82c705da54a720202688ffe7341336c91f65a2148792a437b4343521",
+      "texture_sha": "1874047bec215df83caba06fd209c26827443ec704bead5ed217e15f4d018889",
+      "plate_sha": "d912581c162926cb08b44ef874f7f0df0a895009db1a70f46d442cea5821665f",
+      "layer": "localization-assets-german(de)/Date_0_1.png",
+      "table": {
+        "m_Id": 1079108758446080,
+        "german": "88f5dbd732752a048a852ca02b120cd9[Date_0_1_ger]"
+      }
+    },
+    {
+      "name": "Date_1_0",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_Date/Situation_Date_ger/Date_1_0_ger.png",
+      "kind": "plate",
+      "size": [
+        439,
+        72
+      ],
+      "png_sha": "55f03864c4093f26463f527e19fb4497c18432f9428f4b14ac63fd7e39630d7d",
+      "texture_sha": "ab84065c5319a530037e24d18ec00f7a7b8ca2774071c5819e84bdda32947742",
+      "plate_sha": "c550a53ac8cbe1f0373ffbf077c5f5589e52b5a56d74a980d0dc8790e6428aec",
+      "layer": "localization-assets-german(de)/Date_1_0.png",
+      "table": {
+        "m_Id": 1079194758455296,
+        "german": "5945979a90a7baf40aad59fafd8f2e8f[Date_1_0_ger]"
+      }
+    },
+    {
+      "name": "Date_1_1",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_Date/Situation_Date_ger/Date_1_1_ger.png",
+      "kind": "plate",
+      "size": [
+        439,
+        72
+      ],
+      "png_sha": "7e48e4ba24241778f897016394ff1ef6566d859b6353b5cbb30c33eca6c7cd00",
+      "texture_sha": "23e1a541e43d55dad5ee4dbcbc34b628adb89b98cc05fd50034b810a7228860a",
+      "plate_sha": "f33f5bd107f45a91ece769dfdcb41518c634c5035de81611c0c846e0e2188b43",
+      "layer": "localization-assets-german(de)/Date_1_1.png",
+      "table": {
+        "m_Id": 1079299918045184,
+        "german": "250a78864afae7941935a6a47ff7a52c[Date_1_1_ger]"
+      }
+    },
+    {
+      "name": "Date_2_0",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_Date/Situation_Date_ger/Date_2_0_ger.png",
+      "kind": "plate",
+      "size": [
+        439,
+        72
+      ],
+      "png_sha": "bd7e42baf79437d6f3c45bd3f03e85f9298eb3fbc0ee62672b1deddaad8e4149",
+      "texture_sha": "77196624065f3166f4bd374e1f5dbcf9581000bdeb5abcb415593d516f4abb12",
+      "plate_sha": "124deec2b21d14090fb64e06935e1040219d483b986eb5cf3c7d6b37837789ba",
+      "layer": "localization-assets-german(de)/Date_2_0.png",
+      "table": {
+        "m_Id": 1079348571971584,
+        "german": "5e797f786c47cae43a6ba41b629ccfa6[Date_2_0_ger]"
+      }
+    },
+    {
+      "name": "Date_2_1",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_Date/Situation_Date_ger/Date_2_1_ger.png",
+      "kind": "plate",
+      "size": [
+        439,
+        72
+      ],
+      "png_sha": "501a9ab23a6a1b3e460aa234d998cdeb415180da83ae336a5156ea9f574d0995",
+      "texture_sha": "d46e0fbdf1b753a8cb5b2aed8c06b825fb7e1dffcfd05b7ece948da550a0394b",
+      "plate_sha": "45e645279c7875cf573e5995ed49b57d7db01cc3f354b5cee67936d240005b2e",
+      "layer": "localization-assets-german(de)/Date_2_1.png",
+      "table": {
+        "m_Id": 1079399369187328,
+        "german": "de15527ff5202b74aa169b8ae8a5b200[Date_2_1_ger]"
+      }
+    },
+    {
+      "name": "Date_3_0",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_Date/Situation_Date_ger/Date_3_0_ger.png",
+      "kind": "plate",
+      "size": [
+        439,
+        72
+      ],
+      "png_sha": "1810ce3de9020f130a8c82cbee9400d8d9198f73a91d8a5919c2f82f458adb8d",
+      "texture_sha": "f13d655c61dd37b25bb5b550fc69b9aa9abf1faa3879d566f9afcd84df08d1d0",
+      "plate_sha": "5bcd299a288e68e1d6db1a23d514392fe8948d6467f603da7bfe556b85262806",
+      "layer": "localization-assets-german(de)/Date_3_0.png",
+      "table": {
+        "m_Id": 1079453861584896,
+        "german": "b855db2f26616714680875f927646a10[Date_3_0_ger]"
+      }
+    },
+    {
+      "name": "Date_3_1",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Common/Textures/UI/Situation/Situation_Date/Situation_Date_ger/Date_3_1_ger.png",
+      "kind": "plate",
+      "size": [
+        439,
+        72
+      ],
+      "png_sha": "e47109230dc9f6b62493c6fc8ed8522b054dfe06e2b12e85a8a5bda173df4517",
+      "texture_sha": "32b4e508208a40c2b5f22a073897b2d44853184850fce8b12f91847553d0e064",
+      "plate_sha": "ae7ac425cd90bd34e4efae560d08b4823a74b40b500296fc350c0aa40c724457",
+      "layer": "localization-assets-german(de)/Date_3_1.png",
+      "table": {
+        "m_Id": 1079481380413440,
+        "german": "7b4b6a5103e25704a885abb54bdf63a5[Date_3_1_ger]"
+      }
     },
     {
       "name": "Situation_0",
@@ -2629,6 +4148,42 @@
       "texture_sha": "6f20b12577698c8ec256c851df95a28f2d4725b48860d2583c18f617405fec14",
       "plate_sha": "c58fdfa376435fc3a1dc0d77d5e014eee2368bf0c7ad71b5802fb859997ffbc7",
       "layer": "localization-assets-german(de)/Situation_6.png"
+    },
+    {
+      "name": "hikarikabin",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Menu/Textures/hikarikabin_ger.png",
+      "kind": "plate",
+      "size": [
+        1920,
+        1080
+      ],
+      "png_sha": "7301cc563da92e4429897a711e19eac77fbf6d0e4671d21dda74561cc1083f02",
+      "texture_sha": "8fd8a8425a41e6abb28337ee74dd893e2bfa37cf7ef206d2e9f414cc9df1e7cf",
+      "plate_sha": "2c0837f251b6658d667719bb36d2b8fa5afaa29a1922c8502370b2e4d4cfe432",
+      "layer": "localization-assets-german(de)/hikarikabin.png",
+      "table": {
+        "m_Id": 72445912995741696,
+        "german": "0da8753d704abbb46aeed6f3bcab9039[hikarikabin_ger]"
+      }
+    },
+    {
+      "name": "original",
+      "bundle": "localization-assets-german(de)",
+      "key": "Assets/GK_Menu/Textures/original_ger.png",
+      "kind": "plate",
+      "size": [
+        3840,
+        2160
+      ],
+      "png_sha": "08e1aa5fa44ef0da207b320d7c93786b05f50d183412b29fce73d1ee754cbb7e",
+      "texture_sha": "5c495b9b21c6a04d84539acf71244ea637a4d5350af0ff55f51198e4dbd1ba3b",
+      "plate_sha": "f78e796eb295b49ee772f4a6fcd4dbd316914d41161b742a100c304f3be5dc7e",
+      "layer": "localization-assets-german(de)/original.png",
+      "table": {
+        "m_Id": 72446540857884672,
+        "german": "e82b70b44f4cfc44a89f084e518a8bb8[original_ger]"
+      }
     },
     {
       "name": "splash_ger2",
@@ -2818,13 +4373,3593 @@
       },
       "png_sha": "f1b63230f8050dc0c246f7eb85143c3d7232c067e0a5ddcb02158d860d8ffd5c",
       "layer": "gk_common_ingameui_trial/splash_ger2.png"
+    },
+    {
+      "name": "titles_StEd_ger",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "splash",
+      "key": "Assets/GK_Common/Prefabs/SousaPart/SousaPart_Title_Start_R_ger.prefab",
+      "size": [
+        1024,
+        2048
+      ],
+      "spec": {
+        "набор": {
+          "шрифт": "seguibl.ttf",
+          "кегль": 197,
+          "сжатие": 0.874,
+          "наклон": 0.16,
+          "утончение": -2.5,
+          "обводка": 17,
+          "цвет": [
+            152,
+            0,
+            56
+          ],
+          "немецкий штрих": 31.0,
+          "строки": {
+            "Start 1": {
+              "текст": "Начало",
+              "куски": [
+                "Начало"
+              ],
+              "база": 249.0,
+              "немецкая база": 249.0,
+              "центр": 959.5,
+              "ширина": 651,
+              "штрих": 31.0
+            },
+            "Start 2": {
+              "текст": "расследования",
+              "куски": [
+                "рассле",
+                "дования"
+              ],
+              "база": 473.0,
+              "немецкая база": 473.0,
+              "центр": 959.5,
+              "ширина": 1346,
+              "штрих": 31.0
+            },
+            "End 1": {
+              "текст": "Расследование",
+              "куски": [
+                "Рассле",
+                "дование"
+              ],
+              "база": 249.0,
+              "немецкая база": 249.0,
+              "центр": 959.0,
+              "ширина": 1327,
+              "штрих": 31.0
+            },
+            "End 2": {
+              "текст": "завершено",
+              "куски": [
+                "завершено"
+              ],
+              "база": 473.0,
+              "немецкая база": 473.0,
+              "центр": 959.0,
+              "ширина": 959,
+              "штрих": 31.0
+            }
+          },
+          "слово": "Начало расследования / Расследование завершено",
+          "раскладка": {
+            "Start L/Char_01": "Начало — спрайт Start_01",
+            "Start R/Char_02": "рассле — спрайт Start_02",
+            "Start R/Char_03": "дования — спрайт Start_03",
+            "End L/Char_00": "Рассле — спрайт Start_00",
+            "End L/Char_01": "дование — спрайт End_02",
+            "End R/Char_03": "завершено — спрайт End_03"
+          },
+          "скрыты": [
+            "Start L/Char_00",
+            "End R/Char_02"
+          ]
+        },
+        "атлас": "SousaPart_Title_StEd_ger",
+        "бандл": "gk_common_ingameui_trial",
+        "префабы": [
+          "Assets/GK_Common/Prefabs/SousaPart/SousaPart_Title_Start_R_ger.prefab",
+          "Assets/GK_Common/Prefabs/SousaPart/SousaPart_Title_End_R_ger.prefab"
+        ],
+        "размер": [
+          1024,
+          2048
+        ],
+        "текстура_sha": "a7faf7faa5491ad1abc4bd0f8265620c44c1f524bb348e141f2fc5b2f581f6df",
+        "куски": {
+          "SousaPart_Title_End_02_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 202.0,
+              "width": 750.0,
+              "height": 131.0
+            },
+            "textureRectOffset": {
+              "x": 17.0,
+              "y": 42.0
+            },
+            "rect": {
+              "width": 784.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_End_02_W_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1024.0,
+              "width": 780.0,
+              "height": 165.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 25.0
+            },
+            "rect": {
+              "width": 784.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_End_03_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 882.0,
+              "width": 959.0,
+              "height": 140.0
+            },
+            "textureRectOffset": {
+              "x": 17.0,
+              "y": 34.0
+            },
+            "rect": {
+              "width": 992.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_End_03_W_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1874.0,
+              "width": 988.0,
+              "height": 174.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 17.0
+            },
+            "rect": {
+              "width": 992.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_Start_00_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 468.0,
+              "width": 583.0,
+              "height": 134.0
+            },
+            "textureRectOffset": {
+              "x": 16.0,
+              "y": 76.0
+            },
+            "rect": {
+              "width": 615.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_Start_00_W_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1358.0,
+              "width": 611.0,
+              "height": 168.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 59.0
+            },
+            "rect": {
+              "width": 615.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_Start_01_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 604.0,
+              "width": 651.0,
+              "height": 134.0
+            },
+            "textureRectOffset": {
+              "x": 16.0,
+              "y": 74.0
+            },
+            "rect": {
+              "width": 683.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_Start_01_W_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1528.0,
+              "width": 679.0,
+              "height": 168.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 57.0
+            },
+            "rect": {
+              "width": 683.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_Start_02_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 740.0,
+              "width": 589.0,
+              "height": 140.0
+            },
+            "textureRectOffset": {
+              "x": 17.0,
+              "y": 34.0
+            },
+            "rect": {
+              "width": 623.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_Start_02_W_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1698.0,
+              "width": 619.0,
+              "height": 174.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 17.0
+            },
+            "rect": {
+              "width": 623.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_Start_03_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 335.0,
+              "width": 763.0,
+              "height": 131.0
+            },
+            "textureRectOffset": {
+              "x": 16.0,
+              "y": 43.0
+            },
+            "rect": {
+              "width": 795.0,
+              "height": 280.0
+            }
+          },
+          "SousaPart_Title_Start_03_W_R_ger": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1191.0,
+              "width": 791.0,
+              "height": 165.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 26.0
+            },
+            "rect": {
+              "width": 795.0,
+              "height": 280.0
+            }
+          }
+        },
+        "правки": [
+          {
+            "префаб": "SousaPart_Title_Start_R_ger",
+            "узел": "root/Title/L/Char_01_W",
+            "тип": "RectTransform",
+            "объект": 994597700618465295,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 260.0,
+                "y": 352.0
+              },
+              "m_SizeDelta": {
+                "x": 412.0,
+                "y": 280.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -0.5,
+                "y": 352.0
+              },
+              "m_SizeDelta": {
+                "x": 683.0,
+                "y": 280.0
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_Start_R_ger",
+            "узел": "root/Title/R/Char_02_W",
+            "тип": "RectTransform",
+            "объект": -7742229431604695025,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -138.0,
+                "y": 127.0
+              },
+              "m_SizeDelta": {
+                "x": 382.0,
+                "y": 280.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -378.5,
+                "y": 127.0
+              },
+              "m_SizeDelta": {
+                "x": 623.0,
+                "y": 280.0
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_Start_R_ger",
+            "узел": "root/Title/R/Char_03_W",
+            "тип": "RectTransform",
+            "объект": -7029956183785361393,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 176.0,
+                "y": 127.0
+              },
+              "m_SizeDelta": {
+                "x": 304.0,
+                "y": 280.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 291.5,
+                "y": 127.0
+              },
+              "m_SizeDelta": {
+                "x": 795.0,
+                "y": 280.0
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_End_R_ger",
+            "узел": "root/Title/L/Char_00_W",
+            "тип": "RectTransform",
+            "объект": 3289789288484955191,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -188.0,
+                "y": 352.0
+              },
+              "m_SizeDelta": {
+                "x": 560.0,
+                "y": 280.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -373.5,
+                "y": 352.0
+              },
+              "m_SizeDelta": {
+                "x": 615.0,
+                "y": 280.0
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_End_R_ger",
+            "узел": "root/Title/L/Char_01_W",
+            "тип": "RectTransform",
+            "объект": 1812346994223670327,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 260.0,
+                "y": 352.0
+              },
+              "m_SizeDelta": {
+                "x": 412.0,
+                "y": 280.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 287.0,
+                "y": 352.0
+              },
+              "m_SizeDelta": {
+                "x": 784.0,
+                "y": 280.0
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_End_R_ger",
+            "узел": "root/Title/L/Char_01_W",
+            "тип": "MonoBehaviour",
+            "объект": 6629678019111806007,
+            "было": {
+              "m_Sprite": {
+                "m_FileID": 0,
+                "m_PathID": 7187722955588082847
+              }
+            },
+            "стало": {
+              "m_Sprite": {
+                "m_FileID": 0,
+                "m_PathID": 7327328255315860654
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_End_R_ger",
+            "узел": "root/Title/L/Char_01_W/Char_01",
+            "тип": "MonoBehaviour",
+            "объект": 4878092809719899191,
+            "было": {
+              "m_Sprite": {
+                "m_FileID": 0,
+                "m_PathID": 5720006222197932643
+              }
+            },
+            "стало": {
+              "m_Sprite": {
+                "m_FileID": 0,
+                "m_PathID": -3905676893244651524
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_End_R_ger",
+            "узел": "root/Title/R/Char_03_W",
+            "тип": "RectTransform",
+            "объект": -1374719260760415177,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 351.0,
+                "y": 127.0
+              },
+              "m_SizeDelta": {
+                "x": 590.0,
+                "y": 280.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -1.0,
+                "y": 127.0
+              },
+              "m_SizeDelta": {
+                "x": 992.0,
+                "y": 280.0
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_Start_R_ger",
+            "узел": "root/Title/L/Char_00_W",
+            "тип": "RectTransform",
+            "объект": -7875517333666746353,
+            "было": {
+              "m_LocalScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            },
+            "стало": {
+              "m_LocalScale": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+              }
+            }
+          },
+          {
+            "префаб": "SousaPart_Title_End_R_ger",
+            "узел": "root/Title/R/Char_02_W",
+            "тип": "RectTransform",
+            "объект": 4207015704087553079,
+            "было": {
+              "m_LocalScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+              }
+            },
+            "стало": {
+              "m_LocalScale": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "png_sha": "2c1117c911df59cb6c11c2d28d4fa17f9f579f3fbf64a55d7074249edcd1d270",
+      "layer": "gk_common_ingameui_trial/titles_StEd_ger.png",
+      "check": "titles"
+    },
+    {
+      "name": "titles_chess_ger",
+      "bundle": "gk2_logicchess_trial",
+      "kind": "splash",
+      "key": "Assets/GK_Common/Prefabs/LogicChess/LogicChess_Title_Start_R_ger.prefab",
+      "size": [
+        1024,
+        2048
+      ],
+      "spec": {
+        "набор": {
+          "шрифт": "seguibl.ttf",
+          "кегль": 176,
+          "кегль верха": 146,
+          "сжатие": 1.013,
+          "наклон": 0.175,
+          "утончение": -3.0,
+          "немецкий штрих": 29.0,
+          "ореол": [
+            [
+              1.0,
+              85.0
+            ],
+            [
+              1.5,
+              69.0
+            ],
+            [
+              2.0,
+              60.0
+            ],
+            [
+              3.0,
+              48.0
+            ],
+            [
+              3.5,
+              39.0
+            ],
+            [
+              4.0,
+              35.0
+            ],
+            [
+              4.5,
+              30.0
+            ],
+            [
+              5.0,
+              26.0
+            ],
+            [
+              5.5,
+              20.0
+            ],
+            [
+              6.0,
+              17.0
+            ],
+            [
+              6.5,
+              14.0
+            ],
+            [
+              7.0,
+              10.0
+            ],
+            [
+              7.5,
+              7.0
+            ],
+            [
+              8.0,
+              6.0
+            ],
+            [
+              8.5,
+              4.0
+            ],
+            [
+              9.0,
+              3.0
+            ],
+            [
+              9.5,
+              2.0
+            ],
+            [
+              10.0,
+              1.0
+            ],
+            [
+              10.5,
+              1.0
+            ],
+            [
+              11.0,
+              0.0
+            ],
+            [
+              11.5,
+              0.0
+            ],
+            [
+              12.0,
+              0.0
+            ]
+          ],
+          "цвет ореола": [
+            66,
+            125,
+            255
+          ],
+          "кайма": 18.1,
+          "синий": [
+            1,
+            50,
+            222
+          ],
+          "строки": {
+            "верх": {
+              "текст": "Ментальные шахматы",
+              "база": 547.0,
+              "немецкая база": 547.0,
+              "центр": 959.5,
+              "немецкий центр": 960.0,
+              "ширина": 1713,
+              "с каймой и ореолом": [
+                74,
+                1845
+              ],
+              "штрих": 24.0
+            },
+            "Start": {
+              "текст": "Начали!",
+              "база": 777.0,
+              "немецкая база": 777.0,
+              "центр": 962.5,
+              "немецкий центр": 962.5,
+              "ширина": 739,
+              "с каймой и ореолом": [
+                564,
+                1361
+              ],
+              "штрих": 30.0
+            },
+            "Success": {
+              "текст": "Шах и мат",
+              "база": 779.0,
+              "немецкая база": 779.0,
+              "центр": 957.5,
+              "немецкий центр": 957.5,
+              "ширина": 933,
+              "с каймой и ореолом": [
+                462,
+                1453
+              ],
+              "штрих": 30.0
+            }
+          },
+          "слово": "Ментальные шахматы / Начали! / Шах и мат",
+          "раскладка": {
+            "top st0": "М — спрайты LogicChess_Title_R_00, LogicChess_Title_R_00_W",
+            "top st1": "ен — спрайты LogicChess_Title_R_01, LogicChess_Title_R_01_W",
+            "top 02": "т — спрайты LogicChess_Title_R_02, LogicChess_Title_R_02_W",
+            "top 03": "ал — спрайты LogicChess_Title_R_03, LogicChess_Title_R_03_W",
+            "top 04": "ь — спрайты LogicChess_Title_R_04, LogicChess_Title_R_04_W",
+            "top 05": "ны — спрайты LogicChess_Title_R_05, LogicChess_Title_R_05_W",
+            "top 06": "е — спрайты LogicChess_Title_R_06, LogicChess_Title_R_06_W",
+            "top 07": "ш — спрайты LogicChess_Title_R_07, LogicChess_Title_R_07_W",
+            "top 08": "ах — спрайты LogicChess_Title_R_08, LogicChess_Title_R_08_W",
+            "top 09": "м — спрайты LogicChess_Title_R_09, LogicChess_Title_R_09_W",
+            "top ed0": "ат — спрайты LogicChess_Title_R_10, LogicChess_Title_R_10_W",
+            "top ed1": "ы — спрайты LogicChess_Title_R_11, LogicChess_Title_R_11_W",
+            "Start d0": "Нача — спрайты LogicChess_Title_R_12, LogicChess_Title_R_12_W",
+            "Start d1": "ли! — спрайты LogicChess_Title_R_13, LogicChess_Title_R_13_W",
+            "Success d0": "Шах и — спрайты LogicChess_Title_R_14, LogicChess_Title_R_14_W",
+            "Success d1": "мат — спрайты LogicChess_Title_R_15, LogicChess_Title_R_15_W"
+          }
+        },
+        "атлас": "LogicChess_Title_ger",
+        "бандл": "gk2_logicchess_trial",
+        "префабы": [
+          "Assets/GK_Common/Prefabs/LogicChess/LogicChess_Title_Start_R_ger.prefab",
+          "Assets/GK_Common/Prefabs/LogicChess/LogicChess_Title_Success_R_ger.prefab",
+          "Assets/GK_Common/Prefabs/LogicChess/LogicChess_Title_ger.prefab"
+        ],
+        "размер": [
+          1024,
+          2048
+        ],
+        "текстура_sha": "7f41ea8f6592187fabf1db5850814f6e14d4e547c344ce713ba519a558aae8e2",
+        "куски": {
+          "LogicChess_Title_R_00": {
+            "textureRect": {
+              "x": 382.0,
+              "y": 1252.0,
+              "width": 172.0,
+              "height": 132.0
+            },
+            "textureRectOffset": {
+              "x": 11.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 194.0,
+              "height": 154.0
+            }
+          },
+          "LogicChess_Title_R_00_W": {
+            "textureRect": {
+              "x": 798.0,
+              "y": 1391.0,
+              "width": 190.0,
+              "height": 150.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 194.0,
+              "height": 154.0
+            }
+          },
+          "LogicChess_Title_R_01": {
+            "textureRect": {
+              "x": 393.0,
+              "y": 885.0,
+              "width": 187.0,
+              "height": 107.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 191.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_01_W": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1117.0,
+              "width": 187.0,
+              "height": 125.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 191.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_02": {
+            "textureRect": {
+              "x": 798.0,
+              "y": 780.0,
+              "width": 82.0,
+              "height": 103.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 88.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_02_W": {
+            "textureRect": {
+              "x": 822.0,
+              "y": 994.0,
+              "width": 84.0,
+              "height": 121.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 88.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_03": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 885.0,
+              "width": 200.0,
+              "height": 107.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 204.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_03_W": {
+            "textureRect": {
+              "x": 556.0,
+              "y": 1259.0,
+              "width": 200.0,
+              "height": 125.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 204.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_04": {
+            "textureRect": {
+              "x": 701.0,
+              "y": 780.0,
+              "width": 95.0,
+              "height": 103.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 99.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_04_W": {
+            "textureRect": {
+              "x": 725.0,
+              "y": 994.0,
+              "width": 95.0,
+              "height": 121.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 99.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_05": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 780.0,
+              "width": 245.0,
+              "height": 103.0
+            },
+            "textureRectOffset": {
+              "x": 4.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 253.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_05_W": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 994.0,
+              "width": 249.0,
+              "height": 121.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 253.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_06": {
+            "textureRect": {
+              "x": 753.0,
+              "y": 885.0,
+              "width": 99.0,
+              "height": 107.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 112.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_06_W": {
+            "textureRect": {
+              "x": 360.0,
+              "y": 1117.0,
+              "width": 108.0,
+              "height": 125.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 112.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_07": {
+            "textureRect": {
+              "x": 405.0,
+              "y": 780.0,
+              "width": 155.0,
+              "height": 103.0
+            },
+            "textureRectOffset": {
+              "x": 11.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 169.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_07_W": {
+            "textureRect": {
+              "x": 251.0,
+              "y": 994.0,
+              "width": 165.0,
+              "height": 121.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 169.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_08": {
+            "textureRect": {
+              "x": 202.0,
+              "y": 885.0,
+              "width": 189.0,
+              "height": 107.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 193.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_08_W": {
+            "textureRect": {
+              "x": 758.0,
+              "y": 1259.0,
+              "width": 189.0,
+              "height": 125.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 193.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_09": {
+            "textureRect": {
+              "x": 562.0,
+              "y": 780.0,
+              "width": 137.0,
+              "height": 103.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 142.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_09_W": {
+            "textureRect": {
+              "x": 585.0,
+              "y": 994.0,
+              "width": 138.0,
+              "height": 121.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 142.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_10": {
+            "textureRect": {
+              "x": 582.0,
+              "y": 885.0,
+              "width": 169.0,
+              "height": 107.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 173.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_10_W": {
+            "textureRect": {
+              "x": 189.0,
+              "y": 1117.0,
+              "width": 169.0,
+              "height": 125.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 173.0,
+              "height": 129.0
+            }
+          },
+          "LogicChess_Title_R_11": {
+            "textureRect": {
+              "x": 247.0,
+              "y": 780.0,
+              "width": 156.0,
+              "height": 103.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 169.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_11_W": {
+            "textureRect": {
+              "x": 418.0,
+              "y": 994.0,
+              "width": 165.0,
+              "height": 121.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 169.0,
+              "height": 125.0
+            }
+          },
+          "LogicChess_Title_R_12": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1386.0,
+              "width": 470.0,
+              "height": 155.0
+            },
+            "textureRectOffset": {
+              "x": 11.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 487.0,
+              "height": 177.0
+            }
+          },
+          "LogicChess_Title_R_12_W": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1700.0,
+              "width": 483.0,
+              "height": 173.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 487.0,
+              "height": 177.0
+            }
+          },
+          "LogicChess_Title_R_13": {
+            "textureRect": {
+              "x": 472.0,
+              "y": 1386.0,
+              "width": 324.0,
+              "height": 155.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 337.0,
+              "height": 177.0
+            }
+          },
+          "LogicChess_Title_R_13_W": {
+            "textureRect": {
+              "x": 485.0,
+              "y": 1700.0,
+              "width": 333.0,
+              "height": 173.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 337.0,
+              "height": 177.0
+            }
+          },
+          "LogicChess_Title_R_14": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1543.0,
+              "width": 583.0,
+              "height": 155.0
+            },
+            "textureRectOffset": {
+              "x": 11.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 605.0,
+              "height": 177.0
+            }
+          },
+          "LogicChess_Title_R_14_W": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1875.0,
+              "width": 601.0,
+              "height": 173.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 605.0,
+              "height": 177.0
+            }
+          },
+          "LogicChess_Title_R_15": {
+            "textureRect": {
+              "x": 470.0,
+              "y": 1120.0,
+              "width": 362.0,
+              "height": 122.0
+            },
+            "textureRectOffset": {
+              "x": 11.0,
+              "y": 11.0
+            },
+            "rect": {
+              "width": 384.0,
+              "height": 144.0
+            }
+          },
+          "LogicChess_Title_R_15_W": {
+            "textureRect": {
+              "x": 0.0,
+              "y": 1244.0,
+              "width": 380.0,
+              "height": 140.0
+            },
+            "textureRectOffset": {
+              "x": 2.0,
+              "y": 2.0
+            },
+            "rect": {
+              "width": 384.0,
+              "height": 144.0
+            }
+          }
+        },
+        "правки": [
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/pos_L0/offsetY_1st/Char_st0_W",
+            "тип": "RectTransform",
+            "объект": -762406697922425419,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -521.0,
+                "y": 6.0
+              },
+              "m_SizeDelta": {
+                "x": 205.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -789.0,
+                "y": -10.0
+              },
+              "m_SizeDelta": {
+                "x": 194.0,
+                "y": 154.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/pos_L0/offsetY_1st/Char_st0",
+            "тип": "RectTransform",
+            "объект": -1396339054449685067,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -521.0,
+                "y": 6.0
+              },
+              "m_SizeDelta": {
+                "x": 205.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -789.0,
+                "y": -10.0
+              },
+              "m_SizeDelta": {
+                "x": 194.0,
+                "y": 154.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/pos_L1/offsetY_2nd/Char_st1_W",
+            "тип": "RectTransform",
+            "объект": 924867588544564661,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -395.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 148.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -629.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 191.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/pos_L1/offsetY_2nd/Char_st1",
+            "тип": "RectTransform",
+            "объект": -556355994514780747,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -395.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 148.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -629.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 191.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/pos_L0/offsetY_2nd/Char_02_W",
+            "тип": "RectTransform",
+            "объект": 5663131289142529461,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -290.0,
+                "y": -12.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 150.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -500.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 88.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/pos_L0/offsetY_2nd/Char_02",
+            "тип": "RectTransform",
+            "объект": -8505257892812452427,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -290.0,
+                "y": -12.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 150.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -500.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 88.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_03_W",
+            "тип": "RectTransform",
+            "объект": -330851806272975435,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -193.0,
+                "y": -0.0
+              },
+              "m_SizeDelta": {
+                "x": 116.0703125,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -384.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 204.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/C/Char_03",
+            "тип": "RectTransform",
+            "объект": 58924693058784693,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -193.0,
+                "y": 0.0
+              },
+              "m_SizeDelta": {
+                "x": 116.0703125,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -384.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 204.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_04_W",
+            "тип": "RectTransform",
+            "объект": -6067928274053984843,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -113.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -248.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 99.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/C/Char_04",
+            "тип": "RectTransform",
+            "объект": 5495939338593471925,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -113.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -248.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 99.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_05_W",
+            "тип": "RectTransform",
+            "объект": -9153998390736810571,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -32.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 107.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -88.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 253.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/C/Char_05",
+            "тип": "RectTransform",
+            "объект": 8303011404561943989,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -32.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 107.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -88.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 253.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_06_W",
+            "тип": "RectTransform",
+            "объект": 2541290327237299637,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 38.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 73.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 112.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/C/Char_06",
+            "тип": "RectTransform",
+            "объект": -3324185418877268555,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 38.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.25,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 73.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 112.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_07_W",
+            "тип": "RectTransform",
+            "объект": -8176280149816668747,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 136.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 207.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/C/Char_07",
+            "тип": "RectTransform",
+            "объект": 8362641003040116149,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 136.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 207.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_08_W",
+            "тип": "RectTransform",
+            "объект": -7424691909326565963,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 236.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 369.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 193.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/C/Char_08",
+            "тип": "RectTransform",
+            "объект": -2781569237715087947,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 236.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 369.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 193.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/pos_R1/offsetY_2nd/Char_09_W",
+            "тип": "RectTransform",
+            "объект": 7269226355465227701,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 342.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 517.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 142.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/pos_R1/offsetY_2nd/Char_09",
+            "тип": "RectTransform",
+            "объект": -5579131033910211147,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 342.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 517.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 142.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/pos_R0/offsetY_2nd/Char_ed0_W",
+            "тип": "RectTransform",
+            "объект": -707611296038679115,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 445.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 654.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 173.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/pos_R0/offsetY_2nd/Char_ed0",
+            "тип": "RectTransform",
+            "объект": -8146419024489378379,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 445.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 654.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 173.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/pos_R1/offsetY_1st/Char_ed1_W",
+            "тип": "RectTransform",
+            "объект": 4970390569337720245,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 544.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 800.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/pos_R1/offsetY_1st/Char_ed1",
+            "тип": "RectTransform",
+            "объект": 3846983628856987061,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 544.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 800.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_L_W/Char_d0_W",
+            "тип": "RectTransform",
+            "объект": -1182771137376055883,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -120.0,
+                "y": 5.300000190734863
+              },
+              "m_SizeDelta": {
+                "x": 238.0,
+                "y": 192.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -152.5,
+                "y": -2.5
+              },
+              "m_SizeDelta": {
+                "x": 487.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_L/Char_d0",
+            "тип": "RectTransform",
+            "объект": 2440642734342180277,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -120.0,
+                "y": 5.3000030517578125
+              },
+              "m_SizeDelta": {
+                "x": 238.0,
+                "y": 192.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -152.5,
+                "y": -2.5
+              },
+              "m_SizeDelta": {
+                "x": 487.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_R_W/Char_d1_W",
+            "тип": "RectTransform",
+            "объект": 8793155955779472821,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 95.0,
+                "y": 0.0
+              },
+              "m_SizeDelta": {
+                "x": 298.0,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 232.5,
+                "y": -2.5
+              },
+              "m_SizeDelta": {
+                "x": 337.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Start_R_ger",
+            "узел": "root/LogicChess_Title/pos_R/Char_d1",
+            "тип": "RectTransform",
+            "объект": -827652204343882315,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 95.0,
+                "y": 0.0
+              },
+              "m_SizeDelta": {
+                "x": 298.0,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 232.5,
+                "y": -2.5
+              },
+              "m_SizeDelta": {
+                "x": 337.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/pos_L0/offsetY_1st/Char_st0_W",
+            "тип": "RectTransform",
+            "объект": 2105584010135218867,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -521.0,
+                "y": 6.0
+              },
+              "m_SizeDelta": {
+                "x": 205.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -789.0,
+                "y": -10.0
+              },
+              "m_SizeDelta": {
+                "x": 194.0,
+                "y": 154.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/pos_L0/offsetY_1st/Char_st0",
+            "тип": "RectTransform",
+            "объект": 449320690282932915,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -521.0,
+                "y": 6.0
+              },
+              "m_SizeDelta": {
+                "x": 205.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -789.0,
+                "y": -10.0
+              },
+              "m_SizeDelta": {
+                "x": 194.0,
+                "y": 154.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/pos_L1/offsetY_2nd/Char_st1_W",
+            "тип": "RectTransform",
+            "объект": -2397978351397164365,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -395.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 148.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -629.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 191.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/pos_L1/offsetY_2nd/Char_st1",
+            "тип": "RectTransform",
+            "объект": 2492335415806470835,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -395.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 148.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -629.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 191.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/pos_L0/offsetY_2nd/Char_02_W",
+            "тип": "RectTransform",
+            "объект": -8257019429928621389,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -290.0,
+                "y": -12.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 150.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -500.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 88.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/pos_L0/offsetY_2nd/Char_02",
+            "тип": "RectTransform",
+            "объект": -4794896526197577037,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -290.0,
+                "y": -12.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 150.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -500.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 88.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_03_W",
+            "тип": "RectTransform",
+            "объект": 4561269445907655347,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -193.0,
+                "y": -0.0
+              },
+              "m_SizeDelta": {
+                "x": 116.0703125,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -384.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 204.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/C/Char_03",
+            "тип": "RectTransform",
+            "объект": -6053561345257297229,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -193.0,
+                "y": 0.0
+              },
+              "m_SizeDelta": {
+                "x": 116.0703125,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -384.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 204.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_04_W",
+            "тип": "RectTransform",
+            "объект": -8285465016263497037,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -113.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -248.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 99.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/C/Char_04",
+            "тип": "RectTransform",
+            "объект": -4963780718021301581,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -113.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -248.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 99.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_05_W",
+            "тип": "RectTransform",
+            "объект": 958100548898138803,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -32.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 107.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -88.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 253.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/C/Char_05",
+            "тип": "RectTransform",
+            "объект": -1425094327464809805,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -32.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 107.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -88.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 253.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_06_W",
+            "тип": "RectTransform",
+            "объект": 1360319040919775923,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 38.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 73.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 112.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/C/Char_06",
+            "тип": "RectTransform",
+            "объект": 714177230644587187,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 38.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.25,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 73.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 112.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/C/Char_07_W",
+            "тип": "RectTransform",
+            "объект": 8003291950335077043,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 136.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 207.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/C/Char_07",
+            "тип": "RectTransform",
+            "объект": 7397156944418450099,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 136.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 207.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/C/Char_08_W",
+            "тип": "RectTransform",
+            "объект": -2745862102612170061,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 236.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 369.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 193.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/C/Char_08",
+            "тип": "RectTransform",
+            "объект": -7356308916537447757,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 236.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 369.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 193.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/pos_R1/offsetY_2nd/Char_09_W",
+            "тип": "RectTransform",
+            "объект": -1284892039753815373,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 342.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 517.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 142.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/pos_R1/offsetY_2nd/Char_09",
+            "тип": "RectTransform",
+            "объект": 2810944440613284531,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 342.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 517.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 142.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset_W/pos_R0/offsetY_2nd/Char_ed0_W",
+            "тип": "RectTransform",
+            "объект": 921792582736161459,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 445.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 654.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 173.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_0/offset/pos_R0/offsetY_2nd/Char_ed0",
+            "тип": "RectTransform",
+            "объект": 2192548910412606131,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 445.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 654.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 173.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset_W/pos_R1/offsetY_1st/Char_ed1_W",
+            "тип": "RectTransform",
+            "объект": -7534839232859002189,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 544.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 800.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_1/offset/pos_R1/offsetY_1st/Char_ed1",
+            "тип": "RectTransform",
+            "объект": 421753208483293875,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 544.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 800.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_L_W/Char_d0_W",
+            "тип": "RectTransform",
+            "объект": 1434395532078295731,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -204.0,
+                "y": 4.0
+              },
+              "m_SizeDelta": {
+                "x": 677.0,
+                "y": 192.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -195.5,
+                "y": -3.5
+              },
+              "m_SizeDelta": {
+                "x": 605.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_L/Char_d0",
+            "тип": "RectTransform",
+            "объект": 1138976088118864563,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -204.0,
+                "y": 4.0
+              },
+              "m_SizeDelta": {
+                "x": 660.0,
+                "y": 173.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -195.5,
+                "y": -3.5
+              },
+              "m_SizeDelta": {
+                "x": 605.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_R_W/Char_d1_W",
+            "тип": "RectTransform",
+            "объект": -4352146370199082317,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 315.0,
+                "y": -1.0
+              },
+              "m_SizeDelta": {
+                "x": 446.0,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 301.0,
+                "y": -20.0
+              },
+              "m_SizeDelta": {
+                "x": 384.0,
+                "y": 144.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_Success_R_ger",
+            "узел": "root/LogicChess_Title/pos_R/Char_d1",
+            "тип": "RectTransform",
+            "объект": -3982249985616762189,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 315.0,
+                "y": -1.0
+              },
+              "m_SizeDelta": {
+                "x": 429.0,
+                "y": 160.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 301.0,
+                "y": -20.0
+              },
+              "m_SizeDelta": {
+                "x": 384.0,
+                "y": 144.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset_W/pos_L0/offsetY_1st/Char_st0_W",
+            "тип": "RectTransform",
+            "объект": 1668242007483271397,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -521.0,
+                "y": 6.0
+              },
+              "m_SizeDelta": {
+                "x": 205.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -789.0,
+                "y": -10.0
+              },
+              "m_SizeDelta": {
+                "x": 194.0,
+                "y": 154.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset/pos_L0/offsetY_1st/Char_st0",
+            "тип": "RectTransform",
+            "объект": -590696456586934043,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -521.0,
+                "y": 6.0
+              },
+              "m_SizeDelta": {
+                "x": 205.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -789.0,
+                "y": -10.0
+              },
+              "m_SizeDelta": {
+                "x": 194.0,
+                "y": 154.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset_W/pos_L1/offsetY_2nd/Char_st1_W",
+            "тип": "RectTransform",
+            "объект": 9025590051500968165,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -395.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 148.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -629.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 191.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset/pos_L1/offsetY_2nd/Char_st1",
+            "тип": "RectTransform",
+            "объект": 8550440326348916965,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -395.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 148.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -629.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 191.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset_W/pos_L0/offsetY_2nd/Char_02_W",
+            "тип": "RectTransform",
+            "объект": 1636230294579300581,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -290.0,
+                "y": -12.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 150.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -500.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 88.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset/pos_L0/offsetY_2nd/Char_02",
+            "тип": "RectTransform",
+            "объект": -1587063844696831771,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -290.0,
+                "y": -12.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 150.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -500.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 88.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset_W/C/Char_03_W",
+            "тип": "RectTransform",
+            "объект": 7133090306003814629,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -193.0,
+                "y": -0.0
+              },
+              "m_SizeDelta": {
+                "x": 116.0703125,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -384.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 204.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset/C/Char_03",
+            "тип": "RectTransform",
+            "объект": 2141850283663476965,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -193.0,
+                "y": 0.0
+              },
+              "m_SizeDelta": {
+                "x": 116.0703125,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -384.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 204.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset_W/C/Char_04_W",
+            "тип": "RectTransform",
+            "объект": 4209783923799476453,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -113.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -248.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 99.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset/C/Char_04",
+            "тип": "RectTransform",
+            "объект": -3439824655851927323,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -113.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -248.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 99.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset_W/C/Char_05_W",
+            "тип": "RectTransform",
+            "объект": -4805283201080506139,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -32.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 107.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -88.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 253.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset/C/Char_05",
+            "тип": "RectTransform",
+            "объект": 6341688411783350501,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -32.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 107.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -88.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 253.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset_W/C/Char_06_W",
+            "тип": "RectTransform",
+            "объект": -6810272130781755163,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 38.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 73.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 112.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset/C/Char_06",
+            "тип": "RectTransform",
+            "объект": 3462207087936784613,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 38.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.25,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 73.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 112.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset_W/C/Char_07_W",
+            "тип": "RectTransform",
+            "объект": 4031775900935375077,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 136.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 207.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset/C/Char_07",
+            "тип": "RectTransform",
+            "объект": 2053157361552967909,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 136.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 207.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset_W/C/Char_08_W",
+            "тип": "RectTransform",
+            "объект": -8951958810644789019,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 236.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 369.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 193.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset/C/Char_08",
+            "тип": "RectTransform",
+            "объект": 1553664228351592677,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 236.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 369.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 193.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset_W/pos_R1/offsetY_2nd/Char_09_W",
+            "тип": "RectTransform",
+            "объект": 7182245933881018597,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 342.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 517.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 142.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset/pos_R1/offsetY_2nd/Char_09",
+            "тип": "RectTransform",
+            "объект": 7181276624934389989,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 342.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 150.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 517.0,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 142.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset_W/pos_R0/offsetY_2nd/Char_ed0_W",
+            "тип": "RectTransform",
+            "объект": -7375171865451509531,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 445.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 654.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 173.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_0/offset/pos_R0/offsetY_2nd/Char_ed0",
+            "тип": "RectTransform",
+            "объект": -5003057927110145819,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 445.0,
+                "y": -13.0
+              },
+              "m_SizeDelta": {
+                "x": 147.0,
+                "y": 152.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 654.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 173.0,
+                "y": 129.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset_W/pos_R1/offsetY_1st/Char_ed1_W",
+            "тип": "RectTransform",
+            "объект": 5324390765778553061,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 544.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 800.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_1/offset/pos_R1/offsetY_1st/Char_ed1",
+            "тип": "RectTransform",
+            "объект": -2308632553173759771,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 544.0,
+                "y": 5.0
+              },
+              "m_SizeDelta": {
+                "x": 155.0,
+                "y": 185.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 800.5,
+                "y": -24.5
+              },
+              "m_SizeDelta": {
+                "x": 169.0,
+                "y": 125.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_L_W/Char_d0_W",
+            "тип": "RectTransform",
+            "объект": -5943749157386270491,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -120.0,
+                "y": 5.300000190734863
+              },
+              "m_SizeDelta": {
+                "x": 238.0,
+                "y": 192.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -152.5,
+                "y": -2.5
+              },
+              "m_SizeDelta": {
+                "x": 487.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_L/Char_d0",
+            "тип": "RectTransform",
+            "объект": 5985295142015912165,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": -120.0,
+                "y": 5.3000030517578125
+              },
+              "m_SizeDelta": {
+                "x": 238.0,
+                "y": 192.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": -152.5,
+                "y": -2.5
+              },
+              "m_SizeDelta": {
+                "x": 487.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_R_W/Char_d1_W",
+            "тип": "RectTransform",
+            "объект": 2073314726397921509,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 95.0,
+                "y": 0.0
+              },
+              "m_SizeDelta": {
+                "x": 298.0,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 232.5,
+                "y": -2.5
+              },
+              "m_SizeDelta": {
+                "x": 337.0,
+                "y": 177.0
+              }
+            }
+          },
+          {
+            "префаб": "LogicChess_Title_ger",
+            "узел": "pos_R/Char_d1",
+            "тип": "RectTransform",
+            "объект": 5098845680168061157,
+            "было": {
+              "m_AnchoredPosition": {
+                "x": 95.0,
+                "y": 0.0
+              },
+              "m_SizeDelta": {
+                "x": 298.0,
+                "y": 179.0
+              }
+            },
+            "стало": {
+              "m_AnchoredPosition": {
+                "x": 232.5,
+                "y": -2.5
+              },
+              "m_SizeDelta": {
+                "x": 337.0,
+                "y": 177.0
+              }
+            }
+          }
+        ]
+      },
+      "png_sha": "ff099bec9a025a75638ba26f42ee354aff432e2cf42c75d9b56c2865e2569f48",
+      "layer": "gk2_logicchess_trial/titles_chess_ger.png",
+      "check": "titles_chess"
     }
   ],
   "skipped": [
     {
       "name": "logic02_009_s",
       "why": "у картинки нет немецкого варианта: в слоте русского игра её не показывает, класть некуда"
+    },
+    {
+      "name": "efc_BigFont00",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont00_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont00_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "49a785991f51b12cf7a587b0a8ef4e436590d6b980f4ad7db810883677fae415",
+      "png_sha": "e09d8ecc1098cd4da29be8f1ce9243a5e8f234bff1d569c5e232e183f2567511",
+      "box": [
+        12,
+        12,
+        1424,
+        1072
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont00.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont00_mask.png",
+      "why": "слой — 48% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont01",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont01_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont01_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "67e5389ab12050867a2fa9326a207df2eb4adf92bfdb7d19fe634a47c8b798cb",
+      "png_sha": "132b0496e8c3e4b516ff068d632823f15242aad23edcfee056c91a19af79a717",
+      "box": [
+        6,
+        16,
+        1428,
+        1060
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont01.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont01_mask.png",
+      "why": "слой — 49% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont02",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont02_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont02_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "37186e3c2a7771380eb0ce4beade96f8781078227e07bdbe98e7b04910875521",
+      "png_sha": "111b21105174fd6a4db191b8d48b652349bf1814c9c1ea9e5751541f055d3605",
+      "box": [
+        24,
+        19,
+        1430,
+        1058
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont02.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont02_mask.png",
+      "why": "слой — 48% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont03",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont03_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont03_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "0cef62d5f4d609850af489c3b8cda5b9ad7765631ff657bf615285525a28bf64",
+      "png_sha": "b9dac438f518b095d91718dab19468867449a9453bf180e90b18b99cbdf7c897",
+      "box": [
+        28,
+        41,
+        1429,
+        1040
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont03.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont03_mask.png",
+      "why": "слой — 43% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont04",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont04_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont04_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "1f7acf43bfc9312fee45b3f33ca6e1d4777c0038b22c97bfb1bc28a63cbcb741",
+      "png_sha": "9d5266352b92f3542d0a383a35ee67ad086a9d7be10963afb185c5c6f2ce8db8",
+      "box": [
+        5,
+        12,
+        1432,
+        1076
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont04.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont04_mask.png",
+      "why": "слой — 53% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont05",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont05_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont05_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "c5d9739762d8f61d03a06f7dc9f46b432633780af2c22fff6ff7664247fad3c6",
+      "png_sha": "3c0ab6b97cec242a8ad69ec8302234adf2ef2e6dbc07f5dbda47052a6ed0ce2b",
+      "box": [
+        4,
+        14,
+        1440,
+        1075
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont05.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont05_mask.png",
+      "why": "слой — 47% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "cut01_009",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_009_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_009_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "5f0ac04594098fa492708b3912c70b4148098f0f7ddd9a976b74cd4303b028a7",
+      "png_sha": "e0cf133f3f297cb0bf579fa29f6747a9975c4404f809b95f26cda363181ab020",
+      "box": [
+        340,
+        60,
+        1920,
+        661
+      ],
+      "layer": "gk2_upcutlocal/cut01_009.png",
+      "mask": "gk2_upcutlocal/cut01_009_mask.png",
+      "why": "слой — 29% картинки: это рисунок, а не надпись"
     }
   ],
-  "built": "2026-10-11 23:43"
+  "built": "2026-10-18 02:28"
 }

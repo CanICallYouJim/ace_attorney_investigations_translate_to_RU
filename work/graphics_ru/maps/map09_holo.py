@@ -43,7 +43,7 @@ def colour_map(nat: np.ndarray, green: np.ndarray, step: int = 8):
     return lambda q: means[tree.query(q)[1]]
 
 
-def door_ink(img: Image.Image) -> Image.Image:
+def door_ink(img: Image.Image, colour=(0, 63, 27)) -> Image.Image:
     """Плотность букв двери по принятой маске, цвет — тёмные чернила английской голограммы."""
     ink = Image.open(RU / ".." / "case2" / "cut01_01f_ink.png").convert("L")
     ink = ink.resize((3600, 1350), Image.Resampling.LANCZOS)
@@ -57,7 +57,7 @@ def door_ink(img: Image.Image) -> Image.Image:
     alpha = (np.asarray(m).astype(float) / 255) ** 0.75
     old = np.asarray(img.crop(box)).copy()
     rgb = old[:, :, :3].astype(float)
-    dark = np.array([0, 63, 27])
+    dark = np.array(colour)
     rgb = rgb * (1 - alpha[:, :, None]) + dark * alpha[:, :, None]
     old[:, :, :3] = np.round(rgb).astype(np.uint8)
     out = img.copy()
@@ -65,7 +65,13 @@ def door_ink(img: Image.Image) -> Image.Image:
     return out
 
 
-def main() -> None:
+def main(only: str | None = None) -> None:
+    if only == "map09_00":
+        # Та же принятая на map09_02 форма/плотность; обычный серый цвет двери.
+        path = RU / "map09_00.png"
+        door_ink(Image.open(path).convert("RGBA"), (55, 55, 55)).save(path)
+        print(f"  map09_00: принятая плотность Щитовой -> {path}")
+        return
     nat_en, nat_ru = rgb(EN / "map09_00.png"), rgb(RU / "map09_00.png")
     for name in ("map09_02", "map09_03"):
         src = Image.open(EN / f"{name}.png").convert("RGBA")
@@ -93,4 +99,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--only", choices=["map09_00"])
+    main(parser.parse_args().only)

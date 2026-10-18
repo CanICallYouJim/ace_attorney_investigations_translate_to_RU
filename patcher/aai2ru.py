@@ -222,7 +222,7 @@ def preflight(game: Path, need_bytes: int) -> str | None:
 def run(args) -> int:
     import locate
 
-    game = locate.find_game(args.game_path)
+    game = locate.find_game(args.game_path, progress=say)
     if not game:
         if args.game_path:
             return fail(f"в папке «{args.game_path}» нет {locate.MARKER} — это не папка игры.")
@@ -372,7 +372,7 @@ def check(args) -> int:
     """Ничего не менять, показать план."""
     import locate
 
-    game = locate.find_game(args.game_path)
+    game = locate.find_game(args.game_path, progress=say)
     if not game:
         return fail(locate.explain_failure() if not args.game_path else
                     f"в папке «{args.game_path}» нет {locate.MARKER}.")

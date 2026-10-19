@@ -571,5 +571,45 @@
     ],
     "source_lang": "eng",
     "base": true
+  },
+  "mapObj0e_00_256_cm": {
+    "bundle": "gk2_mapobjclassic",
+    "flipped": false,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true
+  },
+  "mapObj0e_01_256_cm": {
+    "bundle": "gk2_mapobjclassic",
+    "flipped": false,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true
+  },
+  "mapObj04_00_256_cm": {
+    "bundle": "gk2_mapobjclassic",
+    "flipped": false,
+    "size": [
+      1440,
+      1493
+    ],
+    "source_lang": "eng",
+    "base": true
+  },
+  "map0d": {
+    "bundle": "gk2_mapbg",
+    "flipped": false,
+    "size": [
+      2340,
+      1260
+    ],
+    "source_lang": "eng",
+    "base": true
   }
 }

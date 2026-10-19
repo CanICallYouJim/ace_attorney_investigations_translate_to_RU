@@ -1522,5 +1522,59 @@
    }
   ],
   "сохранить_альфу": true
+ },
+ "map0d": {
+  "_": "20 октября2026,4 новые таблички: imagegen по каждой исходной вырезке, NEAREST к исходному размеру; только внутренние поля, переход2px к исходному краю, парус защищён маской исходного связного светлого объекта. Проба1. Другие надписи пока не менялись.",
+  "вклеить": [
+   {
+    "art": "../../graphics_ai/maps/map0d_wheel_plate_v1.png",
+    "box": [
+     736,
+     201,
+     796,
+     224
+    ],
+    "key_tol": 1,
+    "despill": false,
+    "shrink": 0
+   },
+   {
+    "art": "../../graphics_ai/maps/map0d_map_plate_v1.png",
+    "box": [
+     1224,
+     202,
+     1284,
+     224
+    ],
+    "key_tol": 1,
+    "despill": false,
+    "shrink": 0
+   },
+   {
+    "art": "../../graphics_ai/maps/map0d_sextant_plate_v1.png",
+    "box": [
+     616,
+     329,
+     678,
+     351
+    ],
+    "key_tol": 1,
+    "despill": false,
+    "shrink": 0
+   },
+   {
+    "art": "../../graphics_ai/maps/map0d_globe_plate_v1.png",
+    "box": [
+     801,
+     328,
+     863,
+     351
+    ],
+    "key_tol": 1,
+    "despill": false,
+    "shrink": 0
+   }
+  ],
+  "сохранить_альфу": true
  }
 }

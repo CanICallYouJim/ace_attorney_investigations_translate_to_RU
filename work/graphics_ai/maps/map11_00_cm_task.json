@@ -9,8 +9,8 @@
   "ref": "work\\graphics_ai\\maps\\map11_00_cm_ref.png",
   "prompt": "work\\graphics_ai\\maps\\map11_00_cm_gen1_prompt.txt",
   "output": "work\\graphics_ai\\maps\\map11_00_cm_gen1.png",
-  "status": "trial2 reviewed by root and map11_review; sheet shown with residual≈6.0; awaiting human acceptance; not installed",
-  "trials": 2,
+  "status": "exact accepted full-field transfer trial4 reviewed clean,installed,frozen,layer194",
+  "trials": 4,
   "zones_local": [
     [
       [
@@ -152,5 +152,6 @@
         605
       ]
     ]
-  ]
+  ],
+  "extra_authorization": "yes annotation on full accepted field transfer"
 }

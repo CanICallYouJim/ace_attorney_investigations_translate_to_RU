@@ -1,0 +1,169 @@
+{
+  "method": "direct accepted inscription fields with backgrounds; identity geometry, no AI, no warp, no resize",
+  "authorization": "20 October2026,user annotation yes to full field transfer after3trials",
+  "source": "work/graphics_ru/maps/map11_00.png",
+  "source_sha256": "c62779d6412f49812d446aab9b5113e1680f0c8bce46f7747b724eabd0309e71",
+  "box": [
+    2220,
+    440,
+    2830,
+    1080
+  ],
+  "zones_local": [
+    [
+      [
+        82,
+        298
+      ],
+      [
+        173,
+        383
+      ],
+      [
+        173,
+        429
+      ],
+      [
+        82,
+        342
+      ]
+    ],
+    [
+      [
+        83,
+        358
+      ],
+      [
+        173,
+        443
+      ],
+      [
+        173,
+        487
+      ],
+      [
+        83,
+        399
+      ]
+    ],
+    [
+      [
+        196,
+        425
+      ],
+      [
+        296,
+        448
+      ],
+      [
+        288,
+        480
+      ],
+      [
+        196,
+        459
+      ]
+    ],
+    [
+      [
+        196,
+        482
+      ],
+      [
+        338,
+        511
+      ],
+      [
+        338,
+        539
+      ],
+      [
+        196,
+        508
+      ]
+    ],
+    [
+      [
+        353,
+        73
+      ],
+      [
+        477,
+        92
+      ],
+      [
+        400,
+        499
+      ],
+      [
+        284,
+        478
+      ],
+      [
+        298,
+        407
+      ],
+      [
+        319,
+        300
+      ],
+      [
+        337,
+        194
+      ]
+    ]
+  ],
+  "exclude_local": [
+    [
+      [
+        296,
+        397
+      ],
+      [
+        306,
+        399
+      ],
+      [
+        295,
+        466
+      ],
+      [
+        285,
+        465
+      ]
+    ],
+    [
+      [
+        282,
+        480
+      ],
+      [
+        292,
+        482
+      ],
+      [
+        264,
+        607
+      ],
+      [
+        254,
+        605
+      ]
+    ]
+  ],
+  "candidate": "work\\graphics_masks\\drafts\\map11_00_cm_fields_trial4.png",
+  "sha256": "8b9233c4fba27424e1d9ea7173f09ad66fea72dee45773e22425c795650ad0f6",
+  "changed": 59595,
+  "outside": 0,
+  "shown_to_new_outside": 0,
+  "alpha_changed": 0,
+  "source_rgb_mismatch_in_fields": 0,
+  "geometry": {
+    "scale": 1,
+    "shift": [
+      0,
+      0
+    ],
+    "rotation": 0
+  }
+}

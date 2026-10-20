@@ -1,0 +1,109 @@
+{
+  "source": "map00_cm_sign_gen3.png",
+  "new_generations": 0,
+  "resample": "NEAREST",
+  "cleanup": "relabel.inpaint with complete rectangular masks; same extracted glyphs as cutout trial2",
+  "rows": [
+    {
+      "name": "left",
+      "field": [
+        382,
+        1438,
+        454,
+        1465
+      ],
+      "erase": [
+        397,
+        1442,
+        447,
+        1460
+      ],
+      "source_field": [
+        84,
+        90,
+        154,
+        110
+      ],
+      "colour": [
+        82,
+        62,
+        28
+      ],
+      "recolour": [
+        107,
+        89,
+        40
+      ],
+      "source_bbox": [
+        6,
+        2,
+        66,
+        18
+      ],
+      "at": [
+        390,
+        1442
+      ],
+      "size": [
+        60,
+        16
+      ]
+    },
+    {
+      "name": "right",
+      "field": [
+        468,
+        1487,
+        539,
+        1513
+      ],
+      "erase": [
+        470,
+        1487,
+        529,
+        1508
+      ],
+      "source_field": [
+        170,
+        137,
+        237,
+        157
+      ],
+      "colour": [
+        86,
+        62,
+        26
+      ],
+      "recolour": [
+        105,
+        83,
+        39
+      ],
+      "source_bbox": [
+        2,
+        1,
+        65,
+        19
+      ],
+      "at": [
+        472,
+        1488
+      ],
+      "size": [
+        63,
+        18
+      ]
+    }
+  ],
+  "candidate": "work\\graphics_masks\\drafts\\map00_cm_crop_trial3.png",
+  "sha256": "2e9a3975584b630b21d9f8c35b8c15eeabe34d6706d7e956cfb30224dfe24047",
+  "changed_pixels": 2211,
+  "outside": 0,
+  "alpha_changed": 0,
+  "source_original": "work/graphics_en/maps/map00_cm.png, previously verified against untouched backup",
+  "glyph_assets": [
+    "work/graphics_ai/maps/map00_cm_left_glyphs_crop2.png",
+    "work/graphics_ai/maps/map00_cm_right_glyphs_crop2.png"
+  ],
+  "source_original_preserved_outside_fields": true
+}

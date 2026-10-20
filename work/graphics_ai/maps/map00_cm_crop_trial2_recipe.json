@@ -1,0 +1,103 @@
+{
+  "source": "map00_cm_sign_gen3.png",
+  "new_generations": 0,
+  "resample": "NEAREST",
+  "cleanup": "relabel.strip_text, pad0 tol30; protect original board bevels and shadow edges",
+  "rows": [
+    {
+      "name": "left",
+      "field": [
+        382,
+        1438,
+        454,
+        1465
+      ],
+      "erase": [
+        397,
+        1442,
+        447,
+        1460
+      ],
+      "source_field": [
+        84,
+        90,
+        154,
+        110
+      ],
+      "colour": [
+        82,
+        62,
+        28
+      ],
+      "recolour": [
+        107,
+        89,
+        40
+      ],
+      "source_bbox": [
+        6,
+        2,
+        66,
+        18
+      ],
+      "at": [
+        390,
+        1442
+      ],
+      "size": [
+        60,
+        16
+      ]
+    },
+    {
+      "name": "right",
+      "field": [
+        468,
+        1487,
+        539,
+        1513
+      ],
+      "erase": [
+        470,
+        1487,
+        529,
+        1506
+      ],
+      "source_field": [
+        170,
+        137,
+        237,
+        157
+      ],
+      "colour": [
+        86,
+        62,
+        26
+      ],
+      "recolour": [
+        105,
+        83,
+        39
+      ],
+      "source_bbox": [
+        2,
+        1,
+        65,
+        19
+      ],
+      "at": [
+        472,
+        1488
+      ],
+      "size": [
+        63,
+        18
+      ]
+    }
+  ],
+  "candidate": "work\\graphics_masks\\drafts\\map00_cm_crop_trial2.png",
+  "sha256": "95476085df7092eee64df17deed070915fc5cc56a2c1603b5de967393244afbe",
+  "changed_pixels": 1584,
+  "outside": 0,
+  "alpha_changed": 0
+}

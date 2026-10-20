@@ -1,0 +1,86 @@
+{
+  "method": "direct accepted inscription fields with backgrounds; identity geometry; no AI,no warp,no resize",
+  "acceptance_evidence": "STATE12October,commit8a3a865,batch1 membership work/media_todo_2026-10-12.md",
+  "source": "work/graphics_ru/maps/map12.png",
+  "source_sha256": "5a62f8fc52eeb45277664acb7202d0f506190d42f43a3040cc1be4094b28d43e",
+  "zones_absolute": [
+    [
+      [
+        806,
+        53
+      ],
+      [
+        1094,
+        53
+      ],
+      [
+        1094,
+        126
+      ],
+      [
+        806,
+        126
+      ]
+    ],
+    [
+      [
+        2342,
+        576
+      ],
+      [
+        2352,
+        597
+      ],
+      [
+        2375,
+        617
+      ],
+      [
+        2403,
+        637
+      ],
+      [
+        2401,
+        658
+      ],
+      [
+        2386,
+        693
+      ],
+      [
+        2373,
+        689
+      ],
+      [
+        2349,
+        670
+      ],
+      [
+        2330,
+        644
+      ],
+      [
+        2322,
+        623
+      ],
+      [
+        2324,
+        609
+      ]
+    ]
+  ],
+  "candidate": "work\\graphics_masks\\drafts\\map12_cm_fields_trial1.png",
+  "sha256": "28423d3ab9b27c7bf7f0c93ac95c2f9099f1217e7150d32a879a746bc207e56b",
+  "changed": 24786,
+  "outside": 0,
+  "alpha_changed": 0,
+  "source_rgb_mismatch_in_fields": 0,
+  "geometry": {
+    "scale": 1,
+    "shift": [
+      0,
+      0
+    ],
+    "rotation": 0
+  }
+}

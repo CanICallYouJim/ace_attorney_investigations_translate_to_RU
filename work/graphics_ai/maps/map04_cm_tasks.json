@@ -1,0 +1,28 @@
+[
+  {
+    "name": "motto",
+    "box": [
+      820,
+      40,
+      1310,
+      215
+    ],
+    "input": "work\\graphics_ai\\maps\\map04_cm_motto_input.png",
+    "ref": "work\\graphics_ai\\maps\\map04_cm_motto_ref.png",
+    "prompt": "work\\graphics_ai\\maps\\map04_cm_motto_gen1_prompt.txt",
+    "output": "work\\graphics_ai\\maps\\map04_cm_motto_gen1.png"
+  },
+  {
+    "name": "entry",
+    "box": [
+      2790,
+      430,
+      2980,
+      560
+    ],
+    "input": "work\\graphics_ai\\maps\\map04_cm_entry_input.png",
+    "ref": "work\\graphics_ai\\maps\\map04_cm_entry_ref.png",
+    "prompt": "work\\graphics_ai\\maps\\map04_cm_entry_gen1_prompt.txt",
+    "output": "work\\graphics_ai\\maps\\map04_cm_entry_gen1.png"
+  }
+]

@@ -656,5 +656,23 @@
     ],
     "flipped": false,
     "source_lang": "eng"
+  },
+  "map04_cm": {
+    "bundle": "gk2_mapbgclassic",
+    "flipped": false,
+    "size": [
+      3600,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
   }
 }

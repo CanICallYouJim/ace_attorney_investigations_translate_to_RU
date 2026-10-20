@@ -1,0 +1,76 @@
+{
+  "method": "accepted high-resolution donor art; no regeneration; native darkening",
+  "user_authorization": "эта улика есть в принятых картинках правда на светлом фоне. попробуй перекопировать текст оттуда как ты делаешь обычно, просто затемни",
+  "donor": "work/graphics_ai/case3/itm02_023_для_codex_1.png",
+  "donor_to_accepted_affine": [
+    [
+      0.999981074303886,
+      0.00012161527980085978,
+      -0.08242273198633193
+    ],
+    [
+      -0.00012161527980085978,
+      0.999981074303886,
+      0.10189470284170689
+    ]
+  ],
+  "matching_points": 203,
+  "inliers": 153,
+  "target_homography": [
+    [
+      0.6977523846006646,
+      -5.9715016017119726e-05,
+      527.499678641752
+    ],
+    [
+      0.00021830200446560502,
+      0.6971515782014989,
+      101.74564393399858
+    ],
+    [
+      2.7102357935059066e-07,
+      -6.608069658591658e-08,
+      0.999999970924977
+    ]
+  ],
+  "gain": [
+    0.10256410256410256,
+    0.10236220472440945,
+    0.10185185185185185
+  ],
+  "polygon": [
+    [
+      635.428955078125,
+      224.10894775390625
+    ],
+    [
+      1093.144775390625,
+      142.68768310546875
+    ],
+    [
+      1171.821044921875,
+      358.3186950683594
+    ],
+    [
+      702.4602661132812,
+      448.5185852050781
+    ]
+  ],
+  "outside_changed": 0,
+  "alpha_changed": 0,
+  "status": "reviewed; named right-edge correction checked by root; shown for user acceptance; not installed",
+  "named_correction": {
+    "reason": "review: residual right edge of English s",
+    "box": [
+      1090,
+      170,
+      1145,
+      270
+    ],
+    "changed": 976,
+    "outside_named_zone_changed": 0,
+    "alpha_changed": 0
+  },
+  "candidate_sha256": "1495c1414875b2500c3cd5362c1db6a88e00aa2d918367f1759dfbb7d24990cb",
+  "passport": "not applicable: no text layout job; accepted raster transfer, no new typesetting. passport.py reports no job; not counted as a passed geometry test"
+}

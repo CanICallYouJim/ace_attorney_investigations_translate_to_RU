@@ -1648,5 +1648,47 @@
    }
   ],
   "сохранить_альфу": true
+ },
+ "map0b_cm": {
+  "_": "20 октября 2026: принята проба3. Две imagegen2-плашки по FHD map0b в родном размере classic; точная восстановленная точка отдельным куском. Заморожено, не пересобирать без просьбы.",
+  "вклеить": [
+   {
+    "art": "../../graphics_ai/maps/map0b_cm_accepted_left_trial3.png",
+    "box": [
+     148,
+     812,
+     345,
+     970
+    ],
+    "key_tol": 1,
+    "despill": false,
+    "shrink": 0
+   },
+   {
+    "art": "../../graphics_ai/maps/map0b_cm_accepted_right_trial3.png",
+    "box": [
+     1998,
+     812,
+     2180,
+     912
+    ],
+    "key_tol": 1,
+    "despill": false,
+    "shrink": 0
+   },
+   {
+    "art": "../../graphics_ai/maps/map0b_cm_accepted_period_trial3.png",
+    "box": [
+     2178,
+     890,
+     2188,
+     908
+    ],
+    "key_tol": 1,
+    "despill": false,
+    "shrink": 0
+   }
+  ],
+  "сохранить_альфу": true
  }
 }

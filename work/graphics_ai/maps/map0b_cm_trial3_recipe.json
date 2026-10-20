@@ -1,0 +1,141 @@
+{
+  "left": {
+    "box": [
+      90,
+      560,
+      420,
+      1000
+    ],
+    "glue": {
+      "art": "map0b_cm_left_gen2.png",
+      "вырезка": [
+        0,
+        0,
+        330,
+        440
+      ],
+      "зона": [
+        [
+          58,
+          252,
+          255,
+          410
+        ]
+      ],
+      "край": 2
+    },
+    "report": {
+      "точек": 305,
+      "масштаб": 1.0008,
+      "сдвиг": [
+        -0.1,
+        0.2
+      ],
+      "остаток_вне_зоны": 3.9,
+      "зона_px": 31482
+    }
+  },
+  "right": {
+    "box": [
+      1870,
+      540,
+      2250,
+      960
+    ],
+    "glue": {
+      "art": "map0b_cm_right_gen2.png",
+      "вырезка": [
+        0,
+        0,
+        380,
+        420
+      ],
+      "зона": [
+        [
+          128,
+          272,
+          310,
+          372
+        ]
+      ],
+      "край": 2
+    },
+    "report": {
+      "точек": 457,
+      "масштаб": 1.0004,
+      "сдвиг": [
+        0.1,
+        -0.2
+      ],
+      "остаток_вне_зоны": 3.9,
+      "зона_px": 18483
+    }
+  },
+  "candidate": "work/graphics_masks/drafts/map0b_cm_trial3.png",
+  "fields": [
+    [
+      148,
+      812,
+      345,
+      970
+    ],
+    [
+      1998,
+      812,
+      2180,
+      912
+    ]
+  ],
+  "compose": "paste native plates only inside these half-open fields onto original EN; retain original alpha",
+  "changed_pixels": 49374,
+  "outside_fields": 0,
+  "alpha_changed": 0,
+  "candidate_sha256": "34586d13ef831621957497fc1d69f4921446e9891b3cea8b55f1969bd9117831",
+  "source_sha256": "7eeb10e38f058fc19212a41fa6154c642e6a981bc01d58fe43df47ce50a26f46",
+  "generation3": "unused: generation2 passes at native composition size; do not overwrite trial2",
+  "correction_zone": [
+    2178,
+    890,
+    2188,
+    908
+  ],
+  "correction_pixels": 152,
+  "correction_outside": 0,
+  "period_glue": {
+    "box": [
+      1870,
+      540,
+      2250,
+      960
+    ],
+    "glue": {
+      "art": "map0b_cm_right_gen2.png",
+      "вырезка": [
+        0,
+        0,
+        380,
+        420
+      ],
+      "зона": [
+        [
+          128,
+          272,
+          318,
+          372
+        ]
+      ],
+      "край": 2
+    },
+    "report": {
+      "точек": 455,
+      "масштаб": 1.0004,
+      "сдвиг": [
+        0.1,
+        -0.2
+      ],
+      "остаток_вне_зоны": 3.9,
+      "зона_px": 19291
+    }
+  },
+  "review": "trial2 independent review passed except clipped terminal period; trial3 restores only named period zone, main agent inspected x6; no further subagent per 10 October rule"
+}

@@ -145,11 +145,13 @@
      "рецепт": "work/graphics_ai/maps/map00_cm_crop_trial3_recipe.json"
     },
     "map01_cm": {
-     "статус": "лист3 показан 20 октября 2026, ждёт решения",
+     "статус": "принята, установлена 20 октября 2026",
      "приводить": "новые локальные плашки classic с принятыми map00_cm и map01 как образцами; не прямой перенос1:1",
      "заслонено": "как map01",
      "кандидат": "work/graphics_masks/drafts/map01_cm_trial3.png",
-     "лист": "work/graphics_masks/checks/map01_cm_trial3/map01_cm_лист.png"
+     "лист": "work/graphics_masks/checks/map01_cm_trial3/map01_cm_лист.png",
+     "снимок": "work/graphics_masks/drafts/map01_cm_accepted_20261020.png",
+     "рецепт": "work/graphics_ai/maps/map01_cm_trial3_recipe.json"
     }
    },
    "одна_вещь": "уверен: тот же указатель на двух соседних картах; черновики уже выглядят одинаково"

@@ -629,5 +629,22 @@
       "tra"
     ],
     "base": true
+  },
+  "map00_cm": {
+    "bundle": "gk2_mapbgclassic_trial",
+    "flipped": false,
+    "size": [
+      2880,
+      1620
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "tra"
+    ]
   }
 }

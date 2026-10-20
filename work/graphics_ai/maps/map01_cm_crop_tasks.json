@@ -1,0 +1,48 @@
+{
+  "sign": {
+    "box": [
+      330,
+      215,
+      600,
+      395
+    ],
+    "ref": "work/graphics_ru/maps/map00_cm.png",
+    "refbox": [
+      330,
+      1380,
+      600,
+      1560
+    ],
+    "text": "Налево / Направо"
+  },
+  "shop": {
+    "box": [
+      2580,
+      300,
+      2880,
+      780
+    ],
+    "ref": "work/graphics_ru/maps/map01.png",
+    "text": "Самурай-доги / Теперь с са…"
+  },
+  "price": {
+    "box": [
+      2700,
+      760,
+      2880,
+      970
+    ],
+    "ref": "work/graphics_ru/maps/map01.png",
+    "text": "1 игра / за $3"
+  },
+  "range": {
+    "box": [
+      2280,
+      1040,
+      2780,
+      1260
+    ],
+    "ref": "work/graphics_ru/maps/map01.png",
+    "text": "Тир"
+  }
+}

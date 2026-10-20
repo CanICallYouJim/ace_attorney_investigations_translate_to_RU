@@ -646,5 +646,15 @@
       "kor",
       "tra"
     ]
+  },
+  "map01_cm": {
+    "bundle": "gk2_mapbgclassic_trial",
+    "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map01_cm_eng.png",
+    "size": [
+      2880,
+      1260
+    ],
+    "flipped": false,
+    "source_lang": "eng"
   }
 }

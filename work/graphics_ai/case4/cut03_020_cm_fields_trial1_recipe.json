@@ -1,0 +1,179 @@
+{
+  "method": "native accepted cut03_020 fields; no generated/warped/resized text; map11 geometry maps masks only",
+  "source": "work/graphics_ru/case4/cut03_020.png",
+  "source_sha256": "792f81f100d03fa87e4384d241361dc0098cb5415d778246073c43a8474c2ece",
+  "zones_absolute": [
+    [
+      [
+        1475,
+        492
+      ],
+      [
+        1536,
+        549
+      ],
+      [
+        1536,
+        580
+      ],
+      [
+        1475,
+        522
+      ]
+    ],
+    [
+      [
+        1475,
+        532
+      ],
+      [
+        1536,
+        589
+      ],
+      [
+        1536,
+        619
+      ],
+      [
+        1475,
+        560
+      ]
+    ],
+    [
+      [
+        1551,
+        577
+      ],
+      [
+        1618,
+        592
+      ],
+      [
+        1612,
+        614
+      ],
+      [
+        1551,
+        600
+      ]
+    ],
+    [
+      [
+        1551,
+        615
+      ],
+      [
+        1646,
+        635
+      ],
+      [
+        1646,
+        653
+      ],
+      [
+        1551,
+        633
+      ]
+    ],
+    [
+      [
+        1656,
+        342
+      ],
+      [
+        1739,
+        355
+      ],
+      [
+        1687,
+        627
+      ],
+      [
+        1610,
+        613
+      ],
+      [
+        1619,
+        565
+      ],
+      [
+        1633,
+        494
+      ],
+      [
+        1645,
+        423
+      ]
+    ]
+  ],
+  "exclude_absolute": [
+    [
+      [
+        1618,
+        558
+      ],
+      [
+        1624,
+        560
+      ],
+      [
+        1617,
+        604
+      ],
+      [
+        1610,
+        604
+      ]
+    ],
+    [
+      [
+        1608,
+        614
+      ],
+      [
+        1615,
+        615
+      ],
+      [
+        1596,
+        699
+      ],
+      [
+        1590,
+        697
+      ]
+    ]
+  ],
+  "mask_geometry": {
+    "from": "map11_01_cm",
+    "to": "cut03_020_cm",
+    "matrix": [
+      [
+        0.6675726547249093,
+        -9.956228349555235e-07,
+        -61.93410737040986
+      ],
+      [
+        9.956228349555235e-07,
+        0.6675726547249093,
+        -0.3311431773463957
+      ]
+    ],
+    "inliers": 1617,
+    "purpose": "mask coordinates only; accepted lettering copied natively from cut03_020"
+  },
+  "candidate": "work\\graphics_masks\\drafts\\cut03_020_cm_fields_trial1.png",
+  "sha256": "66abf1b904cb9213a3b8fb09e5e3610aca289b7399dcafb36b15b481e2bc8dd0",
+  "changed": 28225,
+  "outside": 0,
+  "alpha_changed": 0,
+  "source_rgb_mismatch_in_fields": 0,
+  "text_geometry": {
+    "scale": 1,
+    "shift": [
+      0,
+      0
+    ],
+    "rotation": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "from": "map11_01_cm",
+  "to": "cut03_020_cm",
+  "matrix": [
+    [
+      0.6675726547249093,
+      -9.956228349555235e-07,
+      -61.93410737040986
+    ],
+    [
+      9.956228349555235e-07,
+      0.6675726547249093,
+      -0.3311431773463957
+    ]
+  ],
+  "inliers": 1617,
+  "purpose": "mask coordinates only; accepted lettering copied natively from cut03_020"
+}

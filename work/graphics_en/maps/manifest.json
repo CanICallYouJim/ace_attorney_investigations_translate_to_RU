@@ -611,5 +611,23 @@
     ],
     "source_lang": "eng",
     "base": true
+  },
+  "map0b_cm": {
+    "bundle": "gk2_mapbgclassic",
+    "flipped": false,
+    "size": [
+      2340,
+      1260
+    ],
+    "source_lang": "eng",
+    "langs": [
+      "eng",
+      "ger",
+      "fre",
+      "kor",
+      "sim",
+      "tra"
+    ],
+    "base": true
   }
 }

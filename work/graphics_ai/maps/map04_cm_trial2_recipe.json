@@ -1,0 +1,71 @@
+{
+  "method": "paste_art.plate on NEAREST x4 crop; matching at enlarged pixel scale, same generated art; NEAREST back to native",
+  "plaques": [
+    {
+      "art": "map04_cm_motto_plate1.png",
+      "вырезка": [
+        820,
+        40,
+        1310,
+        215
+      ],
+      "зона": [
+        [
+          48,
+          60,
+          447,
+          111
+        ]
+      ],
+      "край": 2,
+      "свет": false
+    },
+    {
+      "art": "map04_cm_entry_plate1.png",
+      "вырезка": [
+        2790,
+        430,
+        2980,
+        560
+      ],
+      "зона": [
+        [
+          24,
+          49,
+          166,
+          88
+        ]
+      ],
+      "край": 2,
+      "свет": false
+    }
+  ],
+  "reports": [
+    {
+      "точек": 35,
+      "масштаб": 0.9868,
+      "сдвиг": [
+        0.7,
+        4.0
+      ],
+      "остаток_вне_зоны": 3.6,
+      "зона_px": 327385
+    },
+    {
+      "точек": 80,
+      "масштаб": 1.0009,
+      "сдвиг": [
+        -0.2,
+        -0.1
+      ],
+      "остаток_вне_зоны": 1.8,
+      "зона_px": 89333
+    }
+  ],
+  "candidate": "work\\graphics_masks\\drafts\\map04_cm_trial2.png",
+  "outside": 0,
+  "alpha_changed": 0,
+  "changed_pixels": 25498,
+  "sha256": "9621e6b12447dfb8200550df9eac60dbf0046abda9312f9c1a69a576cd162b59",
+  "exception": "motto scale 0.9868: -1.32% alignment; only letter field transferred, no frame/background outside fields transferred; must be declared ≈, not green"
+}

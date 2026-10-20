@@ -1,0 +1,89 @@
+{
+  "method": "native accepted whole fields from map0d; exact shifts from EN-to-EN matching; clipped atlas fountain strips remain clipped; original alpha",
+  "source": "work/graphics_ru/maps/map0d.png",
+  "source_sha256": "fcae7d1a74490f8d4deeb0d237a1bd271b6eba2eeb27965c3342de06d7099560",
+  "candidate": "work/graphics_masks/drafts/mapObj0d_00_256_fields_trial1.png",
+  "sha256": "506931f051ef4538e1031c0cd738c594e511bc73cf755e401ded21018a7a08dc",
+  "fields": [
+    {
+      "source": [
+        616,
+        329,
+        630,
+        351
+      ],
+      "target": [
+        346,
+        149,
+        360,
+        171
+      ],
+      "meaning": "clipped sextant plaque; native EN match0.999618"
+    },
+    {
+      "source": [
+        616,
+        329,
+        630,
+        351
+      ],
+      "target": [
+        706,
+        149,
+        720,
+        171
+      ],
+      "meaning": "clipped sextant plaque; native EN match0.999618"
+    },
+    {
+      "source": [
+        616,
+        329,
+        630,
+        351
+      ],
+      "target": [
+        1066,
+        149,
+        1080,
+        171
+      ],
+      "meaning": "clipped sextant plaque; native EN match0.999618"
+    },
+    {
+      "source": [
+        1716,
+        331,
+        1757,
+        353
+      ],
+      "target": [
+        1086,
+        331,
+        1127,
+        353
+      ],
+      "meaning": "Light of Life; native EN match0.99888"
+    },
+    {
+      "source": [
+        652,
+        1172,
+        731,
+        1228
+      ],
+      "target": [
+        1310,
+        812,
+        1389,
+        868
+      ],
+      "meaning": "ship poster; native EN match0.98315"
+    }
+  ],
+  "changed": 6054,
+  "outside": 0,
+  "alpha_changed": 0,
+  "source_rgb_mismatch_in_fields": 0,
+  "status": "installed, frozen; layer204"
+}

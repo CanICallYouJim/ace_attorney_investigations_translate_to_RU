@@ -1,0 +1,38 @@
+{
+  "layer_count": 204,
+  "previous_unchanged": 202,
+  "install_session": 95712,
+  "install_exit_code": 0,
+  "layers_session": 32020,
+  "layers_exit_code": 0,
+  "etalon_session": 84434,
+  "etalon_exit_code": 0,
+  "etalon_seen": 53,
+  "pictures": {
+    "mapObj0d_00_256": {
+      "png_sha256": "506931f051ef4538e1031c0cd738c594e511bc73cf755e401ded21018a7a08dc",
+      "composite_rgb_mismatch": 0,
+      "composite_alpha_mismatch": 0
+    },
+    "mapObj0d_00_256_cm": {
+      "png_sha256": "7d2e9b2e864229082d921d0ee30f9989b5eebd3573ccfd40c4434558e1c3b5f5",
+      "composite_rgb_mismatch": 0,
+      "composite_alpha_mismatch": 0
+    }
+  },
+  "bundles": {
+    "gk2_mapobj_assets_all_5f6cf182a33fecd994b83c144e840988.bundle": "6cd88e6e38ee770ebc464825791ca370919440a46a07589fe541fe1ad8c66d54",
+    "gk2_mapobjclassic_assets_all_973de739212f22405243a5299399590a.bundle": "df34a6228c9537ca4f00add9e32697b9dfe770b65ac8b5d5b75622e119eb8ebf"
+  },
+  "local_gk2_progress": {
+    "gk2_pictures_done": 202,
+    "gk2_pictures_total": 257,
+    "gk2_pictures_percent": "78,6"
+  },
+  "public_gk2_progress": {
+    "gk2_pictures_done": 200,
+    "gk2_pictures_total": 257,
+    "gk2_pictures_percent": "77,8",
+    "release": "v2026-10-20.1"
+  }
+}

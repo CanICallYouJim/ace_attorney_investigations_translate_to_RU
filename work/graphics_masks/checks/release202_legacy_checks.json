@@ -19,5 +19,6 @@
       "png_sha": "1f05e9079b8d288d5ae8f1672241787ec749425db1e69eeca7c93e303f9e9c7b"
     }
   },
-  "decision": "Preserve accepted frozen images per AGENTS rule13. Their public layers are byte-for-byte identical to previous origin/main. All202 shipped images pass independent patcher/selftest; do not regenerate accepted PNGs to satisfy stale authoring recipes."
+  "decision": "Preserve accepted frozen images per AGENTS rule13. Their public layers are byte-for-byte identical to previous origin/main. All202 shipped images pass independent patcher/selftest; do not regenerate accepted PNGs to satisfy stale authoring recipes.",
+  "baseline_main_commit": "661d4b53567e7ceecd86c79a1bc3764745654c44"
 }

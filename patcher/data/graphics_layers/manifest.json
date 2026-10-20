@@ -1733,6 +1733,31 @@
       "erased": null
     },
     {
+      "name": "map0d",
+      "bundle": "gk2_mapbg",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map0d_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map0d_eng.png",
+      "size": [
+        2340,
+        1260
+      ],
+      "flipped": false,
+      "source_sha": "b033c45939f2e873d34a25a969403dcbad3775adfb082dd0ae166f7d882c432b",
+      "png_sha": "fcae7d1a74490f8d4deeb0d237a1bd271b6eba2eeb27965c3342de06d7099560",
+      "box": [
+        616,
+        110,
+        1780,
+        1228
+      ],
+      "layer": "gk2_mapbg/map0d.png",
+      "mask": "gk2_mapbg/map0d_mask.png",
+      "changed": 15998,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "map11_00",
       "bundle": "gk2_mapbg",
       "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map11_00_ger.png",
@@ -1908,6 +1933,56 @@
       "erased": null
     },
     {
+      "name": "map04_cm",
+      "bundle": "gk2_mapbgclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map04_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map04_cm_eng.png",
+      "size": [
+        3600,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "b80f4070756093d7396eb1b8b743a6759690b8aea8a9c50d749940d71a214ef8",
+      "png_sha": "9621e6b12447dfb8200550df9eac60dbf0046abda9312f9c1a69a576cd162b59",
+      "box": [
+        868,
+        100,
+        2956,
+        518
+      ],
+      "layer": "gk2_mapbgclassic/map04_cm.png",
+      "mask": "gk2_mapbgclassic/map04_cm_mask.png",
+      "changed": 25498,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map08_00_cm",
+      "bundle": "gk2_mapbgclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map08_00_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map08_00_cm_eng.png",
+      "size": [
+        2160,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "7a14fa320d622b5f724d73dafbda7d8a57a01fe90db534de21622d77028d3da5",
+      "png_sha": "ea0d06064a9596dd25b4faaf14788df9416754f92290bebbf275c9e0abeee92b",
+      "box": [
+        1796,
+        486,
+        1897,
+        553
+      ],
+      "layer": "gk2_mapbgclassic/map08_00_cm.png",
+      "mask": "gk2_mapbgclassic/map08_00_cm_mask.png",
+      "changed": 6663,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "map08_01_cm",
       "bundle": "gk2_mapbgclassic",
       "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map08_01_cm_ger.png",
@@ -2033,6 +2108,206 @@
       "erased": null
     },
     {
+      "name": "map0b_cm",
+      "bundle": "gk2_mapbgclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map0b_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map0b_cm_eng.png",
+      "size": [
+        2340,
+        1260
+      ],
+      "flipped": false,
+      "source_sha": "8d872f29e0dc3d6147e51082dad8d50efa62d17effdb1a25a370fcdac5e09f3e",
+      "png_sha": "34586d13ef831621957497fc1d69f4921446e9891b3cea8b55f1969bd9117831",
+      "box": [
+        148,
+        812,
+        2188,
+        970
+      ],
+      "layer": "gk2_mapbgclassic/map0b_cm.png",
+      "mask": "gk2_mapbgclassic/map0b_cm_mask.png",
+      "changed": 49374,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map0d_cm",
+      "bundle": "gk2_mapbgclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map0d_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map0d_cm_eng.png",
+      "size": [
+        2340,
+        1260
+      ],
+      "flipped": false,
+      "source_sha": "5ccd7f648edfd56ac1fc9317c0fe34b4a95248e858b5b9ee3b6ec993bae47633",
+      "png_sha": "7c95c0654c8e8b1fe16d2528fa6ee6ee6d9f668ac72ad21fe3f469e3f0b8b00b",
+      "box": [
+        616,
+        103,
+        1786,
+        1228
+      ],
+      "layer": "gk2_mapbgclassic/map0d_cm.png",
+      "mask": "gk2_mapbgclassic/map0d_cm_mask.png",
+      "changed": 19092,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map11_00_cm",
+      "bundle": "gk2_mapbgclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map11_00_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map11_00_cm_eng.png",
+      "size": [
+        3060,
+        1620
+      ],
+      "flipped": false,
+      "source_sha": "a7ef1cb4288991d196ded9c429b4bd7a8eade82a26115af19348bb7b274c46e2",
+      "png_sha": "8b9233c4fba27424e1d9ea7173f09ad66fea72dee45773e22425c795650ad0f6",
+      "box": [
+        2302,
+        513,
+        2698,
+        980
+      ],
+      "layer": "gk2_mapbgclassic/map11_00_cm.png",
+      "mask": "gk2_mapbgclassic/map11_00_cm_mask.png",
+      "changed": 59595,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map11_01_cm",
+      "bundle": "gk2_mapbgclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map11_01_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map11_01_cm_eng.png",
+      "size": [
+        3060,
+        1620
+      ],
+      "flipped": false,
+      "source_sha": "0dd939c78707c18a7e6f892e1f720f965aa6863015b2e43d648d2e0129a076ed",
+      "png_sha": "32af7b09275973fc5ae02e47257c91c8ec7c0764bb414f45efe4dca15f019bc8",
+      "box": [
+        2302,
+        513,
+        2698,
+        980
+      ],
+      "layer": "gk2_mapbgclassic/map11_01_cm.png",
+      "mask": "gk2_mapbgclassic/map11_01_cm_mask.png",
+      "changed": 61752,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map12_cm",
+      "bundle": "gk2_mapbgclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map12_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map12_cm_eng.png",
+      "size": [
+        2745,
+        1170
+      ],
+      "flipped": false,
+      "source_sha": "db85792bb464ac6d677e6b02bb6a49b52b7ab2ef198d4ed334b4fafd0dbf954d",
+      "png_sha": "28423d3ab9b27c7bf7f0c93ac95c2f9099f1217e7150d32a879a746bc207e56b",
+      "box": [
+        806,
+        53,
+        2404,
+        694
+      ],
+      "layer": "gk2_mapbgclassic/map12_cm.png",
+      "mask": "gk2_mapbgclassic/map12_cm_mask.png",
+      "changed": 24786,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map13_cm",
+      "bundle": "gk2_mapbgclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map13_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map13_cm_eng.png",
+      "size": [
+        2880,
+        1800
+      ],
+      "flipped": false,
+      "source_sha": "c36300edf38fd75085834e43682cc9b82453f7e985a214e91b2408dc2037a481",
+      "png_sha": "65aa5689e968527c2c31a1da4f421bacb2878cd767eb417319d563aaadbabfdc",
+      "box": [
+        0,
+        100,
+        2880,
+        649
+      ],
+      "layer": "gk2_mapbgclassic/map13_cm.png",
+      "mask": "gk2_mapbgclassic/map13_cm_mask.png",
+      "changed": 89997,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map00_cm",
+      "bundle": "gk2_mapbgclassic_trial",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map00_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map00_cm_eng.png",
+      "size": [
+        2880,
+        1620
+      ],
+      "flipped": false,
+      "source_sha": "a6b8cecbc5e65fc4c62ee7fb349ab022935ba61e15b859e4afcf9d2fe382b373",
+      "png_sha": "2e9a3975584b630b21d9f8c35b8c15eeabe34d6706d7e956cfb30224dfe24047",
+      "box": [
+        390,
+        1442,
+        535,
+        1508
+      ],
+      "layer": "gk2_mapbgclassic_trial/map00_cm.png",
+      "mask": "gk2_mapbgclassic_trial/map00_cm_mask.png",
+      "changed": 2211,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "map01_cm",
+      "bundle": "gk2_mapbgclassic_trial",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map01_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map01_cm_eng.png",
+      "size": [
+        2880,
+        1260
+      ],
+      "flipped": false,
+      "source_sha": "f95d18bdcb35ec21e5e4fcfdfb04751758c3afa73f1aea517fbe3261a8ffbcc9",
+      "png_sha": "2fe804c8f12a92d582d83b96315bfb04721083eadf5fcb076e07b285140389a0",
+      "box": [
+        389,
+        272,
+        2876,
+        1260
+      ],
+      "layer": "gk2_mapbgclassic_trial/map01_cm.png",
+      "mask": "gk2_mapbgclassic_trial/map01_cm_mask.png",
+      "changed": 49070,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "mapObj04_00_256",
       "bundle": "gk2_mapobj",
       "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj04_00_256_ger.png",
@@ -2108,6 +2383,31 @@
       "erased": null
     },
     {
+      "name": "mapObj11_01_256",
+      "bundle": "gk2_mapobj",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj11_01_256_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj11_01_256_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "a82281c8256d7a6c764237c3215b3ba3ff25bc2949d56fac00e69de25b7c870d",
+      "png_sha": "9e29ffe4d4d63eb48eaeb610388fb79ab5d6187520cf89e7f8386190c0306085",
+      "box": [
+        1235,
+        71,
+        1352,
+        336
+      ],
+      "layer": "gk2_mapobj/mapObj11_01_256.png",
+      "mask": "gk2_mapobj/mapObj11_01_256_mask.png",
+      "changed": 1489,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "mapObj12_00_256",
       "bundle": "gk2_mapobj",
       "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj12_00_256_ger.png",
@@ -2129,6 +2429,81 @@
       "mask": "gk2_mapobj/mapObj12_00_256_mask.png",
       "changed": 4064,
       "outside": 4064,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj04_00_256_cm",
+      "bundle": "gk2_mapobjclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj04_00_256_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj04_00_256_cm_eng.png",
+      "size": [
+        1440,
+        1493
+      ],
+      "flipped": true,
+      "source_sha": "ef2b39c0b8ce2736ddbeeb3bdbc01e50bb79071f70fcd831989b92d25dfe4bfb",
+      "png_sha": "e1070abe778fca5bf94916b64f4fa8d53b348d732412905ff451b4e6d2fe8fc8",
+      "box": [
+        279,
+        477,
+        357,
+        512
+      ],
+      "layer": "gk2_mapobjclassic/mapObj04_00_256_cm.png",
+      "mask": "gk2_mapobjclassic/mapObj04_00_256_cm_mask.png",
+      "changed": 2729,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj11_01_256_cm",
+      "bundle": "gk2_mapobjclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj11_01_256_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj11_01_256_cm_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "5e04ffccfc83a67436d16c1738c9326cf657de999944e5be2030cc64737cc688",
+      "png_sha": "8e16212c29a6df96ed78315316090580c55eada3756c9b414b277ecdadce5cbd",
+      "box": [
+        1230,
+        63,
+        1361,
+        346
+      ],
+      "layer": "gk2_mapobjclassic/mapObj11_01_256_cm.png",
+      "mask": "gk2_mapobjclassic/mapObj11_01_256_cm_mask.png",
+      "changed": 4903,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj12_00_256_cm",
+      "bundle": "gk2_mapobjclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj12_00_256_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj12_00_256_cm_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "0c23f3a0dcea2f19779002b82bddd4ff439a102a16fb1df8feab5eaa6e8f845d",
+      "png_sha": "9389badbf439b120c61bf6fbfab97b08a4467c0ceb0d5fbe33f60fa93601a54f",
+      "box": [
+        973,
+        440,
+        1059,
+        560
+      ],
+      "layer": "gk2_mapobjclassic/mapObj12_00_256_cm.png",
+      "mask": "gk2_mapobjclassic/mapObj12_00_256_cm_mask.png",
+      "changed": 5577,
+      "outside": null,
       "tails": null,
       "erased": null
     },
@@ -4079,6 +4454,31 @@
       "mask": "gk2_upcutlocal_classic/cut01_01f_cm_mask.png",
       "changed": 13264,
       "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut03_020_cm",
+      "bundle": "gk2_upcutlocal_classic",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/Classic/cut03_020_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/Classic/cut03_020_cm_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "79f9b5dd596be72086c05a4fe614262e887ee5a9d434aa363d5ca81473bdd6f2",
+      "png_sha": "66abf1b904cb9213a3b8fb09e5e3610aca289b7399dcafb36b15b481e2bc8dd0",
+      "box": [
+        1475,
+        342,
+        1740,
+        654
+      ],
+      "layer": "gk2_upcutlocal_classic/cut03_020_cm.png",
+      "mask": "gk2_upcutlocal_classic/cut03_020_cm_mask.png",
+      "changed": 28225,
+      "outside": null,
       "tails": null,
       "erased": null
     },
@@ -8186,5 +8586,5 @@
       "why": "слой — 29% картинки: это рисунок, а не надпись"
     }
   ],
-  "built": "2026-10-20 00:42"
+  "built": "2026-10-20 19:58"
 }

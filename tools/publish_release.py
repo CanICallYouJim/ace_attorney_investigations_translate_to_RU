@@ -139,6 +139,51 @@ def copy_layers(dest: Path) -> int:
     return len(manifest["pictures"])
 
 
+def graphics_progress(families: dict, manifest: dict, policy: dict) -> dict:
+    """GK2 only; unclassified localized textures remain in the denominator.
+
+    A shipped layer is the evidence of completion. An accepted local PNG which
+    cannot be distributed is still pending for readers of the public README.
+    """
+    source = {v["base"].rsplit("/", 1)[-1].rsplit(".", 1)[0]
+              for v in families.values()
+              if v["bundle"].startswith("gk2_") and v["type"] == "Texture2D"}
+    source |= set(policy["gk2_interface"])
+    excluded = set(policy["excluded"])
+    unknown = excluded - source
+    if unknown:
+        raise ValueError(f"graphics exclusions missing from source: {sorted(unknown)}")
+    shipped = {e["name"] for e in manifest["pictures"]}
+    unknown = shipped - source - set(policy["outside_gk2"])
+    if unknown:
+        raise ValueError(f"shipped pictures missing from GK2 inventory: {sorted(unknown)}")
+    if shipped & excluded:
+        raise ValueError(f"translated pictures classified as excluded: {sorted(shipped & excluded)}")
+    required = source - excluded
+    if not required:
+        raise ValueError("empty GK2 picture inventory")
+    done = len(shipped & required)
+    total = len(required)
+    return {"gk2_pictures_done": done, "gk2_pictures_total": total,
+            "gk2_pictures_percent": f"{100 * done / total:.1f}".replace(".", ",")}
+
+
+def write_graphics_bar(out: Path, stats: dict) -> None:
+    done, total = stats["gk2_pictures_done"], stats["gk2_pictures_total"]
+    label = f"Картинки GK2: {done} из {total} ({stats['gk2_pictures_percent']}%)"
+    width = 600 * done / total
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="600" height="48" '
+           f'viewBox="0 0 600 48" role="img" aria-labelledby="title">\n'
+           f'  <title id="title">{label}</title>\n'
+           '  <rect width="600" height="48" rx="6" fill="#172554"/>\n'
+           f'  <text x="14" y="25" fill="white" font-family="sans-serif" '
+           f'font-size="16">{label}</text>\n'
+           '  <rect y="38" width="600" height="10" fill="#334155"/>\n'
+           f'  <rect y="38" width="{width:.2f}" height="10" fill="#22c55e"/>\n'
+           '</svg>\n')
+    (out / "graphics-progress.svg").write_text(svg, encoding="utf-8", newline="\n")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -171,6 +216,10 @@ def main() -> int:
     save_json(data_out / "strings.json", strings)
     stats |= more
     stats["pictures_done"] = copy_layers(data_out / "graphics_layers")
+    stats |= graphics_progress(
+        load_json(WORK / "localized_assets.json")["families"],
+        load_json(data_out / "graphics_layers" / "manifest.json"),
+        load_json(WORK / "graphics_ru" / "coverage.json"))
 
     stats |= {
         "built": time.strftime("%Y-%m-%d"),
@@ -183,6 +232,7 @@ def main() -> int:
         encoding="utf-8")
 
     write_showcase(out, stats)
+    write_graphics_bar(out, stats)
 
     size = sum(p.stat().st_size for p in patcher_out.rglob("*") if p.is_file())
     print(f"\nреплик:  {stats['segments_done']} из {stats['segments_total']}")
@@ -190,7 +240,12 @@ def main() -> int:
     print(f"дерево:  {out}  ({size / 2**20:.1f} МБ)")
 
     if args.exe:
-        return build_exe(patcher_out, out)
+        code = build_exe(patcher_out, out)
+        if code == 0:
+            # An old executable may have filled exe_mb before this rebuild.
+            # Render again using the size of the executable actually published.
+            write_showcase(out, stats)
+        return code
     print("\n(.exe не собирался; для сборки запусти с --exe)")
     return 0
 

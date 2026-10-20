@@ -1,0 +1,41 @@
+{
+  "exe_sha256": "3f5ddd70ec3b1c3e7d196fa7f1ba5ba578fbbf22ef59ccd0e7b6991f73944782",
+  "exe_bytes": 83434324,
+  "embedded_version": {
+    "segments_total": 33422,
+    "segments_done": 33422,
+    "strings_total": 2823,
+    "strings_done": 2517,
+    "pictures_done": 202,
+    "gk2_pictures_done": 200,
+    "gk2_pictures_total": 257,
+    "gk2_pictures_percent": "77,8",
+    "built": "2026-10-20",
+    "unitypy": "1.25.3",
+    "fonttools": "4.63.0"
+  },
+  "embedded_graphics_files_checked": 379,
+  "embedded_manifest_exact": true,
+  "exe_check_session": 15941,
+  "exe_check_exit_code": 0,
+  "full_selftest_session": 65762,
+  "full_selftest_exit_code": 0,
+  "all_checks_session": 17578,
+  "all_checks_exit_code": 1,
+  "all_checks_successful": 27,
+  "all_checks_total": 29,
+  "legacy_check_proof": "work/graphics_masks/checks/release202_legacy_checks.json",
+  "main_commit": "7bfe3571d1dc2a587f2bb1e927e11399ae5621c0",
+  "main_pushed": true,
+  "release": {
+    "url": "https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-10-20.1",
+    "tag": "v2026-10-20.1",
+    "latest": true,
+    "upload_session": 58005,
+    "upload_exit_code": 0,
+    "asset_size": 83434324,
+    "asset_digest": "sha256:3f5ddd70ec3b1c3e7d196fa7f1ba5ba578fbbf22ef59ccd0e7b6991f73944782",
+    "download_url": "https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/download/v2026-10-20.1/AAI2-RU.exe",
+    "target_commit": "7bfe3571d1dc2a587f2bb1e927e11399ae5621c0"
+  }
+}

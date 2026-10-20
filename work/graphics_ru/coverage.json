@@ -1,0 +1,449 @@
+{
+  "scope": "GK2 localized Texture2D families plus GK2-specific interface images. HD/classic count separately; one named picture per layer recipe. New/unclassified localized textures default to pending. Only shipped graphics count as translated. Shared collection launch screens, video/audio and 3D meshes are outside this bitmap counter.",
+  "source": "work/localized_assets.json; docs/decisions.md (9,12,20 October 2026); work/media_inventory.md (explicit no-text entries)",
+  "gk2_interface": [
+    "Sousa_TextCutBG_R_03",
+    "Sousa_TextCutBG_R_04",
+    "Sousa_TextCutBG_R_05",
+    "Sousa_TextCutBG_R_07",
+    "Date_0_0",
+    "Date_0_1",
+    "Date_1_0",
+    "Date_1_1",
+    "Date_2_0",
+    "Date_2_1",
+    "Date_3_0",
+    "Date_3_1",
+    "Situation_0",
+    "Situation_1",
+    "Situation_2",
+    "Situation_3",
+    "Situation_4",
+    "Situation_5",
+    "Situation_6",
+    "splash_ger2",
+    "titles_StEd_ger",
+    "titles_chess_ger"
+  ],
+  "outside_gk2": [
+    "hikarikabin",
+    "original"
+  ],
+  "excluded": {
+    "ed_credit00": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit01": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit02": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit03": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit04": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit05": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit06": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit07": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit08": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit09": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit0a": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit0b": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit0c": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit0d": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit0e": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit0f": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit10": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit11": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit12": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit13": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit14": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit15": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit16": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit17": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "ed_credit18": {
+      "kind": "original",
+      "reason": "Credits intentionally kept original by user.",
+      "evidence": "docs/decisions.md: 12 October 2026, «Титры ed_credit* — оставить»"
+    },
+    "chrBust21b_000": {
+      "kind": "original",
+      "reason": "SAFETY FIRST on nurse cap intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust21b_001": {
+      "kind": "original",
+      "reason": "SAFETY FIRST on nurse cap intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust21b_008": {
+      "kind": "original",
+      "reason": "SAFETY FIRST on nurse cap intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust21b_009": {
+      "kind": "original",
+      "reason": "SAFETY FIRST on nurse cap intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust21d_000": {
+      "kind": "original",
+      "reason": "SAFETY FIRST on nurse cap intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "cast21d_00_l": {
+      "kind": "original",
+      "reason": "SAFETY FIRST on nurse cap intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust202_000": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust202_002": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust202_003": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust202_004": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust202_005": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust202_009": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chr202_000": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chr202_001": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chr202_002": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chr202_003": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chr202_004": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chr202_005": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chr202_006": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chr202_007": {
+      "kind": "original",
+      "reason": "Reporter sponsor logos intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "chrBust201_00a_1": {
+      "kind": "original",
+      "reason": "Small branded boxes intentionally kept original.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63"
+    },
+    "map0c": {
+      "kind": "original",
+      "reason": "SAMSON drum branding intentionally kept original, same item in both modes.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63; work/graphics_ru/families.json"
+    },
+    "map0c_cm": {
+      "kind": "original",
+      "reason": "SAMSON drum branding intentionally kept original, same item in both modes.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63; work/graphics_ru/families.json"
+    },
+    "mapObj0c_00_256": {
+      "kind": "original",
+      "reason": "SAMSON drum branding intentionally kept original, same item in both modes.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63; work/graphics_ru/families.json"
+    },
+    "mapObj0c_00_256_cm": {
+      "kind": "original",
+      "reason": "SAMSON drum branding intentionally kept original, same item in both modes.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63; work/graphics_ru/families.json"
+    },
+    "map0f_00": {
+      "kind": "original",
+      "reason": "Zodiac lettering intentionally kept original, same item in related views.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63; work/graphics_ru/families.json"
+    },
+    "map0f_00_cm": {
+      "kind": "original",
+      "reason": "Zodiac lettering intentionally kept original, same item in related views.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63; work/graphics_ru/families.json"
+    },
+    "mapVS0f_0": {
+      "kind": "original",
+      "reason": "Zodiac lettering intentionally kept original, same item in related views.",
+      "evidence": "docs/decisions.md: 9 October 2026, answer63; work/graphics_ru/families.json"
+    },
+    "mapObj0e_00_256_cm": {
+      "kind": "original",
+      "reason": "Display already Celsius; user kept flower card original. No translation layer required.",
+      "evidence": "docs/decisions.md: 20 October 2026, flower card"
+    },
+    "mapObj0e_01_256_cm": {
+      "kind": "original",
+      "reason": "Display already Celsius; user kept flower card original. No translation layer required.",
+      "evidence": "docs/decisions.md: 20 October 2026, flower card"
+    },
+    "cut00_023": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "cut00_031": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "itm00_00d_00_l": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "cut01_011": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "itm01_007_00_l": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "itm01_014_00_l": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "itm03_011_00_l": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "itm03_019_00_l": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "cut04_021": {
+      "kind": "no_text",
+      "reason": "Explicitly identified as containing no text in source inventory. Corrected old false negatives with actual text remain included.",
+      "evidence": "work/media_inventory.md: row «текста нет»; work/graphics_en/case*/разбор.json"
+    },
+    "map05_00": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map05_00_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map05_01": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map05_01_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map0e_00": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map0e_00_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map0e_01": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map0e_01_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map14": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map14_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map22": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "map22_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "mapObj05_00_256": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "mapObj05_00_256_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "mapObj0b_00_256": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "mapObj0b_00_256_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "mapObj14_00_256": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "mapObj14_00_256_cm": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "chrBust003_003": {
+      "kind": "no_text",
+      "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
+      "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    }
+  }
+}

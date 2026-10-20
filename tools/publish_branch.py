@@ -112,7 +112,10 @@ def main() -> int:
                   "или не нужна: тот же вызов с --force.", file=sys.stderr)
             return 1
 
-    work = Path(tempfile.mkdtemp(prefix="aai2-main-"))
+    work = Path(tempfile.mkdtemp(prefix="aai2-main-")).resolve()
+    # All recursive cleanup below must stay in this newly created temp checkout.
+    if work.parent != Path(tempfile.gettempdir()).resolve() or not work.name.startswith("aai2-main-"):
+        raise RuntimeError(f"unexpected publication worktree path: {work}")
     shutil.rmtree(work)                      # git worktree хочет несуществующий путь
     try:
         if ref_exists(BRANCH):

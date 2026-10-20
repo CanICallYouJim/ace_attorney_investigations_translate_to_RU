@@ -1,0 +1,23 @@
+{
+  "full_checks_passed": 27,
+  "full_checks_total": 29,
+  "failed_checks": [
+    "prints.py --check case1 (staging mismatch cut00_007/cut00_010, documented 2October)",
+    "sign.py --check case3 (recipe mismatch cut02_032)"
+  ],
+  "frozen_images": {
+    "cut00_007": {
+      "unchanged_from_previous_public_release": true,
+      "png_sha": "222f7fcb1c5acfdd6861aa6c1bb6b7e39f25893e69f5482503aa5f1a183a6c33"
+    },
+    "cut00_010": {
+      "unchanged_from_previous_public_release": true,
+      "png_sha": "f01f9a21feda64916d1de2b674e1e70320d4b44aed7875fa2af84cd504ce4f97"
+    },
+    "cut02_032": {
+      "unchanged_from_previous_public_release": true,
+      "png_sha": "1f05e9079b8d288d5ae8f1672241787ec749425db1e69eeca7c93e303f9e9c7b"
+    }
+  },
+  "decision": "Preserve accepted frozen images per AGENTS rule13. Their public layers are byte-for-byte identical to previous origin/main. All202 shipped images pass independent patcher/selftest; do not regenerate accepted PNGs to satisfy stale authoring recipes."
+}

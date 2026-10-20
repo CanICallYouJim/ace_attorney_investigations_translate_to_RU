@@ -1,0 +1,80 @@
+{
+  "method": "existing newspaper.small_copy accepted cut03_00e field, independent EN-to-EN perspective per screen; source brightness matched by tool",
+  "source": "work/graphics_ru/case4/cut03_00e.png",
+  "source_sha256": "d60d700264017ea57796f20b3f5d2ebd6b3e3edc2741d8d991924072b42dff14",
+  "candidate": "work\\graphics_masks\\drafts\\mapObj11_01_256_cm_fields_trial1.png",
+  "sha256": "459909d53e12c2cb9b3c575c3f0e02df0678ced46f95bc1aaf5787dfe01bde38",
+  "boxes": [
+    [
+      1200,
+      0,
+      1440,
+      235
+    ],
+    [
+      1200,
+      235,
+      1440,
+      460
+    ]
+  ],
+  "zones_absolute": [
+    [
+      [
+        1231,
+        63
+      ],
+      [
+        1360,
+        100
+      ],
+      [
+        1360,
+        118
+      ],
+      [
+        1231,
+        81
+      ]
+    ],
+    [
+      [
+        1230,
+        287
+      ],
+      [
+        1360,
+        326
+      ],
+      [
+        1360,
+        345
+      ],
+      [
+        1230,
+        306
+      ]
+    ]
+  ],
+  "job": {
+    "копия": "cut03_00e",
+    "перспектива": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "k": 0.12,
+    "контраст": true,
+    "свет": true,
+    "запас": 1
+  },
+  "reports": [
+    "перспектива cut03_00e: точек 30, опорных 17, пикс. 769",
+    "перспектива cut03_00e: точек 12, опорных 8, пикс. 938"
+  ],
+  "outside": 86,
+  "alpha_changed": 0,
+  "changed": 1707,
+  "status": "rejected: second-screen homography only8 inliers, outside86 and line crosses frame"
+}

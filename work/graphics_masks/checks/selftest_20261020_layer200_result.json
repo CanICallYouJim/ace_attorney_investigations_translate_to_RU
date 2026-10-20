@@ -1,0 +1,18 @@
+{
+  "command": ".venv/Scripts/python.exe -u patcher/selftest.py",
+  "exec_session": 99197,
+  "exit_code": 0,
+  "layer_count_at_start": 200,
+  "font_count": 7,
+  "fonts": [
+    "FOT-MODEMINALARGEPRO-R",
+    "FOT-UDKAKUGO_SMALLPR6-M",
+    "FOT-MODEMINALARGEPRO-B",
+    "FOT-MODEMINALARGEPRO-M",
+    "FOT-UDMarugo_LargePro-DB",
+    "FOT-UDMarugo_LargePro-DB#1",
+    "LiberationSans"
+  ],
+  "log": "work/graphics_masks/checks/selftest_20261020_layer200.log",
+  "note": "Native redirected Cyrillic log text has replacement characters; ASCII asset names/counts and successful terminal session exit are preserved. No rerun solely for log encoding."
+}

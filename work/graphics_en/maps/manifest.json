@@ -742,5 +742,25 @@
     ],
     "source_lang": "eng",
     "base": true
+  },
+  "mapObj11_01_256": {
+    "bundle": "gk2_mapobj",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true
+  },
+  "mapObj11_01_256_cm": {
+    "bundle": "gk2_mapobjclassic",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
+    ],
+    "source_lang": "eng",
+    "base": true
   }
 }

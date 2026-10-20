@@ -1,0 +1,34 @@
+{
+  "layer_count": 202,
+  "previous_unchanged": 200,
+  "install_session": 66725,
+  "install_exit_code": 0,
+  "layers_session": 47784,
+  "layers_exit_code": 0,
+  "pictures": {
+    "mapObj11_01_256": {
+      "png_sha256": "9e29ffe4d4d63eb48eaeb610388fb79ab5d6187520cf89e7f8386190c0306085",
+      "composite_rgb_mismatch": 0,
+      "composite_alpha_mismatch": 0
+    },
+    "mapObj11_01_256_cm": {
+      "png_sha256": "8e16212c29a6df96ed78315316090580c55eada3756c9b414b277ecdadce5cbd",
+      "composite_rgb_mismatch": 0,
+      "composite_alpha_mismatch": 0
+    }
+  },
+  "bundles": {
+    "gk2_mapobj_assets_all_5f6cf182a33fecd994b83c144e840988.bundle": {
+      "live_build_installed_sha256": "38cd04031d6f0ffbc4effea93cdddc49444c103841dc0ba94eb852b257a87886"
+    },
+    "gk2_mapobjclassic_assets_all_973de739212f22405243a5299399590a.bundle": {
+      "live_build_installed_sha256": "daf045a096173924ff353556fc1d892c90edfa3be38d0fdb45334af0c2d5e5d5"
+    }
+  },
+  "etalon_maps": {
+    "seen": 51,
+    "exit_code": 0,
+    "exec_session": 50461,
+    "log": "work/graphics_masks/checks/etalon_maps_20261020_layer202.log"
+  }
+}

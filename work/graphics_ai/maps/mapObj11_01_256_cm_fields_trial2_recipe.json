@@ -1,0 +1,51 @@
+{
+  "method": "native whole fields from correctly aligned FHD candidate (itself accepted cut03_00e perspective transfer); keep classic alpha",
+  "source": "work\\graphics_masks\\drafts\\mapObj11_01_256_fields_trial1.png",
+  "upstream_recipe": "work/graphics_ai/maps/mapObj11_01_256_fields_trial1_recipe.json",
+  "source_sha256": "9e29ffe4d4d63eb48eaeb610388fb79ab5d6187520cf89e7f8386190c0306085",
+  "candidate": "work\\graphics_masks\\drafts\\mapObj11_01_256_cm_fields_trial2.png",
+  "sha256": "8e16212c29a6df96ed78315316090580c55eada3756c9b414b277ecdadce5cbd",
+  "zones_absolute": [
+    [
+      [
+        1231,
+        63
+      ],
+      [
+        1360,
+        100
+      ],
+      [
+        1360,
+        118
+      ],
+      [
+        1231,
+        81
+      ]
+    ],
+    [
+      [
+        1230,
+        287
+      ],
+      [
+        1360,
+        326
+      ],
+      [
+        1360,
+        345
+      ],
+      [
+        1230,
+        306
+      ]
+    ]
+  ],
+  "outside": 0,
+  "alpha_changed": 0,
+  "changed": 4903,
+  "source_rgb_mismatch_in_fields": 0,
+  "status": "installed layer202"
+}

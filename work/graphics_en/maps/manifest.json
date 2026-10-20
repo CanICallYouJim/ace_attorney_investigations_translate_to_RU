@@ -692,5 +692,25 @@
       "sim",
       "tra"
     ]
+  },
+  "map11_00_cm": {
+    "bundle": "gk2_mapbgclassic",
+    "flipped": false,
+    "size": [
+      3060,
+      1620
+    ],
+    "source_lang": "eng",
+    "base": true
+  },
+  "map11_01_cm": {
+    "bundle": "gk2_mapbgclassic",
+    "flipped": false,
+    "size": [
+      3060,
+      1620
+    ],
+    "source_lang": "eng",
+    "base": true
   }
 }

@@ -674,5 +674,23 @@
       "sim",
       "tra"
     ]
+  },
+  "map0d_cm": {
+    "bundle": "gk2_mapbgclassic",
+    "flipped": false,
+    "size": [
+      2340,
+      1260
+    ],
+    "source_lang": "eng",
+    "base": true,
+    "langs": [
+      "eng",
+      "fre",
+      "ger",
+      "kor",
+      "sim",
+      "tra"
+    ]
   }
 }

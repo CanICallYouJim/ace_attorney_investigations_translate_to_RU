@@ -1,0 +1,294 @@
+[
+  {
+    "name": "upperleft",
+    "box": [
+      570,
+      115,
+      1330,
+      390
+    ],
+    "input": "work\\graphics_ai\\maps\\map0d_cm_upperleft_input.png",
+    "ref": "work\\graphics_ai\\maps\\map0d_cm_upperleft_ref.png",
+    "prompt": "work\\graphics_ai\\maps\\map0d_cm_upperleft_gen1_prompt.txt",
+    "output": "work\\graphics_ai\\maps\\map0d_cm_upperleft_gen1.png",
+    "zones_absolute": [
+      [
+        736,
+        201,
+        796,
+        224
+      ],
+      [
+        1224,
+        202,
+        1284,
+        224
+      ],
+      [
+        616,
+        329,
+        678,
+        351
+      ],
+      [
+        801,
+        328,
+        863,
+        351
+      ]
+    ],
+    "zones_local": [
+      [
+        166,
+        86,
+        226,
+        109
+      ],
+      [
+        654,
+        87,
+        714,
+        109
+      ],
+      [
+        46,
+        214,
+        108,
+        236
+      ],
+      [
+        231,
+        213,
+        293,
+        236
+      ]
+    ]
+  },
+  {
+    "name": "upperright",
+    "box": [
+      1430,
+      55,
+      1820,
+      395
+    ],
+    "input": "work\\graphics_ai\\maps\\map0d_cm_upperright_input.png",
+    "ref": "work\\graphics_ai\\maps\\map0d_cm_upperright_ref.png",
+    "prompt": "work\\graphics_ai\\maps\\map0d_cm_upperright_gen1_prompt.txt",
+    "output": "work\\graphics_ai\\maps\\map0d_cm_upperright_gen1.png",
+    "zones_absolute": [
+      [
+        1483,
+        226,
+        1571,
+        243
+      ],
+      [
+        1546,
+        331,
+        1589,
+        353
+      ],
+      [
+        1716,
+        331,
+        1757,
+        353
+      ],
+      [
+        1755,
+        103,
+        1786,
+        122
+      ]
+    ],
+    "zones_local": [
+      [
+        53,
+        171,
+        141,
+        188
+      ],
+      [
+        116,
+        276,
+        159,
+        298
+      ],
+      [
+        286,
+        276,
+        327,
+        298
+      ],
+      [
+        325,
+        48,
+        356,
+        67
+      ]
+    ]
+  },
+  {
+    "name": "ship",
+    "box": [
+      1270,
+      730,
+      1500,
+      925
+    ],
+    "input": "work\\graphics_ai\\maps\\map0d_cm_ship_input.png",
+    "ref": "work\\graphics_ai\\maps\\map0d_cm_ship_ref.png",
+    "prompt": "work\\graphics_ai\\maps\\map0d_cm_ship_gen1_prompt.txt",
+    "output": "work\\graphics_ai\\maps\\map0d_cm_ship_gen1.png",
+    "zones_absolute": [
+      [
+        [
+          1331,
+          835
+        ],
+        [
+          1438,
+          787
+        ],
+        [
+          1447,
+          823
+        ],
+        [
+          1437,
+          832
+        ],
+        [
+          1430,
+          843
+        ],
+        [
+          1426,
+          840
+        ],
+        [
+          1415,
+          844
+        ],
+        [
+          1404,
+          859
+        ],
+        [
+          1400,
+          857
+        ],
+        [
+          1387,
+          859
+        ],
+        [
+          1373,
+          873
+        ],
+        [
+          1368,
+          871
+        ],
+        [
+          1357,
+          873
+        ],
+        [
+          1343,
+          886
+        ]
+      ]
+    ],
+    "zones_local": [
+      [
+        [
+          61,
+          105
+        ],
+        [
+          168,
+          57
+        ],
+        [
+          177,
+          93
+        ],
+        [
+          167,
+          102
+        ],
+        [
+          160,
+          113
+        ],
+        [
+          156,
+          110
+        ],
+        [
+          145,
+          114
+        ],
+        [
+          134,
+          129
+        ],
+        [
+          130,
+          127
+        ],
+        [
+          117,
+          129
+        ],
+        [
+          103,
+          143
+        ],
+        [
+          98,
+          141
+        ],
+        [
+          87,
+          143
+        ],
+        [
+          73,
+          156
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "poster",
+    "box": [
+      610,
+      1090,
+      790,
+      1260
+    ],
+    "input": "work\\graphics_ai\\maps\\map0d_cm_poster_input.png",
+    "ref": "work\\graphics_ai\\maps\\map0d_cm_poster_ref.png",
+    "prompt": "work\\graphics_ai\\maps\\map0d_cm_poster_gen1_prompt.txt",
+    "output": "work\\graphics_ai\\maps\\map0d_cm_poster_gen1.png",
+    "zones_absolute": [
+      [
+        652,
+        1172,
+        731,
+        1228
+      ]
+    ],
+    "zones_local": [
+      [
+        42,
+        82,
+        121,
+        138
+      ]
+    ]
+  }
+]

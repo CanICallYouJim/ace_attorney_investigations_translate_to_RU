@@ -574,7 +574,7 @@
   },
   "mapObj0e_00_256_cm": {
     "bundle": "gk2_mapobjclassic",
-    "flipped": false,
+    "flipped": true,
     "size": [
       1440,
       1440
@@ -584,7 +584,7 @@
   },
   "mapObj0e_01_256_cm": {
     "bundle": "gk2_mapobjclassic",
-    "flipped": false,
+    "flipped": true,
     "size": [
       1440,
       1440
@@ -594,7 +594,7 @@
   },
   "mapObj04_00_256_cm": {
     "bundle": "gk2_mapobjclassic",
-    "flipped": false,
+    "flipped": true,
     "size": [
       1440,
       1493
@@ -729,6 +729,16 @@
     "size": [
       2880,
       1800
+    ],
+    "source_lang": "eng",
+    "base": true
+  },
+  "mapObj12_00_256_cm": {
+    "bundle": "gk2_mapobjclassic",
+    "flipped": true,
+    "size": [
+      1440,
+      1440
     ],
     "source_lang": "eng",
     "base": true

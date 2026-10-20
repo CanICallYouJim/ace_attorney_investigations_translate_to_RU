@@ -1,0 +1,276 @@
+{
+  "scope": "Only _cm counterparts of bases already present in shipped layer190. Not full game graphics coverage.",
+  "layer_count": 200,
+  "rows": [
+    {
+      "classic": "cut01_01f_cm",
+      "base": "cut01_01f",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_upcutlocal_classic"
+      ],
+      "en_path": "work/graphics_en/case2/cut01_01f_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "cut03_020_cm",
+      "base": "cut03_020",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_upcutlocal_classic"
+      ],
+      "en_path": "work/graphics_en/case4/cut03_020_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map00_cm",
+      "base": "map00",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic_trial"
+      ],
+      "en_path": "work/graphics_en/maps/map00_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map01_cm",
+      "base": "map01",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic_trial"
+      ],
+      "en_path": "work/graphics_en/maps/map01_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map03_cm",
+      "base": "map03",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map03_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map04_cm",
+      "base": "map04",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map04_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map08_00_cm",
+      "base": "map08_00",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map08_00_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map08_01_cm",
+      "base": "map08_01",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map08_01_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map09_00_cm",
+      "base": "map09_00",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map09_00_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map09_01_cm",
+      "base": "map09_01",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map09_01_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map09_02_cm",
+      "base": "map09_02",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map09_02_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map09_03_cm",
+      "base": "map09_03",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map09_03_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map0b_cm",
+      "base": "map0b",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map0b_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map0d_cm",
+      "base": "map0d",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map0d_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map11_00_cm",
+      "base": "map11_00",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map11_00_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map11_01_cm",
+      "base": "map11_01",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map11_01_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map12_cm",
+      "base": "map12",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map12_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "map13_cm",
+      "base": "map13",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapbgclassic"
+      ],
+      "en_path": "work/graphics_en/maps/map13_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "mapObj04_00_256_cm",
+      "base": "mapObj04_00_256",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapobjclassic"
+      ],
+      "en_path": "work/graphics_en/maps/mapObj04_00_256_cm.png",
+      "status": "installed"
+    },
+    {
+      "classic": "mapObj0e_00_256_cm",
+      "base": "mapObj0e_00_256",
+      "in_layer": false,
+      "active_png": false,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapobjclassic"
+      ],
+      "en_path": "work/graphics_en/maps/mapObj0e_00_256_cm.png",
+      "note": "20 Oct: user chose to keep unread flower card as original. Classic display already20C, no identity layer needed. See docs/decisions.md.",
+      "status": "original_by_user_decision"
+    },
+    {
+      "classic": "mapObj0e_01_256_cm",
+      "base": "mapObj0e_01_256",
+      "in_layer": false,
+      "active_png": false,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapobjclassic"
+      ],
+      "en_path": "work/graphics_en/maps/mapObj0e_01_256_cm.png",
+      "note": "20 Oct: user chose to keep unread flower card as original. Classic display already20C, no identity layer needed. See docs/decisions.md.",
+      "status": "original_by_user_decision"
+    },
+    {
+      "classic": "mapObj12_00_256_cm",
+      "base": "mapObj12_00_256",
+      "in_layer": true,
+      "active_png": true,
+      "en_cached": true,
+      "bundles": [
+        "gk2_mapobjclassic"
+      ],
+      "en_path": "work/graphics_en/maps/mapObj12_00_256_cm.png",
+      "status": "installed"
+    }
+  ],
+  "shipped": 20,
+  "remaining": 0,
+  "original_by_user_decision": 2,
+  "closed": 22
+}

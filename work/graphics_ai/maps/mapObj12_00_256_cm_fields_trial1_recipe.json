@@ -1,0 +1,72 @@
+{
+  "method": "native accepted whole text field; no generation,warp,resize; preserve classic alpha",
+  "source": "work\\graphics_ru\\maps\\mapObj12_00_256.png",
+  "source_sha256": "a8149e5513189ca0e40c1829f91d20a8a85004dafe47973761a3450eef562ade",
+  "source_size": [
+    1440,
+    1440
+  ],
+  "target_size": [
+    1440,
+    1440
+  ],
+  "orientation": "face-up cache, original bundle vertically flipped",
+  "zones_absolute": [
+    [
+      [
+        995,
+        440
+      ],
+      [
+        1012,
+        470
+      ],
+      [
+        1053,
+        499
+      ],
+      [
+        1058,
+        512
+      ],
+      [
+        1046,
+        546
+      ],
+      [
+        1030,
+        559
+      ],
+      [
+        1012,
+        550
+      ],
+      [
+        988,
+        525
+      ],
+      [
+        975,
+        502
+      ],
+      [
+        973,
+        481
+      ]
+    ]
+  ],
+  "candidate": "work\\graphics_masks\\drafts\\mapObj12_00_256_cm_fields_trial1.png",
+  "sha256": "9389badbf439b120c61bf6fbfab97b08a4467c0ceb0d5fbe33f60fa93601a54f",
+  "changed": 5577,
+  "outside": 0,
+  "alpha_changed": 0,
+  "source_rgb_mismatch_in_fields": 0,
+  "text_geometry": {
+    "scale": 1,
+    "shift": [
+      0,
+      0
+    ],
+    "rotation": 0
+  }
+}

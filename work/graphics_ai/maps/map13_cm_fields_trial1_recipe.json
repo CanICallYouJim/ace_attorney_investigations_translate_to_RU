@@ -1,0 +1,176 @@
+{
+  "method": "direct accepted six banner fields from map13; no generation,warp,resize",
+  "source": "work/graphics_ru/maps/map13.png",
+  "source_sha256": "caa08a817ebd83116fb35573e98f5540b49d2a1796eb0645de893a7d47d20a3f",
+  "acceptance_evidence": "STATE13October;batch3 accepted,flags accepted separately;commit67b6e96",
+  "zones_absolute": [
+    [
+      [
+        624,
+        110
+      ],
+      [
+        684,
+        110
+      ],
+      [
+        684,
+        412
+      ],
+      [
+        624,
+        412
+      ]
+    ],
+    [
+      [
+        2235,
+        100
+      ],
+      [
+        2278,
+        100
+      ],
+      [
+        2278,
+        390
+      ],
+      [
+        2235,
+        390
+      ]
+    ],
+    [
+      [
+        280,
+        381
+      ],
+      [
+        346,
+        381
+      ],
+      [
+        346,
+        486
+      ],
+      [
+        280,
+        486
+      ]
+    ],
+    [
+      [
+        2539,
+        375
+      ],
+      [
+        2603,
+        375
+      ],
+      [
+        2603,
+        478
+      ],
+      [
+        2539,
+        478
+      ]
+    ],
+    [
+      [
+        0,
+        212
+      ],
+      [
+        74,
+        280
+      ],
+      [
+        74,
+        648
+      ],
+      [
+        0,
+        590
+      ]
+    ],
+    [
+      [
+        2808,
+        276
+      ],
+      [
+        2879,
+        232
+      ],
+      [
+        2879,
+        600
+      ],
+      [
+        2808,
+        646
+      ]
+    ]
+  ],
+  "exclude_absolute": [
+    [
+      [
+        270,
+        450
+      ],
+      [
+        345,
+        497
+      ],
+      [
+        380,
+        520
+      ],
+      [
+        240,
+        520
+      ],
+      [
+        240,
+        430
+      ]
+    ],
+    [
+      [
+        2530,
+        500
+      ],
+      [
+        2605,
+        449
+      ],
+      [
+        2640,
+        440
+      ],
+      [
+        2640,
+        510
+      ],
+      [
+        2500,
+        510
+      ]
+    ]
+  ],
+  "candidate": "work\\graphics_masks\\drafts\\map13_cm_fields_trial1.png",
+  "sha256": "65aa5689e968527c2c31a1da4f421bacb2878cd767eb417319d563aaadbabfdc",
+  "changed": 89997,
+  "outside": 0,
+  "alpha_changed": 0,
+  "source_rgb_mismatch_in_fields": 0,
+  "geometry": {
+    "scale": 1,
+    "shift": [
+      0,
+      0
+    ],
+    "rotation": 0
+  }
+}

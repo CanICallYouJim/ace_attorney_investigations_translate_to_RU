@@ -1,0 +1,23 @@
+{
+  "name": "itm00_00f_00_l",
+  "new_method_trial": 1,
+  "generations": 2,
+  "first_generation_rejected_before_paste": "almost complete lines instead of fold clipping",
+  "source": "accepted cut00_003, hash matches installed",
+  "matching": {
+    "inliers": 137,
+    "scale": 0.9995,
+    "shift": [
+      0.0,
+      0.1
+    ],
+    "outside_residual": 1.7
+  },
+  "changed": 6713,
+  "outside_zone": 0,
+  "alpha_changed": 0,
+  "candidate_sha256": "d2ff006f25c27bd126fafa6581c222acc2fb1a3dcde631fc6d96b9ec3a352ddc",
+  "status": "independent review clean; shown to user; not installed",
+  "independent_review": "newspaper_ref_review; letters, clipping, curved baseline, family, center and English outside zone clean; independently6713changed/outside0/alpha0",
+  "shown_snapshot": "work/graphics_masks/drafts/itm00_00f_00_l_показанная_20261022.png"
+}

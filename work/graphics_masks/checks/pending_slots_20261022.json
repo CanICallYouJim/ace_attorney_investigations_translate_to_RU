@@ -1,0 +1,814 @@
+{
+  "manifest_count": 210,
+  "gk2_done": 208,
+  "gk2_total": 257,
+  "pending_count": 49,
+  "no_indexed_german": [
+    {
+      "name": "cut01_014",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut01_014_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut01_014_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut01_017",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_017_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_017_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut01_019",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_019_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_019_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut01_028",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_028_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_028_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut01_02f",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng",
+        "fre",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut01_02f_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut01_02f_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut01_03a",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_03a_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_03a_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut02_01e",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng",
+        "fre",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_01e_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut02_01e_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut04_00e",
+      "has_indexed_german": false,
+      "available_variants": [
+        "fre"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_00e_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_00e.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut04_00f",
+      "has_indexed_german": false,
+      "available_variants": [
+        "fre"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_00f_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_00f.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cut04_013",
+      "has_indexed_german": false,
+      "available_variants": [
+        "fre"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_013_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_013.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cutObj04_03b",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng",
+        "fre",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_cutobjlocal_assets_all_bd5f2c952170d0356171fa6ad4f039e5.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutObj04_03b_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutObj04_03b_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "cutobj03_004",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng",
+        "fre",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_cutobjlocal_assets_all_bd5f2c952170d0356171fa6ad4f039e5.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj03_004_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/cutobj_local.bin/FHD/cutobj03_004_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "itm01_029_00_l",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_idcom_assets_all_432720da4ce179ec83766000fd330e70.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_029_00_l_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_029_00_l_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "itm02_019_00_l",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng",
+        "fre",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idcom_assets_all_432720da4ce179ec83766000fd330e70.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_019_00_l_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_019_00_l_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "logic01_006_s",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_logickeyword_assets_all_6bb747206f93053d72ce051c83b148bf.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic01_006_s_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic01_006_s_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "logic01_00b_s",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_logickeyword_assets_all_6bb747206f93053d72ce051c83b148bf.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic01_00b_s_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic01_00b_s_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "logic01_00e_s",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_logickeyword_assets_all_6bb747206f93053d72ce051c83b148bf.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic01_00e_s_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic01_00e_s_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "logic01_013_s",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_logickeyword_assets_all_6bb747206f93053d72ce051c83b148bf.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic01_013_s_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic01_013_s_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "logic02_009_s",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_logickeyword_assets_all_6bb747206f93053d72ce051c83b148bf.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic02_009_s_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic02_009_s_eng.png",
+      "source_key_present": true
+    },
+    {
+      "name": "mapVS14_0",
+      "has_indexed_german": false,
+      "available_variants": [
+        "eng"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ],
+      "raw_container_checked": true,
+      "expected_german_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS14_0_ger.png",
+      "german_key_present": false,
+      "source_key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/mapVS14_0_eng.png",
+      "source_key_present": true
+    }
+  ],
+  "indexed_pending": [
+    {
+      "name": "cut00_00d",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_trial_assets_all_916865000d1863717e8e18c269dade03.bundle"
+      ]
+    },
+    {
+      "name": "cut01_009",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ]
+    },
+    {
+      "name": "cut03_00f",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ]
+    },
+    {
+      "name": "cut03_011",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ]
+    },
+    {
+      "name": "cut03_01a",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ]
+    },
+    {
+      "name": "cut03_036",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ]
+    },
+    {
+      "name": "cut03_039",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ]
+    },
+    {
+      "name": "cut04_014",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle"
+      ]
+    },
+    {
+      "name": "cut04_035",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_upcutlocal_assets_all_e93c79c510779ddaf1ac5b25c72e67d9.bundle"
+      ]
+    },
+    {
+      "name": "efc_BigFont00",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idlocal_trial_assets_all_95f1886552a950f4922c84d92f93143e.bundle"
+      ]
+    },
+    {
+      "name": "efc_BigFont01",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idlocal_trial_assets_all_95f1886552a950f4922c84d92f93143e.bundle"
+      ]
+    },
+    {
+      "name": "efc_BigFont02",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idlocal_trial_assets_all_95f1886552a950f4922c84d92f93143e.bundle"
+      ]
+    },
+    {
+      "name": "efc_BigFont03",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idlocal_trial_assets_all_95f1886552a950f4922c84d92f93143e.bundle"
+      ]
+    },
+    {
+      "name": "efc_BigFont04",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idlocal_trial_assets_all_95f1886552a950f4922c84d92f93143e.bundle"
+      ]
+    },
+    {
+      "name": "efc_BigFont05",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idlocal_trial_assets_all_95f1886552a950f4922c84d92f93143e.bundle"
+      ]
+    },
+    {
+      "name": "itm00_00b_00_l",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idcom_trial_assets_all_5a0d87f6071866e95741175dd531e419.bundle"
+      ]
+    },
+    {
+      "name": "itm00_00f_00_l",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idcom_trial_assets_all_5a0d87f6071866e95741175dd531e419.bundle"
+      ]
+    },
+    {
+      "name": "itm01_002_00_l",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idcom_assets_all_432720da4ce179ec83766000fd330e70.bundle"
+      ]
+    },
+    {
+      "name": "itm02_01b_00_l",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_idcom_assets_all_432720da4ce179ec83766000fd330e70.bundle"
+      ]
+    },
+    {
+      "name": "itm02_039_00_l",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_idcom_assets_all_432720da4ce179ec83766000fd330e70.bundle"
+      ]
+    },
+    {
+      "name": "logic00_00e_s",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_logickeyword_trial_assets_all_8e000fe052c8993a4e1820d013d11847.bundle"
+      ]
+    },
+    {
+      "name": "logic02_025_s",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_logickeyword_assets_all_6bb747206f93053d72ce051c83b148bf.bundle"
+      ]
+    },
+    {
+      "name": "logic02_02f_s",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_logickeyword_assets_all_6bb747206f93053d72ce051c83b148bf.bundle"
+      ]
+    },
+    {
+      "name": "logic03_010_s",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger"
+      ],
+      "bundles": [
+        "gk2_logickeyword_assets_all_6bb747206f93053d72ce051c83b148bf.bundle"
+      ]
+    },
+    {
+      "name": "map02",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_mapbg_trial_assets_all_74bf5c5e2c46c9702da08d86fc4d0888.bundle"
+      ]
+    },
+    {
+      "name": "map02_cm",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_mapbgclassic_trial_assets_all_f0672a227d544b3cfcef0e8364cd03cf.bundle"
+      ]
+    },
+    {
+      "name": "mapObj02_00_256",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_mapobj_trial_assets_all_a4863c888c16f7cead57681edf9cf563.bundle"
+      ]
+    },
+    {
+      "name": "mapObj02_00_256_cm",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_mapobjclassic_trial_assets_all_eb288ae462cc72fe8a7876791cd4dd6d.bundle"
+      ]
+    },
+    {
+      "name": "opObj02_032_256",
+      "has_indexed_german": true,
+      "available_variants": [
+        "eng",
+        "fre",
+        "ger",
+        "kor",
+        "sim",
+        "tra"
+      ],
+      "bundles": [
+        "gk2_openinglocal_assets_all_4e6b76d071f280cf3d60ba42d08d72eb.bundle"
+      ]
+    }
+  ],
+  "note": "read-only inventory audit; no exclusions, language choices, code or PNG changes",
+  "original_bundles_checked": 5,
+  "raw_confirmed_missing_german": 20,
+  "next_action_groups": {
+    "missing_german_slot": {
+      "names": [
+        "cut01_014",
+        "cut01_017",
+        "cut01_019",
+        "cut01_028",
+        "cut01_02f",
+        "cut01_03a",
+        "cut02_01e",
+        "cut04_00e",
+        "cut04_00f",
+        "cut04_013",
+        "cutObj04_03b",
+        "cutobj03_004",
+        "itm01_029_00_l",
+        "itm02_019_00_l",
+        "logic01_006_s",
+        "logic01_00b_s",
+        "logic01_00e_s",
+        "logic01_013_s",
+        "logic02_009_s",
+        "mapVS14_0"
+      ],
+      "next": "generic installer support plus in-game confirmation; old question26; several also need text decisions",
+      "evidence": "raw backup-container verification in each row"
+    },
+    "accepted_not_shipped_area_gate": {
+      "names": [
+        "cut01_009",
+        "efc_BigFont00",
+        "efc_BigFont01",
+        "efc_BigFont02",
+        "efc_BigFont03",
+        "efc_BigFont04",
+        "efc_BigFont05"
+      ],
+      "next": "explicit per-asset area exception or another transport strategy; do not change MAX_SHARE silently",
+      "evidence": "accepted_unshipped_20261022.json; layer_localized.SHARE_ALLOWED comment"
+    },
+    "newspaper_waiting_acceptance": {
+      "names": [
+        "itm00_00f_00_l"
+      ],
+      "next": "user decision on shown SHA d2ff006f25c27bd126fafa6581c222acc2fb1a3dcde631fc6d96b9ec3a352ddc",
+      "evidence": "docs/STATE.md22October; newspaper_codex_trial1/review.txt"
+    },
+    "atlas_waiting_acceptance": {
+      "names": [
+        "opObj02_032_256"
+      ],
+      "next": "resolve shown whisk correction from12October; do not silently regenerate exhausted-budget picture",
+      "evidence": "docs/STATE.md12October; drafts/probe/opObj02_032_256_p1.png"
+    },
+    "deferred_logos": {
+      "names": [
+        "cut00_00d",
+        "itm00_00b_00_l",
+        "logic00_00e_s",
+        "map02",
+        "map02_cm",
+        "mapObj02_00_256",
+        "mapObj02_00_256_cm",
+        "itm02_01b_00_l",
+        "logic02_025_s",
+        "logic02_02f_s"
+      ],
+      "next": "confirm deferred B.D.G.D/B.O.G.O and Angel’s Cookbook decisions before changing world labels",
+      "evidence": "docs/STATE.md questions40,57; docs/decisions.md15September"
+    },
+    "prices_need_explicit_decision": {
+      "names": [
+        "cut03_00f",
+        "cut03_011",
+        "cut03_01a",
+        "cut03_036",
+        "cut03_039",
+        "cut04_014",
+        "logic03_010_s"
+      ],
+      "next": "resolve price-format question56; source inventory does not constitute a user exception",
+      "evidence": "docs/STATE.md question56; work/media_inventory.md"
+    },
+    "exhausted_trials_need_method_choice": {
+      "names": [
+        "itm01_002_00_l",
+        "itm02_039_00_l",
+        "cut04_035"
+      ],
+      "next": "show saved best candidate and ask another method/accept; no silent extra trials",
+      "evidence": "docs/STATE.md questions6,17,22,34"
+    }
+  },
+  "classification_limit": "Primary next gate only; word choices and approvals must be revalidated against latest user replies before acting. No new exceptions or translations created."
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "cut04_00e",
+    "source": "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle",
+    "base": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_00e.png",
+    "available_variants": {
+      "fre": {
+        "path": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_00e_fre.png",
+        "w": 1920,
+        "h": 1080,
+        "fmt": "25",
+        "bytes": 0
+      }
+    },
+    "has_german": false,
+    "crop": [
+      450,
+      340,
+      690,
+      435
+    ]
+  },
+  {
+    "name": "cut04_00f",
+    "source": "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle",
+    "base": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_00f.png",
+    "available_variants": {
+      "fre": {
+        "path": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_00f_fre.png",
+        "w": 1920,
+        "h": 1080,
+        "fmt": "25",
+        "bytes": 0
+      }
+    },
+    "has_german": false,
+    "crop": [
+      450,
+      340,
+      690,
+      435
+    ]
+  },
+  {
+    "name": "cut04_013",
+    "source": "gk2_upcut_assets_all_2e964885c7bc0e7fbfea6ec139f82fd4.bundle",
+    "base": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_013.png",
+    "available_variants": {
+      "fre": {
+        "path": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut04_013_fre.png",
+        "w": 1920,
+        "h": 1080,
+        "fmt": "25",
+        "bytes": 0
+      }
+    },
+    "has_german": false,
+    "crop": [
+      90,
+      210,
+      520,
+      400
+    ]
+  }
+]

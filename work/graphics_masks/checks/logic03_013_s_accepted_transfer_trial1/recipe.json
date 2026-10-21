@@ -1,0 +1,18 @@
+{
+  "source": "work\\graphics_ru\\maps\\map12.png",
+  "source_sha256": "5a62f8fc52eeb45277664acb7202d0f506190d42f43a3040cc1be4094b28d43e",
+  "job": {
+    "копия": "map12",
+    "перспектива": [
+      0,
+      0,
+      2745,
+      1170
+    ],
+    "k": 0.13504273504273503
+  },
+  "report": [
+    "перспектива map12: точек 112, опорных 107, пикс. 212"
+  ],
+  "status": "installed, frozen; layer206"
+}

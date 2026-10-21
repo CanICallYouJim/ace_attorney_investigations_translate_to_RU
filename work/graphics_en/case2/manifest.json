@@ -548,5 +548,15 @@
     ],
     "source_lang": "eng",
     "base": true
+  },
+  "itm01_01e_00_l": {
+    "bundle": "gk2_idcom",
+    "flipped": true,
+    "size": [
+      300,
+      300
+    ],
+    "source_lang": "base",
+    "base": true
   }
 }

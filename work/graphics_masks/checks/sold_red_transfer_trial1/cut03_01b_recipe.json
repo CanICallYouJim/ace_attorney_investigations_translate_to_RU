@@ -1,0 +1,42 @@
+{
+  "source": "work/graphics_ru/case4/cut03_03a.png",
+  "source_sha256": "880039e966b2b7b8da8453bd7984b9d3918fdcdd98791413ce0e73ecbe2e4149",
+  "method": "same geometry; RGB native target plus fitted per-channel red-light transform of accepted RU minus EN; exact native original frame untouched",
+  "colour_coefficients": [
+    [
+      1.0327923652984188,
+      -8.150139699373595
+    ],
+    [
+      0.9792282480193231,
+      -204.69120792659862
+    ],
+    [
+      1.034443176105002,
+      -179.67785291664694
+    ]
+  ],
+  "colour_fit_residual_p50_p95_p99": [
+    [
+      1.392104319262728,
+      6.98517502327087,
+      12.29653535200407
+    ],
+    [
+      0.0,
+      2.5726485359825118,
+      5.053291621325744
+    ],
+    [
+      0.0,
+      6.652592884181502,
+      12.872570181820535
+    ]
+  ],
+  "changed": 7667,
+  "outside_accepted_delta": 0,
+  "alpha_changed": 0,
+  "source_border_preserved": true,
+  "result_sha256": "83b65b20e3419a8a165462f9888e7be9b7fe0f327e5773ca92cbb0de8c0925b2",
+  "status": "installed22October2026; frozen; layer209 verified; affected bundle selftest19 exit0"
+}

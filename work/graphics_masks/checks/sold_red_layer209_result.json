@@ -1,0 +1,33 @@
+{
+  "layer_count": 209,
+  "previous_unchanged": 207,
+  "pictures": {
+    "cut03_01b": {
+      "composite_rgba_mismatch": 0,
+      "english_cache_equals_backup_source_hash": true,
+      "live_equals_build": true,
+      "live_bundle_sha256": "c09b7463325f644706305002b6f2cd2b29051e2517e812db7e8b5add0df06102",
+      "png_sha256": "83b65b20e3419a8a165462f9888e7be9b7fe0f327e5773ca92cbb0de8c0925b2"
+    },
+    "cut03_037": {
+      "composite_rgba_mismatch": 0,
+      "english_cache_equals_backup_source_hash": true,
+      "live_equals_build": true,
+      "live_bundle_sha256": "c09b7463325f644706305002b6f2cd2b29051e2517e812db7e8b5add0df06102",
+      "png_sha256": "c4fd114d01af1d27a2d05316686911a7fc1d91a3b5d569cd9cd8f3850c4fdbd9"
+    }
+  },
+  "install_exit_code": 0,
+  "layers_exit_code": 0,
+  "local_gk2_progress": {
+    "gk2_pictures_done": 207,
+    "gk2_pictures_total": 257,
+    "gk2_pictures_percent": "80,5"
+  },
+  "selftest": {
+    "scope": "all19pictures in affected gk2_upcut",
+    "exit_code": 0,
+    "log": "selftest_20261022_sold_bundle209.log",
+    "full209_rerun": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "itm01_01e_00_l",
+  "trial": 2,
+  "method": "local top SWEET to СЛАДКАЯ after independent review; lower КОНФЕТА from trial1",
+  "base": "work\\graphics_masks\\drafts\\candy_trial1\\case2\\itm01_01e_00_l.png",
+  "base_sha256": "41219b063998306ceb44bec196d5e44624766a94a4dac51629438b6ff87ca4d2",
+  "matching": {
+    "inliers": 212,
+    "scale": 0.9996,
+    "shift": [
+      0.1,
+      0.0
+    ],
+    "outside_residual": 0.9
+  },
+  "changed": 1006,
+  "outside_correction_zone": 0,
+  "alpha_changed": 0,
+  "result_sha256": "659a9cecce5e07787f6d11b1ce957caeffd75966086d4f0f68f401bb4daa831a",
+  "status": "root local correction review clean; ready to show; not installed",
+  "combined_stock_recipe_reproduces_png": true,
+  "root_visual_review": "word СЛАДКАЯ seven Cyrillic letters, lower edge rises smoothly at native diagonal; no cropped strokes, SWEET remains or visible seam; lower КОНФЕТА and rest outside top zone unchanged; checked x4 and trial1-to-trial2 map",
+  "independent_review": "trial1 independent review clean except top SWEET; exact named local correction per10October rule requires root map/x4 instead of repeated subagent"
+}

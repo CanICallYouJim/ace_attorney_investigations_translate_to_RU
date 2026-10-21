@@ -4,9 +4,9 @@
   "source": "work/graphics_en/case2/itm01_01e_00_l.png",
   "backup_key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_01e_00_l.png",
   "accepted_text": "КОНФЕТА",
-  "trials_used": 0,
-  "generation_started": false,
-  "gate": "automatic approval rejected exporting image and prompt to Codex; explicit user permission requested; no retry or alternate route attempted",
+  "trials_used": 1,
+  "generation_started": true,
+  "gate": "resolved by explicit user authorization; stock command retried",
   "native_alpha_required": true,
   "etalon": {
     "scope": "only itm01_01e_00_l",
@@ -15,5 +15,10 @@
     "case2_full_exit_code": 1,
     "case2_full_checked": 52,
     "case2_full_issue": "gk2_logickeyword has no indexed picture; not fixed"
-  }
+  },
+  "explicit_export_authorization": "Да, отправляй через Codex (22October2026); prompt explicitly named image and destination",
+  "generation_exit_code": 0,
+  "generation_session": 65383,
+  "codex_session": "01a1609d-0a73-7bf3-9fa2-6d1a93a42fdf",
+  "status": "candidate pasted; independent review running; not installed"
 }

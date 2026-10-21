@@ -1,0 +1,22 @@
+{
+  "name": "itm01_01e_00_l",
+  "trial": 1,
+  "generation": 1,
+  "user_text_approval": "Да, «КОНФЕТА»",
+  "generation_exit_code": 0,
+  "pasted_sha256": "41219b063998306ceb44bec196d5e44624766a94a4dac51629438b6ff87ca4d2",
+  "matching": {
+    "inliers": 120,
+    "scale": 0.9994,
+    "shift": [
+      0.1,
+      0.1
+    ],
+    "outside_residual": 1.3
+  },
+  "changed": 4093,
+  "outside_zone_changed": 0,
+  "alpha_changed": 0,
+  "status": "draft not installed; independent review pending",
+  "passport": "Not applicable to AI plate; stock SIFT matching, difference and independent visual review per graphics skill step3"
+}

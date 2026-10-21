@@ -1,0 +1,161 @@
+{
+  "layer_count": 209,
+  "accepted_but_not_shipped": [
+    {
+      "name": "efc_BigFont00",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont00_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont00_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "49a785991f51b12cf7a587b0a8ef4e436590d6b980f4ad7db810883677fae415",
+      "png_sha": "e09d8ecc1098cd4da29be8f1ce9243a5e8f234bff1d569c5e232e183f2567511",
+      "box": [
+        12,
+        12,
+        1424,
+        1072
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont00.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont00_mask.png",
+      "why": "слой — 48% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont01",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont01_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont01_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "67e5389ab12050867a2fa9326a207df2eb4adf92bfdb7d19fe634a47c8b798cb",
+      "png_sha": "132b0496e8c3e4b516ff068d632823f15242aad23edcfee056c91a19af79a717",
+      "box": [
+        6,
+        16,
+        1428,
+        1060
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont01.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont01_mask.png",
+      "why": "слой — 49% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont02",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont02_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont02_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "37186e3c2a7771380eb0ce4beade96f8781078227e07bdbe98e7b04910875521",
+      "png_sha": "111b21105174fd6a4db191b8d48b652349bf1814c9c1ea9e5751541f055d3605",
+      "box": [
+        24,
+        19,
+        1430,
+        1058
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont02.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont02_mask.png",
+      "why": "слой — 48% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont03",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont03_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont03_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "0cef62d5f4d609850af489c3b8cda5b9ad7765631ff657bf615285525a28bf64",
+      "png_sha": "b9dac438f518b095d91718dab19468867449a9453bf180e90b18b99cbdf7c897",
+      "box": [
+        28,
+        41,
+        1429,
+        1040
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont03.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont03_mask.png",
+      "why": "слой — 43% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont04",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont04_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont04_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "1f7acf43bfc9312fee45b3f33ca6e1d4777c0038b22c97bfb1bc28a63cbcb741",
+      "png_sha": "9d5266352b92f3542d0a383a35ee67ad086a9d7be10963afb185c5c6f2ce8db8",
+      "box": [
+        5,
+        12,
+        1432,
+        1076
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont04.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont04_mask.png",
+      "why": "слой — 53% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "efc_BigFont05",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont05_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont05_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "c5d9739762d8f61d03a06f7dc9f46b432633780af2c22fff6ff7664247fad3c6",
+      "png_sha": "3c0ab6b97cec242a8ad69ec8302234adf2ef2e6dbc07f5dbda47052a6ed0ce2b",
+      "box": [
+        4,
+        14,
+        1440,
+        1075
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont05.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont05_mask.png",
+      "why": "слой — 47% картинки: это рисунок, а не надпись"
+    },
+    {
+      "name": "cut01_009",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_009_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_009_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "5f0ac04594098fa492708b3912c70b4148098f0f7ddd9a976b74cd4303b028a7",
+      "png_sha": "e0cf133f3f297cb0bf579fa29f6747a9975c4404f809b95f26cda363181ab020",
+      "box": [
+        340,
+        60,
+        1920,
+        661
+      ],
+      "layer": "gk2_upcutlocal/cut01_009.png",
+      "mask": "gk2_upcutlocal/cut01_009_mask.png",
+      "why": "слой — 29% картинки: это рисунок, а не надпись"
+    }
+  ],
+  "reason": "Existing MAX_SHARE=0.25 gate; address exceptions require explicit user decision. No tolerance/code/bitmap changes made.",
+  "scope": "review of authoritative manifest only; not a new geometry or quality check"
+}

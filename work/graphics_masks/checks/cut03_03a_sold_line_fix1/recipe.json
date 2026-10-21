@@ -1,0 +1,12 @@
+{
+  "base": "work\\graphics_masks\\drafts\\cut03_03a_sold_transfer_trial3\\case4\\cut03_03a.png",
+  "base_sha256": "2a26e1c71e4ecf585354851142cde0116456ac5f68aec64aecf05ebd60ebdde8",
+  "user_request": "там текст нормально написан ПРОД, но вот линия там тоньше чем в оригинале",
+  "method": "Restore native original red outline including its antialiased edge; only original outline pixels and one adjacent pixel; preserve shown lettering",
+  "changed_pixels": 1048,
+  "outside_zone_changed": 0,
+  "alpha_changed": 0,
+  "original_border_rgb_mismatch": 0,
+  "result_sha256": "880039e966b2b7b8da8453bd7984b9d3918fdcdd98791413ce0e73ecbe2e4149",
+  "status": "local correction requested by user; not installed"
+}

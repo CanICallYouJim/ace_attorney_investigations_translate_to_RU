@@ -1,0 +1,27 @@
+{
+  "name": "itm01_01e_00_l",
+  "layer_count": 210,
+  "previous_unchanged": 209,
+  "composite_rgba_mismatch": 0,
+  "outside_declared_fields": 0,
+  "native_german_vs_png_max": 57,
+  "native_german_vs_png_over48": 1,
+  "native_german_vs_png_over64": 0,
+  "native_german_vs_png_max_mean_rgb": 0.24564444444444444,
+  "passes_stock_install_tolerance": true,
+  "source_base_equals_backup": true,
+  "english_cache_equals_backup_source_hash": true,
+  "german_address_own": true,
+  "live_equals_build": true,
+  "live_bundle_sha256": "77e94c48b8724b55b2f4d288a671a0bebe0bd7841a3e01c29476f1f1a5234509",
+  "png_sha256": "659a9cecce5e07787f6d11b1ce957caeffd75966086d4f0f68f401bb4daa831a",
+  "install_exit_code": 0,
+  "layers_exit_code": 0,
+  "local_gk2_progress": {
+    "gk2_pictures_done": 208,
+    "gk2_pictures_total": 257,
+    "gk2_pictures_percent": "80,9"
+  },
+  "selftest": "not repeated for known Texture2D class and bundle; full202 and affected gk2_upcut19 retained; rerun before next release",
+  "metadata_note": "Declared both existing label fields via supported надпись job key; PNG unchanged; layer re-rendered with prev209 so old209 entries stay identical; no tool or tolerance changes"
+}

@@ -444,6 +444,41 @@
       "kind": "no_text",
       "reason": "No translatable text/pseudo decoration in these scene and object atlas variants.",
       "evidence": "work/media_inventory.md: localized-texture inventory9October, final row"
+    },
+    "cut03_00f": {
+      "kind": "original",
+      "reason": "User chose to retain original numeric prices with comma thousands separators after viewing all seven originals. Numeric values and source images remain unchanged.",
+      "evidence": "docs/decisions.md: 24 October 2026, price separators retained"
+    },
+    "cut03_011": {
+      "kind": "original",
+      "reason": "User chose to retain original numeric prices with comma thousands separators after viewing all seven originals. Numeric values and source images remain unchanged.",
+      "evidence": "docs/decisions.md: 24 October 2026, price separators retained"
+    },
+    "cut03_01a": {
+      "kind": "original",
+      "reason": "User chose to retain original numeric prices with comma thousands separators after viewing all seven originals. Numeric values and source images remain unchanged.",
+      "evidence": "docs/decisions.md: 24 October 2026, price separators retained"
+    },
+    "cut03_036": {
+      "kind": "original",
+      "reason": "User chose to retain original numeric prices with comma thousands separators after viewing all seven originals. Numeric values and source images remain unchanged.",
+      "evidence": "docs/decisions.md: 24 October 2026, price separators retained"
+    },
+    "cut03_039": {
+      "kind": "original",
+      "reason": "User chose to retain original numeric prices with comma thousands separators after viewing all seven originals. Numeric values and source images remain unchanged.",
+      "evidence": "docs/decisions.md: 24 October 2026, price separators retained"
+    },
+    "cut04_014": {
+      "kind": "original",
+      "reason": "User chose to retain original numeric prices with comma thousands separators after viewing all seven originals. Numeric values and source images remain unchanged.",
+      "evidence": "docs/decisions.md: 24 October 2026, price separators retained"
+    },
+    "logic03_010_s": {
+      "kind": "original",
+      "reason": "User chose to retain original numeric prices with comma thousands separators after viewing all seven originals. Numeric values and source images remain unchanged.",
+      "evidence": "docs/decisions.md: 24 October 2026, price separators retained"
     }
   }
 }

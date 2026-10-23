@@ -782,5 +782,25 @@
     ],
     "source_lang": "eng",
     "base": true
+  },
+  "map02": {
+    "bundle": "gk2_mapbg_trial",
+    "flipped": false,
+    "size": [
+      1920,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": true
+  },
+  "map02_cm": {
+    "bundle": "gk2_mapbgclassic_trial",
+    "flipped": false,
+    "size": [
+      1920,
+      1080
+    ],
+    "source_lang": "eng",
+    "base": true
   }
 }

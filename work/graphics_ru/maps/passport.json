@@ -88,5 +88,14 @@
   },
   "map13_cm": {
     "_": "Прямой перенос шести полей принятой map13, проба 1. Масштаб 1, сдвиг 0, поворот 0. Внутри полей RGB с эталоном 0, вне 0, alpha 0. Шрифтовой паспорт и residual генерации неприменимы. Независимый просмотр чистый; установлена по правилу точных переносов от 20 октября, заморожена, слой 197."
+  },
+  "map02": {
+    "задано": {
+      "SPACE": {
+        "исключения": {
+          "красный_край": "≈ Two antialiased red-edge pixels differ:455,224 and464,239. Visible shape and placement retained; independent visual review clean. Explicitly disclosed to user before approval. No tolerance changes."
+        }
+      }
+    }
   }
 }

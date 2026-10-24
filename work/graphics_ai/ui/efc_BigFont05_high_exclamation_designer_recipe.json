@@ -1,0 +1,42 @@
+{
+  "status": "FAILED_VISUAL_DO_NOT_INSTALL",
+  "designer_trials_used": 3,
+  "designer_trials_remaining": 0,
+  "base": "work/graphics_masks/drafts/high_exclamation_trial1/ui/efc_BigFont05.png",
+  "base_sha256": "0530ede7db99e12ac840453f0cf8cb5f3149c9786d220db301953d2413562fce",
+  "donor_shown": "work/graphics_masks/drafts/overruled_d_cleanup_trial4/ui/efc_BigFont05.png",
+  "donor_sha256": "d8f24b2da06ef6c6c545522754b08354e169272dae8601e851938ad16976e04e",
+  "steps": [
+    {
+      "operation": "Native RGBA donor copy through stored mask",
+      "mask": "work/graphics_masks/checks/high_exclamation_designer/restore_burst_mask_trial3.png",
+      "formula": "For each x1200:1440 find min y120:250 with R>65,G<40,B<40,A>100; restore donor for y<min(220,y-2), or y<220 when no such red. No alpha recomputation."
+    },
+    {
+      "operation": "Restore exact declared Ya rectangle from shown donor",
+      "box": [
+        1085,
+        340,
+        1228,
+        636
+      ]
+    },
+    {
+      "operation": "Copy adjacent native extrusion pixels to remove isolated pale dash",
+      "source_box": [
+        1247,
+        512,
+        1251,
+        521
+      ],
+      "target_xy": [
+        1240,
+        512
+      ]
+    }
+  ],
+  "final": "work/graphics_masks/drafts/high_exclamation_designer/ui/efc_BigFont05.png",
+  "final_sha256": "733802de9da90bf03e2cb474c646bc541623d960c7eb4625e2cecedc4da25965",
+  "report": "work/graphics_masks/checks/high_exclamation_designer/result.json",
+  "new_generation": false
+}

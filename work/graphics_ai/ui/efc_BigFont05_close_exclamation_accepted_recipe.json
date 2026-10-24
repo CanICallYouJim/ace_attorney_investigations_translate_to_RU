@@ -1,0 +1,96 @@
+{
+  "status": "PASS_TRANSFER_REQUIRES_MAIN_INDEPENDENT_REVIEW",
+  "user_acceptance": "User said ставь on close_exclamation_imagegen_1; transfer this accepted diagonal snug mark only",
+  "base": "work/graphics_masks/drafts/overruled_d_cleanup_trial4/ui/efc_BigFont05.png",
+  "base_sha256": "d8f24b2da06ef6c6c545522754b08354e169272dae8601e851938ad16976e04e",
+  "accepted_art": "work/graphics_ai/ui/efc_BigFont05_close_exclamation_imagegen_1.png",
+  "accepted_art_sha256": "13f35253aea2cc8ffc4a173fb27dd1ab5b6604da07ca21a711894ef41fad554f",
+  "plate": "work/graphics_ai/ui/efc_BigFont05_close_exclamation_plate1.png",
+  "plate_method": "Native accepted RGBA alpha composite over opaque gray128 then RGB; no geometry changes",
+  "replay": [
+    "Copy base PNG into target draft ui/efc_BigFont05.png",
+    "Run tools/paste_art.py with recorded art.json; starts from ready base, applies one local plate"
+  ],
+  "art_json": "work\\graphics_masks\\drafts\\close_exclamation_accepted\\ui\\art.json",
+  "art_spec": {
+    "efc_BigFont05": {
+      "основа": "готовое",
+      "плашка": [
+        {
+          "art": "../../../../graphics_ai/ui/efc_BigFont05_close_exclamation_plate1.png",
+          "вырезка": [
+            0,
+            0,
+            1440,
+            1440
+          ],
+          "зона": [
+            [
+              [
+                1210,
+                260
+              ],
+              [
+                1440,
+                260
+              ],
+              [
+                1440,
+                810
+              ],
+              [
+                1130,
+                810
+              ],
+              [
+                1130,
+                636
+              ],
+              [
+                1180,
+                636
+              ],
+              [
+                1180,
+                600
+              ],
+              [
+                1210,
+                600
+              ]
+            ]
+          ],
+          "по_разнице": 24,
+          "запас": 4,
+          "свет": false,
+          "край": 4,
+          "альфа_по_фону": {
+            "цвет": [
+              128,
+              128,
+              128
+            ],
+            "от": 24,
+            "до": 56,
+            "закрыть": true,
+            "прозрачное": "оригинал"
+          }
+        }
+      ]
+    }
+  },
+  "final_png": "work/graphics_masks/drafts/close_exclamation_accepted/ui/efc_BigFont05.png",
+  "final_sha256": "cdf469e12081af35c4d190f56e3cde530f011b660517937abbfc2dbcdc1d7dc8",
+  "alignment": {
+    "sift_inliers": 156,
+    "scale": 1.0004,
+    "shift": [
+      -0.5,
+      -0.4
+    ],
+    "residual": 3.0
+  },
+  "mask_trial": 2,
+  "outside_local_zone": 0,
+  "production_modified": false
+}

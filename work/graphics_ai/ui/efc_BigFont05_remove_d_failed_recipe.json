@@ -1,0 +1,147 @@
+{
+  "status": "FAILED_VISUAL_DO_NOT_INSTALL",
+  "base_sha": "61f7bbcdf789fee35bcf8d157e80e2025b2d0ee3c82c11c714bcfd7331cd9ccc",
+  "recipe": {
+    "efc_BigFont05": {
+      "_": "Local correction only: remove old English d behind final Я. Base=exact shown RGB trial.",
+      "основа": "готовое",
+      "плашка": [
+        {
+          "art": "../../../../graphics_ai/ui/efc_BigFont05_remove_d_plate3.png",
+          "вырезка": [
+            0,
+            0,
+            1440,
+            1440
+          ],
+          "зона": [
+            [
+              [
+                1195,
+                73
+              ],
+              [
+                1318,
+                70
+              ],
+              [
+                1388,
+                115
+              ],
+              [
+                1410,
+                195
+              ],
+              [
+                1404,
+                280
+              ],
+              [
+                1344,
+                285
+              ],
+              [
+                1319,
+                325
+              ],
+              [
+                1298,
+                370
+              ],
+              [
+                1273,
+                430
+              ],
+              [
+                1253,
+                484
+              ],
+              [
+                1244,
+                516
+              ],
+              [
+                1242,
+                516
+              ],
+              [
+                1246,
+                485
+              ],
+              [
+                1251,
+                440
+              ],
+              [
+                1256,
+                400
+              ],
+              [
+                1260,
+                370
+              ],
+              [
+                1257,
+                350
+              ],
+              [
+                1246,
+                335
+              ],
+              [
+                1235,
+                327
+              ],
+              [
+                1233,
+                310
+              ],
+              [
+                1246,
+                250
+              ],
+              [
+                1248,
+                200
+              ],
+              [
+                1240,
+                178
+              ],
+              [
+                1220,
+                169
+              ],
+              [
+                1200,
+                147
+              ]
+            ]
+          ],
+          "свет": false,
+          "край": 3,
+          "альфа_по_фону": {
+            "цвет": [
+              128,
+              128,
+              128
+            ],
+            "от": 24,
+            "до": 56,
+            "закрыть": true,
+            "прозрачное": "оригинал"
+          }
+        }
+      ]
+    }
+  },
+  "report": {
+    "status": "FAILED_VISUAL_DO_NOT_INSTALL",
+    "masked_trials": 3,
+    "imagegen_outputs": 3,
+    "changed": 31646,
+    "outside_named_zone": 0,
+    "candidate_sha": "87169f032cb9d956fb5905658ef726b2b4f006bb535479d0c4eb193c983d8dd5",
+    "finding": "Tall d stem removed but remnant red crescent next to Я and angular seam remain. Needs fourth precise contour-mask trial; not approved."
+  }
+}

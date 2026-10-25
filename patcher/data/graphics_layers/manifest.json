@@ -176,6 +176,31 @@
       "erased": null
     },
     {
+      "name": "cut00_00d",
+      "bundle": "gk2_upcutlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_00d_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_00d_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "06ec3a95c39f334ab40717d6486d9e52bd285fb17c3a90c0869d9ff99b78e490",
+      "png_sha": "4e6a7f97caeba903d3d1e27a172efb8bce69cbffb10f95d1c0d240810873e96f",
+      "box": [
+        940,
+        606,
+        1114,
+        741
+      ],
+      "layer": "gk2_upcutlocal_trial/cut00_00d.png",
+      "mask": "gk2_upcutlocal_trial/cut00_00d_mask.png",
+      "changed": 13346,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut00_010",
       "bundle": "gk2_upcutlocal_trial",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut00_010_ger.png",
@@ -551,6 +576,31 @@
       "erased": null
     },
     {
+      "name": "itm01_002_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_002_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_002_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "82d73c662bd531bf1be457d776c35302d23851c9bde9f2bdbca3229957a18350",
+      "png_sha": "d7cb836d8d74e0180a98e9b78b53e03f8b60998fc2249664f00471f5f2a06e29",
+      "box": [
+        176,
+        173,
+        263,
+        255
+      ],
+      "layer": "gk2_idcom/itm01_002_00_l.png",
+      "mask": "gk2_idcom/itm01_002_00_l_mask.png",
+      "changed": 2940,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "itm01_00b_00_l",
       "bundle": "gk2_idcom",
       "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_00b_00_l_ger.png",
@@ -651,6 +701,31 @@
       "erased": null
     },
     {
+      "name": "itm01_01e_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_01e_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_01e_00_l.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "3e5e41a13672c5d35e6a2143d7b0fc8f1c6d08f9adc6fe2d2d8209056b703768",
+      "png_sha": "659a9cecce5e07787f6d11b1ce957caeffd75966086d4f0f68f401bb4daa831a",
+      "box": [
+        86,
+        100,
+        206,
+        172
+      ],
+      "layer": "gk2_idcom/itm01_01e_00_l.png",
+      "mask": "gk2_idcom/itm01_01e_00_l_mask.png",
+      "changed": 4885,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "itm01_02f_00_l",
       "bundle": "gk2_idcom",
       "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm01_02f_00_l_ger.png",
@@ -721,6 +796,31 @@
       "layer": "gk2_idcom/itm02_00f_00_l.png",
       "mask": "gk2_idcom/itm02_00f_00_l_mask.png",
       "changed": 2621,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm02_01b_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_01b_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_01b_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "6c2623f2490869b9fbdad666a4d6f756bdd1f3f6fb3ec25dc3ae3038908b6b3c",
+      "png_sha": "7da20c8e14877dfb216abbfd756eab8dbb9d508501512164f4c138bdc2c0af02",
+      "box": [
+        98,
+        152,
+        264,
+        236
+      ],
+      "layer": "gk2_idcom/itm02_01b_00_l.png",
+      "mask": "gk2_idcom/itm02_01b_00_l_mask.png",
+      "changed": 5579,
       "outside": 0,
       "tails": null,
       "erased": null
@@ -922,6 +1022,31 @@
       "mask": "gk2_idcom/itm02_034_00_l_mask.png",
       "changed": 10273,
       "outside": 10273,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm02_039_00_l",
+      "bundle": "gk2_idcom",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_039_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm02_039_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "b8f9ee21a0479072fdb3b54fd90f490e376a8908ab2fee5426e17c633b701ac4",
+      "png_sha": "3f23f6fc245bc9266cffbee7e90e63a8a67eeb329291e10326da482c11f229ec",
+      "box": [
+        17,
+        70,
+        290,
+        234
+      ],
+      "layer": "gk2_idcom/itm02_039_00_l.png",
+      "mask": "gk2_idcom/itm02_039_00_l_mask.png",
+      "changed": 14031,
+      "outside": 0,
       "tails": null,
       "erased": null
     },
@@ -1251,6 +1376,56 @@
       "erased": 0
     },
     {
+      "name": "itm00_00b_00_l",
+      "bundle": "gk2_idcom_trial",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_00b_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_00b_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "34c4db11ec809b1b5ec5c4bda17ac8acdd4a988c9fa0219024f3af1c26e346d8",
+      "png_sha": "95271db68755b047ca076c48c1116750a4408ce5690c5c836783ef72e51a004d",
+      "box": [
+        52,
+        144,
+        162,
+        225
+      ],
+      "layer": "gk2_idcom_trial/itm00_00b_00_l.png",
+      "mask": "gk2_idcom_trial/itm00_00b_00_l_mask.png",
+      "changed": 4672,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "itm00_00f_00_l",
+      "bundle": "gk2_idcom_trial",
+      "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_00f_00_l_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_00f_00_l_eng.png",
+      "size": [
+        300,
+        300
+      ],
+      "flipped": true,
+      "source_sha": "aba9b7155296622d9b034f8baa08c697bd8e36a4b8bc8843d4dc073a0a3d1473",
+      "png_sha": "d2ff006f25c27bd126fafa6581c222acc2fb1a3dcde631fc6d96b9ec3a352ddc",
+      "box": [
+        78,
+        27,
+        255,
+        119
+      ],
+      "layer": "gk2_idcom_trial/itm00_00f_00_l.png",
+      "mask": "gk2_idcom_trial/itm00_00f_00_l_mask.png",
+      "changed": 6713,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "itm00_013_00_l",
       "bundle": "gk2_idcom_trial",
       "key": "Assets/GK2/Ipnce/Data/idcom.bin/FHD/itm00_013_00_l_ger.png",
@@ -1274,6 +1449,156 @@
       "outside": 0,
       "tails": 0,
       "erased": 0
+    },
+    {
+      "name": "efc_BigFont00",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont00_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont00_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "49a785991f51b12cf7a587b0a8ef4e436590d6b980f4ad7db810883677fae415",
+      "png_sha": "693af9a4c32e92e1298a0da8dd26f9feadf1c552ff863107364e50be6ca011b7",
+      "box": [
+        12,
+        12,
+        1424,
+        1072
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont00.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont00_mask.png",
+      "changed": 653444,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "efc_BigFont01",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont01_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont01_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "67e5389ab12050867a2fa9326a207df2eb4adf92bfdb7d19fe634a47c8b798cb",
+      "png_sha": "badcd7b61b56ca92692ac30fa8d9ee56c8865a6516e1214f486e6e9321efcaa8",
+      "box": [
+        6,
+        16,
+        1428,
+        1060
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont01.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont01_mask.png",
+      "changed": 716025,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "efc_BigFont02",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont02_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont02_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "37186e3c2a7771380eb0ce4beade96f8781078227e07bdbe98e7b04910875521",
+      "png_sha": "16933633ad4d11b0d84b1f1b9e663c250d48ef479d80a36f6e8118cd41a3fe6a",
+      "box": [
+        24,
+        19,
+        1430,
+        1058
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont02.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont02_mask.png",
+      "changed": 743575,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "efc_BigFont03",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont03_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont03_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "0cef62d5f4d609850af489c3b8cda5b9ad7765631ff657bf615285525a28bf64",
+      "png_sha": "85f3a89072ab863b9b38b5b1397c12a5f20a4fbb68f2b79a4ded8f371aed6993",
+      "box": [
+        28,
+        41,
+        1429,
+        1040
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont03.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont03_mask.png",
+      "changed": 518219,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "efc_BigFont04",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont04_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont04_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "1f7acf43bfc9312fee45b3f33ca6e1d4777c0038b22c97bfb1bc28a63cbcb741",
+      "png_sha": "f2673e461419d9a0d91adde37c0cefffc5d81f858827e7a10bf6b41a53340900",
+      "box": [
+        5,
+        12,
+        1432,
+        1076
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont04.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont04_mask.png",
+      "changed": 727866,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "efc_BigFont05",
+      "bundle": "gk2_idlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont05_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont05_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "c5d9739762d8f61d03a06f7dc9f46b432633780af2c22fff6ff7664247fad3c6",
+      "png_sha": "cdf469e12081af35c4d190f56e3cde530f011b660517937abbfc2dbcdc1d7dc8",
+      "box": [
+        4,
+        14,
+        1440,
+        1075
+      ],
+      "layer": "gk2_idlocal_trial/efc_BigFont05.png",
+      "mask": "gk2_idlocal_trial/efc_BigFont05_mask.png",
+      "changed": 418625,
+      "outside": 0,
+      "tails": null,
+      "erased": null
     },
     {
       "name": "logic02_00b_s",
@@ -1326,6 +1651,56 @@
       "erased": null
     },
     {
+      "name": "logic02_025_s",
+      "bundle": "gk2_logickeyword",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic02_025_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic02_025_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "f2fb1cad9e819cc8d2ecf2109b4430c54c050adc7b3dc1965b06986fd4b6386d",
+      "png_sha": "c750585ccf3cb6c17b197962bc5e7118de3c2da400231b30e76c50212d78ff58",
+      "box": [
+        55,
+        80,
+        139,
+        123
+      ],
+      "layer": "gk2_logickeyword/logic02_025_s.png",
+      "mask": "gk2_logickeyword/logic02_025_s_mask.png",
+      "changed": 1163,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "logic02_02f_s",
+      "bundle": "gk2_logickeyword",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic02_02f_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic02_02f_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "f12d4b7526906eccc93d4c985bc383d1ec9a0f11f01062f791123428c28ecf61",
+      "png_sha": "8ed1aab479ce78abd2df2bb7c8d890d9a36083674927dc1d5f6eba06ada82cce",
+      "box": [
+        55,
+        80,
+        139,
+        123
+      ],
+      "layer": "gk2_logickeyword/logic02_02f_s.png",
+      "mask": "gk2_logickeyword/logic02_02f_s_mask.png",
+      "changed": 1163,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "logic03_007_s",
       "bundle": "gk2_logickeyword",
       "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic03_007_s_ger.png",
@@ -1372,6 +1747,31 @@
       "mask": "gk2_logickeyword/logic03_00b_s_mask.png",
       "changed": 661,
       "outside": 661,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "logic03_013_s",
+      "bundle": "gk2_logickeyword",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic03_013_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic03_013_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "a0637303ece332e6c22649fdf107bab5bf29c4c2f9f2ec8373d605c9605ca147",
+      "png_sha": "48bc5a5f1d2475b5b9083c275e6990056cb73b53976969928aa2ab9698836e0d",
+      "box": [
+        3,
+        9,
+        43,
+        16
+      ],
+      "layer": "gk2_logickeyword/logic03_013_s.png",
+      "mask": "gk2_logickeyword/logic03_013_s_mask.png",
+      "changed": 212,
+      "outside": null,
       "tails": null,
       "erased": null
     },
@@ -1447,6 +1847,31 @@
       "mask": "gk2_logickeyword/logic04_00f_s_mask.png",
       "changed": 1201,
       "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "logic00_00e_s",
+      "bundle": "gk2_logickeyword_trial",
+      "key": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic00_00e_s_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/logic_keyword.bin/FHD/logic00_00e_s_eng.png",
+      "size": [
+        158,
+        158
+      ],
+      "flipped": true,
+      "source_sha": "591ee7e55c65bed70d683b240174ebb3b9f641f94c41229f764462b2eb5aaa7e",
+      "png_sha": "66a08c07597da90328412e22882b085f533231710871f04f56237330348957ed",
+      "box": [
+        27,
+        75,
+        85,
+        118
+      ],
+      "layer": "gk2_logickeyword_trial/logic00_00e_s.png",
+      "mask": "gk2_logickeyword_trial/logic00_00e_s_mask.png",
+      "changed": 2097,
+      "outside": 0,
       "tails": null,
       "erased": null
     },
@@ -1908,6 +2333,31 @@
       "erased": null
     },
     {
+      "name": "map02",
+      "bundle": "gk2_mapbg_trial",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map02_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/FHD/map02_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "86cf9af6b32e777531ed1a67f91f88571fb691cb68eadfff05993158c6f8aeaa",
+      "png_sha": "eb53d024ed41bc5e14b6a6c27b5001d221e0730d1e1f53da0b083bfc0fdeeca9",
+      "box": [
+        440,
+        209,
+        1468,
+        567
+      ],
+      "layer": "gk2_mapbg_trial/map02.png",
+      "mask": "gk2_mapbg_trial/map02_mask.png",
+      "changed": 1689,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "map03_cm",
       "bundle": "gk2_mapbgclassic",
       "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map03_cm_ger.png",
@@ -2308,6 +2758,31 @@
       "erased": null
     },
     {
+      "name": "map02_cm",
+      "bundle": "gk2_mapbgclassic_trial",
+      "key": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map02_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapbg.bin/Classic/map02_cm_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "60d6fb1d0064498de271481163c573e42befb089f04dbb3a68d619bbf63ea8b9",
+      "png_sha": "2a91f6237e9dbaaf6e70db778c0ccf1bd4af2fd483dd42f9a370f47580950811",
+      "box": [
+        440,
+        209,
+        1473,
+        573
+      ],
+      "layer": "gk2_mapbgclassic_trial/map02_cm.png",
+      "mask": "gk2_mapbgclassic_trial/map02_cm_mask.png",
+      "changed": 4632,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "mapObj04_00_256",
       "bundle": "gk2_mapobj",
       "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj04_00_256_ger.png",
@@ -2329,6 +2804,31 @@
       "mask": "gk2_mapobj/mapObj04_00_256_mask.png",
       "changed": 4180,
       "outside": 4180,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj0d_00_256",
+      "bundle": "gk2_mapobj",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj0d_00_256_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj0d_00_256_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "71dd2dae74c38726f82351a7459caae99a61366b185bdcae862be9ff32f5d6f5",
+      "png_sha": "506931f051ef4538e1031c0cd738c594e511bc73cf755e401ded21018a7a08dc",
+      "box": [
+        346,
+        149,
+        1389,
+        868
+      ],
+      "layer": "gk2_mapobj/mapObj0d_00_256.png",
+      "mask": "gk2_mapobj/mapObj0d_00_256_mask.png",
+      "changed": 6054,
+      "outside": null,
       "tails": null,
       "erased": null
     },
@@ -2433,6 +2933,31 @@
       "erased": null
     },
     {
+      "name": "mapObj02_00_256",
+      "bundle": "gk2_mapobj_trial",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj02_00_256_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/FHD/mapObj02_00_256_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "a36c2f5bc615935b0f9dbe94daa6485eb1a712d11a198d39484a1c83642aa5ea",
+      "png_sha": "17571dd5dcf4782e8561126ece7c67b60404b7b14a6496f9dcbd24e0f6ba6df1",
+      "box": [
+        345,
+        394,
+        395,
+        432
+      ],
+      "layer": "gk2_mapobj_trial/mapObj02_00_256.png",
+      "mask": "gk2_mapobj_trial/mapObj02_00_256_mask.png",
+      "changed": 1074,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "mapObj04_00_256_cm",
       "bundle": "gk2_mapobjclassic",
       "key": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj04_00_256_cm_ger.png",
@@ -2453,6 +2978,31 @@
       "layer": "gk2_mapobjclassic/mapObj04_00_256_cm.png",
       "mask": "gk2_mapobjclassic/mapObj04_00_256_cm_mask.png",
       "changed": 2729,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj0d_00_256_cm",
+      "bundle": "gk2_mapobjclassic",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj0d_00_256_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj0d_00_256_cm_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "60240c1edb2b05e2186d5a7a2da79be0fa8ca8c87a2ab6869d83be70a26658e7",
+      "png_sha": "7d2e9b2e864229082d921d0ee30f9989b5eebd3573ccfd40c4434558e1c3b5f5",
+      "box": [
+        346,
+        149,
+        1389,
+        868
+      ],
+      "layer": "gk2_mapobjclassic/mapObj0d_00_256_cm.png",
+      "mask": "gk2_mapobjclassic/mapObj0d_00_256_cm_mask.png",
+      "changed": 6239,
       "outside": null,
       "tails": null,
       "erased": null
@@ -2504,6 +3054,56 @@
       "mask": "gk2_mapobjclassic/mapObj12_00_256_cm_mask.png",
       "changed": 5577,
       "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "mapObj02_00_256_cm",
+      "bundle": "gk2_mapobjclassic_trial",
+      "key": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj02_00_256_cm_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/mapobj.bin/Classic/mapObj02_00_256_cm_eng.png",
+      "size": [
+        1440,
+        1440
+      ],
+      "flipped": true,
+      "source_sha": "3e499b797cc2249c9d449eae4ddde25ca0ce6fe7ae959e8cf1671f6030d46448",
+      "png_sha": "a9f8a912e9000fc6af95475bdc5342c8d3d4a2b8a2415dc1d283de6517b90894",
+      "box": [
+        342,
+        391,
+        398,
+        436
+      ],
+      "layer": "gk2_mapobjclassic_trial/mapObj02_00_256_cm.png",
+      "mask": "gk2_mapobjclassic_trial/mapObj02_00_256_cm_mask.png",
+      "changed": 2489,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "opObj02_032_256",
+      "bundle": "gk2_openinglocal",
+      "key": "Assets/GK2/Ipnce/Data/opening_local.bin/FHD/opObj02_032_256_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/opening_local.bin/FHD/opObj02_032_256_eng.png",
+      "size": [
+        2880,
+        2880
+      ],
+      "flipped": true,
+      "source_sha": "8acbe71a1558f317fc67fbe868d83d5b196e47b4010eff5c39c96913e3ac032b",
+      "png_sha": "a44b5c6bd0b3a2dd0021162cbd174a4c8cd8d0841967d5a0a3d907c41d0c2767",
+      "box": [
+        68,
+        24,
+        1980,
+        871
+      ],
+      "layer": "gk2_openinglocal/opObj02_032_256.png",
+      "mask": "gk2_openinglocal/opObj02_032_256_mask.png",
+      "changed": 745902,
+      "outside": 0,
       "tails": null,
       "erased": null
     },
@@ -2604,6 +3204,81 @@
       "mask": "gk2_upcut/cut03_008_mask.png",
       "changed": 28271,
       "outside": 25928,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut03_01b",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut03_01b_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut03_01b_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "20abb94f8fd97148f85a4bf07e24b006b165f9b945fa12d8a807dbf6cdd9c2bf",
+      "png_sha": "83b65b20e3419a8a165462f9888e7be9b7fe0f327e5773ca92cbb0de8c0925b2",
+      "box": [
+        1859,
+        612,
+        1920,
+        813
+      ],
+      "layer": "gk2_upcut/cut03_01b.png",
+      "mask": "gk2_upcut/cut03_01b_mask.png",
+      "changed": 7667,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut03_037",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut03_037_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut03_037_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "f941463d2838118ff63cb4f922cca492aa74846890cd83e6000efd1e8180a357",
+      "png_sha": "c4fd114d01af1d27a2d05316686911a7fc1d91a3b5d569cd9cd8f3850c4fdbd9",
+      "box": [
+        1859,
+        612,
+        1920,
+        813
+      ],
+      "layer": "gk2_upcut/cut03_037.png",
+      "mask": "gk2_upcut/cut03_037_mask.png",
+      "changed": 7667,
+      "outside": null,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut03_03a",
+      "bundle": "gk2_upcut",
+      "key": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut03_03a_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut.bin/FHD/cut03_03a_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "b275eb0269ce593ae9c580f6f9e8f68f194660d75a9c5881718780b4c308fd4a",
+      "png_sha": "880039e966b2b7b8da8453bd7984b9d3918fdcdd98791413ce0e73ecbe2e4149",
+      "box": [
+        1859,
+        612,
+        1920,
+        813
+      ],
+      "layer": "gk2_upcut/cut03_03a.png",
+      "mask": "gk2_upcut/cut03_03a_mask.png",
+      "changed": 7795,
+      "outside": null,
       "tails": null,
       "erased": null
     },
@@ -3004,6 +3679,31 @@
       "mask": "gk2_upcutlocal/cut01_008_mask.png",
       "changed": 126938,
       "outside": 1903,
+      "tails": null,
+      "erased": null
+    },
+    {
+      "name": "cut01_009",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_009_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_009_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "5f0ac04594098fa492708b3912c70b4148098f0f7ddd9a976b74cd4303b028a7",
+      "png_sha": "26904f1fe882fca9f99cdb59808dc28a43035678f5e07f3de1ebaa9bcb06fc5a",
+      "box": [
+        340,
+        60,
+        1920,
+        661
+      ],
+      "layer": "gk2_upcutlocal/cut01_009.png",
+      "mask": "gk2_upcutlocal/cut01_009_mask.png",
+      "changed": 500014,
+      "outside": 0,
       "tails": null,
       "erased": null
     },
@@ -4358,6 +5058,31 @@
       "erased": null
     },
     {
+      "name": "cut04_035",
+      "bundle": "gk2_upcutlocal",
+      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_035_ger.png",
+      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_035_eng.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "flipped": false,
+      "source_sha": "294ccaa7944fe241857d46cd3d830fa232c154f93da5150e1a85feceae45ac51",
+      "png_sha": "b2a55528a04da47441d9dc75016ce7d049f117109c8898e5557692682d715133",
+      "box": [
+        342,
+        99,
+        1784,
+        921
+      ],
+      "layer": "gk2_upcutlocal/cut04_035.png",
+      "mask": "gk2_upcutlocal/cut04_035_mask.png",
+      "changed": 276944,
+      "outside": 0,
+      "tails": null,
+      "erased": null
+    },
+    {
       "name": "cut04_03a",
       "bundle": "gk2_upcutlocal",
       "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut04_03a_ger.png",
@@ -4481,6 +5206,20 @@
       "outside": null,
       "tails": null,
       "erased": null
+    },
+    {
+      "name": "Sousa_TextCutBG_R_07",
+      "bundle": "gk_common_ingameui",
+      "key": "Assets/GK_Common/Textures/UI/Sousa/TextCutBG/Sousa_TextCutBG_R_07_ger.png",
+      "kind": "plate",
+      "size": [
+        1920,
+        1080
+      ],
+      "png_sha": "1495c1414875b2500c3cd5362c1db6a88e00aa2d918367f1759dfbb7d24990cb",
+      "texture_sha": "425e716cb40370dd528793a5a9be2d8045cc5ae695fdd8f3520b70a7d2355365",
+      "plate_sha": "14bc7ab00dc59b456d47ab2e967dd5ca3000931b6cb6e19f8783332f600b9a9c",
+      "layer": "gk_common_ingameui/Sousa_TextCutBG_R_07.png"
     },
     {
       "name": "Sousa_TextCutBG_R_03",
@@ -8430,161 +9169,7 @@
     {
       "name": "logic02_009_s",
       "why": "у картинки нет немецкого варианта: в слоте русского игра её не показывает, класть некуда"
-    },
-    {
-      "name": "efc_BigFont00",
-      "bundle": "gk2_idlocal_trial",
-      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont00_ger.png",
-      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont00_eng.png",
-      "size": [
-        1440,
-        1440
-      ],
-      "flipped": true,
-      "source_sha": "49a785991f51b12cf7a587b0a8ef4e436590d6b980f4ad7db810883677fae415",
-      "png_sha": "e09d8ecc1098cd4da29be8f1ce9243a5e8f234bff1d569c5e232e183f2567511",
-      "box": [
-        12,
-        12,
-        1424,
-        1072
-      ],
-      "layer": "gk2_idlocal_trial/efc_BigFont00.png",
-      "mask": "gk2_idlocal_trial/efc_BigFont00_mask.png",
-      "why": "слой — 48% картинки: это рисунок, а не надпись"
-    },
-    {
-      "name": "efc_BigFont01",
-      "bundle": "gk2_idlocal_trial",
-      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont01_ger.png",
-      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont01_eng.png",
-      "size": [
-        1440,
-        1440
-      ],
-      "flipped": true,
-      "source_sha": "67e5389ab12050867a2fa9326a207df2eb4adf92bfdb7d19fe634a47c8b798cb",
-      "png_sha": "132b0496e8c3e4b516ff068d632823f15242aad23edcfee056c91a19af79a717",
-      "box": [
-        6,
-        16,
-        1428,
-        1060
-      ],
-      "layer": "gk2_idlocal_trial/efc_BigFont01.png",
-      "mask": "gk2_idlocal_trial/efc_BigFont01_mask.png",
-      "why": "слой — 49% картинки: это рисунок, а не надпись"
-    },
-    {
-      "name": "efc_BigFont02",
-      "bundle": "gk2_idlocal_trial",
-      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont02_ger.png",
-      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont02_eng.png",
-      "size": [
-        1440,
-        1440
-      ],
-      "flipped": true,
-      "source_sha": "37186e3c2a7771380eb0ce4beade96f8781078227e07bdbe98e7b04910875521",
-      "png_sha": "111b21105174fd6a4db191b8d48b652349bf1814c9c1ea9e5751541f055d3605",
-      "box": [
-        24,
-        19,
-        1430,
-        1058
-      ],
-      "layer": "gk2_idlocal_trial/efc_BigFont02.png",
-      "mask": "gk2_idlocal_trial/efc_BigFont02_mask.png",
-      "why": "слой — 48% картинки: это рисунок, а не надпись"
-    },
-    {
-      "name": "efc_BigFont03",
-      "bundle": "gk2_idlocal_trial",
-      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont03_ger.png",
-      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont03_eng.png",
-      "size": [
-        1440,
-        1440
-      ],
-      "flipped": true,
-      "source_sha": "0cef62d5f4d609850af489c3b8cda5b9ad7765631ff657bf615285525a28bf64",
-      "png_sha": "b9dac438f518b095d91718dab19468867449a9453bf180e90b18b99cbdf7c897",
-      "box": [
-        28,
-        41,
-        1429,
-        1040
-      ],
-      "layer": "gk2_idlocal_trial/efc_BigFont03.png",
-      "mask": "gk2_idlocal_trial/efc_BigFont03_mask.png",
-      "why": "слой — 43% картинки: это рисунок, а не надпись"
-    },
-    {
-      "name": "efc_BigFont04",
-      "bundle": "gk2_idlocal_trial",
-      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont04_ger.png",
-      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont04_eng.png",
-      "size": [
-        1440,
-        1440
-      ],
-      "flipped": true,
-      "source_sha": "1f7acf43bfc9312fee45b3f33ca6e1d4777c0038b22c97bfb1bc28a63cbcb741",
-      "png_sha": "9d5266352b92f3542d0a383a35ee67ad086a9d7be10963afb185c5c6f2ce8db8",
-      "box": [
-        5,
-        12,
-        1432,
-        1076
-      ],
-      "layer": "gk2_idlocal_trial/efc_BigFont04.png",
-      "mask": "gk2_idlocal_trial/efc_BigFont04_mask.png",
-      "why": "слой — 53% картинки: это рисунок, а не надпись"
-    },
-    {
-      "name": "efc_BigFont05",
-      "bundle": "gk2_idlocal_trial",
-      "key": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont05_ger.png",
-      "source": "Assets/GK2/Ipnce/Data/idlocal.bin/FHD/efc_BigFont05_eng.png",
-      "size": [
-        1440,
-        1440
-      ],
-      "flipped": true,
-      "source_sha": "c5d9739762d8f61d03a06f7dc9f46b432633780af2c22fff6ff7664247fad3c6",
-      "png_sha": "3c0ab6b97cec242a8ad69ec8302234adf2ef2e6dbc07f5dbda47052a6ed0ce2b",
-      "box": [
-        4,
-        14,
-        1440,
-        1075
-      ],
-      "layer": "gk2_idlocal_trial/efc_BigFont05.png",
-      "mask": "gk2_idlocal_trial/efc_BigFont05_mask.png",
-      "why": "слой — 47% картинки: это рисунок, а не надпись"
-    },
-    {
-      "name": "cut01_009",
-      "bundle": "gk2_upcutlocal",
-      "key": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_009_ger.png",
-      "source": "Assets/GK2/Ipnce/Data/upcut_local.bin/FHD/cut01_009_eng.png",
-      "size": [
-        1920,
-        1080
-      ],
-      "flipped": false,
-      "source_sha": "5f0ac04594098fa492708b3912c70b4148098f0f7ddd9a976b74cd4303b028a7",
-      "png_sha": "e0cf133f3f297cb0bf579fa29f6747a9975c4404f809b95f26cda363181ab020",
-      "box": [
-        340,
-        60,
-        1920,
-        661
-      ],
-      "layer": "gk2_upcutlocal/cut01_009.png",
-      "mask": "gk2_upcutlocal/cut01_009_mask.png",
-      "why": "слой — 29% картинки: это рисунок, а не надпись"
     }
   ],
-  "built": "2026-10-20 19:58"
+  "built": "2026-10-24 15:26"
 }

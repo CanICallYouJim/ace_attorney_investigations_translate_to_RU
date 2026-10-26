@@ -398,6 +398,19 @@ def measure(body: np.ndarray, rim: np.ndarray, cov: np.ndarray | None, cov_rim: 
         lo, hi = base - 1.6 * href, base + 0.6 * href
         keep_ids = [k for k, st, _ in comps
                     if st[4] >= 0.1 * med and st[1] >= lo and st[1] + st[3] - 1 <= hi]
+        # У строки с высокой начальной прописной медианная полоса строчных
+        # может отрезать F/S/G целиком. Буква на той же базе не становится
+        # рисунком из-за высоты: сохраняем первую прописную вместе со строкой.
+        # Условие базы то же, что ниже при отборе upright; допуски не меняются.
+        initial = next((c for c in text if c.isalpha()), "")
+        if initial.isupper():
+            capitals = [(k, st) for k, st, _ in big
+                        if st[3] >= href
+                        and abs(st[1] + st[3] - 1 - base) <= max(2, 0.15 * href)]
+            if capitals:
+                first, _ = min(capitals, key=lambda item: item[1][0])
+                if first not in keep_ids:
+                    keep_ids.append(first)
     keep = np.isin(lab, keep_ids) if keep_ids else np.zeros_like(src)
     if keep.sum() < 12:
         return None, keep

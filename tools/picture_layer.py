@@ -23,6 +23,7 @@
 from __future__ import annotations
 
 import hashlib
+from copy import copy
 import struct
 from pathlib import Path
 
@@ -31,6 +32,7 @@ from PIL import Image
 from UnityPy.enums import TextureFormat
 
 from common import WORK, load_json
+from swap_localized import HOST, LANG_KEY, plan_env
 
 FOLDER = WORK / "graphics_layers"
 RAW = int(TextureFormat.RGBA32)
@@ -481,6 +483,36 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
     ab = next(o for o in env.objects if o.type.name == "AssetBundle")
     tree = ab.read_typetree()
     entries = {k: v for k, v in tree["m_Container"]}
+    pairs = list(pairs)
+    created: set[str] = set()
+    extra_sources = dict(plan_env(env, pictures))
+    for key in sorted(pictures):
+        if key in entries:
+            continue
+        match = LANG_KEY.search(key)
+        source_key = extra_sources.get(key)
+        if not match or match.group(1).lower() != HOST or source_key is None:
+            raise KeyError(f"{key}: нет немецкого адреса и источника для его создания")
+        source_obj = env.container[source_key].deref()
+        if source_obj.type.name != "Texture2D" or source_obj.assets_file is not ab.assets_file:
+            raise ValueError(f"{key}: новый адрес поддерживается только для собственной Texture2D бандла")
+        objects = source_obj.assets_file.objects
+        path_id = 1
+        while path_id in objects:
+            path_id += 1
+        obj = copy(source_obj)
+        obj.path_id = path_id
+        obj.set_raw_data(source_obj.get_raw_data())
+        objects[path_id] = obj
+        # Собственный объект, собственный диапазон преднагрузки. Английский
+        # адрес и его объект никогда не переиспользуются для русских пикселей.
+        ptr = {"m_FileID": 0, "m_PathID": path_id}
+        info = {"preloadIndex": len(tree["m_PreloadTable"]), "preloadSize": 1, "asset": dict(ptr)}
+        tree["m_PreloadTable"].append(ptr)
+        tree["m_Container"].append([key, info])
+        entries[key] = info
+        pairs.append((key, source_key))
+        created.add(key)
     missing = [g for g, e in pairs if g not in entries or e not in entries]
     missing += [k for k in pictures if k not in entries]
     if missing:
@@ -498,6 +530,8 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
             continue
         obj = german_object(env, entries, key, sources.get(key))
         tex = obj.read()
+        if key in created:
+            tex.m_Name = leaf(key)
         if img.size != (tex.m_Width, tex.m_Height):
             raise ValueError(f"{leaf(key)}: картинка {img.size[0]}x{img.size[1]}, "
                              f"текстура {tex.m_Width}x{tex.m_Height}")
@@ -641,7 +675,8 @@ class Shipment:
                     continue
                 pictures[entry["key"]] = Image.open(self.folder / entry["layer"]).convert("RGBA")
                 continue
-            if entry["key"] not in env.container or entry["source"] not in env.container:
+            if (entry["source"] not in env.container
+                    or entry["key"] not in env.container and not entry.get("create")):
                 notes.append(f"{name}: в бандле нет её адреса — оставлена английской")
                 continue
             source = env.container[entry["source"]].read().image

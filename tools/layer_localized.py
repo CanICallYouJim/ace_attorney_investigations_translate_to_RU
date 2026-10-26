@@ -139,6 +139,8 @@ def index() -> dict[str, list[tuple[str, str, str]]]:
 
     Одно имя бывает в нескольких бандлах: FHD и Classic — две разные картинки
     одного и того же места, накрывать надо обе.
+    У GK2 без немецкого варианта возвращается будущий адрес: отдельный объект
+    для него создаёт write_bundle, не изменяя английскую текстуру.
     """
     data = load_json(WORK / "localized_assets.json")
     if not data:
@@ -146,12 +148,20 @@ def index() -> dict[str, list[tuple[str, str, str]]]:
 
     out: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
     for fam in data["families"].values():
-        if fam["type"] != "Texture2D" or HOST not in fam["variants"]:
+        if fam["type"] != "Texture2D":
             continue
         if any(bad in fam["bundle"] for bad in NEVER):
             continue
         base = LANG_KEY.sub("", fam["base"].split("/")[-1], count=1).rsplit(".", 1)[0]
-        ger = fam["variants"][HOST]
+        ger = fam["variants"].get(HOST)
+        if ger is None:
+            if not fam["bundle"].startswith("gk2_"):
+                continue
+            # Только семейства из переписи языковых текстур. Объект и адрес
+            # создаются при записи, оригинальные языки остаются нетронутыми.
+            source = fam["variants"].get("eng") or next(iter(fam["variants"].values()))
+            stem, ext = fam["base"].rsplit(".", 1)
+            ger = {**source, "path": f"{stem}_{HOST}.{ext}"}
         out[base].append((fam["bundle"], ger["path"], f"{ger.get('w')}x{ger.get('h')}"))
     return out
 
@@ -576,7 +586,7 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
         print(f"\n{short(bundle_name)} — {'оригинал из backup/' if src.parent == BACKUP else 'живой, нетронутый'}",
               flush=True)
         env = UnityPy.load(str(src))
-        pairs = dict(plan_env(env))
+        pairs = dict(plan_env(env, [key for _, key in places[bundle_name]]))
         from picture_layer import sprites_by_key
         from plates import layer_entry
         sprites = sprites_by_key(env)
@@ -600,7 +610,8 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
             if source_key is None:
                 manifest["skipped"].append({**entry, "why": "нет ни английского, ни базового варианта"})
                 continue
-            german = env.container[key].read()
+            create = key not in env.container
+            german = env.container[source_key if create else key].read()
             size = (german.m_Width, german.m_Height)
             picture = Image.open(png).convert("RGBA")
             if picture.size != size:
@@ -631,6 +642,8 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
                 continue
             entry.update(source=source_key, size=list(size), flipped=flipped,
                          source_sha=source_sha, png_sha=png_sha)
+            if create:
+                entry["create"] = True
             if name in derive_of:
                 entry["derive"] = derive_of[name]
 

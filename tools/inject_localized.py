@@ -109,7 +109,8 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool,
             pictures[key] = img
             plates.append(leaf(key))
             continue
-        tex = env.container[key].read()
+        source_key = dict(plan_env(env, [key])).get(key)
+        tex = env.container[key if key in env.container else source_key].read()
         if img.size != (tex.m_Width, tex.m_Height):
             notes.append(f"{png.name}: {img.size[0]}x{img.size[1]} -> {tex.m_Width}x{tex.m_Height}")
             img = img.resize((tex.m_Width, tex.m_Height), Image.LANCZOS)
@@ -117,7 +118,7 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool,
             img = img.transpose(FLIP)
             notes.append(f"{png.name}: бандл хранит её вверх ногами — перевернул")
         pictures[key] = img
-    pairs = plan_env(env)
+    pairs = plan_env(env, pictures)
     for spec, atlas in splashes:
         # Заставку игра берёт из немецкого префаба, и его адрес подмене не отдаётся:
         # уведи его на английский — на экране снова встанет `Rebuttal` (`Investigation Begin`).

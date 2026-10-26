@@ -148,7 +148,10 @@ def main() -> int:
                 live = UnityPy.load(str(BUNDLES / bundle_name))
                 orig = UnityPy.load(str(original(bundle_name)))
                 entries = entries_of(live)
-                pairs = dict(plan_env(live))
+                pairs = dict(plan_env(live, [k for _, k in items]))
+            if key not in entries:
+                todo[bundle_name].append((name, key))
+                continue
             tex = german_object(live, entries, key, pairs.get(key)).read()
             if not hasattr(tex, "m_Width"):
                 # Спрайт (фоны чтения): сверять его этот скрипт не умеет и не ставит —
@@ -202,14 +205,15 @@ def main() -> int:
             orig = UnityPy.load(str(original(bundle_name)))
             sprites = sprites_by_key(env)
             entries = entries_of(env)
-            pairs = dict(plan_env(env))
+            pairs = dict(plan_env(env, [k for _, k in todo[bundle_name]]))
             pictures = {}
             notes = []
             for name, key in todo[bundle_name]:
                 if key in sprites:
                     problems.append(f"{name}: это спрайт-плашка — ставить через make graphics-ru")
                     continue
-                tex = german_object(env, entries, key, pairs.get(key)).read()
+                tex = (german_object(env, entries, key, pairs.get(key)) if key in entries
+                       else env.container[pairs[key]]).read()
                 face = Image.open(files[name]).convert("RGBA")
                 flipped = stored_flipped(orig, key, face)
                 if flipped:

@@ -93,11 +93,13 @@ def plan_bundle(path) -> list[tuple[str, str]]:
     return plan_env(UnityPy.load(str(path)))
 
 
-def plan_env(env) -> list[tuple[str, str]]:
-    """То же по уже открытому бандлу — чтобы не читать его с диска второй раз."""
+def plan_env(env, extra_keys=()) -> list[tuple[str, str]]:
+    """Пары адресов открытого бандла; extra_keys — ещё не созданные адреса картинок."""
     keys = set(env.container)
     pairs = []
-    for key in sorted(keys):
+    # Для новой русской картинки немецкого адреса в оригинале может не быть.
+    # Его источник всё равно определяется по существующему English/base.
+    for key in sorted(keys | set(extra_keys)):
         m = LANG_KEY.search(key)
         if not m or m.group(1).lower() != HOST:
             continue

@@ -485,6 +485,18 @@
       "reason": "User chose to retain the English artwork of the illegible wall note; D-259 is already approved as a Latin identifier. Use the English asset without redrawing.",
       "evidence": "docs/decisions.md: 27 October 2026, «Оставить английский рисунок»",
       "english_alias": true
+    },
+    "cut01_028": {
+      "kind": "original",
+      "reason": "User chose to retain the English artwork of the illegible magazine; no readable words are being left untranslated.",
+      "evidence": "docs/decisions.md:27 October2026, «Оставить английский рисунок» for cut01_028",
+      "english_alias": true
+    },
+    "logic01_006_s": {
+      "kind": "original",
+      "reason": "Small card of the same illegible magazine as cut01_028; retain the English artwork under the accepted family decision, without redrawing.",
+      "evidence": "docs/decisions.md:27 October2026, accepted English magazine cut01_028 and exact family copy rule20October",
+      "english_alias": true
     }
   }
 }

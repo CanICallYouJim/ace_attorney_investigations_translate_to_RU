@@ -497,6 +497,36 @@
       "reason": "Small card of the same illegible magazine as cut01_028; retain the English artwork under the accepted family decision, without redrawing.",
       "evidence": "docs/decisions.md:27 October2026, accepted English magazine cut01_028 and exact family copy rule20October",
       "english_alias": true
+    },
+    "cutobj03_004": {
+      "kind": "original",
+      "reason": "The approved Russian name Кей uses the initial К. Its capital glyph is identical to the stock English K; the existing artwork already represents the correct Russian initial. Keep its pixels and route the Russian slot to the same source.",
+      "evidence": "docs/glossary.md Kay Faraday → Кей Фарадей; docs/decisions.md27October2026 same-glyph initial",
+      "english_alias": true
+    },
+    "cut04_00e": {
+      "kind": "original",
+      "reason": "User chose to retain the original Latin bag logo in all three frames. The source is the shared unsuffixed texture, already used outside the French locale. The full inscription is not reliably established, and the seven dialogue localizations call it a bag without reading the logo. No redraw or added German address is needed.",
+      "evidence": "docs/decisions.md27October2026, «Оставить исходный логотип»",
+      "english_alias": false
+    },
+    "cut04_00f": {
+      "kind": "original",
+      "reason": "User chose to retain the original Latin bag logo in all three frames. The source is the shared unsuffixed texture, already used outside the French locale. The full inscription is not reliably established, and the seven dialogue localizations call it a bag without reading the logo. No redraw or added German address is needed.",
+      "evidence": "docs/decisions.md27October2026, «Оставить исходный логотип»",
+      "english_alias": false
+    },
+    "cut04_013": {
+      "kind": "original",
+      "reason": "User chose to retain the original Latin bag logo in all three frames. The source is the shared unsuffixed texture, already used outside the French locale. The full inscription is not reliably established, and the seven dialogue localizations call it a bag without reading the logo. No redraw or added German address is needed.",
+      "evidence": "docs/decisions.md27October2026, «Оставить исходный логотип»",
+      "english_alias": false
+    },
+    "mapVS14_0": {
+      "kind": "original",
+      "reason": "User identified the distant sign as the band Gavinners and explicitly chose the English spelling after discussing its existing game name. Retain the English sign and band logo; do not use the Japanese Garyu Wave version or redraw the letters.",
+      "evidence": "docs/decisions.md27October2026, «оставь англ вариант» for Gavinners",
+      "english_alias": true
     }
   }
 }

@@ -479,6 +479,12 @@
       "kind": "original",
       "reason": "User chose to retain original numeric prices with comma thousands separators after viewing all seven originals. Numeric values and source images remain unchanged.",
       "evidence": "docs/decisions.md: 24 October 2026, price separators retained"
+    },
+    "cut01_014": {
+      "kind": "original",
+      "reason": "User chose to retain the English artwork of the illegible wall note; D-259 is already approved as a Latin identifier. Use the English asset without redrawing.",
+      "evidence": "docs/decisions.md: 27 October 2026, «Оставить английский рисунок»",
+      "english_alias": true
     }
   }
 }

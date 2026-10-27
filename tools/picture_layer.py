@@ -32,7 +32,7 @@ from PIL import Image
 from UnityPy.enums import TextureFormat
 
 from common import WORK, load_json
-from swap_localized import HOST, LANG_KEY, plan_env
+from swap_localized import HOST, LANG_KEY, add_missing_aliases, plan_env
 
 FOLDER = WORK / "graphics_layers"
 RAW = int(TextureFormat.RGBA32)
@@ -513,6 +513,7 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
         entries[key] = info
         pairs.append((key, source_key))
         created.add(key)
+    entries = add_missing_aliases(env, tree, pairs)
     missing = [g for g, e in pairs if g not in entries or e not in entries]
     missing += [k for k in pictures if k not in entries]
     if missing:
@@ -575,9 +576,14 @@ class Shipment:
         self.folder = folder
         data = load_json(folder / "manifest.json", default={}) or {}
         self.pictures: list[dict] = data.get("pictures", [])
+        self.aliases: list[dict] = data.get("aliases", [])
+        self.aliases_by_bundle: dict[str, list[dict]] = {}
         self.by_bundle: dict[str, list[dict]] = {}
         for entry in self.pictures:
             self.by_bundle.setdefault(entry["bundle"], []).append(entry)
+        for entry in self.aliases:
+            self.aliases_by_bundle.setdefault(entry["bundle"], []).append(entry)
+            self.by_bundle.setdefault(entry["bundle"], [])
         home = {e["name"]: e["bundle"] for e in self.pictures}
         self.needed = {e["derive"]["из"] for e in self.pictures if e.get("derive")}
         self.feeders = {home[name] for name in self.needed if name in home}
@@ -649,6 +655,10 @@ class Shipment:
         картинка остаётся английской, а не ложится криво.
         """
         env = UnityPy.load(str(path))
+        pairs = list(pairs)
+        for entry in self.aliases_by_bundle.get(short(path.name), []):
+            if entry["source"] in env.container:
+                pairs.append((entry["key"], entry["source"]))
         pictures: dict[str, Image.Image] = {}
         notes: list[str] = []
         sprites: dict | None = None

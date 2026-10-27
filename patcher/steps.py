@@ -62,6 +62,9 @@ def graphics_recipe(bundle_short: str, russian, keep: dict) -> str:
     names = {e["derive"]["из"] for e in own if e.get("derive")}
     sources = sorted((e for e in russian.pictures if e["name"] in names), key=lambda e: e["name"])
     data = {"v": GRAPHICS_VERSION, "own": own, "sources": sources}
+    aliases = getattr(russian, "aliases_by_bundle", {}).get(bundle_short, [])
+    if aliases:
+        data["aliases"] = sorted(aliases, key=lambda e: e["name"])
     if IMAGE_TABLE_BUNDLE in bundle_short:
         data["table"] = sorted(keep.items())
     if "gk2_movie" in bundle_short:

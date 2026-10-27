@@ -134,7 +134,7 @@ def pictures() -> int:
 
     shipment = Shipment()
     print(f"\nрусские картинки в слое: {len(shipment)}")
-    if not len(shipment):
+    if not len(shipment) and not shipment.aliases:
         return 0
     pngs = {p.stem: p for p in RU.rglob("*.png")}
     bad = 0
@@ -274,6 +274,18 @@ def pictures() -> int:
             print(f"    {entry['name']:18} отличие от русской: среднее {mean:.2f}, пик {peak}, грубых {rough}; "
                   f"сторона {'как оригинал' if side else 'ПЕРЕВЁРНУТА'}; "
                   f"адрес {'свой' if own else 'ЧУЖОЙ'}; английская {'не тронута' if english else 'ИЗМЕНЕНА'}"
+                  f"{'' if ok else '  <- РАЗОШЛОСЬ'}")
+        for alias in shipment.aliases_by_bundle.get(bundle, []):
+            target = built.container[alias["key"]]
+            source = built.container[alias["source"]]
+            same = target.path_id == source.path_id
+            english = pixels_sha(source.read().image) == alias["source_sha"]
+            own_info, source_info = container[alias["key"]], container[alias["source"]]
+            preload = (own_info["preloadIndex"], own_info["preloadSize"]) == (source_info["preloadIndex"], source_info["preloadSize"])
+            ok = same and english and preload
+            bad += not ok
+            print(f"    {alias['name']:18} оставленный оригинал: English-адрес {'верен' if same else 'СБИТ'}; "
+                  f"пиксели {'не тронуты' if english else 'ИЗМЕНЕНЫ'}; преднагрузка {'верна' if preload else 'СБИТА'}"
                   f"{'' if ok else '  <- РАЗОШЛОСЬ'}")
         del built, blob
         gc.collect()

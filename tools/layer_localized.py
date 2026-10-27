@@ -544,7 +544,7 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
     # а не картинки игры: в слой они не идут и в «не везём» им делать нечего
     pngs = [png for png in sorted(RU.rglob("*.png"))
             if png.name not in SPLASH_PNGS and not png.stem.endswith("_ink")]
-    manifest: dict = {"pictures": [], "skipped": []}
+    manifest: dict = {"pictures": [], "skipped": [], "aliases": []}
     problems: list[str] = []
     seen: dict[str, Path] = {}
     for png in pngs:
@@ -576,8 +576,22 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
         for bundle_name, key, _ in where:
             places[bundle_name].append((png, key))
 
+    # Осознанно оставленный English без GER — отдельный адрес, а не перевод
+    # и не пиксельный слой. Такие исключения берутся только из coverage policy.
+    aliases: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
+    policy = load_json(RU / "coverage.json", default={}) or {}
+    for fam in load_json(WORK / "localized_assets.json")["families"].values():
+        name = fam["base"].rsplit("/", 1)[-1].rsplit(".", 1)[0]
+        if (fam["type"] != "Texture2D" or HOST in fam["variants"]
+                or not fam["bundle"].startswith("gk2_") or "eng" not in fam["variants"]
+                or policy.get("excluded", {}).get(name, {}).get("kind") != "original"
+                or not policy.get("excluded", {}).get(name, {}).get("english_alias")):
+            continue
+        stem, ext = fam["base"].rsplit(".", 1)
+        aliases[fam["bundle"]].append((name, f"{stem}_{HOST}.{ext}", fam["variants"]["eng"]["path"]))
     composites: dict[str, Image.Image] = {}
-    order = sorted(places, key=lambda b: (not any(p.stem in feeding for p, _ in places[b]), b))
+    order = sorted(set(places) | set(aliases),
+                   key=lambda b: (not any(p.stem in feeding for p, _ in places.get(b, [])), b))
     for bundle_name in order:
         src = original(bundle_name)
         if src is None:
@@ -586,11 +600,17 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
         print(f"\n{short(bundle_name)} — {'оригинал из backup/' if src.parent == BACKUP else 'живой, нетронутый'}",
               flush=True)
         env = UnityPy.load(str(src))
-        pairs = dict(plan_env(env, [key for _, key in places[bundle_name]]))
+        for name, key, source in aliases.get(bundle_name, []):
+            if source not in env.container:
+                problems.append(f"{name}: нет английского источника для оставленного оригинала")
+                continue
+            manifest["aliases"].append({"name": name, "bundle": short(bundle_name), "key": key,
+                                        "source": source, "source_sha": pixels_sha(env.container[source].read().image)})
+        pairs = dict(plan_env(env, [key for _, key in places.get(bundle_name, [])]))
         from picture_layer import sprites_by_key
         from plates import layer_entry
         sprites = sprites_by_key(env)
-        for png, key in sorted(places[bundle_name], key=lambda it: (it[0].stem in derive_of, it[0].stem)):
+        for png, key in sorted(places.get(bundle_name, []), key=lambda it: (it[0].stem in derive_of, it[0].stem)):
             name = png.stem
             entry: dict = {"name": name, "bundle": short(bundle_name), "key": key}
             png_sha = file_sha(png)

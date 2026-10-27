@@ -93,11 +93,13 @@ def plan_bundle(path) -> list[tuple[str, str]]:
     return plan_env(UnityPy.load(str(path)))
 
 
-def plan_env(env) -> list[tuple[str, str]]:
-    """То же по уже открытому бандлу — чтобы не читать его с диска второй раз."""
+def plan_env(env, extra_keys=()) -> list[tuple[str, str]]:
+    """Пары адресов открытого бандла; extra_keys — ещё не созданные адреса картинок."""
     keys = set(env.container)
     pairs = []
-    for key in sorted(keys):
+    # Для новой русской картинки немецкого адреса в оригинале может не быть.
+    # Его источник всё равно определяется по существующему English/base.
+    for key in sorted(keys | set(extra_keys)):
         m = LANG_KEY.search(key)
         if not m or m.group(1).lower() != HOST:
             continue
@@ -110,12 +112,28 @@ def plan_env(env) -> list[tuple[str, str]]:
     return pairs
 
 
+def add_missing_aliases(env, tree: dict, pairs) -> dict:
+    """Добавить отсутствующие немецкие адреса на прежний English/base, без новых пикселей."""
+    entries = dict(tree["m_Container"])
+    for key, source in pairs:
+        if key in entries:
+            continue
+        match = LANG_KEY.search(key)
+        if (not match or match.group(1).lower() != HOST or source not in entries
+                or env.container[source].type.name != "Texture2D"):
+            raise KeyError(f"{key}: нет источника Texture2D для английского адреса")
+        info = {**entries[source], "asset": dict(entries[source]["asset"])}
+        tree["m_Container"].append([key, info])
+        entries[key] = info
+    return entries
+
+
 def redirect(path, pairs: list[tuple[str, str]]) -> bytes:
     """Переписать m_Container: адресу _ger отдать объект и преднагрузку записи _eng."""
     env = UnityPy.load(str(path))
     ab = next(o for o in env.objects if o.type.name == "AssetBundle")
     tree = ab.read_typetree()
-    by_key = {k: v for k, v in tree["m_Container"]}
+    by_key = add_missing_aliases(env, tree, pairs)
     wanted = dict(pairs)
 
     missing = [g for g, e in pairs if g not in by_key or e not in by_key]

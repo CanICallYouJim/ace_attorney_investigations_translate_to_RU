@@ -46,6 +46,25 @@ class GraphicsProgressTest(unittest.TestCase):
             self.assertEqual(root.find("s:title", ns).text, "Картинки GK2: 1 из 4 (25,0%)")
             self.assertEqual(root.findall("s:rect", ns)[-1].attrib["width"], "150.00")
 
+    def test_material_debt_does_not_disappear_behind_complete_bitmaps(self):
+        policy = self.policy()
+        policy["material_textures"] = {"plan_model": {}, "glove_model": {}}
+        families = {"brand": self.family("brand")}
+        manifest = {"pictures": [{"name": "Situation_0"}]}
+        stats = graphics_progress(families, manifest, policy)
+        self.assertEqual((stats["gk2_pictures_done"], stats["gk2_pictures_total"]), (1, 1))
+        self.assertEqual((stats["gk2_materials_done"], stats["gk2_materials_total"]), (0, 2))
+        manifest["pictures"].append({"name": "plan_model", "kind": "material"})
+        stats = graphics_progress(families, manifest, policy)
+        self.assertEqual((stats["gk2_materials_done"], stats["gk2_materials_total"]), (1, 2))
+        self.assertEqual(stats["gk2_pictures_total"], 1)
+
+    def test_unclassified_material_cannot_be_shipped(self):
+        with self.assertRaisesRegex(ValueError, "material textures missing from inventory"):
+            graphics_progress({"brand": self.family("brand")},
+                              {"pictures": [{"name": "unknown_model", "kind": "material"}]},
+                              self.policy())
+
 
 if __name__ == "__main__":
     unittest.main()

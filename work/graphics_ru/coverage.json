@@ -528,5 +528,25 @@
       "evidence": "docs/decisions.md27October2026, «оставь англ вариант» for Gavinners",
       "english_alias": true
     }
+  },
+  "material_textures": {
+    "bag_01_model": {
+      "model": "itm00_010_00",
+      "bundle": "gk2_modelitemlocal_trial",
+      "source_texture": "bag_01_eng",
+      "target_texture": "bag_01_ger",
+      "donor": "cut00_007",
+      "status": "pending",
+      "reason": "Readable text in a nested 3D material; accepted flat plan is the donor. Not included in the bitmap denominator."
+    },
+    "gom_glove_model": {
+      "model": "itm01_002_00",
+      "bundle": "gk2_modelitemlocal",
+      "source_texture": "gom_glove_eng",
+      "target_texture": "gom_glove_ger",
+      "donor": "itm01_002_00_l",
+      "status": "pending",
+      "reason": "Inmate Use Only on the 3D material remains English; the accepted Russian label must also appear on this model."
+    }
   }
 }

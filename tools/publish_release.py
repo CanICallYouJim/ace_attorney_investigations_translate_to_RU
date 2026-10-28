@@ -153,7 +153,12 @@ def graphics_progress(families: dict, manifest: dict, policy: dict) -> dict:
     unknown = excluded - source
     if unknown:
         raise ValueError(f"graphics exclusions missing from source: {sorted(unknown)}")
-    shipped = {e["name"] for e in manifest["pictures"]}
+    materials = set(policy.get("material_textures", {}))
+    model_shipped = {e["name"] for e in manifest["pictures"] if e.get("kind") == "material"}
+    unknown_models = model_shipped - materials
+    if unknown_models:
+        raise ValueError(f"shipped material textures missing from inventory: {sorted(unknown_models)}")
+    shipped = {e["name"] for e in manifest["pictures"] if e.get("kind") != "material"}
     unknown = shipped - source - set(policy["outside_gk2"])
     if unknown:
         raise ValueError(f"shipped pictures missing from GK2 inventory: {sorted(unknown)}")
@@ -164,8 +169,11 @@ def graphics_progress(families: dict, manifest: dict, policy: dict) -> dict:
         raise ValueError("empty GK2 picture inventory")
     done = len(shipped & required)
     total = len(required)
-    return {"gk2_pictures_done": done, "gk2_pictures_total": total,
-            "gk2_pictures_percent": f"{100 * done / total:.1f}".replace(".", ",")}
+    stats = {"gk2_pictures_done": done, "gk2_pictures_total": total,
+             "gk2_pictures_percent": f"{100 * done / total:.1f}".replace(".", ",")}
+    if materials:
+        stats.update(gk2_materials_done=len(model_shipped), gk2_materials_total=len(materials))
+    return stats
 
 
 def write_graphics_bar(out: Path, stats: dict) -> None:

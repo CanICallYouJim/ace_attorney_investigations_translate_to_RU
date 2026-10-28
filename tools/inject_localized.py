@@ -61,8 +61,10 @@ import UnityPy
 from PIL import Image
 
 from common import BACKUP, BUNDLES, WORK, game_is_running
-from layer_localized import SPLASH_PNGS, index, original, splash_jobs, stored_flipped
-from picture_layer import FLIP, leaf, splash_prefabs, sprites_by_key, texture_of, write_bundle, write_splash
+from layer_localized import (SPLASH_PNGS, index, material_layer, material_specs, original,
+                             recipes, splash_jobs, stored_flipped)
+from picture_layer import (FLIP, leaf, splash_prefabs, sprites_by_key, texture_of,
+                           write_bundle, write_material, write_splash)
 from plates import table_rows
 from swap_localized import BUILD, IMAGE_TABLE_BUNDLE, plan_env, register_backup, swap_image_table
 
@@ -99,8 +101,16 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool,
     sprites = sprites_by_key(env)
     pictures: dict[str, Image.Image] = {}
     plates: list[str] = []
+    models = {s["key"]: s for s in material_specs().values() if s["bundle"] == bundle_name}
+    material_keys = set()
     for key, png in jobs:
         img = Image.open(png).convert("RGBA")
+        if key in models:
+            entry = material_layer(env, BUILD / "material_layers", png, models[key],
+                                   recipes(png.parent).get(png.stem, []))
+            notes += write_material(env, entry, img, raw)
+            material_keys.add(key)
+            continue
         if key in sprites:
             tex = texture_of(env, sprites[key]).read()
             if img.size != (tex.m_Width, tex.m_Height):
@@ -119,6 +129,7 @@ def patch(bundle_name: str, jobs: list[tuple[str, Path]], raw: bool,
             notes.append(f"{png.name}: бандл хранит её вверх ногами — перевернул")
         pictures[key] = img
     pairs = plan_env(env, pictures)
+    pairs = [(g, e) for g, e in pairs if g not in material_keys]
     for spec, atlas in splashes:
         # Заставку игра берёт из немецкого префаба, и его адрес подмене не отдаётся:
         # уведи его на английский — на экране снова встанет `Rebuttal` (`Investigation Begin`).

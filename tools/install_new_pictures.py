@@ -53,8 +53,8 @@ from PIL import Image
 
 from common import BACKUP, BUNDLES, WORK, game_is_running, load_json, save_json, sha256
 from inject_localized import load_splashes, patch
-from layer_localized import index, original, stored_flipped
-from picture_layer import FLIP, german_object, sprites_by_key, write_bundle
+from layer_localized import index, material_specs, original, stored_flipped
+from picture_layer import FLIP, german_object, model_texture, sprites_by_key, write_bundle
 from swap_localized import BUILD, MANIFEST, plan_env, register_backup
 
 STATE = BUILD / "installed_pictures.json"
@@ -115,6 +115,7 @@ def main() -> int:
     if unknown:
         sys.exit(f"нет таких PNG в work/graphics_ru: {', '.join(unknown)}")
     idx = index()
+    models = material_specs()
     state = load_json(STATE, default={}) or {}
     state.setdefault("pictures", {})
     state.setdefault("bundles", {})
@@ -132,6 +133,15 @@ def main() -> int:
     whole: list[str] = []
     checked = 0
     for bundle_name, items in sorted(by_bundle.items()):
+        if any(name in models for name, _ in items):
+            # Model prefabs retain their complete native preload ranges. Rebuild
+            # this small model bundle from backup rather than patch a redirected root.
+            trusted = state["bundles"].get(bundle_name) == live_sha[bundle_name]
+            if (trusted and not any(name in args.names for name, _ in items)
+                    and all(state["pictures"].get(name) == png_sha[name] for name, _ in items)):
+                continue
+            whole.append(bundle_name)
+            continue
         if not is_built(bundle_name):
             whole.append(bundle_name)
             continue
@@ -177,7 +187,8 @@ def main() -> int:
         print(f"сверено с живыми текстурами: {checked}")
     for bundle_name in whole:
         names = sorted({n for n, _ in by_bundle[bundle_name]})
-        print(f"  {bundle_name.split('_assets_all_')[0]:44} бандл оригинальный — соберу целиком "
+        reason = "3D-материал" if any(n in models for n in names) else "бандл оригинальный"
+        print(f"  {bundle_name.split('_assets_all_')[0]:44} {reason} — соберу целиком "
               f"из backup/, картинок: {len(names)}")
     for bundle_name, items in sorted(todo.items()):
         print(f"  {bundle_name.split('_assets_all_')[0]:44} поставить: "
@@ -242,6 +253,16 @@ def main() -> int:
         bad = []
         got = {}                # имя -> (немецкая текстура, её картинка, английская байтами)
         for name, key in written:
+            if name in models:
+                spec = models[name]
+                root, obj = model_texture(env, key, spec["target_texture"], own=True)
+                if entries[key]["asset"]["m_PathID"] != root.path_id:
+                    bad.append(f"{name}: GER address does not point at its own model prefab")
+                tex = obj.read()
+                eng_obj = model_texture(env, spec["source"], spec["source_texture"])[1]
+                eng_bytes = np.asarray(eng_obj.read().image).tobytes()
+                got[name] = (SimpleNamespace(m_Width=tex.m_Width, m_Height=tex.m_Height), tex.image, eng_bytes)
+                continue
             obj = german_object(env, entries, key, pairs.get(key))
             if entries[key]["asset"]["m_PathID"] != obj.path_id:
                 bad.append(f"{name}: адрес _ger ведёт не на немецкий объект")
@@ -256,9 +277,15 @@ def main() -> int:
         for name, key in written:
             tex, image, eng_bytes = got[name]
             face = Image.open(files[name]).convert("RGBA")
-            want = as_stored(files[name], tex, stored_flipped(orig, key, face))
+            want = as_stored(files[name], tex, False if name in models else stored_flipped(orig, key, face))
             if differs(want, image) > MOVED:
                 bad.append(f"{name}: в немецкой текстуре не та картинка")
+            if name in models:
+                spec = models[name]
+                english = model_texture(orig, spec["source"], spec["source_texture"])[1].read().image
+                if eng_bytes != np.asarray(english).tobytes():
+                    bad.append(f"{name}: English model texture differs from backup/")
+                continue
             eng = pairs.get(key)
             if eng_bytes is not None and eng in orig.container:
                 if eng_bytes != np.asarray(orig.container[eng].read().image).tobytes():

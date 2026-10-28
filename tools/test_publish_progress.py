@@ -2,9 +2,10 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 from xml.etree import ElementTree
 
-from publish_release import graphics_progress, write_graphics_bar
+from publish_release import graphics_progress, write_graphics_bar, write_showcase
 
 
 class GraphicsProgressTest(unittest.TestCase):
@@ -64,6 +65,18 @@ class GraphicsProgressTest(unittest.TestCase):
             graphics_progress({"brand": self.family("brand")},
                               {"pictures": [{"name": "unknown_model", "kind": "material"}]},
                               self.policy())
+
+    def test_showcase_keeps_material_debt_visible(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "source"
+            dest = Path(folder) / "out"
+            source.mkdir()
+            dest.mkdir()
+            (source / "README.md").write_text("{{materials_progress}}", encoding="utf-8")
+            (source / "LICENSE").write_text("fixture", encoding="utf-8")
+            with patch("publish_release.SHOWCASE", source):
+                write_showcase(dest, {"gk2_materials_done": 1, "gk2_materials_total": 2})
+            self.assertIn("**1 из 2 текстур материалов**", (dest / "README.md").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

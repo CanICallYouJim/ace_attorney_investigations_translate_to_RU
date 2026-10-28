@@ -277,6 +277,11 @@ def write_showcase(out: Path, stats: dict) -> None:
         return f"![{caption}](press/{name})"
 
     text = (SHOWCASE / "README.md").read_text(encoding="utf-8")
+    material_progress = ""
+    if stats.get("gk2_materials_total"):
+        material_progress = (f"Отдельно от PNG сцены и интерфейса учитываются надписи на 3D-моделях: "
+                             f"**{stats['gk2_materials_done']} из {stats['gk2_materials_total']} текстур материалов**.")
+    text = text.replace("{{materials_progress}}", material_progress)
     for key, value in stats.items():
         text = text.replace("{{" + key + "}}", f"{value:,}".replace(",", " ")
                             if isinstance(value, int) else str(value))

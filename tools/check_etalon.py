@@ -43,8 +43,8 @@ import UnityPy
 from PIL import Image, ImageChops
 
 from common import WORK, load_json
-from layer_localized import index, original, variants
-from picture_layer import FLIP, leaf, short
+from layer_localized import index, material_specs, original, variants
+from picture_layer import FLIP, leaf, model_texture, short
 
 EN = WORK / "graphics_en"
 TOL = 0          # эталон обязан совпасть ровно: это тот же файл, а не пересжатие
@@ -89,9 +89,17 @@ def check(case: str | None = None, damage: dict[str, Image.Image] | None = None)
         env = UnityPy.load(str(src))
         by_leaf = {leaf(k): k for k in env.container}
         for name, png, man in jobs:
+            if man.get("kind") == "material":
+                spec = material_specs()[name]
+                was = model_texture(env, spec["source"], spec["source_texture"])[1].read().image.convert("RGB")
+                key = spec["source"]
+            else:
+                was = None
             hits = [e for e in index().get(name, []) if short(e[0]) == bundle]
             lang = man.get("source_lang", "eng")
-            if hits:
+            if was is not None:
+                pass
+            elif hits:
                 keys = {leaf(k).rsplit("_", 1)[-1] if leaf(k) != name else "base": k
                         for k in variants(hits[0][1], env.container)}
                 key = keys.get(lang)
@@ -101,7 +109,8 @@ def check(case: str | None = None, damage: dict[str, Image.Image] | None = None)
             if key is None:
                 problems.append(f"{name}: в нетронутом бандле {bundle} нет варианта «{lang}»")
                 continue
-            was = env.container[key].read().image.convert("RGB")
+            if was is None:
+                was = env.container[key].read().image.convert("RGB")
             if man.get("flipped"):
                 was = was.transpose(FLIP)
             now = damage.get(name) or Image.open(png).convert("RGB")

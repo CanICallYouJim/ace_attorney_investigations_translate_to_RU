@@ -1,0 +1,14 @@
+{
+ "bag_01_model": {
+  "kind": "material",
+  "bundle": "gk2_modelitemlocal_trial",
+  "source_lang": "eng",
+  "flipped": false
+ },
+ "gom_glove_model": {
+  "kind": "material",
+  "bundle": "gk2_modelitemlocal",
+  "source_lang": "eng",
+  "flipped": false
+ }
+}

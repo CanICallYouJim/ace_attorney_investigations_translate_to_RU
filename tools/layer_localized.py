@@ -163,7 +163,64 @@ def index() -> dict[str, list[tuple[str, str, str]]]:
             stem, ext = fam["base"].rsplit(".", 1)
             ger = {**source, "path": f"{stem}_{HOST}.{ext}"}
         out[base].append((fam["bundle"], ger["path"], f"{ger.get('w')}x{ger.get('h')}"))
+    for name, spec in material_specs().items():
+        out[name].append((spec["bundle"], spec["key"], "material Texture2D"))
     return out
+
+
+def material_specs() -> dict[str, dict]:
+    """Explicit 3D inventory: resolve prefab addresses from the ordinary asset scan."""
+    policy = load_json(RU / "coverage.json", default={}) or {}
+    families = load_json(WORK / "localized_assets.json")["families"].values()
+    out = {}
+    for name, spec in policy.get("material_textures", {}).items():
+        matches = [f for f in families if f["type"] == "GameObject"
+                   and f["bundle"].split("_assets_all_")[0] == spec["bundle"]
+                   and f["base"].rsplit("/", 1)[-1] == spec["model"] + ".prefab"]
+        if len(matches) != 1:
+            raise ValueError(f"{name}: expected one inventoried 3D prefab, found {len(matches)}")
+        fam = matches[0]
+        out[name] = {**spec, "bundle": fam["bundle"], "key": fam["variants"][HOST]["path"],
+                     "source": fam["variants"]["eng"]["path"]}
+    return out
+
+
+def material_layer(env, folder: Path, png: Path, spec: dict, recipe: list[dict]) -> dict:
+    """Same sparse layer/25%/outside/compose checks for a nested model texture."""
+    from copy import deepcopy
+    from picture_layer import material_source, model_texture, preload_sha
+
+    root, target = model_texture(env, spec["key"], spec["target_texture"], own=True)
+    tree = next(o for o in env.objects if o.type.name == "AssetBundle").read_typetree()
+    info = dict(tree["m_Container"])[spec["key"]]
+    if root.path_id != info["asset"]["m_PathID"]:
+        raise ValueError(f"{png.stem}: layer source must be an untouched GER prefab")
+    entry = {"name": png.stem, "kind": "material", "bundle": short(spec["bundle"]),
+             "key": spec["key"], "source": spec["source"], "flipped": False,
+             "material": {"source_texture": spec["source_texture"],
+                          "target_texture": spec["target_texture"],
+                          "prefab_info": deepcopy(info), "preload_sha": preload_sha(tree)}}
+    source = material_source(env, entry).convert("RGBA")
+    picture = Image.open(png).convert("RGBA")
+    tex = target.read()
+    if source.size != picture.size or picture.size != (tex.m_Width, tex.m_Height):
+        raise ValueError(f"{png.stem}: source/GER/candidate sizes must match exactly")
+    entry.update(size=list(source.size), source_sha=pixels_sha(source), png_sha=file_sha(png))
+    mask = changed(picture, source)
+    room = allowed(source.size, recipe)
+    outside = count(ImageChops.subtract(mask, room)) if room is not None else None
+    if outside is None or outside:
+        raise ValueError(f"{png.stem}: missing zones or {outside} changed pixels outside text zones")
+    if count(mask) > MAX_SHARE * source.width * source.height:
+        raise ValueError(f"{png.stem}: model texture layer exceeds the common 25% limit")
+    save_layer(folder, entry, picture, mask)
+    result = compose(entry, source, {}, folder)
+    if count(rgb_delta(result, picture).point(lambda v: 255 if v else 0)) or count(
+            ImageChops.difference(result.getchannel("A"), picture.getchannel("A"))):
+        drop_layer(folder, entry)
+        raise ValueError(f"{png.stem}: model texture layer does not compose exactly")
+    entry.update(changed=count(mask), outside=outside)
+    return entry
 
 
 def original(bundle_name: str) -> Path | None:
@@ -555,6 +612,7 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
         return manifest, problems
 
     idx = index()
+    models = material_specs()
     jobs = {case: recipes(case) for case in {p.parent for p in pngs}}
     derive_of = {name: {"из": job["уменьшить"]["из"], "там": job["уменьшить"]["якорь_там"],
                         "тут": job["уменьшить"]["якорь_тут"]}
@@ -612,6 +670,14 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
         sprites = sprites_by_key(env)
         for png, key in sorted(places.get(bundle_name, []), key=lambda it: (it[0].stem in derive_of, it[0].stem)):
             name = png.stem
+            if name in models:
+                try:
+                    entry = material_layer(env, folder, png, models[name], jobs[png.parent].get(name, []))
+                    manifest["pictures"].append(entry)
+                    print(f"  {name:18} material layer; outside 0; compose exact", flush=True)
+                except (KeyError, ValueError) as exc:
+                    problems.append(str(exc))
+                continue
             entry: dict = {"name": name, "bundle": short(bundle_name), "key": key}
             png_sha = file_sha(png)
             old = known.get(name)

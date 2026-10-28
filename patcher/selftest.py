@@ -129,14 +129,18 @@ def pictures() -> int:
 
     from common import BUNDLES
     from layer_localized import RU, flat, original
-    from picture_layer import FLIP, Shipment, pixels_sha
+    from picture_layer import FLIP, Shipment, material_source, model_texture, pixels_sha, preload_sha
     from swap_localized import plan_env
 
     shipment = Shipment()
     print(f"\nрусские картинки в слое: {len(shipment)}")
     if not len(shipment) and not shipment.aliases:
         return 0
-    pngs = {p.stem: p for p in RU.rglob("*.png")}
+    pngs = {}
+    for p in RU.rglob("*.png"):
+        if p.stem in pngs:
+            raise ValueError(f"duplicate comparison PNG: {pngs[p.stem]} and {p}")
+        pngs[p.stem] = p
     bad = 0
 
     def plate_ok(built, entry) -> bool:
@@ -201,7 +205,22 @@ def pictures() -> int:
         # Бандл графики весит до 350 МБ, а в памяти разворачивается вдвое-втрое:
         # на машине с шестью гигабайтами три копии разом не помещаются. Поэтому
         # каждая загрузка отпускается до следующей.
-        plan = plan_env(UnityPy.load(str(src)))
+        original_env = UnityPy.load(str(src))
+        plan = plan_env(original_env)
+        model_entries = [e for e in shipment.by_bundle[bundle] if e.get("kind") == "material"]
+        unchanged = {}
+        unchanged_streams = {}
+        if model_entries:
+            import hashlib
+            own_textures = {model_texture(original_env, e["key"], e["material"]["target_texture"], True)[1].path_id
+                            for e in model_entries}
+            unchanged = {o.path_id: hashlib.sha256(o.get_raw_data()).hexdigest()
+                         for o in original_env.objects
+                         if o.type.name != "AssetBundle" and o.path_id not in own_textures}
+            unchanged_streams = {name: hashlib.sha256(reader.bytes).hexdigest()
+                                 for name, reader in original_env.file.files.items()
+                                 if hasattr(reader, "bytes")}
+        original_env = None
         gc.collect()
         blob, done, notes = shipment.build(src, plan)
         gc.collect()
@@ -209,7 +228,36 @@ def pictures() -> int:
         ab = next(o for o in built.objects if o.type.name == "AssetBundle").read_typetree()
         container = dict(ab["m_Container"])
         print(f"  {bundle}: собрано картинок {done}" + "".join(f"; {n}" for n in notes))
+        if unchanged:
+            now = {o.path_id: o for o in built.objects}
+            changed_others = [pid for pid, sha in unchanged.items()
+                              if pid not in now or hashlib.sha256(now[pid].get_raw_data()).hexdigest() != sha]
+            bad += bool(changed_others)
+            print(f"    model neighbours/English objects unchanged: {len(unchanged) - len(changed_others)}/{len(unchanged)}")
+        if unchanged_streams:
+            streams = {name: hashlib.sha256(reader.bytes).hexdigest()
+                       for name, reader in built.file.files.items() if hasattr(reader, "bytes")}
+            stable = all(streams.get(name) == sha for name, sha in unchanged_streams.items())
+            bad += not stable
+            print(f"    model/texture external stream bytes unchanged: {stable}")
         for entry in shipment.by_bundle[bundle]:
+            if entry.get("kind") == "material":
+                root, obj = model_texture(built, entry["key"], entry["material"]["target_texture"], True)
+                got = obj.read().image.convert("RGBA")
+                want = Image.open(pngs[entry["name"]]).convert("RGBA")
+                diff = ImageChops.difference(got, want)
+                mean = max(ImageStat.Stat(diff).mean)
+                worst = ImageChops.lighter(ImageChops.lighter(diff.getchannel("R"), diff.getchannel("G")),
+                                          diff.getchannel("B"))
+                rough = sum(worst.histogram()[65:])
+                own = container[entry["key"]] == entry["material"]["prefab_info"]
+                english = pixels_sha(material_source(built, entry)) == entry["source_sha"]
+                native_preload = preload_sha(ab) == entry["material"]["preload_sha"]
+                ok = (mean < 2 and rough <= got.width * got.height // 10000 and own and english and native_preload)
+                bad += not ok
+                print(f"    {entry['name']}: material mean {mean:.2f}, rough {rough}; own prefab {own}; "
+                      f"native preload {native_preload}; English unchanged {english}; PASS {ok}")
+                continue
             if entry.get("kind") == "plate":
                 bad += not plate_ok(built, entry)
                 continue

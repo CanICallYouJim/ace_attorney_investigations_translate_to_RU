@@ -23,7 +23,7 @@
 from __future__ import annotations
 
 import hashlib
-from copy import copy
+from copy import copy, deepcopy
 import struct
 from pathlib import Path
 
@@ -53,6 +53,105 @@ def leaf(key: str) -> str:
 def pixels_sha(img: Image.Image) -> str:
     """Отпечаток по пикселям, а не по байтам сжатой текстуры."""
     return hashlib.sha256(img.convert("RGBA").tobytes()).hexdigest()
+
+
+def model_texture(env, prefab_key: str, texture_name: str, own: bool = False, missing_ok: bool = False):
+    """Resolve a nested texture through a prefab's renderer/material graph.
+
+    Own GER roots must be found by name: the container may already point at ENG.
+    Never choose a texture solely because its name occurs somewhere in a bundle.
+    """
+    if own:
+        roots = [o for o in env.objects if o.type.name == "GameObject" and o.peek_name() == leaf(prefab_key)]
+        if len(roots) != 1:
+            raise ValueError(f"{prefab_key}: expected one own prefab, found {len(roots)}")
+        root = roots[0]
+    else:
+        root = env.container[prefab_key].deref()
+    if root.type.name != "GameObject":
+        raise ValueError(f"{prefab_key}: not a GameObject")
+    objects = root.assets_file.objects
+
+    def local(ptr):
+        if ptr["m_FileID"] or ptr["m_PathID"] not in objects:
+            raise ValueError(f"{prefab_key}: external or missing material dependency")
+        return objects[ptr["m_PathID"]]
+
+    pending, seen, textures = [root], set(), {}
+    while pending:
+        obj = pending.pop()
+        if obj.path_id in seen:
+            continue
+        seen.add(obj.path_id)
+        tree = obj.read_typetree()
+        for component in tree.get("m_Component", []):
+            comp = local(component["component"])
+            data = comp.read_typetree()
+            if comp.type.name == "Transform":
+                for child in data.get("m_Children", []):
+                    transform = local(child).read_typetree()
+                    pending.append(local(transform["m_GameObject"]))
+            if comp.type.name not in ("MeshRenderer", "SkinnedMeshRenderer"):
+                continue
+            for ptr in data.get("m_Materials", []):
+                material = local(ptr).read_typetree()
+                for _, value in material.get("m_SavedProperties", {}).get("m_TexEnvs", []):
+                    ptr = value["m_Texture"]
+                    if not ptr["m_PathID"]:
+                        continue
+                    tex = local(ptr)
+                    if tex.type.name == "Texture2D" and tex.peek_name() == texture_name:
+                        textures[tex.path_id] = tex
+    if not textures and missing_ok:
+        return root, None
+    if len(textures) != 1:
+        raise ValueError(f"{prefab_key}: {texture_name} referenced {len(textures)} times by distinct objects")
+    return root, next(iter(textures.values()))
+
+
+def preload_sha(tree: dict) -> str:
+    """A saved prefab range is valid only with the same complete preload table."""
+    pairs = [(p["m_FileID"], p["m_PathID"]) for p in tree["m_PreloadTable"]]
+    return hashlib.sha256(repr(pairs).encode("ascii")).hexdigest()
+
+
+def material_source(env, entry: dict) -> Image.Image:
+    return model_texture(env, entry["source"], entry["material"]["source_texture"])[1].read().image
+
+
+def write_material(env, entry: dict, image: Image.Image, raw: bool = False) -> list[str]:
+    """Write only the own GER material texture; restore its full native prefab range."""
+    spec = entry["material"]
+    ab = next(o for o in env.objects if o.type.name == "AssetBundle")
+    tree = ab.read_typetree()
+    root, obj = model_texture(env, entry["key"], spec["target_texture"], own=True)
+    # A texture reached from the ENG model must never become the write target,
+    # even if a malformed recipe names another shared material in the GER graph.
+    _, shared = model_texture(env, entry["source"], spec["target_texture"], missing_ok=True)
+    if shared is not None:
+        raise ValueError(f"{entry['name']}: GER texture is also used by the English model")
+    info = spec["prefab_info"]
+    if root.path_id != info["asset"]["m_PathID"] or preload_sha(tree) != spec["preload_sha"]:
+        raise ValueError(f"{entry['name']}: prefab/preload layout differs from the original")
+    if pixels_sha(material_source(env, entry)) != entry["source_sha"]:
+        raise ValueError(f"{entry['name']}: English material texture differs from the original")
+    tex = obj.read()
+    if image.size != (tex.m_Width, tex.m_Height):
+        raise ValueError(f"{entry['name']}: material texture dimensions differ")
+    if not any(k == entry["key"] for k, _ in tree["m_Container"]):
+        raise ValueError(f"{entry['name']}: missing GER prefab address")
+    want = RAW if raw else int(tex.m_TextureFormat)
+    notes = []
+    try:
+        tex.set_image(image, target_format=want)
+    except Exception as exc:
+        notes.append(f"{entry['name']}: {TextureFormat(want).name} failed ({exc}), using RGBA32")
+        tex.set_image(image, target_format=RAW)
+    tex.save()
+    tree["m_Container"] = [[k, deepcopy(info) if k == entry["key"] else v]
+                           for k, v in tree["m_Container"]]
+    ab.save_typetree(tree)
+    return notes
 
 
 def shrink(img: Image.Image, box, size: tuple[int, int]) -> Image.Image:
@@ -665,6 +764,19 @@ class Shipment:
         extra = 0
         for entry in self.by_bundle.get(short(path.name), []):
             name = entry["name"]
+            if entry.get("kind") == "material":
+                try:
+                    source = material_source(env, entry)
+                    if pixels_sha(source) != entry["source_sha"]:
+                        raise ValueError("English material texture differs from the original")
+                    face = compose(entry, source, self.composites, self.folder)
+                    notes += write_material(env, entry, face)
+                except (KeyError, ValueError) as exc:
+                    notes.append(f"{name}: {exc} — left English")
+                    continue
+                pairs = [(g, e) for g, e in pairs if g != entry["key"]]
+                extra += 1
+                continue
             if entry.get("kind") == "splash":
                 spec = entry["spec"]
                 found = write_splash(env, spec, Image.open(self.folder / entry["layer"]).convert("RGBA"))

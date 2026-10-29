@@ -86,7 +86,7 @@
       ],
       "flipped": false,
       "source_sha": "06be9993a76aeb2784b2202d2ca8bde7bdac0135452d768259ac162dbecd8236",
-      "png_sha": "222f7fcb1c5acfdd6861aa6c1bb6b7e39f25893e69f5482503aa5f1a183a6c33",
+      "png_sha": "846e46ad2efaf077c0ea3ffd2395288719b71a36f7f09ef8e9061559adc19a24",
       "box": [
         278,
         109,
@@ -95,7 +95,7 @@
       ],
       "layer": "gk2_upcutlocal_trial/cut00_007.png",
       "mask": "gk2_upcutlocal_trial/cut00_007_mask.png",
-      "changed": 160042,
+      "changed": 160465,
       "outside": 0,
       "tails": null,
       "erased": null
@@ -1439,7 +1439,7 @@
       ],
       "flipped": true,
       "source_sha": "a86eeca58a152664487cc94769c86b28940664e1afb8dd1a0525c1c932fb45e0",
-      "png_sha": "93e9c12a28d05bc1a1591ee74da0458aeef354c75cdcb1fc893d7983f1ceb1d5",
+      "png_sha": "5e819b4410721470d50cec7afd39f3cdefd09e0a6c08648971cfdc4cde268223",
       "box": [
         18,
         59,
@@ -1448,7 +1448,7 @@
       ],
       "layer": "gk2_idcom_trial/itm00_006_00_l.png",
       "mask": "gk2_idcom_trial/itm00_006_00_l_mask.png",
-      "changed": 9339,
+      "changed": 9621,
       "outside": 0,
       "tails": 0,
       "erased": 0
@@ -2093,7 +2093,7 @@
       ],
       "flipped": true,
       "source_sha": "84f27d8e26b41cea3dec5af170ba462001f2518baf508cbc77884b8d65c9bd33",
-      "png_sha": "84e127e5586102759e5813e32a72724a1b6166e21b27b997f5dcbdf26560c5d7",
+      "png_sha": "530376ac40071b4734b4d7fe015a6a169933e1b1bb0bc489d706eefde01ab56c",
       "derive": {
         "из": "cut00_007",
         "там": [
@@ -2350,7 +2350,7 @@
       ],
       "flipped": false,
       "source_sha": "b033c45939f2e873d34a25a969403dcbad3775adfb082dd0ae166f7d882c432b",
-      "png_sha": "fcae7d1a74490f8d4deeb0d237a1bd271b6eba2eeb27965c3342de06d7099560",
+      "png_sha": "cdb236fb5d39834ac94fe064e60ead4e94f47c80c28f389898f0c4b004089e32",
       "box": [
         616,
         110,
@@ -2359,7 +2359,7 @@
       ],
       "layer": "gk2_mapbg/map0d.png",
       "mask": "gk2_mapbg/map0d_mask.png",
-      "changed": 15998,
+      "changed": 17738,
       "outside": 0,
       "tails": null,
       "erased": null
@@ -3263,6 +3263,80 @@
       "outside": 0,
       "tails": null,
       "erased": null
+    },
+    {
+      "name": "gom_glove_model",
+      "kind": "material",
+      "bundle": "gk2_modelitemlocal",
+      "key": "Assets/GK2/Ipnce/Data/modelitemlocal.bin/FHD/itm01_002_00_ger.prefab",
+      "source": "Assets/GK2/Ipnce/Data/modelitemlocal.bin/FHD/itm01_002_00_eng.prefab",
+      "flipped": false,
+      "material": {
+        "source_texture": "gom_glove_eng",
+        "target_texture": "gom_glove_ger",
+        "prefab_info": {
+          "preloadIndex": 204,
+          "preloadSize": 68,
+          "asset": {
+            "m_FileID": 0,
+            "m_PathID": 5852248736465807214
+          }
+        },
+        "preload_sha": "81746ba12c1fc7fbadce2e4fe1681470d869c942b2b100c7deb0b40b593c56d3"
+      },
+      "size": [
+        2048,
+        2048
+      ],
+      "source_sha": "ea73ccee5ea6a323378df52866939ab76684dc89ae869c49bd5c9ae76f49a1a3",
+      "png_sha": "6b5897ad8c75f43fc9cb46a2effdae62cf6faeb3f78f89666e6f277cae5570a3",
+      "box": [
+        1605,
+        10,
+        1717,
+        632
+      ],
+      "layer": "gk2_modelitemlocal/gom_glove_model.png",
+      "mask": "gk2_modelitemlocal/gom_glove_model_mask.png",
+      "changed": 32792,
+      "outside": 0
+    },
+    {
+      "name": "bag_01_model",
+      "kind": "material",
+      "bundle": "gk2_modelitemlocal_trial",
+      "key": "Assets/GK2/Ipnce/Data/modelitemlocal.bin/FHD/itm00_010_00_ger.prefab",
+      "source": "Assets/GK2/Ipnce/Data/modelitemlocal.bin/FHD/itm00_010_00_eng.prefab",
+      "flipped": false,
+      "material": {
+        "source_texture": "bag_01_eng",
+        "target_texture": "bag_01_ger",
+        "prefab_info": {
+          "preloadIndex": 0,
+          "preloadSize": 128,
+          "asset": {
+            "m_FileID": 0,
+            "m_PathID": 83160621842469843
+          }
+        },
+        "preload_sha": "56410b43e7ec3ecf17ca8bac3a3ad7afb07657e3c442b2701851f0230a11d304"
+      },
+      "size": [
+        2048,
+        2048
+      ],
+      "source_sha": "73ac175b00ac9eb92bde0fd4fa84abb257bceee202c241e2ee4ba5a9fd0cff9a",
+      "png_sha": "d93a4b4f07a6281b2c08ac22c9d5814b73b763686bd7ae79b18f1649cdd40a41",
+      "box": [
+        73,
+        74,
+        1494,
+        957
+      ],
+      "layer": "gk2_modelitemlocal_trial/bag_01_model.png",
+      "mask": "gk2_modelitemlocal_trial/bag_01_model_mask.png",
+      "changed": 203542,
+      "outside": 0
     },
     {
       "name": "opObj02_032_256",
@@ -4679,16 +4753,16 @@
       ],
       "flipped": false,
       "source_sha": "51fb88eea1409d52ac01227f4548b4df4bad5f90502c59f8352498258905f47e",
-      "png_sha": "6511dde464ef62b7065b2d58ac1076d59df99f00c87cecf63b45d15472cbc930",
+      "png_sha": "e696be2c5015c3fe79893eb1a08c01c0b991fddc84118566f7a7443f7beb3bf1",
       "box": [
-        529,
-        688,
+        484,
+        441,
         1313,
         1065
       ],
       "layer": "gk2_upcutlocal/cut02_005.png",
       "mask": "gk2_upcutlocal/cut02_005_mask.png",
-      "changed": 11824,
+      "changed": 30992,
       "outside": 0,
       "tails": null,
       "erased": null
@@ -4704,16 +4778,16 @@
       ],
       "flipped": false,
       "source_sha": "f8654e14cc3c0bc5c50f0f6ad23cd9689f49ad42be7f0094400378d05346fd7e",
-      "png_sha": "e8dc83ecd76d6582863ba3c7d6f533ccaf24bd1e964745c6488404c6ac347660",
+      "png_sha": "846cc3cc086fd21a50840593c1a94b33e0f49fbc5b1a7b35fa0ed2b1ac464647",
       "box": [
-        529,
+        484,
         332,
         1396,
         1065
       ],
       "layer": "gk2_upcutlocal/cut02_006.png",
       "mask": "gk2_upcutlocal/cut02_006_mask.png",
-      "changed": 12592,
+      "changed": 31760,
       "outside": 768,
       "tails": null,
       "erased": null
@@ -9515,5 +9589,5 @@
       "source_sha": "aee8fbbe33a8313f66d2a08b358e9a5aa636ba6a325505793b4bd4be5b4018ad"
     }
   ],
-  "built": "2026-10-27 12:38"
+  "built": "2026-10-29 19:42"
 }

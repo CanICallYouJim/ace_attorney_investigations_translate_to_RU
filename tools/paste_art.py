@@ -311,13 +311,31 @@ def plate(base: Image.Image, glue: dict, spec_dir: Path) -> dict:
     return report
 
 
-def fit(art: Image.Image, box) -> tuple[Image.Image, tuple[int, int]]:
-    """Вписать арт в рамку, сохранив пропорции. Возвращает картинку и левый верх."""
+def fit(art: Image.Image, box, stretch: bool = False, thicken: int = 0) -> tuple[Image.Image, tuple[int, int]]:
+    """Fit an overlay; optional UV deprojection and solid-ink stroke compensation.
+
+    Defaults retain the original aspect-preserving behaviour. Stroke growth is
+    applied after scaling and is only valid for a single-colour glyph overlay.
+    """
     x0, y0, x1, y1 = box
     bw, bh = x1 - x0, y1 - y0
-    scale = min(bw / art.width, bh / art.height)
-    w, h = max(1, round(art.width * scale)), max(1, round(art.height * scale))
+    room_w, room_h = bw - 2 * thicken, bh - 2 * thicken
+    if thicken < 0 or room_w < 1 or room_h < 1:
+        raise ValueError("overlay stroke leaves no room inside its target box")
+    scale = min(room_w / art.width, room_h / art.height)
+    w, h = ((room_w, room_h) if stretch else
+            (max(1, round(art.width * scale)), max(1, round(art.height * scale))))
     art = art.resize((w, h), Image.LANCZOS)
+    if thicken:
+        colours = {p[:3] for p in art.convert("RGBA").getdata() if p[3]}
+        if len(colours) != 1:
+            raise ValueError("stroke compensation requires single-colour glyphs")
+        alpha = Image.new("L", (w + 2 * thicken, h + 2 * thicken), 0)
+        alpha.paste(art.getchannel("A"), (thicken, thicken))
+        alpha = alpha.filter(ImageFilter.MaxFilter(2 * thicken + 1))
+        art = Image.new("RGBA", alpha.size, (*next(iter(colours)), 0))
+        art.putalpha(alpha)
+        w, h = art.size
     return art, (x0 + (bw - w) // 2, y0 + (bh - h) // 2)
 
 
@@ -437,7 +455,7 @@ def run(spec_path: Path, only: str | None) -> int:
                 box = art.getbbox()
                 if box:
                     art = art.crop(box)
-            art, at = fit(art, glue["box"])
+            art, at = fit(art, glue["box"], glue.get("растянуть", False), glue.get("толще", 0))
             if glue.get("opacity", 1.0) != 1.0:
                 a = art.getchannel("A").point(lambda v: int(v * glue["opacity"]))
                 art.putalpha(a)

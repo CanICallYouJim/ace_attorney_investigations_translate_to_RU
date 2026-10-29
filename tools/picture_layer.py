@@ -63,6 +63,18 @@ def model_texture(env, prefab_key: str, texture_name: str, own: bool = False, mi
     """
     if own:
         roots = [o for o in env.objects if o.type.name == "GameObject" and o.peek_name() == leaf(prefab_key)]
+        # A prefab may repeat its own name on nested mesh nodes. Only the
+        # parentless Transform identifies the prefab root; container addresses
+        # alone cannot do this after the English fallback has been applied.
+        def is_root(obj):
+            for item in obj.read_typetree().get("m_Component", []):
+                ptr = item["component"]
+                comp = obj.assets_file.objects.get(ptr["m_PathID"]) if not ptr["m_FileID"] else None
+                if comp is not None and comp.type.name == "Transform":
+                    father = comp.read_typetree()["m_Father"]
+                    return father["m_FileID"] == 0 and father["m_PathID"] == 0
+            return False
+        roots = [o for o in roots if is_root(o)]
         if len(roots) != 1:
             raise ValueError(f"{prefab_key}: expected one own prefab, found {len(roots)}")
         root = roots[0]

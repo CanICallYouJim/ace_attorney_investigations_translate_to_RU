@@ -545,8 +545,8 @@
       "source_texture": "gom_glove_eng",
       "target_texture": "gom_glove_ger",
       "donor": "itm01_002_00_l",
-      "status": "pending",
-      "reason": "Inmate Use Only on the 3D material remains English; the accepted Russian label must also appear on this model."
+      "status": "installed 2026-10-29; frozen; layer246",
+      "reason": "User accepted UV trial3 «Да, ставь»: approved Russian handwriting transferred to 3D; final х restored because the UV inscription is unoccluded. Native GER texture and full prefab/preload verified, English remains identical to backup."
     }
   }
 }

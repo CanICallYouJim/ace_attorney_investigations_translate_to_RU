@@ -91,8 +91,8 @@ import UnityPy
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 from common import WORK, load_json
-from layer_localized import index, original, recipes, variants
-from picture_layer import FLIP, leaf, short
+from layer_localized import index, material_specs, original, recipes, variants
+from picture_layer import FLIP, leaf, model_texture, short
 
 OUT = WORK / "graphics_masks"
 EN = WORK / "graphics_en"
@@ -259,12 +259,19 @@ def load_variants(name: str) -> dict[str, Image.Image]:
         sys.exit(f"{name}: нетронутого оригинала нет — сверять не с чем")
     env = UnityPy.load(str(path))
     out = {}
+    material = material_specs().get(name) if man.get("kind") == "material" else None
     for key in variants(gerkey, env.container):
-        im = env.container[key].read().image.convert("RGBA")
+        lf = leaf(key)
+        lang = "base" if lf == (material["model"] if material else name) else lf.rsplit("_", 1)[-1]
+        if material:
+            stem = material["source_texture"].rsplit("_", 1)[0]
+            texture_name = stem if lang == "base" else f"{stem}_{lang}"
+            im = model_texture(env, key, texture_name)[1].read().image.convert("RGBA")
+        else:
+            im = env.container[key].read().image.convert("RGBA")
         if man["flipped"]:
             im = im.transpose(FLIP)
-        lf = leaf(key)
-        out["base" if lf == name else lf.rsplit("_", 1)[-1]] = im
+        out[lang] = im
     return out
 
 

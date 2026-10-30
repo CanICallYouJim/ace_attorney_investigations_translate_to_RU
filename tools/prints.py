@@ -54,6 +54,33 @@ THIN = 0.92         # наши буквы тоньше этой доли анг�
 FAT = 0.95          # кант растёт, пока штрих не догонит эту долю английского
 
 
+def optical_x(mask: Image.Image) -> float:
+    """Horizontal ink centroid, including antialias coverage, in pixel coordinates."""
+    import numpy as np
+    columns = np.asarray(mask.convert("L"), dtype=float).sum(axis=0)
+    if not columns.sum():
+        raise ValueError("cannot centre an empty glyph")
+    return float(np.dot(columns, np.arange(mask.width)) / columns.sum())
+
+
+def move_flat_ink(image: Image.Image, mask: Image.Image, dx: int, background) -> tuple[Image.Image, Image.Image]:
+    """Translate approved ink on a flat field without redrawing its pixels or alpha."""
+    import numpy as np
+    if image.size != mask.size:
+        raise ValueError("ink mask and image sizes differ")
+    data = np.asarray(image.convert("RGBA")).copy()
+    hit = np.asarray(mask.convert("L")) > 0
+    yy, xx = np.nonzero(hit)
+    if not len(xx) or np.any(xx + dx < 0) or np.any(xx + dx >= image.width):
+        raise ValueError("empty ink or translated ink outside image")
+    pixels = data[yy, xx, :3].copy()
+    data[yy, xx, :3] = background
+    data[yy, xx + dx, :3] = pixels
+    shifted = np.zeros(hit.shape, np.uint8)
+    shifted[yy, xx + dx] = 255
+    return Image.fromarray(data, "RGBA"), Image.fromarray(shifted, "L")
+
+
 def load_font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONT_DIR / f"{name.split('@')[0].split('^')[0]}.ttf"), size)
 
@@ -1001,6 +1028,9 @@ def compose(name: str, cfg: dict, case: str):
                 if lb.get("значок"):
                     iw = lb["значок"]["рамка"][2] - lb["значок"]["рамка"][0]
                     dx += (iw + lb["значок"].get("между", 6)) / 2
+            if lb.get("оптический_центр_x"):
+                axis = lb.get("ось", (bb[0] + bb[2]) / 2)
+                dx = axis - bx - (optical_x(ru_im) - ox)
             # «ось_y» — середина чернил строки на этом y (однострочные надписи): буква
             # в кружке по центру круга вместе с выносными элементами («Д», `cutobj02_003`)
             dy = block_dy
@@ -1082,6 +1112,11 @@ def compose(name: str, cfg: dict, case: str):
         for j, (ru_im, wide, at) in enumerate(pieces):
             # «сдвиг» надписи — поправка глазом по листу (cut02_004: «В» заходила на стену)
             nudge = lb.get("сдвиг", (0, 0))
+            if "сдвиг_строк" in lb:
+                offsets = lb["сдвиг_строк"]
+                if len(offsets) != len(lines_ru):
+                    raise ValueError("сдвиг_строк must have one offset per line")
+                nudge = (nudge[0] + offsets[j][0], nudge[1] + offsets[j][1])
             place = (at[0] + shift[0] + nudge[0], at[1] + shift[1] + nudge[1])
             # «ореол» у надписи — мягкое свечение под буквами: {"цвет", "радиус", "сила"}
             glow = lb.get("ореол")

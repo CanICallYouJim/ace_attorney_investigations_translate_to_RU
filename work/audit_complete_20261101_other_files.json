@@ -1,0 +1,77 @@
+[
+  {
+    "path": "baselib.dll",
+    "bytes": 419352,
+    "category": "binary platform/runtime resource"
+  },
+  {
+    "path": "GK12.exe",
+    "bytes": 24332704,
+    "category": "binary platform/runtime resource"
+  },
+  {
+    "path": "GK12_Data/app.info",
+    "bytes": 20,
+    "category": "configuration/catalog/assembly metadata; no translation table"
+  },
+  {
+    "path": "GK12_Data/boot.config",
+    "bytes": 120,
+    "category": "configuration/catalog/assembly metadata; no translation table"
+  },
+  {
+    "path": "GK12_Data/il2cpp_data/Resources/mscorlib.dll-resources.dat",
+    "bytes": 337563,
+    "category": "standard .NET library resources; not a game localization database"
+  },
+  {
+    "path": "GK12_Data/il2cpp_data/Resources/Newtonsoft.Json.dll-resources.dat",
+    "bytes": 900,
+    "category": "standard .NET library resources; not a game localization database"
+  },
+  {
+    "path": "GK12_Data/il2cpp_data/Resources/System.Data.dll-resources.dat",
+    "bytes": 93718,
+    "category": "standard .NET library resources; not a game localization database"
+  },
+  {
+    "path": "GK12_Data/RuntimeInitializeOnLoads.json",
+    "bytes": 1010,
+    "category": "configuration/catalog/assembly metadata; no translation table"
+  },
+  {
+    "path": "GK12_Data/ScriptingAssemblies.json",
+    "bytes": 3339,
+    "category": "configuration/catalog/assembly metadata; no translation table"
+  },
+  {
+    "path": "GK12_Data/sharedassets18.resource",
+    "bytes": 814048,
+    "category": "external binary stream referenced by serialized assets"
+  },
+  {
+    "path": "GK12_Data/sharedassets4.resource",
+    "bytes": 687680,
+    "category": "external binary stream referenced by serialized assets"
+  },
+  {
+    "path": "GK12_Data/StreamingAssets/aa/AddressablesLink/link.xml",
+    "bytes": 31889,
+    "category": "configuration/catalog/assembly metadata; no translation table"
+  },
+  {
+    "path": "GK12_Data/StreamingAssets/aa/catalog.json",
+    "bytes": 7042896,
+    "category": "configuration/catalog/assembly metadata; no translation table"
+  },
+  {
+    "path": "GK12_Data/StreamingAssets/aa/settings.json",
+    "bytes": 1605,
+    "category": "configuration/catalog/assembly metadata; no translation table"
+  },
+  {
+    "path": "UnityPlayer.dll",
+    "bytes": 30838704,
+    "category": "binary platform/runtime resource"
+  }
+]

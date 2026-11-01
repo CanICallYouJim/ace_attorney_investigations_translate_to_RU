@@ -1,0 +1,3750 @@
+{
+  "script_latin": [
+    {
+      "id": "game_over.bytes|05000006|0",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "game_over.bytes|05000006|1",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "game_over.bytes|05000006|2",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|0",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|1",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|2",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|3",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|4",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|5",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|6",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|7",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|8",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|9",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|10",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|11",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|12",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|13",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|14",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|15",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|16",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|17",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|18",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|19",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|20",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|21",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|22",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|23",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|24",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|25",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|26",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|27",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|28",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|29",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|30",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|31",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|32",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000535|33",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|0",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|1",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|2",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|3",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|4",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|5",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|6",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|7",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "logic00_01.bytes|05000557|8",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_00.bytes|00000000|0",
+      "ru": "DEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXTDEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_02.bytes|000001F9|0",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_02.bytes|000001F9|1",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_02.bytes|000001F9|2",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_02.bytes|000001F9|3",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_02.bytes|000001F9|4",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_02.bytes|000001F9|5",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_check.bytes|000007B3|0",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_check.bytes|000007DB|0",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_check.bytes|000007DB|1",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_check.bytes|000007DB|2",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_check.bytes|000007DB|3",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_check.bytes|000007DB|4",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_check.bytes|000007DB|5",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_npc.bytes|00000832|0",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_npc.bytes|00000832|1",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_npc.bytes|00000832|2",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_npc.bytes|00000832|3",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_npc.bytes|00000832|4",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_npc.bytes|00000832|5",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_m00_npc.bytes|00000832|6",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_partner.bytes|00000D05|0",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_partner.bytes|00000D05|1",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_partner.bytes|00000D05|2",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_partner.bytes|00000D05|3",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_partner.bytes|00000D05|4",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_partner.bytes|00000D05|5",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce0_c0_partner.bytes|00000D05|6",
+      "ru": "DEMO TEXT",
+      "demo": true
+    },
+    {
+      "id": "sce1_c0_04.bytes|01000200|0",
+      "ru": "Э, «excusez-moi», но... это ведь место\nпреступления, да?",
+      "demo": false
+    },
+    {
+      "id": "sce1_c0_04.bytes|01000200|19",
+      "ru": "«Enchanté», как говорится. Защитин — фамилия,\nзащищать — ремесло. Адвокат, каких поискать.",
+      "demo": false
+    },
+    {
+      "id": "sce1_c0_04.bytes|01000200|23",
+      "ru": "Великий вор? Ого, как же это... романтично!\nTrès chic, если угодно.",
+      "demo": false
+    },
+    {
+      "id": "sce1_c0_05.bytes|0100028B|12",
+      "ru": "Игла побольше, быстрый укол — и voilà!",
+      "demo": false
+    },
+    {
+      "id": "sce1_c0_05.bytes|0100028B|55",
+      "ru": "В синем углу... Рокко «D-259» Карчерато!",
+      "demo": false
+    },
+    {
+      "id": "sce1_c0_m07_npc.bytes|0100061C|2",
+      "ru": "«Non, non», чувак. Это ТЫ что о ней знаешь?\nДаю три варианта:",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_03.bytes|01000A00|7",
+      "ru": "Просто восхити-и-ительно шикарно, дорогуша! Дивно!\nБорода нынче так au courant, не находите?",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_03.bytes|01000A00|8",
+      "ru": "Enchanté, mademoiselle. Весьма признателен.\nАдвокат Эдди Защитин, к вашим услугам.",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_03.bytes|01000A00|9",
+      "ru": "Начнём знакомство как подобает?\nМожет, лёгкий... embrasser?",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_03.bytes|01000A00|13",
+      "ru": "А как ещё приветствовать нового друга, м?\nЛёгкий поцелуй вполне de rigueur, не находите?",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_03.bytes|01000A00|31",
+      "ru": "Артисты построили во дворе особую сцену\nтолько для нас! Мы счастливая семья, n'est-ce pas?",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_03.bytes|01000A00|40",
+      "ru": "Осматривайте наш дом на здоровье!\nMi casa, su casa, и всё такое! Чао!",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_09.bytes|01000F20|34",
+      "ru": "О, не только его, дорогуша. Я стараюсь время\nот времени поговорить tête-à-tête с каждым.",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_0a.bytes|01000FC2|8",
+      "ru": "Поболтал я тут с охранниками, и они рассказали\nмне нечто très intéressant.",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_0a.bytes|01000FC2|41",
+      "ru": "У нас в «Эджворт и Ко» всё сплошь\npro bono!",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_m06_check.bytes|01001443|2",
+      "ru": "«Номер заключённого: D-258\nВид: Captivus Periculosus»",
+      "demo": false
+    },
+    {
+      "id": "sce1_c1_m06_check.bytes|01001452|1",
+      "ru": "«Номер заключённого: D-259\nВид и среда обитания: см. камеру справа»",
+      "demo": false
+    },
+    {
+      "id": "sce1_c2_08.bytes|0100227C|1",
+      "ru": "Э-э, зови меня дуралеем, но... quoi?\nЭто как вообще работает, Майлзюша?",
+      "demo": false
+    },
+    {
+      "id": "sce1_c2_m09_npc.bytes|01002799|4",
+      "ru": "Ну сами понимаете! Обнимашки и поцелуйчик —\nэто же de rigueur!",
+      "demo": false
+    },
+    {
+      "id": "sce1_c3_04.bytes|01001927|8",
+      "ru": "Но не знай я вас, решила бы, что вы называете\nубийцей moi!",
+      "demo": false
+    },
+    {
+      "id": "itm02_00b.bytes|050002AB|0",
+      "ru": "Эта ткань пропала во время дела IS-7...",
+      "demo": false
+    },
+    {
+      "id": "itm02_01f.bytes|05000354|4",
+      "ru": "...Звали. Значит, и это работа потерпевшего\nпо делу IS-7.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c0_01.bytes|02000081|6",
+      "ru": "Про дело IS-7 слыхал, да?\nПоследнее дело твоего старика.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c2_00.bytes|02000CDD|19",
+      "ru": "Именно. И место дела IS-7.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c2_03.bytes|02000E5E|6",
+      "ru": "Ещё как. Это Кармело Густо. Он был здесь,\nкогда случилось всё то самое, IS-7.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c2_03.bytes|02000E87|2",
+      "ru": "(Ещё один человек из дела IS-7...!)",
+      "demo": false
+    },
+    {
+      "id": "sce2_c2_03.bytes|02000EA4|16",
+      "ru": "Ещё как! По делу IS-7 у нас, считай, полный сбор!",
+      "demo": false
+    },
+    {
+      "id": "sce2_c2_08.bytes|020010EA|7",
+      "ru": "(Теперь у нас и улика из дела IS-7...!?)",
+      "demo": false
+    },
+    {
+      "id": "sce2_c2_m0b_check.bytes|0200126D|6",
+      "ru": "(Наверняка у него свои соображения\nо деле IS-7...)",
+      "demo": false
+    },
+    {
+      "id": "sce2_c3_02.bytes|020014DE|9",
+      "ru": "(Неужели все, кто был связан с делом IS-7,\nошиблись одинаково...?)",
+      "demo": false
+    },
+    {
+      "id": "sce2_c3_03.bytes|02001571|7",
+      "ru": "И, думаю, ответы лежат в самом деле IS-7.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c4_00.bytes|020015DC|0",
+      "ru": "Не верится, что дело IS-7 стало последним\nу Грегори. И что прошло восемнадцать лет...",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_00.bytes|0200215D|0",
+      "ru": "...Вот, в общем, как всё было.\nТаково дело IS-7, как я его знаю.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_00.bytes|020021B6|10",
+      "ru": "Хорошо, что я прихватил сегодня дело IS-7\nи улики, а!",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_00.bytes|020021B6|13",
+      "ru": "Данные «Дело о происшествии IS-7»\nобновлены в органайзере....Спасибо, Защитин.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_00.bytes|020021B6|16",
+      "ru": "От Защитина получена целая гора улик\nпо делу IS-7.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_01.bytes|020021F7|8",
+      "ru": "...Мистер Морозов был и потерпевшим по делу IS-7.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_01.bytes|020021F7|10",
+      "ru": "(Судья Молотова знает о деле IS-7?)",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_01.bytes|020021F7|11",
+      "ru": "Мистер Эджворт. Делу IS-7 восемнадцать\nлет.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_02.bytes|0200225C|11",
+      "ru": "Ага! Видите ли, я был в защите по IS-7, так что\nдело меня очень даже касается.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_02.bytes|0200225C|21",
+      "ru": "(Судья Молотова, как выясняется, знает дело IS-7\nдовольно подробно...)",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_m0a_npc.bytes|0200256E|0",
+      "ru": "IS-7 для меня не просто дело, Майлз.\nТы ведь знаешь?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_m0a_npc.bytes|0200256E|3",
+      "ru": "Ну вот что вообще значат буквы «IS»?\n«Игривые Сладости»?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_partner.bytes|02002606|0",
+      "ru": "Между нашим делом и делом IS-7 есть какая-то\nсвязь, правда, мистер Эджворт?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_partner.bytes|02002606|2",
+      "ru": "А IS-7 — дело вашего отца, да?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c6_partner.bytes|0200261C|0",
+      "ru": "Мы много узнали и о нашем деле, и об IS-7.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c7_05.bytes|02002B9C|12",
+      "ru": "Вы хотите сказать... что настоящая виновница\nдела IS-7 — вы?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c7_06.bytes|02002C75|16",
+      "ru": "...и есть настоящий виновник дела IS-7!",
+      "demo": false
+    },
+    {
+      "id": "sce2_c7_06.bytes|02002C99|0",
+      "ru": "Я точно знаю, кто виновен в деле IS-7!...Смелое заявление.\nЕсть ли у вас доказательства?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c7_06.bytes|02002CA1|0",
+      "ru": "Мистер Густо? Пострадавший от газа — и есть\nвиновник дела IS-7...?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_00.bytes|02002CDE|5",
+      "ru": "Ничто не указывает, что с официальными материалами\nдела IS-7 было что-то нечисто.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_01.bytes|02002D5C|3",
+      "ru": "Лично я пришла к мысли, что подлинная виновница\nдела IS-7 — мисс Долгова.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_01.bytes|02002D68|0",
+      "ru": "Лично я пришла к мысли, что подлинная виновница\nдела IS-7 — мисс Долгова.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_01.bytes|02002D6A|0",
+      "ru": "У нас есть все нужные улики, чтобы объяснить\nи дело IS-7, и нынешнее отравление газом.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_01.bytes|02002D93|1",
+      "ru": "По делу IS-7 у нас есть тело, орудие\nубийства... и двое подозреваемых.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_01.bytes|02002DB6|0",
+      "ru": "Боюсь, по делу IS-7 остаётся один вопрос\nбез ответа, Ваша честь.",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_02.bytes|02002E44|3",
+      "ru": "(Надо перебрать всё, что мы знаем\nо деле IS-7.)",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_06.bytes|020030DE|20",
+      "ru": "Всего лишь то самое, что виновник дела IS-7\nпрятал все эти годы!",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_07.bytes|02003165|0",
+      "ru": "Это же...!\nЛампа из дела IS-7...?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_08.bytes|020031DC|17",
+      "ru": "Что это вы виновны в деле IS-7!",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_0b.bytes|020033D0|16",
+      "ru": "...IS-7 случилось в конце декабря.\nА сейчас апрель, значит...",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_0c.bytes|02003488|0",
+      "ru": "Хорошо. Есть ли в материалах дела IS-7 страница,\nк которой вы хотите нас отослать?",
+      "demo": false
+    },
+    {
+      "id": "sce2_c8_0f.bytes|02003617|0",
+      "ru": "(Дело IS-7... Восемнадцать долгих лет, но дело,\nдоставшееся нам от отца...)",
+      "demo": false
+    },
+    {
+      "id": "sce3_c1_m10_check.bytes|0300070A|3",
+      "ru": "Это тот убитый из дела IS-7, сэр?\nМистер Арти Морозов?",
+      "demo": false
+    },
+    {
+      "id": "sce3_c5_00.bytes|03001C00|28",
+      "ru": "А именно дела IS-7. Убийство, случившееся\nвосемнадцать лет назад.",
+      "demo": false
+    },
+    {
+      "id": "sce3_c5_00.bytes|03001C00|37",
+      "ru": "Данные «Дело о происшествии IS-7» записаны\nв органайзер.Вы что творите, Молотова!?\nНельзя вот так обвинять моего отца!",
+      "demo": false
+    },
+    {
+      "id": "sce3_c5_00.bytes|03001C00|53",
+      "ru": "Больше того, по делу IS-7 этот человек велел\nдоктору Герц подделать заключение вскрытия.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c1_09.bytes|04001080|6",
+      "ru": "А дело о происшествии IS-7?\nПредседатель Победин же был к нему причастен?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c1_09.bytes|04001080|8",
+      "ru": "Данные «Дело о происшествии IS-7» записаны\nв органайзер.Превосходно. А есть ещё что-нибудь?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c1_0f.bytes|040014E8|5",
+      "ru": "Очертания букв D, E, A, T и H -- тех самых,\nчто стоят на пальцах этих перчаток.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c1_10.bytes|04001502|0",
+      "ru": "Взгляните на букву A на пальце. Половины нет.\nТочь-в-точь как отпечаток на газете!",
+      "demo": false
+    },
+    {
+      "id": "sce4_c1_10.bytes|04001523|6",
+      "ru": "Оооо, вы дьявол! Наказание? Moi? Немыслимо!",
+      "demo": false
+    },
+    {
+      "id": "sce4_c1_10.bytes|04001538|9",
+      "ru": "Вам знакомо дело SS-5?\nА вот мне -- да... Двенадцать лет назад.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_08.bytes|04002302|10",
+      "ru": "Вы должны снова взяться за\nдело SS-5!",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_08.bytes|04002302|32",
+      "ru": "Дело SS-5...",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_08.bytes|04002302|37",
+      "ru": "Ага. SS-5 — так официально называется\nдело о похищении президента.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_08.bytes|0400234B|7",
+      "ru": "Тут написано:\n«Дело SS-5. Отчёт о расследовании»!",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_08.bytes|0400234B|8",
+      "ru": "Данные «Дело о происшествии SS-5» записаны\nв органайзер.Фифи Лястраж упомянула дело двенадцатилетней\nдавности, и я не смогла пройти мимо.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_08.bytes|0400234B|15",
+      "ru": "Но... всё, что касается дела SS-5,\nведь засекречено...",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_09.bytes|04002402|27",
+      "ru": "(Дело SS-5 просто ОБЯЗАНО быть связано\nс тем, что мы расследуем сейчас...)",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_0b.bytes|04002529|61",
+      "ru": "Почему она сама не пришла!? И почему её нет\nни в одной бумаге по делу SS-5?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_0b.bytes|04002578|21",
+      "ru": "Уверены. Старое, да настоящее. Наша семья\nвзяла его на хранение ещё до дела SS-5.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_m15_00_npc.bytes|0400282B|0",
+      "ru": "Хочешь, чтобы я рассказал про дело SS-5?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_m15_00_npc.bytes|04002838|2",
+      "ru": "Агент Ланг, ваш отец основательно занимался\nделом SS-5, верно?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_m15_00_npc.bytes|04002849|0",
+      "ru": "После дела SS-5 президента Вана будто подменили.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_m15_00_npc.bytes|0400290A|3",
+      "ru": "Это насчёт дела SS-5!\nА чего ж ещё!?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_m15_01_check.bytes|04002AEA|8",
+      "ru": "Тем более что материалы дела SS-5\nдо недавних пор были засекречены.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c2_partner.bytes|04002C03|2",
+      "ru": "...И что двенадцать лет назад здесь\nслучилось то самое дело SS-5.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_00.bytes|04002C82|36",
+      "ru": "-- Правда о деле SS-5 --",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_00.bytes|04002C82|43",
+      "ru": "Данные «Дело о происшествии SS-5» обновлены\nв органайзере.Только кое-чего я всё равно не понимаю.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_00.bytes|04002CB6|0",
+      "ru": "-- Правда о деле SS-5 --",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_02.bytes|04002E82|7",
+      "ru": "А «похищение» по делу SS-5 на самом деле\nбыло убийством.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_02.bytes|04002EB2|38",
+      "ru": "Данные «Дело о происшествии SS-5» обновлены\nв органайзере....Неужели? Любопытно.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_04.bytes|0400305B|0",
+      "ru": "Выходит... Конёк был...\nкак-то связан с той историей с IS-7?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_04.bytes|0400305B|2",
+      "ru": "(Есть ли улика, которая связывает Конева\nс делом IS-7?)Мистер Защитин, -- взгляните, пожалуйста.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_04.bytes|0400305B|4",
+      "ru": "Ты же не хочешь сказать, что это связывает\nКонька с той историей IS-7?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_04.bytes|0400305B|8",
+      "ru": "Вдруг что-нибудь по IS-7 само\nв глаза бросится?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_04.bytes|04003068|2",
+      "ru": "Ты же не думаешь, что они связывают\nнашего Конька с делом IS-7?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_04.bytes|0400306E|6",
+      "ru": "И почему оно не хранилось вместе с остальными\nуликами по делу IS-7?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_04.bytes|0400306E|15",
+      "ru": "А... мы ведь искали того, кто связан\nс делом IS-7 и играл в шахматы по переписке, так?",
+      "demo": false
+    },
+    {
+      "id": "sce4_c3_04.bytes|04003084|4",
+      "ru": "Ага, оно самое, точно. Это была улика\nпо делу IS-7.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c4_03.bytes|04003482|13",
+      "ru": "То есть примерно во время дела IS-7,\nиначе говоря...",
+      "demo": false
+    },
+    {
+      "id": "sce4_c4_03.bytes|04003482|29",
+      "ru": "Семён, в деле IS-7 убили человека\nпо имени Арти Морозов.",
+      "demo": false
+    },
+    {
+      "id": "sce4_c4_07.bytes|04003845|4",
+      "ru": "Это вы про историю с SS-5?\nИ-хи-хи-хи-и! Ой, не надо!",
+      "demo": false
+    },
+    {
+      "id": "sce4_c4_07.bytes|04003899|49",
+      "ru": "(Ну конечно... Густо! Происшествие IS-7!)",
+      "demo": false
+    },
+    {
+      "id": "sce4_c5_00.bytes|04003BC3|0",
+      "ru": "Баддяра! Баддинатор! А если всерьёз...\nспасибо за помощь, дружище.Пф... Про происшествие IS-7 просишь...\nда я хоть весь день....Мальчишка Эджворт, похоже, дело делает.Ага, Майлзюша в итоге выбрал не отцовскую\nдорогу.Работать вместе нам теперь не выйдет. Но\nпоглядывать за ним я не перестану.Хм... Да и ты сам далеко зашёл.Батюшки! Похвала от самого грозного\nдетектива Бадда!? Я не сплю?Что ж, лестью от меня добьёшься всего, дружбан!\nПонадобится защитинская магия -- только свистни!",
+      "demo": false
+    }
+  ],
+  "table_latin": [
+    {
+      "table": "gk2_item_name",
+      "id": "874817802261",
+      "key": "gk2_itm02_01a_00_n",
+      "en": "IS-7 Incident Case File",
+      "ru": "Дело о происшествии IS-7"
+    },
+    {
+      "table": "gk2_item_name",
+      "id": "1875943641098",
+      "key": "gk2_itm04_01a_00_n",
+      "en": "SS-5 Incident Case File",
+      "ru": "Дело о происшествии SS-5"
+    },
+    {
+      "table": "gk2_item_name",
+      "id": "1526692335634",
+      "key": "gk2_itm03_01a_00_n",
+      "en": "IS-7 Incident Case File",
+      "ru": "Дело о происшествии IS-7"
+    },
+    {
+      "table": "gk2_item_text",
+      "id": "312605876178945",
+      "key": "gk2_cast104_02",
+      "en": "Senior partner at Edgeworth and Co., and\nformer assistant to my father. He worked the\noriginal IS-7 Incident.",
+      "ru": "Старший партнёр «Эджворт и Ко»\nи бывший помощник моего отца.\nРаботал по первому делу IS-7."
+    },
+    {
+      "table": "gk2_item_text",
+      "id": "312605876178947",
+      "key": "gk2_cast210_00",
+      "en": "Having received a guilty verdict for his\npurported role in the IS-7 Incident, he\nis now serving out his prison sentence.",
+      "ru": "Признан виновным за приписанную ему\nроль в деле IS-7 и теперь отбывает срок."
+    },
+    {
+      "table": "gk2_item_text",
+      "id": "312605876178950",
+      "key": "gk2_cast218_02",
+      "en": "Victim of the IS-7 Incident. His body went\nmissing not long after it was discovered.",
+      "ru": "Жертва дела IS-7. Тело пропало\nвскоре после того, как его нашли."
+    },
+    {
+      "table": "gk2_item_text",
+      "id": "772384509963",
+      "key": "gk2_itm02_00a_00",
+      "en": "A photograph of the murder weapon from\nthe IS-7 Incident. It's a salt lamp stained\nwith Frost's blood.",
+      "ru": "Снимок орудия убийства по делу IS-7.\nСоляная лампа в крови Морозова."
+    },
+    {
+      "table": "gk2_item_text",
+      "id": "772384509981",
+      "key": "gk2_itm02_01a_00",
+      "en": "Documents providing an overview of the\nIS-7 Incident.",
+      "ru": "Документы с общим обзором дела IS-7."
+    },
+    {
+      "table": "gk2_select_short",
+      "id": "1568924782610",
+      "key": "gk2_topic04_014",
+      "en": "The SS-5 Incident",
+      "ru": "Происшествие SS-5"
+    },
+    {
+      "table": "gk2_txtcut",
+      "id": "181335773186",
+      "key": "gk2_txtcut03_001_00",
+      "en": "<align=\"center\">IS-7 Incident Case File</align>\n\nDate: December 24th, 18 years ago.\nProsecutor: Manfred von Karma\nDefense Attorney: Gregory Edgeworth\nVictim: Artie Frost\nSuspect: Samson Tangaroa\nCase Summary: Body of Artie Frost discovered in\nmansion belonging to Samson Tangaroa.",
+      "ru": "<align=\"center\">Дело о происшествии IS-7</align>\n\nДата: 24 декабря, восемнадцать лет назад.\nПрокурор: Манфред фон Карма\nАдвокат защиты: Грегори Эджворт\nПотерпевший: Арти Морозов\nПодозреваемый: Самсон Тангароа\nСуть дела: тело Арти Морозова обнаружено\nв особняке, принадлежащем Самсону Тангароа."
+    },
+    {
+      "table": "gk2_txtcut",
+      "id": "181335773188",
+      "key": "gk2_txtcut03_003_00",
+      "en": "■Kay's Promises to Daddy\n\nPromise I\nNever take things from a stranger.\n\nPromise II\nNever go anywhere with a stranger.",
+      "ru": "■Обещания Кей папе\n\nОбещание I\nНикогда не брать ничего у чужих.\n\nОбещание II\nНикогда никуда не ходить с чужими."
+    },
+    {
+      "table": "gk2_txtcut",
+      "id": "181335773189",
+      "key": "gk2_txtcut03_003_01",
+      "en": "Promise III\nAlways greet people with a smile,\neven people you don't know.\n\nPromise IV\nNever cry in front of strangers.\n\nPromise V\nAlways try your hardest to learn\nabout things you don't understand.",
+      "ru": "Обещание III\nВсегда здороваться с улыбкой,\nдаже с незнакомыми.\n\nОбещание IV\nНикогда не плакать при чужих.\n\nОбещание V\nВсегда изо всех сил разбираться в том,\nчего не понимаешь."
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "16334512201859073",
+      "key": "dialog_003",
+      "en": "Select \"View\" to review our privacy policy online.\n<size=90%>（https://www.capcom.co.jp/privacy/game/）</size>",
+      "ru": "Выберите «Открыть», чтобы прочитать нашу политику конфиденциальности.\n<size=90%>（https://www.capcom.co.jp/privacy/game/）</size>"
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "70685073080254467",
+      "key": "dialog_009",
+      "en": "Experience the opening chapters of both\nAce Attorney Investigations games.\nYou can transfer your save data to the full game.\n\nNote: You cannot obtain any accolades in this demo.",
+      "ru": "Пройдите начальные главы обеих частей\nAce Attorney Investigations.\nСохранения можно перенести в полную версию.\n\nВнимание: в демоверсии награды недоступны."
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "70685073080254468",
+      "key": "dialog_010",
+      "en": "Experience the opening chapters of both\nAce Attorney Investigations games.\nYou can transfer your saved data to the full game.\n\nNote: You cannot obtain any accolades or achievements in this demo.",
+      "ru": "Пройдите начальные главы обеих частей\nAce Attorney Investigations.\nСохранения можно перенести в полную версию.\n\nВнимание: в демоверсии награды и достижения недоступны."
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "70685073080254469",
+      "key": "dialog_011",
+      "en": "Experience the opening chapters of both\nAce Attorney Investigations games.\nYou can transfer your saved data to the full game.\n\nNote: You cannot obtain any accolades or trophies in this demo.",
+      "ru": "Пройдите начальные главы обеих частей\nAce Attorney Investigations.\nСохранения можно перенести в полную версию.\n\nВнимание: в демоверсии награды и трофеи недоступны."
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "83601588108591104",
+      "key": "dialog_018",
+      "en": "THIS END USER LICENSE AGREEMENT (“EULA”) SHALL APPLY UPON PLAYING THIS GAME SOFTWARE PROGRAM FOR PERSONAL COMPUTER (THE “PROGRAM”). \n- This Agreement shall come into effect between Capcom Co., Ltd. and user(s) upon installation of the Program by the user.\n- Those users between the ages of 13 and 18 (or between 13 and the age of legal majority in your country of residence) or a person with limited capacity shall install the Program only after obtaining approval from a parent or legal guardian who agrees to be bound by these provisions of EULA.\nClick the button below to view our privacy policy online.（https://game.capcom.com/eula/）",
+      "ru": "НАСТОЯЩЕЕ ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ С КОНЕЧНЫМ ПОЛЬЗОВАТЕЛЕМ («EULA») ПРИМЕНЯЕТСЯ ПРИ ИСПОЛЬЗОВАНИИ ЭТОЙ ИГРОВОЙ ПРОГРАММЫ ДЛЯ ПЕРСОНАЛЬНОГО КОМПЬЮТЕРА («ПРОГРАММЫ»). \n- Соглашение между Capcom Co., Ltd. и пользователем вступает в силу с момента установки Программы пользователем.\n- Пользователи от 13 до 18 лет (или от 13 лет до возраста совершеннолетия в стране проживания), а также лица с ограниченной дееспособностью вправе установить Программу только с согласия родителя или законного представителя, который принимает на себя обязательства по настоящему EULA.\nНажмите кнопку ниже, чтобы прочитать политику конфиденциальности.（https://game.capcom.com/eula/）"
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "124283597712764928",
+      "key": "dialog_002_PS4",
+      "en": "This game supports an auto-save feature.\nPlease do not turn off your PlayStation®4 system when\nthe icon above is onscreen.",
+      "ru": "В игре есть автосохранение.\nНе выключайте систему PlayStation®4, пока на экране\nпоказан этот значок."
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "124283597725347841",
+      "key": "dialog_003_PS4",
+      "en": "Click the button below to view our privacy policy online.\n<size=90%>（https://www.capcom.co.jp/privacy/game/）</size>",
+      "ru": "Нажмите кнопку ниже, чтобы прочитать нашу политику\nконфиденциальности.\n<size=90%>（https://www.capcom.co.jp/privacy/game/）</size>"
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "124283597725347842",
+      "key": "dialog_003_MS",
+      "en": "Click the button below to view our privacy policy online.\n<size=90%>（https://www.capcom.co.jp/privacy/game/）</size>",
+      "ru": "Нажмите кнопку ниже, чтобы прочитать нашу политику\nконфиденциальности.\n<size=90%>（https://www.capcom.co.jp/privacy/game/）</size>"
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "130074609845964800",
+      "key": "dialog_003_PC",
+      "en": "Click the button below to view our privacy policy online.\n<size=90%>（https://www.capcom.co.jp/privacy/game/）</size>",
+      "ru": "Нажмите кнопку ниже, чтобы прочитать нашу политику\nконфиденциальности.\n<size=90%>（https://www.capcom.co.jp/privacy/game/）</size>"
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "124283597725347847",
+      "key": "dialog_014_PS4",
+      "en": "Checking for add-ons.\nPlease do not turn off your PlayStation®4 system.",
+      "ru": "Проверка дополнений.\nНе выключайте систему PlayStation®4."
+    },
+    {
+      "table": "gk_common_option",
+      "id": "111244181430468610",
+      "key": "option_guide_037",
+      "en": "Adjust how the Shift key is used to make the player character run.",
+      "ru": "Как клавиша Shift заставляет персонажа бежать."
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "13325396588036096",
+      "key": "saveload_timestamp",
+      "en": "MM/dd/yyyy HH:mm:ss",
+      "ru": "dd.MM.yyyy HH:mm:ss"
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "130079982882107392",
+      "key": "saveload_saving_PS4",
+      "en": "Creating saved data...\nPlease do not turn off your PlayStation®4 system.",
+      "ru": "Идёт сохранение...\nНе выключайте систему PlayStation®4."
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "130079982894690306",
+      "key": "saveload_loading_PS4",
+      "en": "Loading...\nPlease do not turn off your PlayStation®4 system.",
+      "ru": "Загрузка...\nНе выключайте систему PlayStation®4."
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "130079982898884622",
+      "key": "saveload_dialog_005_PS4",
+      "en": "Deleting saved data...\nPlease do not turn off your PlayStation®4 system.",
+      "ru": "Удаление сохранения...\nНе выключайте систему PlayStation®4."
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "130079982898884625",
+      "key": "saveload_dialog_014_PS4",
+      "en": "<font=\"FOT-MODEMINALARGEPRO-M SDF\">Creating saved data...\nPlease do not turn off your PlayStation®4 system.</font>",
+      "ru": "<font=\"FOT-MODEMINALARGEPRO-M SDF\">Идёт сохранение...\nНе выключайте систему PlayStation®4.</font>"
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "130079982898884640",
+      "key": "saveload_dialog_013_PS4",
+      "en": "Deleting system saved data...\nPlease do not turn off your PlayStation®4 system.",
+      "ru": "Удаление системных данных...\nНе выключайте систему PlayStation®4."
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "130079982898884643",
+      "key": "saveload_dialog_012_PS4",
+      "en": "<font=\"FOT-MODEMINALARGEPRO-M SDF\">Creating system saved data...\nPlease do not turn off your PlayStation®4 system.</font>",
+      "ru": "<font=\"FOT-MODEMINALARGEPRO-M SDF\">Создание системных данных...\nНе выключайте систему PlayStation®4.</font>"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40355430461",
+      "key": "secselect_gk1_ep4_sec10",
+      "en": "Latter: The Truth Behind the KG-8 Incident",
+      "ru": "Финал: Правда об инциденте KG-8"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40355430572",
+      "key": "secselect_gk2_ep3_sec1",
+      "en": "Beginning: The IS-7 Incident",
+      "ru": "Начало: Инцидент IS-7"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40355430573",
+      "key": "secselect_gk2_ep3_sec2",
+      "en": "Beginning: The IS-7 Incident",
+      "ru": "Начало: Инцидент IS-7"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40355430574",
+      "key": "secselect_gk2_ep3_sec3",
+      "en": "Beginning: The IS-7 Incident",
+      "ru": "Начало: Инцидент IS-7"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40355430575",
+      "key": "secselect_gk2_ep3_sec4",
+      "en": "Beginning: The IS-7 Incident",
+      "ru": "Начало: Инцидент IS-7"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "30787127744593930",
+      "key": "secselect_gk2_ep5_sec768",
+      "en": "Middle: The Truth Behind the SS-5 Incident",
+      "ru": "Середина: Правда об инциденте SS-5"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "30787127744593931",
+      "key": "secselect_gk2_ep5_sec769",
+      "en": "Middle: The Truth Behind the SS-5 Incident",
+      "ru": "Середина: Правда об инциденте SS-5"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "30787127744593932",
+      "key": "secselect_gk2_ep5_sec770",
+      "en": "Middle: The Truth Behind the SS-5 Incident",
+      "ru": "Середина: Правда об инциденте SS-5"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40334458907",
+      "key": "epselect_dialogue_005",
+      "en": "Continue on to AAI2: Prosecutor's Gambit?",
+      "ru": "Перейти к AAI2: Prosecutor's Gambit?"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40334458911",
+      "key": "epselect_dialogue_009",
+      "en": "Play with new HD chibi character sprites.\n(Change styles at any time from the Title screen's Options menu.)",
+      "ru": "Играть с новыми HD-спрайтами чиби-персонажей.\n(Стиль можно сменить в настройках главного меню.)"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "36231574053650493",
+      "key": "secselect_gk1_ep4_sec10_list",
+      "en": "The Truth Behind the KG-8 Incident",
+      "ru": "Правда об инциденте KG-8"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "36231574053650610",
+      "key": "secselect_gk2_ep3_sec1_list",
+      "en": "The IS-7 Incident",
+      "ru": "Инцидент IS-7"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "36231574053650611",
+      "key": "secselect_gk2_ep3_sec2_list",
+      "en": "The IS-7 Incident",
+      "ru": "Инцидент IS-7"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "36231574053650612",
+      "key": "secselect_gk2_ep3_sec3_list",
+      "en": "The IS-7 Incident",
+      "ru": "Инцидент IS-7"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "36231574053650613",
+      "key": "secselect_gk2_ep3_sec4_list",
+      "en": "The IS-7 Incident",
+      "ru": "Инцидент IS-7"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "36231574057844871",
+      "key": "secselect_gk2_ep5_sec768_list",
+      "en": "The Truth Behind the SS-5 Incident",
+      "ru": "Правда об инциденте SS-5"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "36231574057844872",
+      "key": "secselect_gk2_ep5_sec769_list",
+      "en": "The Truth Behind the SS-5 Incident",
+      "ru": "Правда об инциденте SS-5"
+    },
+    {
+      "table": "gk_common_title",
+      "id": "36231574057844873",
+      "key": "secselect_gk2_ep5_sec770_list",
+      "en": "The Truth Behind the SS-5 Incident",
+      "ru": "Правда об инциденте SS-5"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37641715713",
+      "key": "gallery_header03",
+      "en": "Photo Album - <size=80%>AAI: Miles Edgeworth</size>",
+      "ru": "Фотоальбом — <size=80%>AAI: Miles Edgeworth</size>"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37641715714",
+      "key": "gallery_header04",
+      "en": "Photo Album - <size=80%>AAI2: Prosecutor's Gambit</size>",
+      "ru": "Фотоальбом — <size=80%>AAI2: Prosecutor's Gambit</size>"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37641715716",
+      "key": "gallery_header06",
+      "en": "Character Compendium - <size=80%>AAI: Miles Edgeworth</size>",
+      "ru": "Каталог персонажей — <size=80%>AAI: Miles Edgeworth</size>"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37641715717",
+      "key": "gallery_header07",
+      "en": "Character Compendium - <size=80%>AAI2: Prosecutor's Gambit</size>",
+      "ru": "Каталог персонажей — <size=80%>AAI2: Prosecutor's Gambit</size>"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37641715736",
+      "key": "gallery_guide06",
+      "en": "View characters you've met in AAI: Miles Edgeworth.",
+      "ru": "Персонажи из AAI: Miles Edgeworth."
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910016",
+      "key": "gallery_guide07",
+      "en": "View characters you've met in AAI2: Prosecutor's Gambit.",
+      "ru": "Персонажи из AAI2: Prosecutor's Gambit."
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910017",
+      "key": "gallery_guide08",
+      "en": "View in-game illustrations from AAI: Miles Edgeworth.",
+      "ru": "Иллюстрации из AAI: Miles Edgeworth."
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910018",
+      "key": "gallery_guide09",
+      "en": "View in-game illustrations from AAI2: Prosecutor's Gambit.",
+      "ru": "Иллюстрации из AAI2: Prosecutor's Gambit."
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473664",
+      "key": "gallery_trophy02_desc",
+      "en": "For completing Episode 1 of AAI: ME\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 1 AAI: ME\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473665",
+      "key": "gallery_trophy03_desc",
+      "en": "For completing Episode 2 of AAI: ME\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 2 AAI: ME\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473666",
+      "key": "gallery_trophy04_desc",
+      "en": "For completing Episode 3 of AAI: ME\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 3 AAI: ME\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473667",
+      "key": "gallery_trophy05_desc",
+      "en": "For completing Episode 4 of AAI: ME\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 4 AAI: ME\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473668",
+      "key": "gallery_trophy06_desc",
+      "en": "For completing Episode 5 of AAI: ME\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 5 AAI: ME\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473669",
+      "key": "gallery_trophy07_desc",
+      "en": "For completing Episode 1 of AAI2: PG\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 1 AAI2: PG\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473670",
+      "key": "gallery_trophy08_desc",
+      "en": "For completing Episode 2 of AAI2: PG\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 2 AAI2: PG\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473671",
+      "key": "gallery_trophy09_desc",
+      "en": "For completing Episode 3 of AAI2: PG\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 3 AAI2: PG\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473672",
+      "key": "gallery_trophy10_desc",
+      "en": "For completing Episode 4 of AAI2: PG\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 4 AAI2: PG\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473673",
+      "key": "gallery_trophy11_desc",
+      "en": "For completing Episode 5 of AAI2: PG\nwithout using Story Mode",
+      "ru": "За прохождение эпизода 5 AAI2: PG\nбез сюжетного режима"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473678",
+      "key": "gallery_trophy16_desc",
+      "en": "For playing the game with HD chibi\ncharacters",
+      "ru": "За игру с чиби-персонажами в HD"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473679",
+      "key": "gallery_trophy17_desc",
+      "en": "For going to see a familiar face in the\ndistance from the bridge in front of\nthe Main Gate, just after finding\nLance Amano in AAI: ME, Episode 3",
+      "ru": "За знакомое лицо вдали, увиденное\nс моста у главных ворот сразу после\nнаходки Лэнса Амано в AAI: ME, эпизод 3"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473680",
+      "key": "gallery_trophy18_desc",
+      "en": "For examining the side gate twice\nto see a familiar face in AAI2: PG,\nEpisode 5",
+      "ru": "За двойной осмотр боковых ворот\nи знакомое лицо в AAI2: PG,\nэпизод 5"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473682",
+      "key": "gallery_trophy20_desc",
+      "en": "For listening to Gumshoe talk in the\nhallway about where he thinks \"Jim\"\ncame from in AAI: ME, Episode 1",
+      "ru": "За рассказ Гамшу в коридоре о том,\nоткуда, по его мнению, взялся «Джим»,\nв AAI: ME, эпизод 1"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473683",
+      "key": "gallery_trophy21_desc",
+      "en": "For examining Edgeworth's seat while\ninvestigating with Gumshoe in AAI: ME,\nEpisode 2",
+      "ru": "За осмотр места Эджворта\nво время расследования с Гамшу\nв AAI: ME, эпизод 2"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473684",
+      "key": "gallery_trophy22_desc",
+      "en": "For having met the creator of the Blue\nBadger in front of the Gatewater Land\nMain Gate in AAI: ME, Episode 3",
+      "ru": "За встречу с создателем Синего\nБарсука у главных ворот Гейтуотер-Ленда\nв AAI: ME, эпизод 3"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473685",
+      "key": "gallery_trophy23_desc",
+      "en": "For presenting Kay's Promise Notebook\nto her in AAI: ME, Episode 4",
+      "ru": "За вручение Кей её тетради обещаний\nв AAI: ME, эпизод 4"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473686",
+      "key": "gallery_trophy24_desc",
+      "en": "For examining all three benches - the\nprosecution's, the defense's, and the\njudge's - in AAI: ME, Episode 4",
+      "ru": "За осмотр всех трёх мест — обвинения,\nзащиты и судьи — в AAI: ME, эпизод 4"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473687",
+      "key": "gallery_trophy25_desc",
+      "en": "For examining both the sword and the\nshield on the Primidux Statue with\nAgent Lang in AAI: ME, Episode 5",
+      "ru": "За осмотр и меча, и щита статуи\nПримидукса с агентом Лангом\nв AAI: ME, эпизод 5"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473688",
+      "key": "gallery_trophy26_desc",
+      "en": "For examining the signpost on the\nleft-hand side of the Spectator Area\nin AAI2: PG, Episode 1",
+      "ru": "За осмотр таблички слева\nот зрительских мест\nв AAI2: PG, эпизод 1"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473689",
+      "key": "gallery_trophy27_desc",
+      "en": "For pressing every single one of\nEustace's statements and forcing him\nto correct them all in AAI2: PG,\nEpisode 2",
+      "ru": "За надавливание на каждое показание\nЮстаса и правку их всех\nв AAI2: PG, эпизод 2"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473690",
+      "key": "gallery_trophy28_desc",
+      "en": "For examining the teapot as both\nMiles and Gregory in AAI2: PG,\nEpisode 3",
+      "ru": "За осмотр чайника и Майлзом,\nи Грегори в AAI2: PG, эпизод 3"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473691",
+      "key": "gallery_trophy29_desc",
+      "en": "For listening to Ema Skye talk in the\nStoreroom about how her studies\nabroad are going in AAI2: PG,\nEpisode 4",
+      "ru": "За рассказ Эмы Скай в кладовой о том,\nкак идёт её учёба за границей,\nв AAI2: PG, эпизод 4"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "23595705119473692",
+      "key": "gallery_trophy30_desc",
+      "en": "For saying the worst thing possible to\nEustace during his Mind Chess match\nin AAI2: PG, Episode 5",
+      "ru": "За худшее, что можно было сказать\nЮстасу в его партии ментальных шахмат\nв AAI2: PG, эпизод 5"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383049486336",
+      "key": "gallery_trophy_detail01_ep",
+      "en": "AAI: Miles Edgeworth - Episode 5",
+      "ru": "AAI: Miles Edgeworth — эпизод 5"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846464",
+      "key": "gallery_trophy_detail02_ep",
+      "en": "AAI2: Prosecutor's Gambit - Episode 3",
+      "ru": "AAI2: Prosecutor's Gambit — эпизод 3"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846465",
+      "key": "gallery_trophy_detail03_ep",
+      "en": "AAI: Miles Edgeworth - Episode 2",
+      "ru": "AAI: Miles Edgeworth — эпизод 2"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846466",
+      "key": "gallery_trophy_detail04_ep",
+      "en": "AAI: Miles Edgeworth - Episode 2",
+      "ru": "AAI: Miles Edgeworth — эпизод 2"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846467",
+      "key": "gallery_trophy_detail05_ep",
+      "en": "AAI: Miles Edgeworth - Episode 4",
+      "ru": "AAI: Miles Edgeworth — эпизод 4"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846468",
+      "key": "gallery_trophy_detail06_ep",
+      "en": "AAI: Miles Edgeworth - Episode 4",
+      "ru": "AAI: Miles Edgeworth — эпизод 4"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846469",
+      "key": "gallery_trophy_detail07_ep",
+      "en": "AAI: Miles Edgeworth - Episode 4",
+      "ru": "AAI: Miles Edgeworth — эпизод 4"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846470",
+      "key": "gallery_trophy_detail08_ep",
+      "en": "AAI: Miles Edgeworth - Episode 5",
+      "ru": "AAI: Miles Edgeworth — эпизод 5"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846471",
+      "key": "gallery_trophy_detail09_ep",
+      "en": "AAI: Miles Edgeworth - Episode 5",
+      "ru": "AAI: Miles Edgeworth — эпизод 5"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846472",
+      "key": "gallery_trophy_detail10_ep",
+      "en": "AAI2: Prosecutor's Gambit - Episode 2",
+      "ru": "AAI2: Prosecutor's Gambit — эпизод 2"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846473",
+      "key": "gallery_trophy_detail11_ep",
+      "en": "AAI2: Prosecutor's Gambit - Episode 2",
+      "ru": "AAI2: Prosecutor's Gambit — эпизод 2"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846474",
+      "key": "gallery_trophy_detail12_ep",
+      "en": "AAI2: Prosecutor's Gambit - Episode 2",
+      "ru": "AAI2: Prosecutor's Gambit — эпизод 2"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846475",
+      "key": "gallery_trophy_detail13_ep",
+      "en": "AAI2: Prosecutor's Gambit - Episode 2",
+      "ru": "AAI2: Prosecutor's Gambit — эпизод 2"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846476",
+      "key": "gallery_trophy_detail14_ep",
+      "en": "AAI2: Prosecutor's Gambit - Episode 3",
+      "ru": "AAI2: Prosecutor's Gambit — эпизод 3"
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "64523383078846477",
+      "key": "gallery_trophy_detail15_ep",
+      "en": "AAI2: Prosecutor's Gambit - Episode 3",
+      "ru": "AAI2: Prosecutor's Gambit — эпизод 3"
+    }
+  ],
+  "untranslated_tables": [
+    {
+      "table": "FontTable",
+      "id": "698736726016",
+      "key": "Default",
+      "en": "FOT-MODEMINALARGEPRO-M SDF",
+      "ru": ""
+    },
+    {
+      "table": "FontTable",
+      "id": "725538328576",
+      "key": "Default_Regular",
+      "en": "FOT-MODEMINALARGEPRO-R SDF",
+      "ru": ""
+    },
+    {
+      "table": "FontTable",
+      "id": "757003997184",
+      "key": "Default_Bold",
+      "en": "FOT-MODEMINALARGEPRO-B SDF",
+      "ru": ""
+    },
+    {
+      "table": "FontTable",
+      "id": "787303649280",
+      "key": "KeyGuide",
+      "en": "FOT-UDKAKUGO_SMALLPR6-M SDF",
+      "ru": ""
+    },
+    {
+      "table": "FontTable",
+      "id": "1686825449308160",
+      "key": "Textcut_EpisodeName",
+      "en": "FOT-MODEMINALARGEPRO-R SDF",
+      "ru": ""
+    },
+    {
+      "table": "FontTable",
+      "id": "57559998040129536",
+      "key": "Font_OptionTitle",
+      "en": "FOT-MODEMINALARGEPRO-B SDF\nFOT-MODEMINALARGEPRO-B SDF_border",
+      "ru": ""
+    },
+    {
+      "table": "FontTable",
+      "id": "83214461886070784",
+      "key": "Galley_TrueShadow",
+      "en": "FOT-MODEMINALARGEPRO-M SDF_Gallery",
+      "ru": ""
+    },
+    {
+      "table": "gk2_common_nametag",
+      "id": "114549870604",
+      "key": "gk2_cast21f_02_nt",
+      "en": "",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_dialog",
+      "id": "101463093035044864",
+      "key": "dialog_021",
+      "en": "...",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296789",
+      "key": "optionvalue_001",
+      "en": "0",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296790",
+      "key": "optionvalue_002",
+      "en": "1",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296791",
+      "key": "optionvalue_003",
+      "en": "2",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296792",
+      "key": "optionvalue_004",
+      "en": "3",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296793",
+      "key": "optionvalue_005",
+      "en": "4",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296794",
+      "key": "optionvalue_006",
+      "en": "5",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296795",
+      "key": "optionvalue_007",
+      "en": "6",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296796",
+      "key": "optionvalue_008",
+      "en": "7",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296797",
+      "key": "optionvalue_009",
+      "en": "8",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296798",
+      "key": "optionvalue_010",
+      "en": "9",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296809",
+      "key": "optionvalue_021",
+      "en": "3840 x 2160",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296810",
+      "key": "optionvalue_022",
+      "en": "2560 x 1440",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296811",
+      "key": "optionvalue_023",
+      "en": "1920 x 1080",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296812",
+      "key": "optionvalue_024",
+      "en": "1600 x 900",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296813",
+      "key": "optionvalue_025",
+      "en": "1366 x 768",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296814",
+      "key": "optionvalue_026",
+      "en": "1280 x 720",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "38539296807",
+      "key": "optionvalue_019",
+      "en": "HD",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "154706610473308160",
+      "key": "optionvalue_lang_text_jp",
+      "en": "<font=\"FOT-MODEMINALARGEPRO-M SDF\">日本語</font>",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "154706610490085376",
+      "key": "optionvalue_lang_text_en",
+      "en": "<font=\"FOT-MODEMINALARGEPRO-M SDF\">English</font>",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "154706610490085377",
+      "key": "optionvalue_lang_text_fr",
+      "en": "<font=\"FOT-MODEMINALARGEPRO-M SDF\">Français</font>",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "154706610490085379",
+      "key": "optionvalue_lang_text_kr",
+      "en": "<font=\"FOTK-YOONMINCHO750 SDF\">한국어</font>",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "154706610490085380",
+      "key": "optionvalue_lang_text_ch1",
+      "en": "<font=\"MSUNGHK-MEDIUM SDF\">繁體中文</font>",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "154706610490085381",
+      "key": "optionvalue_lang_text_ch2",
+      "en": "<font=\"MSUNGPRC-MEDIUM SDF\">简体中文</font>",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_option",
+      "id": "154706610490085382",
+      "key": "optionvalue_lang_text_ch",
+      "en": "<font=\"MSUNGPRC-MEDIUM SDF\">中文</font>",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "38975504384",
+      "key": "saveload_gk1",
+      "en": "AAI: Miles Edgeworth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "38996475904",
+      "key": "saveload_gk2",
+      "en": "AAI2: Prosecutor's Gambit",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "35543785830023168",
+      "key": "nowloading_msg_2",
+      "en": ".",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "35543785863577600",
+      "key": "nowloading_msg_3",
+      "en": "..",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_saveload",
+      "id": "61160649720573952",
+      "key": "nowloading_msg_4",
+      "en": "...",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_title",
+      "id": "2807855688122368",
+      "key": "title_copyright",
+      "en": "©CAPCOM",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40355430423",
+      "key": "secselect_gk1_ep3_sec2",
+      "en": "",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_title",
+      "id": "40334458909",
+      "key": "epselect_dialogue_007",
+      "en": "HD",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_title",
+      "id": "54267016254521344",
+      "key": "title_copyright_gk1",
+      "en": "©CAPCOM",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_title",
+      "id": "54267016288075776",
+      "key": "title_copyright_gk2",
+      "en": "©CAPCOM",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910186",
+      "key": "gallery_music108",
+      "en": "[AAI: ME Mini-OST] Ace Attorney Investigations - Triumphant Return 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "33382852668096512",
+      "key": "gallery_ui10",
+      "en": "AAI: Miles Edgeworth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "33382852697456640",
+      "key": "gallery_ui11",
+      "en": "AAI2: Prosecutor's Gambit",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37641715728",
+      "key": "gallery_ui08",
+      "en": "{0}%",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37641715729",
+      "key": "gallery_ui09",
+      "en": "{0}/{1}",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104332",
+      "key": "gallery_chara001",
+      "en": "Miles Edgeworth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104333",
+      "key": "gallery_chara002",
+      "en": "Dick Gumshoe",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104334",
+      "key": "gallery_chara003",
+      "en": "Franziska von Karma",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104335",
+      "key": "gallery_chara004",
+      "en": "Kay Faraday",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104336",
+      "key": "gallery_chara005",
+      "en": "Shi-Long Lang",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104337",
+      "key": "gallery_chara006",
+      "en": "Jacques Portsman",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104338",
+      "key": "gallery_chara007",
+      "en": "Buddy Faith",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104342",
+      "key": "gallery_chara011",
+      "en": "Winston Payne",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104343",
+      "key": "gallery_chara012",
+      "en": "Rhoda Teneiro",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104344",
+      "key": "gallery_chara013",
+      "en": "Cammy Meele",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104345",
+      "key": "gallery_chara014",
+      "en": "Zinc Lablanc II",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104346",
+      "key": "gallery_chara015",
+      "en": "Akbey Hicks",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104348",
+      "key": "gallery_chara017",
+      "en": "Shih-na",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104354",
+      "key": "gallery_chara023",
+      "en": "Ernest Amano",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104355",
+      "key": "gallery_chara024",
+      "en": "Lauren Paups",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104356",
+      "key": "gallery_chara025",
+      "en": "Lance Amano",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104357",
+      "key": "gallery_chara026",
+      "en": "Ema Skye",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104360",
+      "key": "gallery_chara029",
+      "en": "Manfred von Karma",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104365",
+      "key": "gallery_chara034",
+      "en": "Tyrell Badd",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104366",
+      "key": "gallery_chara035",
+      "en": "Calisto Yew",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104374",
+      "key": "gallery_chara043",
+      "en": "Colias Palaeno",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104375",
+      "key": "gallery_chara044",
+      "en": "Manny Coachen",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104376",
+      "key": "gallery_chara045",
+      "en": "Quercus Alba",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104378",
+      "key": "gallery_chara047",
+      "en": "Missile",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104384",
+      "key": "gallery_chara053",
+      "en": "Miles Edgeworth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104385",
+      "key": "gallery_chara054",
+      "en": "Dick Gumshoe",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104386",
+      "key": "gallery_chara055",
+      "en": "Kay Faraday",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104390",
+      "key": "gallery_chara059",
+      "en": "Gregory Edgeworth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104391",
+      "key": "gallery_chara060",
+      "en": "Shi-Long Lang",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104392",
+      "key": "gallery_chara061",
+      "en": "Franziska von Karma",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104396",
+      "key": "gallery_chara065",
+      "en": "Shelly de Killer",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104397",
+      "key": "gallery_chara066",
+      "en": "Winston Payne",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104407",
+      "key": "gallery_chara076",
+      "en": "Frank Sahwit",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104408",
+      "key": "gallery_chara077",
+      "en": "Regina Berry",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104409",
+      "key": "gallery_chara078",
+      "en": "Missile",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104421",
+      "key": "gallery_chara090",
+      "en": "Manfred von Karma",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104429",
+      "key": "gallery_chara098",
+      "en": "Laurice Deauxnim",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104436",
+      "key": "gallery_chara105",
+      "en": "Ema Skye",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104438",
+      "key": "gallery_chara107",
+      "en": "Lotta Hart",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104439",
+      "key": "gallery_chara108",
+      "en": "Penny Nichols",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104440",
+      "key": "gallery_chara109",
+      "en": "Will Powers",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "24345184609173504",
+      "key": "gallery_chara_locked",
+      "en": "???",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910079",
+      "key": "gallery_music001",
+      "en": "Ace Attorney Investigations - Prologue",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910080",
+      "key": "gallery_music002",
+      "en": "Ace Attorney Investigations - Prologue, Part 2",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910081",
+      "key": "gallery_music003",
+      "en": "Initial Investigation 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910082",
+      "key": "gallery_music004",
+      "en": "Further Investigation 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910083",
+      "key": "gallery_music005",
+      "en": "Deduction - Crime Scene Contradictions",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910084",
+      "key": "gallery_music006",
+      "en": "Logic - The Path to the Truth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910085",
+      "key": "gallery_music007",
+      "en": "Heart of the Investigation 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910086",
+      "key": "gallery_music008",
+      "en": "Confrontation - Moderato 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910087",
+      "key": "gallery_music009",
+      "en": "Tricks and Gimmicks",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910088",
+      "key": "gallery_music010",
+      "en": "Miles Edgeworth - Objection! 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910089",
+      "key": "gallery_music011",
+      "en": "Confrontation - Allegro 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910090",
+      "key": "gallery_music012",
+      "en": "The Truth Revealed 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910091",
+      "key": "gallery_music013",
+      "en": "Tricks and Baroque",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910092",
+      "key": "gallery_music014",
+      "en": "Confrontation - Presto 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910093",
+      "key": "gallery_music015",
+      "en": "Pursuit - Chase Down the Truth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910094",
+      "key": "gallery_music016",
+      "en": "Pursuit - Chase Down the Truth (No Intro)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910095",
+      "key": "gallery_music017",
+      "en": "Kay Faraday - Great Thief of the Truth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910096",
+      "key": "gallery_music018",
+      "en": "Shi-Long Lang - Lang Zi Says!",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910097",
+      "key": "gallery_music019",
+      "en": "Yatagarasu - Noble Thief of the Night",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910098",
+      "key": "gallery_music020",
+      "en": "\"Turnabout Airlines\"",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910099",
+      "key": "gallery_music021",
+      "en": "\"Turnabout Airlines\", Part 2",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910100",
+      "key": "gallery_music022",
+      "en": "Zinc Lablanc - Time Is Money",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910101",
+      "key": "gallery_music023",
+      "en": "Cammy Meele - Nighty-Night",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910102",
+      "key": "gallery_music024",
+      "en": "Rhoda Teneiro - As a Professional Flight Attendant",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910103",
+      "key": "gallery_music025",
+      "en": "Accused Folk",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910104",
+      "key": "gallery_music026",
+      "en": "\"The Kidnapped Turnabout\" - Prelude to Abduction",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910105",
+      "key": "gallery_music027",
+      "en": "The Blue Badger March - Gatewater Land Theme Song",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910106",
+      "key": "gallery_music028",
+      "en": "\"The Kidnapped Turnabout\" - Haunted House Tragedy",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910107",
+      "key": "gallery_music029",
+      "en": "\"The Kidnapped Turnabout\" - Haunted House Tragedy, Part 2",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910108",
+      "key": "gallery_music030",
+      "en": "Troublemaking Folk",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910109",
+      "key": "gallery_music031",
+      "en": "Amusing Folk",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910110",
+      "key": "gallery_music032",
+      "en": "Reminiscences - A Relationship Built on Lies",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910111",
+      "key": "gallery_music033",
+      "en": "Little Thief - Secret Weapon of the Noble",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910112",
+      "key": "gallery_music034",
+      "en": "Courtroom - Guardians of the Law",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910113",
+      "key": "gallery_music035",
+      "en": "\"Turnabout Reminiscence\"",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910114",
+      "key": "gallery_music036",
+      "en": "Tyrell Badd - The Truth Is Never Sweet",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910115",
+      "key": "gallery_music037",
+      "en": "Calisto Yew - Cold Laughter",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910116",
+      "key": "gallery_music038",
+      "en": "Reminiscences - The KG-8 Incident",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910117",
+      "key": "gallery_music039",
+      "en": "Crisis of Fate",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910118",
+      "key": "gallery_music040",
+      "en": "Dick Gumshoe - You Can Count on Me, Sir!",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910119",
+      "key": "gallery_music041",
+      "en": "\"Turnabout Ablaze\"",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910120",
+      "key": "gallery_music042",
+      "en": "Two Embassies - The Lands of Butterflies and Flowers",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910121",
+      "key": "gallery_music043",
+      "en": "Reminiscences - A Country Torn in Two",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910122",
+      "key": "gallery_music044",
+      "en": "Quercus Alba - He Who Is Above the Law",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910123",
+      "key": "gallery_music045",
+      "en": "Case Closed! - A Brilliant Deduction",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910124",
+      "key": "gallery_music046",
+      "en": "Ace Attorney Investigations - Triumphant Return 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910125",
+      "key": "gallery_music047",
+      "en": "One Prosecutor's Musings - We Will Meet Again",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910126",
+      "key": "gallery_music048",
+      "en": "Dick Gumshoe - That's \"Detective Gumshoe,\" Pal!",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910127",
+      "key": "gallery_music049",
+      "en": "Triumphant Return - Franziska von Karma",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910128",
+      "key": "gallery_music050",
+      "en": "Ema Skye - Turnabout Sisters 2005",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910129",
+      "key": "gallery_music051",
+      "en": "The Blue Badger - I Want to Protect You",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910130",
+      "key": "gallery_music052",
+      "en": "The Steel Samurai: Warrior of Neo Olde Tokyo",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910131",
+      "key": "gallery_music053",
+      "en": "Mask☆DeMasque - Please Listen to Meeeee!",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910132",
+      "key": "gallery_music054",
+      "en": "Suspense",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910133",
+      "key": "gallery_music055",
+      "en": "Prosecutor's Gambit - Prologue",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910134",
+      "key": "gallery_music056",
+      "en": "Initial Investigation 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910135",
+      "key": "gallery_music057",
+      "en": "Deduction - Crime Scene Truths",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910136",
+      "key": "gallery_music058",
+      "en": "Tricks and Analyses",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910137",
+      "key": "gallery_music059",
+      "en": "Mind Chess - Opening Moves",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910138",
+      "key": "gallery_music060",
+      "en": "Confrontation - Moderato 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910139",
+      "key": "gallery_music061",
+      "en": "Miles Edgeworth - Objection! 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910140",
+      "key": "gallery_music062",
+      "en": "The Truth Revealed 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910141",
+      "key": "gallery_music063",
+      "en": "\"The Captive Turnabout\"",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910142",
+      "key": "gallery_music064",
+      "en": "Further Investigation 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910143",
+      "key": "gallery_music065",
+      "en": "Eddie Fender - Wisecracking Candor",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910144",
+      "key": "gallery_music066",
+      "en": "Eustace Winner - Winning Deductions",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910145",
+      "key": "gallery_music067",
+      "en": "Confrontation - Allegro 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910146",
+      "key": "gallery_music068",
+      "en": "Verity Gavèlle - Goddess of Justice",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910147",
+      "key": "gallery_music069",
+      "en": "Committee for Prosecutorial Excellence - Stone-Cold Justice",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910148",
+      "key": "gallery_music070",
+      "en": "Melancholic Folk",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910149",
+      "key": "gallery_music071",
+      "en": "Odd Folk",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910150",
+      "key": "gallery_music072",
+      "en": "Little Thief - Secret Weapon of the Noble 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910151",
+      "key": "gallery_music073",
+      "en": "Heart of the Investigation 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910152",
+      "key": "gallery_music074",
+      "en": "Fifi Laguarde - A Hug and Smooch is Entirely de Rigueur",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910153",
+      "key": "gallery_music075",
+      "en": "Bodhidharma Kanis - The Sound of One's Assassination",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910154",
+      "key": "gallery_music076",
+      "en": "Confrontation - Presto 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910155",
+      "key": "gallery_music077",
+      "en": "Pursuit - Uncover the Truth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910156",
+      "key": "gallery_music078",
+      "en": "Pursuit - Uncover the Truth (No Intro)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910157",
+      "key": "gallery_music079",
+      "en": "\"Turnabout Legacy\"",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910158",
+      "key": "gallery_music080",
+      "en": "\"Turnabout Legacy\", Part 2",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910159",
+      "key": "gallery_music081",
+      "en": "Gregory Edgeworth - A Veteran Attorney's Wisdom",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910160",
+      "key": "gallery_music082",
+      "en": "Samson Tangaroa - Candied Happiness",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910161",
+      "key": "gallery_music083",
+      "en": "Restless Folk",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910162",
+      "key": "gallery_music084",
+      "en": "Reminiscences - The IS-7 Incident",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910163",
+      "key": "gallery_music085",
+      "en": "Tricks and Breakthroughs",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910164",
+      "key": "gallery_music086",
+      "en": "Judy Bound - Candied Dance",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910165",
+      "key": "gallery_music087",
+      "en": "Carmelo Gusto - A Flash of Taste",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910166",
+      "key": "gallery_music088",
+      "en": "\"A Turnabout Forsaken\"",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910167",
+      "key": "gallery_music089",
+      "en": "Trial of Fate",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910168",
+      "key": "gallery_music090",
+      "en": "Reminiscences - The Girl with No Memories",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910169",
+      "key": "gallery_music091",
+      "en": "The Ties that Bind - Bonds of Faith and Trust",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910170",
+      "key": "gallery_music092",
+      "en": "\"Turnabout for the Ages\"",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910171",
+      "key": "gallery_music093",
+      "en": "Shaun Fenn - Bull-Headed Teenager",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910172",
+      "key": "gallery_music094",
+      "en": "The Legendary Taurusaurus",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910173",
+      "key": "gallery_music095",
+      "en": "Reminiscences - The Fall of the House of Lang",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910174",
+      "key": "gallery_music096",
+      "en": "Mind Chess - Endgame",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910175",
+      "key": "gallery_music097",
+      "en": "Eustace Winner - Winning Independence",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910176",
+      "key": "gallery_music098",
+      "en": "Republic of Zheng Fa - The Land of the Phoenix",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910177",
+      "key": "gallery_music099",
+      "en": "Reminiscences - The SS-5 Incident",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910178",
+      "key": "gallery_music100",
+      "en": "The Puppeteer of the Game",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910179",
+      "key": "gallery_music101",
+      "en": "Case Closed! - A Brief Calm",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910180",
+      "key": "gallery_music102",
+      "en": "One Prosecutor's Musings - Each Person's Answer",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910181",
+      "key": "gallery_music103",
+      "en": "Prosecutor's Gambit - Triumphant Answer",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910182",
+      "key": "gallery_music104",
+      "en": "Simple Folk",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910183",
+      "key": "gallery_music105",
+      "en": "Berry Big Circus",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910184",
+      "key": "gallery_music106",
+      "en": "Shelly de Killer - A Deadly Gentleman's Delight",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37645910185",
+      "key": "gallery_music107",
+      "en": "Larry Butz - When Something Smells, It's Usually Me",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104320",
+      "key": "gallery_music109",
+      "en": "[AAI: ME Mini-OST] Pursuit - Chase Down the Truth (Full Orchestral Arrangement)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104321",
+      "key": "gallery_music110",
+      "en": "[AAI: ME Mini-OST] Police Investigators Suite",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104322",
+      "key": "gallery_music111",
+      "en": "[AAI: ME Mini-OST] The Blue Badger March",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104323",
+      "key": "gallery_music112",
+      "en": "[AAI: ME Mini-OST] Triumphant Return - Miles Edgeworth (CANADEON Version)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104324",
+      "key": "gallery_music113",
+      "en": "[AAI2: PG Mini-OST] Miles Edgeworth - Objection! 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104325",
+      "key": "gallery_music114",
+      "en": "[AAI2: PG Mini-OST] Kay Faraday - Great Thief of the Truth 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104326",
+      "key": "gallery_music115",
+      "en": "[AAI2: PG Mini-OST] Prosecutor's Gambit - Investigation Suite",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104327",
+      "key": "gallery_music116",
+      "en": "[AAI2: PG Mini-OST] Prosecutor's Gambit - Logical Mind Suite",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104328",
+      "key": "gallery_music117",
+      "en": "[AAI2: PG Mini-OST] Verity Gavèlle - Goddess of Justice",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104329",
+      "key": "gallery_music118",
+      "en": "[AAI2: PG Mini-OST] Prosecutor's Gambit - Confrontation Suite",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104330",
+      "key": "gallery_music119",
+      "en": "[AAI2: PG Mini-OST] Pursuit - Uncover the Truth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104331",
+      "key": "gallery_music120",
+      "en": "[AAI2: PG Mini-OST] Gregory Edgeworth - A Veteran Attorney's Wisdom",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060831240192",
+      "key": "gallery_music121",
+      "en": "[AAI2: PG Mini-OST] The Ties that Bind - Bonds of Faith and Trust",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600320",
+      "key": "gallery_music122",
+      "en": "[AAI2: PG Mini-OST] Prosecutor's Gambit - Triumphant Answer",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600321",
+      "key": "gallery_music123",
+      "en": "[AAI2: PG Mini-OST] Overture - Prosecutor's Gambit",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600322",
+      "key": "gallery_music124",
+      "en": "[15th Anniv.] Ace Attorney Investigations - Fateful Encounters Suite (Live Recording)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600323",
+      "key": "gallery_music125",
+      "en": "[15th Anniv.] Ace Attorney Investigations Suite - A Grand Legacy (Live Recording)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600324",
+      "key": "gallery_music126",
+      "en": "[15th Anniv.] Triumphant Return - Miles Edgeworth (Live Recording)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600325",
+      "key": "gallery_music127",
+      "en": "[15th Anniv.] The Steel Samurai: Warrior of Neo Olde Tokyo (Live Recording)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600326",
+      "key": "gallery_music128",
+      "en": "[2019 Concert] Ace Attorney Investigations - Deduction and Pursuit Suite (Live Recording)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600327",
+      "key": "gallery_music129",
+      "en": "[2019 Concert] Triumphant Return - Miles Edgeworth (Live Recording)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600328",
+      "key": "gallery_music130",
+      "en": "[2019 Concert] The Steel Samurai: Warrior of Neo Olde Tokyo (Live Recording)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600329",
+      "key": "gallery_music131",
+      "en": "【御剣セレクション】対決 ～モデラート 2009*",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600330",
+      "key": "gallery_music132",
+      "en": "[AAI Collection] Confrontation - Allegro 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "21007060860600331",
+      "key": "gallery_music133",
+      "en": "[AAI Collection] Confrontation - Presto 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104339",
+      "key": "gallery_chara008",
+      "en": "Maggey Byrde",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104340",
+      "key": "gallery_chara009",
+      "en": "Officer",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104341",
+      "key": "gallery_chara010",
+      "en": "Forensics",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104347",
+      "key": "gallery_chara016",
+      "en": "Captain",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104349",
+      "key": "gallery_chara018",
+      "en": "Proto Badger",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104350",
+      "key": "gallery_chara019",
+      "en": "Blue Badger",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104351",
+      "key": "gallery_chara020",
+      "en": "Mike Meekins (Blue Badger)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104352",
+      "key": "gallery_chara021",
+      "en": "Pink Badger",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104353",
+      "key": "gallery_chara022",
+      "en": "Wendy Oldbag (Pink Badger)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104358",
+      "key": "gallery_chara027",
+      "en": "Man in Black",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104359",
+      "key": "gallery_chara028",
+      "en": "Detective",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104361",
+      "key": "gallery_chara030",
+      "en": "Miles Edgeworth (7 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104362",
+      "key": "gallery_chara031",
+      "en": "Franziska von Karma (7 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104363",
+      "key": "gallery_chara032",
+      "en": "Dick Gumshoe (7 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104364",
+      "key": "gallery_chara033",
+      "en": "Kay Faraday (7 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104367",
+      "key": "gallery_chara036",
+      "en": "Judge",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104368",
+      "key": "gallery_chara037",
+      "en": "Shi-Long Lang (7 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104369",
+      "key": "gallery_chara038",
+      "en": "Bailiff",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104370",
+      "key": "gallery_chara039",
+      "en": "Steel Samurai",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104371",
+      "key": "gallery_chara040",
+      "en": "Larry Butz (Steel Samurai)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104372",
+      "key": "gallery_chara041",
+      "en": "Pink Princess",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104373",
+      "key": "gallery_chara042",
+      "en": "Wendy Oldbag (Pink Princess)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104377",
+      "key": "gallery_chara046",
+      "en": "Quercus Alba (True Self)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104379",
+      "key": "gallery_chara048",
+      "en": "Reporter",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104380",
+      "key": "gallery_chara049",
+      "en": "Cameraman",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104381",
+      "key": "gallery_chara050",
+      "en": "Embassy Staff",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104382",
+      "key": "gallery_chara051",
+      "en": "Embassy Guard",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104383",
+      "key": "gallery_chara052",
+      "en": "Mask☆DeMasque II",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104387",
+      "key": "gallery_chara056",
+      "en": "Verity Gavèlle",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104388",
+      "key": "gallery_chara057",
+      "en": "Eustace Winner",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104389",
+      "key": "gallery_chara058",
+      "en": "Eddie Fender",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104393",
+      "key": "gallery_chara062",
+      "en": "Di-Jun Wang",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104394",
+      "key": "gallery_chara063",
+      "en": "Bronco Knight",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104395",
+      "key": "gallery_chara064",
+      "en": "Tabby Lloyd",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104398",
+      "key": "gallery_chara067",
+      "en": "Bodyguard",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104399",
+      "key": "gallery_chara068",
+      "en": "Cameraman",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104400",
+      "key": "gallery_chara069",
+      "en": "Officer",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104401",
+      "key": "gallery_chara070",
+      "en": "Forensics",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104402",
+      "key": "gallery_chara071",
+      "en": "Bodhidharma Kanis",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104403",
+      "key": "gallery_chara072",
+      "en": "Helmut",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104404",
+      "key": "gallery_chara073",
+      "en": "Simeon Saint",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104405",
+      "key": "gallery_chara074",
+      "en": "Rocco Carcerato",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104406",
+      "key": "gallery_chara075",
+      "en": "Fifi Laguarde",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104410",
+      "key": "gallery_chara079",
+      "en": "Teddy",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104411",
+      "key": "gallery_chara080",
+      "en": "Regent",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104412",
+      "key": "gallery_chara081",
+      "en": "Cat",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104413",
+      "key": "gallery_chara082",
+      "en": "Rabbit",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104414",
+      "key": "gallery_chara083",
+      "en": "Pony",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104415",
+      "key": "gallery_chara084",
+      "en": "Mini Pig",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104416",
+      "key": "gallery_chara085",
+      "en": "Monkey",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104417",
+      "key": "gallery_chara086",
+      "en": "Guard",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104418",
+      "key": "gallery_chara087",
+      "en": "Prisoner",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104419",
+      "key": "gallery_chara088",
+      "en": "Eddie Fender (18 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104420",
+      "key": "gallery_chara089",
+      "en": "Tyrell Badd (18 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104422",
+      "key": "gallery_chara091",
+      "en": "Samson Tangaroa",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104423",
+      "key": "gallery_chara092",
+      "en": "Samson Tangaroa (18 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104424",
+      "key": "gallery_chara093",
+      "en": "Judy Bound",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104425",
+      "key": "gallery_chara094",
+      "en": "Judy Bound (18 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104426",
+      "key": "gallery_chara095",
+      "en": "Delicia Scone",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104427",
+      "key": "gallery_chara096",
+      "en": "Carmelo Gusto",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104428",
+      "key": "gallery_chara097",
+      "en": "Carmelo Gusto (18 Years Ago)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104430",
+      "key": "gallery_chara099",
+      "en": "Ron & Desirée DeLite",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104431",
+      "key": "gallery_chara100",
+      "en": "Amnesiac Kay",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104432",
+      "key": "gallery_chara101",
+      "en": "Excelsius Winner",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104433",
+      "key": "gallery_chara102",
+      "en": "Hilda Hertz & Florence Niedler",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104434",
+      "key": "gallery_chara103",
+      "en": "Florence Niedler",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104435",
+      "key": "gallery_chara104",
+      "en": "Hilda Hertz",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104437",
+      "key": "gallery_chara106",
+      "en": "Man in Black",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104441",
+      "key": "gallery_chara110",
+      "en": "Shaun Fenn",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "37650104442",
+      "key": "gallery_chara111",
+      "en": "Simeon Saint (True Self)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106559410176",
+      "key": "gallery_music134",
+      "en": "[AAI Collection] Miles Edgeworth - Objection! 2009",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106588770304",
+      "key": "gallery_music135",
+      "en": "[AAI Collection] Pursuit - Chase Down the Truth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964608",
+      "key": "gallery_music136",
+      "en": "[AAI Collection] Pursuit - Chase Down the Truth (No Intro)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964609",
+      "key": "gallery_music137",
+      "en": "【御剣セレクション】対決 ～モデラート 2011*",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964610",
+      "key": "gallery_music138",
+      "en": "[AAI Collection] Confrontation - Allegro 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964611",
+      "key": "gallery_music139",
+      "en": "[AAI Collection] Confrontation - Presto 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964612",
+      "key": "gallery_music140",
+      "en": "[AAI Collection] Miles Edgeworth - Objection! 2011",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964613",
+      "key": "gallery_music141",
+      "en": "[AAI Collection] Pursuit - Uncover the Truth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964614",
+      "key": "gallery_music142",
+      "en": "[AAI Collection] Pursuit - Uncover the Truth (No Intro)",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964615",
+      "key": "gallery_music143",
+      "en": "[AAI Collection] Prelude to Pursuit - Search for the Truth",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964616",
+      "key": "gallery_music144",
+      "en": "【御剣セレクション】御剣信 ～弁護士の心得*",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964617",
+      "key": "gallery_music145",
+      "en": "【御剣セレクション】追究 ～つきとめたくて（前奏なし）*",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964618",
+      "key": "gallery_music146",
+      "en": "【御剣セレクション】御剣怜侍 ～検事の心得*",
+      "ru": ""
+    },
+    {
+      "table": "gk_common_gallery",
+      "id": "53959106592964619",
+      "key": "gallery_music147",
+      "en": "【御剣セレクション】御剣信 ～弁護士の心得*",
+      "ru": ""
+    }
+  ],
+  "missing_live_rows": [],
+  "changed_sources": [],
+  "live_host_mismatch": [],
+  "scripts_total": 33422,
+  "scripts_empty": 0,
+  "live_tables": {
+    "gk2_logic_text": 103,
+    "gk_common_button": 25,
+    "gk_common_dialog": 63,
+    "gk1_common_nametag": 75,
+    "gk1_select_short": 112,
+    "gk_common_title": 754,
+    "gk_common_log": 13,
+    "gk2_logic_name": 103,
+    "gk_common_keyguide": 40,
+    "gk_common_saveload": 80,
+    "gk2_txtcut": 38,
+    "gk1_common_txtcut": 2,
+    "gk1_logic_name": 93,
+    "gk1_select_long": 107,
+    "gk1_logic_text": 93,
+    "FontTable": 7,
+    "gk1_logic_button": 93,
+    "gk_common_option": 178,
+    "gk1_txtcut": 19,
+    "gk2_item_name": 215,
+    "gk2_common_nametag": 67,
+    "gk2_select_long": 175,
+    "gk1_item_name": 191,
+    "gk2_item_text": 270,
+    "gk1_item_text": 227,
+    "gk2_select_short": 133,
+    "gk2_logic_button": 103,
+    "gk_common_gallery": 456
+  }
+}

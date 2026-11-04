@@ -10,6 +10,11 @@
   * правка без вердикта — идёт как есть (ревьюер молча согласился),
     но печатается отдельно, чтобы это было видно.
 
+Копии (тот же английский в других сценах, `copies.py`) с `--spread`: копия, чей
+русский буква в букву совпадает с прежним текстом правленой реплики, получает
+ту же правку автоматически; разошедшиеся копии (другая форма ты/вы, другой
+перевод) только печатаются — их сводит человек, потому что разница бывает законной.
+
 Итог — `<сцена>.final.json` в формате `apply.py`; он же проверяется
 `proof_check.check`. Применение в `work/case*.json` — отдельным шагом:
 
@@ -50,17 +55,43 @@ def merge(folder: Path, scene: str) -> tuple[dict, dict]:
     return final, stats
 
 
+def spread(final: dict, entries: dict) -> tuple[dict, list[str]]:
+    """Разнести правки по копиям, совпадавшим с прежним текстом; вернуть разошедшиеся."""
+    from copies import norm
+    by_en: dict[str, list[dict]] = {}
+    for e in entries.values():
+        by_en.setdefault(norm(e["en"]), []).append(e)
+    extra, diverged = {}, []
+    for key, text in final.items():
+        me = entries[key]
+        for other in by_en.get(norm(me["en"]), []):
+            if other["id"] == key or other["id"] in final:
+                continue
+            if other["ru"] == me["ru"]:
+                extra[other["id"]] = text
+            elif norm(other["ru"]) != norm(text):
+                diverged.append(f"{key} → {other['id']}: {norm(other['ru'])}")
+    return extra, diverged
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("folder", type=Path)
     ap.add_argument("scenes", nargs="+")
+    ap.add_argument("--spread", action="store_true", help="разнести правки по совпадающим копиям")
     args = ap.parse_args()
     entries = {e["id"]: e for e in load_entries()}
     speakers = load_json(PACK / "speakers.json", default={}) or {}
     bad = 0
     for scene in args.scenes:
         final, stats = merge(args.folder, scene)
+        if args.spread:
+            extra, diverged = spread(final, entries)
+            final.update(extra)
+            print(f"{scene}: по копиям разнесено {len(extra)}, разошедшихся копий {len(diverged)}")
+            for line in diverged:
+                print("  ≠", line)
         out = args.folder / f"{scene}.final.json"
         save_json(out, final)
         errors, _warns = check(out, entries, speakers)

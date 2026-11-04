@@ -209,14 +209,16 @@ def build(folder: Path, scenes: list[str] | None) -> str:
     rows = "".join(f"<tr><td><code>{s}</code></td><td>{n}</td><td>{m}</td><td>{q}</td></tr>"
                    for s, n, m, q in summary)
     total = sum(n for _, n, _, _ in summary)
+    case_no = folder.name[1:] if folder.name[:1] == "c" and folder.name[1:].isdigit() else ""
     return TEMPLATE.format(
+        tab=f"Вычитка дела {case_no}" if case_no else "Лист вычитки",
         title="Вычитка: " + (", ".join(scenes) if scenes else folder.name),
         total=total, nq=len(questions), rows=rows,
         cards="".join(cards) or "<p>Правок нет.</p>",
         questions="".join(questions) or "<p>Вопросов нет.</p>")
 
 
-TEMPLATE = """<title>Лист вычитки</title>
+TEMPLATE = """<title>{tab}</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=Literata:opsz,wght@7..72,400;7..72,600&family=JetBrains+Mono:wght@400&display=swap">
 <style>

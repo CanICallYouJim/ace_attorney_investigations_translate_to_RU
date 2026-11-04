@@ -1,0 +1,69 @@
+{
+  "exported": "2026-11-05T01:57:45",
+  "segments": 33422,
+  "by_case": {
+    "0": 391,
+    "1": 3700,
+    "2": 7402,
+    "3": 7198,
+    "4": 5569,
+    "5": 9162
+  },
+  "langs": [
+    "eng",
+    "fre",
+    "ger",
+    "jpn",
+    "kor",
+    "sim",
+    "tra"
+  ],
+  "split_mismatch": {
+    "eng": 0,
+    "fre": 0,
+    "ger": 0,
+    "jpn": 6,
+    "kor": 6,
+    "sim": 7,
+    "tra": 7
+  },
+  "split_mismatch_sample": {
+    "eng": [],
+    "fre": [],
+    "ger": [],
+    "jpn": [
+      "sce4_c0_03.bytes|04000180|38",
+      "sce4_c2_08.bytes|04002302|53",
+      "sce4_c2_m15_00_npc.bytes|040028F9|4",
+      "sce4_c2_m15_00_npc.bytes|040028F9|12",
+      "sce4_c2_m15_00_npc.bytes|040028F9|13",
+      "sce4_c2_m15_00_npc.bytes|040028F9|14"
+    ],
+    "kor": [
+      "sce4_c0_03.bytes|04000180|38",
+      "sce4_c2_08.bytes|04002302|53",
+      "sce4_c2_m15_00_npc.bytes|040028F9|4",
+      "sce4_c2_m15_00_npc.bytes|040028F9|12",
+      "sce4_c2_m15_00_npc.bytes|040028F9|13",
+      "sce4_c2_m15_00_npc.bytes|040028F9|14"
+    ],
+    "sim": [
+      "sce4_c0_03.bytes|04000180|38",
+      "sce4_c2_08.bytes|04002302|53",
+      "sce4_c2_m15_00_npc.bytes|040028F9|4",
+      "sce4_c2_m15_00_npc.bytes|040028F9|12",
+      "sce4_c2_m15_00_npc.bytes|040028F9|13",
+      "sce4_c2_m15_00_npc.bytes|040028F9|14",
+      "sce4_c2_m15_00_npc.bytes|040028F9|15"
+    ],
+    "tra": [
+      "sce4_c0_03.bytes|04000180|38",
+      "sce4_c2_08.bytes|04002302|53",
+      "sce4_c2_m15_00_npc.bytes|040028F9|4",
+      "sce4_c2_m15_00_npc.bytes|040028F9|12",
+      "sce4_c2_m15_00_npc.bytes|040028F9|13",
+      "sce4_c2_m15_00_npc.bytes|040028F9|14",
+      "sce4_c2_m15_00_npc.bytes|040028F9|15"
+    ]
+  }
+}

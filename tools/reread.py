@@ -30,7 +30,8 @@ import argparse
 import collections
 import re
 
-from common import case_of, in_case_scope, load_entries, read_scripts_all
+from common import (case_of, in_case_scope, load_entries, pack_speakers, read_scripts_all,
+                    use_pack)
 import segments as S
 import tps as T
 from who import NAMES, speaker_of
@@ -40,7 +41,17 @@ CODES = re.compile(r"\{[^}]*\}")
 
 
 def walk(case: int | None, file_prefix: str = ""):
-    """Пройти сегменты в порядке прохождения, отдавая (ключ, файл, говорящий, сегмент)."""
+    """Пройти сегменты в порядке прохождения, отдавая (ключ, файл, говорящий, сегмент).
+
+    Без игры, но с пакетом вычитки — те же реплики в том же порядке из work/case*.json,
+    говорящий из пакета, сегмента нет (None): ключи тогда полные, с `#N` у повторов метки.
+    """
+    if use_pack():
+        speakers = pack_speakers()
+        for e in load_entries(case):
+            if in_case_scope(e["file"]) and e["file"].startswith(file_prefix):
+                yield e["id"], e["file"], speakers.get(e["id"]), None
+        return
     eng = read_scripts_all("eng")
     for name in sorted(eng):
         if not in_case_scope(name) or not name.startswith(file_prefix):
@@ -107,10 +118,13 @@ def main() -> int:
         if args.latin and not LATIN.search(CODES.sub("", ru)):
             continue
         speaker = f"  {names.get(who, who or '—')}" if want is None else ""
-        print(f"--- {key}  mode={seg.mode}{speaker}")
+        print(f"--- {key}  mode={seg.mode if seg else entries.get(key, {}).get('mode')}{speaker}")
         if not args.ru_only:
-            _h, core, _t = seg.core()
-            print(hide(T.to_markup(core)))
+            if seg is None:
+                print(hide(entries.get(key, {}).get("en", "")))
+            else:
+                _h, core, _t = seg.core()
+                print(hide(T.to_markup(core)))
         print(hide(ru))
         print()
         shown += 1

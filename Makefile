@@ -29,7 +29,7 @@ export PYTHONIOENCODING := utf-8
 
 .DEFAULT_GOAL := help
 .PHONY: help check check-full selftest build install graphics graphics-ru graphics-new plates splash titles titles-chess notes layers restore \
-        status patch patch-check uninstall release publish extract clean tidy
+        status patch patch-check uninstall release publish extract review-pack clean tidy
 
 help:                ## показать этот список
 	@$(PY) tools/mk.py
@@ -118,6 +118,9 @@ tidy:                ## удалить временные сборки и кэш
 extract:             ## перечитать реплики и таблицы из игры в work/
 	$(PY) tools/extract.py
 	$(PY) tools/extract_strings.py
+
+review-pack:         ## выгрузить говорящих и семь языков в work/review/ для вычитки без игры
+	$(PY) tools/export_review_pack.py
 
 clean:               ## убрать собранное: work/build, dist/release, кеши
 	@$(PY) tools/mk.py clean

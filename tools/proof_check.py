@@ -30,6 +30,8 @@ import tps as T
 
 TY = re.compile(r"\b(ты|тебя|тебе|тобой|тобою|твой|твоя|твоё|твое|твои|твоего|твоей|твоих|твоим|твоими|твоему|твою)\b", re.I)
 VY = re.compile(r"\b(вы|вас|вам|вами|ваш|ваша|ваше|ваши|вашего|вашей|ваших|вашим|вашими|вашему|вашу)\b", re.I)
+# «Тьфу ты», «вот ты» в начале реплики — междометие, а не обращение.
+INTERJECTION_TY = re.compile(r"\b(тьфу|ух|эх)\s+ты\b", re.I)
 LATIN = re.compile(r"[A-Za-z]{2,}(?:\s+[A-Za-z]{2,})+")
 
 
@@ -73,7 +75,9 @@ def check(patch_path: Path, entries: dict, speakers: dict) -> tuple[list[str], l
                     errors.append(f"{key}: строка {len(line)} > {limit} — {line!r}")
                 elif mode != NARROW_MODE and len(line) > LINE_SOFT:
                     warns.append(f"{key}: строка {len(line)} > {LINE_SOFT} (рабочий лимит) — {line!r}")
-        was_ty, now_ty = bool(TY.search(plain_text(e["ru"]))), bool(TY.search(text))
+        strip = lambda t: INTERJECTION_TY.sub("", t)  # noqa: E731
+        was_ty = bool(TY.search(strip(plain_text(e["ru"]))))
+        now_ty = bool(TY.search(strip(text)))
         was_vy, now_vy = bool(VY.search(plain_text(e["ru"]))), bool(VY.search(text))
         if (was_ty, was_vy) != (now_ty, now_vy):
             who = speakers.get(key) or "?"

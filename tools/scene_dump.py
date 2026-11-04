@@ -9,6 +9,7 @@
     python tools/scene_dump.py sce3_c0_01                 # одна сцена, en+ru
     python tools/scene_dump.py sce3_c0_01 --langs ger,fre # плюс немецкий и французский
     python tools/scene_dump.py sce3_c0_01 --ru-only       # только русский, как слышит игрок
+    python tools/scene_dump.py sce3_c0_01 --cast          # кто говорит и сколько
     python tools/scene_dump.py --list 4                   # сцены дела 4 по порядку, с числом реплик
 """
 from __future__ import annotations
@@ -48,6 +49,7 @@ def main() -> int:
     ap.add_argument("--langs", default="", help="чужие языки через запятую: ger,fre,...")
     ap.add_argument("--ru-only", action="store_true", help="только русский")
     ap.add_argument("--codes", action="store_true", help="не вырезать управляющие коды")
+    ap.add_argument("--cast", action="store_true", help="кто говорит в сцене и сколько реплик")
     ap.add_argument("--list", type=int, metavar="N", help="список сцен дела N")
     args = ap.parse_args()
 
@@ -64,6 +66,14 @@ def main() -> int:
     speakers, locales = load_pack(langs)
     if speakers is None:
         print("! нет work/review/speakers.json — говорящие неизвестны (make review-pack на машине с игрой)")
+
+    if args.cast:
+        cast = collections.Counter(
+            name_of(case_of(e["file"]), (speakers or {}).get(e["id"]))
+            for e in entries if e["file"].startswith(args.file))
+        for who, n in cast.most_common():
+            print(f"{who}\t{n}")
+        return 0
 
     show = (lambda t: t) if args.codes else plain
     last_file = None

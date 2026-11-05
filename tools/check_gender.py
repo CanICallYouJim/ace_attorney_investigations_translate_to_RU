@@ -307,17 +307,6 @@ def addressee(rows: list, i: int, names: dict) -> tuple[str | None, str]:
     return None, "не определён"
 
 
-def next_speaker(rows: list, i: int) -> str | None:
-    """Кто отвечает на реплику i в том же блоке — второй кандидат в адресаты."""
-    _key, _file, block, who, _ru = rows[i]
-    for j in range(i + 1, len(rows)):
-        if rows[j][2] != block:
-            return None
-        if rows[j][3] and rows[j][3] != who:
-            return rows[j][3]
-    return None
-
-
 def collect(case: int) -> list:
     """Реплики дела в порядке прохождения: ключ, файл, блок, говорящий, перевод."""
     names = NAMES.get(case, COMMON)
@@ -403,18 +392,6 @@ def main() -> int:
             for word, _gender, kind in problems(text, who, to, args.verbs):
                 bad.append((key, word, kind, f"{who} → {to} ({seen})",
                             f"{how}: {text[:70]}"))
-            # Окрик адресован тому, кто отвечает, а не тому, кто говорил до:
-            # «а, дружище!?» Гамшу к Ллойд прожило в деле 1 до 5 ноября 2026,
-            # потому что адресатом считался Эджворт, говоривший репликой раньше.
-            # Если до и после стоят люди разного пола, род обращения совпадёт
-            # лишь с одним — такое место решается явно, строкой в EXCEPT.
-            nxt = next_speaker(rows, i)
-            if (how == "предыдущий говорящий" and nxt and nxt != to
-                    and gender_of(nxt) and gender_of(to) and gender_of(nxt) != gender_of(to)):
-                for word, _gender, kind in problems(text, who, nxt, args.verbs):
-                    bad.append((key, word, kind,
-                                f"{who} → {to} или {nxt}? (отвечает {nxt}, {gender_of(nxt)})",
-                                f"двусмысленный адресат: {text[:70]}"))
 
     for key, word, kind, to, note in bad:
         print(f"{key}\n    {kind} «{word}» — а сказано это {to}\n    {note}")

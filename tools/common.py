@@ -240,3 +240,29 @@ def game_is_running() -> bool:
         capture_output=True, text=True, encoding="cp866", errors="replace",
     ).stdout
     return "GK12.exe" in out
+
+
+# Пакет вычитки (work/review/, ветка review-pack) — говорящие и семь языков, выгруженные
+# tools/export_review_pack.py на машине с игрой. Там, где игры нет (облачный контейнер),
+# проверки, которым нужен E101 или чужие языки, читают их отсюда, а не валятся
+# на отсутствующем бандле. На машине с игрой бандлы по-прежнему главнее.
+REVIEW_PACK = WORK / "review"
+
+
+def game_present() -> bool:
+    return BUNDLES.exists()
+
+
+def use_pack() -> bool:
+    return not game_present() and (REVIEW_PACK / "speakers.json").exists()
+
+
+def pack_speakers() -> dict:
+    return load_json(REVIEW_PACK / "speakers.json", default={}) or {}
+
+
+def pack_locale(lang: str) -> dict:
+    data = load_json(REVIEW_PACK / "locales" / f"{lang}.json", default=None)
+    if data is None:
+        raise SystemExit(f"нет {lang} в {REVIEW_PACK}/locales — выгрузить make review-pack")
+    return {k: v for k, v in data.items() if v and not v.startswith("[БЛОК] ")}

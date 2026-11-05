@@ -50,7 +50,7 @@ import polyglot as P
 import segments as S
 import tps as T
 from common import (BACKUP, HOST, WORK, case_of, in_case_scope, load_entries,
-                    load_json, read_scripts_all)
+                    load_json, pack_locale, pack_speakers, read_scripts_all, use_pack)
 from who import NAMES, speaker_of
 
 DE_DU = re.compile(r"\b(?:du|dich|dir|dein|deine[mnrs]?|deiner)\b", re.I)
@@ -125,7 +125,10 @@ def lang_index(lang: str) -> dict[str, str]:
 
     Слот-носитель читается из `backup/`: в живой игре он уже занят нашим
     переводом, и сверять русское «вы» с русским же «вы» бессмысленно.
+    Без игры — из пакета вычитки (там слот-носитель тоже взят из оригинала).
     """
+    if use_pack():
+        return pack_locale(lang)
     if lang == HOST:
         files: dict[str, bytes] = {}
         manifest = load_json(BACKUP / "manifest.json", default={}) or {}
@@ -155,6 +158,10 @@ def lang_index(lang: str) -> dict[str, str]:
 
 def speakers_index(case: int) -> dict[str, str]:
     """адрес -> имя говорящего, как его подписывает who.py."""
+    if use_pack():
+        names = NAMES.get(case, {})
+        return {k: names.get(v, v or "—") for k, v in pack_speakers().items()
+                if case_of(k.split("|")[0]) == case}
     eng = read_scripts_all("eng")
     out: dict[str, str] = {}
     for name in sorted(eng):

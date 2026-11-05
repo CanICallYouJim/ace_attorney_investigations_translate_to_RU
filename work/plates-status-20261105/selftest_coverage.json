@@ -1,0 +1,39 @@
+{
+  "first_pass_pictures": 85,
+  "resumed_pictures": 161,
+  "total": 246,
+  "bundles": 27,
+  "fonts": 7,
+  "resume_exit": 0,
+  "first_completed": {
+    "gk2_upcutlocal_trial": "11",
+    "gk2_cutobjlocal": "12",
+    "gk2_cutobjlocal_trial": "1",
+    "gk2_idcom": "31",
+    "gk2_idcom_trial": "6",
+    "gk2_idlocal_trial": "6",
+    "gk2_logicchess_trial": "1",
+    "gk2_logickeyword": "14",
+    "gk2_logickeyword_trial": "3"
+  },
+  "resumed_completed": {
+    "gk2_mapbg": "14",
+    "gk2_mapbg_trial": "3",
+    "gk2_mapbgclassic": "14",
+    "gk2_mapbgclassic_trial": "3",
+    "gk2_mapobj": "6",
+    "gk2_mapobj_trial": "1",
+    "gk2_mapobjclassic": "4",
+    "gk2_mapobjclassic_trial": "1",
+    "gk2_modelitemlocal": "1",
+    "gk2_modelitemlocal_trial": "1",
+    "gk2_openinglocal": "1",
+    "gk2_upcut": "20",
+    "gk2_upcut_trial": "1",
+    "gk2_upcutlocal": "66",
+    "gk2_upcutlocal_classic": "2",
+    "gk_common_ingameui": "1",
+    "gk_common_ingameui_trial": "5",
+    "localization-assets-german(de)": "17"
+  }
+}

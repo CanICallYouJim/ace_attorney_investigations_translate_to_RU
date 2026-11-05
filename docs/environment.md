@@ -38,7 +38,9 @@ cd "C:\Users\Илья\Desktop\Code\Ace Attorney Translating"
 UnityPy импортирует fmod_toolkit при настоящем чтении ресурсов, включая графику.
 PyInstaller находил Python-модуль, но не вкладывал libfmod/Windows/x64/fmod.dll;
 результат — PyInstallerImportError уже после успешного --check. В штатную сборку
-publish_release.py добавлен --collect-all fmod_toolkit. Проверка выпуска должна
+publish_release.py добавлен --collect-all fmod_toolkit. Следующая реальная сборка
+выявила пропущенные JSON archspec (microarchitectures.json/cpuid.json), которые
+нужны etcpak для выбора BC7-кодека. Добавлен --collect-all archspec. Проверка выпуска должна
 включать реальный --build-only --bundle, а не только --check; игра не меняется.
 
 ### MemoryError в полном selftest — продолжение без повторения пройденного

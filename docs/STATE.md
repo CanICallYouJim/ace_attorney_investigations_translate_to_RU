@@ -42,7 +42,9 @@
 Dev af00cfc отправлена. make release5ноября собрал EXE,475 встроенных файлов
 совпали, --check из чистой Temp без Python прошёл. Реальный --build-only
 остановился на отсутствующей fmod.dll: в PyInstaller добавлен collect-all fmod_toolkit.
-Выпуск пересобирается6ноября. Ничего в main/releases ещё не опубликовано.
+Повторная упаковка включила DLL, но BC7-сборка выявила также отсутствующие JSON
+archspec. Добавлен collect-all archspec; EXE пересобирается6ноября.
+Ничего в main/releases ещё не опубликовано.
 Полный selftest прошёл7гарнитур и85/246записей графики, затем MemoryError
 при сборке gk2_mapbg на фоне упаковки EXE. Проверка оставшихся161 запущена
 в свежем процессе штатным make selftest SELFTEST_ARGS="--from-bundle gk2_mapbg";

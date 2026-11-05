@@ -1,0 +1,89 @@
+{
+ "sce1_c0_partner.bytes|010019A1|2": {
+  "level": [
+   "L4"
+  ],
+  "was": "Вы просто не в форме, мистер Эджворт!{E108:0010}\n{E107:0002}Это важные вещи!",
+  "why": "«Это важные вещи!» — протокольно для Кей; эмфазу `This stuff is important!` несёт частица",
+  "src": "RU §3; VO Кей",
+  "copies": false
+ },
+ "sce1_c0_partner.bytes|010019A8|4": {
+  "level": [
+   "L2"
+  ],
+  "was": "(Она всерьёз вкладывает в это всю умственную\nэнергию до капли...)",
+  "why": "«вкладывает всю умственную энергию до капли» — калька `pouring every last ounce of mental energy` → своя идиома «ломать голову»; повтор подхвачен в мысли |7",
+  "src": "CL №5; RU §5",
+  "copies": false
+ },
+ "sce1_c0_partner.bytes|010019A8|7": {
+  "level": [
+   "L2",
+   "L4"
+  ],
+  "was": "Д-{E108:0008}Да.{E108:0010}\n(Постой,{E108:0008} почему МОЯ энергия уходит на это!?)",
+  "why": "держит повтор из |4 («ломает голову» → «Я ломаю»), ударное «Я» вместо «МОЯ энергия»; `Wait` в мысли к себе — «Стоп», а не «Постой»",
+  "src": "norms §3 п.14; WP повтор",
+  "copies": false
+ },
+ "sce1_c0_partner.bytes|010019A8|6": {
+  "level": [
+   "L2"
+  ],
+  "was": "Помогите мне подумать!",
+  "why": "«Помогите мне подумать!» — калька `Help me think`; Кей торопит → «Давайте, думайте со мной!»",
+  "src": "RU §5; VO Кей",
+  "copies": false
+ },
+ "sce1_c0_partner.bytes|010019BA|1": {
+  "level": [
+   "L2"
+  ],
+  "was": "Если чувствуете, что надо что-то стащить,{E108:0008}\nберите и тащите.{E108:0010} Пусть даже оно ничего не стоит.",
+  "why": "«Если чувствуете, что надо что-то стащить» — калька `If you feel you gotta`, так не говорят → «Если тянет что-то стащить»; копия |010019BD|1 в этой же сцене положена в патч",
+  "src": "RU §5",
+  "copies": [
+   "sce1_c0_partner.bytes|010019BD|1",
+   "sce0_c0_m01_npc.bytes|00000B7A|1",
+   "sce0_c1_partner.bytes|00001B5F|1",
+   "sce1_c1_partner.bytes|01001A36|1",
+   "sce1_c1_partner.bytes|01001A5A|1",
+   "sce1_c1_partner.bytes|01001A92|1",
+   "sce1_c1_partner.bytes|01001AD6|1",
+   "sce1_c2_partner.bytes|010028F0|1",
+   "sce1_c3_partner.bytes|010032E2|1",
+   "sce1_c3_partner.bytes|0100332F|1",
+   "sce2_c6_partner.bytes|02002603|1",
+   "sce4_c0_partner.bytes|0400092A|1",
+   "sce4_c1_partner.bytes|04001C71|1",
+   "sce4_c2_partner.bytes|04002C5C|1"
+  ],
+  "copies_note": "все копии — Кей → Эджворт на «вы», разносить буква в букву; 010019BD|1 этой сцены уже в патче"
+ },
+ "sce1_c0_partner.bytes|010019BD|1": {
+  "level": [
+   "L2"
+  ],
+  "was": "Если чувствуете, что надо что-то стащить,{E108:0008}\nберите и тащите.{E108:0010} Пусть даже оно ничего не стоит.",
+  "why": "«Если чувствуете, что надо что-то стащить» — калька `If you feel you gotta`, так не говорят → «Если тянет что-то стащить»; копия 010019BA|1",
+  "src": "RU §5",
+  "copies": [
+   "sce1_c0_partner.bytes|010019BA|1",
+   "sce0_c0_m01_npc.bytes|00000B7A|1",
+   "sce0_c1_partner.bytes|00001B5F|1",
+   "sce1_c1_partner.bytes|01001A36|1",
+   "sce1_c1_partner.bytes|01001A5A|1",
+   "sce1_c1_partner.bytes|01001A92|1",
+   "sce1_c1_partner.bytes|01001AD6|1",
+   "sce1_c2_partner.bytes|010028F0|1",
+   "sce1_c3_partner.bytes|010032E2|1",
+   "sce1_c3_partner.bytes|0100332F|1",
+   "sce2_c6_partner.bytes|02002603|1",
+   "sce4_c0_partner.bytes|0400092A|1",
+   "sce4_c1_partner.bytes|04001C71|1",
+   "sce4_c2_partner.bytes|04002C5C|1"
+  ],
+  "copies_note": "копия в этой же сцене, положена в патч; прочие — как у 010019BA|1"
+ }
+}

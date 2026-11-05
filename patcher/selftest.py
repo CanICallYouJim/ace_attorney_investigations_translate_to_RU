@@ -71,6 +71,11 @@ def describe(blob: bytes) -> tuple[int, int]:
 
 
 def main() -> int:
+    import argparse
+
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--from-bundle", help="продолжить графическую проверку с этого бандла после сбоя")
+    args = ap.parse_args()
     for path in (ORIGINAL, INSTALLED):
         if not path.exists():
             print(f"нет файла {path}", file=sys.stderr)
@@ -111,10 +116,10 @@ def main() -> int:
         print(f"расхождений: {bad}", file=sys.stderr)
     else:
         print("Гарнитуры сходятся: патчер за один проход даёт то же, что два запуска.")
-    return max(1 if bad else 0, pictures())
+    return max(1 if bad else 0, pictures(args.from_bundle))
 
 
-def pictures() -> int:
+def pictures(from_bundle: str | None = None) -> int:
     """Русские картинки: бандл, собранный патчером из оригинала, несёт ровно русскую картинку.
 
     Путь тот же, что у игрока, — `Shipment.build` поверх нетронутого бандла из
@@ -133,6 +138,20 @@ def pictures() -> int:
     from swap_localized import plan_env
 
     shipment = Shipment()
+    order = sorted(shipment.by_bundle, key=lambda b: (b not in shipment.feeders, b))
+    if from_bundle is not None:
+        if from_bundle not in order:
+            raise ValueError(f"unknown resume bundle: {from_bundle}")
+        selected = set(order[order.index(from_bundle):])
+        home = {e["name"]: e["bundle"] for e in shipment.pictures}
+        while True:
+            needed = {home[e["derive"]["из"]] for b in selected for e in shipment.by_bundle[b]
+                      if e.get("derive")}
+            if needed <= selected:
+                break
+            selected |= needed
+        order = [b for b in order if b in selected]
+        print(f"Продолжение с {from_bundle}: бандлов {len(order)}")
     print(f"\nрусские картинки в слое: {len(shipment)}")
     if not len(shipment) and not shipment.aliases:
         return 0
@@ -188,7 +207,7 @@ def pictures() -> int:
               + ("" if ok else "  <- РАЗОШЛОСЬ"))
         return ok
 
-    for bundle in sorted(shipment.by_bundle, key=lambda b: (b not in shipment.feeders, b)):
+    for bundle in order:
         live = next(BUNDLES.glob(f"{bundle}_assets_all_*.bundle"))
         src = original(live.name)
         if src is None:

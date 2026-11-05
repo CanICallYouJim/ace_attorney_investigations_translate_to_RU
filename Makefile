@@ -30,6 +30,7 @@ export PYTHONIOENCODING := utf-8
 # Дополнительные ключи документированной публикации (например, --force после
 # проверки, что ручные правки main уже перенесены в исходники dev).
 PUBLISH_ARGS ?=
+SELFTEST_ARGS ?=
 
 .DEFAULT_GOAL := help
 .PHONY: help check check-full selftest build install graphics graphics-ru graphics-new plates splash titles titles-chess notes layers restore \
@@ -47,7 +48,7 @@ check-full:          ## полный набор: плюс тесты форма�
 	$(PY) tools/check_all.py --full
 
 selftest:            ## сверить патчер с конвейером репозитория (нужна игра с переводом)
-	$(PY) patcher/selftest.py
+	$(PY) patcher/selftest.py $(SELFTEST_ARGS)
 
 ##@ Перевод в игру
 

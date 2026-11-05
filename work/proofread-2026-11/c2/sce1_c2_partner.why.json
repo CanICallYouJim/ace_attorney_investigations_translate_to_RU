@@ -1,0 +1,128 @@
+{
+ "sce1_c2_partner.bytes|010028AA|1": {
+  "level": [
+   "L3"
+  ],
+  "was": "Мистер Эджворт.{E108:0010}\nСделать вам грязевое обёртывание?",
+  "why": "mudpack — маска на лицо (нем. Schlammpackung, фр. masque à l'argile), «обёртывание» — процедура для тела; стилист предлагает маску",
+  "src": "RU §5",
+  "copies": false
+ },
+ "sce1_c2_partner.bytes|010028AA|3": {
+  "level": [
+   "L2"
+  ],
+  "was": "Ой,{E108:0008} ну не будьте таким!{E108:0010} Глядите,{E108:0010} {E1D1}и перчатка\nрезиновая есть!{E108:0010} Это знак!",
+  "why": "«не будьте таким» — калька don't be like that; по-русски «ну что вы сразу!» (фр. soyez pas comme ça — тоже их формула)",
+  "src": "CL №5; RU §5",
+  "copies": false
+ },
+ "sce1_c2_partner.bytes|010028BB|3": {
+  "level": [
+   "L2",
+   "L4"
+  ],
+  "was": "С хорошей верёвкой можно вытворять что угодно,\nи конца этому нет!",
+  "why": "«и конца этому нет» — разобранное there's no end; русский несёт то же оборотом «чего только не вытворишь», слово Кей «вытворять» сохранено",
+  "src": "RU §5; VO Кей",
+  "copies": [
+   "sce1_c0_partner.bytes|010019B5|3",
+   "sce1_c1_partner.bytes|01001A2A|3",
+   "sce1_c1_partner.bytes|01001A44|3",
+   "sce1_c1_partner.bytes|01001A71|3",
+   "sce1_c1_partner.bytes|01001AA9|3",
+   "sce1_c3_partner.bytes|010032AC|3",
+   "sce1_c3_partner.bytes|010032F9|3"
+  ],
+  "copies_note": "все 7 копий сейчас «=», Кей → Эджворт, формы нет — разнести буква в букву"
+ },
+ "sce1_c2_partner.bytes|010028DC|1": {
+  "level": [
+   "L4"
+  ],
+  "was": "Верно.{E108:0010} Сам момент убийства Конева.{E108:0010}\n{E285}О лучшей зацепке и мечтать нельзя.",
+  "why": "«Верно» дважды за три реплики у Эджворта (здесь и на ...True ниже); Indeed → «Именно» — так же свёл копию редактор sce1_c1_partner",
+  "src": "RU §4",
+  "copies": [
+   "sce1_c1_partner.bytes|01001ACA|1"
+  ],
+  "copies_note": "копия уже правлена в c2/sce1_c1_partner.patch.json тем же текстом — сходится буква в букву"
+ },
+ "sce1_c2_partner.bytes|010028DC|3": {
+  "level": [
+   "L3"
+  ],
+  "was": "...Верно.{E108:0010}\n(И это осложнение...)",
+  "why": "«осложнение» звучит по-больничному; That is a problem → «А вот это уже загвоздка» — текст взят из правки копии, чтобы копии не разошлись",
+  "src": "RU §1",
+  "copies": [
+   "sce1_c1_partner.bytes|01001ACA|3"
+  ],
+  "copies_note": "копия уже правлена в c2/sce1_c1_partner.patch.json тем же текстом"
+ },
+ "sce1_c2_partner.bytes|010028DC|11": {
+  "level": [
+   "L2"
+  ],
+  "was": "(Из тех, что выбирают по настроению, надо думать?)",
+  "why": "правила «выбирают» — разобранное pick and choose; про правила по-русски — «соблюдать по настроению», ирония та же",
+  "src": "CL №5; RU §5",
+  "copies": [
+   "sce1_c1_partner.bytes|01001ACA|11"
+  ],
+  "copies_note": "копия «=», редактор sce1_c1_partner её не трогал — разнести"
+ },
+ "sce1_c2_partner.bytes|010028E8|2": {
+  "level": [
+   "L3"
+  ],
+  "was": "Хотя, говорят, иные металлы обнаружить\nтруднее прочих.",
+  "why": "«иные… прочих» — книжное, «иной» в списке «Не по рту Эджворту»; EN нейтрален (some… than others), нем./фр. тоже",
+  "src": "brief §4; VO Эджворт",
+  "copies": [
+   "sce1_c3_partner.bytes|010032D4|2",
+   "sce1_c3_partner.bytes|01003321|2"
+  ],
+  "copies_note": "обе копии «=»"
+ },
+ "sce1_c2_partner.bytes|010028E8|6": {
+  "level": [
+   "L3"
+  ],
+  "was": "Спасибо, мистер Эджворт!{E108:0010} {E107:0001}{E282}Вы просто кладезь\nсведений!",
+  "why": "«кладезь сведений» — книжный оборот, у Кей книжного нет вовсе; «ходячая энциклопедия» — как у французов (encyclopédie sur pattes)",
+  "src": "VO Кей; фр. encyclopédie sur pattes",
+  "copies": [
+   "sce1_c3_partner.bytes|010032D4|6",
+   "sce1_c3_partner.bytes|01003321|6"
+  ],
+  "copies_note": "обе копии «=»"
+ },
+ "sce1_c2_partner.bytes|010028F0|1": {
+  "level": [
+   "L2"
+  ],
+  "was": "Если чувствуете, что надо что-то стащить,{E108:0008}\nберите и тащите.{E108:0010} Пусть даже оно ничего не стоит.",
+  "why": "«Если чувствуете, что надо» — калька if you feel you gotta → «Если тянет»; текст как в правках копий у редакторов sce1_c0/sce1_c1_partner",
+  "src": "RU §5",
+  "copies": [
+   "sce0_c1_partner.bytes|00001B5F|1",
+   "sce1_c0_partner.bytes|010019BA|1",
+   "sce1_c0_partner.bytes|010019BD|1",
+   "sce1_c1_partner.bytes|01001A36|1",
+   "sce1_c1_partner.bytes|01001A5A|1",
+   "sce1_c1_partner.bytes|01001A92|1",
+   "sce1_c1_partner.bytes|01001AD6|1",
+   "sce1_c3_partner.bytes|010032E2|1",
+   "sce1_c3_partner.bytes|0100332F|1",
+   "sce2_c6_partner.bytes|02002603|1",
+   "sce4_c0_partner.bytes|0400092A|1",
+   "sce4_c1_partner.bytes|04001C71|1",
+   "sce4_c2_partner.bytes|04002C5C|1"
+  ],
+  "copies_diverged": [
+   "sce0_c0_m01_npc.bytes|00000B7A|1"
+  ],
+  "copies_note": "14 копий; в c1 для sce0_c0_m01_npc предложено «Раз уж тянет что-то стащить» — сводить все к одному тексту, «Если тянет…» уже стоит в патчах sce1_c0/sce1_c1_partner и sce0_c1_partner"
+ }
+}

@@ -9,7 +9,7 @@ export const meta = {
 
 const CASE = args.case
 const DIR = `work/proofread-2026-11/c${CASE}/`
-const ITEMS = args.chunks.map((chunk, i) => ({ chunk, prev: args.prev[i], done: args.done[i] }))
+const ITEMS = args.chunks.map((chunk, i) => ({ chunk, prev: args.prev[i], done: args.done[i], reviewed: (args.reviewed || [])[i] }))
 
 const SUMMARY = {
   type: 'object',
@@ -49,7 +49,7 @@ ${it.prev ? `Сцена перед порцией (для связности, т
 
 Верни сводку по схеме.`,
     { label: `ред:${tag(it.chunk)}`, phase: 'Редактура', schema: SUMMARY }),
-  (ed, it) => agent(
+  (ed, it) => it.reviewed ? Promise.resolve({ chunk: it.chunk, editor: ed, review: { resumed: true } }) : agent(
     `Прочитай и выполни задание из файла /home/user/ace_attorney_investigations_translate_to_RU/work/proofread-2026-11/reviewer.md — это полная инструкция ревьюера.
 
 Дело ${CASE}. Сцены: ${list(it.chunk)}. Каталог: \`${DIR}\` — там файлы редактора <сцена>.patch.json и <сцена>.why.json.

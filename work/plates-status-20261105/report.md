@@ -1,4 +1,11 @@
-# Проверка трёх фонов — 5 ноября 2026
+# Проверка трёх фонов и выпуск 6 ноября 2026
+
+> Итог: [v2026-11-06 опубликован](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-06), latest.
+> Три фона установлены и проверены в игре по ресурсам и в сборке EXE.
+> Все246 записей графики/7гарнитур проверены; серверный SHA256 EXE совпал.
+> Далее — сохранённые промежуточные отчёты и окончательный итог в конце.
+
+## Первоначальная проверка — 5 ноября
 
 Повторно прочитаны живые адреса container → Sprite → texture существующим audit_live_plates.py.
 Sousa_TextCutBG_R_03, _04, _05 по-прежнему ссылаются на английские текстуры.
@@ -46,3 +53,21 @@ MemoryError. Продолжение оставшихся161 — selftest_resume.
 но настоящее BC7-сжатие выявило отсутствующие JSON archspec.
 Добавлен collect-all archspec; наличие cpuid.json/microarchitectures.json
 в собираемых данных подтверждено. Ни одна неудачная EXE-сборка не публиковалась.
+
+## Итог: опубликован v2026-11-06
+
+- Main:5bb7e3a3e0eb456595e801aa16970fd11b46c550, исходники dev34b9699. Вычитка main0962df7 сохранена.
+- URL:https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-06; latest, не draft и не prerelease; тег указывает на main.
+- EXE:92888034байта (88,6МиБ), SHA256`7118d484e0748da3ba8513041b4ccfdbfda906a241811120489cb261d8a6c36c`; серверный digest совпал.
+- EXE --check и --build-only нужного бандла без Python в PATH: exit0;
+  exe_graphics_checks.json — три PNG/своиGER/English=backup.
+-475 встроенных файлов и FMOD/archspec сверены побайтно; модули дерева=source.
+- check_all13/13, прогресс7/7, selftest85+161=246/246 и7гарнитур;27бандлов покрыты.
+- make release повторно вызван с --assume-old=check/--assume-old=layers:
+  перевод и слой не менялись, их зелёные проверки переиспользованы.
+- make publish PUBLISH_ARGS=--force сохранил ручные правки main; Git force-push не использовался.
+- Подтверждения: exe_verification.json, exe_graphics_checks.json,
+  selftest_coverage.json, remote_release.json; логи *_final.log/make_publish.log.
+
+README и все затронутые документы актуализированы. Следующий шаг — проверка
+глазами в игре. Галерея259, CMобложка и18английских голосовых выкриков остаются.

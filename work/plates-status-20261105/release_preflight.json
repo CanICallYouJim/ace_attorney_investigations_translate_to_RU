@@ -1,0 +1,23 @@
+{
+  "case1_preserves_manual_edit": true,
+  "case2_preserves_manual_edit": true,
+  "case3_preserves_manual_edit": true,
+  "case4_preserves_manual_edit": true,
+  "case5_preserves_manual_edit": true,
+  "all_modules_match_source": true,
+  "version": {
+    "segments_total": 33422,
+    "segments_done": 33422,
+    "strings_total": 2823,
+    "strings_done": 2517,
+    "pictures_done": 246,
+    "gk2_pictures_done": 242,
+    "gk2_pictures_total": 242,
+    "gk2_pictures_percent": "100,0",
+    "gk2_materials_done": 2,
+    "gk2_materials_total": 2,
+    "built": "2026-11-06",
+    "unitypy": "1.25.3",
+    "fonttools": "4.63.0"
+  }
+}

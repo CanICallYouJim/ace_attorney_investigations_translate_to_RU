@@ -146,7 +146,7 @@ def pictures() -> int:
     def plate_ok(built, entry) -> bool:
         """Плашка: немецкая текстура несёт ровно набор, сетка покрывает надпись,
         по адресу по-прежнему текстура и спрайт, строка таблицы локали — на немецкий спрайт."""
-        from picture_layer import sprites_by_key, texture_of
+        from picture_layer import plate_pixels_match, sprites_by_key, texture_of
         from swap_localized import swap_image_table
 
         sprite = sprites_by_key(built).get(entry["key"])
@@ -156,15 +156,8 @@ def pictures() -> int:
         rd = sprite.read_typetree()["m_RD"]
         tex = texture_of(built, sprite).read()
         want = Image.open(pngs[entry["name"]]).convert("RGBA")
-        same = pixels_sha(tex.image) == pixels_sha(want)
-        lossy = ""
-        if not same and tex.m_TextureFormat not in (4, 5):        # не RGBA32/ARGB32 — сжатый формат
-            # фон чтения (`Sousa_TextCutBG_*`) лежит в сжатой текстуре кадра: ровно набор там не бывает,
-            # сверка — потерями сжатия, как у картинок (грубых больше 64 уровней — не больше 0,01 %)
-            import numpy as np
-            d = np.abs(np.asarray(tex.image.convert("RGBA"), np.int16) - np.asarray(want, np.int16)).max(-1)
-            same = (d > 64).mean() <= 0.0001
-            lossy = f" (сжатие: до {int(d.max())} уровней, грубых {int((d > 64).sum())})"
+        same = plate_pixels_match(tex, want)
+        lossy = " (сверка после упаковки в формат текстуры)"
 
         box = want.getchannel("A").getbbox()
         tr, h = rd["textureRect"], tex.m_Height

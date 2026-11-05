@@ -62,6 +62,9 @@ def graphics_recipe(bundle_short: str, russian, keep: dict) -> str:
     names = {e["derive"]["из"] for e in own if e.get("derive")}
     sources = sorted((e for e in russian.pictures if e["name"] in names), key=lambda e: e["name"])
     data = {"v": GRAPHICS_VERSION, "own": own, "sources": sources}
+    if any(e.get("kind") == "plate" for e in own):
+        # Восстановить GER-спрайты старых установок; остальные бандлы не трогаем.
+        data["plate_encoding"] = "2026-11-05"
     aliases = getattr(russian, "aliases_by_bundle", {}).get(bundle_short, [])
     if aliases:
         data["aliases"] = sorted(aliases, key=lambda e: e["name"])

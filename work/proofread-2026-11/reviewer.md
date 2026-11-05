@@ -48,3 +48,6 @@ python3 tools/scene_dump.py <сцена> --langs ger,fre --codes
 в `/tmp/claude-0/-home-user-ace-attorney-investigations-translate-to-RU/9b7a15d3-f09b-514e-abaa-43d92a616825/scratchpad/`.
 
 Ответ главной ветке: счёт accept/reject/alt/missed и 2–3 самых важных расхождения.
+
+**Временные файлы** — только в своей подпапке: `/tmp/claude-0/-home-user-ace-attorney-investigations-translate-to-RU/9b7a15d3-f09b-514e-abaa-43d92a616825/scratchpad/<первая сцена твоей порции>/`.
+Общий scratchpad делят параллельные агенты: в деле 1 чужой `mk.py` затёр соседский.

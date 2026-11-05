@@ -105,8 +105,24 @@ def avatar(short: str, table) -> str:
             f'<b>{html.escape(full)}</b>{age_html}</div></div>')
 
 
-def build(folder: Path, scenes: list[str] | None) -> str:
+def old_texts(rev: str | None) -> dict[str, str]:
+    """id -> русский на ревизии `rev` (до применения правок), чтобы «было» не стало «стало»."""
+    if not rev:
+        return {}
+    import subprocess
+    out: dict[str, str] = {}
+    for name in ("common", "case1", "case2", "case3", "case4", "case5"):
+        raw = subprocess.run(["git", "show", f"{rev}:work/{name}.json"], cwd=WORK.parent,
+                             capture_output=True, text=True, encoding="utf-8").stdout
+        if raw:
+            out.update({e["id"]: e["ru"] for e in json.loads(raw)["entries"]})
+    return out
+
+
+def build(folder: Path, scenes: list[str] | None, before: str | None = None,
+          extra: Path | None = None) -> str:
     entries = load_entries()
+    was_of = old_texts(before)
     order = {e["id"]: i for i, e in enumerate(entries)}
     by_id = {e["id"]: e for e in entries}
     speakers = load_json(PACK / "speakers.json", default={}) or {}
@@ -121,7 +137,9 @@ def build(folder: Path, scenes: list[str] | None) -> str:
     if scenes:
         patches = [p for p in patches if p.name.split(".")[0] in scenes]
 
+    answered = load_json(PACK.parent / "proofread-2026-11" / "answered.json", default={}) or {}
     cards, questions, summary = [], [], []
+    scene_cards: dict[str, list[str]] = {}
     for patch_path in patches:
         scene = patch_path.name.split(".")[0]
         patch = load_json(patch_path) or {}
@@ -169,13 +187,13 @@ def build(folder: Path, scenes: list[str] | None) -> str:
                 f'<div class="row"><span class="tag">{lab}</span><p class="for">{html.escape(plain(t))}</p></div>'
                 for lab, t in (("EN", e["en"]), ("DE", locales["ger"].get(key)),
                                ("FR", locales["fre"].get(key))) if t)
-            cards.append(f"""
+            scene_cards.setdefault(scene, []).append(f"""
 <article class="card{' rejected' if v == 'reject' else ''}" id="{html.escape(key)}">
   <header>{avatar(who(key), table)}<div class="meta"><code>{html.escape(key.replace('.bytes', ''))}</code>{levels}{vchip}</div></header>
   {'<ol class="ctx">' + ctx_html + '</ol>' if ctx_html else ''}
   <div class="line">
     {foreign}
-    <div class="row"><span class="tag was">было</span><p class="old">{html.escape(plain(e["ru"]))}</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">{html.escape(plain(was_of.get(key, e["ru"])))}</p></div>
     {alt_html}
     <div class="row"><span class="tag now">{'итог' if v == 'alt' else 'стало'}</span><p class="new">{html.escape(plain(final))}</p></div>
   </div>
@@ -185,7 +203,7 @@ def build(folder: Path, scenes: list[str] | None) -> str:
         for q in qs:
             key = q.get("id", "")
             e = by_id.get(key)
-            if not e:
+            if not e or key in answered:
                 continue
             idx = order[key]
             ctx = [x for x in entries[max(0, idx - CONTEXT):idx] if x["file"] == e["file"]]
@@ -206,6 +224,9 @@ def build(folder: Path, scenes: list[str] | None) -> str:
   <p class="rec">Рекомендую: {html.escape(q.get("recommend", ""))}</p>
 </article>""")
 
+    for scene, items_html in scene_cards.items():
+        cards.append(f'<details class="scene"><summary><code>{scene}</code> — правок: {len(items_html)}</summary>'
+                     f'<div class="scene-body">{"".join(items_html)}</div></details>')
     rows = "".join(f"<tr><td><code>{s}</code></td><td>{n}</td><td>{m}</td><td>{q}</td></tr>"
                    for s, n, m, q in summary)
     total = sum(n for _, n, _, _ in summary)
@@ -276,6 +297,10 @@ code {{ font-family: var(--f-mono); font-size: .75rem; color: var(--muted); over
 .new {{ font-family: var(--f-text); font-size: 1.05rem; font-weight: 600; }}
 .why, .rw, .rec {{ margin: 0; font-size: .85rem; color: var(--muted); }}
 .rw {{ color: var(--accent); }}
+details.scene {{ border-top: 1px solid var(--line); padding-block: 8px; }}
+details.scene > summary {{ cursor: pointer; font-size: .95rem; padding-block: 4px; }}
+details.scene > summary:focus-visible {{ outline: 2px solid var(--accent); outline-offset: 2px; }}
+.scene-body {{ display: grid; gap: 14px; padding-top: 10px; }}
 .opts {{ margin: 0; padding-left: 1.4em; font-family: var(--f-text); display: grid; gap: 4px; }}
 @media (max-width: 480px) {{ .ctx li {{ grid-template-columns: 1fr; gap: 0; }} .sp {{ text-align: left; }} }}
 </style>
@@ -297,8 +322,10 @@ def main() -> int:
     ap.add_argument("folder", type=Path)
     ap.add_argument("scenes", nargs="*")
     ap.add_argument("-o", "--out", type=Path, required=True)
+    ap.add_argument("--before", help="git-ревизия до применения правок: «было» берётся оттуда")
     args = ap.parse_args()
-    args.out.write_text(build(args.folder, args.scenes or None), encoding="utf-8", newline="\n")
+    args.out.write_text(build(args.folder, args.scenes or None, args.before),
+                        encoding="utf-8", newline="\n")
     print(f"лист: {args.out}")
     return 0
 

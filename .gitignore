@@ -51,3 +51,7 @@ work/graphics_masks/
 # Кэш карты «сегмент -> говорящий» для find_translationese.py. Считается за
 # восемь секунд из бандлов игры, версионировать нечего.
 work/.speakers_cache.json
+
+# Пакет вычитки (говорящие и семь языков из игры) живёт в отдельной ветке
+# review-pack — его туда пушит tools/export_review_pack.py; в dev ему не место.
+work/review/

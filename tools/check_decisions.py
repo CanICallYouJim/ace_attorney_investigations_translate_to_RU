@@ -118,6 +118,12 @@ def main() -> int:
             if not ru:
                 continue
             checked += 1
+            # Решение 2 сентября 2026, применено 5 ноября: «--» — только обрыв речи,
+            # и только там, где «--» стоит в английском; обычное русское тире — «—».
+            # В делах 4–5 «--» вместо «—» прожило в 418 репликах, потому что
+            # правило было записано, но эта проверка его не знала.
+            if "--" in ru and "--" not in (it.get("en") or "") and it["id"] not in EXCEPT:
+                bad.append((it["id"], "--", "— (в английском обрыва нет)", ru))
             for rejected, accepted, _ in pairs:
                 if rejected in ru and accepted not in ru:
                     if it["id"] in EXCEPT:

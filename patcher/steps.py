@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterator
+from typing import Callable, Iterator
 
 
 @dataclass
@@ -233,7 +233,8 @@ def fonts(stage: Path) -> list[Change]:
 # --- графика, ролики и звук ---------------------------------------------------
 
 def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
-             done: dict | None = None) -> Iterator[Change]:
+             done: dict | None = None,
+             progress: Callable[[dict], None] | None = None) -> Iterator[Change]:
     """Немецким адресам отдаются английские объекты: надписи, ролики, выкрики.
 
     Байты картинок и звука не трогаются вовсе — правится таблица «адрес -> объект»
@@ -308,12 +309,19 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
                         skip.discard(other)
                         changed = True
 
-    for name in sorted(names, key=lambda n: (not russian.feeds(n), n)):
+    def report(current: int, name: str) -> None:
+        if progress:
+            progress({"kind": "progress", "id": "graphics", "current": current,
+                      "total": len(names), "detail": name.split("_assets_all_")[0]})
+
+    for index, name in enumerate(sorted(names, key=lambda n: (not russian.feeds(n), n))):
+        report(index, name)
         live = BUNDLES / name
         key = f"asset_{name.split('_assets_all_')[0]}"
         if name in skip:
             if not done[name].get("empty"):
                 yield Change(key, live, None, "уже стоит, не менялся", recipes[name])
+            report(index + 1, name)
             continue
         if IMAGE_TABLE_BUNDLE in name:
             # Особый бандл: английских двойников внутри нет, подменяются
@@ -326,6 +334,7 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
             if not pairs and not russian.has(name):
                 if done is not None:
                     done[name] = {"recipe": recipes[name], "stamp": stamp(live), "empty": True}
+                report(index + 1, name)
                 continue
             if russian.has(name):
                 blob, count, notes = russian.build(live, pairs)
@@ -336,3 +345,4 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
         staged = stage / name
         staged.write_bytes(blob)
         yield Change(key, live, staged, note, recipes[name])
+        report(index + 1, name)

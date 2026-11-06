@@ -222,12 +222,18 @@ def preflight(game: Path, need_bytes: int) -> str | None:
 def run(args) -> int:
     import locate
 
+    def emit(kind: str, **values) -> None:
+        callback = getattr(args, "progress", None)
+        if callback:
+            callback({"kind": kind, **values})
+
     game = locate.find_game(args.game_path, progress=say)
     if not game:
         if args.game_path:
             return fail(f"в папке «{args.game_path}» нет {locate.MARKER} — это не папка игры.")
         return fail(locate.explain_failure())
     say(f"  Игра найдена: {game}")
+    emit("game", path=str(game))
 
     data = data_dir(args.data)
     if not (data / "strings.json").exists():
@@ -281,47 +287,61 @@ def run(args) -> int:
     done = 0
     spent: dict[str, float] = {}
 
-    def phase(title: str) -> float:
+    def phase(phase_id: str, title: str) -> float:
         say(f"  {title}")
+        emit("phase", id=phase_id, title=title)
         return time.time()
+
+    def changes(phase_id: str, items):
+        # These builders return lists; the expensive build remains indeterminate.
+        # The numeric count below measures files successfully applied, not time.
+        total = len(items)
+        emit("progress", id=phase_id, current=0, total=total, detail="")
+        for index, change in enumerate(items, 1):
+            yield change
+            emit("progress", id=phase_id, current=index, total=total, detail=change.key)
 
     try:
         say()
         # --bundle — проверочный режим: только графика названных бандлов,
         # текст не собирается. Разрешён лишь вместе с --build-only (см. выше).
         if not args.bundle:
-            mark = phase("Собираю реплики...")
-            for change in steps.scripts(stage):
+            mark = phase("scripts", "Собираю реплики...")
+            for change in changes("scripts", steps.scripts(stage)):
                 say(f"    {change.key}: {apply(change)}")
                 done += 1
             spent["реплики"] = time.time() - mark
+            emit("phase_done", id="scripts")
 
-            mark = phase("Собираю строковые таблицы...")
-            for change in steps.strings(stage):
+            mark = phase("strings", "Собираю строковые таблицы...")
+            for change in changes("strings", steps.strings(stage)):
                 say(f"    {change.key}: {apply(change)}")
                 done += 1
             spent["таблицы"] = time.time() - mark
+            emit("phase_done", id="strings")
 
             # Первая игра не переводится, но немецкий из неё убрать надо: игрок
             # выбрал «Русский» и не должен упираться в чужой язык.
-            mark = phase("Убираю немецкий из первой игры...")
-            for change in steps.gk1_scripts(stage):
+            mark = phase("gk1", "Убираю немецкий из первой игры...")
+            for change in changes("gk1", steps.gk1_scripts(stage)):
                 say(f"    {change.key}: {apply(change)}")
                 done += 1
             spent["первая игра"] = time.time() - mark
+            emit("phase_done", id="gk1")
 
-            mark = phase("Правлю гарнитуры — самый долгий шаг, файл на 113 МБ...")
-            changes = steps.fonts(stage)
-            if not changes:
+            mark = phase("fonts", "Правлю гарнитуры — самый долгий шаг, файл на 113 МБ...")
+            font_changes = steps.fonts(stage)
+            if not font_changes:
                 say("    менять нечего — гарнитуры уже пропатчены")
-            for change in changes:
+            for change in changes("fonts", font_changes):
                 say(f"    {change.note}")
                 say(f"    data.unity3d: {apply(change)}")
                 done += 1
             spent["гарнитуры"] = time.time() - mark
+            emit("phase_done", id="fonts")
 
         if not args.no_graphics:
-            mark = phase("Меняю немецкие надписи, ролики и выкрики на английские, а где готово — на русские.")
+            mark = phase("graphics", "Меняю немецкие надписи, ролики и выкрики на английские, а где готово — на русские.")
             # Повторная установка (новая версия перевода) пропускает бандлы, которые
             # уже стоят и в которых ничего не поменялось: отпечаток рецепта и отметка
             # файла те же, что после прошлой записи (`steps.graphics`). `--full` —
@@ -342,7 +362,7 @@ def run(args) -> int:
             skipped = 0
             record = None if (args.full or args.build_only) else installed
             for i, change in enumerate(steps.graphics(stage, args.gk1_graphics, tuple(args.bundle or ()),
-                                                      record), 1):
+                                                      record, progress=lambda event: emit(**event)), 1):
                 if change.staged is None:
                     skipped += 1
                     continue
@@ -354,6 +374,7 @@ def run(args) -> int:
             if skipped:
                 say(f"    уже стояли и не менялись, пропущено бандлов: {skipped}")
             spent["графика"] = time.time() - mark
+            emit("phase_done", id="graphics")
     finally:
         if not args.build_only:
             save_manifest(backup, manifest)
@@ -454,12 +475,35 @@ def parse_args(argv=None):
     ap.add_argument("--bundle", action="append", metavar="ПОДСТРОКА",
                     help="вместе с --build-only: собрать только графику этих бандлов — для проверки")
     ap.add_argument("--no-pause", action="store_true", help="не ждать Enter в конце")
+    ap.add_argument("--gui", action="store_true", help="графический установщик")
+    ap.add_argument("--console", action="store_true", help="консольный установщик")
+    ap.add_argument("--preview", action="store_true", help="предпросмотр интерфейса без установки")
     return ap.parse_args(argv)
 
 
 def main(argv=None) -> int:
     setup_console()
     args = parse_args(argv)
+
+    arguments = sys.argv[1:] if argv is None else argv
+    if args.gui or args.preview or (not arguments and sys.platform == "win32"):
+        if args.console or args.check or args.uninstall or args.build_only or args.bundle:
+            return fail("--gui/--preview несовместимы с консольными режимами проверки, сборки и отката.")
+        from loading_ui import launch
+
+        def gui_run(uiargs):
+            global say
+            original = say
+            def logged(text=""):
+                original(text)
+                uiargs.progress({"kind": "log", "text": text})
+            say = logged
+            try:
+                return run(uiargs)
+            finally:
+                say = original
+
+        return launch(args, gui_run)
 
     say()
     say("  Русская локализация Ace Attorney Investigations 2")

@@ -1,0 +1,1109 @@
+<title>Речь Каниса</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=Literata:opsz,wght@7..72,400;7..72,600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Лист дела: узкая колонка, карточка на правку, контекст сцены приглушён, правка — в фокусе */
+:root {
+  --bg: #f3f1ec; --paper: #fffdf8; --ink: #1f2430; --muted: #6b6f7a; --line: #dcd7cc;
+  --was: #a3402f; --now: #1f6b4a; --accent: #2d4a7a; --chip: #e8e4da;
+  --f-ui: "Golos Text", "Segoe UI", system-ui, sans-serif;
+  --f-text: "Literata", Georgia, "Times New Roman", serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #15181e; --paper: #1d2129; --ink: #e6e3dc; --muted: #9298a4; --line: #2f3440;
+  --was: #e08a78; --now: #7fcfa6; --accent: #8fb0e6; --chip: #2a2f3a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #15181e; --paper: #1d2129; --ink: #e6e3dc; --muted: #9298a4; --line: #2f3440;
+  --was: #e08a78; --now: #7fcfa6; --accent: #8fb0e6; --chip: #2a2f3a; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 15px; line-height: 1.5; }
+main { max-width: 760px; margin: 0 auto; padding-block: 24px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 18px; }
+h1 { font-family: var(--f-text); font-weight: 600; font-size: 1.6rem; margin: 0; text-wrap: balance; }
+h2 { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 18px 0 0; }
+.sum { color: var(--muted); margin: 0; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: .85rem; }
+td, th { padding: 4px 12px 4px 0; text-align: left; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 400; }
+code { font-family: var(--f-mono); font-size: .75rem; color: var(--muted); overflow-wrap: anywhere; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: grid; gap: 10px; min-width: 0; }
+.card.rejected { opacity: .6; }
+.card header { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; }
+.who { display: flex; gap: 10px; align-items: center; }
+.pic { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; background: var(--chip); display: grid; place-items: center; flex: none; }
+.pic img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.mono { font-family: var(--f-text); font-weight: 600; color: var(--accent); }
+.who-t { display: grid; line-height: 1.2; }
+.age { font-size: .8rem; color: var(--muted); }
+.age::after { content: " лет"; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-width: 0; }
+.chip, .v { font-size: .72rem; padding: 2px 8px; border-radius: 99px; background: var(--chip); letter-spacing: .02em; }
+.v.ok { color: var(--now); } .v.no { color: var(--was); } .v.alt { color: var(--accent); }
+.ctx { list-style: none; margin: 0; padding: 0 0 0 10px; border-left: 2px solid var(--line); display: grid; gap: 3px; font-size: .88rem; color: var(--muted); }
+.ctx li { display: grid; grid-template-columns: 7.5em 1fr; gap: 8px; }
+.sp { font-size: .78rem; text-align: right; padding-top: 1px; overflow-wrap: anywhere; }
+.ln { font-family: var(--f-text); min-width: 0; }
+.line { display: grid; gap: 4px; }
+.row { display: grid; grid-template-columns: 3.6em 1fr; gap: 8px; align-items: baseline; }
+.row p { margin: 0; min-width: 0; }
+.tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); text-align: right; }
+.tag.was { color: var(--was); } .tag.now { color: var(--now); }
+.for { font-size: .85rem; color: var(--muted); }
+.old { font-family: var(--f-text); color: var(--was); text-decoration: line-through; text-decoration-thickness: 1px; }
+.mid { font-family: var(--f-text); color: var(--muted); }
+.new { font-family: var(--f-text); font-size: 1.05rem; font-weight: 600; }
+.why, .rw, .rec { margin: 0; font-size: .85rem; color: var(--muted); }
+.rw { color: var(--accent); }
+details.scene { border-top: 1px solid var(--line); padding-block: 8px; }
+details.scene > summary { cursor: pointer; font-size: .95rem; padding-block: 4px; }
+details.scene > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.scene-body { display: grid; gap: 14px; padding-top: 10px; }
+.opts { margin: 0; padding-left: 1.4em; font-family: var(--f-text); display: grid; gap: 4px; }
+@media (max-width: 480px) { .ctx li { grid-template-columns: 1fr; gap: 0; } .sp { text-align: left; } }
+</style>
+<main>
+  <h1>Вычитка: canis</h1>
+  <p class="sum">Правок: 50. Вопросов к вам: 0. Перед каждой правкой — несколько реплик сцены, чтобы было видно, кто с кем и о чём.</p>
+  <div class="tbl"><table><tr><th>сцена</th><th>правок</th><th>нашёл ревьюер</th><th>вопросов</th></tr><tr><td><code>canis</code></td><td>50</td><td>2</td><td>0</td></tr></table></div>
+  <h2>Вопросы к вам</h2>
+  <p>Вопросов нет.</p>
+  <h2>Правки</h2>
+  <details class="scene"><summary><code>canis</code> — правок: 52</summary><div class="scene-body">
+<article class="card" id="sce1_c1_07.bytes|01000DDD|31">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_07|01000DDD|31</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">(Кое-кто звал его... Слепым Мясником.)</span></li><li><span class="sp">Эджворт</span><span class="ln">Всё его оружие — свирепый охотничий пёс и
+устрашающе острый нож...</span></li><li><span class="sp">Эджворт</span><span class="ln">О его появлении всегда возвещал звон
+колокольчиков.</span></li><li><span class="sp">Эджворт</span><span class="ln">...Последний звук в жизни его жертв.</span></li><li><span class="sp">Канис</span><span class="ln">Что же, мистер Эджворт? Мне угадать, зачем вы
+ко мне пожаловали?</span></li><li><span class="sp">Эджворт</span><span class="ln">Вы знаете, зачем я здесь. Больше того, готов
+спорить, вам известна каждая деталь этого дела.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Kheh heh heh. Then I suppose we have nothing to
+hide from one another.</p></div><div class="row"><span class="tag">DE</span><p class="for">Kehehe. Dann haben wir wohl nichts voreinander
+zu verbergen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Mouah ha ha. Je vois, oui...
+Dans ce cas, nous n&#x27;avons rien à nous cacher.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Кхех-хех-хех. Тогда, стало быть, нам нечего
+скрывать друг от друга.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Кхех-хех-хех. Тогда нам, выходит, нечего
+скрывать друг от друга.</p></div>
+  </div>
+  <p class="why">«стало быть» у него шесть раз на дело; разведено</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E2C|3">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E2C|3</code><span class="v alt">ревьюер: свой вариант</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">(Едва ли я могу назвать его показания
+безупречными...)</span></li><li><span class="sp">Канис</span><span class="ln">...Стало быть, «нет»? Так я и думал.
+Да, Аид, думал. Да-а-а...</span></li><li><span class="sp">Эджворт</span><span class="ln">(Ещё бы он не знал, кто наш свидетель.)</span></li><li><span class="sp">Эджворт</span><span class="ln">Чем вы занимались вчера между восемью и десятью
+утра, мистер Канис?</span></li><li><span class="sp">Канис</span><span class="ln">То есть во время представления? Кхех-хех-хех.</span></li><li><span class="sp">Канис</span><span class="ln">Я был здесь. В своей скромной обители.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">I have developed a passion for wood carving, you see.
+An obsession, even. I was engrossed in it all morning.</p></div><div class="row"><span class="tag">DE</span><p class="for">Ich habe eine Leidenschaft für Holzschnitzerei.
+Ich war den ganzen Morgen damit beschäftigt.</p></div><div class="row"><span class="tag">FR</span><p class="for">Je me passionne pour la sculpture sur bois...
+Ça m&#x27;obsède, vous voyez. Et j&#x27;étais absorbé, hier.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Видите ли, я пристрастился к резьбе по дереву.
+Даже одержим. Всё утро от неё не отрывался.</p></div>
+    <div class="row"><span class="tag">редактор</span><p class="mid">Видите ли, я пристрастился к резьбе по дереву.
+Прямо-таки одержим. Всё утро от неё не отрывался.</p></div>
+    <div class="row"><span class="tag now">итог</span><p class="new">Видите ли, я пристрастился к резьбе по дереву.
+До одержимости. Всё утро от неё не отрывался.</p></div>
+  </div>
+  <p class="why">«Даже одержим» — обрубок; `even` по-русски частицей</p><p class="rw">Ревьюер: обрубок «Даже одержим» чинить надо, но «прямо-таки» — живое восклицание, не степенный Канис; «До одержимости» держит `even` спокойно</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E2C|8">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E2C|8</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Я был здесь. В своей скромной обители.</span></li><li><span class="sp">Канис</span><span class="ln">Видите ли, я пристрастился к резьбе по дереву.
+Даже одержим. Всё утро от неё не отрывался.</span></li><li><span class="sp">Эджворт</span><span class="ln">И вам позволено такое занятие?
+Не верится, что кто-то на это пошёл.</span></li><li><span class="sp">Канис</span><span class="ln">У нас с начальницей... взаимопонимание.</span></li><li><span class="sp">Эджворт</span><span class="ln">(«Взаимопонимание»? Нелепость! Этому человеку
+нельзя и одной, не то что пяти стамесок!)</span></li><li><span class="sp">Эджворт</span><span class="ln">(В его руках это настоящее смертельное оружие!)</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">I was carving Buddhist pieces at first, but by the
+674th, my interest had begun to wane.</p></div><div class="row"><span class="tag">DE</span><p class="for">Anfangs schnitzte ich buddhistische Figuren, aber
+nach der 674. ließ mein Interesse nach.</p></div><div class="row"><span class="tag">FR</span><p class="for">J&#x27;ai commencé par des figurines bouddhistes,
+mais au bout de 674, je me suis lassé.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Сперва я вырезал фигурки будд, но к шестьсот
+семьдесят четвёртой интерес мой угас.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Сперва я вырезал фигурки будд, но к шестьсот
+семьдесят четвёртой мне это приелось.</p></div>
+  </div>
+  <p class="why">«интерес мой угас» — книжная инверсия; `my interest had begun to wane` разговорно</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E2C|13">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E2C|13</code><span class="v alt">ревьюер: свой вариант</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">(В его руках это настоящее смертельное оружие!)</span></li><li><span class="sp">Канис</span><span class="ln">Сперва я вырезал фигурки будд, но к шестьсот
+семьдесят четвёртой интерес мой угас.</span></li><li><span class="sp">Кей</span><span class="ln">Ух ты! Это ж сколько времени надо!</span></li><li><span class="sp">Канис</span><span class="ln">Время — всё, что у меня есть, дитя. Как бы то
+ни было, теперь я перешёл к фигурам... вроде этих.</span></li><li><span class="sp">Эджворт</span><span class="ln">Не знал, что вы играете в шахматы.</span></li><li><span class="sp">Канис</span><span class="ln">Вы ведь тоже играете, господин прокурор?
+Быть может, однажды составите мне партию?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Though you may find my game rather rudimentary.
+I only began after my arrival here, I am afraid.</p></div><div class="row"><span class="tag">DE</span><p class="for">Auch wenn mein Spiel noch rudimentär ist. Ich
+habe erst nach meiner Ankunft hier damit begonnen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Vous trouverez sans doute mon jeu rudimentaire...
+J&#x27;ai commencé en arrivant ici.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Правда, игра моя может показаться вам слабой.
+Я начал уже здесь, увы.</p></div>
+    <div class="row"><span class="tag">редактор</span><p class="mid">Правда, играю я, пожалуй, простовато.
+Начал-то я только здесь, увы.</p></div>
+    <div class="row"><span class="tag now">итог</span><p class="new">Правда, вам моя игра покажется простоватой.
+Я ведь начал только здесь, увы.</p></div>
+  </div>
+  <p class="why">«игра моя может показаться» — книжный порядок; `rudimentary` — «простовато»</p><p class="rw">Ревьюер: порядок «игра моя» исправлен, но правка потеряла «вам» (`you may find` — приглашение Эджворту сыграть) и дала «Начал-то я» — разговорное «-то» не к Канису; «ведь» нейтральнее</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E2C|20">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E2C|20</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">(Хм...? Что это за фигура?
+Пёс... о трёх головах?)</span></li><li><span class="sp">Канис</span><span class="ln">Ах да. Псы войны.
+Простите мне эту шутку.</span></li><li><span class="sp">Канис</span><span class="ln">Шахматы ведь, по сути, война.
+Солдаты, кони, ладьи...</span></li><li><span class="sp">Канис</span><span class="ln">Все до последнего защищают короля.
+Все верны до конца.</span></li><li><span class="sp">Канис</span><span class="ln">Мне всегда казалось странным, что в такой игре
+не нашлось места собаке.</span></li><li><span class="sp">Канис</span><span class="ln">В самом деле, есть ли у войска оружие вернее?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Still, it&#x27;s simply a piece I made for fun. Fear not, I play
+by the regular rules. And with the regular pieces.</p></div><div class="row"><span class="tag">DE</span><p class="for">Aber ich habe die Figur nur zum Spaß gemacht. Ich
+spiele nach üblichen Regeln, mit üblichen Figuren.</p></div><div class="row"><span class="tag">FR</span><p class="for">J&#x27;ai créé cette pièce pour mon seul plaisir.
+Bien sûr, je joue selon les règles. Sans ajout.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Впрочем, это фигура для забавы. Не бойтесь,
+играю я по обычным правилам. И обычными фигурами.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Впрочем, эту я вырезал для забавы. Не бойтесь,
+играю я по обычным правилам. И обычными фигурами.</p></div>
+  </div>
+  <p class="why">`a piece I made for fun` — «фигура для забавы» звучит определением, а не речью</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E2C|24">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E2C|24</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Мне всегда казалось странным, что в такой игре
+не нашлось места собаке.</span></li><li><span class="sp">Канис</span><span class="ln">В самом деле, есть ли у войска оружие вернее?</span></li><li><span class="sp">Канис</span><span class="ln">Впрочем, это фигура для забавы. Не бойтесь,
+играю я по обычным правилам. И обычными фигурами.</span></li><li><span class="sp">Эджворт</span><span class="ln">Хотя вряд ли в тюрьме легко найти соперника
+для игры.</span></li><li><span class="sp">Канис</span><span class="ln">О, у меня есть с кем переписываться.</span></li><li><span class="sp">Эджворт</span><span class="ln">Шахматы по переписке, стало быть?
+Ходы письмами?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Yes. Even prisoners are allowed to send and receive
+letters. Their contents are inspected, of course.</p></div><div class="row"><span class="tag">DE</span><p class="for">Genau. Häftlinge dürfen Briefe senden und
+empfangen. Der Inhalt wird natürlich kontrolliert.</p></div><div class="row"><span class="tag">FR</span><p class="for">Oui. Même les prisonniers ont le droit d&#x27;envoyer
+et de recevoir des lettres... qui sont inspectées.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Да. Даже заключённым дозволено отправлять
+и получать письма. Содержимое, конечно, проверяют.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Да. Даже заключённым разрешено отправлять
+и получать письма. Содержимое, конечно, проверяют.</p></div>
+  </div>
+  <p class="why">«дозволено» — архаика без опоры (`allowed`)</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E48|1">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E48|1</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">Шахматы по переписке, стало быть?
+Ходы письмами?</span></li><li><span class="sp">Канис</span><span class="ln">Да. Даже заключённым дозволено отправлять
+и получать письма. Содержимое, конечно, проверяют.</span></li><li><span class="sp">Канис</span><span class="ln">Правда, очередного хода от нынешнего соперника
+я пока не получил.</span></li><li><span class="sp">органайзер</span><span class="ln">Данные «Шахматная фигура-пёс» записаны
+в органайзер.</span></li><li><span class="sp">Эджворт</span><span class="ln">(Этот «нынешний соперник», выходит, здесь
+не сидит.)</span></li><li><span class="sp">Эджворт</span><span class="ln">Вы ведь знаете, кто погибший,
+мистер Канис?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">His name was Bronco Knight, was it not?
+Poor, unfortunate soul.</p></div><div class="row"><span class="tag">DE</span><p class="for">Sein Name war Bronco Springer, nicht wahr? Ein
+armer, unglücklicher Kerl.</p></div><div class="row"><span class="tag">FR</span><p class="for">Il s&#x27;appelait Lucas Valier, c&#x27;est ça ?
+Le pauvre.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Его звали Бронко Конев, не так ли?
+Бедная, злосчастная душа.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Его звали Бронко Конев, не так ли?
+Бедная, несчастная душа.</p></div>
+  </div>
+  <p class="why">«бедная, несчастная душа» — живая формула; «злосчастная» — книжность</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E48|5">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E48|5</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">(Этот «нынешний соперник», выходит, здесь
+не сидит.)</span></li><li><span class="sp">Эджворт</span><span class="ln">Вы ведь знаете, кто погибший,
+мистер Канис?</span></li><li><span class="sp">Канис</span><span class="ln">Его звали Бронко Конев, не так ли?
+Бедная, злосчастная душа.</span></li><li><span class="sp">Эджворт</span><span class="ln">До ваших ушей, я смотрю, доходит всё.</span></li><li><span class="sp">Канис</span><span class="ln">Уши — всё, что у меня есть, мистер Эджворт.</span></li><li><span class="sp">Эджворт</span><span class="ln">(Отчего же я не удивлён, что он подключён
+к тюремной сети слухов?)</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Hmm... But perhaps he was not so unfortunate after
+all.</p></div><div class="row"><span class="tag">DE</span><p class="for">Hm... Aber vielleicht war er doch nicht ganz so
+unglücklich.</p></div><div class="row"><span class="tag">FR</span><p class="for">Hmm... Enfin, peut-être n&#x27;a-t-il pas été
+si malchanceux que ça.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Хм-м... Хотя, быть может, не так уж он был
+и злосчастен.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Хм-м... Хотя, может, не так уж он был
+и несчастен.</p></div>
+  </div>
+  <p class="why">эхо к E48|1; «быть может» у него шесть раз — разведено</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E48|27">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E48|27</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Кей</span><span class="ln">Другими словами, они прячут правду!</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех-хех.
+Значит, его и впрямь хотели подставить.</span></li><li><span class="sp">Канис</span><span class="ln">Со слов охраны, этот... Конев, кажется?</span></li><li><span class="sp">Канис</span><span class="ln">Говорят, он яростно твердил, что никакого
+покушения не совершал.</span></li><li><span class="sp">Эджворт</span><span class="ln">...Что всё равно вскрылось бы,
+дойди дело до суда.</span></li><li><span class="sp">Канис</span><span class="ln">Я не знаток законов, но позвольте сказать
+одну вещь.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">I know for a certainty that he would not have been the
+first inmate imprisoned on false pretenses.</p></div><div class="row"><span class="tag">DE</span><p class="for">Er wäre nicht der erste Häftling, der aufgrund
+vorgetäuschter Tatsachen verurteilt worden wäre.</p></div><div class="row"><span class="tag">FR</span><p class="for">... il n&#x27;aurait pas été le premier à être
+emprisonné pour de fausses raisons.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Я знаю доподлинно: он был бы не первым, кого
+посадили сюда по ложному обвинению.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Я точно знаю: он был бы не первым, кого
+посадили сюда по ложному обвинению.</p></div>
+  </div>
+  <p class="why">«доподлинно» — архаика; `for a certainty` проще</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E73|1">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E73|1</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">...Хорошо.</span></li><li><span class="sp">Эджворт</span><span class="ln">Хм?</span></li><li><span class="sp">Канис</span><span class="ln">Вы желаете напоить цветы земные кровью
+своих жил. Какая благородная просьба.</span></li><li><span class="sp">Канис</span><span class="ln">С радостью исполню.</span></li><li><span class="sp">Эджворт</span><span class="ln">Б-Буду признателен, если вы не станете
+приписывать значку такой зловещий смысл!</span></li><li><span class="sp">Канис</span><span class="ln">Доска и фигуры при нас...
+Партию, мистер Эджворт?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">It is rare that I have the chance to play an opponent
+face to face these days.</p></div><div class="row"><span class="tag">DE</span><p class="for">Ich habe nur selten die Gelegenheit, mit einem
+Gegner von Angesicht zu Angesicht zu spielen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Ces derniers temps, il est rare pour moi d&#x27;avoir
+la chance d&#x27;affronter un adversaire face à face.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Нечасто нынче выпадает случай сыграть
+с соперником лицом к лицу.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Теперь мне нечасто выпадает случай сыграть
+с соперником лицом к лицу.</p></div>
+  </div>
+  <p class="why">утверждённый образец пользователя</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E86|1">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E86|1</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. Понять вас он, правда,
+не может. Пожалуй, стоило предупредить.</span></li><li><span class="sp">Канис</span><span class="ln">Ну не глупец ли? А, Аид? М-м-м?</span></li><li><span class="sp">органайзер</span><span class="ln">ГА-А-АВ!</span></li><li><span class="sp">Эджворт</span><span class="ln">(...А друг друга они понимают отлично.)</span></li><li><span class="sp">Эджворт</span><span class="ln">(Хотя было бы довольно грустно, если бы
+не понимали...)</span></li><li><span class="sp">Эджворт</span><span class="ln">Позвольте спросить вас вот об этом.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Kheh heh heh. Ask me of killing, Mr. Edgeworth, and
+you will have more success.</p></div><div class="row"><span class="tag">DE</span><p class="for">Kehehe. Wenn Sie mich um einen Mord bitten
+würden, hätten Sie mehr Erfolg, Hr. Edgeworth.</p></div><div class="row"><span class="tag">FR</span><p class="for">Mouah ha ha. Interrogez-moi plutôt sur
+des meurtres, M. Hunter...</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Кхех-хех-хех. Попросите об убийстве,
+мистер Эджворт, и преуспеете куда больше.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Кхех-хех-хех. Попросите лучше об убийстве,
+мистер Эджворт, — толку будет больше.</p></div>
+  </div>
+  <p class="why">«преуспеете» — книжность; `you will have more success` разговорно</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E86|2">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E86|2</code><span class="chip">калька</span><span class="v alt">нашёл ревьюер</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Ну не глупец ли? А, Аид? М-м-м?</span></li><li><span class="sp">органайзер</span><span class="ln">ГА-А-АВ!</span></li><li><span class="sp">Эджворт</span><span class="ln">(...А друг друга они понимают отлично.)</span></li><li><span class="sp">Эджворт</span><span class="ln">(Хотя было бы довольно грустно, если бы
+не понимали...)</span></li><li><span class="sp">Эджворт</span><span class="ln">Позвольте спросить вас вот об этом.</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. Попросите об убийстве,
+мистер Эджворт, и преуспеете куда больше.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Or is this a hint, perhaps? A clue as to who you wish
+me to... eliminate?</p></div><div class="row"><span class="tag">DE</span><p class="for">Oder soll das ein Hinweis darauf sein... wen ich
+für Sie eliminieren soll?</p></div><div class="row"><span class="tag">FR</span><p class="for">Ou est-ce une piste ? Un indice me guidant vers
+celui que vous voulez que... j&#x27;élimine ?</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Или это намёк? Зацепка, кого вы желали бы
+мне... устранить?</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Или это намёк? Вы подсказываете, кого мне...
+устранить?</p></div>
+  </div>
+  <p class="why">«Зацепка, кого вы желали бы мне устранить» — книжное «желали бы» и сломанное управление (желать кому устранить); угроза и подводка от E86|1 сохранены</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E8A|9">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E8A|9</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Но я не в обиде. В последние дни вы не первый,
+кто подозревает меня без всяких оснований.</span></li><li><span class="sp">Канис</span><span class="ln">Вот и вчера меня навещал другой прокурор.
+С ним была судья.</span></li><li><span class="sp">Канис</span><span class="ln">Притащили и начальницу, и её молчаливая
+брезгливость так и висела в воздухе.</span></li><li><span class="sp">Кей</span><span class="ln">Опять эти двое!</span></li><li><span class="sp">Эджворт</span><span class="ln">(Прокурор Победин и судья Молотова...)</span></li><li><span class="sp">Канис</span><span class="ln">Мою камеру перевернули вверх дном.
+Но ушли ни с чем.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Kheh heh heh. They were looking for the murder
+weapon, I believe, to no avail.</p></div><div class="row"><span class="tag">DE</span><p class="for">Kehehe. Sie suchten nach der Tatwaffe, glaube
+ich... Ohne Erfolg.</p></div><div class="row"><span class="tag">FR</span><p class="for">Mouah ha ha. Il me semble qu&#x27;ils cherchaient
+l&#x27;arme du crime, mais ils ont fait chou blanc.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Кхех-хех-хех. Искали, сдаётся, орудие
+убийства, да напрасно.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Кхех-хех-хех. Искали, кажется, орудие
+убийства, да напрасно.</p></div>
+  </div>
+  <p class="why">«сдаётся» — стилизация под старину, в EN `I believe`</p>
+</article>
+<article class="card" id="sce1_c1_08.bytes|01000E8A|19">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_08|01000E8A|19</code><span class="v alt">ревьюер: свой вариант</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">(Показания Видалла шатки. Против Каниса нужны
+улики повесомее...)</span></li><li><span class="sp">Канис</span><span class="ln">На сегодня беседы, пожалуй, довольно.</span></li><li><span class="sp">Канис</span><span class="ln">Аид вас проводит.
+Хороший мальчик. Ступай.</span></li><li><span class="sp">Защитин</span><span class="ln">Э-э... Он ведь не проводит нас... «навсегда», да?</span></li><li><span class="sp">Кей</span><span class="ln">У-У-Уходим отсюда! Скорее!</span></li><li><span class="sp">Эджворт</span><span class="ln">............
+До следующей встречи, мистер Канис.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">It does pain me that our brief time must end, just as
+we were becoming reacquainted.</p></div><div class="row"><span class="tag">DE</span><p class="for">Leider muss unsere Zeit enden, obwohl wir uns
+gerade erst wieder kennengelernt haben.</p></div><div class="row"><span class="tag">FR</span><p class="for">Nos retrouvailles auront été brèves, c&#x27;est vrai...
+Nous commencions juste à refaire connaissance.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Печально, что краткий наш час окончен как раз
+тогда, когда мы вновь узнали друг друга.</p></div>
+    <div class="row"><span class="tag">редактор</span><p class="mid">Жаль, право, расставаться так скоро —
+мы ведь только-только заново познакомились.</p></div>
+    <div class="row"><span class="tag now">итог</span><p class="new">Как жаль расставаться так скоро —
+мы ведь только-только заново познакомились.</p></div>
+  </div>
+  <p class="why">«краткий наш час окончен», «вновь» — высокий слог; по-русски проще и теплее</p><p class="rw">Ревьюер: правка убирает высокий слог, но тут же вносит «право» — книжную частицу, которой в EN нет (помеченное на помеченное); «Как жаль» несёт `It does pain me` и вторит его же «Как жаль. Как ужасно жаль»</p>
+</article>
+<article class="card" id="sce1_c1_m05_check.bytes|010013F0|15">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c1_m05_check|010013F0|15</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Кей</span><span class="ln">...А!</span></li><li><span class="sp">Кей</span><span class="ln">Я не знаю, какая фигура какая, но...</span></li><li><span class="sp">Кей</span><span class="ln">...если повернуть диаграмму вот так, фигуры стоят
+на тех же клетках!</span></li><li><span class="sp">Эджворт</span><span class="ln">Именно... Пса на диаграмме нет, но это
+и неудивительно.</span></li><li><span class="sp">Эджворт</span><span class="ln">А в остальном расположение фигур совпадает
+полностью.</span></li><li><span class="sp">Кей</span><span class="ln">И... о чём это говорит?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Oh, I have my correspondents.</p></div><div class="row"><span class="tag">DE</span><p class="for">Oh, ich habe auswärtige Gegner.</p></div><div class="row"><span class="tag">FR</span><p class="for">Oh, j&#x27;ai quelques correspondants.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">О, у меня есть свои корреспонденты.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">О, у меня есть с кем переписываться.</p></div>
+  </div>
+  <p class="why">копия E2C|22 разошлась; «корреспонденты» — канцелярит</p>
+</article>
+<article class="card" id="sce1_c2_04.bytes|01001DA0|10">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_04|01001DA0|10</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Молотова</span><span class="ln">Я говорила, что ваш значок под угрозой, если наши
+пути снова пересекутся. И всё же вы здесь.</span></li><li><span class="sp">Эджворт</span><span class="ln">Жаль, что вы сочли, будто меня так легко
+отпугнуть, Ваша честь.</span></li><li><span class="sp">Эджворт</span><span class="ln">Но правду я упустить не дам,
+что бы ни говорили вы или Комитет.</span></li><li><span class="sp">Эджворт</span><span class="ln">Я здесь, чтобы предъявить одному человеку улики,
+которые вы должны были найти сами!</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. У вас ко мне снова
+дело, мистер Эджворт?</span></li><li><span class="sp">Эджворт</span><span class="ln">Именно. Я обещал вернуться и доказать,
+что убийца вы. И вот я здесь.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Hm. This should be amusing.
+Very well, whenever you are ready.</p></div><div class="row"><span class="tag">DE</span><p class="for">Hm. Das dürfte unterhaltsam werden. Nun gut,
+wann immer Sie soweit sind.</p></div><div class="row"><span class="tag">FR</span><p class="for">Hmm. Ça devrait être amusant.
+Très bien, je vous écoute.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Хм. Занятно будет послушать.
+Извольте, как только будете готовы.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Хм. Занятно будет послушать.
+Начинайте, как будете готовы.</p></div>
+  </div>
+  <p class="why">утверждённый образец пользователя</p>
+</article>
+<article class="card" id="sce1_c2_06.bytes|01001FB0|29">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_06|01001FB0|29</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Молотова</span><span class="ln">Оттого полиция пока и не установила точную
+форму орудия.</span></li><li><span class="sp">Молотова</span><span class="ln">Но в главном сомнений нет —
+это металлический предмет с лезвием.</span></li><li><span class="sp">Молотова</span><span class="ln">В свете этой улики вы по-прежнему намерены
+тешить себя фантазиями?</span></li><li><span class="sp">Молотова</span><span class="ln">Или теперь заявите, что пёс орудовал ножом!?</span></li><li><span class="sp">Эджворт</span><span class="ln">Н-Но это же... НЕВОЗМОЖНО!...На этом всё. Заседание закрыто!</span></li><li><span class="sp">Эджворт</span><span class="ln">Но туннель! Следы лап!</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">What of them? Helmut is something of a wanderer.
+Perhaps he just happened across this tunnel one day.</p></div><div class="row"><span class="tag">DE</span><p class="for">Was soll damit sein? Hades ist ein Streuner. Er
+könnte diesen Tunnel zufällig entdeckt haben.</p></div><div class="row"><span class="tag">FR</span><p class="for">Ça ne prouve rien. Pluton aime se promener.
+Il a pu trouver le tunnel par hasard.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">И что же? Аид у нас изрядный бродяга.
+Может, он и набрёл однажды на этот туннель.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">И что же? Аид у нас любит побродить.
+Может, он и набрёл однажды на этот туннель.</p></div>
+  </div>
+  <p class="why">«изрядный бродяга» — книжность; `something of a wanderer`</p>
+</article>
+<article class="card" id="sce1_c2_06.bytes|01001FB0|30">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_06|01001FB0|30</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Молотова</span><span class="ln">Но в главном сомнений нет —
+это металлический предмет с лезвием.</span></li><li><span class="sp">Молотова</span><span class="ln">В свете этой улики вы по-прежнему намерены
+тешить себя фантазиями?</span></li><li><span class="sp">Молотова</span><span class="ln">Или теперь заявите, что пёс орудовал ножом!?</span></li><li><span class="sp">Эджворт</span><span class="ln">Н-Но это же... НЕВОЗМОЖНО!...На этом всё. Заседание закрыто!</span></li><li><span class="sp">Эджворт</span><span class="ln">Но туннель! Следы лап!</span></li><li><span class="sp">Канис</span><span class="ln">И что же? Аид у нас изрядный бродяга.
+Может, он и набрёл однажды на этот туннель.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Although, I couldn&#x27;t say for certain...
+I myself cannot wander quite so freely.</p></div><div class="row"><span class="tag">DE</span><p class="for">Allerdings kann ich es nur vermuten... Mein eigener
+Bewegungsspielraum ist deutlich kleiner.</p></div><div class="row"><span class="tag">FR</span><p class="for">Voyez-vous, je ne peux même pas en être sûr...
+ne jouissant pas de la même liberté que lui.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Хотя наверняка сказать не могу...
+Сам я бродить столь свободно не в силах.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Хотя наверняка не скажу...
+Сам я так свободно бродить не могу.</p></div>
+  </div>
+  <p class="why">утверждённый образец пользователя; первая строка — чтобы «не могу» не встало дважды</p>
+</article>
+<article class="card rejected" id="sce1_c2_06.bytes|01002060|2">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_06|01002060|2</code><span class="v no">ревьюер: отклонил</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">(С самого прихода что-то... не так. И, думаю,
+это и подскажет, где стамеска.)</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. Да будет вам, мистер Эджворт.
+Никакой спрятанной стамески нет.</span></li><li><span class="sp">Канис</span><span class="ln">Сдаться было бы лучше для всех,
+не находите?</span></li><li><span class="sp">Эджворт</span><span class="ln">Совершенно не нахожу.</span></li><li><span class="sp">Эджворт</span><span class="ln">Ваш пёс... Сегодня он непривычно тихий.</span></li><li><span class="sp">Кей</span><span class="ln">И правда! Не то что в прошлый раз, когда--Мистер Канис! Будьте любезны открыть
+Аиду пасть!</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Oh, come now. He hasn&#x27;t barked because he is a
+well-behaved boy. I had to order him to last time.</p></div><div class="row"><span class="tag">DE</span><p class="for">Ach, kommen Sie. Er bellt nicht, weil er Manieren
+hat. Letztes Mal musste ich ihn dazu auffordern.</p></div><div class="row"><span class="tag">FR</span><p class="for">Oh, voyons. Il n&#x27;aboie pas car il est bien dressé.
+La dernière fois, je lui ordonnais de le faire.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Да будет вам. Он не лает, потому что хорошо
+воспитан. В прошлый раз я ему велел.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Ну что вы. Он не лает, потому что хорошо
+воспитан. В прошлый раз я ему велел.</p></div>
+  </div>
+  <p class="why">второе «Да будет вам» подряд (2057|5); разведено</p><p class="rw">Ревьюер: «Да будет вам» здесь — решение пользователя 11 августа (decisions.md, «Кальки с идиом»: именно эта реплика и 2057|5), причём сознательно сведённое у Каниса в одну форму, «иначе один персонаж говорил бы двумя способами» (calques-2026-08-11.md)</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020A0|14">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020A0|14</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Молотова</span><span class="ln">...суд требует от вас объяснений.</span></li><li><span class="sp">Эджворт</span><span class="ln">Мы нашли, каким путём ваш пёс попал в следственные
+камеры, а теперь у нас есть и стамеска.</span></li><li><span class="sp">Эджворт</span><span class="ln">И как вы собираетесь выкрутиться на этот раз?</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех-хех! С вами не соскучишься,
+мистер Эджворт.</span></li><li><span class="sp">Кей</span><span class="ln">П-Почему он вечно так смеётся, даже когда ничего
+смешного...?</span></li><li><span class="sp">Канис</span><span class="ln">Бедный Аид. Как они могут нас подозревать?
+М? М-м?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">You leave me little choice. I shall simply have to share
+with you the truth.</p></div><div class="row"><span class="tag">DE</span><p class="for">Sie lassen mir keine Wahl. Ich werde Ihnen wohl
+einfach die Wahrheit sagen müssen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Vous ne me laissez pas le choix.
+Je vais devoir vous confier la vérité.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Вы не оставляете мне выбора. Придётся
+открыть вам истину.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Вы не оставляете мне выбора. Придётся
+сказать вам правду.</p></div>
+  </div>
+  <p class="why">«открыть истину» — патетика; в EN `share with you the truth`</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020A0|21">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020A0|21</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Я никого не убивал. Мне наскучили убийства.</span></li><li><span class="sp">Эджворт</span><span class="ln">(Что-то здесь не так. Отчего он так спокоен?)</span></li><li><span class="sp">Молотова</span><span class="ln">Хорошо. Суд выслушает показания мистера Каниса.</span></li><li><span class="sp">Молотова</span><span class="ln">Будьте любезны.</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. С удовольствием.</span></li><li><span class="sp">органайзер</span><span class="ln">-- Оправдание Каниса --</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Perhaps you might begin by explaining what you
+believe my motive to have been.</p></div><div class="row"><span class="tag">DE</span><p class="for">Vielleicht könnten Sie damit beginnen, mir mein
+angebliches Motiv zu erläutern.</p></div><div class="row"><span class="tag">FR</span><p class="for">Vous pourriez peut-être commencer par expliquer
+quel serait mon mobile.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Быть может, вы начнёте с того, каков, по-вашему,
+был мой мотив.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Начните, пожалуй, с того, какой, по-вашему,
+у меня был мотив.</p></div>
+  </div>
+  <p class="why">«каков был мой мотив» — книжно и тяжело; «быть может» разведено</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020A0|26">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020A0|26</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">органайзер</span><span class="ln">-- Оправдание Каниса --</span></li><li><span class="sp">Канис</span><span class="ln">Быть может, вы начнёте с того, каков, по-вашему,
+был мой мотив.</span></li><li><span class="sp">Канис</span><span class="ln">Я не знал никакого Конева. Я с ним не общался.
+Никакой связи между нами не было.</span></li><li><span class="sp">Канис</span><span class="ln">А раз так, зачем бы мне желать ему смерти?</span></li><li><span class="sp">Канис</span><span class="ln">А-а. Или вы намекаете, что мотив был
+у моего четвероногого спутника?</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. Аид скалит клыки лишь тогда,
+когда я велю.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">I am not so bloodthirsty that I would kill a man I did
+not know.</p></div><div class="row"><span class="tag">DE</span><p class="for">Ich bin nicht so blutrünstig, einen mir
+unbekannten Mann zu töten.</p></div><div class="row"><span class="tag">FR</span><p class="for">Je ne suis pas assoiffé de sang au point de tuer
+un simple inconnu.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Я не столь кровожаден, чтобы убивать человека,
+которого не знаю.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Я не настолько кровожаден, чтобы убивать
+незнакомца.</p></div>
+  </div>
+  <p class="why">утверждённый образец пользователя</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020C2|0">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020C2|0</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Кей</span><span class="ln">Ну... если так посмотреть...</span></li><li><span class="sp">Эджворт</span><span class="ln">Хмф. Убийца, что убивает лишь знакомых?
+Согласен, деловая хватка сомнительная.</span></li><li><span class="sp">Канис</span><span class="ln">Работа, конечно, сводила меня с чужими людьми.
+Но убийство ради убийства? Это не по мне.</span></li><li><span class="sp">Эджворт</span><span class="ln">(Значит, нужно доказать связь Конева с Канисом.)</span></li><li><span class="sp">Эджворт</span><span class="ln">(Стоит ещё раз пересмотреть улики —
+вдруг что-нибудь обнаружится.)</span></li><li><span class="sp">органайзер</span><span class="ln">-- Оправдание Каниса --</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Perhaps you might begin by explaining what you
+believe my motive to have been.</p></div><div class="row"><span class="tag">DE</span><p class="for">Vielleicht könnten Sie damit beginnen, mir mein
+angebliches Motiv zu erläutern.</p></div><div class="row"><span class="tag">FR</span><p class="for">Vous pourriez peut-être commencer par expliquer
+quel serait mon mobile.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Быть может, вы начнёте с того, каков, по-вашему,
+был мой мотив.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Начните, пожалуй, с того, какой, по-вашему,
+у меня был мотив.</p></div>
+  </div>
+  <p class="why">копия 20A0|21</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020D3|4">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020D3|4</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Защитин</span><span class="ln">Ты ж ему ничего толкового не подкинул.</span></li><li><span class="sp">Эджворт</span><span class="ln">Хмф...
+(Я не проиграю псу...!)</span></li><li><span class="sp">Эджворт</span><span class="ln">В ваших показаниях противоречие!</span></li><li><span class="sp">Канис</span><span class="ln">Противоречие, говорите...?</span></li><li><span class="sp">Канис</span><span class="ln">Что скажешь, Аид? Прав ли этот человек? М?</span></li><li><span class="sp">Канис</span><span class="ln">Да. М-м... Понимаю.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">I am afraid my friend here fails to see your so-called
+contradiction.</p></div><div class="row"><span class="tag">DE</span><p class="for">Ich fürchte, mein Freund hier kann keinen
+Widerspruch entdecken.</p></div><div class="row"><span class="tag">FR</span><p class="for">Je crains que mon ami ici présent ne voie
+aucune contradiction.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Боюсь, мой друг этого вашего противоречия
+не усматривает.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Боюсь, мой друг этого вашего «противоречия»
+не видит.</p></div>
+  </div>
+  <p class="why">«не усматривает» — канцелярит; `so-called` — кавычками</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020E7|7">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020E7|7</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Странный человек, правда, Аид?
+Да-а-а. Да, странный.</span></li><li><span class="sp">Канис</span><span class="ln">Глупец? Гений?
+Так сразу и не скажешь...</span></li><li><span class="sp">Эджворт</span><span class="ln">Хватит ломать комедию, мистер Канис.
+Отвечайте на вопрос.</span></li><li><span class="sp">Канис</span><span class="ln">Нет. Это вы ответите на мой.
+Кто я такой, мистер Эджворт?</span></li><li><span class="sp">Канис</span><span class="ln">Я тот самый, кого вы поймали.</span></li><li><span class="sp">Канис</span><span class="ln">Наёмный убийца. Тот, кто убивает за плату.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Were I one to kill without rhyme or reason, I would
+still be free to recite sutras in peace out there.</p></div><div class="row"><span class="tag">DE</span><p class="for">Würde ich ohne Sinn und Verstand töten, wäre ich
+noch da draußen und würde Sutras aufsagen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Si je tuais sans raison valable, je réciterais
+à l&#x27;heure qu&#x27;il est mes sutras au-dehors.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Убивай я без всякой причины, я бы и поныне
+спокойно читал сутры на воле.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Убивай я без всякой причины, я бы и сейчас
+спокойно читал сутры на воле.</p></div>
+  </div>
+  <p class="why">«поныне» — архаика без опоры</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020EF|4">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020EF|4</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Наёмный убийца. Тот, кто убивает за плату.</span></li><li><span class="sp">Канис</span><span class="ln">Убивай я без всякой причины, я бы и поныне
+спокойно читал сутры на воле.</span></li><li><span class="sp">Эджворт</span><span class="ln">Не сомневаюсь. Но вашего пса обучили убивать.</span></li><li><span class="sp">Канис</span><span class="ln">О чём это он, а, Аид? М?</span></li><li><span class="sp">Канис</span><span class="ln">За что он о тебе такие ужасы, а?
+Глупый человек. Вот кто он такой. Да-а-а.</span></li><li><span class="sp">Эджворт</span><span class="ln">Тогда, быть может, он убил не того. Это бы
+объяснило, почему мотива нет.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Do your precious police dogs attack people willy-nilly?
+Have some respect, Mr. Edgeworth.</p></div><div class="row"><span class="tag">DE</span><p class="for">Greifen Ihre Polizeihunde einfach wildfremde Leute
+an? Zeigen Sie etwas Respekt, Hr. Edgeworth.</p></div><div class="row"><span class="tag">FR</span><p class="for">Vos chiens policiers attaquent-ils au hasard ?
+Un peu de respect, M. Hunter.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Разве ваши служебные псы бросаются на людей
+без разбору? Имейте уважение, мистер Эджворт.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Разве ваши служебные псы бросаются на людей
+без разбору? Проявите уважение, мистер Эджворт.</p></div>
+  </div>
+  <p class="why">«Имейте уважение» — калька `have some respect`</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020EF|6">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020EF|6</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">Не сомневаюсь. Но вашего пса обучили убивать.</span></li><li><span class="sp">Канис</span><span class="ln">О чём это он, а, Аид? М?</span></li><li><span class="sp">Канис</span><span class="ln">За что он о тебе такие ужасы, а?
+Глупый человек. Вот кто он такой. Да-а-а.</span></li><li><span class="sp">Эджворт</span><span class="ln">Тогда, быть может, он убил не того. Это бы
+объяснило, почему мотива нет.</span></li><li><span class="sp">Канис</span><span class="ln">Разве ваши служебные псы бросаются на людей
+без разбору? Имейте уважение, мистер Эджворт.</span></li><li><span class="sp">Канис</span><span class="ln">Если вы намерены в чём-то обвинить Аида...</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">...at least show us some evidence to back up your
+claims.</p></div><div class="row"><span class="tag">DE</span><p class="for">... dann zeigen Sie uns wenigstens Beweise für
+Ihre Unterstellung.</p></div><div class="row"><span class="tag">FR</span><p class="for">... montrez-nous au moins des preuves de ce que
+vous avancez.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">...извольте хотя бы предъявить улику,
+которая это подтвердит.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">...то покажите хотя бы улику,
+которая это подтвердит.</p></div>
+  </div>
+  <p class="why">«извольте предъявить» — книжность и протокол</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020F7|3">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020F7|3</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Если вы намерены в чём-то обвинить Аида...</span></li><li><span class="sp">Канис</span><span class="ln">...извольте хотя бы предъявить улику,
+которая это подтвердит.</span></li><li><span class="sp">Эджворт</span><span class="ln">Нгрх!
+(Была бы она у меня!)</span></li><li><span class="sp">Эджворт</span><span class="ln">Значит, это вы ему и велели, верно?
+Вы приказали убить Конева!</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех! Ах, мистер Эджворт, так вы ничего
+не добьётесь. Вы забыли, что я только что сказал?</span></li><li><span class="sp">Канис</span><span class="ln">Я не знал мистера Конева.
+Я и фамилии такой не слышал.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">If you are going to insist otherwise, then the least you
+can do is show us some sort of proof.</p></div><div class="row"><span class="tag">DE</span><p class="for">Wenn Sie auf dem Gegenteil bestehen, dann
+zeigen Sie uns wenigstens irgendeinen Beweis.</p></div><div class="row"><span class="tag">FR</span><p class="for">Si vous soutenez le contraire, le moins que vous
+puissiez faire est de nous montrer vos preuves.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Если вы настаиваете на своём, то извольте
+хоть чем-нибудь это подтвердить.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Если вы настаиваете на своём, то будьте добры
+хоть чем-нибудь это подтвердить.</p></div>
+  </div>
+  <p class="why">«извольте» — вычурность; «будьте добры» — живая вежливость</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020FC|17">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020FC|17</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">А теперь говорите, за что вы убили Конева!</span></li><li><span class="sp">Эджворт</span><span class="ln">Или, быть может, объясните нам это
+совпадение?</span></li><li><span class="sp">Канис</span><span class="ln">.........Хех. Кхех-хех-хех!</span></li><li><span class="sp">Канис</span><span class="ln">Недаром говорят: жизнь причудливее любого вымысла.</span></li><li><span class="sp">Канис</span><span class="ln">Это, как вы и сказали, совпадение.</span></li><li><span class="sp">Кей</span><span class="ln">Н-Но это же вообще невозможно!
+Мы же только что доказали!</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">A coincidence of a different kind, child. I never
+imagined my correspondent was the victim, you see.</p></div><div class="row"><span class="tag">DE</span><p class="for">Eine andere Art von Zufall, mein Kind. Ich wusste
+nicht, dass mein Gegenspieler das Opfer war.</p></div><div class="row"><span class="tag">FR</span><p class="for">Une coïncidence d&#x27;un autre type... Je n&#x27;aurais
+jamais cru que mon correspondant était la victime.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Совпадение иного рода, дитя. Я и помыслить не мог,
+что мой соперник по переписке — тот самый убитый.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Совпадение другого рода, дитя. Я и подумать
+не мог, что убитый — мой соперник по переписке.</p></div>
+  </div>
+  <p class="why">утверждённый образец («подумать»); «иного» — книжное</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020FC|37">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020FC|37</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Видалл</span><span class="ln">Это был ад. Сущий ад...</span></li><li><span class="sp">Видалл</span><span class="ln">Эта тварь!
+Эта жуткая тварь... Она его убила!</span></li><li><span class="sp">Эджворт</span><span class="ln">Вот как... Значит, Видалл видел, как Аид
+вынимает орудие убийства?</span></li><li><span class="sp">Канис</span><span class="ln">Именно. Не скрою, я был слегка разочарован тем,
+что его заметили.</span></li><li><span class="sp">Канис</span><span class="ln">Глупый мальчик. Не в твоих правилах так оплошать,
+а? М-м-м.</span></li><li><span class="sp">Канис</span><span class="ln">Вот и всё. Больше рассказывать нечего.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">I did not kill the man. At most, I am responsible for the
+removal of the weapon.</p></div><div class="row"><span class="tag">DE</span><p class="for">Ich habe den Mann nicht getötet. Ich bin höchstens
+verantwortlich für das Verschwinden der Waffe.</p></div><div class="row"><span class="tag">FR</span><p class="for">Je n&#x27;ai pas tué cet homme.
+Au pire, j&#x27;ai juste retiré l&#x27;arme.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Я его не убивал. Самое большее, на мне —
+изъятие орудия.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Я его не убивал. Самое большее, я велел
+вынуть орудие.</p></div>
+  </div>
+  <p class="why">«на мне — изъятие орудия» — протокол, отглагольное</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020FC|50">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020FC|50</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">(Перенести тело, чтобы отвести подозрения, —
+это резонно.)</span></li><li><span class="sp">Эджворт</span><span class="ln">(Но забирать орудие убийства Канису
+было совершенно незачем!)</span></li><li><span class="sp">Канис</span><span class="ln">Стало быть, молчун не так уж и глуп.</span></li><li><span class="sp">Молотова</span><span class="ln">Извольте ответить на вопрос, мистер Канис.</span></li><li><span class="sp">Канис</span><span class="ln">Всё дело в... колокольчике.</span></li><li><span class="sp">Канис</span><span class="ln">Тот, что был на стамеске, и тот, что на шее
+у Аида...</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">...have a very distinctive design, if you will.</p></div><div class="row"><span class="tag">DE</span><p class="for">... weisen eine sehr markante Optik auf, wenn man
+so will.</p></div><div class="row"><span class="tag">FR</span><p class="for">... disons qu&#x27;elles sont uniques.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">...весьма приметной работы, знаете ли.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">...очень приметной работы, знаете ли.</p></div>
+  </div>
+  <p class="why">«весьма» — без опоры (`very`); зацепка не тронута</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020FC|69">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020FC|69</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Вот только, как вы и сказали, нож у меня
+давно отобрали.</span></li><li><span class="sp">органайзер</span><span class="ln">Данные «Колокольчики Каниса» записаны
+в органайзер.Когда Аид притащил тело в камеру, я немало
+удивился знакомому звуку.</span></li><li><span class="sp">Канис</span><span class="ln">Сперва я был уверен, что дело сделали моим
+ножом.</span></li><li><span class="sp">Канис</span><span class="ln">Но нет — стамеска. Самая обыкновенная.</span></li><li><span class="sp">Эджворт</span><span class="ln">Уж точно не клинок наёмного убийцы.</span></li><li><span class="sp">Канис</span><span class="ln">И всё же колокольчик указал бы на меня.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Compounding the matter is the fact that I am the only
+person in this prison permitted to use such tools.</p></div><div class="row"><span class="tag">DE</span><p class="for">Noch belastender ist, dass ich der einzige
+Häftling bin, der solches Werkzeug verwenden darf.</p></div><div class="row"><span class="tag">FR</span><p class="for">De plus, je suis le seul détenu autorisé
+à utiliser ce genre d&#x27;outils.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Тем более что во всей тюрьме только мне
+дозволено работать таким инструментом.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Тем более что во всей тюрьме только мне
+разрешено работать таким инструментом.</p></div>
+  </div>
+  <p class="why">«дозволено» — архаика (`permitted`)</p>
+</article>
+<article class="card" id="sce1_c2_07.bytes|010020FC|74">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_07|010020FC|74</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">И всё же колокольчик указал бы на меня.</span></li><li><span class="sp">Канис</span><span class="ln">Тем более что во всей тюрьме только мне
+дозволено работать таким инструментом.</span></li><li><span class="sp">Канис</span><span class="ln">Было ясно, что первым заподозрят меня...</span></li><li><span class="sp">Канис</span><span class="ln">...и стамеску пришлось вынуть и спрятать.</span></li><li><span class="sp">Эджворт</span><span class="ln">И вы по-прежнему твердите, что лишь велели псу
+перенести тело? Что к убийству вы непричастны?</span></li><li><span class="sp">Канис</span><span class="ln">Как бы я это сделал?
+Я же сказал. Стамеска не моя.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">You need not take my word, Mr. Edgeworth.
+Why not have it checked for fingerprints?</p></div><div class="row"><span class="tag">DE</span><p class="for">Ich gebe Ihnen mein Wort, Hr. Edgeworth. Lassen
+Sie ihn doch auf Fingerabdrücke untersuchen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Mais rien ne vous force à me croire, M. Hunter.
+Faites donc une recherche d&#x27;empreintes !</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Верить мне на слово не нужно, мистер Эджворт.
+Отчего бы не снять с неё отпечатки?</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Верить мне на слово не нужно, мистер Эджворт.
+Почему бы не снять с неё отпечатки?</p></div>
+  </div>
+  <p class="why">«отчего бы» — книжное; `Why not` нейтрально</p>
+</article>
+<article class="card" id="sce1_c2_08.bytes|010021A0|13">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_08|010021A0|13</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Я этой стамески даже не касался.</span></li><li><span class="sp">Канис</span><span class="ln">Аид нёс её в пасти. Только и всего.</span></li><li><span class="sp">Канис</span><span class="ln">Стало быть, отпечатки — того, у кого она была
+последним.</span></li><li><span class="sp">Эджворт</span><span class="ln">Аргх...!</span></li><li><span class="sp">Защитин</span><span class="ln">То есть орудие убийства... было убитого?
+Ох-х, это нам не в масть.</span></li><li><span class="sp">Канис</span><span class="ln">Как я и сказал, стамески я не касался.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Therefore, I cannot be the killer.
+...Or do you wish to suggest otherwise?</p></div><div class="row"><span class="tag">DE</span><p class="for">Deswegen kann ich nicht der Täter sein.
+... Oder sind Sie anderer Meinung?</p></div><div class="row"><span class="tag">FR</span><p class="for">Donc je ne peux pas être le tueur.
+Ou vous comptez prétendre le contraire ?</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Стало быть, убийцей я быть не могу.
+...Или вы желаете возразить?</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Стало быть, убийцей я быть не могу.
+...Или вы думаете иначе?</p></div>
+  </div>
+  <p class="why">«желаете возразить» — официально; `wish to suggest otherwise`</p>
+</article>
+<article class="card" id="sce1_c2_08.bytes|010021E6|21">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce1_c2_08|010021E6|21</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Защитин</span><span class="ln">Но тогда почему его отпечатков нет на орудии
+убийства? Тут задачка на три трубки.</span></li><li><span class="sp">Молотова</span><span class="ln">Суду тоже недостаёт удовлетворительного
+объяснения.</span></li><li><span class="sp">Гамшу</span><span class="ln">Минутку, сэр! Пожалуй, самое время показать вам
+ещё одно тайное орудие!</span></li><li><span class="sp">Гамшу</span><span class="ln">Встречайте, тайное орудие №4... Шпиончик!</span></li><li><span class="sp">Эджворт</span><span class="ln">Что это за имя такое, детектив?</span></li><li><span class="sp">Гамшу</span><span class="ln">Я, э-э, сам придумал, сэр.
+В общем, им можно разбирать запись с камеры.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">An excellent idea. Perhaps then you might finally see
+that I am tellng the truth.</p></div><div class="row"><span class="tag">DE</span><p class="for">Eine hervorragende Idee. Vielleicht erkennen Sie
+dann endlich, dass ich die Wahrheit sage.</p></div><div class="row"><span class="tag">FR</span><p class="for">Excellente idée. Comme ça, vous verrez peut-être
+enfin que je dis la vérité.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Прекрасная мысль. Быть может, вы наконец увидите,
+что я говорю правду.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Прекрасная мысль. Может, хоть тогда вы увидите,
+что я говорю правду.</p></div>
+  </div>
+  <p class="why">`Perhaps then` — «хоть тогда»; «быть может» разведено</p>
+</article>
+<article class="card" id="sce4_c3_02.bytes|04002EB2|50">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_02|04002EB2|50</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">Хе. Такой случай посмаковать былые злодеяния
+вы, надо думать, упустить не могли.</span></li><li><span class="sp">Ланг</span><span class="ln">Вы убили президента Вана!</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех-хех.
+Убил. Но смаковать тут, право, нечего.</span></li><li><span class="sp">Канис</span><span class="ln">Меня заинтересовало другое, о чём вы говорили.
+Вернее сказать — кое-кто.</span></li><li><span class="sp">Эджворт</span><span class="ln">Тот, кого вы ищете, надо полагать...</span></li><li><span class="sp">Канис</span><span class="ln">Именно. Ради этого я и отлучился ненадолго
+из тюрьмы — найти одного щенка.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">A young pup in a rather eyecatching red raincoat.</p></div><div class="row"><span class="tag">DE</span><p class="for">Einen Welpen in einem ziemlich auffälligen roten
+Regenmantel.</p></div><div class="row"><span class="tag">FR</span><p class="for">Un jeune chiot affublé d&#x27;un imperméable rouge
+assez voyant.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Щенка в весьма приметном красном плаще.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Щенка в очень приметном красном плаще.</p></div>
+  </div>
+  <p class="why">«весьма» без опоры (`rather eyecatching`); зацепка не тронута</p>
+</article>
+<article class="card" id="sce4_c3_03.bytes|04002F02|3">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F02|3</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">?органайзер</span><span class="ln">-- Мой нежданный спаситель --</span></li><li><span class="sp">Канис</span><span class="ln">Как вы и догадались, президента Вана
+убил я.</span></li><li><span class="sp">Канис</span><span class="ln">Но из-за этого и я стал помехой,
+от которой нужно было избавиться.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">The impostor president, Winner, Laguarde -- all
+three were keen to... guarantee my silence.</p></div><div class="row"><span class="tag">DE</span><p class="for">Der falsche Präsident, Winner, Laguarde – die drei
+hatten Interesse, mich zum Schweigen zu bringen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Le président imposteur, Victor, Lagarde...
+Ces trois-là voulaient s&#x27;assurer de mon silence.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Самозваный президент, Победин, Лястраж —
+все трое желали... позаботиться о моём молчании.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Самозваный президент, Победин, Лястраж —
+все трое хотели... позаботиться о моём молчании.</p></div>
+  </div>
+  <p class="why">«желали» — книжное; `keen to`</p>
+</article>
+<article class="card" id="sce4_c3_03.bytes|04002F02|4">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F02|4</code><span class="v alt">ревьюер: свой вариант</span></div></header>
+  <ol class="ctx"><li><span class="sp">?органайзер</span><span class="ln">-- Мой нежданный спаситель --</span></li><li><span class="sp">Канис</span><span class="ln">Как вы и догадались, президента Вана
+убил я.</span></li><li><span class="sp">Канис</span><span class="ln">Но из-за этого и я стал помехой,
+от которой нужно было избавиться.</span></li><li><span class="sp">Канис</span><span class="ln">Самозваный президент, Победин, Лястраж —
+все трое желали... позаботиться о моём молчании.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">And if I hadn&#x27;t met my friend the young pup again,
+they might even have succeeded.</p></div><div class="row"><span class="tag">DE</span><p class="for">Hätte ich den Welpen nicht wiedergetroffen,
+hätten sie vielleicht sogar Erfolg gehabt.</p></div><div class="row"><span class="tag">FR</span><p class="for">Et si je n&#x27;avais pas retrouvé mon ami le jeune
+chiot, ils auraient bien pu réussir.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">И если бы я не встретил вновь моего друга-щенка,
+у них бы, пожалуй, получилось.</p></div>
+    <div class="row"><span class="tag">редактор</span><p class="mid">И не встреться мне снова мой друг-щенок,
+у них бы, пожалуй, получилось.</p></div>
+    <div class="row"><span class="tag now">итог</span><p class="new">И не встреться мне вновь мой друг-щенок,
+у них бы, пожалуй, получилось.</p></div>
+  </div>
+  <p class="why">«не встретил вновь моего друга» — тяжёлый книжный порядок</p><p class="rw">Ревьюер: «вновь» трогать нельзя: Эджворт переспрашивает именно его — 2F53|0 «„Вновь“? Значит, вы встречались и раньше?» (EN `&quot;Again&quot;?`, нем. `Wiedergetroffen?`); со «снова» переспрос повисает. Порядок редактора хорош — взят, «вновь» возвращено (об этом же предупреждал прежний ревьюер листа c5)</p>
+</article>
+<article class="card" id="sce4_c3_03.bytes|04002F02|39">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F02|39</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">А ещё услышал, как они вынашивают
+один гнусный замысел.</span></li><li><span class="sp">Канис</span><span class="ln">Замысел убрать меня — единственного, кто ещё
+знал правду, — с дороги.</span></li><li><span class="sp">Канис</span><span class="ln">К счастью, он любезно пришёл меня предупредить.
+Я, видите ли, ждал внутри.</span></li><li><span class="sp">Канис</span><span class="ln">А позже он как-то обмолвился...</span></li><li><span class="sp">Канис</span><span class="ln">...что был в любимом красном плаще.</span></li><li><span class="sp">Канис</span><span class="ln">Так или иначе, он вывел меня оттуда.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">And, being a very considerate boy...</p></div><div class="row"><span class="tag">DE</span><p class="for">Und, da er ein sehr aufmerksamer Junge war...</p></div><div class="row"><span class="tag">FR</span><p class="for">Et comme c&#x27;était un garçon consciencieux...</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">И, будучи мальчиком весьма предусмотрительным...</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">А мальчик он очень предусмотрительный...</p></div>
+  </div>
+  <p class="why">утверждённый образец пользователя</p>
+</article>
+<article class="card" id="sce4_c3_03.bytes|04002F02|40">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F02|40</code><span class="v alt">ревьюер: свой вариант</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Замысел убрать меня — единственного, кто ещё
+знал правду, — с дороги.</span></li><li><span class="sp">Канис</span><span class="ln">К счастью, он любезно пришёл меня предупредить.
+Я, видите ли, ждал внутри.</span></li><li><span class="sp">Канис</span><span class="ln">А позже он как-то обмолвился...</span></li><li><span class="sp">Канис</span><span class="ln">...что был в любимом красном плаще.</span></li><li><span class="sp">Канис</span><span class="ln">Так или иначе, он вывел меня оттуда.</span></li><li><span class="sp">Канис</span><span class="ln">И, будучи мальчиком весьма предусмотрительным...</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">...thought to erase both our footprints from
+the scene of the crime.</p></div><div class="row"><span class="tag">DE</span><p class="for">... kam er auf die Idee, unsere Fußspuren vom Ort
+des Verbrechens zu entfernen.</p></div><div class="row"><span class="tag">FR</span><p class="for">... il a pensé à effacer nos empreintes de pas
+sur la scène du crime.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">...решил стереть наши с ним следы
+с места преступления.</p></div>
+    <div class="row"><span class="tag">редактор</span><p class="mid">...и додумался стереть наши с ним следы
+с места преступления.</p></div>
+    <div class="row"><span class="tag now">итог</span><p class="new">...и догадался стереть наши с ним следы
+с места преступления.</p></div>
+  </div>
+  <p class="why">связка после нового |39: деепричастия больше нет, нужен союз; `thought to` — «додумался»</p><p class="rw">Ревьюер: союз после нового |39 нужен, но «додумался» в живой речи окрашено иронией («додумался же!»), а здесь похвала предусмотрительности; `thought to` → «догадался»</p>
+</article>
+<article class="card" id="sce4_c3_03.bytes|04002F35|0">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F35|0</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">И пока они любовались зрелищем, он вывел меня
+через боковой выход.</span></li><li><span class="sp">Эджворт</span><span class="ln">Вы так и не ответили на мой вопрос. Вы правда
+считаете, что за всем этим стоит он?</span></li><li><span class="sp">Канис</span><span class="ln">Считаю, разумеется.
+Верно, Аид? Да-а-а. Счита-а-аю...</span></li><li><span class="sp">?органайзер</span><span class="ln">-- Мой нежданный спаситель --</span></li><li><span class="sp">Канис</span><span class="ln">Как вы и догадались, президента Вана
+убил я.</span></li><li><span class="sp">Канис</span><span class="ln">Но из-за этого и я стал помехой,
+от которой нужно было избавиться.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">The impostor president, Winner, Laguarde -- all
+three were keen to... guarantee my silence.</p></div><div class="row"><span class="tag">DE</span><p class="for">Der falsche Präsident, Winner, Laguarde – die drei
+hatten Interesse, mich zum Schweigen zu bringen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Le président imposteur, Victor, Lagarde...
+Ces trois-là voulaient s&#x27;assurer de mon silence.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Самозваный президент, Победин, Лястраж —
+все трое желали... позаботиться о моём молчании.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Самозваный президент, Победин, Лястраж —
+все трое хотели... позаботиться о моём молчании.</p></div>
+  </div>
+  <p class="why">копия 2F02|3</p>
+</article>
+<article class="card" id="sce4_c3_03.bytes|04002F36|0">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F36|0</code><span class="v alt">ревьюер: свой вариант</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">Вы так и не ответили на мой вопрос. Вы правда
+считаете, что за всем этим стоит он?</span></li><li><span class="sp">Канис</span><span class="ln">Считаю, разумеется.
+Верно, Аид? Да-а-а. Счита-а-аю...</span></li><li><span class="sp">?органайзер</span><span class="ln">-- Мой нежданный спаситель --</span></li><li><span class="sp">Канис</span><span class="ln">Как вы и догадались, президента Вана
+убил я.</span></li><li><span class="sp">Канис</span><span class="ln">Но из-за этого и я стал помехой,
+от которой нужно было избавиться.</span></li><li><span class="sp">Канис</span><span class="ln">Самозваный президент, Победин, Лястраж —
+все трое желали... позаботиться о моём молчании.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">And if I hadn&#x27;t met my friend the young pup again,
+they might even have succeeded.</p></div><div class="row"><span class="tag">DE</span><p class="for">Hätte ich den Welpen nicht wiedergetroffen,
+hätten sie vielleicht sogar Erfolg gehabt.</p></div><div class="row"><span class="tag">FR</span><p class="for">Et si je n&#x27;avais pas retrouvé mon ami le jeune
+chiot, ils auraient bien pu réussir.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">И если бы я не встретил вновь моего друга-щенка,
+у них бы, пожалуй, получилось.</p></div>
+    <div class="row"><span class="tag">редактор</span><p class="mid">И не встреться мне снова мой друг-щенок,
+у них бы, пожалуй, получилось.</p></div>
+    <div class="row"><span class="tag now">итог</span><p class="new">И не встреться мне вновь мой друг-щенок,
+у них бы, пожалуй, получилось.</p></div>
+  </div>
+  <p class="why">копия 2F02|4</p><p class="rw">Ревьюер: копия 2F02|4 — то же: «вновь» держит переспрос Эджворта 2F53|0</p>
+</article>
+<article class="card" id="sce4_c3_03.bytes|04002F4C|4">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F4C|4</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Кей</span><span class="ln">Погодите, так те, кого вам заказывают, иногда
+пытаются убить вас в ответ? Или...?</span></li><li><span class="sp">Канис</span><span class="ln">Бывает. Изредка.
+Но в тот раз было иначе.</span></li><li><span class="sp">Эджворт</span><span class="ln">Но, мистер Канис, вы профессиональный убийца.
+И, как известно, на редкость умелый.</span></li><li><span class="sp">Эджворт</span><span class="ln">Уйти даже от троих нападающих для вас —
+сущий пустяк, разве нет?</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. Вы меня переоцениваете, мистер Эджворт.</span></li><li><span class="sp">Канис</span><span class="ln">Вы, кажется, забываете, что без Аида
+я и по улице пройти не могу.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Against three assailants, I wouldn&#x27;t have lasted
+more than a few moments.</p></div><div class="row"><span class="tag">DE</span><p class="for">Gegen drei Angreifer hätte ich so gut wie keine
+Chance gehabt.</p></div><div class="row"><span class="tag">FR</span><p class="for">Contre trois agresseurs, je n&#x27;aurais pas tenu bien
+longtemps.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Против троих я не продержался бы
+и нескольких мгновений.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Против троих я не продержался бы
+и минуты.</p></div>
+  </div>
+  <p class="why">«нескольких мгновений» — книжно; по-русски «и минуты»</p>
+</article>
+<article class="card rejected" id="sce4_c3_03.bytes|04002F4C|6">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F4C|6</code><span class="v no">ревьюер: отклонил</span></div></header>
+  <ol class="ctx"><li><span class="sp">Эджворт</span><span class="ln">Но, мистер Канис, вы профессиональный убийца.
+И, как известно, на редкость умелый.</span></li><li><span class="sp">Эджворт</span><span class="ln">Уйти даже от троих нападающих для вас —
+сущий пустяк, разве нет?</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. Вы меня переоцениваете, мистер Эджворт.</span></li><li><span class="sp">Канис</span><span class="ln">Вы, кажется, забываете, что без Аида
+я и по улице пройти не могу.</span></li><li><span class="sp">Канис</span><span class="ln">Против троих я не продержался бы
+и нескольких мгновений.</span></li><li><span class="sp">Эджворт</span><span class="ln">Вот как. Значит, даже лучшие из убийц
+пасуют перед прямым нападением?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">We&#x27;re... not hugely fond of such situations, shall we
+say? I certainly wouldn&#x27;t have liked my chances.</p></div><div class="row"><span class="tag">DE</span><p class="for">Wir sind... nicht sonderlich erfreut über solche
+Situationen. Ich wollte es lieber vermeiden.</p></div><div class="row"><span class="tag">FR</span><p class="for">Nous n&#x27;apprécions guère l&#x27;infériorité numérique.
+Mes chances de survie auraient été minces.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Скажем так... мы подобного не жалуем.
+Шансов у меня было бы немного.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Скажем так... мы такого не любим.
+Шансов у меня было бы немного.</p></div>
+  </div>
+  <p class="why">«подобного не жалуем» — архаика; `not hugely fond of`</p><p class="rw">Ревьюер: «не жалуем» — живое слово («чужих тут не жалуют»), не архаика, и оно держит преуменьшение `not hugely fond of…, shall we say`; «не любим» его теряет и звучит плоско</p>
+</article>
+<article class="card" id="sce4_c3_03.bytes|04002F89|3">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_03|04002F89|3</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Уверен.</span></li><li><span class="sp">Защитин</span><span class="ln">Н-ну ничего себе!</span></li><li><span class="sp">Эджворт</span><span class="ln">(У нас есть то, что показывает, почему эта дата
+так важна...)</span></li><li><span class="sp">Эджворт</span><span class="ln">Вы уверены, что в машине было двое детей?</span></li><li><span class="sp">Канис</span><span class="ln">Давно это было, но помню я всё так ясно,
+будто вчера.</span></li><li><span class="sp">Канис</span><span class="ln">Их было двое. Никаких сомнений.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Why do you ask, Mr. Prosecutor? Is there some
+significance in the number?</p></div><div class="row"><span class="tag">DE</span><p class="for">Warum fragen Sie, Hr. Staatsanwalt? Ist die Zahl
+von Bedeutung?</p></div><div class="row"><span class="tag">FR</span><p class="for">Pourquoi cette question, M. le procureur ?
+Ce chiffre a-t-il une importance ?</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Отчего вы спрашиваете, господин прокурор?
+Число что-то значит?</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">А почему вы спрашиваете, господин прокурор?
+Число что-то значит?</p></div>
+  </div>
+  <p class="why">«отчего» — книжное; `Why do you ask`</p>
+</article>
+<article class="card" id="sce4_c3_04.bytes|04003002|8">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_04|04003002|8</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">Видите ли, один из мальчиков был связан
+по рукам и ногам.</span></li><li><span class="sp">Кей</span><span class="ln">Это, наверное, мистер Морозов так задумал —
+чтобы сын Густо не попал на конкурс!</span></li><li><span class="sp">Эджворт</span><span class="ln">Да. Без сына — а тот пробовал все его десерты —
+у мистера Густо не было шансов победить.</span></li><li><span class="sp">Канис</span><span class="ln">Кхех-хех-хех. Так вот что за этим стояло.</span></li><li><span class="sp">Канис</span><span class="ln">Увы, ни один из мальчиков ничего
+такого не помнил.</span></li><li><span class="sp">Эджворт</span><span class="ln">Не помнил?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">No. When we met each other again on that night
+twelve years ago, the young pup explained it to me.</p></div><div class="row"><span class="tag">DE</span><p class="for">Nein. Mein Freund, der junge Welpe, erklärte mir
+das, als wir uns Jahre später trafen.</p></div><div class="row"><span class="tag">FR</span><p class="for">Lors de nos retrouvailles quelques années après,
+mon ami le jeune chiot me l&#x27;a confié...</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Нет. Когда мы вновь встретились той ночью
+двенадцать лет назад, щенок мне всё объяснил.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Нет. Когда мы снова встретились той ночью
+двенадцать лет назад, щенок мне всё объяснил.</p></div>
+  </div>
+  <p class="why">«вновь» — книжное</p>
+</article>
+<article class="card" id="sce4_c3_04.bytes|04003002|16">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_04|04003002|16</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Канис</span><span class="ln">И от пережитого потрясения оба
+потеряли память.</span></li><li><span class="sp">Канис</span><span class="ln">Даже собственных имён не помнили.</span></li><li><span class="sp">Кей</span><span class="ln">Ого. Значит, они и сами не знали,
+что их отцы — Морозов и Густо?</span></li><li><span class="sp">Эджворт</span><span class="ln">Если он говорит правду,
+то, скорее всего, так и есть.</span></li><li><span class="sp">Эджворт</span><span class="ln">(А значит, сведений всё ещё мало, чтобы понять,
+кто наш кукловод...)</span></li><li><span class="sp">Эджворт</span><span class="ln">Мистер Канис, — не расскажете,
+что было дальше?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Keh heh. By all means.</p></div><div class="row"><span class="tag">DE</span><p class="for">Kehe. Gern.</p></div><div class="row"><span class="tag">FR</span><p class="for">Hé hé hé... Bien entendu...</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Кхех-хех. Извольте.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Кхех-хех. Охотно.</p></div>
+  </div>
+  <p class="why">«Извольте» — вычурность; нем. `Gern`</p>
+</article>
+<article class="card" id="sce4_c3_04.bytes|04003002|43">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_04|04003002|43</code><span class="v alt">ревьюер: свой вариант</span></div></header>
+  <ol class="ctx"><li><span class="sp">Ван</span><span class="ln">П-постойте — я ведь впервые его увижу!</span></li><li><span class="sp">Ван</span><span class="ln">И, может быть, в последний раз! Прошу —
+дайте мне ещё хоть несколько минут!</span></li><li><span class="sp">Канис</span><span class="ln">Я думал, он станет молить о пощаде, но... нет.
+Любопытный был человек.</span></li><li><span class="sp">Канис</span><span class="ln">Я сказал, что не знал о его ребёнке.
+«Никто не знал», — ответил он и покачал головой.</span></li><li><span class="sp">Канис</span><span class="ln">«Я и сам не знал. Но теперь мир узнает,
+что у меня есть сын. Уж я об этом позабочусь».</span></li><li><span class="sp">Канис</span><span class="ln">«Я даже кое-что подготовил —
+на самый крайний случай».</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">And the son in question -- it was the young
+gentleman with the horns here, correct?</p></div><div class="row"><span class="tag">DE</span><p class="for">Und beim fraglichen Sohn... handelt es sich um
+den jungen Mann mit den Hörnern hier, richtig?</p></div><div class="row"><span class="tag">FR</span><p class="for">Ce fils en question...
+Il s&#x27;agit du garçon aux cornes ici présent, hum ?</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">А сын этот — тот самый юный господин
+с рогами, что стоит здесь, не так ли?</p></div>
+    <div class="row"><span class="tag">редактор</span><p class="mid">А сын этот — вот этот юный господин
+с рогами, не так ли?</p></div>
+    <div class="row"><span class="tag now">итог</span><p class="new">А сын этот — вот этот юный господин
+с рогами, верно?</p></div>
+  </div>
+  <p class="why">«что стоит здесь» — книжное придаточное на `here`</p><p class="rw">Ревьюер: придаточное снято верно; заодно `correct?` — «верно?», как у него везде («Верно, мальчик?»), а не «не так ли» (норма №10); «с рогами», которое переспрашивает Кей, цело</p>
+</article>
+<article class="card" id="sce4_c3_04.bytes|04003084|11">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_04|04003084|11</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Защитин</span><span class="ln">Полиция в конце концов разыскала сынишку
+Морозова и всё ему вернула.</span></li><li><span class="sp">Защитин</span><span class="ln">Но если Конёк был сыном Морозова...</span></li><li><span class="sp">Защитин</span><span class="ln">...то он же и есть «щенок» Каниса?
+Проще говоря, наш злодей-кукловод?</span></li><li><span class="sp">Эджворт</span><span class="ln">Нет. Исключено. Он мёртв.
+Он никак не может стоять за всем этим.</span></li><li><span class="sp">Эджворт</span><span class="ln">Наш кукловод всё ещё где-то за кулисами.
+Выжидает... Наблюдает...</span></li><li><span class="sp">Кей</span><span class="ln">...Ой, простите, мистер Канис. Мы тут
+немного увлеклись.</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Not at all, my dear. We found your little chat most 
+enlightening, didn&#x27;t we, Helmut? Yes. Yesss.</p></div><div class="row"><span class="tag">DE</span><p class="for">Kein Problem. Ihre kleine Unterhaltung war sehr
+aufschlussreich. Nicht wahr, Hades? Ja, ja. Jaaaaa!</p></div><div class="row"><span class="tag">FR</span><p class="for">Ce n&#x27;est rien, ma chère. Cette conversation était
+fort instructive, hein, Pluton ? Oh, que oui !</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Ничего, дитя моё. Ваша беседа нас весьма просветила,
+верно, Аид? Да. Да-а-а.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Ничего, дитя моё. Мы столько узнали из вашей
+беседы, верно, Аид? Да. Да-а-а.</p></div>
+  </div>
+  <p class="why">«весьма просветила» — книжность; сказано по-живому</p>
+</article>
+<article class="card" id="sce4_c3_07.bytes|04003202|28">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c3_07|04003202|28</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Кей</span><span class="ln">С-Семён...!?
+Но... всё это? Правда...?</span></li><li><span class="sp">Кей</span><span class="ln">Не верю! Мы ему доверяли!
+И он нам!</span></li><li><span class="sp">Кей</span><span class="ln">Не говорите, что всё это было враньём...
+Это было бы... слишком ужасно...</span></li><li><span class="sp">Эджворт</span><span class="ln">Мне жаль, Кей...</span></li><li><span class="sp">Эджворт</span><span class="ln">М? Кто это?</span></li><li><span class="sp">мальчишка</span><span class="ln">Эй! Куда это вы собрались, дед!?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Keh heh heh heh.
+Nothing escapes you, does it, young pup?</p></div><div class="row"><span class="tag">DE</span><p class="for">Kehehehe. Dir entgeht aber auch gar nichts, was,
+kleiner Welpe?</p></div><div class="row"><span class="tag">FR</span><p class="for">Hé hé hé hé...
+Rien ne t&#x27;échappe, n&#x27;est-ce pas, petite canaille ?</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Кхех хех хех хех.
+Ничего-то от тебя не укроется, а, щенок?</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Кхех-хех-хех-хех.
+Ничего-то от тебя не укроется, а, щенок?</p></div>
+  </div>
+  <p class="why">punct: смех без дефисов — во всём корпусе «Кхех-хех-хех»</p>
+</article>
+<article class="card" id="sce4_c4_09.bytes|04003A02|29">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c4_09|04003A02|29</code><span class="chip">калька</span><span class="v alt">нашёл ревьюер</span></div></header>
+  <ol class="ctx"><li><span class="sp">де Киллер</span><span class="ln">Посторонитесь, Канис. Этот человек — моя цель.</span></li><li><span class="sp">Канис</span><span class="ln">Я бы вежливо попросил вас отказаться
+именно от этого заказа.</span></li><li><span class="sp">Канис</span><span class="ln">За своё он ответит. Но в тюрьме,
+а не под вашим клинком.</span></li><li><span class="sp">де Киллер</span><span class="ln">А если я откажусь?</span></li><li><span class="sp">Канис</span><span class="ln">Скажем так: единственную жизнь, что я спас,
+я так просто отнять не дам.</span></li><li><span class="sp">де Киллер</span><span class="ln">Вы? Спасли жизнь?
+Бодхидхарма Канис — сам Слепой Мясник?</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">Keh heh heh! Preposterous, I know.</p></div><div class="row"><span class="tag">DE</span><p class="for">Kehehe! Ziemlich absurd, ich weiß.</p></div><div class="row"><span class="tag">FR</span><p class="for">Hé hé hé ! Je sais, cela semble inimaginable.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Кхех-хех-хех! Смехотворно, право.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Кхех-хех-хех! Смехотворно, понимаю.</p></div>
+  </div>
+  <p class="why">«право» — книжная частица без опоры, а `I know` (он сам признаёт нелепость) потеряно</p>
+</article>
+<article class="card" id="sce4_c5_00.bytes|04003BA9|0">
+  <header><div class="who"><div class="pic"><span class="mono">К</span></div><div class="who-t"><b>Бодхидхарма Канис</b><span class="age">??</span></div></div><div class="meta"><code>sce4_c5_00|04003BA9|0</code><span class="v ok">ревьюер: да</span></div></header>
+  <ol class="ctx"><li><span class="sp">Ллойд</span><span class="ln">...Слушайте, Шеф.Какую сенсацию теперь ловить-то
+будем, а?Я тебя чему учила, умница?
+Мы ж журналисты, ёлки-палки!Зацепка — наш с тобой товар!
+Наш хлеб!Такое даром не отдают!
+Даже ученице — и то нет!И-Извиняйте, Шеф...
+Мне, стал-быть, учиться ещё да учиться?Ну ладно тогда! Пойду сама зацепки-то
+искать!Вот это по-нашему! Давай, дерзай!Э-э, погоди-ка, пока не ушла...Ты это... а не поделишься, что там
+за зацепки такие?А...? Но... Шеф, вы же...Ну же, я ж тебе, считай, редактор!
+От начальства не таятся!Ох... Шеф, ну это уж не по-людски...</span></li><li><span class="sp">де Киллер</span><span class="ln">Рана на руке не затянулась и по сей день.Телохранитель, что её нанёс, дело своё
+знал отменно.Его я забуду не скоро.Но полно об этом...Пора возвращаться к жизни простого
+продавца мороженого.Хотя мне всё думается, что блинчики
+были бы мне больше по вкусу...Впрочем, спешить некуда. Время подумать
+найдётся — до следующего заказа.</span></li><li><span class="sp">Карчерато</span><span class="ln">Ну усадил ты меня, умник, на пятую точку —
+так я ж ещё не в нокауте!Держу стойку и жду момента!
+Выберемся мы ещё из этой дыры!Верно, Мишутка?Как ударит гонг на новый раунд побега —
+так мы сразу в атаку!А пока — тренировка, тренировка
+и снова тренировка!</span></li><li><span class="sp">Видалл</span><span class="ln">Хм? Хотите знать, не бросил ли я
+учиться на стилиста для животных?Нет, что вы! Учусь каждый божий день.
+И всё так же по локоть в грязи...Но, пожалуй, это мне идёт больше,
+чем газеты продавать.Как выйду отсюда, этим и стану
+заниматься всерьёз....Что? Срок мне продлили на несколько лет
+за то, что я помогал начальнице Лястраж?Г-Г-Г...
+ГЪЯ-А-А-А-А-А-А-А-АРГХ!А для чего, думаете, я с этими
+тупыми зверюгами так любезничал!?Да плевал я на эту лицензию!
+Мне отсюда выйти надо!За что МНЕ-Е-Е-Е-Е-Е-Е!?</span></li><li><span class="sp">Реджина</span><span class="ln">Я была в ТА-АКОМ шоке, когда узнала, чем
+Семён всё это время занимался.Я же ему верила! Я была его начальницей!И всё же... вечно горевать ведь не будешь.
+Шоу должно продолжаться!Нельзя же, чтобы отдел магии и отдел
+чревовещания нас обошли!Зажжём на сцене так, что соперников сдует —
+а вместе с ними и все эти страшные дни!</span></li></ol>
+  <div class="line">
+    <div class="row"><span class="tag">EN</span><p class="for">I must have gotten soft in my old age, haven&#x27;t I, boy?
+Yessss. Yes I haaave.Eighteen years ago I saved a life, and the troublesome
+child is still keeping me busy to this day.And now here we are, back in a cage.Well, we&#x27;ll have company soon, at least, won&#x27;t
+we, boy? Yesss. Our friend the pup.Things certainly won&#x27;t be dull with him around.
+Nooo. No they wooon&#x27;t.</p></div><div class="row"><span class="tag">DE</span><p class="for">Ich muss auf meine alten Tage wohl weich geworden
+sein, was, mein Junge? Jaaa. Jaaa, das muss ich.Vor 18 Jahren rettete ich ein Leben und der
+Racker hält mich heute noch auf Trab.Und da sind wir nun, wieder in einem Käfig.Na, wenigstens haben wir bald Gesellschaft, nicht
+wahr, Junge? Jaaa. Unseren Freund, den Welpen.Solange er da ist, wird es definitiv nicht
+langweilig. Neiiin. Neiiin, wird es nicht.</p></div><div class="row"><span class="tag">FR</span><p class="for">Je me ramollis avec l&#x27;âge, n&#x27;est-ce pas ?
+Qu&#x27;en dis-tu, mon grand ? Ouuui, c&#x27;est vrai.Cette vie sauvée il y a dix-huit ans
+me cause du souci encore aujourd&#x27;hui.Nous voilà donc de retour dans cette cage...Mais nous aurons bientôt de la compagnie, hein ?
+Ouuui... notre ami le jeune chiot.On ne s&#x27;ennuiera pas avec lui...
+Nooon... Oh, que non.</p></div>
+    <div class="row"><span class="tag was">было</span><p class="old">Смягчился я на старости лет, а, мальчик мой?
+Да-а-а. Смягчи-и-ился.Восемнадцать лет назад я спас жизнь — и хлопот
+с тем ребёнком мне хватает по сей день.И вот мы снова, снова в клетке.Что ж, зато скоро у нас будет компания, верно,
+мальчик мой? Да-а-а. Друг наш щенок.Скучно с ним точно не будет.
+Не-е-ет. Не бу-у-удет.</p></div>
+    
+    <div class="row"><span class="tag now">стало</span><p class="new">Смягчился я на старости лет, а, мальчик мой?
+Да-а-а. Смягчи-и-ился.Восемнадцать лет назад я спас жизнь — и хлопот
+с тем ребёнком мне хватает до сих пор.И вот мы снова, снова в клетке.Что ж, зато скоро у нас будет компания, верно,
+мальчик мой? Да-а-а. Друг наш щенок.Скучно с ним точно не будет.
+Не-е-ет. Не бу-у-удет.</p></div>
+  </div>
+  <p class="why">«по сей день» — книжное; `to this day`</p>
+</article></div></details>
+</main>

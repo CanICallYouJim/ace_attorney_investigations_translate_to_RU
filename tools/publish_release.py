@@ -113,8 +113,8 @@ def slim_strings() -> tuple[dict, dict]:
 def copy_layers(dest: Path) -> int:
     """Слой русских надписей — в данные патчера. Устаревший слой не везём.
 
-    Готовых картинок в комплекте нет и быть не может: витрина обещает «ни одного
-    файла игры». Едет только слой — наши пиксели и рецепты, — и склеивается
+    Полных игровых картинок в слое нет. Маленькая иконка установщика копируется
+    отдельно по поручению пользователя. Здесь едет только слой — наши пиксели и рецепты, — и склеивается
     у игрока из его же текстуры (`picture_layer.py`). Листы для показа
     остаются дома: это кадры игры.
     """
@@ -211,6 +211,12 @@ def main() -> int:
     for path in modules:
         shutil.copy2(path, patcher_out / path.name)
         print(f"   {path.parent.name}/{path.name}")
+
+    from build_installer_icon import build as build_icon
+    build_icon()
+    (patcher_out / "assets").mkdir(exist_ok=True)
+    for name in ("installer.ico", "installer.png", "installer.json"):
+        shutil.copy2(PATCHER / "assets" / name, patcher_out / "assets" / name)
 
     # Таблица опкодов — не документация, а данные разбора: без неё tps.py
     # не прочитает ни одной реплики. Ложится рядом с модулями, там её и ищет.
@@ -317,15 +323,19 @@ def version_of(package: str) -> str:
 
 def build_exe(patcher_out: Path, out: Path) -> int:
     """PyInstaller: один файл, данные внутри, консольное окно."""
+    # PyInstaller resolves data paths against its spec directory.
+    patcher_out, out = patcher_out.resolve(), out.resolve()
     work = out / ".build"
     cmd = [
         sys.executable, "-m", "PyInstaller",
         "--onefile", "--console", "--clean", "--noconfirm",
         "--name", EXE_NAME,
+        "--icon", str(patcher_out / "assets" / "installer.ico"),
         "--distpath", str(out),
         "--workpath", str(work),
         "--specpath", str(work),
         "--add-data", f"{patcher_out / 'data'}{';'}data",
+        "--add-data", f"{patcher_out / 'assets'}{';'}assets",
         # Внутри .exe у модулей __file__ указывает в распакованный _MEIPASS,
         # поэтому таблица опкодов должна лечь в его корень — рядом с ними.
         "--add-data", f"{patcher_out / 'opcodes.json'}{';'}.",

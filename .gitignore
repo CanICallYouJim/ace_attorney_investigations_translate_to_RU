@@ -2,6 +2,10 @@
 __pycache__/
 *.pyc
 
+# Installer portrait is extracted from the game; keep only its recipe in dev.
+patcher/assets/installer.png
+patcher/assets/installer.ico
+
 # Настройки IDE — машинно-специфичные.
 # .claude/ наоборот в репозитории: там скилл перевода, он общий.
 .idea/

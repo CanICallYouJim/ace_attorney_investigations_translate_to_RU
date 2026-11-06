@@ -1,0 +1,17 @@
+{
+  "source_dev": "867af0d",
+  "size": 92888726,
+  "sha256": "4db1d2a86ca74c9c377c50e48e9cba5645f651fafb895cff1fdac76dce6858b3",
+  "embedded_files_checked": 475,
+  "changed_segments_by_case": {
+    "1": 6,
+    "2": 35,
+    "3": 2,
+    "4": 3,
+    "5": 5
+  },
+  "smoke": {
+    "check": 0,
+    "text_build": 0
+  }
+}

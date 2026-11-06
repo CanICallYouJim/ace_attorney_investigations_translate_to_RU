@@ -1,0 +1,26 @@
+{
+  "bundle": "gk2_mapchar_trial",
+  "texture": "chr000_000_TexIdxEx",
+  "palette": "chr000_000_ColorPlteEx",
+  "palette_channel": "A",
+  "palette_row": 0,
+  "flip_y": true,
+  "crop": [
+    201,
+    0,
+    249,
+    49
+  ],
+  "resize": "NEAREST",
+  "sizes": [
+    16,
+    20,
+    24,
+    32,
+    40,
+    48,
+    64,
+    128,
+    256
+  ]
+}

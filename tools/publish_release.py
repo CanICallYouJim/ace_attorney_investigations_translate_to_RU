@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import ast
+import html
 import json
 import re
 import shutil
@@ -276,11 +277,37 @@ def write_showcase(out: Path, stats: dict) -> None:
         shutil.copytree(press_src, out / "press", dirs_exist_ok=True)
 
     def shot(match: re.Match) -> str:
-        name, _, caption = match.group(1).partition("|")
-        if not (press_src / name).exists():
-            print(f"   кадра нет, пропускаю: {name}")
+        """`{{shot:a.gif,a.png|Подпись}}` — первый из перечисленных файлов, что есть.
+
+        Так гифка в шапке подменяет статичный кадр, как только её положили,
+        а без неё на месте остаётся кадр.
+        """
+        names, _, caption = match.group(1).partition("|")
+        for name in (s.strip() for s in names.split(",")):
+            if (press_src / name).exists():
+                return f"![{caption}](press/{name})"
+        print(f"   кадра нет, пропускаю: {names}")
+        return ""
+
+    def gallery(match: re.Match) -> str:
+        """Сетка кадров по два в ряд с подписью под каждым — только из тех, что есть.
+
+        `{{gallery:01.png|Подпись; 02.png|Подпись}}`. Нет ни одного кадра — пусто,
+        и раздел, оставшийся без содержимого, выкидывается ниже целиком.
+        """
+        cells = []
+        for item in filter(None, (s.strip() for s in match.group(1).split(";"))):
+            name, _, caption = item.partition("|")
+            if not (press_src / name).exists():
+                print(f"   кадра нет, пропускаю: {name}")
+                continue
+            cap = html.escape(caption.strip())
+            cells.append(f'<td align="center" width="50%"><img src="press/{name}" alt="{cap}">'
+                         f"<br><sub>{cap}</sub></td>")
+        if not cells:
             return ""
-        return f"![{caption}](press/{name})"
+        rows = ["<tr>" + "".join(cells[i:i + 2]) + "</tr>" for i in range(0, len(cells), 2)]
+        return "<table>\n" + "\n".join(rows) + "\n</table>"
 
     text = (SHOWCASE / "README.md").read_text(encoding="utf-8")
     material_progress = ""
@@ -291,13 +318,21 @@ def write_showcase(out: Path, stats: dict) -> None:
     for key, value in stats.items():
         text = text.replace("{{" + key + "}}", f"{value:,}".replace(",", " ")
                             if isinstance(value, int) else str(value))
+    text = re.sub(r"\{\{gallery:([^}]+)\}\}", gallery, text)
     text = re.sub(r"\{\{shot:([^}]+)\}\}", shot, text)
 
     # Ролик живёт на CDN гитхаба: файл в репозитории плеером не показывается.
-    # Ссылку кладёт человек в release/press/video.txt — см. docs/press-kit.md.
-    video = press_src / "video.txt"
-    text = text.replace("{{video}}", video.read_text(encoding="utf-8").strip()
-                        if video.exists() else "")
+    # Ссылку кладёт человек в release/press/<имя>.txt — см. docs/press-kit.md.
+    # `{{video}}` — это video.txt, `{{video:installer}}` — installer.txt.
+    def video(match: re.Match) -> str:
+        link = press_src / f"{match.group(1) or 'video'}.txt"
+        if not link.exists():
+            print(f"   ролика нет, пропускаю: {link.name}")
+            return ""
+        return link.read_text(encoding="utf-8").strip()
+
+    text = re.sub(r"\{\{video(?::([\w-]+))?\}\}", video, text)
+    text = drop_empty_sections(text)
     text = re.sub(r"\n{3,}", "\n\n", text)
 
     exe = out / f"{EXE_NAME}.exe"
@@ -310,6 +345,28 @@ def write_showcase(out: Path, stats: dict) -> None:
     left = [m for m in re.findall(r"\{\{[^}]+\}\}", text) if m != "{{exe_mb}}"]
     if left:
         print(f"   ! в README остались незакрытые подстановки: {left}", file=sys.stderr)
+
+
+def drop_empty_sections(text: str) -> str:
+    """Заголовок, под которым после подстановок ничего не осталось, убрать.
+
+    Раздел «Как это выглядит» состоит из одних кадров и ролика; пока их нет,
+    на витрине висел бы голый заголовок. Пустым раздел считается, если до
+    следующего заголовка того же или старшего уровня (или до конца) одни
+    пустые строки. Заголовки первого уровня не трогаются.
+    """
+    def empty(match: re.Match) -> str:
+        nxt = match.group(2)
+        if nxt is None or len(nxt) <= len(match.group(1)):
+            return ""
+        return match.group(0)
+
+    pattern = re.compile(r"^(#{2,6}) [^\n]*\n(?:[ \t]*\n)*(?=(#{1,6}) |\Z)", re.M)
+    while True:
+        new = pattern.sub(empty, text)
+        if new == text:
+            return text
+        text = new
 
 
 def version_of(package: str) -> str:

@@ -1,6 +1,6 @@
 # Русская локализация Ace Attorney Investigations 2
 
-Локальная доработка установщика 6 ноября: графическое окно с фоном и музыкой из
+Опубликован [v2026-11-06.2](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-06.2), latest: графическое окно с фоном и музыкой из
 установленной игры, плавными полосами пяти этапов и движущимися диагоналями.
 Запуск исходников: `.venv\Scripts\python.exe patcher/aai2ru.py --gui`;
 `--preview` показывает анимацию без установки, `--console` сохраняет консольный режим.
@@ -10,7 +10,7 @@ traceback и крупная кнопка с вращающимся индика�
 Иконка EXE/окна — лицо Эджворта из игрового ретро-спрайта; воспроизводится
 `tools/build_installer_icon.py`, ICO9размеров16–256px.
 
-Обновление текстов 6 ноября: опубликован [v2026-11-06.1](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-06.1), latest; серверные размер и SHA256 EXE совпали с проверенным файлом, тег и origin/main указывают на один коммит. Включена 51 согласованная правка из dev; проверки 13/13 и запуск EXE пройдены. [Отчёт](work/release-update-20261106/report.md).
+Предыдущий текстовый выпуск 6 ноября: [v2026-11-06.1](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-06.1). Включена 51 согласованная правка из dev; проверки 13/13 и запуск EXE пройдены. [Отчёт](work/release-update-20261106/report.md). Эти тексты сохранены в новом выпуске.
 
 ## Место на диске и временные файлы
 

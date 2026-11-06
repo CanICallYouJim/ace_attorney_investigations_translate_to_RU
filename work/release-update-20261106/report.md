@@ -1,6 +1,6 @@
 ## 6 ноября: обновление после удалённых правок dev
 
-EXE проверен, main подготовлена локально; внешняя публикация ожидает явного разрешения пользователя после отказа auto-review.
+Опубликован [v2026-11-06.1](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-06.1), latest; серверные размер и SHA256 EXE совпали с проверенным файлом, тег и origin/main указывают на один коммит.
 Получены 10 коммитов origin/dev до `867af0d` через fast-forward.
 Обновлена 51 реплика: дела 1–5 — 6, 35, 2, 3, 5. Новых переводческих решений
 в этой операции не принималось. Счётчики прежние: 33422/33422 реплики,
@@ -16,7 +16,7 @@ EXE из чистой временной папки без Python в PATH: --che
 изображения, рецепты, код, список файлов прежние. Полный selftest графики
 не повторялся: слой и код неизменны, предыдущий прогон описан ниже.
 Отчёт и подтверждения: [work/release-update-20261106/report.md](../work/release-update-20261106/report.md).
-Следующий шаг: После явного разрешения пользователя отправить main в origin и опубликовать EXE как v2026-11-06.1; затем проверить серверные SHA256 и latest.
+Следующий шаг: Проверка обновлённого перевода в игре; прежние вопросы вычитки и медиа-долги сохраняются.
 
 ## Примеры включённых решений
 
@@ -29,3 +29,5 @@ EXE из чистой временной папки без Python в PATH: --che
 make_release.log, prepare_main.log/make_publish.log, exe_verification.json,
 exe_check.log, exe_text_build.log, publication_preflight.json и changes.json.
 Временные бандлы проверки EXE удалены через TemporaryDirectory.
+
+Публикация выполнена после явного подтверждения пользователя. git push origin main без force-push; gh release create v2026-11-06.1 с точным коммитом main и --latest. Проверены GitHub API: release, latest, тег и main; remote_release.json содержит серверный digest.

@@ -1,0 +1,4648 @@
+{
+  "installed_graphics": [
+    {
+      "name": "Sousa_TextCutBG_R_03",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "plate",
+      "texture": -4720321115355284545,
+      "texture_name": "Sousa_TextCutBG_R_03_eng",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2575,
+      "rough": 0,
+      "status": "foreign_text_confirmed_visually",
+      "numeric_status": "match",
+      "reason": "Dark English text differs from approved Russian PNG, but its full-frame mean<2 and no difference exceeds64. Original texture_sha is NOT a hash of the installed Russian image."
+    },
+    {
+      "name": "Sousa_TextCutBG_R_04",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "plate",
+      "texture": -8707348683166608853,
+      "texture_name": "Sousa_TextCutBG_R_04_eng",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2159,
+      "rough": 0,
+      "status": "foreign_text_confirmed_visually",
+      "numeric_status": "match",
+      "reason": "Dark English text differs from approved Russian PNG, but its full-frame mean<2 and no difference exceeds64. Original texture_sha is NOT a hash of the installed Russian image."
+    },
+    {
+      "name": "Sousa_TextCutBG_R_05",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "plate",
+      "texture": -3459496493650135564,
+      "texture_name": "Sousa_TextCutBG_R_05_eng",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.28,
+      "rough": 0,
+      "status": "foreign_text_confirmed_visually",
+      "numeric_status": "match",
+      "reason": "Dark English text differs from approved Russian PNG, but its full-frame mean<2 and no difference exceeds64. Original texture_sha is NOT a hash of the installed Russian image."
+    }
+  ],
+  "legacy_english_resource": [
+    {
+      "key": "SYS_DLG_GOTO_TITLE_NOSAVE",
+      "english": "Return to the title\\nscreen without saving?",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "SYS_DLG_SAVE_SUCCESS",
+      "english": "Save successful.\\nSelect Continue on the\\ntitle screen to load this\\nsave.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "SYS_DLG_SAVE_FAILED",
+      "english": "Save failed.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "SYS_DLG_SAVE_FAILED_NOCAPACITY",
+      "english": "Failed to save due to\\ninsufficient storage\\nspace.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "SYS_DLG_AUTOSAVE_FAILED",
+      "english": "Failed to auto-save.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "SYS_DLG_AUTOSAVE_FAILED_NOCAPACITY",
+      "english": "Failed to auto-save due\\nto insufficient storage\\nspace.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "SYS_DLG_BOOT_FAILED_NOCAPACITY",
+      "english": "You will not be able to\\nsave your game due to\\na lack of storage space\\non this device.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_NETWORK_FAILED",
+      "english": "Communication failed.\\nPlease check your network settings.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_PURCHASE_FAILED",
+      "english": "Transaction failed.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_RESTORE_FAILED",
+      "english": "Failed to restore\\npurchases.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_ITEM_NOT_PURCHASE",
+      "english": "Please purchase this\\nepisode to play it.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_ITEM_NOT_FOUND",
+      "english": "This item is not available for purchase \\nat this time.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_UNKNOWN_FAILED",
+      "english": "An unknown error has occurred.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_PURCHASE_SUCCESS",
+      "english": "Transaction complete.\\nPlay the episode you\\njust purchased?",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_RESTORE_SUCCESS",
+      "english": "Purchases have been\\nsuccessfully restored.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_PURCHASE_SUCCESS_ALL_SCENARIO",
+      "english": "Transaction complete.\\nYou can now play any\\nepisode via the \"Episode\\nSelect\" screen.",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_PURCHASE_SUCCESS_ONE_SCENARIO",
+      "english": "Transaction complete.\\nPlay the episode you\\njust purchased?",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "APP_QUIT_DIALOG_MSG",
+      "english": "Exit the app. Is it OK?",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_BUTTON_YES",
+      "english": "YES",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    },
+    {
+      "key": "DIALOG_BUTTON_NO",
+      "english": "NO",
+      "status": "untranslated; legacy/mobile-style resource; GK2 display not established",
+      "address": "data.unity3d/resources.assets:261"
+    }
+  ],
+  "legacy_gk1_labels": [
+    {
+      "cab": "sharedassets4.assets",
+      "id": 572,
+      "go": 226,
+      "name": "TextB_1",
+      "active": true,
+      "script": ".UILabel",
+      "strings": [
+        "Load this auto-save?\r"
+      ]
+    },
+    {
+      "cab": "sharedassets4.assets",
+      "id": 574,
+      "go": 89,
+      "name": "TextB_2",
+      "active": true,
+      "script": ".UILabel",
+      "strings": [
+        "*This is a temporary auto-save from when this game was last played, and will disappear if you choose \"No\"."
+      ]
+    },
+    {
+      "cab": "sharedassets4.assets",
+      "id": 576,
+      "go": 189,
+      "name": "SaveWindow_Text",
+      "active": true,
+      "script": ".UILabel",
+      "strings": [
+        "Save your progress?"
+      ]
+    },
+    {
+      "cab": "sharedassets4.assets",
+      "id": 600,
+      "go": 137,
+      "name": "SaveWindow_TextA",
+      "active": true,
+      "script": ".UILabel",
+      "strings": [
+        "Load this save?"
+      ]
+    },
+    {
+      "cab": "sharedassets4.assets",
+      "id": 659,
+      "go": 118,
+      "name": "Label",
+      "active": true,
+      "script": ".UILabel",
+      "strings": [
+        "*For when the game runs sluggishly."
+      ]
+    }
+  ],
+  "graphics_visual_review": {
+    "textures": 362,
+    "sheets": 19,
+    "errors": 0
+  },
+  "live_graphics": [
+    {
+      "name": "cutObj01_004",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": 4243307750215885934,
+      "texture_name": "cutObj01_004_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0013,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutObj01_008",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": -2014127274707384588,
+      "texture_name": "cutObj01_008_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0151,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutObj04_010",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": 4977438080111956004,
+      "texture_name": "cutObj04_010_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutObj04_03a",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": -3925712721000024603,
+      "texture_name": "cutObj04_03a_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0112,
+      "rough": 2,
+      "status": "match"
+    },
+    {
+      "name": "cutObj04_03b",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": 2,
+      "texture_name": "cutObj04_03b_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0049,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutObj04_045",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": -6788865379854636206,
+      "texture_name": "cutObj04_045_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0526,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutObj04_046",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": 3621433497660930279,
+      "texture_name": "cutObj04_046_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0117,
+      "rough": 2,
+      "status": "match"
+    },
+    {
+      "name": "cutobj01_015",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": -7926152015629805895,
+      "texture_name": "cutobj01_015_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0185,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutobj01_018",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": -1789853390601443625,
+      "texture_name": "cutobj01_018_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.005,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutobj02_003",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": -4477517015662646161,
+      "texture_name": "cutobj02_003_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.037,
+      "rough": 8,
+      "status": "match"
+    },
+    {
+      "name": "cutobj02_004",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": 5949592912289777415,
+      "texture_name": "cutobj02_004_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0187,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutobj03_024",
+      "bundle": "gk2_cutobjlocal",
+      "kind": "texture",
+      "texture": -2200816667717916323,
+      "texture_name": "cutobj03_024_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0087,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cutobj00_004",
+      "bundle": "gk2_cutobjlocal_trial",
+      "kind": "texture",
+      "texture": -3844883082830195262,
+      "texture_name": "cutobj00_004_ger",
+      "got_size": [
+        1440,
+        2880
+      ],
+      "wanted_size": [
+        1440,
+        2880
+      ],
+      "mean": 0.0048,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm01_002_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 1331076050369689711,
+      "texture_name": "itm01_002_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2609,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm01_00b_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 4826155471619290258,
+      "texture_name": "itm01_00b_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.285,
+      "rough": 4,
+      "status": "match"
+    },
+    {
+      "name": "itm01_00d_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -7144348579057646977,
+      "texture_name": "itm01_00d_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.1697,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm01_017_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -2912366797866302874,
+      "texture_name": "itm01_017_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2665,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm01_01d_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -3295625183575536200,
+      "texture_name": "itm01_01d_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2243,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "itm01_01e_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 2016225551135336853,
+      "texture_name": "itm01_01e_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3344,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm01_029_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 2,
+      "texture_name": "itm01_029_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.1895,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm01_02f_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -2503365587410524504,
+      "texture_name": "itm01_02f_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.1823,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm01_032_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -6194753951030699440,
+      "texture_name": "itm01_032_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_00f_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 1923510676744641514,
+      "texture_name": "itm02_00f_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2358,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_019_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 3,
+      "texture_name": "itm02_019_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2947,
+      "rough": 3,
+      "status": "match"
+    },
+    {
+      "name": "itm02_01b_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 5346303029781280586,
+      "texture_name": "itm02_01b_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2498,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_01c_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -3997112085727592431,
+      "texture_name": "itm02_01c_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2792,
+      "rough": 2,
+      "status": "match"
+    },
+    {
+      "name": "itm02_023_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 7289902558841130011,
+      "texture_name": "itm02_023_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3426,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_024_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 8893341499239575763,
+      "texture_name": "itm02_024_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2529,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_025_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -5945047302077197633,
+      "texture_name": "itm02_025_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2906,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_026_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 7174392864439338946,
+      "texture_name": "itm02_026_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2437,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_027_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -1226499339666098093,
+      "texture_name": "itm02_027_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2379,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_028_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -5813059173414265675,
+      "texture_name": "itm02_028_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2697,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm02_034_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 4558457999222828530,
+      "texture_name": "itm02_034_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3201,
+      "rough": 5,
+      "status": "match"
+    },
+    {
+      "name": "itm02_039_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 7107280756664345868,
+      "texture_name": "itm02_039_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.4309,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm03_003_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -9140550672797714750,
+      "texture_name": "itm03_003_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2579,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm03_004_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -6890706424944387121,
+      "texture_name": "itm03_004_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3754,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm03_006_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -6617087450389808887,
+      "texture_name": "itm03_006_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2813,
+      "rough": 3,
+      "status": "match"
+    },
+    {
+      "name": "itm03_009_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -4673589351255754432,
+      "texture_name": "itm03_009_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3633,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm03_00c_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -7275871114883444560,
+      "texture_name": "itm03_00c_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3635,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm03_00f_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -6968997984962681235,
+      "texture_name": "itm03_00f_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2497,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm03_01b_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 8396235276403087005,
+      "texture_name": "itm03_01b_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2361,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm04_004_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 1973180911758496896,
+      "texture_name": "itm04_004_00_l_ger",
+      "got_size": [
+        256,
+        256
+      ],
+      "wanted_size": [
+        256,
+        256
+      ],
+      "mean": 0.6437,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "itm04_01e_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": -7219927767128631866,
+      "texture_name": "itm04_01e_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2187,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm04_026_00_l",
+      "bundle": "gk2_idcom",
+      "kind": "texture",
+      "texture": 113440636277097098,
+      "texture_name": "itm04_026_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.2268,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm00_002_00_l",
+      "bundle": "gk2_idcom_trial",
+      "kind": "texture",
+      "texture": -4361567760455300659,
+      "texture_name": "itm00_002_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.271,
+      "rough": 3,
+      "status": "match"
+    },
+    {
+      "name": "itm00_004_01_l",
+      "bundle": "gk2_idcom_trial",
+      "kind": "texture",
+      "texture": -1439947063900993450,
+      "texture_name": "itm00_004_01_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.1372,
+      "rough": 2,
+      "status": "match"
+    },
+    {
+      "name": "itm00_006_00_l",
+      "bundle": "gk2_idcom_trial",
+      "kind": "texture",
+      "texture": -663379271192740052,
+      "texture_name": "itm00_006_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3676,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm00_00b_00_l",
+      "bundle": "gk2_idcom_trial",
+      "kind": "texture",
+      "texture": 8180228112183538369,
+      "texture_name": "itm00_00b_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.1882,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "itm00_00f_00_l",
+      "bundle": "gk2_idcom_trial",
+      "kind": "texture",
+      "texture": 1761880761371136111,
+      "texture_name": "itm00_00f_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3035,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "itm00_013_00_l",
+      "bundle": "gk2_idcom_trial",
+      "kind": "texture",
+      "texture": 5279247830648962891,
+      "texture_name": "itm00_013_00_l_ger",
+      "got_size": [
+        300,
+        300
+      ],
+      "wanted_size": [
+        300,
+        300
+      ],
+      "mean": 0.3007,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "efc_BigFont00",
+      "bundle": "gk2_idlocal_trial",
+      "kind": "texture",
+      "texture": 3607361236799404272,
+      "texture_name": "efc_BigFont00_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "efc_BigFont01",
+      "bundle": "gk2_idlocal_trial",
+      "kind": "texture",
+      "texture": -1041603604532997761,
+      "texture_name": "efc_BigFont01_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "efc_BigFont02",
+      "bundle": "gk2_idlocal_trial",
+      "kind": "texture",
+      "texture": -7303662590831430730,
+      "texture_name": "efc_BigFont02_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "efc_BigFont03",
+      "bundle": "gk2_idlocal_trial",
+      "kind": "texture",
+      "texture": -4715669257793929673,
+      "texture_name": "efc_BigFont03_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "efc_BigFont04",
+      "bundle": "gk2_idlocal_trial",
+      "kind": "texture",
+      "texture": 5902557320286828994,
+      "texture_name": "efc_BigFont04_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "efc_BigFont05",
+      "bundle": "gk2_idlocal_trial",
+      "kind": "texture",
+      "texture": 8191238029654469512,
+      "texture_name": "efc_BigFont05_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "titles_chess_ger",
+      "bundle": "gk2_logicchess_trial",
+      "kind": "splash",
+      "status": "match"
+    },
+    {
+      "name": "logic01_00b_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 2,
+      "texture_name": "logic01_00b_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic01_00e_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 3,
+      "texture_name": "logic01_00e_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic01_013_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 4,
+      "texture_name": "logic01_013_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic02_009_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 5,
+      "texture_name": "logic02_009_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic02_00b_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": -2407067880320538068,
+      "texture_name": "logic02_00b_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic02_023_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 8531554698071972124,
+      "texture_name": "logic02_023_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic02_025_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 4813470391980893355,
+      "texture_name": "logic02_025_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic02_02f_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 5680828188264414802,
+      "texture_name": "logic02_02f_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic03_007_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": -6091647218472619759,
+      "texture_name": "logic03_007_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic03_00b_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 6626046006801583082,
+      "texture_name": "logic03_00b_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic03_013_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": -1344253129335292845,
+      "texture_name": "logic03_013_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic04_00d_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": -3841977061569274098,
+      "texture_name": "logic04_00d_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic04_00e_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": 554584017928777802,
+      "texture_name": "logic04_00e_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic04_00f_s",
+      "bundle": "gk2_logickeyword",
+      "kind": "texture",
+      "texture": -5712327358251307030,
+      "texture_name": "logic04_00f_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic00_00e_s",
+      "bundle": "gk2_logickeyword_trial",
+      "kind": "texture",
+      "texture": 7219574846828080341,
+      "texture_name": "logic00_00e_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic00_013_s",
+      "bundle": "gk2_logickeyword_trial",
+      "kind": "texture",
+      "texture": 3153490138222426991,
+      "texture_name": "logic00_013_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "logic00_016_s",
+      "bundle": "gk2_logickeyword_trial",
+      "kind": "texture",
+      "texture": 1914628076216099649,
+      "texture_name": "logic00_016_s_ger",
+      "got_size": [
+        158,
+        158
+      ],
+      "wanted_size": [
+        158,
+        158
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map03",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": 3865295500357190978,
+      "texture_name": "map03_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0921,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map04",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": 4456817521333109736,
+      "texture_name": "map04_ger",
+      "got_size": [
+        3600,
+        1080
+      ],
+      "wanted_size": [
+        3600,
+        1080
+      ],
+      "mean": 0.0825,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "map08_00",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": -1508196091563073735,
+      "texture_name": "map08_00_ger",
+      "got_size": [
+        2160,
+        1080
+      ],
+      "wanted_size": [
+        2160,
+        1080
+      ],
+      "mean": 0.1011,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map08_01",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": 6849212271278320918,
+      "texture_name": "map08_01_ger",
+      "got_size": [
+        2160,
+        1080
+      ],
+      "wanted_size": [
+        2160,
+        1080
+      ],
+      "mean": 0.1239,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map09_00",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": -4998025550143083881,
+      "texture_name": "map09_00_ger",
+      "got_size": [
+        3600,
+        1440
+      ],
+      "wanted_size": [
+        3600,
+        1440
+      ],
+      "mean": 0.154,
+      "rough": 4,
+      "status": "match"
+    },
+    {
+      "name": "map09_01",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": -5405871688455346610,
+      "texture_name": "map09_01_ger",
+      "got_size": [
+        3600,
+        1440
+      ],
+      "wanted_size": [
+        3600,
+        1440
+      ],
+      "mean": 0.1534,
+      "rough": 4,
+      "status": "match"
+    },
+    {
+      "name": "map09_02",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": -5782453558674391608,
+      "texture_name": "map09_02_ger",
+      "got_size": [
+        3600,
+        1440
+      ],
+      "wanted_size": [
+        3600,
+        1440
+      ],
+      "mean": 0.1338,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map09_03",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": 7682296849920509964,
+      "texture_name": "map09_03_ger",
+      "got_size": [
+        3600,
+        1440
+      ],
+      "wanted_size": [
+        3600,
+        1440
+      ],
+      "mean": 0.1599,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "map0b",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": 3015114263899996905,
+      "texture_name": "map0b_ger",
+      "got_size": [
+        2340,
+        1260
+      ],
+      "wanted_size": [
+        2340,
+        1260
+      ],
+      "mean": 0.1878,
+      "rough": 2,
+      "status": "match"
+    },
+    {
+      "name": "map0d",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": -6552945969008702908,
+      "texture_name": "map0d_ger",
+      "got_size": [
+        2340,
+        1260
+      ],
+      "wanted_size": [
+        2340,
+        1260
+      ],
+      "mean": 0.1279,
+      "rough": 4,
+      "status": "match"
+    },
+    {
+      "name": "map11_00",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": 5264921781025904116,
+      "texture_name": "map11_00_ger",
+      "got_size": [
+        3060,
+        1620
+      ],
+      "wanted_size": [
+        3060,
+        1620
+      ],
+      "mean": 0.1508,
+      "rough": 2,
+      "status": "match"
+    },
+    {
+      "name": "map11_01",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": -7956242393412612067,
+      "texture_name": "map11_01_ger",
+      "got_size": [
+        3060,
+        1620
+      ],
+      "wanted_size": [
+        3060,
+        1620
+      ],
+      "mean": 0.1287,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map12",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": -317457935619913863,
+      "texture_name": "map12_ger",
+      "got_size": [
+        2745,
+        1170
+      ],
+      "wanted_size": [
+        2745,
+        1170
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map13",
+      "bundle": "gk2_mapbg",
+      "kind": "texture",
+      "texture": 2556857867614678955,
+      "texture_name": "map13_ger",
+      "got_size": [
+        2880,
+        1800
+      ],
+      "wanted_size": [
+        2880,
+        1800
+      ],
+      "mean": 0.1786,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map00",
+      "bundle": "gk2_mapbg_trial",
+      "kind": "texture",
+      "texture": -7386202263189280232,
+      "texture_name": "map00_ger",
+      "got_size": [
+        2880,
+        1620
+      ],
+      "wanted_size": [
+        2880,
+        1620
+      ],
+      "mean": 0.113,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "map01",
+      "bundle": "gk2_mapbg_trial",
+      "kind": "texture",
+      "texture": 4420482415149916973,
+      "texture_name": "map01_ger",
+      "got_size": [
+        2880,
+        1260
+      ],
+      "wanted_size": [
+        2880,
+        1260
+      ],
+      "mean": 0.1718,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map02",
+      "bundle": "gk2_mapbg_trial",
+      "kind": "texture",
+      "texture": 1996254206725341104,
+      "texture_name": "map02_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1194,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map03_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": 3846451159925324914,
+      "texture_name": "map03_cm_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1156,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map04_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -7435269120707917971,
+      "texture_name": "map04_cm_ger",
+      "got_size": [
+        3600,
+        1080
+      ],
+      "wanted_size": [
+        3600,
+        1080
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map08_00_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -7802593865274067939,
+      "texture_name": "map08_00_cm_ger",
+      "got_size": [
+        2160,
+        1080
+      ],
+      "wanted_size": [
+        2160,
+        1080
+      ],
+      "mean": 0.1581,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map08_01_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -9096737963012524584,
+      "texture_name": "map08_01_cm_ger",
+      "got_size": [
+        2160,
+        1080
+      ],
+      "wanted_size": [
+        2160,
+        1080
+      ],
+      "mean": 0.1491,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map09_00_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -6991620361976687386,
+      "texture_name": "map09_00_cm_ger",
+      "got_size": [
+        3600,
+        1440
+      ],
+      "wanted_size": [
+        3600,
+        1440
+      ],
+      "mean": 0.2336,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map09_01_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -2101020520901094330,
+      "texture_name": "map09_01_cm_ger",
+      "got_size": [
+        3600,
+        1440
+      ],
+      "wanted_size": [
+        3600,
+        1440
+      ],
+      "mean": 0.2317,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map09_02_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -5892825686165429449,
+      "texture_name": "map09_02_cm_ger",
+      "got_size": [
+        3600,
+        1440
+      ],
+      "wanted_size": [
+        3600,
+        1440
+      ],
+      "mean": 0.1776,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map09_03_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": 6583414214282692676,
+      "texture_name": "map09_03_cm_ger",
+      "got_size": [
+        3600,
+        1440
+      ],
+      "wanted_size": [
+        3600,
+        1440
+      ],
+      "mean": 0.2058,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map0b_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": 6560909231036246815,
+      "texture_name": "map0b_cm_ger",
+      "got_size": [
+        2340,
+        1260
+      ],
+      "wanted_size": [
+        2340,
+        1260
+      ],
+      "mean": 0.1747,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map0d_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": 7523858208126295013,
+      "texture_name": "map0d_cm_ger",
+      "got_size": [
+        2340,
+        1260
+      ],
+      "wanted_size": [
+        2340,
+        1260
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map11_00_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -4911681379689465147,
+      "texture_name": "map11_00_cm_ger",
+      "got_size": [
+        3060,
+        1620
+      ],
+      "wanted_size": [
+        3060,
+        1620
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map11_01_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": 1683475110301629723,
+      "texture_name": "map11_01_cm_ger",
+      "got_size": [
+        3060,
+        1620
+      ],
+      "wanted_size": [
+        3060,
+        1620
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map12_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -5456687512361288860,
+      "texture_name": "map12_cm_ger",
+      "got_size": [
+        2745,
+        1170
+      ],
+      "wanted_size": [
+        2745,
+        1170
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map13_cm",
+      "bundle": "gk2_mapbgclassic",
+      "kind": "texture",
+      "texture": -1772654457769941117,
+      "texture_name": "map13_cm_ger",
+      "got_size": [
+        2880,
+        1800
+      ],
+      "wanted_size": [
+        2880,
+        1800
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map00_cm",
+      "bundle": "gk2_mapbgclassic_trial",
+      "kind": "texture",
+      "texture": 759528512199542091,
+      "texture_name": "map00_cm_ger",
+      "got_size": [
+        2880,
+        1620
+      ],
+      "wanted_size": [
+        2880,
+        1620
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map01_cm",
+      "bundle": "gk2_mapbgclassic_trial",
+      "kind": "texture",
+      "texture": -7414009276901450871,
+      "texture_name": "map01_cm_ger",
+      "got_size": [
+        2880,
+        1260
+      ],
+      "wanted_size": [
+        2880,
+        1260
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "map02_cm",
+      "bundle": "gk2_mapbgclassic_trial",
+      "kind": "texture",
+      "texture": -439614789433043763,
+      "texture_name": "map02_cm_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1625,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapObj04_00_256",
+      "bundle": "gk2_mapobj",
+      "kind": "texture",
+      "texture": -5615776004565445207,
+      "texture_name": "mapObj04_00_256_ger",
+      "got_size": [
+        1440,
+        1495
+      ],
+      "wanted_size": [
+        1440,
+        1495
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapObj0d_00_256",
+      "bundle": "gk2_mapobj",
+      "kind": "texture",
+      "texture": -1674555348073790974,
+      "texture_name": "mapObj0d_00_256_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapObj0e_00_256",
+      "bundle": "gk2_mapobj",
+      "kind": "texture",
+      "texture": 8374211290584632641,
+      "texture_name": "mapObj0e_00_256_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0991,
+      "rough": 5,
+      "status": "match"
+    },
+    {
+      "name": "mapObj0e_01_256",
+      "bundle": "gk2_mapobj",
+      "kind": "texture",
+      "texture": 6397867218428890934,
+      "texture_name": "mapObj0e_01_256_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0973,
+      "rough": 5,
+      "status": "match"
+    },
+    {
+      "name": "mapObj11_01_256",
+      "bundle": "gk2_mapobj",
+      "kind": "texture",
+      "texture": -4799667027242486454,
+      "texture_name": "mapObj11_01_256_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapObj12_00_256",
+      "bundle": "gk2_mapobj",
+      "kind": "texture",
+      "texture": -2837244315367528480,
+      "texture_name": "mapObj12_00_256_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0904,
+      "rough": 6,
+      "status": "match"
+    },
+    {
+      "name": "mapObj02_00_256",
+      "bundle": "gk2_mapobj_trial",
+      "kind": "texture",
+      "texture": -3686445533703634355,
+      "texture_name": "mapObj02_00_256_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0466,
+      "rough": 8,
+      "status": "match"
+    },
+    {
+      "name": "mapObj04_00_256_cm",
+      "bundle": "gk2_mapobjclassic",
+      "kind": "texture",
+      "texture": 7931644802520901747,
+      "texture_name": "mapObj04_00_256_cm_ger",
+      "got_size": [
+        1440,
+        1493
+      ],
+      "wanted_size": [
+        1440,
+        1493
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapObj0d_00_256_cm",
+      "bundle": "gk2_mapobjclassic",
+      "kind": "texture",
+      "texture": -5905975998587652097,
+      "texture_name": "mapObj0d_00_256_cm_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapObj11_01_256_cm",
+      "bundle": "gk2_mapobjclassic",
+      "kind": "texture",
+      "texture": -8543907101156002431,
+      "texture_name": "mapObj11_01_256_cm_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapObj12_00_256_cm",
+      "bundle": "gk2_mapobjclassic",
+      "kind": "texture",
+      "texture": -6265255849412797759,
+      "texture_name": "mapObj12_00_256_cm_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapObj02_00_256_cm",
+      "bundle": "gk2_mapobjclassic_trial",
+      "kind": "texture",
+      "texture": -2671958099782776948,
+      "texture_name": "mapObj02_00_256_cm_ger",
+      "got_size": [
+        1440,
+        1440
+      ],
+      "wanted_size": [
+        1440,
+        1440
+      ],
+      "mean": 0.0608,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "gom_glove_model",
+      "bundle": "gk2_modelitemlocal",
+      "kind": "material",
+      "texture": -7925269427708247624,
+      "texture_name": "gom_glove_ger",
+      "got_size": [
+        2048,
+        2048
+      ],
+      "wanted_size": [
+        2048,
+        2048
+      ],
+      "mean": 0.0572,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "bag_01_model",
+      "bundle": "gk2_modelitemlocal_trial",
+      "kind": "material",
+      "texture": 2693432637758363588,
+      "texture_name": "bag_01_ger",
+      "got_size": [
+        2048,
+        2048
+      ],
+      "wanted_size": [
+        2048,
+        2048
+      ],
+      "mean": 0.109,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "opObj02_032_256",
+      "bundle": "gk2_openinglocal",
+      "kind": "texture",
+      "texture": 4388088181850304740,
+      "texture_name": "opObj02_032_256_ger",
+      "got_size": [
+        2880,
+        2880
+      ],
+      "wanted_size": [
+        2880,
+        2880
+      ],
+      "mean": 0.0632,
+      "rough": 6,
+      "status": "match"
+    },
+    {
+      "name": "cut01_013",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -8656623246586775710,
+      "texture_name": "cut01_013_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1167,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_02f",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": 2,
+      "texture_name": "cut01_02f_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0686,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "cut02_008",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -7961242783734885307,
+      "texture_name": "cut02_008_ger",
+      "got_size": [
+        2880,
+        1080
+      ],
+      "wanted_size": [
+        2880,
+        1080
+      ],
+      "mean": 0.0947,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_012",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -1306307266466338930,
+      "texture_name": "cut02_012_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.106,
+      "rough": 3,
+      "status": "match"
+    },
+    {
+      "name": "cut03_008",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -3706473221288131940,
+      "texture_name": "cut03_008_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0952,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_01b",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -5529222586945913537,
+      "texture_name": "cut03_01b_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0659,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_037",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": 8521083083255973117,
+      "texture_name": "cut03_037_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0644,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_03a",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": 6359550378297162169,
+      "texture_name": "cut03_03a_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1475,
+      "rough": 3,
+      "status": "match"
+    },
+    {
+      "name": "cut04_009",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": 695649316422502209,
+      "texture_name": "cut04_009_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0494,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_011",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -2250460191871338739,
+      "texture_name": "cut04_011_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1262,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_015",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -4862858475401871521,
+      "texture_name": "cut04_015_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1246,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_01e",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -5883740723397472112,
+      "texture_name": "cut04_01e_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_02b",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -190480797577348730,
+      "texture_name": "cut04_02b_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0299,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapVS04_0",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": 4880148738228128273,
+      "texture_name": "mapVS04_0_ger",
+      "got_size": [
+        2340,
+        1080
+      ],
+      "wanted_size": [
+        2340,
+        1080
+      ],
+      "mean": 0.0923,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapVS04_1",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -3970909816225244817,
+      "texture_name": "mapVS04_1_ger",
+      "got_size": [
+        2340,
+        1080
+      ],
+      "wanted_size": [
+        2340,
+        1080
+      ],
+      "mean": 0.0885,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapVS08_1",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -2375559530686746710,
+      "texture_name": "mapVS08_1_ger",
+      "got_size": [
+        2340,
+        1080
+      ],
+      "wanted_size": [
+        2340,
+        1080
+      ],
+      "mean": 0.1041,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapVS09_0",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -3050755049924876587,
+      "texture_name": "mapVS09_0_ger",
+      "got_size": [
+        2340,
+        1080
+      ],
+      "wanted_size": [
+        2340,
+        1080
+      ],
+      "mean": 0.1408,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapVS0d_1",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": 5262819224794946169,
+      "texture_name": "mapVS0d_1_ger",
+      "got_size": [
+        2340,
+        1080
+      ],
+      "wanted_size": [
+        2340,
+        1080
+      ],
+      "mean": 0.1016,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapVS11_1",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": -5945372006068890829,
+      "texture_name": "mapVS11_1_ger",
+      "got_size": [
+        2340,
+        1080
+      ],
+      "wanted_size": [
+        2340,
+        1080
+      ],
+      "mean": 0.1278,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "mapVS14_1",
+      "bundle": "gk2_upcut",
+      "kind": "texture",
+      "texture": 1754233757153037423,
+      "texture_name": "mapVS14_1_ger",
+      "got_size": [
+        2340,
+        1080
+      ],
+      "wanted_size": [
+        2340,
+        1080
+      ],
+      "mean": 0.1049,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut00_025",
+      "bundle": "gk2_upcut_trial",
+      "kind": "texture",
+      "texture": -8339738279185955576,
+      "texture_name": "cut00_025_ger",
+      "got_size": [
+        2880,
+        1080
+      ],
+      "wanted_size": [
+        2880,
+        1080
+      ],
+      "mean": 0.0974,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "cut01_004",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -5923781562880729659,
+      "texture_name": "cut01_004_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0246,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_007",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -1948390536425302168,
+      "texture_name": "cut01_007_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1076,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_008",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 2079767113020858643,
+      "texture_name": "cut01_008_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0349,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_009",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 406356990570563901,
+      "texture_name": "cut01_009_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2145,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_00a",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -1555231229523290121,
+      "texture_name": "cut01_00a_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0587,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_00c",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 8547733391101773964,
+      "texture_name": "cut01_00c_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0831,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_00e",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 3834894246493561192,
+      "texture_name": "cut01_00e_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0055,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_015",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -8977881510791291885,
+      "texture_name": "cut01_015_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0172,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_017",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 3,
+      "texture_name": "cut01_017_ger",
+      "got_size": [
+        1920,
+        2160
+      ],
+      "wanted_size": [
+        1920,
+        2160
+      ],
+      "mean": 0.0777,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_019",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 4,
+      "texture_name": "cut01_019_ger",
+      "got_size": [
+        1920,
+        2160
+      ],
+      "wanted_size": [
+        1920,
+        2160
+      ],
+      "mean": 0.096,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_01b",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -1299943272823876381,
+      "texture_name": "cut01_01b_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1086,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_01f",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 8681027472171740359,
+      "texture_name": "cut01_01f_ger",
+      "got_size": [
+        2880,
+        1080
+      ],
+      "wanted_size": [
+        2880,
+        1080
+      ],
+      "mean": 0.1674,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "cut01_027",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 6503680433348472835,
+      "texture_name": "cut01_027_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0952,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_030",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 5174697681396103106,
+      "texture_name": "cut01_030_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0834,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_036",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 2377097088796526246,
+      "texture_name": "cut01_036_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0222,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_037",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 6524395191999420729,
+      "texture_name": "cut01_037_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0309,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_038",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 4207514594451663077,
+      "texture_name": "cut01_038_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0332,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_039",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 5284002263547235649,
+      "texture_name": "cut01_039_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0298,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03a",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 5,
+      "texture_name": "cut01_03a_ger",
+      "got_size": [
+        1920,
+        2160
+      ],
+      "wanted_size": [
+        1920,
+        2160
+      ],
+      "mean": 0.0911,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03e_N",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -8680966452227184665,
+      "texture_name": "cut01_03e_N_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.087,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03e_P",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 536310661011401324,
+      "texture_name": "cut01_03e_P_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0878,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03e_W",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 957158394787691687,
+      "texture_name": "cut01_03e_W_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0871,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03e_X",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -7456179123100200380,
+      "texture_name": "cut01_03e_X_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0914,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03f_N",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -3272458023428363336,
+      "texture_name": "cut01_03f_N_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0785,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03f_P",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -7163097083812584345,
+      "texture_name": "cut01_03f_P_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0787,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03f_W",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -1411003739783679110,
+      "texture_name": "cut01_03f_W_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0757,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_03f_X",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -6214672886995480306,
+      "texture_name": "cut01_03f_X_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0778,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_040_N",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 1292736677929667139,
+      "texture_name": "cut01_040_N_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0937,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_040_P",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -5997761643933163184,
+      "texture_name": "cut01_040_P_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0954,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_040_W",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 4744648244249333372,
+      "texture_name": "cut01_040_W_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0916,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_040_X",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 1268494955579420623,
+      "texture_name": "cut01_040_X_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0847,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_001",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -1418731202243299742,
+      "texture_name": "cut02_001_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1259,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "cut02_003",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 235917985985745285,
+      "texture_name": "cut02_003_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0676,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_004",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 4229924382455556708,
+      "texture_name": "cut02_004_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.063,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_005",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 8223988021620482689,
+      "texture_name": "cut02_005_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1085,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_006",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -9180770002453552208,
+      "texture_name": "cut02_006_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1116,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_010",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -8246647625706598968,
+      "texture_name": "cut02_010_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1646,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_011",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -4684067997597462964,
+      "texture_name": "cut02_011_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1403,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_01e",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 2,
+      "texture_name": "cut02_01e_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1968,
+      "rough": 9,
+      "status": "match"
+    },
+    {
+      "name": "cut02_02d",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 2789856642558216205,
+      "texture_name": "cut02_02d_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1752,
+      "rough": 2,
+      "status": "match"
+    },
+    {
+      "name": "cut02_031",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 213071487218899450,
+      "texture_name": "cut02_031_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0974,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_032",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 1426216153850830542,
+      "texture_name": "cut02_032_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1737,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut02_037",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 5407413454625522576,
+      "texture_name": "cut02_037_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2899,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_001",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -1592958996864254905,
+      "texture_name": "cut03_001_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2142,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_004",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -6636637782531189952,
+      "texture_name": "cut03_004_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0562,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_005",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -7209481319384902216,
+      "texture_name": "cut03_005_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1793,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_006",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 612284238834189730,
+      "texture_name": "cut03_006_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0372,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_00a",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -3284311001851839776,
+      "texture_name": "cut03_00a_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0966,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_00e",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 7722284968095597650,
+      "texture_name": "cut03_00e_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1137,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_017",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -3802384114794572398,
+      "texture_name": "cut03_017_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1092,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_018",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -1166982331519672368,
+      "texture_name": "cut03_018_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0818,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_020",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 5571605730938099200,
+      "texture_name": "cut03_020_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.15,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_021",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -3000219229102026038,
+      "texture_name": "cut03_021_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0451,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_024",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 848363803716175581,
+      "texture_name": "cut03_024_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0551,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_026",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -4104644757316389352,
+      "texture_name": "cut03_026_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0993,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_027",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -6337304145544899207,
+      "texture_name": "cut03_027_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0468,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_028",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -6610537671050121424,
+      "texture_name": "cut03_028_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0503,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_004",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -8962100569673752811,
+      "texture_name": "cut04_004_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2429,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_005",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 5019020632697131761,
+      "texture_name": "cut04_005_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1203,
+      "rough": 13,
+      "status": "match"
+    },
+    {
+      "name": "cut04_010",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 1362110831685923447,
+      "texture_name": "cut04_010_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1953,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_017",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 2475888487810475983,
+      "texture_name": "cut04_017_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0525,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "cut04_032",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 6618337060532202977,
+      "texture_name": "cut04_032_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1594,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_035",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 7675768056348026919,
+      "texture_name": "cut04_035_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1692,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_03a",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -7960135247053470190,
+      "texture_name": "cut04_03a_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.043,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_03e",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": 1812371331715510915,
+      "texture_name": "cut04_03e_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1969,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut04_046",
+      "bundle": "gk2_upcutlocal",
+      "kind": "texture",
+      "texture": -4607918407872063849,
+      "texture_name": "cut04_046_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0311,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut01_01f_cm",
+      "bundle": "gk2_upcutlocal_classic",
+      "kind": "texture",
+      "texture": -4814688216668651958,
+      "texture_name": "cut01_01f_cm_ger",
+      "got_size": [
+        2880,
+        1080
+      ],
+      "wanted_size": [
+        2880,
+        1080
+      ],
+      "mean": 0.2496,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut03_020_cm",
+      "bundle": "gk2_upcutlocal_classic",
+      "kind": "texture",
+      "texture": 4066459396800851460,
+      "texture_name": "cut03_020_cm_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut00_002",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": -2499384117926303436,
+      "texture_name": "cut00_002_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.221,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut00_003",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": 5027833504549462720,
+      "texture_name": "cut00_003_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1499,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut00_005",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": 6861492715385505160,
+      "texture_name": "cut00_005_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.16,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut00_007",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": -5964134922029075349,
+      "texture_name": "cut00_007_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1262,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut00_00a",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": 5662136667994368710,
+      "texture_name": "cut00_00a_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1566,
+      "rough": 3,
+      "status": "match"
+    },
+    {
+      "name": "cut00_00b",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": 5006205520671421946,
+      "texture_name": "cut00_00b_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1459,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "cut00_00c",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": 9210743589669467599,
+      "texture_name": "cut00_00c_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1444,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "cut00_00d",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": -55224972231872668,
+      "texture_name": "cut00_00d_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.1027,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut00_010",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": -2183171201249469884,
+      "texture_name": "cut00_010_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0996,
+      "rough": 1,
+      "status": "match"
+    },
+    {
+      "name": "cut00_01e",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": 4458101966390513849,
+      "texture_name": "cut00_01e_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2015,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "cut00_02b",
+      "bundle": "gk2_upcutlocal_trial",
+      "kind": "texture",
+      "texture": 7694530231694431606,
+      "texture_name": "cut00_02b_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.0517,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Sousa_TextCutBG_R_07",
+      "bundle": "gk_common_ingameui",
+      "kind": "plate",
+      "texture": 2678252523079827004,
+      "texture_name": "Sousa_TextCutBG_R_07_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2217,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Sousa_TextCutBG_R_03",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "plate",
+      "texture": -4720321115355284545,
+      "texture_name": "Sousa_TextCutBG_R_03_eng",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2575,
+      "rough": 0,
+      "status": "foreign_text_confirmed_visually",
+      "numeric_status": "match",
+      "reason": "Dark English text differs from approved Russian PNG, but its full-frame mean<2 and no difference exceeds64. Original texture_sha is NOT a hash of the installed Russian image."
+    },
+    {
+      "name": "Sousa_TextCutBG_R_04",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "plate",
+      "texture": -8707348683166608853,
+      "texture_name": "Sousa_TextCutBG_R_04_eng",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2159,
+      "rough": 0,
+      "status": "foreign_text_confirmed_visually",
+      "numeric_status": "match",
+      "reason": "Dark English text differs from approved Russian PNG, but its full-frame mean<2 and no difference exceeds64. Original texture_sha is NOT a hash of the installed Russian image."
+    },
+    {
+      "name": "Sousa_TextCutBG_R_05",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "plate",
+      "texture": -3459496493650135564,
+      "texture_name": "Sousa_TextCutBG_R_05_eng",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.28,
+      "rough": 0,
+      "status": "foreign_text_confirmed_visually",
+      "numeric_status": "match",
+      "reason": "Dark English text differs from approved Russian PNG, but its full-frame mean<2 and no difference exceeds64. Original texture_sha is NOT a hash of the installed Russian image."
+    },
+    {
+      "name": "splash_ger2",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "splash",
+      "status": "match"
+    },
+    {
+      "name": "titles_StEd_ger",
+      "bundle": "gk_common_ingameui_trial",
+      "kind": "splash",
+      "status": "match"
+    },
+    {
+      "name": "Date_0_0",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": 8250567307751048705,
+      "texture_name": "Date_0_0_ger",
+      "got_size": [
+        439,
+        72
+      ],
+      "wanted_size": [
+        439,
+        72
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Date_0_1",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": 2500126214847691591,
+      "texture_name": "Date_0_1_ger",
+      "got_size": [
+        439,
+        72
+      ],
+      "wanted_size": [
+        439,
+        72
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Date_1_0",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -6762974833429280367,
+      "texture_name": "Date_1_0_ger",
+      "got_size": [
+        439,
+        72
+      ],
+      "wanted_size": [
+        439,
+        72
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Date_1_1",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -8434741753685957652,
+      "texture_name": "Date_1_1_ger",
+      "got_size": [
+        439,
+        72
+      ],
+      "wanted_size": [
+        439,
+        72
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Date_2_0",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -1998750049422440254,
+      "texture_name": "Date_2_0_ger",
+      "got_size": [
+        439,
+        72
+      ],
+      "wanted_size": [
+        439,
+        72
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Date_2_1",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": 8756956388227785783,
+      "texture_name": "Date_2_1_ger",
+      "got_size": [
+        439,
+        72
+      ],
+      "wanted_size": [
+        439,
+        72
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Date_3_0",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": 9032022565707790359,
+      "texture_name": "Date_3_0_ger",
+      "got_size": [
+        439,
+        72
+      ],
+      "wanted_size": [
+        439,
+        72
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Date_3_1",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": 2291361272497550924,
+      "texture_name": "Date_3_1_ger",
+      "got_size": [
+        439,
+        72
+      ],
+      "wanted_size": [
+        439,
+        72
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Situation_0",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -2737379437283204453,
+      "texture_name": "Situation_0_ger",
+      "got_size": [
+        695,
+        118
+      ],
+      "wanted_size": [
+        695,
+        118
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Situation_1",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -7494825327520291463,
+      "texture_name": "Situation_1_ger",
+      "got_size": [
+        695,
+        118
+      ],
+      "wanted_size": [
+        695,
+        118
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Situation_2",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -3899189016153311785,
+      "texture_name": "Situation_2_ger",
+      "got_size": [
+        695,
+        118
+      ],
+      "wanted_size": [
+        695,
+        118
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Situation_3",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": 578742584919522523,
+      "texture_name": "Situation_3_ger",
+      "got_size": [
+        695,
+        118
+      ],
+      "wanted_size": [
+        695,
+        118
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Situation_4",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": 5955982265343024321,
+      "texture_name": "Situation_4_ger",
+      "got_size": [
+        695,
+        118
+      ],
+      "wanted_size": [
+        695,
+        118
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Situation_5",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -8133489787455333394,
+      "texture_name": "Situation_5_ger",
+      "got_size": [
+        695,
+        118
+      ],
+      "wanted_size": [
+        695,
+        118
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "Situation_6",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -8627118948175126746,
+      "texture_name": "Situation_6_ger",
+      "got_size": [
+        695,
+        118
+      ],
+      "wanted_size": [
+        695,
+        118
+      ],
+      "mean": 0.0,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "hikarikabin",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -7966171021649808555,
+      "texture_name": "hikarikabin_ger",
+      "got_size": [
+        1920,
+        1080
+      ],
+      "wanted_size": [
+        1920,
+        1080
+      ],
+      "mean": 0.2916,
+      "rough": 0,
+      "status": "match"
+    },
+    {
+      "name": "original",
+      "bundle": "localization-assets-german(de)",
+      "kind": "plate",
+      "texture": -3944853609809739770,
+      "texture_name": "original_ger",
+      "got_size": [
+        3840,
+        2160
+      ],
+      "wanted_size": [
+        3840,
+        2160
+      ],
+      "mean": 0.2542,
+      "rough": 0,
+      "status": "match"
+    }
+  ]
+}

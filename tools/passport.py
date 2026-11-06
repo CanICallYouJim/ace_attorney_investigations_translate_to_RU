@@ -501,6 +501,9 @@ def measure(body: np.ndarray, rim: np.ndarray, cov: np.ndarray | None, cov_rim: 
                         c2 = np.polyfit(tx, ty, 2)[0]
                         r["дуга"] = float(-c2 / max(1, base - top + 1))
     c = (cov * grow(keep, 2)) if cov is not None and cov.sum() >= 12 else keep.astype(np.float32)
+    columns = c.sum(axis=0)
+    if columns.sum():
+        r["cx_массы"] = float(np.dot(columns, np.arange(c.shape[1])) / columns.sum())
     st_ = stroke_of(c)
     if st_:
         r["штрих"] = st_
@@ -625,6 +628,12 @@ def verdicts(lb: dict, en: dict, ru: dict | None, blk: dict, cfg: dict, decl: di
         return out
     n_lines = len(lb.get("text", "").split("|"))
     en_lines = len(lb.get("англ", "").split("|"))
+    if lb.get("видимая_рамка"):
+        left, top, right, bottom = lb["видимая_рамка"]
+        visible = (ru["x0"] >= left and ru["y0"] >= top
+                   and ru["x1"] < right and ru["y1"] < bottom)
+        add("видимое_окно", OK if visible else BAD,
+            f"чернила {'внутри' if visible else 'выходят за'} окна атласа {lb['видимая_рамка']}")
     has_h = "лево" in blk and "право" in blk
     has_v = "верх" in blk and "низ" in blk
     bw = (blk["право"] - blk["лево"]) if has_h else None
@@ -644,7 +653,16 @@ def verdicts(lb: dict, en: dict, ru: dict | None, blk: dict, cfg: dict, decl: di
         else:
             mode = {"лево": "лево", "право": "право"}.get(lb.get("по", "центр"), "центр")
     # ---- место по горизонтали
-    if mode == "блок" and has_h:
+    if lb.get("оптический_центр_x"):
+        axis = lb.get("ось", (blk["лево"] + blk["право"]) / 2 if has_h else en["cx"])
+        off = ru["cx_массы"] - axis
+        add("центр", OK if abs(off) <= TOL["центр"] else BAD,
+            f"центр массы чернил против центра круга {off:+.1f} px")
+        if has_h:
+            lm, rm = ru["x0"] - blk["лево"], blk["право"] - ru["x1"]
+            add("стены", OK if min(lm, rm) >= 3 else BAD,
+                f"поля {lm:.0f} / {rm:.0f} px")
+    elif mode == "блок" and has_h:
         bc = (blk["лево"] + blk["право"]) / 2
         off = ru["cx"] - bc
         lim = max(TOL["центр_блока"], TOL["центр_доля"] * bw)

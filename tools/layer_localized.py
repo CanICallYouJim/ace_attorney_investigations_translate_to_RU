@@ -322,6 +322,12 @@ def allowed(size: tuple[int, int], jobs: list[dict]) -> Image.Image | None:
             half = max(x1 - x0, label.get("max_width", 0)) // 2
             cx = (x0 + x1) // 2
             rect((cx - half, y0, cx + half, y1), MARGIN + 6 + job.get("stroke_width", 3))
+            # Keep both the erased source and explicitly displaced text in scope.
+            dx, dy = label.get("сдвиг", (0, 0))
+            for sx, sy in label.get("сдвиг_строк", [(0, 0)]):
+                rect((cx - half + dx + sx, y0 + dy + sy,
+                      cx + half + dx + sx, y1 + dy + sy),
+                     MARGIN + 6 + job.get("stroke_width", 3))
         for note in job.get("пометки", []):
             # рукописная пометка: русская живёт в рамках английской с тем же запасом,
             # какой держит сам набор (notes.ZONE) — больше него он строку не поставит.

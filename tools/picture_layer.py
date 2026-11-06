@@ -55,6 +55,23 @@ def pixels_sha(img: Image.Image) -> str:
     return hashlib.sha256(img.convert("RGBA").tobytes()).hexdigest()
 
 
+def plate_pixels_match(texture, picture: Image.Image) -> bool:
+    """Сверить плашку после той же упаковки, без допуска по яркости кадра.
+
+    У тёмного фона английские и русские буквы могут целиком попасть в допуск
+    сжатия. Поэтому сравниваем с результатом упаковки самой русской PNG.
+    Копия Texture2D не сохраняется в бандл.
+    """
+    if picture.size != (texture.m_Width, texture.m_Height):
+        return False
+    found = pixels_sha(texture.image)
+    if found == pixels_sha(picture):
+        return True
+    expected = copy(texture)
+    expected.set_image(picture, target_format=int(texture.m_TextureFormat))
+    return found == pixels_sha(expected.image)
+
+
 def model_texture(env, prefab_key: str, texture_name: str, own: bool = False, missing_ok: bool = False):
     """Resolve a nested texture through a prefab's renderer/material graph.
 
@@ -232,6 +249,17 @@ def sprites_by_key(env) -> dict[str, object]:
     return {key: sprites[info["asset"]["m_PathID"]]
             for key, info in ab.read_typetree()["m_Container"]
             if info["asset"]["m_PathID"] in sprites}
+
+
+def native_sprite(env, key: str, sprites: dict | None = None):
+    """Найти собственный спрайт, даже если адрес уже подменён английским."""
+    sprite = (sprites if sprites is not None else sprites_by_key(env)).get(key)
+    if sprite is not None and sprite.peek_name() == leaf(key):
+        return sprite
+    found = [o for o in env.objects if o.type.name == "Sprite" and o.peek_name() == leaf(key)]
+    if len(found) == 1:
+        return found[0]
+    raise ValueError(f"{key}: собственный спрайт не определён однозначно ({len(found)})")
 
 
 def texture_of(env, sprite):
@@ -635,9 +663,23 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
     notes: list[str] = []
     own: dict[str, int] = {}
     kept: set[str] = set()
+    sprite_info: dict[str, dict[str, dict]] = {}
     for key, img in pictures.items():
         if key in sprites:
-            notes.append(write_sprite(env, sprites[key], img))
+            sprite = native_sprite(env, key, sprites)
+            texture = texture_of(env, sprite)
+            notes.append(write_sprite(env, sprite, img))
+            # В контейнере у спрайта две записи одного адреса. После fallback
+            # обе могут вести на ENG; восстанавливаем и объекты, и зависимости.
+            pointers = [{"m_FileID": 0, "m_PathID": o.path_id} for o in (sprite, texture)]
+            table = tree["m_PreloadTable"]
+            first = next((i for i in range(len(table) - 1) if table[i:i + 2] == pointers), None)
+            if first is None:
+                first = len(table)
+                table.extend(pointers)
+            sprite_info[key] = {o.type.name: {"preloadIndex": first, "preloadSize": 2,
+                                             "asset": {"m_FileID": 0, "m_PathID": o.path_id}}
+                                for o in (sprite, texture)}
             kept.add(key)
             continue
         obj = german_object(env, entries, key, sources.get(key))
@@ -662,8 +704,11 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
             preload.setdefault(ptr["m_PathID"], i)
 
     container = []
+    types = {o.path_id: o.type.name for o in env.objects}
     for key, info in tree["m_Container"]:
-        if key in own:
+        if key in sprite_info:
+            info = sprite_info[key][types[info["asset"]["m_PathID"]]]
+        elif key in own:
             if info["asset"]["m_PathID"] != own[key]:
                 # адрес уведён на английский прежней подменой — вернуть его целиком
                 info = {**info, "asset": {**info["asset"], "m_PathID": own[key]}}
@@ -716,24 +761,23 @@ class Shipment:
         Ляжет поверх немецкой оригинальной или поверх уже поставленной нашей. Сжатая
         текстура (экраны запуска `hikarikabin`, `original` — BC, 12 октября 2026) хранит
         нашу плашку с потерями, и отпечаток пикселей с PNG не сходится: тогда сверка
-        по пикселям — грубых (больше 64 уровней) не больше 0,01 %, как в selftest.
+        точная сверка с PNG после той же упаковки, как в selftest.
         Без этого повторная установка увела бы строку таблицы локали на английский спрайт.
         """
-        sprite = sprites.get(entry["key"])
-        if sprite is None:
+        try:
+            sprite = native_sprite(env, entry["key"], sprites)
+        except ValueError:
             return "в бандле нет её спрайта"
-        image = texture_of(env, sprite).read().image
+        texture = texture_of(env, sprite).read()
+        image = texture.image
         found = pixels_sha(image)
         if found in (entry["texture_sha"], entry["plate_sha"]):
             return None
         layer = self.folder / entry["layer"]
         if layer.exists():
-            import numpy as np
             want = Image.open(layer).convert("RGBA")
-            if want.size == image.size:
-                d = np.abs(np.asarray(image.convert("RGBA"), np.int16) - np.asarray(want, np.int16)).max(-1)
-                if (d > 64).mean() <= 0.0001:
-                    return None
+            if plate_pixels_match(texture, want):
+                return None
         return "немецкая плашка в этой игре другая"
 
     def table_rows(self, bundles: Path) -> dict[int, str]:

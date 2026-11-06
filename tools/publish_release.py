@@ -333,6 +333,11 @@ def build_exe(patcher_out: Path, out: Path) -> int:
         # по имени в рантайме — анализатор PyInstaller их не видит, и собранный
         # .exe падает на первом же бандле: «No module named UnityPy.resources».
         "--collect-all", "UnityPy",
+        # UnityPy импортирует аудиодекодер и при чтении графических бандлов.
+        # Без его DLL --check проходит, а настоящая сборка из EXE падает.
+        "--collect-all", "fmod_toolkit",
+        # etcpak выбирает BC7-кодек через archspec; его JSON тоже нужны в EXE.
+        "--collect-all", "archspec",
         "--collect-all", "fontTools",
         # etcpak UnityPy импортирует изнутри функции, в момент упаковки BC7.
         # Без явного имени анализатор может его пропустить, и русские картинки

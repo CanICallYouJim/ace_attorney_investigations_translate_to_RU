@@ -1,0 +1,26 @@
+{
+  "file": "C:\\Users\\Илья\\Desktop\\Code\\Ace Attorney Translating\\dist\\release\\AAI2-RU.exe",
+  "size": 92888034,
+  "sha256": "7118d484e0748da3ba8513041b4ccfdbfda906a241811120489cb261d8a6c36c",
+  "embedded_files_checked": 475,
+  "fmod_dll_matches": true,
+  "archspec_json_match": true,
+  "all_modules_match_source": true,
+  "smoke_exit": 0,
+  "graphics_build_exit": 0,
+  "version": {
+    "segments_total": 33422,
+    "segments_done": 33422,
+    "strings_total": 2823,
+    "strings_done": 2517,
+    "pictures_done": 246,
+    "gk2_pictures_done": 242,
+    "gk2_pictures_total": 242,
+    "gk2_pictures_percent": "100,0",
+    "gk2_materials_done": 2,
+    "gk2_materials_total": 2,
+    "built": "2026-11-06",
+    "unitypy": "1.25.3",
+    "fonttools": "4.63.0"
+  }
+}

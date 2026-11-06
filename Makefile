@@ -27,6 +27,11 @@ endif
 # Без этого кириллица в выводе падает на cp1251 при перенаправлении в файл.
 export PYTHONIOENCODING := utf-8
 
+# Дополнительные ключи документированной публикации (например, --force после
+# проверки, что ручные правки main уже перенесены в исходники dev).
+PUBLISH_ARGS ?=
+SELFTEST_ARGS ?=
+
 .DEFAULT_GOAL := help
 .PHONY: help check check-full selftest build install graphics graphics-ru graphics-new plates splash titles titles-chess notes layers restore \
         status patch patch-check uninstall release publish extract review-pack clean tidy
@@ -43,7 +48,7 @@ check-full:          ## полный набор: плюс тесты форма�
 	$(PY) tools/check_all.py --full
 
 selftest:            ## сверить патчер с конвейером репозитория (нужна игра с переводом)
-	$(PY) patcher/selftest.py
+	$(PY) patcher/selftest.py $(SELFTEST_ARGS)
 
 ##@ Перевод в игру
 
@@ -108,7 +113,7 @@ release: check layers ## собрать дерево витрины и AAI2-RU.e
 	$(PY) tools/publish_release.py --exe
 
 publish:             ## перенести собранное в ветку main и отправить на GitHub
-	$(PY) tools/publish_branch.py --push
+	$(PY) tools/publish_branch.py --push $(PUBLISH_ARGS)
 
 ##@ Данные и уборка
 

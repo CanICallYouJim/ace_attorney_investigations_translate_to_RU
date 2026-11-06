@@ -71,6 +71,11 @@ def describe(blob: bytes) -> tuple[int, int]:
 
 
 def main() -> int:
+    import argparse
+
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--from-bundle", help="продолжить графическую проверку с этого бандла после сбоя")
+    args = ap.parse_args()
     for path in (ORIGINAL, INSTALLED):
         if not path.exists():
             print(f"нет файла {path}", file=sys.stderr)
@@ -111,10 +116,10 @@ def main() -> int:
         print(f"расхождений: {bad}", file=sys.stderr)
     else:
         print("Гарнитуры сходятся: патчер за один проход даёт то же, что два запуска.")
-    return max(1 if bad else 0, pictures())
+    return max(1 if bad else 0, pictures(args.from_bundle))
 
 
-def pictures() -> int:
+def pictures(from_bundle: str | None = None) -> int:
     """Русские картинки: бандл, собранный патчером из оригинала, несёт ровно русскую картинку.
 
     Путь тот же, что у игрока, — `Shipment.build` поверх нетронутого бандла из
@@ -133,6 +138,20 @@ def pictures() -> int:
     from swap_localized import plan_env
 
     shipment = Shipment()
+    order = sorted(shipment.by_bundle, key=lambda b: (b not in shipment.feeders, b))
+    if from_bundle is not None:
+        if from_bundle not in order:
+            raise ValueError(f"unknown resume bundle: {from_bundle}")
+        selected = set(order[order.index(from_bundle):])
+        home = {e["name"]: e["bundle"] for e in shipment.pictures}
+        while True:
+            needed = {home[e["derive"]["из"]] for b in selected for e in shipment.by_bundle[b]
+                      if e.get("derive")}
+            if needed <= selected:
+                break
+            selected |= needed
+        order = [b for b in order if b in selected]
+        print(f"Продолжение с {from_bundle}: бандлов {len(order)}")
     print(f"\nрусские картинки в слое: {len(shipment)}")
     if not len(shipment) and not shipment.aliases:
         return 0
@@ -146,7 +165,7 @@ def pictures() -> int:
     def plate_ok(built, entry) -> bool:
         """Плашка: немецкая текстура несёт ровно набор, сетка покрывает надпись,
         по адресу по-прежнему текстура и спрайт, строка таблицы локали — на немецкий спрайт."""
-        from picture_layer import sprites_by_key, texture_of
+        from picture_layer import plate_pixels_match, sprites_by_key, texture_of
         from swap_localized import swap_image_table
 
         sprite = sprites_by_key(built).get(entry["key"])
@@ -156,15 +175,8 @@ def pictures() -> int:
         rd = sprite.read_typetree()["m_RD"]
         tex = texture_of(built, sprite).read()
         want = Image.open(pngs[entry["name"]]).convert("RGBA")
-        same = pixels_sha(tex.image) == pixels_sha(want)
-        lossy = ""
-        if not same and tex.m_TextureFormat not in (4, 5):        # не RGBA32/ARGB32 — сжатый формат
-            # фон чтения (`Sousa_TextCutBG_*`) лежит в сжатой текстуре кадра: ровно набор там не бывает,
-            # сверка — потерями сжатия, как у картинок (грубых больше 64 уровней — не больше 0,01 %)
-            import numpy as np
-            d = np.abs(np.asarray(tex.image.convert("RGBA"), np.int16) - np.asarray(want, np.int16)).max(-1)
-            same = (d > 64).mean() <= 0.0001
-            lossy = f" (сжатие: до {int(d.max())} уровней, грубых {int((d > 64).sum())})"
+        same = plate_pixels_match(tex, want)
+        lossy = " (сверка после упаковки в формат текстуры)"
 
         box = want.getchannel("A").getbbox()
         tr, h = rd["textureRect"], tex.m_Height
@@ -195,7 +207,7 @@ def pictures() -> int:
               + ("" if ok else "  <- РАЗОШЛОСЬ"))
         return ok
 
-    for bundle in sorted(shipment.by_bundle, key=lambda b: (b not in shipment.feeders, b)):
+    for bundle in order:
         live = next(BUNDLES.glob(f"{bundle}_assets_all_*.bundle"))
         src = original(live.name)
         if src is None:

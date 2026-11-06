@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "name": "Sousa_TextCutBG_R_03",
+      "own_sprite": true,
+      "own_texture": true,
+      "matches_encoded_png": true,
+      "rejects_old_english": true,
+      "english_unchanged": true
+    },
+    {
+      "name": "Sousa_TextCutBG_R_04",
+      "own_sprite": true,
+      "own_texture": true,
+      "matches_encoded_png": true,
+      "rejects_old_english": true,
+      "english_unchanged": true
+    },
+    {
+      "name": "Sousa_TextCutBG_R_05",
+      "own_sprite": true,
+      "own_texture": true,
+      "matches_encoded_png": true,
+      "rejects_old_english": true,
+      "english_unchanged": true
+    }
+  ],
+  "changed_objects": [
+    {
+      "id": -4054058942997961307,
+      "type": "Sprite"
+    },
+    {
+      "id": -2397318268949384010,
+      "type": "Texture2D"
+    },
+    {
+      "id": -264601791532997211,
+      "type": "Texture2D"
+    },
+    {
+      "id": 1,
+      "type": "AssetBundle"
+    },
+    {
+      "id": 1672494032183650666,
+      "type": "Sprite"
+    },
+    {
+      "id": 2841787694766319978,
+      "type": "Texture2D"
+    },
+    {
+      "id": 8690957952130593974,
+      "type": "Sprite"
+    }
+  ],
+  "unexpected": []
+}

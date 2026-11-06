@@ -1,0 +1,13 @@
+{
+  "remote": "git@github.com:CanICallYouJim/ace_attorney_investigations_translate_to_RU.git",
+  "changed": [
+    "patcher/data/case1.json",
+    "patcher/data/case2.json",
+    "patcher/data/case3.json",
+    "patcher/data/case4.json",
+    "patcher/data/case5.json",
+    "patcher/data/graphics_layers/manifest.json"
+  ],
+  "removed": [],
+  "added": []
+}

@@ -274,7 +274,10 @@ def write_showcase(out: Path, stats: dict) -> None:
     """
     press_src = SHOWCASE / "press"
     if press_src.is_dir():
-        shutil.copytree(press_src, out / "press", dirs_exist_ok=True)
+        # Ролик в ветку не кладётся: README его не покажет (нужна ссылка из .txt),
+        # а git не забывает блобы — как с .exe в publish_branch.py.
+        shutil.copytree(press_src, out / "press", dirs_exist_ok=True,
+                        ignore=shutil.ignore_patterns("*.mp4"))
 
     def shot(match: re.Match) -> str:
         """`{{shot:a.gif,a.png|Подпись}}` — первый из перечисленных файлов, что есть.

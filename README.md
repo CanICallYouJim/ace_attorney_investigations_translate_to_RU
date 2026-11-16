@@ -1,6 +1,10 @@
 # Русская локализация Ace Attorney Investigations 2
 
-Опубликован [v2026-11-06.2](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-06.2), latest: графическое окно с фоном и музыкой из
+В [v2026-11-16](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-16)
+обновлены витрина, инструкция по выбору языка и восемь изображений. Установщик и ролик
+доступны в файлах выпуска. [Витрина для игроков](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/tree/main).
+
+В [v2026-11-06.2](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/tag/v2026-11-06.2) появилось графическое окно с фоном и музыкой из
 установленной игры, плавными полосами пяти этапов и движущимися диагоналями.
 Запуск исходников: `.venv\Scripts\python.exe patcher/aai2ru.py --gui`;
 `--preview` показывает анимацию без установки, `--console` сохраняет консольный режим.
@@ -92,6 +96,9 @@ FMOD DLL и JSON BC7-кодека. Selftest покрыл все 246 записе
 потому, что он сохраняет привычные имена (Edgeworth, Kay, Gumshoe), тогда как
 французская локализация переименовывает весь состав (Benjamin Hunter, Cléa),
 а до перевода строковых таблиц именно эти имена стоят в плашке говорящего.
+
+После установки перевода в английском меню игры выберите **Options → Language →
+Game Text → Deutsch** и подтвердите кнопкой **Yes**. Это включает русский текст.
 
 ## С чего начать в новой сессии
 

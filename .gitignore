@@ -6,6 +6,10 @@ __pycache__/
 patcher/assets/installer.png
 patcher/assets/installer.ico
 
+# Personal saves preserved during press capture must never be published.
+work/press-capture-*/save-backup/
+release/press/*.mp4
+
 # Настройки IDE — машинно-специфичные.
 # .claude/ наоборот в репозитории: там скилл перевода, он общий.
 .idea/

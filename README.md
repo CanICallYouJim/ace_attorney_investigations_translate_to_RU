@@ -44,6 +44,8 @@
 
 ## Как это выглядит
 
+https://github.com/user-attachments/assets/2cdee098-48fe-4f0e-b1d2-55a753a22fd6
+
 [Скачать ролик о переводе (MP4, 56 секунд)](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/download/v2026-11-16/AAI2-showcase.mp4)
 
 <table>

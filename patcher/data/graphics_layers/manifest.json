@@ -11,17 +11,17 @@
       ],
       "flipped": false,
       "source_sha": "c9955d84ca6db4ab4a08f71ddc552dc94fc1eda59d79ea3582288b54041389dc",
-      "png_sha": "54ec55b9a5ed20c1d8fea7451010013e5597812965eaced097e48017b57154b7",
+      "png_sha": "b44ad9e6ce9a0aad7b453a9c3c9e35756b10a06a0da34172a1041a9df396736a",
       "box": [
-        995,
-        628,
-        1875,
-        1041
+        1088,
+        640,
+        1892,
+        1025
       ],
       "layer": "gk2_upcutlocal_trial/cut00_002.png",
       "mask": "gk2_upcutlocal_trial/cut00_002_mask.png",
-      "changed": 293589,
-      "outside": 293589,
+      "changed": 250538,
+      "outside": 250538,
       "tails": null,
       "erased": null
     },
@@ -2375,17 +2375,17 @@
       ],
       "flipped": false,
       "source_sha": "138ecbfa5a20a51bcf713f5e7922e0b8bcbd151939565369249f63f62a9628df",
-      "png_sha": "c62779d6412f49812d446aab9b5113e1680f0c8bce46f7747b724eabd0309e71",
+      "png_sha": "8f44b18384268fc809f85e778467a03efd304e21ed140c8d524cbd1131e0f0d9",
       "box": [
         2270,
-        600,
+        540,
         2701,
         966
       ],
       "layer": "gk2_mapbg/map11_00.png",
       "mask": "gk2_mapbg/map11_00_mask.png",
-      "changed": 63382,
-      "outside": 63382,
+      "changed": 65194,
+      "outside": 61942,
       "tails": null,
       "erased": null
     },
@@ -2400,17 +2400,17 @@
       ],
       "flipped": false,
       "source_sha": "db35f7aa02cac788b8fe6178a5077df2d191f18edacaf8e037ef5f3127ab3cf6",
-      "png_sha": "47b16227632750162ad90279b1bc5217296a8558b8fbd72f687de20eeb5ad16c",
+      "png_sha": "2dc3d4c002436331e085adee828a695ce10a581ffa2454802818bf517a7c99f5",
       "box": [
         2276,
-        600,
+        529,
         2701,
         966
       ],
       "layer": "gk2_mapbg/map11_01.png",
       "mask": "gk2_mapbg/map11_01_mask.png",
-      "changed": 50845,
-      "outside": 50845,
+      "changed": 64896,
+      "outside": 9848,
       "tails": null,
       "erased": null
     },
@@ -2500,7 +2500,7 @@
       ],
       "flipped": false,
       "source_sha": "0f422b910f28f3790fc5d339dca06503d3e4cb791b735a748fe58e3a93040bc7",
-      "png_sha": "99c195fb53e1a3ab5d6d5454339fa596481c4849b208af3ea9836c414228ac4b",
+      "png_sha": "97a5d53b8c0674074841c33112cd7815c0b44ffa086ba39ca96600b917f303b1",
       "box": [
         389,
         270,
@@ -2509,8 +2509,8 @@
       ],
       "layer": "gk2_mapbg_trial/map01.png",
       "mask": "gk2_mapbg_trial/map01_mask.png",
-      "changed": 54965,
-      "outside": 54965,
+      "changed": 55154,
+      "outside": 55154,
       "tails": null,
       "erased": null
     },
@@ -2800,7 +2800,7 @@
       ],
       "flipped": false,
       "source_sha": "a7ef1cb4288991d196ded9c429b4bd7a8eade82a26115af19348bb7b274c46e2",
-      "png_sha": "8b9233c4fba27424e1d9ea7173f09ad66fea72dee45773e22425c795650ad0f6",
+      "png_sha": "675ec6cfba8b07ccab1f0bfdecbbea3c61ac67ff10aa27a4157e7ee32695d41b",
       "box": [
         2302,
         513,
@@ -2809,7 +2809,7 @@
       ],
       "layer": "gk2_mapbgclassic/map11_00_cm.png",
       "mask": "gk2_mapbgclassic/map11_00_cm_mask.png",
-      "changed": 59595,
+      "changed": 59603,
       "outside": null,
       "tails": null,
       "erased": null
@@ -2825,7 +2825,7 @@
       ],
       "flipped": false,
       "source_sha": "0dd939c78707c18a7e6f892e1f720f965aa6863015b2e43d648d2e0129a076ed",
-      "png_sha": "32af7b09275973fc5ae02e47257c91c8ec7c0764bb414f45efe4dca15f019bc8",
+      "png_sha": "a9f7bc14edc350ee40f48c6a426552709a148f1fbea88858ed3a73061593e04c",
       "box": [
         2302,
         513,
@@ -2834,7 +2834,7 @@
       ],
       "layer": "gk2_mapbgclassic/map11_01_cm.png",
       "mask": "gk2_mapbgclassic/map11_01_cm_mask.png",
-      "changed": 61752,
+      "changed": 65853,
       "outside": null,
       "tails": null,
       "erased": null
@@ -2925,7 +2925,7 @@
       ],
       "flipped": false,
       "source_sha": "f95d18bdcb35ec21e5e4fcfdfb04751758c3afa73f1aea517fbe3261a8ffbcc9",
-      "png_sha": "2fe804c8f12a92d582d83b96315bfb04721083eadf5fcb076e07b285140389a0",
+      "png_sha": "a670e0770743d1ec9b29241e905279c1a38093ce0cdf0815611f464384ad4a28",
       "box": [
         389,
         272,
@@ -2934,7 +2934,7 @@
       ],
       "layer": "gk2_mapbgclassic_trial/map01_cm.png",
       "mask": "gk2_mapbgclassic_trial/map01_cm_mask.png",
-      "changed": 49070,
+      "changed": 49286,
       "outside": null,
       "tails": null,
       "erased": null
@@ -4954,7 +4954,7 @@
       ],
       "flipped": false,
       "source_sha": "eb99eb02e7fd7ab361cde9620773d93196fd9cb7a0bdafc96a3fc51938bd0066",
-      "png_sha": "1ceec51efe4231826bdf769e31dbb20a16d1b06b59841e6244ea4c22c58d7d5e",
+      "png_sha": "d105bbbec0d78b3775aa947fc6f26610401a3784acf2ab47b76611accad779c0",
       "box": [
         283,
         159,
@@ -4963,7 +4963,7 @@
       ],
       "layer": "gk2_upcutlocal/cut02_037.png",
       "mask": "gk2_upcutlocal/cut02_037_mask.png",
-      "changed": 1029491,
+      "changed": 1029493,
       "outside": 0,
       "tails": null,
       "erased": null
@@ -9589,5 +9589,5 @@
       "source_sha": "aee8fbbe33a8313f66d2a08b358e9a5aa636ba6a325505793b4bd4be5b4018ad"
     }
   ],
-  "built": "2026-11-06 20:04"
+  "built": "2026-11-16 08:09"
 }

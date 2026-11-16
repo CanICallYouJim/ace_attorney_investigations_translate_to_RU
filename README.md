@@ -46,8 +46,6 @@
 
 https://github.com/user-attachments/assets/2cdee098-48fe-4f0e-b1d2-55a753a22fd6
 
-[Скачать ролик о переводе (MP4, 56 секунд)](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/download/v2026-11-16/AAI2-showcase.mp4)
-
 <table>
 <tr><td align="center" width="50%"><img src="press/03-evidence.png" alt="Улика в органайзере"><br><sub>Улика в органайзере</sub></td><td align="center" width="50%"><img src="press/04-profile.png" alt="Профиль персонажа"><br><sub>Профиль персонажа</sub></td></tr>
 <tr><td align="center" width="50%"><img src="press/05-logic.png" alt="«Логика»"><br><sub>«Логика»</sub></td><td align="center" width="50%"><img src="press/06-examine.png" alt="Осмотр места"><br><sub>Осмотр места</sub></td></tr>

@@ -84,6 +84,13 @@ H.264, 30 к/с, битрейт 2500.
 Для публичной витрины ролик прикладывается к GitHub Release как
 `AAI2-showcase.mp4`. В `release/press/video.txt` хранится адрес вложения
 для встроенного плеера README.
+В этом репозитории вложение также загружали через авторизованный `gh api`.
+Запрос `POST` к `https://uploads.github.com/user-attachments/assets` передаёт
+`name`, `content_type=video%2Fmp4` и `repository_id` в URL, а сам MP4 в теле
+с заголовком `Content-Type: application/octet-stream`. В `video.txt` записывается
+поле `.url` из ответа. После публикации README сверяйте SHA-256 файла по `src`
+элемента `<video>` на публичной странице.
+
 Адрес вложения можно получить через форму GitHub:
 
 1. Открыть на GitHub «New issue» — **не отправлять**, просто открыть форму.

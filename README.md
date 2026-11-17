@@ -42,7 +42,7 @@
 
 ## Как это выглядит
 
-https://github.com/user-attachments/assets/2cdee098-48fe-4f0e-b1d2-55a753a22fd6
+https://github.com/user-attachments/assets/64a24fa3-9b13-4d8b-84c1-7dff449aa396
 
 <table>
 <tr><td align="center" width="50%"><img src="press/03-evidence.png" alt="Улика в органайзере"><br><sub>Улика в органайзере</sub></td><td align="center" width="50%"><img src="press/04-profile.png" alt="Профиль персонажа"><br><sub>Профиль персонажа</sub></td></tr>

@@ -2450,17 +2450,17 @@
       ],
       "flipped": false,
       "source_sha": "9d4f6a65f46af234d29741e645eab356e42834bee74cb6ff7f1d3a3a1a2e4d7d",
-      "png_sha": "caa08a817ebd83116fb35573e98f5540b49d2a1796eb0645de893a7d47d20a3f",
+      "png_sha": "dfe8ea3072546900ce8036337b68e989ef9c1feb49319a70ff9dc1bda9df4dfb",
       "box": [
         0,
         104,
         2880,
-        583
+        1069
       ],
       "layer": "gk2_mapbg/map13.png",
       "mask": "gk2_mapbg/map13_mask.png",
-      "changed": 45385,
-      "outside": 45385,
+      "changed": 47174,
+      "outside": 47174,
       "tails": null,
       "erased": null
     },
@@ -2875,16 +2875,16 @@
       ],
       "flipped": false,
       "source_sha": "c36300edf38fd75085834e43682cc9b82453f7e985a214e91b2408dc2037a481",
-      "png_sha": "65aa5689e968527c2c31a1da4f421bacb2878cd767eb417319d563aaadbabfdc",
+      "png_sha": "b6dbafddca7f9b8489741c12023ab450d30f8579122aaa5efd8a79a61c13e48b",
       "box": [
         0,
         100,
         2880,
-        649
+        1070
       ],
       "layer": "gk2_mapbgclassic/map13_cm.png",
       "mask": "gk2_mapbgclassic/map13_cm_mask.png",
-      "changed": 89997,
+      "changed": 92190,
       "outside": null,
       "tails": null,
       "erased": null
@@ -3349,7 +3349,7 @@
       ],
       "flipped": true,
       "source_sha": "8acbe71a1558f317fc67fbe868d83d5b196e47b4010eff5c39c96913e3ac032b",
-      "png_sha": "a44b5c6bd0b3a2dd0021162cbd174a4c8cd8d0841967d5a0a3d907c41d0c2767",
+      "png_sha": "bb0b6fee1358a17f4f129152a4e0fda78d89833da409db67996e9c42c2c8d571",
       "box": [
         68,
         24,
@@ -3358,7 +3358,7 @@
       ],
       "layer": "gk2_openinglocal/opObj02_032_256.png",
       "mask": "gk2_openinglocal/opObj02_032_256_mask.png",
-      "changed": 745902,
+      "changed": 746149,
       "outside": 0,
       "tails": null,
       "erased": null
@@ -5404,17 +5404,17 @@
       ],
       "flipped": false,
       "source_sha": "dfb204f3515cb5a46be1e4ff5d11a0a31fb67ed1c7c018ffd84efdeb14154489",
-      "png_sha": "1245c49fabf73f6c62d59bb21e008299cfbb329c3378436089f21429812dd900",
+      "png_sha": "b626069da8e9d8a2d2e7aa4fb3f7adeab444f4dfe014f96e20a2300b26fafa0e",
       "box": [
-        557,
+        532,
         108,
         1232,
-        249
+        833
       ],
       "layer": "gk2_upcutlocal/cut04_017.png",
       "mask": "gk2_upcutlocal/cut04_017_mask.png",
-      "changed": 59977,
-      "outside": 0,
+      "changed": 78057,
+      "outside": 18080,
       "tails": null,
       "erased": null
     },
@@ -9589,5 +9589,5 @@
       "source_sha": "aee8fbbe33a8313f66d2a08b358e9a5aa636ba6a325505793b4bd4be5b4018ad"
     }
   ],
-  "built": "2026-11-16 08:09"
+  "built": "2026-11-22 18:33"
 }

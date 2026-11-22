@@ -14,11 +14,11 @@
 
 [![Скачать для Windows — AAI2-RU.exe](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C_%D0%B4%D0%BB%D1%8F_Windows-AAI2--RU.exe-2ea44f?style=for-the-badge)](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe)
 
-<sub>[AAI2-RU.exe](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe) · 91 МБ · сборка от 2026-11-16 · [что нового в выпуске](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest)</sub>
+<sub>[AAI2-RU.exe](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe) · 90 МБ · сборка от 2026-11-22 · [что нового в выпуске](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest)</sub>
 
 **После установки обязательно выберите Deutsch в настройках языка игры.**
 
-[Ролик и скриншоты](#как-это-выглядит) · [Установка](#установка) · [Частые вопросы](#частые-вопросы) · [Нашли ошибку?](#нашли-ошибку)
+[Ролик и скриншоты](#как-это-выглядит) · [Установка](#установка) · [Частые вопросы](#частые-вопросы) · [Связь](#связь)
 
 </div>
 
@@ -185,7 +185,11 @@ python aai2ru.py
 
 </details>
 
-## Нашли ошибку?
+## Связь
+
+Заглядывайте в [нашу группу ВКонтакте](https://vk.ru/club243392441) — обсудить игру
+и перевод, поделиться впечатлениями или фан-артом. Там же можно оставить отзыв
+или сообщить об ошибке.
 
 Опечатка, обрезанная строка, английская надпись там, где её быть не должно, —
 [напишите в Issues](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/issues).

@@ -14,7 +14,7 @@
 
 [![Скачать для Windows — AAI2-RU.exe](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C_%D0%B4%D0%BB%D1%8F_Windows-AAI2--RU.exe-2ea44f?style=for-the-badge)](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe)
 
-<sub>[AAI2-RU.exe](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe) · 90 МБ · сборка от 2026-11-22 · [что нового в выпуске](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest)</sub>
+<sub>[AAI2-RU.exe](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe) · 92 МБ · сборка от 2026-11-27 · [что нового в выпуске](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest)</sub>
 
 **После установки обязательно выберите Deutsch в настройках языка игры.**
 
@@ -78,6 +78,10 @@ https://github.com/user-attachments/assets/64a24fa3-9b13-4d8b-84c1-7dff449aa396
 
 **Новая версия перевода** ставится поверх старой тем же способом. Уже сделанное
 установщик не переделывает, поэтому повторный запуск намного быстрее первого.
+При открытии и затем раз в час установщик проверяет наличие нового выпуска.
+Нажмите «Обновить установщик», чтобы скачать и открыть новую версию, затем
+«Установить перевод», чтобы применить её к игре. После обновления можно
+закрыть игру и нажать «Вернуть предыдущую версию перевода».
 
 > [!NOTE]
 > Windows может предупредить о неизвестном издателе: у любительского патча нет
@@ -110,7 +114,8 @@ https://github.com/user-attachments/assets/64a24fa3-9b13-4d8b-84c1-7dff449aa396
 <details>
 <summary><b>Это безопасно?</b></summary>
 
-- **Ничего не скачивает** — ни при установке, ни потом.
+- **Перевод ставится без интернета.** Интернет нужен, чтобы проверить наличие
+  нового выпуска на GitHub и скачать установщик по вашей команде.
 - **Не везёт с собой файлов игры.** Русскую версию установщик собирает из вашей
   английской прямо на месте, поэтому подходит и к обновлённой игре. Даже для надписей
   на картинках в нём лежат только русские буквы и фон под ними, а не картинки целиком.
@@ -149,7 +154,7 @@ https://github.com/user-attachments/assets/64a24fa3-9b13-4d8b-84c1-7dff449aa396
 | Нет прав на запись | Игра стоит в `Program Files`: правой кнопкой по `AAI2-RU.exe` → «Запуск от имени администратора» |
 | Игра запущена | Закрыть её целиком и проверить, что `GK12.exe` нет в диспетчере задач |
 | Вместо букв квадраты | Установка не дошла до шрифтов. Запустить её ещё раз |
-| Непонятная ошибка | Кнопка «Журнал» внизу окна — там всё, что делал установщик. Его можно приложить к [сообщению об ошибке](#нашли-ошибку) |
+| Непонятная ошибка | Кнопка «Журнал» внизу окна — там всё, что делал установщик. Его можно приложить к [сообщению об ошибке](#связь) |
 
 </details>
 

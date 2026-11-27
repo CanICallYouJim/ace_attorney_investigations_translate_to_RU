@@ -22,7 +22,9 @@
 """
 from __future__ import annotations
 
+import base64
 import hashlib
+import json
 from copy import copy, deepcopy
 import struct
 from pathlib import Path
@@ -48,6 +50,148 @@ def short(bundle_name: str) -> str:
 def leaf(key: str) -> str:
     """Адрес в контейнере -> имя объекта: `.../cut00_007_ger.png` -> `cut00_007_ger`."""
     return key.rsplit("/", 1)[-1].rsplit(".", 1)[0]
+
+
+class TextureCatalog:
+    """Add newly created texture addresses to Unity's local Addressables catalog."""
+
+    def __init__(self, raw: bytes):
+        self.data = json.loads(raw)
+        self.ids = self.data["m_InternalIds"]
+        self.index = {name: i for i, name in enumerate(self.ids)}
+        self.changed = 0
+
+    def pending(self, entries: list[dict]) -> list[dict]:
+        return [e for e in entries if e["key"] not in self.index and e["source"] in self.index]
+
+    def register(self, entries: list[dict]) -> None:
+        wanted = self.pending(entries)
+        if not wanted:
+            return
+        names = ["m_" + part + "DataString" for part in ("Key", "Bucket", "Entry")]
+        keys, buckets, locations = [bytearray(base64.b64decode(self.data[n])) for n in names]
+        i32 = struct.Struct("<i")
+        pair = struct.Struct("<2i")
+        record = struct.Struct("<7i")
+        key_count, bucket_count, entry_count = [i32.unpack_from(b)[0] for b in (keys, buckets, locations)]
+        if key_count != bucket_count or len(locations) != 4 + entry_count * record.size:
+            raise ValueError("Неизвестный формат каталога текстур.")
+
+        # Addressables uses each record's primary key for lookup, which is not
+        # the internal bundle path. In this game some families omit .png.
+        cursor = 4
+        offsets = []
+        named_keys = set()
+        for _ in range(bucket_count):
+            offset, count = pair.unpack_from(buckets, cursor)
+            offsets.append(offset)
+            cursor += pair.size + count * i32.size
+            if keys[offset] == 0:
+                size = i32.unpack_from(keys, offset + 1)[0]
+                named_keys.add(bytes(keys[offset + 5:offset + 5 + size]))
+        if cursor != len(buckets):
+            raise ValueError("Неизвестный формат ключей каталога текстур.")
+
+        by_id = {row[0]: row for row in record.iter_unpack(memoryview(locations)[4:])}
+        for entry in wanted:
+            source, target = entry["source"], entry["key"]
+            row = list(by_id[self.index[source]])
+            start = offsets[row[5]]
+            if keys[start] != 0:
+                raise ValueError(f"Неизвестный формат ключа: {source}")
+            size = i32.unpack_from(keys, start + 1)[0]
+            address = bytes(keys[start + 5:start + 5 + size]).decode("ascii")
+            source_leaf, target_leaf = (path.rsplit("/", 1)[-1] for path in (source, target))
+            if not address.endswith(".png"):
+                source_leaf, target_leaf = (v.removesuffix(".png") for v in (source_leaf, target_leaf))
+            if not address.lower().endswith("/" + source_leaf.lower()):
+                raise ValueError(f"Не найдено правило адреса в каталоге: {source}")
+            new_key = (address[:-len(source_leaf)] + target_leaf).encode("ascii")
+            if new_key in named_keys:
+                raise ValueError(f"Ключ уже занят в каталоге: {new_key.decode('ascii')}")
+            named_keys.add(new_key)
+            buckets += struct.pack("<3i", len(keys), 1, entry_count)
+            keys += b"\0" + i32.pack(len(new_key)) + new_key
+            row[0], row[5] = len(self.ids), key_count
+            self.index[target] = len(self.ids)
+            self.ids.append(target)
+            locations += record.pack(*row)
+            key_count += 1
+            entry_count += 1
+            self.changed += 1
+        for name, data, count in zip(names, (keys, buckets, locations), (key_count, key_count, entry_count)):
+            i32.pack_into(data, 0, count)
+            self.data[name] = base64.b64encode(data).decode("ascii")
+
+    def encode(self) -> bytes:
+        return json.dumps(self.data, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+
+
+def shipped_catalog_entries(path: Path, entries: list[dict]) -> list[dict]:
+    """Register only targets actually shipped in the matching bundle."""
+    if not entries:
+        return []
+    env = UnityPy.load(str(path))
+    container = env.container
+    ready = []
+    for entry in entries:
+        if entry["key"] not in container or entry["source"] not in container:
+            continue
+        own, source = container[entry["key"]], container[entry["source"]]
+        if own.type.name != "Texture2D" or source.type.name != "Texture2D":
+            continue
+        if (own.path_id == source.path_id) == bool(entry.get("alias")):
+            ready.append(entry)
+    return ready
+
+
+class TextureRouting:
+    """Make a shipped texture reachable from the Russian language slot."""
+
+    def __init__(self, catalog_path: Path, bundles: Path):
+        self.catalog_path = catalog_path
+        self.catalog = TextureCatalog(catalog_path.read_bytes())
+        self.ready = {}
+        self.tuning_path = next(bundles.glob("gk_tuning_assets_all_*.bundle"), None)
+        self.rules = []
+        self.redirected = set()
+        if self.tuning_path is None:
+            return
+        # Do not hold the live file open while the installer replaces it.
+        self.tuning = UnityPy.load(self.tuning_path.read_bytes())
+        for key, obj in self.tuning.container.items():
+            if not key.rsplit("/", 1)[-1].startswith("GK2_Sce") or not key.endswith("_Cutscene_Img.asset"):
+                continue
+            tree = obj.read_typetree()
+            self.rules.append((obj, tree))
+            self.redirected.update(
+                row["m_FileName"].casefold()
+                for row in tree["m_DataList"] if row["m_LanguageCodeGer"] != 3
+            )
+
+    def inspect(self, path: Path, entries: list[dict]) -> None:
+        entries = [e for e in entries if e["source"] in self.catalog.index and (
+            e["key"] not in self.catalog.index or e["name"].casefold() in self.redirected)]
+        for entry in shipped_catalog_entries(path, entries):
+            self.ready[entry["key"]] = entry
+
+    def changes(self):
+        entries = list(self.ready.values())
+        self.catalog.register(entries)
+        if self.catalog.changed:
+            yield self.catalog_path, self.catalog.encode(), f"новых адресов: {self.catalog.changed}"
+        routed = {e["name"].casefold() for e in entries if e["key"] in self.catalog.index}
+        fixed = 0
+        for obj, tree in self.rules:
+            rows = [row for row in tree["m_DataList"] if (
+                row["m_FileName"].casefold() in routed and row["m_LanguageCodeGer"] != 3)]
+            if rows:
+                for row in rows:
+                    row["m_LanguageCodeGer"] = 3
+                obj.deref().save_typetree(tree)
+                fixed += len(rows)
+        if fixed:
+            yield self.tuning_path, self.tuning.file.save(packer="lz4"), f"исправлено языковых ссылок: {fixed}"
 
 
 def pixels_sha(img: Image.Image) -> str:
@@ -872,3 +1016,8 @@ class Shipment:
             pictures[entry["key"]] = face.transpose(FLIP) if entry["flipped"] else face
         blob, more = write_bundle(env, pairs, pictures)
         return blob, len(pictures) + extra, notes + more
+    def routing_entries(self, bundle_short: str) -> list[dict]:
+        textures = [e for e in self.by_bundle.get(bundle_short, [])
+                    if not e.get("kind") and e["key"].endswith("_ger.png")]
+        aliases = [{**e, "alias": True} for e in self.aliases_by_bundle.get(bundle_short, [])]
+        return textures + aliases

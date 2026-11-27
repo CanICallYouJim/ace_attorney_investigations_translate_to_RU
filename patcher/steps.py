@@ -267,13 +267,14 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
 
     `only` — куски имён бандлов: собрать только их. Для проверки, не для игрока.
     """
-    from common import BUNDLES
-    from picture_layer import Shipment, short
+    from common import BUNDLES, CATALOG
+    from picture_layer import Shipment, TextureRouting, short
     from swap_localized import (IMAGE_TABLE_BUNDLE, NEVER, category_of, plan_bundle,
                                 redirect, swap_image_table)
 
     wanted = CATEGORIES + ("gk1",) if with_gk1 else CATEGORIES
     russian = Shipment()
+    routing = TextureRouting(CATALOG, BUNDLES) if CATALOG.is_file() and russian.by_bundle else None
     # Строки таблицы локали у плашек, которые лягут: игра берёт Situation_0/1 через таблицу.
     keep = russian.table_rows(BUNDLES)
     # Те же бандлы, что брал `collect()`, но пока без чтения: категория по имени файла.
@@ -320,6 +321,8 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
         key = f"asset_{name.split('_assets_all_')[0]}"
         if name in skip:
             if not done[name].get("empty"):
+                if routing:
+                    routing.inspect(live, russian.routing_entries(short(name)))
                 yield Change(key, live, None, "уже стоит, не менялся", recipes[name])
             report(index + 1, name)
             continue
@@ -344,5 +347,13 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
                 note = f"адресов {len(pairs)}"
         staged = stage / name
         staged.write_bytes(blob)
+        if routing:
+            routing.inspect(staged, russian.routing_entries(short(name)))
         yield Change(key, live, staged, note, recipes[name])
         report(index + 1, name)
+
+    if routing:
+        for target, blob, note in routing.changes():
+            staged = stage / target.name
+            staged.write_bytes(blob)
+            yield Change("texture_routing", target, staged, note)

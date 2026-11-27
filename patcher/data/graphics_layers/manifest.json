@@ -386,17 +386,17 @@
       ],
       "flipped": true,
       "source_sha": "251bf6038f53d6869179e813214c2b5cde863eaf757683350b0b06b11c45225e",
-      "png_sha": "a04717a7721a79b5e4a0977e8fe963221bd5fc7549480af2b2dd89b3aa08fceb",
+      "png_sha": "123c3aa3d1be75bb50175283b009807295563f6f83f16b1352159acca9390965",
       "create": true,
       "box": [
         18,
         45,
-        216,
+        225,
         111
       ],
       "layer": "gk2_cutobjlocal/cutObj04_03b.png",
       "mask": "gk2_cutobjlocal/cutObj04_03b_mask.png",
-      "changed": 4976,
+      "changed": 6302,
       "outside": 0,
       "tails": null,
       "erased": null
@@ -9589,5 +9589,5 @@
       "source_sha": "aee8fbbe33a8313f66d2a08b358e9a5aa636ba6a325505793b4bd4be5b4018ad"
     }
   ],
-  "built": "2026-11-22 18:33"
+  "built": "2026-11-27 20:44"
 }

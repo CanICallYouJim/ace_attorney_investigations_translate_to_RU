@@ -13,6 +13,8 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
+from launcher_update import CHECK_INTERVAL_MS, announce_ready, download_and_launch, latest
+
 PHASES = [
     ("scripts", "Реплики и сцены"), ("strings", "Органайзер и улики"),
     ("gk1", "Язык первой игры"), ("fonts", "Русские шрифты"),
@@ -121,10 +123,15 @@ class Installer:
         self.active = None
         self.scenes = []
         self.started = None
+        self.release = None
+        self.updating = False
+        self.rollback = False
         self._build()
         self.root.report_callback_exception = self.report_ui_exception
         self.root.after(60, self.poll)
         threading.Thread(target=self.prepare, daemon=True).start()
+        if self.args.update_cache:
+            self.root.after(0, self.check_updates)
 
     def _build(self):
         style = ttk.Style(self.root)
@@ -142,6 +149,8 @@ class Installer:
         # Reserve the action row before allocating the flexible content area.
         footer = tk.Frame(self.root, bg=BG)
         footer.pack(side="bottom", fill="x", padx=38, pady=(12, 18))
+        versions = tk.Frame(self.root, bg=BG)
+        versions.pack(side="bottom", fill="x", padx=38)
         body = tk.Frame(self.root, bg=BG)
         body.pack(fill="both", expand=True, padx=38, pady=(19, 15))
         top = tk.Frame(body, bg=BG)
@@ -203,6 +212,86 @@ class Installer:
         self.folder_button = tk.Button(footer, text="Папка игры…", command=self.choose_game, state="disabled",
                                        bg=BG, fg=MUTED, relief="flat", pady=9)
         self.folder_button.pack(side="left")
+        self.version_label = tk.Label(versions, text=self.args.release_tag or "",
+                                      bg=BG, fg=MUTED, font=("Segoe UI", 9))
+        self.version_label.pack(side="left")
+        self.update_button = tk.Button(versions, command=self.update, bg=PANEL, fg=TEXT,
+                                       relief="flat", padx=10, pady=3)
+        self.rollback_button = tk.Button(versions, text="Вернуть предыдущую версию перевода",
+                                         command=self.restore, bg=PANEL, fg=TEXT,
+                                         relief="flat", padx=10, pady=3)
+
+    def check_updates(self):
+        self.root.after(CHECK_INTERVAL_MS, self.check_updates)
+        if not self.updating:
+            threading.Thread(target=self.find_update, daemon=True).start()
+
+    def find_update(self):
+        try:
+            self.events.put({"kind": "update_available", "release": latest(self.args.release_tag)})
+        except Exception as exc:
+            self.events.put({"kind": "log", "text": f"Проверка обновлений: {exc}"})
+
+    def update(self):
+        if not self.release or self.busy or self.updating or self.preparing:
+            return
+        self.updating = True
+        self.update_button.config(text="Скачиваем установщик…")
+        self.refresh_versions()
+        release = self.release
+        arguments = ["--gui"]
+        for flag in ("no_graphics", "backup_graphics", "gk1_graphics", "full"):
+            if getattr(self.args, flag):
+                arguments.append("--" + flag.replace("_", "-"))
+        if self.game:
+            arguments.extend(("--game-path", str(self.game)))
+
+        def worker():
+            try:
+                download_and_launch(self.args.update_cache, release, arguments, current=self.args.release_tag)
+            except Exception as exc:
+                self.events.put({"kind": "update_error", "text": str(exc)})
+            else:
+                self.events.put({"kind": "update_started"})
+
+        threading.Thread(target=worker, daemon=True).start()
+
+    def refresh_versions(self):
+        from aai2ru import BACKUP_DIR, load_manifest
+
+        manifest = load_manifest(self.game / BACKUP_DIR) if self.game and not self.args.preview else {}
+        enabled = "normal" if not (self.busy or self.updating or self.preparing) else "disabled"
+        self.folder_button.config(state=enabled)
+        if not self.started:
+            self.start_button.config(state=enabled if self.ready else "disabled")
+        if self.release:
+            if not self.updating:
+                self.update_button.config(text="Обновить установщик")
+            self.update_button.config(state=enabled)
+            self.update_button.pack(side="right")
+        else:
+            self.update_button.pack_forget()
+        installed = manifest.get("release_tag")
+        tag = self.args.release_tag
+        self.version_label.config(text=" · ".join(part for part in (
+            f"Установщик {tag}" if tag else "",
+            f"Перевод {installed}" if installed else "",
+        ) if part))
+        if manifest.get("rollback"):
+            self.rollback_button.config(state=enabled)
+            self.rollback_button.pack(side="right", padx=(0, 8))
+        else:
+            self.rollback_button.pack_forget()
+        return manifest.get("rollback_tag") or "до последнего обновления"
+
+    def restore(self):
+        if self.busy or self.updating or self.preparing or not self.game:
+            return
+        tag = self.refresh_versions()
+        if messagebox.askyesno("Вернуть предыдущую версию перевода",
+                               f"Вернуть перевод ({tag})? Перед откатом закройте игру.",
+                               parent=self.root):
+            self.start(rollback=True)
 
     def prepare(self):
         try:
@@ -233,33 +322,41 @@ class Installer:
             self.events.put({"kind": "prepare_error", "text": str(exc)})
 
     def choose_game(self):
+        if self.updating or self.busy or self.preparing:
+            return
         folder = filedialog.askdirectory(title="Выберите папку с GK12.exe")
         if folder:
             if self.audio:
                 self.audio.stop()
+            self.game = None
+            self.data_ok = False
             self.ready = False
             self.preparing = True
             self.start_button.config(state="disabled")
             self.args.game_path = folder
             self.folder_button.config(state="disabled")
+            self.refresh_versions()
             threading.Thread(target=self.prepare, daemon=True).start()
 
-    def start(self):
-        if not self.ready or self.busy:
+    def start(self, rollback=False):
+        if (not self.ready and not rollback) or self.busy or self.updating or self.preparing:
             return
+        self.rollback = rollback
         self.busy = True
         self.started = time.monotonic()
-        self.start_button.config(state="disabled", text="Устанавливается…")
+        self.start_button.config(state="disabled", text="Возвращаем перевод…" if rollback else "Устанавливается…")
         self.spinner.pack(side="left", before=self.start_button, padx=(12, 0))
         self.append_log("Предпросмотр установки: файлы игры не меняются." if self.args.preview else "Начинаем установку перевода.")
         self.folder_button.config(state="disabled")
-        self.title.config(text="Собираем русский перевод")
+        self.title.config(text="Возвращаем предыдущий перевод" if rollback else "Собираем русский перевод")
+        self.refresh_versions()
         threading.Thread(target=self.work, daemon=True).start()
 
     def work(self):
         args = copy.copy(self.args)
         args.game_path = str(self.game)
         args.progress = self.events.put
+        args.rollback = self.rollback
         try:
             if args.preview:
                 # Демонстрация интерфейса: этот путь не вызывает установщик.
@@ -283,6 +380,18 @@ class Installer:
         kind = event.get("kind")
         if kind == "log":
             self.append_log(event["text"])
+        elif kind == "update_available":
+            self.release = event["release"]
+            self.refresh_versions()
+        elif kind == "update_error":
+            self.updating = False
+            self.refresh_versions()
+            self.append_log(event["text"])
+            messagebox.showerror("Обновление установщика", event["text"], parent=self.root)
+        elif kind == "update_started":
+            self.updating = False
+            self.close()
+            return True
         elif kind == "assets":
             if event.get("warning"):
                 self.append_log(event["warning"])
@@ -309,11 +418,13 @@ class Installer:
                 self.summary.config(text="ПРЕДПРОСМОТР · файлы игры не изменяются")
             else:
                 self.summary.config(text="Начните установку, когда игра закрыта")
+            self.refresh_versions()
         elif kind == "missing":
             self.preparing = False
             self.title.config(text="Укажите папку игры")
             self.subtitle.config(text="Выберите папку с GK12.exe кнопкой внизу")
             self.folder_button.config(state="normal")
+            self.refresh_versions()
         elif kind == "chapter":
             chapter, count = event["chapter"], event["count"]
             self.chapter_labels[chapter].config(text=f"Глава {chapter} · данные проверены · {count:,}".replace(",", " "), fg=CYAN)
@@ -325,6 +436,7 @@ class Installer:
             self.subtitle.config(text=event["text"])
             self.append_log("Ошибка данных: " + event["text"])
             self.folder_button.config(state="normal")
+            self.refresh_versions()
         elif kind == "phase" and event.get("id") in self.rows:
             key = event["id"]
             self.append_log("Этап: " + event.get("title", key))
@@ -358,24 +470,28 @@ class Installer:
             self.busy = False
             self.code = event["code"]
             self.spinner.pack_forget()
-            self.append_log("Предпросмотр завершён; игра не изменена." if self.args.preview else
-                            ("Установка завершена." if not self.code else "Установка остановлена с ошибкой."))
+            action = "Откат" if self.rollback else "Установка"
+            self.append_log("Предпросмотр завершён." if self.args.preview else
+                            f"{action}: {'готово' if not self.code else 'ошибка'}.")
             if self.audio:
                 self.audio.stop()
             for _, bar, _ in self.rows.values():
                 bar.stop()
+            title = "Предыдущая версия перевода возвращена" if self.rollback else "Всё готово. Можно начинать!"
             self.title.config(text="Предпросмотр завершён" if self.args.preview else
-                              ("Всё готово. Можно начинать!" if not self.code else "Установка остановлена"))
+                              (title if not self.code else f"{action}: ошибка"))
             self.subtitle.config(text="Выберите «Русский» в настройках игры." if not self.code and not self.args.preview
                                  else ("Игра не изменена." if self.args.preview else "Подробности ошибки — в журнале."))
             if not self.code:
                 self.overall["value"] = 100
             self.start_button.config(text="Закрыть", state="normal", command=self.close)
+            self.refresh_versions()
 
     def poll(self):
         for _ in range(100):
             try:
-                self.handle(self.events.get_nowait())
+                if self.handle(self.events.get_nowait()):
+                    return
             except queue.Empty:
                 break
         if self.started and self.busy:
@@ -439,8 +555,9 @@ class Installer:
         text.see("end")
 
     def close(self):
-        if self.busy:
-            messagebox.showinfo("Идёт установка", "Дождитесь окончания записи файлов. Окно можно свернуть.")
+        if self.busy or self.updating:
+            messagebox.showinfo("Идёт обновление" if self.updating else "Перевод",
+                                "Дождитесь окончания операции. Окно можно свернуть.")
             return
         if self.preparing:
             messagebox.showinfo("Подготовка", "Дождитесь окончания поиска и загрузки оформления.")
@@ -453,5 +570,13 @@ class Installer:
 
 def launch(args, runner):
     app = Installer(args, runner)
+
+    def mark_ready():
+        if not announce_ready(args.release_tag):
+            app.code = 1
+            app.temp.cleanup()
+            app.root.destroy()
+
+    app.root.after_idle(mark_ready)
     app.root.mainloop()
     return app.code

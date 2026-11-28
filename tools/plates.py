@@ -12,10 +12,9 @@
     (5–22 вершины) — и `textureRect`. Русское слово шире, поэтому сетка заменяется
     прямоугольником по его рамке (`picture_layer.write_sprite`), иначе буквы
     за контуром немецкого слова не рисуются;
-  * `Situation_0` и `Situation_1` игра берёт через таблицу картинок локали
-    (`Image Table_de`), остальные пять — прямо по адресу из немецкого бандла.
-    `swap_localized.py` уводит строки таблицы на английские спрайты; у русских
-    плашек эти строки возвращаются немецкими (`table_rows`).
+  * все семь плашек идут через `Image Table_de`. У `Situation_0/1` в строке
+    виден суффикс `[имя спрайта]`. У остальных строк записан один GUID,
+    поэтому их ищем по общему идентификатору из `Image Table Shared Data`.
 
 Набор — по замеру английских плашек этой же игры, а не на глаз: кегль, сжатие по
 ширине, базовая линия и левый край подбираются так, чтобы английское слово нашим
@@ -49,6 +48,7 @@ SHEET = WORK / "graphics_masks" / "checks" / "plates.png"
 ENGLISH = "localization-assets-english(en)"
 GERMAN = "localization-assets-german(de)"
 TABLE = "localization-asset-tables-german(de)"
+SHARED_TABLE = "localization-assets-shared_trial"
 FONT = Path("C:/Windows/Fonts/segoeuib.ttf")
 LABEL_FONT = Path("C:/Windows/Fonts/segoeui.ttf")
 
@@ -266,6 +266,23 @@ def edge_problems(img: Image.Image) -> list[str]:
     return out
 
 
+def situation_ids(table: dict, leaves: set[str]) -> set[int]:
+    names = {name.removesuffix("_ger") for name in leaves
+             if re.fullmatch(r"Situation_[0-6]_ger", name)}
+    if not names:
+        return set()
+    shared_id = table["m_SharedData"]["m_PathID"]
+    shared = UnityPy.load(str(untouched(SHARED_TABLE)))
+    for obj in shared.objects:
+        if obj.path_id != shared_id or obj.type.name != "MonoBehaviour":
+            continue
+        tree = obj.read_typetree()
+        if tree.get("m_TableCollectionName") == "Image Table":
+            keys = {row["m_Key"]: row["m_Id"] for row in tree["m_Entries"]}
+            return {keys[name] for name in names}
+    raise ValueError("В общем бандле нет ключей таблицы картинок.")
+
+
 def table_rows(table_path: Path, leaves: set[str]) -> dict[int, str]:
     """Строки `Image Table_de`, ведущие на эти немецкие спрайты: `m_Id` -> немецкое значение.
 
@@ -279,11 +296,14 @@ def table_rows(table_path: Path, leaves: set[str]) -> dict[int, str]:
         tree = obj.read_typetree()
         if "m_TableData" not in tree:
             continue
+        expected = situation_ids(tree, leaves)
         out = {}
         for row in tree["m_TableData"]:
             m = re.search(r"\[([^\]]+)\]$", row["m_Localized"])
-            if m and m.group(1) in leaves:
+            if (m and m.group(1) in leaves) or row["m_Id"] in expected:
                 out[row["m_Id"]] = row["m_Localized"]
+        if any(not out.get(key) for key in expected):
+            raise ValueError("В немецкой таблице картинок отсутствует строка плашки.")
         return out
     return {}
 

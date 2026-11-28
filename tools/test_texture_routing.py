@@ -3,8 +3,39 @@ import base64
 import json
 import struct
 import unittest
+from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
 
 from picture_layer import TextureCatalog
+from plates import table_rows
+
+
+class SituationTableTests(unittest.TestCase):
+    def test_uses_shared_key_for_plain_guid_and_keeps_named_sprite(self):
+        def asset(path_id, tree):
+            return SimpleNamespace(path_id=path_id, type=SimpleNamespace(name="MonoBehaviour"),
+                                   read_typetree=lambda: tree)
+
+        table = asset(3, {
+            "m_SharedData": {"m_FileID": 1, "m_PathID": 4},
+            "m_TableData": [
+                {"m_Id": 1, "m_Localized": "guid[Situation_0_ger]"},
+                {"m_Id": 2, "m_Localized": "8a1ce869b7cb4c64abacb62f7c1485a5"},
+                {"m_Id": 9, "m_Localized": "other"},
+            ],
+        })
+        shared = asset(4, {
+            "m_TableCollectionName": "Image Table",
+            "m_Entries": [{"m_Id": 1, "m_Key": "Situation_0"},
+                          {"m_Id": 2, "m_Key": "Situation_6"},
+                          {"m_Id": 9, "m_Key": "Situation_5"}],
+        })
+        with (patch("plates.untouched", return_value=Path("shared")),
+              patch("plates.UnityPy.load", side_effect=[
+                  SimpleNamespace(objects=[table]), SimpleNamespace(objects=[shared])])):
+            result = table_rows(Path("german"), {"Situation_0_ger", "Situation_6_ger"})
+        self.assertEqual(result, {1: "guid[Situation_0_ger]", 2: "8a1ce869b7cb4c64abacb62f7c1485a5"})
 
 
 class TextureCatalogTests(unittest.TestCase):

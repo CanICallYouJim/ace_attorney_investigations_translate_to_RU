@@ -129,12 +129,14 @@ def pictures(from_bundle: str | None = None) -> int:
     с преднагрузкой, а английская текстура не тронута.
     """
     import gc
+    from tempfile import TemporaryDirectory
 
     from PIL import Image, ImageChops, ImageStat
 
     from common import BUNDLES
     from layer_localized import RU, flat, original
     from picture_layer import FLIP, Shipment, material_source, model_texture, pixels_sha, preload_sha
+    from stream_bundle import open_bundle, save_bundle
     from swap_localized import plan_env
 
     shipment = Shipment()
@@ -165,7 +167,8 @@ def pictures(from_bundle: str | None = None) -> int:
     def plate_ok(built, entry) -> bool:
         """Плашка: немецкая текстура несёт ровно набор, сетка покрывает надпись,
         по адресу по-прежнему текстура и спрайт, строка таблицы локали — на немецкий спрайт."""
-        from picture_layer import plate_pixels_match, sprites_by_key, texture_of
+        from picture_layer import leaf, plate_pixels_match, sprites_by_key, texture_of
+        from plates import TABLE, table_rows, untouched
         from swap_localized import swap_image_table
 
         sprite = sprites_by_key(built).get(entry["key"])
@@ -188,8 +191,10 @@ def pictures(from_bundle: str | None = None) -> int:
         kinds = sorted(types.get(info["asset"]["m_PathID"], "?") for k, info in tree["m_Container"]
                        if k == entry["key"])
         addresses = kinds == ["Sprite", "Texture2D"]
-        table = True
-        if entry.get("table"):
+        expected = table_rows(untouched(TABLE), {leaf(entry["key"])})
+        route = entry.get("table")
+        table = expected == ({route["m_Id"]: route["german"]} if route else {})
+        if table and expected:
             blob, _ = swap_image_table(shipment.table_rows(BUNDLES))
             rows = {}
             for obj in UnityPy.load(blob).objects:
@@ -197,13 +202,13 @@ def pictures(from_bundle: str | None = None) -> int:
                     data = obj.read_typetree()
                     if "m_TableData" in data:
                         rows = {r["m_Id"]: r["m_Localized"] for r in data["m_TableData"]}
-            table = rows.get(entry["table"]["m_Id"]) == entry["table"]["german"]
+            table = all(rows.get(key) == guid for key, guid in expected.items())
         ok = same and covers and addresses and table
         print(f"    {entry['name']:18} плашка: пиксели {'ровно набор' if same else 'ДРУГИЕ'}{lossy}; "
               f"сетка {'прямоугольник по надписи' if covers else 'НЕ ПОКРЫВАЕТ НАДПИСЬ'}; "
               f"по адресу {'текстура и спрайт' if addresses else 'СБИТО: ' + ', '.join(kinds)}"
               + (f"; таблица локали {'на немецкий спрайт' if table else 'ВЕДЁТ НЕ ТУДА'}"
-                 if entry.get("table") else "")
+                 if expected or route else "")
               + ("" if ok else "  <- РАЗОШЛОСЬ"))
         return ok
 
@@ -234,7 +239,13 @@ def pictures(from_bundle: str | None = None) -> int:
                                  if hasattr(reader, "bytes")}
         original_env = None
         gc.collect()
-        blob, done, notes = shipment.build(src, plan)
+        with TemporaryDirectory(prefix="aai2-selftest-") as scratch:
+            staged = Path(scratch) / live.name
+            with open_bundle(src) as env:
+                done, notes = shipment.patch(env, bundle, plan, staged.parent)
+                save_bundle(env.file, staged, source=src)
+            del env
+            blob = staged.read_bytes()
         gc.collect()
         built = UnityPy.load(blob)
         ab = next(o for o in built.objects if o.type.name == "AssetBundle").read_typetree()

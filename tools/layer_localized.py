@@ -691,6 +691,7 @@ def build(folder: Path, show: bool, prev: dict | None = None) -> tuple[dict, lis
                 # Плашка ситуации: наш набор целиком, склеивать не с чем (plates.py).
                 if (old is not None and old.get("kind") == "plate" and old.get("png_sha") == png_sha
                         and old.get("key") == key and old.get("bundle") == entry["bundle"] and intact(old)
+                        and (not name.startswith("Situation_") or old.get("table"))
                         and old.get("texture_sha") == pixels_sha(texture_of(env, sprites[key]).read().image)):
                     manifest["pictures"].append(dict(old))
                     print(f"  {name:18} плашка без изменений — слой с прошлой сборки", flush=True)

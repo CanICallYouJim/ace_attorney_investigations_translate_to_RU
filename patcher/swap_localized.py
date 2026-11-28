@@ -130,7 +130,15 @@ def add_missing_aliases(env, tree: dict, pairs) -> dict:
 
 def redirect(path, pairs: list[tuple[str, str]]) -> bytes:
     """Переписать m_Container: адресу _ger отдать объект и преднагрузку записи _eng."""
-    env = UnityPy.load(str(path))
+    return redirect_env(UnityPy.load(str(path)), pairs)
+
+
+def redirect_env(env, pairs: list[tuple[str, str]]) -> bytes:
+    redirect_objects(env, pairs)
+    return env.file.save(packer="lz4")
+
+
+def redirect_objects(env, pairs: list[tuple[str, str]]) -> None:
     ab = next(o for o in env.objects if o.type.name == "AssetBundle")
     tree = ab.read_typetree()
     by_key = add_missing_aliases(env, tree, pairs)
@@ -144,7 +152,6 @@ def redirect(path, pairs: list[tuple[str, str]]) -> bytes:
         [k, (dict(by_key[wanted[k]]) if k in wanted else v)] for k, v in tree["m_Container"]
     ]
     ab.save_typetree(tree)
-    return env.file.save(packer="lz4")
 
 
 def swap_image_table(keep: dict[int, str] | None = None) -> tuple[bytes, int]:

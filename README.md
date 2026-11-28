@@ -14,13 +14,17 @@
 
 [![Скачать для Windows — AAI2-RU.exe](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C_%D0%B4%D0%BB%D1%8F_Windows-AAI2--RU.exe-2ea44f?style=for-the-badge)](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe)
 
-<sub>[AAI2-RU.exe](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe) · 92 МБ · сборка от 2026-11-27 · [что нового в выпуске](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest)</sub>
+<sub>[AAI2-RU.exe](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest/download/AAI2-RU.exe) · 92 МБ · сборка от 2026-11-28 · [что нового в выпуске](https://github.com/CanICallYouJim/ace_attorney_investigations_translate_to_RU/releases/latest)</sub>
 
 **После установки обязательно выберите Deutsch в настройках языка игры.**
 
 [Ролик и скриншоты](#как-это-выглядит) · [Установка](#установка) · [Частые вопросы](#частые-вопросы) · [Связь](#связь)
 
 </div>
+
+В установщике появился ползунок громкости. Детали этапов можно раскрывать,
+а текущий этап подсвечивается. Крупные игровые файлы собираются порциями
+с учётом доступной памяти.
 
 ## Что внутри
 

@@ -75,6 +75,17 @@ def data_dir(explicit: str | None) -> Path:
     return packed
 
 
+def setup_module_path() -> None:
+    # Image operations do not use parallel BLAS. Its default native thread
+    # pools can reserve hundreds of MiB before the bundle reader even starts.
+    os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+    tools = Path(__file__).resolve().parent.parent / "tools"
+    if tools.is_dir() and str(tools) not in sys.path:
+        sys.path.insert(0, str(tools))       # работа из репозитория
+    if str(HERE) not in sys.path:
+        sys.path.insert(0, str(HERE))        # собранный комплект, всё в одной папке
+
+
 def setup_env(game: Path, data: Path, backup: Path) -> None:
     """Нацелить модули tools/ на чужую игру.
 
@@ -84,11 +95,7 @@ def setup_env(game: Path, data: Path, backup: Path) -> None:
     os.environ["AAI2_GAME"] = str(game)
     os.environ["AAI2_WORK"] = str(data)
     os.environ["AAI2_BACKUP"] = str(backup)
-    tools = Path(__file__).resolve().parent.parent / "tools"
-    if tools.is_dir() and str(tools) not in sys.path:
-        sys.path.insert(0, str(tools))       # работа из репозитория
-    if str(HERE) not in sys.path:
-        sys.path.insert(0, str(HERE))        # собранный комплект, всё в одной папке
+    setup_module_path()
 
 
 # --- бэкап и запись -----------------------------------------------------------
@@ -403,8 +410,7 @@ def install(args, game, backup, emit, history=None, tag=None) -> int:
             fresh = args.full or args.build_only or not manifest.get("graphics")
             installed = manifest.setdefault("graphics", {})
             if fresh:
-                say(f"    Это {'5,2 ГБ и минут двенадцать' if args.gk1_graphics else '2,9 ГБ и минут семь'}:"
-                    " файлы игры переписываются целиком.")
+                say("    Пересобираю наборы графики. Крупные файлы обрабатываются блоками.")
             else:
                 say("    Бандлы, которые уже стоят и не менялись, пропускаю — переписываю только\n"
                     "    новые и изменённые. Собрать всё заново — ключ --full.")
@@ -555,6 +561,7 @@ def main(argv=None) -> int:
         if args.update_cache and launch_cached(args.update_cache, args.release_tag, list(arguments)):
             return 0
 
+        setup_module_path()
         from loading_ui import launch
 
         def gui_run(uiargs):

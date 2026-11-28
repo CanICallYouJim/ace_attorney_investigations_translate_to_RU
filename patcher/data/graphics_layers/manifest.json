@@ -5841,7 +5841,11 @@
       "png_sha": "f28db7abc34bff26a696e8196dc6f42cbe196cdfb58063c4afdb17c83ea7e234",
       "texture_sha": "ff8b84bc6018f5432a8354811391bbfc63a6556dc07091fd610c0d707f78d9f1",
       "plate_sha": "50dbb67b340ce117012d14b11f8f6d7a52dd5b719a2f42b0739a0e7cca2bf105",
-      "layer": "localization-assets-german(de)/Situation_2.png"
+      "layer": "localization-assets-german(de)/Situation_2.png",
+      "table": {
+        "m_Id": 1079846280667136,
+        "german": "7f691d4a9c0fd4341812dd3cc407affb"
+      }
     },
     {
       "name": "Situation_3",
@@ -5855,7 +5859,11 @@
       "png_sha": "7f39fb6529fcead7135b3c6ab11287ebfd71a74d334f30294cb1c5ab275ec878",
       "texture_sha": "77dbad86218e140b45e52778858d398cd86e441626eeb777dcaddd42d7fc73e3",
       "plate_sha": "413e398f4fe7c423ff74948dc33a53e765e2269775045d28da8f324fc02bf809",
-      "layer": "localization-assets-german(de)/Situation_3.png"
+      "layer": "localization-assets-german(de)/Situation_3.png",
+      "table": {
+        "m_Id": 1079907718832128,
+        "german": "5751ccc69e25164428ab2b1f5ae321f8"
+      }
     },
     {
       "name": "Situation_4",
@@ -5869,7 +5877,11 @@
       "png_sha": "fa2884bd986be1b816bdb36533e7ab0aee5b7ab75b08940f3d29e9c030500a51",
       "texture_sha": "66ef5c45db3b0a25a13ed031c37e6b2218504cfa43de219165981a30759bfcf7",
       "plate_sha": "56006e59d098c0e25eb59ac9e0d1156704793e5aaef63c9bfc81085ec43c0c36",
-      "layer": "localization-assets-german(de)/Situation_4.png"
+      "layer": "localization-assets-german(de)/Situation_4.png",
+      "table": {
+        "m_Id": 1079947447279616,
+        "german": "ea87708d49c46ee4ebdb86646ebec5b5"
+      }
     },
     {
       "name": "Situation_5",
@@ -5883,7 +5895,11 @@
       "png_sha": "30027bbf21e17508741b852ae86a77c434c96a5de9979bbce478d3ab5ed2c7e6",
       "texture_sha": "e908d3e183b0dc0cb41e66f4952166e5bd6647fc19566a9452ea028a01424af4",
       "plate_sha": "40da4f45e8102525748db051e2fd00cc4e594985ed5aac88580a6fd87a6c2a6b",
-      "layer": "localization-assets-german(de)/Situation_5.png"
+      "layer": "localization-assets-german(de)/Situation_5.png",
+      "table": {
+        "m_Id": 1080006234644480,
+        "german": "57c1200a4c422dd44b2184a1036028b2"
+      }
     },
     {
       "name": "Situation_6",
@@ -5897,7 +5913,11 @@
       "png_sha": "8aed9d1da7e804ac3fdeabf03bf0d86cb122ab4608813c446a1da34857c7f491",
       "texture_sha": "6f20b12577698c8ec256c851df95a28f2d4725b48860d2583c18f617405fec14",
       "plate_sha": "c58fdfa376435fc3a1dc0d77d5e014eee2368bf0c7ad71b5802fb859997ffbc7",
-      "layer": "localization-assets-german(de)/Situation_6.png"
+      "layer": "localization-assets-german(de)/Situation_6.png",
+      "table": {
+        "m_Id": 1080033191436288,
+        "german": "8a1ce869b7cb4c64abacb62f7c1485a5"
+      }
     },
     {
       "name": "hikarikabin",

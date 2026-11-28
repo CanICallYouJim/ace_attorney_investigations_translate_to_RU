@@ -75,6 +75,17 @@ def data_dir(explicit: str | None) -> Path:
     return packed
 
 
+def setup_module_path() -> None:
+    # Image operations do not use parallel BLAS. Its default native thread
+    # pools can reserve hundreds of MiB before the bundle reader even starts.
+    os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+    tools = Path(__file__).resolve().parent.parent / "tools"
+    if tools.is_dir() and str(tools) not in sys.path:
+        sys.path.insert(0, str(tools))       # работа из репозитория
+    if str(HERE) not in sys.path:
+        sys.path.insert(0, str(HERE))        # собранный комплект, всё в одной папке
+
+
 def setup_env(game: Path, data: Path, backup: Path) -> None:
     """Нацелить модули tools/ на чужую игру.
 
@@ -84,11 +95,7 @@ def setup_env(game: Path, data: Path, backup: Path) -> None:
     os.environ["AAI2_GAME"] = str(game)
     os.environ["AAI2_WORK"] = str(data)
     os.environ["AAI2_BACKUP"] = str(backup)
-    tools = Path(__file__).resolve().parent.parent / "tools"
-    if tools.is_dir() and str(tools) not in sys.path:
-        sys.path.insert(0, str(tools))       # работа из репозитория
-    if str(HERE) not in sys.path:
-        sys.path.insert(0, str(HERE))        # собранный комплект, всё в одной папке
+    setup_module_path()
 
 
 # --- бэкап и запись -----------------------------------------------------------
@@ -104,9 +111,10 @@ def load_manifest(backup: Path) -> dict:
 
 
 def save_manifest(backup: Path, manifest: dict) -> None:
+    from local_state import write_json
+
     backup.mkdir(parents=True, exist_ok=True)
-    (backup / "manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
+    write_json(backup / "manifest.json", manifest)
 
 
 def replace(staged: Path, target: Path) -> None:
@@ -133,7 +141,7 @@ def replace(staged: Path, target: Path) -> None:
 
 
 def install_change(change, game: Path, backup: Path, manifest: dict,
-                   keep_original: bool = True) -> str:
+                   keep_original: bool = True, history=None) -> str:
     """Сохранить оригинал, положить замену. Возвращает строку отчёта."""
     from common import sha256
 
@@ -148,12 +156,15 @@ def install_change(change, game: Path, backup: Path, manifest: dict,
         manifest["files"][rel] = {"key": change.key, "sha_original": sha256(saved)}
 
     digest = sha256(change.staged)
-    if digest == sha256(change.target):
+    current = sha256(change.target)
+    if digest == current:
         change.staged.unlink(missing_ok=True)
         return "уже стоит"
 
     # staged лежит на том же томе, что и игра, поэтому замена атомарная:
     # оборванный на середине патчер не оставит наполовину записанный бандл.
+    if history is not None:
+        history.before_replace(change.target, current, digest)
     replace(change.staged, change.target)
     if rel in manifest["files"]:
         manifest["files"][rel]["sha_patched"] = digest
@@ -175,6 +186,7 @@ def uninstall(game: Path, backup: Path) -> int:
         saved, target = backup / rel, game / rel
         if not saved.exists():
             say(f"  - нет в бэкапе: {rel}")
+            broken += 1
             continue
         if sha256(saved) != rec["sha_original"]:
             say(f"  X бэкап испорчен: {rel}")
@@ -242,17 +254,49 @@ def run(args) -> int:
     backup = game / BACKUP_DIR
     setup_env(game, data, backup)
 
-    if args.uninstall:
-        return uninstall(game, backup)
-    if args.bundle and not args.build_only:
+    if args.bundle and not args.build_only and not args.uninstall:
         return fail("--bundle — только вместе с --build-only: частичная установка\n"
                     "оставила бы игру пропатченной наполовину.")
+    if args.build_only and not args.uninstall:
+        return install(args, game, backup, emit)
 
+    from install_history import History
+    from launcher_update import release_tag
+    from local_state import locked
+
+    problem = preflight(game, 0)
+    if problem:
+        return fail(problem)
+    with locked(backup):
+        history = History(game, backup, replace)
+        manifest = load_manifest(backup)
+        history.recover(manifest)
+        if getattr(args, "rollback", False):
+            try:
+                history.rollback(manifest, say)
+            except Exception:
+                history.recover(load_manifest(backup))
+                raise
+            return 0
+        return install(args, game, backup, emit, history, release_tag(data))
+
+
+def install(args, game, backup, emit, history=None, tag=None) -> int:
+    if args.uninstall:
+        code = uninstall(game, backup)
+        if code == 0:
+            manifest = load_manifest(backup)
+            for key in ("rollback", "rollback_tag", "release_tag"):
+                manifest.pop(key, None)
+            save_manifest(backup, manifest)
+            history.collect(manifest)
+        return code
     import steps
 
     # --build-only собирает всё в указанную папку и не трогает игру вовсе.
     # Нужен для проверки: собранное можно сличить с тем, что даёт репозиторий.
     stage = Path(args.build_only) if args.build_only else backup / STAGING
+    manifest = load_manifest(backup)
     if not args.build_only:
         shutil.rmtree(stage, ignore_errors=True)
     stage.mkdir(parents=True, exist_ok=True)
@@ -268,11 +312,27 @@ def run(args) -> int:
             need += 700 * 2**20 + (3 * 2**30 if args.backup_graphics else 0)
             if args.gk1_graphics:
                 need += 2500 * 2**20 if args.backup_graphics else 0
+            # On a full run the previous bytes stay on disk until commit.
+            if tag and (args.full or not manifest.get("graphics")):
+                need += 3 * 2**30 + (2500 * 2**20 if args.gk1_graphics else 0)
         problem = preflight(game, need)
         if problem:
             return fail(problem)
 
-    manifest = load_manifest(backup)
+    previous = None
+    if history is not None and tag:
+        from install_history import has_legacy_translation
+
+        if manifest.get("release_tag") != tag and has_legacy_translation(game, manifest):
+            previous = manifest.copy()
+        history.begin(manifest)
+        if manifest.get("release_tag") != tag:
+            manifest.pop("rollback", None)
+            manifest.pop("rollback_tag", None)
+        manifest["release_tag"] = tag
+    else:
+        for key in ("rollback", "rollback_tag", "release_tag"):
+            manifest.pop(key, None)
     manifest.setdefault("files", {})
     manifest["game"] = "Ace Attorney Investigations Collection"
     manifest["installed"] = time.strftime("%Y-%m-%d %H:%M")
@@ -281,7 +341,7 @@ def run(args) -> int:
         if args.build_only:
             from common import sha256
             return f"собран, {change.staged.stat().st_size:,} байт, sha {sha256(change.staged)[:12]}"
-        return install_change(change, game, backup, manifest, keep_original)
+        return install_change(change, game, backup, manifest, keep_original, history if tag else None)
 
     started = time.time()
     done = 0
@@ -350,8 +410,7 @@ def run(args) -> int:
             fresh = args.full or args.build_only or not manifest.get("graphics")
             installed = manifest.setdefault("graphics", {})
             if fresh:
-                say(f"    Это {'5,2 ГБ и минут двенадцать' if args.gk1_graphics else '2,9 ГБ и минут семь'}:"
-                    " файлы игры переписываются целиком.")
+                say("    Пересобираю наборы графики. Крупные файлы обрабатываются блоками.")
             else:
                 say("    Бандлы, которые уже стоят и не менялись, пропускаю — переписываю только\n"
                     "    новые и изменённые. Собрать всё заново — ключ --full.")
@@ -366,8 +425,9 @@ def run(args) -> int:
                 if change.staged is None:
                     skipped += 1
                     continue
-                say(f"    [{i}] {change.key}: {apply(change, args.backup_graphics)}")
-                if not args.build_only:
+                keep = args.backup_graphics or change.key == "texture_routing"
+                say(f"    [{i}] {change.key}: {apply(change, keep)}")
+                if not args.build_only and change.key != "texture_routing":
                     installed[change.target.name] = {"recipe": change.recipe,
                                                      "stamp": steps.stamp(change.target)}
                 done += 1
@@ -375,9 +435,15 @@ def run(args) -> int:
                 say(f"    уже стояли и не менялись, пропущено бандлов: {skipped}")
             spent["графика"] = time.time() - mark
             emit("phase_done", id="graphics")
+        if history is not None and tag:
+            history.commit(manifest, previous)
     finally:
         if not args.build_only:
-            save_manifest(backup, manifest)
+            if tag:
+                history.recover(load_manifest(backup))
+            else:
+                save_manifest(backup, manifest)
+                history.collect(manifest)
             shutil.rmtree(stage, ignore_errors=True)
 
     say()
@@ -489,6 +555,13 @@ def main(argv=None) -> int:
     if args.gui or args.preview or (not arguments and sys.platform == "win32"):
         if args.console or args.check or args.uninstall or args.build_only or args.bundle:
             return fail("--gui/--preview несовместимы с консольными режимами проверки, сборки и отката.")
+        from launcher_update import cache_dir, launch_cached, release_tag
+        args.release_tag = release_tag(data_dir(args.data)) if not args.preview else None
+        args.update_cache = cache_dir() if args.release_tag and not args.data else None
+        if args.update_cache and launch_cached(args.update_cache, args.release_tag, list(arguments)):
+            return 0
+
+        setup_module_path()
         from loading_ui import launch
 
         def gui_run(uiargs):

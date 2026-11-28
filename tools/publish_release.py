@@ -198,7 +198,15 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--out", type=Path, default=DEFAULT_OUT, help="куда собирать")
     ap.add_argument("--exe", action="store_true", help="собрать ещё и .exe через PyInstaller")
+    ap.add_argument("--tag", help="тег выпуска, например v2026-11-27.1")
     args = ap.parse_args()
+
+    sys.path.insert(0, str(PATCHER))
+    from launcher_update import version
+    built = time.strftime("%Y-%m-%d")
+    tag = args.tag or f"v{built}"
+    if version(tag) is None:
+        ap.error("--tag: ожидается vГГГГ-ММ-ДД или vГГГГ-ММ-ДД.N")
 
     out = args.out
     patcher_out = out / "patcher"
@@ -237,7 +245,8 @@ def main() -> int:
         load_json(WORK / "graphics_ru" / "coverage.json"))
 
     stats |= {
-        "built": time.strftime("%Y-%m-%d"),
+        "built": built,
+        "tag": tag,
         "unitypy": version_of("UnityPy"),
         "fonttools": version_of("fonttools"),
     }

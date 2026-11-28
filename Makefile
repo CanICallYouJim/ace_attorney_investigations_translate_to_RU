@@ -30,6 +30,7 @@ export PYTHONIOENCODING := utf-8
 # Дополнительные ключи документированной публикации (например, --force после
 # проверки, что ручные правки main уже перенесены в исходники dev).
 PUBLISH_ARGS ?=
+RELEASE_ARGS ?=
 SELFTEST_ARGS ?=
 
 .DEFAULT_GOAL := help
@@ -110,7 +111,7 @@ uninstall:           ## откатить патчер: вернуть ориги
 	$(PY) patcher/aai2ru.py --uninstall --no-pause
 
 release: check layers ## собрать дерево витрины и AAI2-RU.exe в dist/release
-	$(PY) tools/publish_release.py --exe
+	$(PY) tools/publish_release.py --exe $(RELEASE_ARGS)
 
 publish:             ## перенести собранное в ветку main и отправить на GitHub
 	$(PY) tools/publish_branch.py --push $(PUBLISH_ARGS)

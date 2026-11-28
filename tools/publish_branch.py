@@ -159,7 +159,7 @@ def main() -> int:
         remaining = [name for name in ASSETS if (TREE / name).exists()]
         if remaining:
             stats = load_json(TREE / "patcher" / "data" / "version.json", default={}) or {}
-            tag = f"v{stats.get('built', 'YYYY-MM-DD')}"
+            tag = stats.get("tag") or f"v{stats.get('built', 'YYYY-MM-DD')}"
             print("\nВ ветку НЕ положено (раздаётся через GitHub Releases):")
             for name in remaining:
                 size = (TREE / name).stat().st_size / 2**20

@@ -73,24 +73,24 @@ def prepare(game: Path, output: Path) -> dict:
     if source is None:
         return result
     try:
-        import UnityPy
         from PIL import Image, ImageEnhance, ImageOps
+        from stream_bundle import open_bundle
 
-        env = UnityPy.load(str(source))
         # Language-neutral original. Map00 is the opening Gourd Lake map,
         # without characters or later-story content.
-        for obj in env.objects:
-            if obj.type.name == "Texture2D" and obj.peek_name() == "map00":
-                image = obj.read().image.convert("RGB")
-                image = ImageOps.fit(image, (1100, 700), method=Image.Resampling.LANCZOS)
-                image = ImageEnhance.Color(image).enhance(0.65)
-                image = ImageEnhance.Brightness(image).enhance(0.48)
-                output = Path(output)
-                output.mkdir(parents=True, exist_ok=True)
-                target = output / "loading-background.png"
-                image.save(target)
-                result.update(background=target, source=f"{source.name}:map00")
-                break
+        with open_bundle(source) as env:
+            for obj in env.objects:
+                if obj.type.name == "Texture2D" and obj.peek_name() == "map00":
+                    image = obj.read().image.convert("RGB")
+                    image = ImageOps.fit(image, (1100, 700), method=Image.Resampling.LANCZOS)
+                    image = ImageEnhance.Color(image).enhance(0.65)
+                    image = ImageEnhance.Brightness(image).enhance(0.48)
+                    output = Path(output)
+                    output.mkdir(parents=True, exist_ok=True)
+                    target = output / "loading-background.png"
+                    image.save(target)
+                    result.update(background=target, source=f"{source.name}:map00")
+                    break
     except Exception as exc:
         result["warning"] = "Фон недоступен:\n" + traceback.format_exc()
     return result

@@ -1,6 +1,8 @@
 """Installer progress and entry-point routing; no real game files are accessed."""
 from __future__ import annotations
 
+import array
+import queue
 import sys
 import tempfile
 import unittest
@@ -107,6 +109,7 @@ class EntryPointTests(unittest.TestCase):
             self.assertTrue(ui.launch.call_args.args[0].preview)
             run.assert_not_called()
 
+
     def test_explicit_console_routes_to_run(self):
         ui = ModuleType("loading_ui")
         ui.launch = Mock()
@@ -124,6 +127,49 @@ class EntryPointTests(unittest.TestCase):
               patch.object(aai2ru, "run") as run):
             self.assertEqual(aai2ru.main(["--preview", "--build-only", "unused"]), 1)
             run.assert_not_called()
+
+
+class LauncherEventTests(unittest.TestCase):
+    def test_failed_ui_event_does_not_stop_later_progress(self):
+        from loading_ui import Installer
+
+        events = queue.Queue()
+        broken = {"kind": "progress", "id": "graphics", "current": 20}
+        done = {"kind": "finished", "code": 0}
+        events.put(broken)
+        events.put(done)
+        handler = Mock(side_effect=[RuntimeError("render failed"), False])
+        root = Mock()
+        launcher = SimpleNamespace(events=events, handle=handler, root=root, poll=Mock())
+
+        Installer.poll(launcher)
+
+        self.assertEqual([call.args[0] for call in handler.call_args_list], [broken, done])
+        root.report_callback_exception.assert_called_once()
+        root.after.assert_called_once_with(60, launcher.poll)
+
+    def test_memory_error_reports_failure_and_traceback(self):
+        from loading_ui import Installer
+
+        events = queue.Queue()
+        launcher = SimpleNamespace(events=events, args=SimpleNamespace(preview=False),
+                                   game="dummy", rollback=False, runner=Mock(side_effect=MemoryError))
+        Installer.work(launcher)
+
+        self.assertIn("MemoryError", events.get_nowait()["text"])
+        self.assertEqual(events.get_nowait(), {"kind": "finished", "code": 1, "failure": "memory"})
+
+
+class LauncherAudioTests(unittest.TestCase):
+    def test_gain_changes_keep_playback_position_and_wrap(self):
+        from loading_audio import _WavePlayer
+
+        player = _WavePlayer.__new__(_WavePlayer)
+        player.pcm = array.array("h", [1000, -2000, 3000, -4000]).tobytes()
+        player.offset = 0
+        self.assertEqual(list(array.array("h", player._next_block(4, .35))), [350, -700])
+        self.assertEqual(player._next_block(2, 0), b"\x00\x00")
+        self.assertEqual(list(array.array("h", player._next_block(4, 1))), [-4000, 1000])
 
 
 if __name__ == "__main__":

@@ -22,10 +22,14 @@
 """
 from __future__ import annotations
 
+import base64
 import hashlib
+import json
 from copy import copy, deepcopy
+from contextlib import nullcontext
 import struct
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import UnityPy
 from PIL import Image
@@ -38,6 +42,7 @@ FOLDER = WORK / "graphics_layers"
 RAW = int(TextureFormat.RGBA32)
 FLIP = Image.Transpose.FLIP_TOP_BOTTOM
 MESH_PAD = 2              # запас сетки вокруг надписи — как у тугой сетки самого Unity
+PICTURE_MEMORY_BUDGET = 48 * 2**20
 
 
 def short(bundle_name: str) -> str:
@@ -50,12 +55,164 @@ def leaf(key: str) -> str:
     return key.rsplit("/", 1)[-1].rsplit(".", 1)[0]
 
 
+class TextureCatalog:
+    """Add newly created texture addresses to Unity's local Addressables catalog."""
+
+    def __init__(self, raw: bytes):
+        self.data = json.loads(raw)
+        self.ids = self.data["m_InternalIds"]
+        self.index = {name: i for i, name in enumerate(self.ids)}
+        self.changed = 0
+
+    def pending(self, entries: list[dict]) -> list[dict]:
+        return [e for e in entries if e["key"] not in self.index and e["source"] in self.index]
+
+    def register(self, entries: list[dict]) -> None:
+        wanted = self.pending(entries)
+        if not wanted:
+            return
+        names = ["m_" + part + "DataString" for part in ("Key", "Bucket", "Entry")]
+        keys, buckets, locations = [bytearray(base64.b64decode(self.data[n])) for n in names]
+        i32 = struct.Struct("<i")
+        pair = struct.Struct("<2i")
+        record = struct.Struct("<7i")
+        key_count, bucket_count, entry_count = [i32.unpack_from(b)[0] for b in (keys, buckets, locations)]
+        if key_count != bucket_count or len(locations) != 4 + entry_count * record.size:
+            raise ValueError("Неизвестный формат каталога текстур.")
+
+        # Addressables uses each record's primary key for lookup, which is not
+        # the internal bundle path. In this game some families omit .png.
+        cursor = 4
+        offsets = []
+        named_keys = set()
+        for _ in range(bucket_count):
+            offset, count = pair.unpack_from(buckets, cursor)
+            offsets.append(offset)
+            cursor += pair.size + count * i32.size
+            if keys[offset] == 0:
+                size = i32.unpack_from(keys, offset + 1)[0]
+                named_keys.add(bytes(keys[offset + 5:offset + 5 + size]))
+        if cursor != len(buckets):
+            raise ValueError("Неизвестный формат ключей каталога текстур.")
+
+        by_id = {row[0]: row for row in record.iter_unpack(memoryview(locations)[4:])}
+        for entry in wanted:
+            source, target = entry["source"], entry["key"]
+            row = list(by_id[self.index[source]])
+            start = offsets[row[5]]
+            if keys[start] != 0:
+                raise ValueError(f"Неизвестный формат ключа: {source}")
+            size = i32.unpack_from(keys, start + 1)[0]
+            address = bytes(keys[start + 5:start + 5 + size]).decode("ascii")
+            source_leaf, target_leaf = (path.rsplit("/", 1)[-1] for path in (source, target))
+            if not address.endswith(".png"):
+                source_leaf, target_leaf = (v.removesuffix(".png") for v in (source_leaf, target_leaf))
+            if not address.lower().endswith("/" + source_leaf.lower()):
+                raise ValueError(f"Не найдено правило адреса в каталоге: {source}")
+            new_key = (address[:-len(source_leaf)] + target_leaf).encode("ascii")
+            if new_key in named_keys:
+                raise ValueError(f"Ключ уже занят в каталоге: {new_key.decode('ascii')}")
+            named_keys.add(new_key)
+            buckets += struct.pack("<3i", len(keys), 1, entry_count)
+            keys += b"\0" + i32.pack(len(new_key)) + new_key
+            row[0], row[5] = len(self.ids), key_count
+            self.index[target] = len(self.ids)
+            self.ids.append(target)
+            locations += record.pack(*row)
+            key_count += 1
+            entry_count += 1
+            self.changed += 1
+        for name, data, count in zip(names, (keys, buckets, locations), (key_count, key_count, entry_count)):
+            i32.pack_into(data, 0, count)
+            self.data[name] = base64.b64encode(data).decode("ascii")
+
+    def encode(self) -> bytes:
+        return json.dumps(self.data, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+
+
+def shipped_catalog_entries(path: Path, entries: list[dict]) -> list[dict]:
+    """Register only targets actually shipped in the matching bundle."""
+    if not entries:
+        return []
+    from stream_bundle import open_bundle
+
+    ready = []
+    with open_bundle(path) as env:
+        container = env.container
+        for entry in entries:
+            if entry["key"] not in container or entry["source"] not in container:
+                continue
+            own, source = container[entry["key"]], container[entry["source"]]
+            if own.type.name != "Texture2D" or source.type.name != "Texture2D":
+                continue
+            if (own.path_id == source.path_id) == bool(entry.get("alias")):
+                ready.append(entry)
+    return ready
+
+
+class TextureRouting:
+    """Make a shipped texture reachable from the Russian language slot."""
+
+    def __init__(self, catalog_path: Path, bundles: Path):
+        self.catalog_path = catalog_path
+        self.catalog = TextureCatalog(catalog_path.read_bytes())
+        self.ready = {}
+        self.tuning_path = next(bundles.glob("gk_tuning_assets_all_*.bundle"), None)
+        self.rules = []
+        self.redirected = set()
+        if self.tuning_path is None:
+            return
+        # Do not hold the live file open while the installer replaces it.
+        self.tuning = UnityPy.load(self.tuning_path.read_bytes())
+        for key, obj in self.tuning.container.items():
+            if not key.rsplit("/", 1)[-1].startswith("GK2_Sce") or not key.endswith("_Cutscene_Img.asset"):
+                continue
+            tree = obj.read_typetree()
+            self.rules.append((obj, tree))
+            self.redirected.update(
+                row["m_FileName"].casefold()
+                for row in tree["m_DataList"] if row["m_LanguageCodeGer"] != 3
+            )
+
+    def inspect(self, path: Path, entries: list[dict]) -> None:
+        entries = [e for e in entries if e["source"] in self.catalog.index and (
+            e["key"] not in self.catalog.index or e["name"].casefold() in self.redirected)]
+        for entry in shipped_catalog_entries(path, entries):
+            self.ready[entry["key"]] = entry
+
+    def changes(self):
+        entries = list(self.ready.values())
+        self.catalog.register(entries)
+        if self.catalog.changed:
+            yield self.catalog_path, self.catalog.encode(), f"новых адресов: {self.catalog.changed}"
+        routed = {e["name"].casefold() for e in entries if e["key"] in self.catalog.index}
+        fixed = 0
+        for obj, tree in self.rules:
+            rows = [row for row in tree["m_DataList"] if (
+                row["m_FileName"].casefold() in routed and row["m_LanguageCodeGer"] != 3)]
+            if rows:
+                for row in rows:
+                    row["m_LanguageCodeGer"] = 3
+                obj.deref().save_typetree(tree)
+                fixed += len(rows)
+        if fixed:
+            yield self.tuning_path, self.tuning.file.save(packer="lz4"), f"исправлено языковых ссылок: {fixed}"
+
+
 def pixels_sha(img: Image.Image) -> str:
     """Отпечаток по пикселям, а не по байтам сжатой текстуры."""
-    return hashlib.sha256(img.convert("RGBA").tobytes()).hexdigest()
+    if img.mode != "RGBA":
+        img = img.convert("RGBA")
+    if img.width * img.height * 4 <= 2**20:
+        return hashlib.sha256(img.tobytes()).hexdigest()
+    rows = max(1, 2**20 // (img.width * 4))
+    digest = hashlib.sha256()
+    for top in range(0, img.height, rows):
+        digest.update(img.crop((0, top, img.width, min(img.height, top + rows))).tobytes())
+    return digest.hexdigest()
 
 
-def plate_pixels_match(texture, picture: Image.Image) -> bool:
+def plate_pixels_match(texture, picture: Image.Image, *, known_sha: str | None = None) -> bool:
     """Сверить плашку после той же упаковки, без допуска по яркости кадра.
 
     У тёмного фона английские и русские буквы могут целиком попасть в допуск
@@ -64,7 +221,7 @@ def plate_pixels_match(texture, picture: Image.Image) -> bool:
     """
     if picture.size != (texture.m_Width, texture.m_Height):
         return False
-    found = pixels_sha(texture.image)
+    found = known_sha if known_sha is not None else pixels_sha(texture.image)
     if found == pixels_sha(picture):
         return True
     expected = copy(texture)
@@ -173,6 +330,8 @@ def write_material(env, entry: dict, image: Image.Image, raw: bool = False) -> l
     notes = []
     try:
         tex.set_image(image, target_format=want)
+    except MemoryError:
+        raise
     except Exception as exc:
         notes.append(f"{entry['name']}: {TextureFormat(want).name} failed ({exc}), using RGBA32")
         tex.set_image(image, target_format=RAW)
@@ -529,6 +688,8 @@ def write_splash(env, spec: dict, layer: Image.Image, raw: bool = False) -> list
     want = RAW if raw else int(tex.m_TextureFormat)
     try:
         tex.set_image(atlas, target_format=want)
+    except MemoryError:
+        raise
     except Exception as exc:  # noqa: BLE001 — упаковщика может не оказаться, это не повод падать
         notes.append(f"{name}: {TextureFormat(want).name} не упаковался ({exc}), кладу RGBA32")
         tex.set_image(atlas, target_format=RAW)
@@ -602,6 +763,12 @@ def splash_objects(env, spec: dict) -> set:
 
 def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Image],
                  raw: bool = False) -> tuple[bytes, list[str]]:
+    notes = patch_bundle(env, pairs, pictures, raw)
+    return env.file.save(packer="lz4"), notes
+
+
+def patch_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Image | Path],
+                 raw: bool = False) -> list[str]:
     """Бандл целиком: немецким адресам — английские объекты, кроме адресов со своей картинкой.
 
     `pairs` — пары (адрес немецкого, адрес английского или базового), как их даёт
@@ -664,39 +831,42 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
     own: dict[str, int] = {}
     kept: set[str] = set()
     sprite_info: dict[str, dict[str, dict]] = {}
-    for key, img in pictures.items():
-        if key in sprites:
-            sprite = native_sprite(env, key, sprites)
-            texture = texture_of(env, sprite)
-            notes.append(write_sprite(env, sprite, img))
-            # В контейнере у спрайта две записи одного адреса. После fallback
-            # обе могут вести на ENG; восстанавливаем и объекты, и зависимости.
-            pointers = [{"m_FileID": 0, "m_PathID": o.path_id} for o in (sprite, texture)]
-            table = tree["m_PreloadTable"]
-            first = next((i for i in range(len(table) - 1) if table[i:i + 2] == pointers), None)
-            if first is None:
-                first = len(table)
-                table.extend(pointers)
-            sprite_info[key] = {o.type.name: {"preloadIndex": first, "preloadSize": 2,
-                                             "asset": {"m_FileID": 0, "m_PathID": o.path_id}}
-                                for o in (sprite, texture)}
-            kept.add(key)
-            continue
-        obj = german_object(env, entries, key, sources.get(key))
-        tex = obj.read()
-        if key in created:
-            tex.m_Name = leaf(key)
-        if img.size != (tex.m_Width, tex.m_Height):
-            raise ValueError(f"{leaf(key)}: картинка {img.size[0]}x{img.size[1]}, "
-                             f"текстура {tex.m_Width}x{tex.m_Height}")
-        want = RAW if raw else int(tex.m_TextureFormat)
-        try:
-            tex.set_image(img, target_format=want)
-        except Exception as exc:  # noqa: BLE001 — упаковщика может не оказаться, это не повод падать
-            notes.append(f"{leaf(key)}: {TextureFormat(want).name} не упаковался ({exc}), кладу RGBA32")
-            tex.set_image(img, target_format=RAW)
-        tex.save()
-        own[key] = obj.path_id
+    for key, picture in pictures.items():
+        with (Image.open(picture) if isinstance(picture, Path) else nullcontext(picture)) as img:
+            if key in sprites:
+                sprite = native_sprite(env, key, sprites)
+                texture = texture_of(env, sprite)
+                notes.append(write_sprite(env, sprite, img))
+                # В контейнере у спрайта две записи одного адреса. После fallback
+                # обе могут вести на ENG; восстанавливаем и объекты, и зависимости.
+                pointers = [{"m_FileID": 0, "m_PathID": o.path_id} for o in (sprite, texture)]
+                table = tree["m_PreloadTable"]
+                first = next((i for i in range(len(table) - 1) if table[i:i + 2] == pointers), None)
+                if first is None:
+                    first = len(table)
+                    table.extend(pointers)
+                sprite_info[key] = {o.type.name: {"preloadIndex": first, "preloadSize": 2,
+                                                 "asset": {"m_FileID": 0, "m_PathID": o.path_id}}
+                                    for o in (sprite, texture)}
+                kept.add(key)
+                continue
+            obj = german_object(env, entries, key, sources.get(key))
+            tex = obj.read()
+            if key in created:
+                tex.m_Name = leaf(key)
+            if img.size != (tex.m_Width, tex.m_Height):
+                raise ValueError(f"{leaf(key)}: картинка {img.size[0]}x{img.size[1]}, "
+                                 f"текстура {tex.m_Width}x{tex.m_Height}")
+            want = RAW if raw else int(tex.m_TextureFormat)
+            try:
+                tex.set_image(img, target_format=want)
+            except MemoryError:
+                raise
+            except Exception as exc:  # noqa: BLE001 — упаковщика может не оказаться, это не повод падать
+                notes.append(f"{leaf(key)}: {TextureFormat(want).name} не упаковался ({exc}), кладу RGBA32")
+                tex.set_image(img, target_format=RAW)
+            tex.save()
+            own[key] = obj.path_id
 
     preload: dict[int, int] = {}
     for i, ptr in enumerate(tree["m_PreloadTable"]):
@@ -722,7 +892,7 @@ def write_bundle(env, pairs: list[tuple[str, str]], pictures: dict[str, Image.Im
         container.append([key, info])
     tree["m_Container"] = container
     ab.save_typetree(tree)
-    return env.file.save(packer="lz4"), notes
+    return notes
 
 
 class Shipment:
@@ -769,14 +939,13 @@ class Shipment:
         except ValueError:
             return "в бандле нет её спрайта"
         texture = texture_of(env, sprite).read()
-        image = texture.image
-        found = pixels_sha(image)
+        found = pixels_sha(texture.image)
         if found in (entry["texture_sha"], entry["plate_sha"]):
             return None
         layer = self.folder / entry["layer"]
         if layer.exists():
             want = Image.open(layer).convert("RGBA")
-            if plate_pixels_match(texture, want):
+            if plate_pixels_match(texture, want, known_sha=found):
                 return None
         return "немецкая плашка в этой игре другая"
 
@@ -786,6 +955,8 @@ class Shipment:
         Только у плашек, которые лягут в живой бандл игрока: иначе таблица повела бы
         на немецкий спрайт с немецкой надписью. Сверка — та же, что при сборке.
         """
+        from stream_bundle import open_bundle
+
         rows: dict[int, str] = {}
         plates: dict[str, list[dict]] = {}
         for entry in self.pictures:
@@ -795,30 +966,49 @@ class Shipment:
             live = next(bundles.glob(f"{bundle}_assets_all_*.bundle"), None)
             if live is None:
                 continue
-            env = UnityPy.load(str(live))
-            sprites = sprites_by_key(env)
-            for entry in entries:
-                if self.plate_fits(env, sprites, entry) is None:
-                    rows[entry["table"]["m_Id"]] = entry["table"]["german"]
+            with open_bundle(live) as env:
+                sprites = sprites_by_key(env)
+                for entry in entries:
+                    if self.plate_fits(env, sprites, entry) is None:
+                        rows[entry["table"]["m_Id"]] = entry["table"]["german"]
         return rows
 
-    def build(self, path: Path, pairs: list[tuple[str, str]]) -> tuple[bytes, int, list[str]]:
-        """Бандл с подменой и русскими картинками. Возвращает байты, сколько картинок, заметки.
+    def patch(self, env, bundle_name: str, pairs: list[tuple[str, str]], stage: Path) -> tuple[int, list[str]]:
+        """Меняет объекты в открытом бандле. Возвращает число картинок и заметки.
 
         Картинка склеивается только поверх той английской текстуры, по которой снят
         слой: отпечаток пикселей сверяется. Не совпал (другая версия игры) — эта
         картинка остаётся английской, а не ложится криво.
         """
-        env = UnityPy.load(str(path))
+        with TemporaryDirectory(prefix=".aai2-images-", dir=stage) as scratch:
+            return self._patch_pictures(env, bundle_name, pairs, Path(scratch))
+
+    def _patch_pictures(self, env, bundle_name: str, pairs: list[tuple[str, str]],
+                        scratch: Path) -> tuple[int, list[str]]:
         pairs = list(pairs)
-        for entry in self.aliases_by_bundle.get(short(path.name), []):
+        for entry in self.aliases_by_bundle.get(short(bundle_name), []):
             if entry["source"] in env.container:
                 pairs.append((entry["key"], entry["source"]))
-        pictures: dict[str, Image.Image] = {}
+        pictures: dict[str, Image.Image | Path] = {}
+        retained = 0
+        next_spill = 0
+
+        def retain(key: str, image: Image.Image) -> None:
+            nonlocal retained, next_spill
+            size = image.width * image.height * 4
+            if retained + size <= PICTURE_MEMORY_BUDGET:
+                pictures[key] = image
+                retained += size
+            else:
+                path = scratch / f"{next_spill}.png"
+                next_spill += 1
+                image.save(path, compress_level=1)
+                pictures[key] = path
+
         notes: list[str] = []
         sprites: dict | None = None
         extra = 0
-        for entry in self.by_bundle.get(short(path.name), []):
+        for entry in self.by_bundle.get(short(bundle_name), []):
             name = entry["name"]
             if entry.get("kind") == "material":
                 try:
@@ -851,7 +1041,7 @@ class Shipment:
                 if why:
                     notes.append(f"{name}: {why} — оставлена как есть")
                     continue
-                pictures[entry["key"]] = Image.open(self.folder / entry["layer"]).convert("RGBA")
+                retain(entry["key"], Image.open(self.folder / entry["layer"]).convert("RGBA"))
                 continue
             if (entry["source"] not in env.container
                     or entry["key"] not in env.container and not entry.get("create")):
@@ -859,16 +1049,25 @@ class Shipment:
                 continue
             source = env.container[entry["source"]].read().image
             if pixels_sha(source) != entry["source_sha"]:
+                del source
                 notes.append(f"{name}: английская картинка в этой игре другая — оставлена английской")
                 continue
             derive = entry.get("derive")
             if derive and derive["из"] not in self.composites:
+                del source
                 notes.append(f"{name}: не собралась «{derive['из']}», из которой она уменьшается, "
                              f"— оставлена английской")
                 continue
             face = compose(entry, source, self.composites, self.folder)
+            del source
             if name in self.needed:
                 self.composites[name] = face
-            pictures[entry["key"]] = face.transpose(FLIP) if entry["flipped"] else face
-        blob, more = write_bundle(env, pairs, pictures)
-        return blob, len(pictures) + extra, notes + more
+            retain(entry["key"], face.transpose(FLIP) if entry["flipped"] else face)
+            del face
+        more = patch_bundle(env, pairs, pictures)
+        return len(pictures) + extra, notes + more
+    def routing_entries(self, bundle_short: str) -> list[dict]:
+        textures = [e for e in self.by_bundle.get(bundle_short, [])
+                    if not e.get("kind") and e["key"].endswith("_ger.png")]
+        aliases = [{**e, "alias": True} for e in self.aliases_by_bundle.get(bundle_short, [])]
+        return textures + aliases

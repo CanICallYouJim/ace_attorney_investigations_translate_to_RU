@@ -12,6 +12,7 @@
 """
 from __future__ import annotations
 
+import gc
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Iterator
@@ -34,9 +35,9 @@ class Change:
 # и надписи там свои.
 CATEGORIES = ("ui", "graphics", "movie", "audio")
 
-# Версия сборки графики. Поднять, когда код меняет то, что ложится в бандл
-# (подмена адресов, склейка, упаковка): у игроков, поставивших прежний патч,
-# каждый бандл тогда соберётся заново, а не будет пропущен как «уже стоит».
+# Версия игрового содержимого графики. Поднять при изменении адресов,
+# текстур или других ресурсов. Смена сжатия с тем же содержимым не требует
+# пересборки уже установленных бандлов.
 GRAPHICS_VERSION = "2026-10-02"
 
 
@@ -189,43 +190,40 @@ def fonts(stage: Path) -> list[Change]:
     дважды незачем. Правки идемпотентны — на уже пропатченной игре обе функции
     возвращают шрифт как есть, и шаг честно скажет «менять нечего».
     """
-    import UnityPy
-
     import carriers as C
     from patch_font_cmap import LATIN_FONTS, patch_ttf
     from patch_font_metrics import DEFAULT_SIDEBEARING, retype
     from common import GAME
+    from stream_bundle import open_bundle, save_bundle
 
     target = GAME / "GK12_Data" / "data.unity3d"
     if not target.exists():
         raise RuntimeError(f"в игре нет {target.name} — это точно папка игры?")
 
-    env = UnityPy.load(str(target))
     touched: list[str] = []
-    for obj in env.objects:
-        if obj.type.name != "Font":
-            continue
-        tree = obj.read_typetree()
-        name = tree.get("m_Name", "?")
-        if name not in LATIN_FONTS:
-            continue
-        blob = bytes(tree.get("m_FontData") or b"")
-        if not blob:
-            continue
-
-        blob, added = patch_ttf(blob, C.BROKEN)
-        blob, retyped, _ = retype(blob, DEFAULT_SIDEBEARING)
-        if not added and not retyped:
-            continue
-        tree["m_FontData"] = list(blob)
-        obj.save_typetree(tree)
-        touched.append(f"{name} (+{added} кодов, {retyped} букв)")
-
-    if not touched:
-        return []
-
     staged = stage / target.name
-    staged.write_bytes(env.file.save(packer="lz4"))
+    with open_bundle(target) as env:
+        for obj in env.objects:
+            if obj.type.name != "Font":
+                continue
+            tree = obj.read_typetree()
+            name = tree.get("m_Name", "?")
+            if name not in LATIN_FONTS:
+                continue
+            blob = bytes(tree.get("m_FontData") or b"")
+            if not blob:
+                continue
+
+            blob, added = patch_ttf(blob, C.BROKEN)
+            blob, retyped, _ = retype(blob, DEFAULT_SIDEBEARING)
+            if not added and not retyped:
+                continue
+            tree["m_FontData"] = list(blob)
+            obj.save_typetree(tree)
+            touched.append(f"{name} (+{added} кодов, {retyped} букв)")
+        if not touched:
+            return []
+        save_bundle(env.file, staged, source=target)
     return [Change("font_data.unity3d", target, staged,
                    f"гарнитур {len(touched)}: " + ", ".join(touched))]
 
@@ -267,15 +265,15 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
 
     `only` — куски имён бандлов: собрать только их. Для проверки, не для игрока.
     """
-    from common import BUNDLES
-    from picture_layer import Shipment, short
-    from swap_localized import (IMAGE_TABLE_BUNDLE, NEVER, category_of, plan_bundle,
-                                redirect, swap_image_table)
+    from common import BUNDLES, CATALOG
+    from picture_layer import Shipment, TextureRouting, short
+    from swap_localized import (IMAGE_TABLE_BUNDLE, NEVER, category_of, plan_env,
+                                redirect_objects, swap_image_table)
+    from stream_bundle import open_bundle, save_bundle
 
     wanted = CATEGORIES + ("gk1",) if with_gk1 else CATEGORIES
     russian = Shipment()
-    # Строки таблицы локали у плашек, которые лягут: игра берёт Situation_0/1 через таблицу.
-    keep = russian.table_rows(BUNDLES)
+    routing = TextureRouting(CATALOG, BUNDLES) if CATALOG.is_file() and russian.by_bundle else None
     # Те же бандлы, что брал `collect()`, но пока без чтения: категория по имени файла.
     # Плюс бандлы с русским, где подменять адреса нечего (немецкие плашки ситуации).
     names = []
@@ -286,6 +284,8 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
             continue
         if category_of(path.name) in wanted or russian.has(path.name):
             names.append(path.name)
+    # A targeted build that excludes the language table need not decode its plates.
+    keep = russian.table_rows(BUNDLES) if any(IMAGE_TABLE_BUNDLE in name for name in names) else {}
     recipes = {name: graphics_recipe(short(name), russian, keep) for name in names}
 
     skip: set[str] = set()
@@ -320,29 +320,48 @@ def graphics(stage: Path, with_gk1: bool = False, only: tuple[str, ...] = (),
         key = f"asset_{name.split('_assets_all_')[0]}"
         if name in skip:
             if not done[name].get("empty"):
+                if routing:
+                    routing.inspect(live, russian.routing_entries(short(name)))
                 yield Change(key, live, None, "уже стоит, не менялся", recipes[name])
             report(index + 1, name)
             continue
+        staged = stage / name
         if IMAGE_TABLE_BUNDLE in name:
             # Особый бандл: английских двойников внутри нет, подменяются
             # значения в таблице картинок локали; строки русских плашек — немецкие.
             blob, changed = swap_image_table(keep)
+            staged.write_bytes(blob)
+            del blob
             note = f"таблица картинок локали, записей {changed}" + (
                 f", немецкими оставлены {len(keep)} — русские плашки" if keep else "")
         else:
-            pairs = plan_bundle(live)
-            if not pairs and not russian.has(name):
-                if done is not None:
-                    done[name] = {"recipe": recipes[name], "stamp": stamp(live), "empty": True}
-                report(index + 1, name)
-                continue
-            if russian.has(name):
-                blob, count, notes = russian.build(live, pairs)
-                note = "; ".join([f"адресов {len(pairs)}, из них с русской картинкой {count}", *notes])
-            else:
-                blob = redirect(live, pairs)
-                note = f"адресов {len(pairs)}"
-        staged = stage / name
-        staged.write_bytes(blob)
+            with open_bundle(live) as env:
+                pairs = plan_env(env)
+                has_pictures = russian.has(name)
+                if not pairs and not has_pictures:
+                    if done is not None:
+                        done[name] = {"recipe": recipes[name], "stamp": stamp(live), "empty": True}
+                    report(index + 1, name)
+                    continue
+                if has_pictures:
+                    count, notes = russian.patch(env, name, pairs, stage)
+                    note = "; ".join([f"адресов {len(pairs)}, из них с русской картинкой {count}", *notes])
+                else:
+                    redirect_objects(env, pairs)
+                    note = f"адресов {len(pairs)}"
+                save_bundle(env.file, staged, source=live)
+            del env
+            if has_pictures:
+                # UnityPy's objects and parent files reference each other.
+                # Collect them before decoding images from the next bundle.
+                gc.collect()
+        if routing:
+            routing.inspect(staged, russian.routing_entries(short(name)))
         yield Change(key, live, staged, note, recipes[name])
         report(index + 1, name)
+
+    if routing:
+        for target, blob, note in routing.changes():
+            staged = stage / target.name
+            staged.write_bytes(blob)
+            yield Change("texture_routing", target, staged, note)
